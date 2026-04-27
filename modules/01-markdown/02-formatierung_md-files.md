@@ -1,7 +1,5 @@
-import os
-
-# Formatierung von Markdown Files
-md_content = """# Markdown Formatierungshilfe
+```markdown
+# Markdown Formatierungshilfe
 Diese Datei bietet eine Übersicht über die wichtigsten Formatierungsmöglichkeiten in Markdown-Dateien.
 
 ---
@@ -57,6 +55,7 @@ Ein [Link zu Google](https://www.google.com) wird so erstellt: `[Anzeigetext](UR
 ### Bilder
 Bilder funktionieren ähnlich wie Links, nur mit einem vorangestellten Ausrufezeichen:
 `![Alternativtext](Bild-URL)`
+```
 
 ---
 
