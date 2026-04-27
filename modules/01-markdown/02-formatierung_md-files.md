@@ -1,4 +1,3 @@
-```markdown
 # Markdown Formatierungshilfe
 Diese Datei bietet eine Übersicht über die wichtigsten Formatierungsmöglichkeiten in Markdown-Dateien.
 
@@ -6,14 +5,14 @@ Diese Datei bietet eine Übersicht über die wichtigsten Formatierungsmöglichke
 
 ## 1. Überschriften
 Überschriften werden mit dem `#`-Symbol erstellt. Die Anzahl der Symbole bestimmt die Ebene.
-
+```
 # Überschrift Ebene 1 (h1)
 ## Überschrift Ebene 2 (h2)
 ### Überschrift Ebene 3 (h3)
 #### Überschrift Ebene 4 (h4)
 ##### Überschrift Ebene 5 (h5)
 ###### Überschrift Ebene 6 (h6)
-
+```
 ---
 
 ## 2. Textformatierung
@@ -30,21 +29,26 @@ Text kann auf verschiedene Weise hervorgehoben werden:
 
 ### Ungeordnete Listen
 Verwenden Sie `*`, `-` oder `+`.
+```
 * Punkt 1
 * Punkt 2
     * Unterpunkt 2.1
     * Unterpunkt 2.2
+```
 
 ### Geordnete Listen
 Verwenden Sie Zahlen gefolgt von einem Punkt.
+```
 1. Erster Schritt
 2. Zweiter Schritt
 3. Dritter Schritt
+```
 
 ### Checklisten (Aufgaben)
+```
 - [x] Erledigte Aufgabe
 - [ ] Offene Aufgabe
-
+```
 ---
 
 ## 4. Links und Bilder
@@ -55,7 +59,7 @@ Ein [Link zu Google](https://www.google.com) wird so erstellt: `[Anzeigetext](UR
 ### Bilder
 Bilder funktionieren ähnlich wie Links, nur mit einem vorangestellten Ausrufezeichen:
 `![Alternativtext](Bild-URL)`
-```
+
 
 ---
 
