@@ -24,7 +24,7 @@ Dieses Dokument ist dein interaktiver Fahrplan. Arbeite die Schritte nacheinande
 ## 🛠️ Meilenstein 2: Setup & Umgebung (Unser neues Projekt)
 **Ziel:** Das frische Repository lokal einrichten und das Terminal als neues Werkzeug kennenlernen.
 
-- [ ] **Repository lokal einrichten**
+- [x] **Repository lokal einrichten**
   > **Wissen:** Du musst anwenden, wie man ein Projekt von GitHub auf den Rechner kopiert und dir für deine anstehende Arbeit einen eigenen Branch erstellst.
   
   - [ ] Terminal in VS Code finden und öffnen
