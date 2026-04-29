@@ -7,6 +7,21 @@ Whenever files or folders are added, renamed, or removed in the repo:
 - This applies especially to: new modules, new `.github/` subfolders, new learner files, new `docs/uebungen/` files.
 - Do not let the README structure fall out of sync with the actual repo.
 
+### README-Datei Benennungskonvention
+- Unterordner-READMEs heißen **immer** `README_<ORDNERNAME>.md` (z.B. `README_UEBUNGEN.md`, `README_TOOLS.md`).
+- **Nie** `README.md` in Unterordnern verwenden – das ist ausschließlich der Name der Root-Datei.
+- Diese Konvention gilt für alle neuen Dateien, die eine Unterordner-Übersicht oder Einführung bieten.
+
+### Agent-Datei Benennungskonvention
+Agent-Dateien liegen in `.github/agents/` und folgen dem Muster `<rolle>-<name>.agent.md`:
+- **`course-dev-`**: Agents für Kursentwicklung (Dozenten-Perspektive), z.B. `course-dev-exercise-creator.agent.md`
+- **`learners-`**: Agents für Lernende, z.B. `learners-help.agent.md`
+
+### Prompt-Datei Benennungskonvention
+Prompt-Dateien liegen in `.github/prompts/` und folgen dem gleichen Rollenpräfix-Muster `<rolle>-<name>.prompt.md`:
+- **`course-dev-`**: Prompts für Kursentwicklung (Dozenten-Perspektive), z.B. `course-dev-new-module.prompt.md`
+- **`learners-`**: Prompts für Lernende, z.B. `learners-pr-checklist.prompt.md`
+
 ---
 
 ## Purpose

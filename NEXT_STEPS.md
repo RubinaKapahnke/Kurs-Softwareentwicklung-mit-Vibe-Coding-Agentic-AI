@@ -24,7 +24,7 @@ Wenn du neu einsteigst:
 - [modules/02-vscode/01-vscode-grundlagen.md](modules/02-vscode/01-vscode-grundlagen.md)
 - [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
 - [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md)
-- [modules/04-git/01-git-themenueberblick.md](modules/04-git/01-git-themenueberblick.md)
+- [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
 
 **Lernziele:**
 
@@ -52,7 +52,7 @@ Wenn du neu einsteigst:
 
 **Vertiefung:**
 - [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md)
-- [modules/05-terminal/02-terminal-themenueberblick.md](modules/05-terminal/02-terminal-themenueberblick.md)
+- [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md)
 - [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md)
 - [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
 - [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
@@ -101,7 +101,7 @@ Wenn du neu einsteigst:
 
 - [ ] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
   > **Uebung:** [docs/uebungen/meilenstein-02-uebung-01.md](docs/uebungen/meilenstein-02-uebung-01.md)
-  > **Quellen zur Uebung:** [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md), [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md), [modules/05-terminal/02-terminal-themenueberblick.md](modules/05-terminal/02-terminal-themenueberblick.md), [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md), [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md), [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md), [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+  > **Quellen zur Uebung:** [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md), [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md), [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md), [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md), [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md), [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md), [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
   >
   > **Durchfuehrung der ersten Uebung:**
   > 1. Uebungsdatei in [docs/uebungen](docs/uebungen) lesen.
@@ -165,7 +165,7 @@ Wenn du neu einsteigst:
   > **Uebung:** [docs/uebungen/meilenstein-03-uebung-01.md](docs/uebungen/meilenstein-03-uebung-01.md)
   > **Quellen zur Uebung:** [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md), [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md), [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md), [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](modules/06-ai-instructions/03-prompt-dateien-grundlagen.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
   - [ ] Aufbau und Zweck eines PRD verstehen
-  - [ ] Eigenes PRD mit KI-Hilfe verfassen (`.github/prompts/prd-assistent.prompt.md` nutzen)
+  - [ ] Eigenes PRD mit KI-Hilfe verfassen (`.github/prompts/learners-prd-assistent.prompt.md` nutzen)
   - [ ] Dokumente AI-verstaendlich strukturieren
 
 - [ ] **Umgang mit Chats in der Kontext-Verwaltung**

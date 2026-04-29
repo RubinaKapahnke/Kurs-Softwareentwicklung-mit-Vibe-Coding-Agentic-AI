@@ -15,7 +15,7 @@ Stelle sicher, bevor du beginnst:
 
 In dieser Uebung arbeitest du hauptsaechlich mit zwei Dateien gleichzeitig:
 1. **Deine PRD-Datei** (`apps/learners/<dein-name>/prd_<dein-name>.md`) – dort schreibst du hinein
-2. **Die Prompt-Datei** (`.github/prompts/prd-assistent.prompt.md`) – dort liest du nur
+2. **Die Prompt-Datei** (`.github/prompts/learners-prd-assistent.prompt.md`) – dort liest du nur
 
 > Tipp: Du kannst beide Dateien nebeneinander oeffnen. Rechtsklick auf einen Tab → "In Gruppe aufteilen".
 
@@ -34,9 +34,9 @@ Dann oeffne deine persoenliche PRD-Datei in VS Code:
 
 ### 1. Prompt-Datei lesen und verstehen
 
-Oeffne die Datei [.github/prompts/prd-assistent.prompt.md](../../.github/prompts/prd-assistent.prompt.md) in VS Code und lies sie durch.
+Oeffne die Datei [.github/prompts/learners-prd-assistent.prompt.md](../../.github/prompts/learners-prd-assistent.prompt.md) in VS Code und lies sie durch.
 
-> **Hinweis:** Der Ordner `.github/` ist ein versteckter Ordner – er erscheint ganz oben im VS Code Explorer. Falls du ihn nicht findest: Druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `.github/prompts/prd-assistent.prompt.md` – dann direkt oeffnen.
+> **Hinweis:** Der Ordner `.github/` ist ein versteckter Ordner – er erscheint ganz oben im VS Code Explorer. Falls du ihn nicht findest: Druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `.github/prompts/learners-prd-assistent.prompt.md` – dann direkt oeffnen.
 
 Schreibe deine Antworten als Stichpunkte direkt in deine PRD-Datei (`apps/learners/<dein-name>/prd_<dein-name>.md`), als neuen Abschnitt `## Meine Beobachtungen zur Prompt-Datei`:
 - Welche Regeln gibt der Prompt der KI?
@@ -76,7 +76,7 @@ Starte dann den PRD-Assistenten so:
 3. Tippe "PRD" oder scrolle, bis du **PRD Assistent** siehst
 4. Klicke darauf – der Assistent startet automatisch
 
-> **Falls "PRD Assistent" nicht erscheint:** Pruefe, ob die Datei `.github/prompts/prd-assistent.prompt.md` im Repo existiert (Strg+P → Dateiname eintippen). Ohne diese Datei funktioniert der Assistent nicht.
+> **Falls "PRD Assistent" nicht erscheint:** Pruefe, ob die Datei `.github/prompts/learners-prd-assistent.prompt.md` im Repo existiert (Strg+P → Dateiname eintippen). Ohne diese Datei funktioniert der Assistent nicht.
 
 Der Assistent stellt dir drei Fragen – eine nach der anderen. Antworte mit dem, was du in Aufgabe 2 aufgeschrieben hast.
 

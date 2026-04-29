@@ -47,7 +47,7 @@ Eine **Prompt-Datei** (`.prompt.md`) ist eine Textdatei, in der du der KI einmal
 **Warum ist das Context-Engineering?**
 Du steuerst nicht nur was du fragst, sondern *wie die KI antwortet*, bevor die eigentliche Aufgabe beginnt. Das ist die praeziseste Form von Kontext-Kontrolle.
 
-**Beispiel:** Der PRD-Assistent in `.github/prompts/prd-assistent.prompt.md` fragt dich zuerst nach deinen Ideen, bevor er etwas formuliert. Ohne diese Anweisung wuerde die KI sofort erfinden.
+**Beispiel:** Der PRD-Assistent in `.github/prompts/learners-prd-assistent.prompt.md` fragt dich zuerst nach deinen Ideen, bevor er etwas formuliert. Ohne diese Anweisung wuerde die KI sofort erfinden.
 
 **Warum `.github/prompts/`?**
 Dieser Ordnerpfad ist eine Konvention von VS Code Copilot. Nur wenn eine `.prompt.md`-Datei dort liegt, erkennt Copilot sie automatisch und zeigt sie in der `/`-Liste im Chat an. Eine Prompt-Datei woanders abzulegen waere technisch moeglich, aber Copilot wuerde sie dann nicht finden.

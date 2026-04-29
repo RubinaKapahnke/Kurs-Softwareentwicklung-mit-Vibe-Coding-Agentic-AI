@@ -73,6 +73,7 @@ modules/04-git/
 ```text
 /vibe-coding-0426
 ├── apps/
+│   ├── README_APPS.md
 │   ├── dashboard/
 │   │   └── prd_dashboard.md
 │   └── learners/
@@ -92,11 +93,16 @@ modules/04-git/
 │           ├── prd_sebastian.md
 │           └── lernfortschritt_sebastian.md
 ├── .github/
+│   ├── agents/
+│   │   ├── course-dev-exercise-creator.agent.md
+│   │   └── course-dev-repo-consistency-checker.agent.md
 │   └── prompts/
-│       └── prd-assistent.prompt.md
+│       └── learners-prd-assistent.prompt.md
 ├── docs/
 │   ├── GLOSSARY.md
 │   └── uebungen/
+│       ├── meilenstein-02-uebung-01.md
+│       ├── meilenstein-03-uebung-01.md
 │       └── README_UEBUNGEN.md
 ├── modules/
 │   ├── 01-markdown/
@@ -111,11 +117,15 @@ modules/04-git/
 │   │   └── 03-prompt-dateien-grundlagen.md
 │   └── 07-architecture-foundations/
 ├── tools/
+│   ├── README_TOOLS.md
 │   ├── test-uebung.ps1
 │   └── test-alle-uebungen.ps1
+├── AGENTS.md
 ├── NEXT_STEPS.md
 └── README.md
 ```
+
+> **Hinweis für Lernende:** Die Ordner `tools/` und die Datei `AGENTS.md` im Stammverzeichnis sind **nicht Teil des Lernmaterials**. Sie werden von Dozenten und KI-Agenten für den Kursbetrieb genutzt – du musst sie nicht öffnen.
 
 ---
 
