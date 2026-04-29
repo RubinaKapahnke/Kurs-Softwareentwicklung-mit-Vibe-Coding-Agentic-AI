@@ -2,7 +2,7 @@
 
 ## Aktueller Fokus
 **Was ich gerade lerne:**
-- [ ] Terminal-Befehle sicher anwenden
+- [x] Terminal-Befehle sicher anwenden
 - [ ] Lernstand im Terminal verwalten
 
 ## Abgeschlossene Meilensteine

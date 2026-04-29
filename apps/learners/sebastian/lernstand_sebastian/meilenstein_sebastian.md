@@ -7,9 +7,9 @@ Du fuehrst alle Schritte aus, um deinen persoenlichen Lernstand ueber das Termin
 
 ## Vor dem Start � Checkliste
 
-- [ ] VS Code ist geoeffnet
-- [ ] Du hast ein Terminal geoeffnet und bist im Repo-Ordner (erkennbar am Pfad `vibe-coding-0426`)
-- [ ] Du kennst deinen Vornamen � er ersetzt ueberall den Platzhalter `<vorname>`
+- [x] VS Code ist geoeffnet
+- [x] Du hast ein Terminal geoeffnet und bist im Repo-Ordner (erkennbar am Pfad `vibe-coding-0426`)
+- [x] Du kennst deinen Vornamen � er ersetzt ueberall den Platzhalter `<vorname>`
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden, wird aktualisiert)
@@ -73,13 +73,13 @@ Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md`
 
 ```markdown
 **Was habe ich heute gemacht?**
-[Eigene Antwort]
+[Meilenstein2 uebung 1 abgearbeitet, Next_Steps gelesen, selbst tesxt: PowerSell befehler gelernt, git als eigene Software verstanden und das infos in ".git" gespeichert werden, githup als Clout-Speicher-service verstanden, VS Code verstanden das jenach dem wie ist es öffne (mit Path) zB. im Terminal oder ps-Script, mit Git gearbeitet um Zusammenhänge zuverstehen (Repo, Branch, add, Committ, Push  Pull-Request und fetchen) ]
 
 **Was war schwierig oder unklar?**
-[Eigene Antwort]
+[was mache ich mit den neuen Datei meilensteine_sebatian, einfacher finde ich eine fertiges Dokument in dem ich wie bei einer PDF "lücken" fülle]
 
 **Was ist mein naechster kleiner Schritt?**
-[Eigene Antwort]
+[alles Text mit vorlesen zu lassen um zu überprüfen ob ich "TEXT" richig verstanden habe]
 ```
 
 > **Tipp:** Falls du die Datei nicht im Explorer findest, druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `lernfortschritt_` � dann den eigenen Namen auswaehlen.
@@ -93,7 +93,7 @@ Pruefe zuerst, was du veraendert hast:
 git status   # Zeigt alle geaenderten Dateien
 git branch   # Bestaetige, dass du auf deinem Branch bist
 ```
-
+<!-- ich würde hier den Path überprüfen? "add ." zielt auf den aktuellen Ortner -->
 Dann:
 ```bash
 git add .
