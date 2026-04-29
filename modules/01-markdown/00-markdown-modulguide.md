@@ -16,8 +16,8 @@ Nutze die Checklisten als Selbstcheck fuer das Markdown-Modul.
 - [ ] Ich weiss, was Markdown ist und wofuer es im Projekt genutzt wird.
 - [ ] Ich kann Ueberschriften (#, ##, ###) schreiben.
 - [ ] Ich kann Listen (Aufzaehlung, nummeriert) erstellen.
-- [ ] Ich kann Links schreiben: [Text](URL)
-- [ ] Ich kann Text-Hervorhebung nutzen: **fett**, *kursiv*, `Code`
+- [ ] Ich kann Links schreiben: `[Text](URL)`
+- [ ] Ich kann Text-Hervorhebung nutzen: `**fett**`, `*kursiv*`, `` `Code` ``
 - [ ] Ich kann bestehende Markdown-Dateien lesen und erweitern.
 
 ### Should have
