@@ -89,12 +89,15 @@ modules/04-git/
 │       │   ├── prd_raphael.md
 │       │   └── lernfortschritt_raphael.md
 │       └── sebastian/
-│           ├── prd_seb.md
+│           ├── prd_sebastian.md
 │           └── lernfortschritt_sebastian.md
+├── .github/
+│   └── prompts/
+│       └── prd-assistent.prompt.md
 ├── docs/
 │   ├── GLOSSARY.md
 │   └── uebungen/
-│       └── README.md
+│       └── README_UEBUNGEN.md
 ├── modules/
 │   ├── 01-markdown/
 │   ├── 02-vscode/
@@ -102,7 +105,14 @@ modules/04-git/
 │   ├── 04-git/
 │   ├── 05-terminal/
 │   ├── 06-ai-instructions/
+│   │   ├── 00-ai-instructions-modulguide.md
+│   │   ├── 01-prompting-grundlagen.md
+│   │   ├── 02-prd-grundlagen.md
+│   │   └── 03-prompt-dateien-grundlagen.md
 │   └── 07-architecture-foundations/
+├── tools/
+│   ├── test-uebung.ps1
+│   └── test-alle-uebungen.ps1
 ├── NEXT_STEPS.md
 └── README.md
 ```

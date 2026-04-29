@@ -1,5 +1,14 @@
 # AGENTS
 
+## README Sync Standard
+
+Whenever files or folders are added, renamed, or removed in the repo:
+- Update the project structure tree in `README.md` to reflect the change.
+- This applies especially to: new modules, new `.github/` subfolders, new learner files, new `docs/uebungen/` files.
+- Do not let the README structure fall out of sync with the actual repo.
+
+---
+
 ## Purpose
 This repository is a shared learning workspace for a closed group in a vibe-coding course.
 
@@ -39,8 +48,19 @@ The learning structure follows this hierarchy:
 - Every exercise task point should reference a concrete source in `modules/`.
 - Sources should be clickable markdown links when the document format supports it.
 - Each exercise should include a short section named `Modulabdeckung (Check)`.
+- Each exercise must include a section named `Wiederholung aus frueheren Meilensteinen` between `Modulabdeckung (Check)` and `Lernerfolgs-Kriterien`. This section lists skills from previous milestones that are needed to complete the exercise, with links to the relevant module files.
+- Each exercise must include a section named `Lernerfolgs-Kriterien` at the end, after `Modulabdeckung (Check)`. This section contains 3-6 checkboxes that let learners verify whether the exercise achieved its intended outcome. Criteria must be observable and self-assessable (e.g. "Ich habe X erlebt", "Ich kann Y benennen"), not just task completion.
 - If an exercise step has no matching module explanation, improve the module coverage before relying on that exercise.
 - **Why this standard?** The module source is not just a reference—it's the primary path to understanding. Learners click the source link to understand *why* the task matters, then complete it.
+
+## Beginner-Friendliness Standard For Exercises
+Every exercise must be usable by inexperienced, low-self-organization learners without outside help. Apply these rules:
+
+1. **"Vor dem Start"-Checkliste:** Every exercise begins with a checklist (3 items max) covering environment prerequisites (e.g. VS Code open, Copilot active, correct folder). Also list which files the learner will need during the exercise.
+2. **Hinweise zu versteckten oder unerwarteten Orten:** When an exercise references files in hidden folders (e.g. `.github/`) or non-obvious locations, add a navigation tip directly under the link. Example: `Strg+P` (Windows) / `Cmd+P` (Mac) → type filename.
+3. **"Warum?"-Hinweise fuer temporaere Abschnitte:** If learners write content into a file that will later be replaced or overwritten, explain why at the point where they write it—not only at the point where it gets replaced.
+4. **Schrittweise Anleitungen fuer UI-Interaktionen:** For any multi-step UI interaction (e.g. opening Copilot Chat, using slash commands, navigating menus), provide numbered steps instead of a single sentence. Always include a fallback ("Falls X nicht erscheint: ...").
+5. **Status-Check vor Git-Befehlen:** Before any `git checkout`, `git add`, or `git push` block, include `git status` and `git branch` so learners know their current state before acting.
 
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
@@ -150,34 +170,102 @@ Siehe [<Name>-Themenueberblick](./00-<modulname>-themenueberblick.md) fuer Must/
 docs/uebungen/meilenstein-XX-uebung-YY.md
 ```
 
-**Template:**
-```markdown
-# Übung Meilenstein XX: [Titel]
+**Template** (als Rohtext – Einrückung beim Kopieren entfernen):
 
-## Ziel
-[1-2 Sätze: Was wird erreicht?]
-
----
-
-## Aufgaben
-
-### 1. [Aufgabe 1]
-[Beschreibung]
-
-Quelle: [modules/XX-modul/01-modul-grundlagen.md](../../modules/XX-modul/01-modul-grundlagen.md)
-
-### 2. [Aufgabe 2]
-[Beschreibung]
-
-Quelle: [modules/XX-modul/03-modul-befehlsuebersicht.md](../../modules/XX-modul/03-modul-befehlsuebersicht.md)
-
----
-
-## Modulabdeckung (Check)
-- ✓ modules/XX-modul/01-grundlagen.md: [Konzept erklärt]
-- ✓ modules/XX-modul/03-befehlsuebersicht.md: [Befehle erklärt]
-- ✗ modules/YY-modul: [Falls noch nicht abgedeckt, hier notieren]
-```
+    # Übung Meilenstein XX: [Titel]
+    
+    ## Ziel
+    [1-2 Sätze: Was wird erreicht?]
+    
+    ---
+    
+    ## Vor dem Start – Checkliste
+    
+    - [ ] [Voraussetzung 1, z.B. VS Code ist geöffnet]
+    - [ ] [Voraussetzung 2, z.B. Copilot Chat ist aktiv]
+    - [ ] [Voraussetzung 3, z.B. du bist im richtigen Ordner]
+    
+    In dieser Übung arbeitest du mit diesen Dateien:
+    - `[Datei 1]`
+    - `[Datei 2]`
+    
+    ---
+    
+    ## Vorbereitung
+    [Optional: Lies zuerst Modul XY]
+    
+    ---
+    
+    ## Aufgaben
+    
+    ### 1. [Aufgabe 1]
+    [Beschreibung]
+    
+    > **Hinweis zu verstecktem Ort** (falls nötig): Der Ordner `.github/` erscheint ganz oben im Explorer. Falls nicht sichtbar: `Strg+P` → Dateinamen eintippen.
+    
+    > **Warum?** (falls Inhalt später ersetzt wird): [Erklärung, warum dieser Schritt trotzdem wichtig ist]
+    
+    Quelle: [modules/XX-modul/01-modul-grundlagen.md](../../modules/XX-modul/01-modul-grundlagen.md)
+    
+    ### 2. [Aufgabe mit UI-Interaktion]
+    [Beschreibung]
+    
+    1. [Schritt 1]
+    2. [Schritt 2]
+    3. [Schritt 3]
+    
+    > Falls [X] nicht erscheint: [Fallback-Hinweis]
+    
+    Quelle: [modules/XX-modul/03-modul-befehlsuebersicht.md](../../modules/XX-modul/03-modul-befehlsuebersicht.md)
+    
+    ### 3. [Aufgabe mit Git]
+    [Beschreibung]
+    
+    Prüfe zuerst deinen aktuellen Status:
+    
+        git status   # Zeigt offene Änderungen
+        git branch   # Zeigt den aktuellen Branch
+    
+    Dann:
+    
+        git checkout -b [branch-name]
+        git add .
+        git commit -m "[message]"
+        git push origin [branch-name]
+    
+    ---
+    
+    ## Modulabdeckung (Check)
+    - ✓ modules/XX-modul/01-grundlagen.md: [Konzept erklärt]
+    - ✓ modules/XX-modul/03-befehlsuebersicht.md: [Befehle erklärt]
+    - ✗ modules/YY-modul: [Falls noch nicht abgedeckt, hier notieren]
+    
+    ---
+    
+    ## Wiederholung aus frueheren Meilensteinen
+    
+    Diese Übung setzt voraus, dass du folgendes bereits kannst:
+    
+    - **[Fähigkeit aus früherem Meilenstein]** ([modules/XX-modul/01-grundlagen.md](../../modules/XX-modul/01-grundlagen.md))
+    
+    ---
+    
+    ## Abgabe
+    
+    Bevor du den PR erstellst, pruefe kurz:
+    - [ ] [Ergebnis 1, z.B. Datei XY existiert im eigenen Ordner]
+    - [ ] [Ergebnis 2, z.B. Lernjournal aktualisiert]
+    - [ ] PR auf GitHub ist erstellt
+    
+    ---
+    
+    ## Lernerfolgs-Kriterien
+    
+    Prüfe nach Abschluss der Übung, ob du diese Punkte mit Ja beantworten kannst:
+    
+    - [ ] Ich habe [beobachtbare Erfahrung 1].
+    - [ ] Ich kann [benennen/erklären/zeigen] [Konzept 2].
+    - [ ] Ich habe [beobachtbare Erfahrung 3].
 
 **Schritt 3: In NEXT_STEPS.md verlinken**
 - Unter "Aktueller Umsetzungsstand" des Meilensteins:
@@ -194,6 +282,14 @@ Quelle: [modules/XX-modul/03-modul-befehlsuebersicht.md](../../modules/XX-modul/
 - Alle Aufgaben haben direkte Modulquellen? ✓
 - Modulabdeckung am Ende dokumentiert? ✓
 - Links funktionieren (Pfade relativ)? ✓
+- "Vor dem Start"-Checkliste vorhanden (max. 3 Punkte + Dateiliste)? ✓
+- Versteckte Ordner (z.B. `.github/`) mit Strg+P-Tipp erklärt? ✓
+- Temporäre Inhalte mit "Warum?"-Hinweis versehen? ✓
+- UI-Interaktionen als nummerierte Schritte + Fallback? ✓
+- Git-Abschnitte mit `git status` + `git branch` vorangestellt? ✓
+- `Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden? ✓
+- `Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)? ✓
+- `Lernerfolgs-Kriterien`-Abschnitt mit 3–6 Checkboxen vorhanden? ✓
 
 ---
 
@@ -241,6 +337,13 @@ Quelle: [modules/XX-modul/03-modul-befehlsuebersicht.md](../../modules/XX-modul/
 
 ### 🔍 Konsistenz-Checkliste (VOR dem Commit)
 
+> **Automatischer Test:** Vor dem Commit alle Übungen gegen den Standard prüfen:
+> ```powershell
+> .\tools\test-alle-uebungen.ps1
+> ```
+> Einzelne Datei: `.\tools\test-uebung.ps1 -File "docs/uebungen/meilenstein-XX-uebung-YY.md"`
+> Exit-Code 0 = alles OK, 1 = mindestens ein Fehler.
+
 - [ ] **Alle Quellen existieren?** grep_search nach Links in Übungen
 - [ ] **Alle Modulguides haben die gleiche Struktur?** 00-modulguide.md + 01-grundlagen.md + 00-themenueberblick.md
 - [ ] **Keine redundanten Lernziele?** (Nur in 00-themenueberblick.md, nicht in modulguide.md)
@@ -249,6 +352,14 @@ Quelle: [modules/XX-modul/03-modul-befehlsuebersicht.md](../../modules/XX-modul/
 - [ ] **NEXT_STEPS.md ↔ docs/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
 - [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
 - [ ] **Keine Tippfehler/Markdown-Fehler?** (`get_errors` auf alle neuen Dateien)
+- [ ] **"Vor dem Start"-Checkliste vorhanden?** (Max. 3 Punkte + Dateiliste)
+- [ ] **Versteckte Ordner erklärt?** (z.B. `.github/` mit Strg+P-Tipp)
+- [ ] **Temporäre Abschnitte mit "Warum?"-Hinweis versehen?**
+- [ ] **UI-Interaktionen als nummerierte Schritte + Fallback?**
+- [ ] **Git-Abschnitte mit `git status` + `git branch` vorangestellt?**
+- [ ] **`Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden?**
+- [ ] **`Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)?**
+- [ ] **`Lernerfolgs-Kriterien`-Abschnitt mit 3–6 Checkboxen vorhanden?**
 
 ---
 

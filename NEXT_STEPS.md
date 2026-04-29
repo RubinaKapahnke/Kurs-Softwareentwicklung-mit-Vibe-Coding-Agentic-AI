@@ -137,7 +137,9 @@ Wenn du neu einsteigst:
 - [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md)
 
 **Vertiefung:**
-- [modules/06-ai-instructions/01-prompting-context-engineering-grundlagen.md](modules/06-ai-instructions/01-prompting-context-engineering-grundlagen.md)
+- [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md)
+- [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md)
+- [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 **Lernziele:**
 
@@ -160,9 +162,10 @@ Wenn du neu einsteigst:
   - [ ] AI-Feedback auswerten und Prompts verbessern
 
 - [ ] **PRD und weitere Doku als Kontext fuer AI erstellen**
+  > **Uebung:** [docs/uebungen/meilenstein-03-uebung-01.md](docs/uebungen/meilenstein-03-uebung-01.md)
+  > **Quellen zur Uebung:** [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md), [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md), [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md), [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](modules/06-ai-instructions/03-prompt-dateien-grundlagen.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
   - [ ] Aufbau und Zweck eines PRD verstehen
-  - [ ] Beispiel-PRD fuer eigenes Lernprojekt verfassen
-  - [ ] Weitere Doku-Arten als Kontext nutzen (z. B. Glossar, User Stories)
+  - [ ] Eigenes PRD mit KI-Hilfe verfassen (`.github/prompts/prd-assistent.prompt.md` nutzen)
   - [ ] Dokumente AI-verstaendlich strukturieren
 
 - [ ] **Umgang mit Chats in der Kontext-Verwaltung**
