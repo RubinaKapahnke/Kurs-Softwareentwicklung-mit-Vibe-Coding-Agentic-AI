@@ -102,6 +102,8 @@ modules/04-git/
 │   ├── GLOSSARY.md
 │   └── uebungen/
 │       ├── meilenstein-02-uebung-01.md
+│       ├── meilenstein-02-uebung-02.md
+│       ├── meilenstein-02-uebung-03.md
 │       ├── meilenstein-03-uebung-01.md
 │       └── README_UEBUNGEN.md
 ├── modules/
@@ -112,6 +114,7 @@ modules/04-git/
 │   ├── 05-terminal/
 │   ├── 06-ai-instructions/
 │   │   ├── 00-ai-instructions-modulguide.md
+│   │   ├── 00-ai-instructions-themenueberblick.md
 │   │   ├── 01-prompting-grundlagen.md
 │   │   ├── 02-prd-grundlagen.md
 │   │   └── 03-prompt-dateien-grundlagen.md

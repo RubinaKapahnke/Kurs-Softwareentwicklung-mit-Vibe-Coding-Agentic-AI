@@ -10,32 +10,7 @@ Dieses Modul erklaert, wie du mit KI-Assistenten im Entwicklungsalltag arbeitest
 
 ## Selbstcheck
 
-Nutze die Checklisten als Selbstcheck fuer das AI-Instructions-Modul.
-
-### Must have
-
-- [ ] Ich verstehe, dass KI-Assistenten nur das verarbeiten koennen, was ich ihnen gebe (kein magischer Zugriff).
-- [ ] Ich kenne die Grundbausteine eines guten Prompts: Rolle, Aufgabe, Kontext, Format.
-- [ ] Ich kann zwischen Zero-Shot Prompting (ohne Beispiele) und Few-Shot Prompting (mit Beispielen) unterscheiden.
-- [ ] Ich kann in GitHub Copilot Chat gezielt Dateien und Code als Kontext referenzieren.
-- [ ] Ich verstehe, dass der erste Output der KI selten perfekt ist und nutze iteratives Prompting im Dialog.
-- [ ] Ich weiss, was ein PRD ist und warum es als KI-Kontext wichtig ist.
-- [ ] Ich kann ein einfaches PRD fuer mein eigenes Projekt schreiben.
-- [ ] Ich verstehe, was eine Prompt-Datei ist und kann sie ueber `/` im Chat aufrufen.
-
-### Should have
-
-- [ ] Ich kann Fehlermeldungen kopieren und der KI zeigen, um Probleme zu debuggen.
-- [ ] Ich nutze den Chat gezielt, um Code erklaeren zu lassen oder Dokumentation zu generieren.
-- [ ] Ich weiss, wann ich der KI ein konkretes Beispiel zeigen sollte, damit sie besser versteht.
-- [ ] Ich kann in mehreren Schritten arbeiten, statt die ganze Aufgabe auf einmal zu prompten.
-
-### Nice to have
-
-- [ ] Ich kann komplexe Anforderungen aus einem PRD in mehreren gezielten Prompts umsetzen.
-- [ ] Ich erkenne, wenn die KI halluziniert (also Dinge erfindet) und gebe ihr bessere Kontext-Grenzen.
-- [ ] Ich nutze die KI, um meine eigenen Code-Entscheidungen zu hinterfragen und zu verbessern.
-- [ ] Ich kann komplette Komponenten und Workflows durch kluges Prompting und Iteration bauen.
+Siehe [AI Instructions Themenueberblick](./00-ai-instructions-themenueberblick.md) fuer Must/Should/Nice-Checklisten.
 
 ## Wenn du etwas nachholen willst
 
