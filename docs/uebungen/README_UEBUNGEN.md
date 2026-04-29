@@ -4,6 +4,15 @@ In diesem Ordner liegen zentral vorgegebene Uebungsaufgaben fuer alle Lernenden.
 
 Wie Übungen mit Modulen und NEXT_STEPS verknüpft sind, erklärt [NEXT_STEPS.md → Architektur](../../NEXT_STEPS.md).
 
+## Uebersicht
+
+| Datei | Meilenstein | Titel | Lernziel-Stufe |
+| :--- | :--- | :--- | :--- |
+| [meilenstein-02-uebung-01.md](meilenstein-02-uebung-01.md) | 2 – Setup & Umgebung | Eigenen Lernstand im Terminal verwalten | Must have |
+| [meilenstein-02-uebung-02.md](meilenstein-02-uebung-02.md) | 2 – Setup & Umgebung | Terminal-Alltag und Git-Befehle selbststaendig anwenden | Should have |
+| [meilenstein-02-uebung-03.md](meilenstein-02-uebung-03.md) | 2 – Setup & Umgebung | Routine aufbauen und Lernstand dokumentieren | Nice to have |
+| [meilenstein-03-uebung-01.md](meilenstein-03-uebung-01.md) | 3 – Prompting & Context-Engineering | Eigenes PRD erstellen | Must have |
+
 ## Benennung
 - meilenstein-XX-uebung-YY.md
 

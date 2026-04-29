@@ -69,10 +69,18 @@ Oeffne die neue Datei in VS Code und trage deine bisherigen und geplanten Meilen
 Quelle: [modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md)
 
 ### 6. Lernfortschrittsdatei aktualisieren
-Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md` und trage im Lernjournal ein:
-- Was habe ich heute gemacht?
-- Wo war ich blockiert?
-- Was ist mein naechster kleiner Schritt?
+Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md` und fuege einen Journaleintrag ein. Nutze dieses Muster:
+
+```markdown
+**Was habe ich heute gemacht?**
+[Eigene Antwort]
+
+**Was war schwierig oder unklar?**
+[Eigene Antwort]
+
+**Was ist mein naechster kleiner Schritt?**
+[Eigene Antwort]
+```
 
 > **Tipp:** Falls du die Datei nicht im Explorer findest, druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `lernfortschritt_` – dann den eigenen Namen auswaehlen.
 
@@ -95,7 +103,15 @@ git push origin lernstand-<vorname>
 Quelle: [modules/04-git/02-git-grundlagen.md](../../modules/04-git/02-git-grundlagen.md)
 
 ### 8. Pull Request erstellen
-Erstelle auf GitHub einen PR von deinem Branch auf `main` und beschreibe kurz, was du umgesetzt hast.
+
+1. Oeffne dein Repository auf github.com
+2. Klicke auf "Compare & pull request" (gelber Banner nach dem Push)
+3. Waehle als Basis `main` und als Quell-Branch deinen Branch
+4. Schreibe eine kurze Beschreibung: *"Lernstand `<vorname>` angelegt"*
+5. Klicke auf "Create pull request"
+
+> Falls der gelbe Banner nicht erscheint: Klicke auf "Pull requests" → "New pull request" → Branch auswaehlen.
+
 Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-github-grundlagen.md)
 
 ---

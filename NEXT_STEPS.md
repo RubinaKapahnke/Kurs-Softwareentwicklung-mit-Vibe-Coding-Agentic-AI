@@ -118,8 +118,10 @@ Wenn du neu einsteigst:
   - [ ] Eigene Lernfortschrittsdatei aktualisieren
   - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Schritt
 
-- [ ] **Sichere Alltagsaktionen im Terminal ausfuehren**
-  - [ ] In Ordnern navigieren (`cd`, `cd ..`)
+- [ ] **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
+  > **Uebung:** [docs/uebungen/meilenstein-02-uebung-02.md](docs/uebungen/meilenstein-02-uebung-02.md)
+  > **Quellen zur Uebung:** [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md), [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+  - [ ] In Ordnern navigieren (`cd`, `cd ..`, `pwd`, `dir`/`ls`)
   - [ ] Dateien anlegen (`echo. > <dateiname>.md`)
   - [ ] Dateien loeschen (`del <dateiname>`)
   - [ ] Dateien verschieben/umbenennen (`move <quelle> <ziel>`)
@@ -127,6 +129,14 @@ Wenn du neu einsteigst:
   - [ ] Branches verwalten (`git checkout -b`, `git checkout`, `git branch -d`)
   - [ ] Committen und pushen (`git add .`, `git commit -m`, `git push origin <branch>`)
   - [ ] PR auf GitHub erstellen
+  - [ ] Passende Modulquelle fuer eine Aufgabe eigenstaendig finden
+
+- [ ] **Routine bei Branch-Wechseln und Lernstand regelmaessig dokumentieren**
+  > **Uebung:** [docs/uebungen/meilenstein-02-uebung-03.md](docs/uebungen/meilenstein-02-uebung-03.md)
+  > **Quellen zur Uebung:** [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md)
+  - [ ] Vollstaendigen Branch-Commit-PR-Ablauf zweimal wiederholen
+  - [ ] Zwischen Branches wechseln (`git checkout main`, `git pull`, neuer Branch)
+  - [ ] Strukturierten Lernjournal-Eintrag mit festem Muster anlegen
 
 ---
 
