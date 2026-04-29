@@ -18,6 +18,19 @@
 - **Wo ich hänge:** 
 - **Nächster Schritt:** 
 
+
+**Was habe ich heute gemacht?**
+- Das remote Repository vibe-coding-0426 gepullt
+- Einen Ordner lernstand_raphael und eine Datei meilensteine_raphael.md in meinem learners/raphael Ordner angelegt
+- Eine Datei notizen_raphael.md für Notizen angelegt
+- 
+
+**Was war schwierig oder unklar?**
+[Eigene Antwort]
+
+**Was ist mein naechster kleiner Schritt?**
+[Eigene Antwort]
+
 ## Nächster kleiner Schritt
 - [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
 
