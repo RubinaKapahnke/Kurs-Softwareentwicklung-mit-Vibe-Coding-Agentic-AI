@@ -13,26 +13,17 @@
 ## Lernjournal
 
 ### 29.04.
-- **Was ich gemacht habe:** 
-- **Was gut lief:** 
-- **Wo ich hänge:** 
-- **Nächster Schritt:** 
-
-
 **Was habe ich heute gemacht?**
-- Das remote Repository vibe-coding-0426 gepullt
-- Einen Ordner lernstand_raphael und eine Datei meilensteine_raphael.md in meinem learners/raphael Ordner angelegt
-- Eine Datei notizen_raphael.md für Notizen angelegt
-- 
-
+- Das remote Repository vibe-coding-0426 gepullt und einen Branch "lernstand-raphael" erstellt
+- Ordner lernstand_raphael und eine Datei meilensteine_raphael.md in learners/raphael Ordner angelegt
+- Datei notizen_raphael.md für Notizen angelegt
+- Git add, commit und push 
 **Was war schwierig oder unklar?**
-[Eigene Antwort]
+- Bisher nichts, bis auf ein paar kleine Fragen zur Aufgabenstellung, die wir schnell geklärt haben
+- Das Verständnis vom Git Prozess wird immer besser 😊
 
 **Was ist mein naechster kleiner Schritt?**
-[Eigene Antwort]
-
-## Nächster kleiner Schritt
-- [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
+- [ ] M2-Ü2 "Im Terminal arbeiten" 
 
 ## Fragen an die Gruppe
 -
