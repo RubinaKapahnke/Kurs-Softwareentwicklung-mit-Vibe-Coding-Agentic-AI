@@ -93,9 +93,14 @@ modules/04-git/
 ├── .github/
 │   ├── agents/
 │   │   ├── course-dev-curriculum.agent.md
+│   │   ├── course-dev-dashboard-developer.agent.md
+│   │   ├── course-dev-dashboard-po.agent.md
 │   │   ├── course-dev-exercise-creator.agent.md
 │   │   └── course-dev-repo-consistency-checker.agent.md
+│   ├── instructions/
+│   │   └── dashboard.instructions.md
 │   └── prompts/
+│       ├── learners-dashboard-feedback.prompt.md
 │       └── learners-prd-assistent.prompt.md
 ├── docs/
 │   ├── GLOSSARY.md
