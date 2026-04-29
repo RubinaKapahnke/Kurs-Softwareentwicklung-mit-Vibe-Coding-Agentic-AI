@@ -1,75 +1,181 @@
-# 🗺️ Next Steps: Roadmap zum Progress-Hub
+# 🗺️ Next Steps: Zentrale Meilensteine
 
-Dieses Dokument ist dein interaktiver Fahrplan. Arbeite die Schritte nacheinander ab. Die Erklärungen und Modul-Verweise unter den Aufgaben helfen dir bei der technischen Umsetzung.
+Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**.
 
----
-
-## ✅ Meilenstein 1: Vibe Coding Basics (Bereits gelernt)
-**Ziel:** Die Werkzeuge beherrschen, bevor wir das Haus bauen. (Diese Punkte hast du dir bereits im ersten Übungs-Repo angeeignet).
-
-- [x] **Markdown sicher anwenden**
-  > **Wissen:** Du weißt, wie man strukturierte und saubere Dokumentationen für Menschen und KI schreibt.
-  
-
-- [x] **VS Code Grundlagen beherrschen**
-  > **Wissen:** Du kennst dich in der Entwicklungsumgebung aus und weißt, wie man Dateien bearbeitet und speichert.
-  
-
-- [x] **Git & GitHub Konzepte verstanden haben**
-  > **Wissen:** Du weißt, was ein Repository ist, wie Versionierung funktioniert und wie man isolierte Arbeitsbereiche (Branches) nutzt.
-  
+Wenn du neu einsteigst:
+1. Lese [README.md](README.md) für die **Arbeitsweise und Repo-Struktur**
+2. Lese [docs/uebungen/README_UEBUNGEN.md](docs/uebungen/README_UEBUNGEN.md) für **deinen Workflow**
+3. Folge hier dem aktuellen **Meilenstein**
 
 ---
 
-## 🛠️ Meilenstein 2: Setup & Umgebung (Unser neues Projekt)
-**Ziel:** Das frische Repository lokal einrichten und das Terminal als neues Werkzeug kennenlernen.
+## ✅ Meilenstein 1: Vibe Coding Basics (bereits gelernt)
+**Ziel:** Die Werkzeuge sicher beherrschen.
+
+**Modul-Einstiege:**
+- [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md)
+- [modules/02-vscode/00-vscode-modulguide.md](modules/02-vscode/00-vscode-modulguide.md)
+- [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md)
+- [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md)
+
+**Vertiefung:**
+- [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md)
+- [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md)
+- [modules/02-vscode/01-vscode-grundlagen.md](modules/02-vscode/01-vscode-grundlagen.md)
+- [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+- [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md)
+- [modules/04-git/01-git-themenueberblick.md](modules/04-git/01-git-themenueberblick.md)
+
+**Lernziele:**
+
+### Must have
+- [x] Du schreibst strukturierte und saubere Dokumentation fuer Menschen und KI.
+- [x] Du findest dich sicher in der Entwicklungsumgebung zurecht.
+- [x] Du verstehst Repository, Branch, Commit, Push und Merge-Konflikte.
+
+### Should have
+- [x] Du kannst Modulguide, Grundlagen und Themenueberblick als unterschiedliche Dokumenttypen einordnen.
+- [x] Du erkennst, wie Markdown, VS Code, GitHub und Git im Repo zusammenhaengen.
+
+### Nice to have
+- [x] Du kannst erste typische Arbeitsablaeufe im Repo schon ohne enge Anleitung nachvollziehen.
+
+---
+
+## 🛠️ Meilenstein 2: Setup & Umgebung
+**Ziel:** Das Repo sicher nutzen und den Lernstand ueberwiegend im Terminal verwalten.
+
+**Modul-Einstiege:**
+- [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md)
+- [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md)
+- [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md)
+
+**Vertiefung:**
+- [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md)
+- [modules/05-terminal/02-terminal-themenueberblick.md](modules/05-terminal/02-terminal-themenueberblick.md)
+- [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md)
+- [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
+- [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+
+**Lernziele:**
+
+### Must have
+- [x] Repository lokal einrichten.
+- [x] Persoenlichen Arbeitsbereich anlegen.
+- [x] Einen erstellten Branch per PR auf `main` bringen.
+- [ ] Eigenen Lernstand verwalten und dabei ueberwiegend im Terminal arbeiten.
+
+### Should have
+- [ ] Sichere Alltagsaktionen im Terminal ausfuehren.
+- [ ] Git-Grundbefehle im Alltag ohne Copy-Paste zusammensetzen.
+- [ ] Quellen aus Modulguide und Vertiefung passend zur Aufgabe auswaehlen.
+
+### Nice to have
+- [ ] Routine bei Branch-Wechseln, kleinen Korrekturen und wiederholten Commits aufbauen.
+- [ ] Den eigenen Lernstand knapp und regelmaessig dokumentieren.
+
+**Aktueller Umsetzungsstand:**
 
 - [x] **Repository lokal einrichten**
-  > **Wissen:** Du musst anwenden, wie man ein Projekt von GitHub auf den Rechner kopiert und dir für deine anstehende Arbeit einen eigenen Branch erstellst.
-  
-  - [ ] Terminal in VS Code finden und öffnen
-  - [ ] Grundlagen der Terminal-Nutzung lernen
-  - [ ] Prüfen, ob Git installiert ist (`git --version`)
-  - [ ] Ggf. Git installieren und lokales "Namensschild" (E-Mail/Name) anlegen
-  - [ ] HTTPS-URL des Repositories auf GitHub kopieren
-  - [ ] Projekt mit dem Befehl `git clone` in das Terminal herunterladen
-  - [ ] Den neu erstellten Projektordner in VS Code öffnen (`Datei` -> `Ordner öffnen`)
+  - [x] Terminal in VS Code finden und oeffnen
+  - [x] Grundlagen der Terminal-Nutzung lernen
+  - [x] Pruefen, ob Git installiert ist (`git --version`)
+  - [x] Ggf. Git installieren und lokales Namensschild (E-Mail/Name) anlegen
+  - [x] HTTPS-URL des Repositories auf GitHub kopieren
+  - [x] Projekt mit `git clone` herunterladen
+  - [x] Projektordner in VS Code oeffnen
 
-- [ ] **Persönlichen Arbeitsbereich anlegen**
-  > **Wissen:** Du musst wissen, wie man einen eigenen Git-Branch erstellt, über das Terminal navigiert und Ordnerstrukturen anlegt.
-  
-  - [ ] Eigenen Arbeits-Branch für deine Änderungen erstellen (z. B. `git checkout -b feature/setup-deinname`)
-  - [ ] Im Terminal in den bestehenden Ordner `apps/learners/` navigieren (`cd apps/learners/`)
-  - [ ] Einen neuen, eigenen Ordner im Format `vorname-nachname` erstellen (`mkdir ...`)
-  - [ ] In deinen gerade erstellten Ordner wechseln (`cd ...`)
+- [x] **Persoenlichen Arbeitsbereich anlegen**
+  - [x] Eigenen Arbeits-Branch erstellen
+  - [x] In den bestehenden Ordner navigieren
+  - [x] Einen eigenen Ordner erstellen
+  - [x] `prd_vorname.md` anlegen
 
-- [ ] **Erstes Logbuch erstellen & Änderungen synchronisieren**
-  > **Wissen:** Du wendest den Git-Workflow an, um Dateien zu erstellen und deinen Fortschritt das erste Mal in dieses neue Repo zu pushen.
-  
-  - [ ] Eine neue Datei namens `LOG.md` in deinem Ordner anlegen
-  - [ ] Die "Vorlage für dein persönliches Logbuch" (ganz unten in diesem Dokument) hineinkopieren
-  - [ ] Deine bereits erledigten Aufgaben in deiner `LOG.md` mit einem `[x]` abhaken und die Datei speichern
-  - [ ] Alle Änderungen für Git einsammeln (`git add .`)
-  - [ ] Die Änderungen mit einer Nachricht bestätigen (`git commit -m "feat: initial setup"`)
-  - [ ] Deinen Branch in die Cloud hochladen (`git push origin [dein-branch-name]`)
-  - [ ] *Ggf. den VS Code GitHub-Login im Browser bestätigen, falls das Pop-up erscheint*
+- [x] **Erstellten Branch auf main mergen**
+  - [x] Aenderungen committen und pushen
+  - [x] PR von Branch auf `main` erstellen
+  - [x] PR-Beschreibung ausfuellen
+  - [x] (Optional) Code-Review abwarten
+  - [x] PR mergen
+  - [x] (Optional) Lokalen Branch loeschen und auf `main` wechseln
 
-## 🏗️ Meilenstein 3: Anforderungen & Context-Engineering
-**Ziel:** Den KI-Assistenten präzise instruieren und den Rahmen für das Vibe Coding schaffen.
+- [ ] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
+  > **Uebung:** [docs/uebungen/meilenstein-02-uebung-01.md](docs/uebungen/meilenstein-02-uebung-01.md)
+  > **Quellen zur Uebung:** [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md), [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md), [modules/05-terminal/02-terminal-themenueberblick.md](modules/05-terminal/02-terminal-themenueberblick.md), [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md), [modules/04-git/02-git-grundlagen.md](modules/04-git/02-git-grundlagen.md), [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md), [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+  >
+  > **Durchfuehrung der ersten Uebung:**
+  > 1. Uebungsdatei in [docs/uebungen](docs/uebungen) lesen.
+  > 2. Aufgaben im Terminal ausfuehren und Platzhalter ersetzen.
+  > 3. Eigene Antwortdatei im persoenlichen Ordner anlegen.
+  > 4. Lernfortschrittsdatei aktualisieren.
+  > 5. Committen, pushen, PR erstellen.
 
-- [ ] **Individuelle Lern-Spezifikation (PRD) schreiben**
-  > **Wissen:** Du musst verstehen, wie man Anforderungen so formuliert, dass eine KI sie als präzisen Kontext nutzen kann.
-  
-  - [ ] Die Grundlagen von gutem Prompting und das "Kontext-Fenster" verstehen
-  - [ ] Die übergeordnete Basis-Spezifikation (`prd_dashboard.md`) als Kontext im Copilot Chat referenzieren
-  - [ ] Die KI mit einem gezielten Prompt bitten, eine detaillierte Spezifikation (PRD) für deine eigene Profil-Karte zu erstellen
-  - [ ] Das von der KI generierte PRD prüfen, ggf. iterativ anpassen ("viben") und in deinem Ordner als `.md` Datei speichern
+  - [ ] `git pull origin main` ausfuehren
+  - [ ] Einen neuen Branch erstellen (`git checkout -b <branch-name>`)
+  - [ ] Unterordner `lernstand_vorname` anlegen
+  - [ ] Datei `meilensteine_<vorname>.md` anlegen
+  - [ ] Bisherige und kommende Aufgaben in der Datei pflegen
+  - [ ] Eigene Lernfortschrittsdatei aktualisieren
+  - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Schritt
 
-- [ ] **Lernziele in `goals.json` definieren**
-  > **Wissen:** Du musst verstehen, wie Daten strukturiert werden (JSON), damit die App sie später automatisch auslesen und darstellen kann.
-  
-  - [ ] Verstehen, warum strukturierte, maschinenlesbare Daten als Kontext wichtig sind
-  - [ ] Eine neue Datei namens `goals.json` in deinem Ordner anlegen
-  - [ ] Deine persönlichen Lernziele (ggf. mit Hilfe der KI) im korrekten JSON-Format eintragen
-  - [ ] Deinen Fortschritt im Logbuch abhaken
-  - [ ] Die neuen Dateien mit Git speichern und hochladen (`git add .`, `git commit`, `git push`)
+- [ ] **Sichere Alltagsaktionen im Terminal ausfuehren**
+  - [ ] In Ordnern navigieren (`cd`, `cd ..`)
+  - [ ] Dateien anlegen (`echo. > <dateiname>.md`)
+  - [ ] Dateien loeschen (`del <dateiname>`)
+  - [ ] Dateien verschieben/umbenennen (`move <quelle> <ziel>`)
+  - [ ] Ordner anlegen/loeschen (`mkdir`, `rmdir`)
+  - [ ] Branches verwalten (`git checkout -b`, `git checkout`, `git branch -d`)
+  - [ ] Committen und pushen (`git add .`, `git commit -m`, `git push origin <branch>`)
+  - [ ] PR auf GitHub erstellen
+
+---
+
+## 🚀 Meilenstein 3: Einstieg Prompting & Context-Engineering
+**Ziel:** Prompting und Kontext-Verwaltung fuer AI-gestuetzte Entwicklung sicher anwenden.
+
+**Modul-Einstiege:**
+- [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md)
+
+**Vertiefung:**
+- [modules/06-ai-instructions/01-prompting-context-engineering-grundlagen.md](modules/06-ai-instructions/01-prompting-context-engineering-grundlagen.md)
+
+**Lernziele:**
+
+### Must have
+- [ ] Erfolgreich prompten.
+- [ ] PRD und weitere Doku als Kontext fuer AI erstellen.
+
+### Should have
+- [ ] Umgang mit Chats in der Kontext-Verwaltung.
+- [ ] Repository-Struktur fuer Context-Engineering optimieren.
+
+### Nice to have
+- [ ] Eigenen Ordner mit Gelerntem anpassen.
+
+**Aktueller Umsetzungsstand:**
+
+- [ ] **Erfolgreich prompten**
+  - [ ] Prompt-Typen verstehen (Frage, Befehl, Kontext)
+  - [ ] Eigene Prompts formulieren und testen
+  - [ ] AI-Feedback auswerten und Prompts verbessern
+
+- [ ] **PRD und weitere Doku als Kontext fuer AI erstellen**
+  - [ ] Aufbau und Zweck eines PRD verstehen
+  - [ ] Beispiel-PRD fuer eigenes Lernprojekt verfassen
+  - [ ] Weitere Doku-Arten als Kontext nutzen (z. B. Glossar, User Stories)
+  - [ ] Dokumente AI-verstaendlich strukturieren
+
+- [ ] **Umgang mit Chats in der Kontext-Verwaltung**
+  - [ ] Chats passend zum Kontext nutzen
+  - [ ] Relevante Infos aus Chats dokumentieren
+  - [ ] Kontext fuer neue Aufgaben gezielt zusammenstellen
+
+- [ ] **Repository-Struktur fuer Context-Engineering optimieren**
+  - [ ] Bestehende Struktur analysieren
+  - [ ] Verbesserungen fuer AI-freundliche Struktur ableiten
+  - [ ] Eigene Ordner/Dateien entsprechend anpassen
+
+- [ ] **Eigenen Ordner mit Gelerntem anpassen**
+  - [ ] Eigene Meilenstein-Doku mit neuen Erkenntnissen erweitern
+  - [ ] Best Practices aus Meilenstein 3 uebernehmen
+  - [ ] Struktur und Inhalte regelmaessig reflektieren und verbessern

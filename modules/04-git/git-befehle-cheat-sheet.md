@@ -1,4 +1,4 @@
-# 📝 Cheat Sheet: Die wichtigsten Git-Befehle
+# Git-Befehlsuebersicht
 
 Dieses Dokument ist dein Spickzettel für die Arbeit mit Git im Terminal. Du musst nicht alles auswendig lernen – nutze diese Liste einfach zum Nachschlagen, wenn du nicht weiterweißt.
 

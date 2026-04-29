@@ -1,4 +1,4 @@
-# Markdown 101: Was ist Markdown und wofür wird es genutzt?
+# Markdown: Grundlagen und Einsatz
 
 ## Was ist Markdown?
 Markdown ist eine leichtgewichtige Auszeichnungssprache, die entwickelt wurde, um Text einfach und schnell zu formatieren. Sie wurde 2004 von John Gruber und Aaron Swartz entworfen. Das Ziel: Texte sollen so geschrieben werden, dass sie sowohl als Klartext gut lesbar sind als auch leicht in HTML oder andere Formate umgewandelt werden können.

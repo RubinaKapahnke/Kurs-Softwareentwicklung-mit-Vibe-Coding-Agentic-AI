@@ -1,0 +1,36 @@
+# Modulguide: VS Code
+
+Dieses Modul erklaert die Rolle von VS Code im Kurs und gibt dir einen kompakten Einstieg in die wichtigsten Funktionen des Editors.
+
+## Inhalt
+
+1. [VS Code: Grundlagen und Einstieg](./01-vscode-grundlagen.md)
+
+## Selbstcheck
+
+Nutze die Checklisten als Selbstcheck fuer das VS Code-Modul.
+
+### Must have
+
+- [ ] Ich weiss, was VS Code ist und warum es als zentrale Arbeitsumgebung genutzt wird.
+- [ ] Ich kann im Editor orientieren: Explorer, Editor-Bereich, Terminal.
+- [ ] Ich kann die Befehlspalette oeffnen und nutzen (Ctrl+Shift+P / Cmd+Shift+P).
+- [ ] Ich kann Dateien oeffnen, bearbeiten und speichern.
+
+### Should have
+
+- [ ] Ich verstehe, wie VS Code Git, Terminal und Erweiterungen verbindet.
+- [ ] Ich kann wiederkehrende Aktionen ueber Shortcuts oder Befehlspalette schneller ausfuehren.
+- [ ] Ich erkenne, wie VS Code Dokumentation, Code und KI-Assistenz zusammenbringt.
+- [ ] Ich kann Tabs und mehrere Dateien gleichzeitig oeffnen.
+
+### Nice to have
+
+- [ ] Ich passe den Editor so an, dass er besser zu meinem Workflow passt (Theme, Einstellungen).
+- [ ] Ich kenne sinnvolle Erweiterungen oder Ansichten fuer die Arbeit im Repo.
+- [ ] Ich nutze VS Code fuer verschiedene Aufgaben neben Code-Bearbeitung (Markdown, Git, Terminal).
+- [ ] Ich nutze Debugging- oder Preview-Features je nach Kontext.
+
+## Wenn du etwas nachholen willst
+
+- Fuer Grundlagen: [VS Code: Grundlagen und Einstieg](./01-vscode-grundlagen.md)

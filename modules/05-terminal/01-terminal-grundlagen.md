@@ -1,4 +1,4 @@
-# Terminal 101: Einstieg und Grundlagen
+# Terminal: Grundlagen und Einstieg
 
 ## Was ist ein Terminal?
 Das Terminal (auch Konsole oder Kommandozeile genannt) ist ein Text-basiertes Werkzeug, mit dem du direkt mit deinem Computer kommunizieren kannst. Hier gibst du Befehle ein, um Programme zu starten, Dateien zu verwalten oder Tools zu steuern.

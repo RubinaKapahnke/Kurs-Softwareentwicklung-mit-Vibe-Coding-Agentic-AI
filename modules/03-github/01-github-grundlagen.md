@@ -1,4 +1,4 @@
-# GitHub 101: Einstieg und Grundlagen
+# GitHub: Grundlagen und Einstieg
 
 ## Was ist GitHub?
 GitHub ist eine Plattform zur Versionsverwaltung und Zusammenarbeit an Softwareprojekten. Sie basiert auf dem Versionskontrollsystem Git und ermöglicht es, Code gemeinsam zu entwickeln, zu verwalten und zu veröffentlichen.
@@ -15,6 +15,18 @@ GitHub ist eine Plattform zur Versionsverwaltung und Zusammenarbeit an Softwarep
 - **Pull Requests:** Vorschläge für Änderungen, die diskutiert und zusammengeführt werden können
 - **Issues:** Aufgaben, Fehler und Ideen verwalten
 - **Actions:** Automatisierte Workflows (z. B. Tests, Deployments)
+
+## Pull Request in 5 Schritten erstellen
+1. Stelle sicher, dass dein Branch auf GitHub liegt (`git push origin <branch-name>`).
+2. Oeffne das Repository auf GitHub.
+3. Klicke auf "Compare & pull request" oder auf "New pull request".
+4. Waehle als Quelle deinen Branch und als Ziel `main`.
+5. Schreibe eine kurze PR-Beschreibung (Was wurde gemacht? Warum?) und erstelle den PR.
+
+### PR-Checkliste
+- Ist klar beschrieben, was geaendert wurde?
+- Sind relevante Dateien und Schritte genannt?
+- Ist der Branch korrekt und auf dem aktuellen Stand?
 
 ## Warum ist GitHub ideal für Vibe Coding?
 - **Kollaboration:** Einfaches gemeinsames Arbeiten und Feedback

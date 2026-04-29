@@ -1,4 +1,4 @@
-# VS Code 101: Einstieg und Grundlagen
+# VS Code: Grundlagen und Einstieg
 
 ## Was ist Visual Studio Code?
 Visual Studio Code (kurz: VS Code) ist ein kostenloser, plattformübergreifender Code-Editor von Microsoft. Er ist besonders beliebt bei Entwickler:innen, weil er leichtgewichtig, schnell und sehr anpassbar ist.

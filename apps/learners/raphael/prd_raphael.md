@@ -1,13 +1,6 @@
-# 📄 Product Requirements Document (PRD): Progress-Hub
+# PRD: Raphael
 
-**Projekt:** Gruppenprojekt "Progress-Hub"  
-**Status:** Concept Phase  
-**Stack:** Angular, Angular Material, JSON, TypeScript
-
----
-
-## 1. Vision & Zielsetzung
-Der **Progress-Hub** ist das zentrale Nervensystem unseres Kurses. Er dient als integrierte Web-Applikation, die die dezentralen Lernfortschritte und Ziele aller Teilnehmenden bündelt und visualisiert.
+<!-- Wird in Meilenstein 3 ausgefüllt -->
 
 ---
 
