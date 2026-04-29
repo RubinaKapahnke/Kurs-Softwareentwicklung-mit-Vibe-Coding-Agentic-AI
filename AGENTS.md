@@ -38,10 +38,9 @@ The learning structure follows this hierarchy:
 
 1. **NEXT_STEPS.md** (zentral) → Defines milestones and learning goals
 2. **Modules/** (zentral) → Explain concepts and commands
-   - `00-modulguide.md` → Navigation and overview
+   - `00-modulguide.md` → Navigation, overview, and **inline Selbstcheck** (Must/Should/Nice checklists)
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
    - `02/03-*-befehlsuebersicht.md` → Quick reference for commands (Terminal, Git only)
-   - `00-*-themenueberblick.md` → Self-check with Must/Should/Nice checklists
 3. **docs/uebungen/** (zentral) → Exercises with direct module source links
 4. **apps/learners/** (dezentral) → Individual learning progress per person
 
@@ -89,10 +88,11 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 
 ## Module Structure (Conventions)
 Each module follows this pattern:
-- `00-<modulname>-modulguide.md` → 5-10 lines: Intro + Inhalt (links) + Verweis auf Selbstcheck
+- `00-<modulname>-modulguide.md` → Intro + Inhalt (links) + **inline Selbstcheck** (Must/Should/Nice + "Wenn du nachholen willst")
 - `01-<modulname>-grundlagen.md` → Conceptual explanation (not commands)
 - `02/03-<modulname>-befehlsuebersicht.md` → Tables with Befehl|Wofuer|Beispiel|Achtung (Terminal, Git only)
-- `00/01/02-<modulname>-themenueberblick.md` → Checklists with Must/Should/Nice + cross-links
+
+**Wichtig:** Es gibt keine separate `themenueberblick.md`-Datei. Der Selbstcheck mit Must/Should/Nice-Checklisten ist immer direkt im `00-*-modulguide.md` als `## Selbstcheck`-Abschnitt enthalten.
 
 ## Change Style
 - Prefer incremental improvements over radical rewrites.
@@ -110,13 +110,12 @@ Each module follows this pattern:
 modules/XX-<modulname>/
 ├── 00-<modulname>-modulguide.md
 ├── 01-<modulname>-grundlagen.md
-├── 00-<modulname>-themenueberblick.md
 └── 03-<modulname>-befehlsuebersicht.md  (nur bei Terminal/Git)
 ```
 
 **Schritt 2: Jede Datei nach Template erstellen**
 
-`00-modulguide.md` (5-10 Zeilen):
+`00-modulguide.md`:
 ```markdown
 # Modulguide: [Name]
 
@@ -129,29 +128,28 @@ modules/XX-<modulname>/
 
 ## Selbstcheck
 
-Siehe [<Name>-Themenueberblick](./00-<modulname>-themenueberblick.md) fuer Must/Should/Nice-Checklisten.
-```
+Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 
-`01-*-grundlagen.md` (beliebig lang):
-- Erklärt **Konzepte und Warum** (nicht Befehle)
-- Zielgruppe: Lernende, die verstehen wollen
-- **KEINE** Befehlstabellen hier
-
-`00-*-themenueberblick.md` (30-50 Zeilen):
-```markdown
-## Must have
+### Must have
 - [ ] Ich kann X
 - [ ] Ich kann Y
 
-## Should have
+### Should have
 - [ ] Ich kann A
 
-## Nice to have
+### Nice to have
 - [ ] Ich kann B
 
 ## Wenn du etwas nachholen willst
 [Links zu Grundlagen und anderen Modulen]
 ```
+
+> **Wichtig:** Kein separates `themenueberblick.md` anlegen. Selbstcheck gehört inline in den Modulguide.
+
+`01-*-grundlagen.md` (beliebig lang):
+- Erklärt **Konzepte und Warum** (nicht Befehle)
+- Zielgruppe: Lernende, die verstehen wollen
+- **KEINE** Befehlstabellen hier
 
 `03-*-befehlsuebersicht.md` (nur Terminal/Git):
 ```markdown
@@ -360,8 +358,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 > Exit-Code 0 = alles OK, 1 = mindestens ein Fehler.
 
 - [ ] **Alle Quellen existieren?** grep_search nach Links in Übungen
-- [ ] **Alle Modulguides haben die gleiche Struktur?** 00-modulguide.md + 01-grundlagen.md + 00-themenueberblick.md
-- [ ] **Keine redundanten Lernziele?** (Nur in 00-themenueberblick.md, nicht in modulguide.md)
+- [ ] **Alle Modulguides haben die gleiche Struktur?** 00-modulguide.md (mit inline Selbstcheck) + 01-grundlagen.md
+- [ ] **Keine redundanten Lernziele?** Selbstcheck-Checklisten nur im `## Selbstcheck`-Abschnitt des Modulguide, nirgendwo sonst
 - [ ] **Alle Links funktionieren?** (Relative Pfade prüfen)
 - [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
 - [ ] **NEXT_STEPS.md ↔ docs/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
@@ -381,9 +379,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 ### 📝 Beispiel: Kompletter Workflow für neues Modul
 
 **1. Neues Modul "Test" erstellen:**
-   - `modules/08-test/00-test-modulguide.md`
+   - `modules/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
    - `modules/08-test/01-test-grundlagen.md`
-   - `modules/08-test/00-test-themenueberblick.md`
 
 **2. In NEXT_STEPS.md neuen Meilenstein hinzufügen:**
    - "Meilenstein 4: Testing"
@@ -406,9 +403,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
    ```
    feat: Modul 08-test hinzugefügt (Meilenstein 4)
    
-   - 00-test-modulguide.md: Navigation
+   - 00-test-modulguide.md: Navigation + inline Selbstcheck
    - 01-test-grundlagen.md: Konzepte
-   - 00-test-themenueberblick.md: Selbstcheck
    - meilenstein-04-uebung-01.md: Erste Übung
    - Alle Links konsistent + Modulabdeckung dokumentiert
    ```

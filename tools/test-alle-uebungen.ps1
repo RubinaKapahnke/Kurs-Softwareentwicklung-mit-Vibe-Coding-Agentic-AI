@@ -37,4 +37,54 @@ if ($totalFailed -eq 0) {
 Write-Host ("=" * 70)
 Write-Host ""
 
-exit $(if ($totalFailed -eq 0) { 0 } else { 1 })
+# --- Meilenstein-Coverage-Check ---
+Write-Host ("=" * 70)
+Write-Host "  Meilenstein-Coverage-Check (NEXT_STEPS.md <-> docs/uebungen/)" -ForegroundColor Cyan
+Write-Host ("=" * 70)
+
+$nextStepsPath = "$repoRoot\NEXT_STEPS.md"
+$nextStepsContent = Get-Content $nextStepsPath -Raw -Encoding UTF8
+
+# Alle referenzierten Uebungspfade aus NEXT_STEPS.md extrahieren
+$uebungMatches = [regex]::Matches($nextStepsContent, '\*\*Uebung:\*\*\s*\[.*?\]\((docs/uebungen/[^)]+)\)')
+$referencedAbsPaths = @()
+$coverageFailed = 0
+
+foreach ($match in $uebungMatches) {
+    $relPath  = $match.Groups[1].Value
+    $absPath  = [System.IO.Path]::GetFullPath((Join-Path $repoRoot ($relPath -replace '/', '\')))
+    $referencedAbsPaths += $absPath
+
+    if (-not (Test-Path $absPath)) {
+        Write-Host "  [FEHLER] Tote Referenz in NEXT_STEPS.md: $relPath" -ForegroundColor Red
+        Write-Host "           -> Datei existiert nicht auf Disk" -ForegroundColor Yellow
+        $coverageFailed++
+    } else {
+        Write-Host "  [OK  ] Referenz OK: $relPath" -ForegroundColor Green
+    }
+}
+
+# Uebungsdateien, die nicht in NEXT_STEPS.md verlinkt sind
+foreach ($file in $uebungen) {
+    $fileAbs = [System.IO.Path]::GetFullPath($file.FullName)
+    if ($referencedAbsPaths -notcontains $fileAbs) {
+        Write-Host "  [WARN] Uebungsdatei existiert, aber fehlt in NEXT_STEPS.md: $($file.Name)" -ForegroundColor Yellow
+        $coverageFailed++
+    }
+}
+
+if ($uebungMatches.Count -eq 0) {
+    Write-Host "  [WARN] Keine '> **Uebung:**'-Eintraege in NEXT_STEPS.md gefunden." -ForegroundColor Yellow
+}
+
+Write-Host ("-" * 70)
+if ($coverageFailed -eq 0) {
+    Write-Host "  Coverage-Check: alle Referenzen konsistent." -ForegroundColor Green
+} else {
+    Write-Host "  Coverage-Check: $coverageFailed Problem(e) gefunden." -ForegroundColor Red
+}
+Write-Host ("=" * 70)
+Write-Host ""
+
+$overallFailed = $totalFailed + $coverageFailed
+exit $(if ($overallFailed -eq 0) { 0 } else { 1 })

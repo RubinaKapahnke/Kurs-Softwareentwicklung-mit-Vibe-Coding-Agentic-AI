@@ -94,6 +94,7 @@ modules/04-git/
 │           └── lernfortschritt_sebastian.md
 ├── .github/
 │   ├── agents/
+│   │   ├── course-dev-curriculum.agent.md
 │   │   ├── course-dev-exercise-creator.agent.md
 │   │   └── course-dev-repo-consistency-checker.agent.md
 │   └── prompts/
@@ -114,7 +115,6 @@ modules/04-git/
 │   ├── 05-terminal/
 │   ├── 06-ai-instructions/
 │   │   ├── 00-ai-instructions-modulguide.md
-│   │   ├── 00-ai-instructions-themenueberblick.md
 │   │   ├── 01-prompting-grundlagen.md
 │   │   ├── 02-prd-grundlagen.md
 │   │   └── 03-prompt-dateien-grundlagen.md
