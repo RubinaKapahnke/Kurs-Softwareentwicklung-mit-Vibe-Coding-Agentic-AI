@@ -1,33 +1,31 @@
 # Modulguide: Architecture Foundations
 
-> [!WARNING]
-> **Dieses Modul ist noch nicht verfügbar.** Es ist aktuell in Entwicklung und wird später als Meilenstein 4+ verfügbar sein. Bitte nutze noch nicht die Lernziele unten, sondern folge dem [Fahrplan in NEXT_STEPS.md](../../NEXT_STEPS.md).
+Dieses Modul erklaert, wie du ein Softwareprojekt strukturiert aufbaust – damit die KI weiss, was sie bauen soll, und du weisst, was entsteht.
 
-Dieses Modul ist fuer Grundlagen zu Architektur und strukturellem Denken im Projekt vorgesehen. Aktuell dient dieses Dokument als Startpunkt und Platzhalter fuer die weitere Ausarbeitung des Moduls.
+## Inhalt
 
-## Inhalt (in Entwicklung)
+1. [01-architecture-foundations-grundlagen.md](./01-architecture-foundations-grundlagen.md)
+2. [02-architecture-foundations-praxis.md](./02-architecture-foundations-praxis.md) – Vom PRD zur Projektstruktur (Praxis-Walkthrough) – Projektstruktur, Komponenten-Denken, Datenfluss
 
-Aktuell gibt es in diesem Modul noch keine Unterdokumente. Sie werden spaeter hinzugefuegt.
+## Selbstcheck
 
-## Geplante Lernziele
-
-*(Diese sind Ziele fuer die kuenftige Ausarbeitung dieses Moduls)*
+Nutze die Checklisten als Selbstcheck fuer das Architecture-Foundations-Modul.
 
 ### Must have
-
-- Du verstehst, dass Architekturentscheidungen Struktur, Wartbarkeit und Zusammenarbeit beeinflussen.
-- Du entwickelst ein erstes Bewusstsein dafuer, dass nicht nur Code, sondern auch Aufbau und Schnittstellen geplant werden muessen.
+- [ ] Ich kann erklaeren, warum Projektstruktur fuer Vibe Coding wichtig ist.
+- [ ] Ich kann beschreiben, was eine Komponente ist und wofuer sie verantwortlich ist.
+- [ ] Ich kann die Ordnerstruktur meines Projekts der KI in einem Prompt erklaeren.
 
 ### Should have
-
-- Du kannst einfache Architekturfragen benennen, zum Beispiel Verantwortlichkeiten, Datenfluss oder Modulgrenzen.
-- Du erkennst, wann eine Aufgabe nicht nur ein Coding-, sondern auch ein Strukturthema ist.
+- [ ] Ich kann den Datenfluss in meiner App in einfachen Worten beschreiben.
+- [ ] Ich erkenne, wann eine Aufgabe ein Strukturthema ist – nicht nur ein Coding-Thema.
+- [ ] Ich kann benennen, welche Teile meines Projekts zusammengehoeren.
 
 ### Nice to have
+- [ ] Ich kann Architekturentscheidungen kurz begruenden (z. B. warum etwas in einen eigenen Ordner kommt).
+- [ ] Ich entwickle ein Vokabular fuer Strukturentscheidungen, das ich im Team und im Prompt nutzen kann.
 
-- Du kannst spaeter neue Architekturinhalte in dieses Modul logisch einordnen.
-- Du entwickelst ein Vokabular fuer grundlegende Strukturentscheidungen im Team.
+## Wenn du etwas nachholen willst
 
-## Hinweise zur Nutzung
-
-Sobald Inhalte in diesem Modul entstehen, sollte dieses Dokument als Einstieg, Inhaltsverzeichnis und Zielbild des Moduls weitergefuehrt werden.
+- Kontext fuer KI aufbauen: [modules/06-ai-instructions/01-prompting-grundlagen.md](../06-ai-instructions/01-prompting-grundlagen.md)
+- Eigenes PRD verstehen: [modules/06-ai-instructions/02-prd-grundlagen.md](../06-ai-instructions/02-prd-grundlagen.md)

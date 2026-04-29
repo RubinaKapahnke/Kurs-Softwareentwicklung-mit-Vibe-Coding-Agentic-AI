@@ -12,6 +12,10 @@ Wie Übungen mit Modulen und NEXT_STEPS verknüpft sind, erklärt [NEXT_STEPS.md
 | [meilenstein-02-uebung-02.md](meilenstein-02-uebung-02.md) | 2 – Setup & Umgebung | Terminal-Alltag und Git-Befehle selbststaendig anwenden | Should have |
 | [meilenstein-02-uebung-03.md](meilenstein-02-uebung-03.md) | 2 – Setup & Umgebung | Routine aufbauen und Lernstand dokumentieren | Nice to have |
 | [meilenstein-03-uebung-01.md](meilenstein-03-uebung-01.md) | 3 – Prompting & Context-Engineering | Eigenes PRD erstellen | Must have |
+| [meilenstein-03-uebung-02.md](meilenstein-03-uebung-02.md) | 3 – Prompting & Context-Engineering | Erfolgreich prompten | Must have |
+| [meilenstein-03-uebung-03.md](meilenstein-03-uebung-03.md) | 3 – Prompting & Context-Engineering | Prompt-Dateien erstellen und nutzen | Should have |
+| [meilenstein-03-uebung-04.md](meilenstein-03-uebung-04.md) | 3 – Prompting & Context-Engineering | Kontext-Qualität im Repo verbessern | Should have |
+| [meilenstein-04-uebung-01.md](meilenstein-04-uebung-01.md) | 4 – Projekt starten | Von der PRD zur ersten Komponente | Must have |
 
 ## Benennung
 - meilenstein-XX-uebung-YY.md
@@ -49,4 +53,4 @@ Jede Uebung muss ohne Vorkenntnisse und ohne externe Hilfe bearbeitbar sein. Daz
 
 ### Formatbeispiel
 - Aufgabe: Branch erstellen
-- Quelle: [modules/04-git/02-git-grundlagen.md](../../modules/04-git/02-git-grundlagen.md)
+- Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md)

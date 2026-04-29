@@ -5,6 +5,7 @@ Dieses Modul erklaert die Rolle von VS Code im Kurs und gibt dir einen kompakten
 ## Inhalt
 
 1. [VS Code: Grundlagen und Einstieg](./01-vscode-grundlagen.md)
+2. [GitHub Copilot Chat in VS Code](./02-vscode-copilot.md)
 
 ## Selbstcheck
 
@@ -23,6 +24,9 @@ Nutze die Checklisten als Selbstcheck fuer das VS Code-Modul.
 - [ ] Ich kann wiederkehrende Aktionen ueber Shortcuts oder Befehlspalette schneller ausfuehren.
 - [ ] Ich erkenne, wie VS Code Dokumentation, Code und KI-Assistenz zusammenbringt.
 - [ ] Ich kann Tabs und mehrere Dateien gleichzeitig oeffnen.
+- [ ] Ich kann Copilot Chat oeffnen und eine Frage stellen.
+- [ ] Ich kann mit `#` eine Datei als Kontext zu einem Prompt hinzufuegen.
+- [ ] Ich kann mit `/` Prompt-Dateien aufrufen.
 
 ### Nice to have
 
@@ -34,3 +38,4 @@ Nutze die Checklisten als Selbstcheck fuer das VS Code-Modul.
 ## Wenn du etwas nachholen willst
 
 - Fuer Grundlagen: [VS Code: Grundlagen und Einstieg](./01-vscode-grundlagen.md)
+- Fuer Copilot Chat: [GitHub Copilot Chat in VS Code](./02-vscode-copilot.md)

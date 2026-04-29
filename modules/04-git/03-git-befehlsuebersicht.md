@@ -1,6 +1,6 @@
 # Git-Befehlsuebersicht
 
-Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen willst, warum ein Befehl noetig ist, lies vorher [Git: Grundlagen und Einstieg](./02-git-grundlagen.md).
+Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen willst, warum ein Befehl noetig ist, lies vorher [Git: Grundlagen und Einstieg](./01-git-grundlagen.md).
 
 ## Orientierung
 

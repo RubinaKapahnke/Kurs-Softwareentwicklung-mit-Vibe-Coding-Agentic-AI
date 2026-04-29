@@ -26,7 +26,7 @@ Du bist ein Kursentwickler für das vibe-coding-0426-Repo. Deine Aufgabe ist es,
 4. Prüfe `docs/uebungen/` – welche Übungen existieren, zu welchen Meilensteinen?
 5. Erstelle eine Gap-Analyse:
    - Meilensteine ohne passende Module
-   - Module ohne `00-*-themenueberblick.md`
+   - Module ohne `## Selbstcheck`-Abschnitt im `00-*-modulguide.md`
    - Module mit nur `01-grundlagen.md` – gibt es Bedarf für Vertiefungsdateien?
    - Meilensteine ohne verknüpfte Übungen
 
@@ -36,7 +36,7 @@ Erstelle einen priorisierten Plan mit konkreten Dateinamen und Begründungen:
 
 **Neue Dateien im bestehenden Modul:**
 - Wenn Grundlagen vorhanden sind und der Meilenstein weiterführende Fähigkeiten fordert → neue Datei vorschlagen (z.B. `02-git-workflows.md`, `04-terminal-skripte.md`)
-- Wenn Selbstcheck fehlt → `00-*-themenueberblick.md` vorschlagen
+- Wenn `## Selbstcheck`-Abschnitt im `00-*-modulguide.md` fehlt → Abschnitt inline ergänzen vorschlagen
 
 **Neues Modul anlegen:**
 - Wenn ein Meilenstein-Thema kein passendes Modul hat → komplettes Modul-Gerüst nach Convention vorschlagen

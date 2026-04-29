@@ -199,7 +199,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 ## Modulabdeckung (Check)
 - ✓ modules/05-terminal/01-terminal-grundlagen.md: Was ist ein Terminal, Grundkonzepte
 - ✓ modules/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
-- ✓ modules/04-git/02-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
+- ✓ modules/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
 - ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
 - ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
 - ✓ modules/04-git/00-git-modulguide.md + modules/05-terminal/00-terminal-modulguide.md + modules/03-github/00-github-modulguide.md: Modul-Navigation ueben
@@ -211,7 +211,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 - **Terminal oeffnen und im Repo-Ordner arbeiten** ([modules/05-terminal/01-terminal-grundlagen.md](../../modules/05-terminal/01-terminal-grundlagen.md))
-- **Branch erstellen und PR abschicken** – aus Meilenstein 2, Uebung 01 ([modules/04-git/02-git-grundlagen.md](../../modules/04-git/02-git-grundlagen.md))
+- **Branch erstellen und PR abschicken** – aus Meilenstein 2, Uebung 01 ([modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md))
 - **Dateien in VS Code bearbeiten und Markdown schreiben** ([modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md))
 
 ---

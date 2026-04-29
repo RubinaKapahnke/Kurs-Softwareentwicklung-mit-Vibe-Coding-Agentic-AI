@@ -20,7 +20,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 ## Vorbereitung
 
 Lies kurz den Abschnitt "Branches: sicher getrennt arbeiten" in:
-[modules/04-git/02-git-grundlagen.md](../../modules/04-git/02-git-grundlagen.md)
+[modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md)
 
 Danach solltest du in einem Satz erklaeren koennen, warum man nicht direkt auf `main` arbeitet.
 
@@ -155,7 +155,7 @@ Erstelle auf GitHub einen zweiten PR (gleicher Ablauf wie in Aufgabe 1).
 
 > **Pruefe:** Du hast jetzt zwei offene PRs auf GitHub – einen von Aufgabe 1, einen von hier. Das ist beabsichtigt – du laeuft gerade zwei parallele Aenderungen, wie es im Alltag vorkommt.
 
-Quelle: [modules/04-git/02-git-grundlagen.md](../../modules/04-git/02-git-grundlagen.md)
+Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md)
 
 ---
 
@@ -183,7 +183,7 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 ---
 
 ## Modulabdeckung (Check)
-- ✓ modules/04-git/02-git-grundlagen.md: Branches erklaert, Grundablauf (status, add, commit, push, pull)
+- ✓ modules/04-git/01-git-grundlagen.md: Branches erklaert, Grundablauf (status, add, commit, push, pull)
 - ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout main`, `pull`, `checkout -b`, `stash`, `add`, `commit`, `push`
 - ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
 - ✓ modules/01-markdown/01-markdown-grundlagen.md: Strukturierter Lernjournal-Eintrag in Markdown
@@ -194,7 +194,7 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Branch erstellen und PR abschicken** – aus Uebung 01 und 02 ([modules/04-git/02-git-grundlagen.md](../../modules/04-git/02-git-grundlagen.md))
+- **Branch erstellen und PR abschicken** – aus Uebung 01 und 02 ([modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md))
 - **Dateien in VS Code bearbeiten und Markdown schreiben** ([modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md))
 - **Lernfortschritt-Datei kennen und oeffnen** ([modules/02-vscode/01-vscode-grundlagen.md](../../modules/02-vscode/01-vscode-grundlagen.md))
 

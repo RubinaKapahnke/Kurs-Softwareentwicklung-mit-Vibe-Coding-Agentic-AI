@@ -31,7 +31,7 @@ Wir arbeiten mit einem klaren, einheitlichen Stack:
 **Architektur der Verknüpfung:**
 1. Meilenstein in [NEXT_STEPS.md](NEXT_STEPS.md) → Sagt, was gelernt werden soll
 2. Modul-Einstiege (Module → 00-modulguide.md) → Zeigen, welche Module relevant sind
-3. Modul-Inhalte (Module → 01-grundlagen, 03-befehlsuebersicht, 00-themenueberblick) → Erklären Konzepte und Befehle
+3. Modul-Inhalte (Module → 00-modulguide mit inline Selbstcheck, 01-grundlagen, 03-befehlsuebersicht) → Erklären Konzepte und Befehle
 4. Übungen ([docs/uebungen/README_UEBUNGEN.md](docs/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
 5. Persönlicher Lernfortschritt ([apps/learners](apps/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
 
@@ -45,9 +45,8 @@ Jedes Modul folgt derselben Struktur. Beispiel: `modules/04-git/`
 
 ```
 modules/04-git/
-├── 00-git-modulguide.md          ← START HIER: Navigation + Überblick
-├── 01-git-themenueberblick.md    ← Selbstcheck: Must/Should/Nice-Checklisten
-├── 02-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
+├── 00-git-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
+├── 01-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
 └── 03-git-befehlsuebersicht.md   ← Nachschlag: Befehle in Tabellen (nur Git, Terminal)
 ```
 
@@ -55,16 +54,15 @@ modules/04-git/
 
 | Datei | Zweck | Nutze sie wenn... |
 | :--- | :--- | :--- |
-| **00-modulguide.md** | Navigation & Kurzüberblick | Du neu im Modul anfängst |
-| **01-themenueberblick.md** | Selbstcheck-Checklisten (Must/Should/Nice) | Du deinen Stand einordnen willst |
-| **02-grundlagen.md** | Konzeptuelle Erklärung | Du verstehen willst, **warum** und **wie** |
+| **00-modulguide.md** | Navigation, Kurzüberblick & **inline Selbstcheck** (Must/Should/Nice) | Du neu im Modul anfängst oder deinen Stand prüfen willst |
+| **01-grundlagen.md** | Konzeptuelle Erklärung | Du verstehen willst, **warum** und **wie** |
 | **03-befehlsuebersicht.md** | Befehls-Nachschlagewerk (Tabellen) | Du einen Befehl schnell nachschlagen musst |
 
 **Beachte:**
 - Nicht alle Module haben 03-befehlsuebersicht.md (nur Git und Terminal)
 - 01-grundlagen.md erklärt Konzepte, enthält aber keine Befehle zum Kopieren
 - 03-befehlsuebersicht.md hat nur Befehle, keine Erklärungen
-- Lernziele stehen **ausschließlich** in 01-themenueberblick.md (keine Redundanz)
+- Der Selbstcheck (Must/Should/Nice-Checklisten) steht immer im `00-modulguide.md`
 
 ---
 
@@ -102,10 +100,9 @@ modules/04-git/
 ├── docs/
 │   ├── GLOSSARY.md
 │   └── uebungen/
-│       ├── meilenstein-02-uebung-01.md
-│       ├── meilenstein-02-uebung-02.md
-│       ├── meilenstein-02-uebung-03.md
-│       ├── meilenstein-03-uebung-01.md
+│       ├── meilenstein-02-uebung-*.md  (3 Übungen)
+│       ├── meilenstein-03-uebung-*.md  (4 Übungen)
+│       ├── meilenstein-04-uebung-*.md  (1 Übung)
 │       └── README_UEBUNGEN.md
 ├── modules/
 │   ├── 01-markdown/
@@ -119,6 +116,9 @@ modules/04-git/
 │   │   ├── 02-prd-grundlagen.md
 │   │   └── 03-prompt-dateien-grundlagen.md
 │   └── 07-architecture-foundations/
+│       ├── 00-architecture-foundations-modulguide.md
+│       ├── 01-architecture-foundations-grundlagen.md
+│       └── 02-architecture-foundations-praxis.md
 ├── tools/
 │   ├── README_TOOLS.md
 │   ├── test-uebung.ps1
