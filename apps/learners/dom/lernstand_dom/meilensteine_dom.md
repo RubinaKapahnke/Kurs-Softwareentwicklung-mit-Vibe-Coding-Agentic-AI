@@ -89,7 +89,7 @@
   - [x] PR mergen
   - [x] (Optional) Lokalen Branch loeschen und auf `main` wechseln
 
-- [ ] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
+- [x] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
   > **Uebung:** [docs/uebungen/meilenstein-02-uebung-01.md](docs/uebungen/meilenstein-02-uebung-01.md)
   > **Quellen zur Uebung:** [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md), [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md), [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md), [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md), [modules/04-git/01-git-grundlagen.md](modules/04-git/01-git-grundlagen.md), [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md), [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
   >
