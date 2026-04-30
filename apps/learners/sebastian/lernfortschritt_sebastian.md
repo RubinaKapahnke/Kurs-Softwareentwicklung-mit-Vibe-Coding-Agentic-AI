@@ -29,6 +29,7 @@
       - Repo, Branch, add, Commit, Push  Pull-Request und fetchen
       - mich mit den abkürzungen beschäftigt (-u / -a / -m / -am)
   - mit GitHub gearbeitet und von dem Brunch eine PR erstellt
+    - endeckt das dort die MD Dateien auch anzeigbar sind (zB zweiter Monitor)
   - mit MD das Jornal geschriebn
 </i>
 

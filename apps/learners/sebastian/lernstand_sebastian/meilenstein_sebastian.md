@@ -73,13 +73,13 @@ Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md`
 
 ```markdown
 **Was habe ich heute gemacht?**
-[Meilenstein2 uebung 1 abgearbeitet, Next_Steps gelesen, selbst tesxt: PowerSell befehler gelernt, git als eigene Software verstanden und das infos in ".git" gespeichert werden, githup als Clout-Speicher-service verstanden, VS Code verstanden das jenach dem wie ist es öffne (mit Path) zB. im Terminal oder ps-Script, mit Git gearbeitet um Zusammenhänge zuverstehen (Repo, Branch, add, Committ, Push  Pull-Request und fetchen) ]
+[Eigene Antwort]
 
 **Was war schwierig oder unklar?**
-[was mache ich mit den neuen Datei meilensteine_sebatian, einfacher finde ich eine fertiges Dokument in dem ich wie bei einer PDF "lücken" fülle]
+[Eigene Antwort]
 
 **Was ist mein naechster kleiner Schritt?**
-[alles Text mit vorlesen zu lassen um zu überprüfen ob ich "TEXT" richig verstanden habe]
+[Eigene Antwort]
 ```
 
 > **Tipp:** Falls du die Datei nicht im Explorer findest, druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `lernfortschritt_` � dann den eigenen Namen auswaehlen.
@@ -97,13 +97,19 @@ git branch   # Bestaetige, dass du auf deinem Branch bist
 Dann:
 ```bash
 git add .
+```  
+<!--  ich würde hier noch mal auf die Zusatzbefehle eingehen -m / -a / -am -->
+```bash
 git commit -m "feat: lernstand <vorname> angelegt"
 git push origin lernstand-<vorname>
 ```
+
+
 Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md)
 
 ### 8. Pull Request erstellen
 
+<!--  hier würde ich das exakte Repo an geben "Unser" [vibe-coding-0426] -->
 1. Oeffne dein Repository auf github.com
 2. Klicke auf "Compare & pull request" (gelber Banner nach dem Push)
 3. Waehle als Basis `main` und als Quell-Branch deinen Branch
@@ -115,18 +121,18 @@ Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundl
 Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-github-grundlagen.md)
 
 ---
-
+<!-- diese Hilfe-Dateien, sollten Oben stehen --> 
 ## Modulabdeckung (Check)
-- ? modules/04-git/01-git-grundlagen.md: Branch erstellen, pull, add/commit/push
-- ? modules/04-git/03-git-befehlsuebersicht.md: Git-Befehle als Referenz
-- ? modules/05-terminal/01-terminal-grundlagen.md: Ordner und Dateien im Terminal anlegen
-- ? modules/05-terminal/03-terminal-befehlsuebersicht.md: `cd`, `mkdir`, `echo`
-- ? modules/01-markdown/01-markdown-grundlagen.md: Meilensteine in Markdown dokumentieren
-- ? modules/01-markdown/02-formatierung_md-files.md: Lernjournal formatieren
-- ? modules/03-github/01-github-grundlagen.md: Pull Request erstellen
+- [x] modules/04-git/01-git-grundlagen.md: Branch erstellen, pull, add/commit/push
+- [X] modules/04-git/03-git-befehlsuebersicht.md: Git-Befehle als Referenz
+- [X] modules/05-terminal/01-terminal-grundlagen.md: Ordner und Dateien im Terminal anlegen
+- [x] modules/05-terminal/03-terminal-befehlsuebersicht.md: `cd`, `mkdir`, `echo`
+- [x] modules/01-markdown/01-markdown-grundlagen.md: Meilensteine in Markdown dokumentieren
+- [X] modules/01-markdown/02-formatierung_md-files.md: Lernjournal formatieren
+- [X] modules/03-github/01-github-grundlagen.md: Pull Request erstellen
 
 ---
-
+<!-- diese Info, sollte Oben stehen --> 
 ## Wiederholung aus frueheren Meilensteinen
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
@@ -136,11 +142,13 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ---
 
+<!-- das muss vorder beschreibenung des Absendens (Zeile 110))  --> 
 ## Abgabe
 
 Bevor du den PR erstellst, pruefe kurz:
-- [ ] Unterordner `lernstand_<vorname>/` mit `meilensteine_<vorname>.md` existiert in deinem persoenlichen Ordner
+- [x] Unterordner `lernstand_<vorname>/` mit `meilensteine_<vorname>.md` existiert in deinem persoenlichen Ordner
 - [ ] Lernjournal-Eintrag in `lernfortschritt_<name>.md` ist aktualisiert
+<!-- wie kann ich vor der PR-Erstellung prüfen ob der PR erstellt ist? --> 
 - [ ] PR auf GitHub ist erstellt
 
 ---
@@ -149,8 +157,8 @@ Bevor du den PR erstellst, pruefe kurz:
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
-- [ ] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
-- [ ] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
-- [ ] Ich habe Ordner und eine Datei ueber das Terminal angelegt � ohne die Maus zu benutzen.
-- [ ] Mein Lernjournal enthaelt einen echten Eintrag von mir.
-- [ ] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
+- [x] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
+- [x] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
+- [x] Ich habe Ordner und eine Datei ueber das Terminal angelegt � ohne die Maus zu benutzen.
+- [x] Mein Lernjournal enthaelt einen echten Eintrag von mir.
+- [x] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
