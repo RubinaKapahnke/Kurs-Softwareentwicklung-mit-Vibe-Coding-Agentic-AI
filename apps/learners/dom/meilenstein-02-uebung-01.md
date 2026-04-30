@@ -139,9 +139,9 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 ## Abgabe
 
 Bevor du den PR erstellst, pruefe kurz:
-- [ ] Unterordner `lernstand_<vorname>/` mit `meilensteine_<vorname>.md` existiert in deinem persoenlichen Ordner
-- [ ] Lernjournal-Eintrag in `lernfortschritt_<name>.md` ist aktualisiert
-- [ ] PR auf GitHub ist erstellt
+- [x] Unterordner `lernstand_<vorname>/` mit `meilensteine_<vorname>.md` existiert in deinem persoenlichen Ordner
+- [x] Lernjournal-Eintrag in `lernfortschritt_<name>.md` ist aktualisiert
+- [x] PR auf GitHub ist erstellt
 
 ---
 
@@ -149,8 +149,8 @@ Bevor du den PR erstellst, pruefe kurz:
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
-- [ ] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
-- [ ] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
-- [ ] Ich habe Ordner und eine Datei ueber das Terminal angelegt � ohne die Maus zu benutzen.
-- [ ] Mein Lernjournal enthaelt einen echten Eintrag von mir.
-- [ ] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
+- [x] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
+- [x] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
+- [x] Ich habe Ordner und eine Datei ueber das Terminal angelegt � ohne die Maus zu benutzen.
+- [x] Mein Lernjournal enthaelt einen echten Eintrag von mir.
+- [x] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
