@@ -5,11 +5,11 @@ Du fuehrst alle Schritte aus, um deinen persoenlichen Lernstand ueber das Termin
 
 ---
 
-## Vor dem Start – Checkliste
+## Vor dem Start ï¿½ Checkliste
 
 - [ ] VS Code ist geoeffnet
 - [ ] Du hast ein Terminal geoeffnet und bist im Repo-Ordner (erkennbar am Pfad `vibe-coding-0426`)
-- [ ] Du kennst deinen Vornamen – er ersetzt ueberall den Platzhalter `<vorname>`
+- [ ] Du kennst deinen Vornamen ï¿½ er ersetzt ueberall den Platzhalter `<vorname>`
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden, wird aktualisiert)
@@ -61,6 +61,10 @@ Wechsle in den neuen Unterordner und erstelle eine Markdown-Datei fuer deine Mei
 ```bash
 cd lernstand_<vorname>
 echo. > meilensteine_<vorname>.md
+<!-- echo > meilensteine_medine.md  hat nicht funktionniert. wegen Nachricht : " Cmdlet Write-Output an der Befehlspipelineposition 1
+Geben Sie Werte fÃ¼r die folgenden Parameter an:
+InputObject[0]: " 
+Sondern : New-Item meilensteine_medine.md  hat geklappt --> 
 ```
 Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../../modules/05-terminal/03-terminal-befehlsuebersicht.md)
 
@@ -82,7 +86,7 @@ Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md`
 [Eigene Antwort]
 ```
 
-> **Tipp:** Falls du die Datei nicht im Explorer findest, druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `lernfortschritt_` – dann den eigenen Namen auswaehlen.
+> **Tipp:** Falls du die Datei nicht im Explorer findest, druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `lernfortschritt_` ï¿½ dann den eigenen Namen auswaehlen.
 
 Quelle: [modules/01-markdown/02-formatierung_md-files.md](../../modules/01-markdown/02-formatierung_md-files.md)
 
@@ -131,8 +135,8 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Markdown-Grundlagen** – du strukturierst deine Dateien mit Ueberschriften und Listen ([modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md))
-- **VS Code bedienen** – du oeffnest Dateien und navigierst im Explorer ([modules/02-vscode/01-vscode-grundlagen.md](../../modules/02-vscode/01-vscode-grundlagen.md))
+- **Markdown-Grundlagen** ï¿½ du strukturierst deine Dateien mit Ueberschriften und Listen ([modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md))
+- **VS Code bedienen** ï¿½ du oeffnest Dateien und navigierst im Explorer ([modules/02-vscode/01-vscode-grundlagen.md](../../modules/02-vscode/01-vscode-grundlagen.md))
 
 ---
 
@@ -151,6 +155,6 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
 - [ ] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
 - [ ] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
-- [ ] Ich habe Ordner und eine Datei ueber das Terminal angelegt – ohne die Maus zu benutzen.
+- [ ] Ich habe Ordner und eine Datei ueber das Terminal angelegt ï¿½ ohne die Maus zu benutzen.
 - [ ] Mein Lernjournal enthaelt einen echten Eintrag von mir.
 - [ ] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
