@@ -16,6 +16,13 @@ Das Terminal (auch Konsole oder Kommandozeile genannt) ist ein Text-basiertes We
 - `rm <Datei>` / `del <Datei>` – Löscht eine Datei
 - `code .` – Öffnet den aktuellen Ordner in VS Code
 
+<!-- Ergaenzungen:
+[explorer .] offnet den aktuelle Ortner
+[ni] NewItem erstellt eine Datei
+[del *.txt -wh] (-WhatIf) Listet alle .txt-Dateien auf, die geloescht wuerden, ohne sie wirklich zu entfernen.
+[code . -n] NewWindow oeffnet VS Code im neuen Fenster
+ -->
+
 ## Warum ist das Terminal ideal für Vibe Coding?
 - **Effizienz:** Viele Aufgaben lassen sich schneller per Befehl erledigen
 - **Flexibilität:** Zugriff auf alle Tools und Programme

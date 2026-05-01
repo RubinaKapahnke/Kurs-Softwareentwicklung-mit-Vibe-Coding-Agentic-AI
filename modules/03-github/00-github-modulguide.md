@@ -12,16 +12,16 @@ Nutze die Checklisten als Selbstcheck fuer das GitHub-Modul.
 
 ### Must have
 
-- [ ] Ich weiss, was GitHub ist und wie es sich von Git unterscheidet.
-- [ ] Ich verstehe die Begriffe Repository, Branch, Pull Request und Issue.
-- [ ] Ich kann ein Repository auf GitHub erkunden und den Code durchstoebern.
-- [ ] Ich kann einen eigenen Branch erstellen und einen Pull Request oeffnen.
-- [ ] Ich kann grundlegende GitHub-Navigation im Kurs-Repo durchfuehren.
+- [x] Ich weiss, was GitHub ist und wie es sich von Git unterscheidet.
+- [x] Ich verstehe die Begriffe Repository, Branch, Pull Request und Issue.
+- [x] Ich kann ein Repository auf GitHub erkunden und den Code durchstoebern.
+- [x] Ich kann einen eigenen Branch erstellen und einen Pull Request oeffnen.
+- [x] Ich kann grundlegende GitHub-Navigation im Kurs-Repo durchfuehren.
 
 ### Should have
 
-- [ ] Ich kann einen Pull Request sinnvoll vorbereiten und mit einer guten Beschreibung eroeffnen.
-- [ ] Ich verstehe, wie GitHub die Zusammenarbeit zwischen mehreren Personen unterstuetzt.
+- [x] Ich kann einen Pull Request sinnvoll vorbereiten und mit einer guten Beschreibung eroeffnen.
+- [x] Ich verstehe, wie GitHub die Zusammenarbeit zwischen mehreren Personen unterstuetzt.
 - [ ] Ich kann Code-Kommentare und Feedback auf andere Pull Requests verstehen.
 - [ ] Ich weiss, wofuer Issues und Diskussionen auf GitHub gut sind.
 
