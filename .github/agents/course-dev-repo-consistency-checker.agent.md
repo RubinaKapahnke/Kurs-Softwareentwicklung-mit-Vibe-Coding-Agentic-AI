@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: checking repository completeness and consistency, link validation, status consistency across README/NEXT_STEPS/exercises, finding mismatches, repo audit, konsistenz prüfen, vollständigkeit prüfen"
 name: "Repo Consistency Checker (course-dev)"
 tools: [read, search, edit, execute, todo]
@@ -21,9 +21,12 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
 2. Prüfe standardmäßig das gesamte Repo. Nur wenn der User den Umfang explizit einschränkt, prüfe Teilbereiche.
 3. Prüfe zentrale Konsistenzachsen:
    - Struktur in `README.md` gegen tatsächliche Ordner/Dateien
-   - Verweise zwischen `NEXT_STEPS.md`, `docs/uebungen/README_UEBUNGEN.md` und Übungsdateien
+   - Verweise zwischen `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md` und Übungsdateien
    - Quellenlinks aus Übungen auf vorhandene Moduldateien
    - Benennungskonventionen für Agenten und Prompts in `.github/`
+   - Pfade in `.github/agents/*.md` auf aktuelle Repo-Struktur (z.B. `course/`, `apps/`)
+   - `CHANGELOG.md`: Enthält er einen Eintrag zur letzten Session? Fehlt ein Eintrag für sichtbare strukturelle Änderungen?
+   - `CHANGELOG.md`: Ist `## Tagesübersicht (grob)` gepflegt (pro Datum genau ein grober Tagesblock, keine Duplikate)?
 4. Führe verfügbare Repo-Checks aus, insbesondere `./tools/test-alle-uebungen.ps1`.
 5. Sammle Findings nach Schweregrad und ordne sie direkt einer Datei zu.
 6. Leite einen Freigabe-Schritt ein:

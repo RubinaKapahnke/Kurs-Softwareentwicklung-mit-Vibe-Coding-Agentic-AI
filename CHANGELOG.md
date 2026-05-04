@@ -4,7 +4,77 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 04.05.2026 (Session 2)
+## Tagesübersicht (grob)
+
+### 04.05.2026
+- Repo-Struktur auf `course/` umgestellt (`learners`, `modules`, `uebungen`) und Pfade repo-weit angepasst.
+- Dashboard deutlich ausgebaut (Option A/B, Snapshot-Infos, Blockaden, Git- und Lernstands-Sichten).
+- Lernmaterial konsolidiert (Übungen bereinigt, Lernfortschritt-Dateien vereinheitlicht, neue Prüfregeln im Testskript).
+- KI-Setup erweitert (neuer Readiness-Agent, Consistency-Checks inkl. CHANGELOG/Agents, Konventions-Updates).
+
+### 29.04.2026
+- Agenten-, Prompt- und Instruction-Basis eingeführt.
+- Neue Module und Übungen für Meilensteine 3 und 4 ergänzt.
+- Erste Dashboard-Grundstruktur mit PRD, Datenmodellen, Services und erster Übersichtskomponente aufgebaut.
+
+---
+
+## 04.05.2026 (Session 4)
+
+### Neuer Agent: `course-dev-vibe-coding-readiness`
+
+- Neuer Agent `.github/agents/course-dev-vibe-coding-readiness.agent.md` hinzugefügt
+- Prüft das Repo auf KI-Tauglichkeit (Context Engineering, Prompt Engineering, QA Harness, Automatisierungspotenzial)
+- Gibt AI-Readiness-Score pro Bereich (🟢/🟡/🔴) + priorisierte Automatisierungsideen aus
+- README.md Projektbaum synchronisiert
+
+### Repo-Struktur – Konsolidierung in `course/`
+
+- `apps/learners/` → `course/learners/` verschoben
+- `modules/` → `course/modules/` verschoben
+- `docs/uebungen/` → `course/uebungen/` verschoben
+- `docs/GLOSSARY.md` gelöscht (war nie gepflegt)
+- Alle relativen Links in 8 Übungsdateien angepasst (`../../modules/` → `../modules/`)
+- `NEXT_STEPS.md`, `README.md`, `AGENTS.md`, `README_UEBUNGEN.md`, `README_APPS.md` auf neue Pfade aktualisiert
+- Alle 5 Agent-Dateien in `.github/agents/` auf neue Pfade aktualisiert
+- `tools/test-alle-uebungen.ps1` + `tools/test-uebung.ps1` auf neue Pfade angepasst
+- Alle 8 Übungen bestehen weiterhin (0 Fehler)
+- Branch: `refactor/repo-struktur-course-ordner`
+
+---
+
+## 04.05.2026 (Session 3)
+
+### Dashboard – Option A & B: Vollständiger Ausbau
+
+**`overview-option-a.component.ts`:**
+- Memoisation: `buildWishFrequencyMap()` und `refreshSnapshotMeta()` als gecachte Properties
+- Blockade-Erkennung: `isLearnerBlocked()` / `getBlockedByText()` aus letztem Journal-Eintrag
+- Exercise-Chips: `getExerciseStatusForMilestone()`, `getExerciseChipClass()` / `getExerciseChipLabel()`
+- Git-Helfer: `selectedLearnerGitActivity`, `getOpenPrCount()`, `getRecentJournalEntries()` (letzte 3)
+- **Bug-Fix:** `blocked-cell`-CSS-Klasse aus Meilenstein-Spalten entfernt (nur noch `warning`-Icon in Namensspalte)
+
+**`overview-option-a.component.html`:**
+- Option A: Snapshot-Meta (Anzahl + Zeitstempel), Blockade-Icon in Namensspalte, Exercise-Chips mit Farbcodierung, Lernwunsch-Häufigkeitszähler
+- Option B (neu): Kopfbereich, Meilenstein-Kacheln (M/S/N-Zähler + Chips), Lernjournal (letzte 3), Gruppenfragestellungen, Git-Aktivität, individuelle Lernwünsche
+
+**`overview-option-a.component.scss`:** Vollständig überarbeitet für Option-A- und Option-B-Elemente (`exercise-chip`, `blocked-icon`, `git-stats`, `pr-state` u.a.)
+
+**`angular.json`:** `anyComponentStyle`-Budget `maximumWarning` 4 kB → 8 kB
+
+### Dashboard – Datenbasis & PRD
+
+**`data/mock/learner-markdown.mock.ts`:** Medine, Raphael, Sebastian ergänzt; Dom zweiter Journaleintrag; alle auf ISO-Datumsformat `### YYYY-MM-DD`
+
+**`data/mock/github-activity.mock.ts`:** GitHub-Aktivität für Medine, Raphael, Sebastian ergänzt
+
+**Alle 5 `apps/learners/*/lernfortschritt_*.md`:** `## Individuelle Lernwuensche`-Abschnitt ergänzt; Datumsformat auf ISO 8601 korrigiert
+
+**`prd_dashboard.md` (v2 → v3):** §10 Implementierungsregeln (UX-, Dateiformat-, Code-Qualitäts-Constraints) und §11 Implementierungsprotokoll neu
+
+---
+
+## 04.05.2026 (Session 2)
 
 ### Lernstände – Konsolidierung und Bereinigung
 
@@ -71,207 +141,124 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 04.05.2026
+## 04.05.2026 (Session 1)
 
 ### Dashboard App – Angular-Projekt-Setup
 
-**Neues Angular-Projekt (`apps/dashboard/`):**
-- Angular 21 (Standalone Architecture, kein Routing, SCSS) per `ng new progress-hub` initialisiert
-- Angular Material 21.2.9 (Theme: Azure/Blue) per `ng add @angular/material` hinzugefügt
-- `@angular/animations` nachinstalliert (Abhängigkeit von Angular Material)
-- `src/app/app.ts`: App-Root verdrahtet mit `OverviewOptionAComponent` (bestehende Komponente)
-- `src/app/app.config.ts`: `provideAnimationsAsync()` ergänzt
-- Dev-Server läuft unter `http://localhost:4200/` (`ng serve`)
-
----
-
-### Repository-Dokumentation
-
-- Neu: `CHANGELOG.md` als zentrale Änderungsdokumentation angelegt
-- `README.md` Projektstruktur synchronisiert und `CHANGELOG.md` im Root-Baum ergänzt (README-Sync-Regel)
+- Angular 21 (Standalone, kein Routing, SCSS) + Angular Material 21.2.9 (Azure/Blue) initialisiert
+- `app.ts` verdrahtet mit `OverviewOptionAComponent`; `provideAnimationsAsync()` in `app.config.ts`
+- `CHANGELOG.md` angelegt; `README.md` Projektstruktur synchronisiert
 
 ---
 
 ### Übungen – Standard-Updates (Branch: `course-dev/uebungen-standard-update`)
 
-**Alle 8 Übungen (`docs/uebungen/meilenstein-02-uebung-01` bis `meilenstein-04-uebung-01`):**
-- `Wichtig – diese Datei nicht bearbeiten`-Hinweis nach der Dateiliste ergänzt
-- PR-Tipp vor dem ersten `git checkout -b` ergänzt (Option A: vom letzten Branch starten; Option B: von main starten, Merge erfolgt automatisch)
+**Alle 8 Übungen (`meilenstein-02-uebung-01` bis `meilenstein-04-uebung-01`):**
+- `Wichtig – diese Datei nicht bearbeiten`-Hinweis nach Dateiliste ergänzt
+- PR-Tipp (Option A: vom letzten Branch; Option B: von main) vor erstem `git checkout -b` ergänzt
 - Kopier-Hinweise in `Abgabe`- und `Lernerfolgs-Kriterien`-Abschnitte ergänzt
 
-**`docs/uebungen/README_UEBUNGEN.md`:**
-- Standards 11–13 dokumentiert (Wichtig-Box, Kopier-Hinweise, PR-Tipp Option A+B)
+**`docs/uebungen/README_UEBUNGEN.md`:** Standards 11–13 dokumentiert
 
 ---
 
 ### Lernfortschritt-Dateien – Struktur-Bereinigung
 
-**Alle Lernfortschritt-Dateien (`apps/learners/*/lernfortschritt_*.md`):**
-- `## Nächster kleiner Schritt` umbenannt zu `## Das möchte ich noch lernen`
-- Doppelte Abschnitte entfernt (nur noch einer am Dateiende)
-- Abgabe- und Lernerfolgs-Kriterien-Checklisten für abgeschlossene Übungen (M2-01, M2-02) direkt unter den passenden Journaleinträgen ergänzt
+**Alle `apps/learners/*/lernfortschritt_*.md`:**
+- `## Nächster kleiner Schritt` → `## Das möchte ich noch lernen` umbenannt (einmal am Dateiende)
+- Doppelte Abschnitte entfernt; Abgabe- und Lernerfolgs-Kriterien-Checklisten direkt unter passenden Journaleintrag verschoben
 
 ---
 
-### AGENTS.md – Konventions-Updates
+### AGENTS.md & Agents – Konventions-Updates
 
-- Lernfortschritt-Datei-Struktur als eigener Abschnitt dokumentiert (Pflichtabschnitte, Regeln, Beispiel-Template)
-- Template-Einrückung des PR-Tipp-Blockzitats korrigiert (war 8-Leerzeichen → jetzt 4-Leerzeichen)
-- Konsistenz-Checkliste: neuer Punkt `Tipp – falls dein letzter PR noch nicht gemerged ist` ergänzt
-- Beispiel-Template: Wichtig-Box, PR-Tipp und Kopier-Hinweise in Abgabe/LK ergänzt
-
----
-
-### `.github/agents/course-dev-exercise-creator.agent.md`
-
-- Schritt 4 aktualisiert: alle 3 neuen Anforderungen ergänzt (Wichtig-Box, PR-Tipp Option A+B, Kopier-Hinweise)
+- Lernfortschritt-Datei-Struktur mit Pflichtabschnitten, Regeln und Beispiel-Template dokumentiert
+- Konsistenz-Checkliste: PR-Tipp-Punkt ergänzt; Template-Einrückung korrigiert
+- `course-dev-exercise-creator.agent.md`: Schritt 4 (Wichtig-Box, PR-Tipp, Kopier-Hinweise) aktualisiert
 
 ---
 
 ### Modul 04-git – Branch-Workflow
 
-**Neu: `modules/04-git/02-git-branch-workflow.md`**
-- Erklärt den vollständigen Branch-Lebenszyklus: erstellen → committen/pushen → PR → aufräumen
-- Remote-Branch löschen (GitHub-Checkbox oder `git push origin --delete`)
-- Lokalen Branch löschen (`git branch -d` vs. `-D`)
-- `git fetch --prune` für Synchronisation
-- Aufräum-Checkliste nach abgeschlossenem PR
+**Neu: `modules/04-git/02-git-branch-workflow.md`** – Vollständiger Branch-Lebenszyklus (erstellen → PR → aufräumen), Remote/lokale Branch-Löschung, `git fetch --prune`, Aufräum-Checkliste
 
-**`modules/04-git/00-git-modulguide.md`:**
-- Eintrag 2 (`02-git-branch-workflow.md`) in Inhaltsliste ergänzt
-- Neues Should-have: "Ich weiss, wie ich einen abgeschlossenen Branch vollstaendig aufraeume"
-- Link zu neuer Datei in "Wenn du etwas nachholen willst" ergänzt
-
-**`modules/04-git/03-git-befehlsuebersicht.md`:**
-- Hinweis ergänzt: Git-Befehle sind OS-unabhängig, Terminal-Befehle nicht
-- Link zur Terminal-Befehlsuebersicht ergänzt
+**`00-git-modulguide.md`:** Branch-Workflow-Link + Should-have ergänzt
 
 ---
 
 ### Modul 05-terminal – Umfangreiches Update
 
-**Neu: `modules/05-terminal/02-terminal-typen.md`**
-- Shell vs. Terminal: Konzepterklärung
-- Gängige Shells nach OS: PowerShell, cmd, Git Bash, WSL (Windows) / zsh, bash (macOS)
-- Vergleichstabelle Windows vs. macOS/Linux für Alltagsbefehle
-- VS Code Terminal vs. System-Terminal: wann welches, warum im Kurs fast immer VS Code
-- Mehrere Shells gleichzeitig in VS Code öffnen
-- Optionale Terminal-Apps für Fortgeschrittene (Windows Terminal, iTerm2, Oh My Zsh)
+**Neu: `modules/05-terminal/02-terminal-typen.md`** – Shell vs. Terminal, Shell-Typen nach OS, Vergleichstabelle Windows/macOS, VS Code Terminal vs. System-Terminal
 
-**`modules/05-terminal/00-terminal-modulguide.md`:**
-- Inhaltsliste: Eintrag 2 (`02-terminal-typen.md`) ergänzt
-- Must-have: Shell/Standard-Shell-Wissen ergänzt
-- Should-have: zwei neue Einträge (Shell vs. Terminal, warum OS-Unterschiede bei Terminal aber nicht bei Git)
-- HTML-Kommentare entfernt (`<!-- in Win geht das mit [Strg] + L -->` u.a.)
-- `echo > datei.md` → `New-Item` / `touch` korrigiert
-- "Wenn du etwas nachholen willst": Link zu `02-terminal-typen.md` ergänzt
+**`01-terminal-grundlagen.md`:** `touch`/`New-Item` ergänzt, neuer Abschnitt "Terminal-Befehle vs. Git-Befehle"
 
-**`modules/05-terminal/01-terminal-grundlagen.md`:**
-- `touch` / `New-Item` in der Befehlsliste ergänzt und `ls`/`dir` mit OS-Hinweis versehen
-- Neuer Abschnitt am Ende: "Terminal-Befehle vs. Git-Befehle – was ist der Unterschied?" mit Baumdiagramm, konkretem Beispiel und Cross-Link zu Git-Modul
-- Link zu `02-terminal-typen.md` ergänzt
-
-**`modules/05-terminal/03-terminal-befehlsuebersicht.md`:**
-- Tabellenstruktur geändert: neue Spaltenreihenfolge **Wofuer? | Windows (PowerShell) | macOS/Linux (zsh/bash) | Beispiel | Achtung**
-- macOS- und Windows-Befehle stehen jetzt klar nebeneinander (statt in einer Spalte gemischt)
-- `echo > datei.md` ersetzt durch `New-Item` (Windows) und `touch` (macOS), Erklärung warum
-- HTML-Kommentare entfernt
-- Alle Beispiele auf kurseigene Dateien und Ordner aktualisiert (z.B. `lernfortschritt_alex.md`, `apps/learners/daria`, `apps/lea` + Tab)
+**`03-terminal-befehlsuebersicht.md`:** Neue Spaltenreihenfolge (Windows | macOS/Linux nebeneinander), `New-Item`/`touch` statt `echo >`
 
 ---
 
-## [Unreleased] – 29.04.2026
+## 29.04.2026
 
-### Dashboard – Customizations & Agents
+### Agents & Instruktionen – Neu
 
-**Neu: `.github/agents/course-dev-dashboard-po.agent.md`**
-- Dashboard Product Owner Agent erstellt
-- Leitet aus Übungen, Meilensteinen und Modulen Dashboard-Anforderungen ab
-- Betrachtet jede Anforderung aus drei Personas: [Kursentwickler], [Lernende], [KI-Agent]
-- Pflegt PRD, User Stories, TypeScript-Interfaces und MoSCoW-Priorisierung
-
-**Neu: `.github/agents/course-dev-dashboard-developer.agent.md`**
-- Senior Developer/Architect Agent für den Progress-Hub
-- Hidden Subagent (user-invocable: false), wird vom PO-Agent aufgerufen
-- Übersetzt PRD-Anforderungen in Angular/TypeScript-Code (Standalone, Strict Mode)
-- Dreiphasiger Approach: Architektur-Skizze → TypeScript-Interfaces → Komponenten
-
-**Neu: `.github/prompts/learners-dashboard-feedback.prompt.md`**
-- Prompt für Lernende zum strukturierten Dashboard-Feedback
-- Führt in 3 Fragen durch Positives, Wünsche und Unklarheiten
-- Gibt am Ende User Stories im [Lernende]-Format zurück
-
-**Neu: `.github/instructions/dashboard.instructions.md`**
-- File Instructions mit `applyTo: "apps/dashboard/**"`
-- Lädt automatisch Stack-Vorgaben und drei Personas als Kontext
-- Enthält alle relevanten Datenquell-Pfade im Repo
-
-**`README.md`:**
-- Neue Dateien in Projektstruktur aufgenommen (agents, instructions, prompts)
+- **`course-dev-dashboard-po.agent.md`** – Dashboard-PO: leitet Anforderungen aus Übungen/Meilensteinen ab, drei Personas ([Kursentwickler], [Lernende], [KI-Agent]), pflegt PRD + MoSCoW
+- **`course-dev-dashboard-developer.agent.md`** – Senior Developer/Architect, wird vom PO aufgerufen; Angular Standalone/Strict, dreiphasiger Approach (Architektur → Interfaces → Komponenten)
+- **`course-dev-exercise-creator.agent.md`** – Übungserstellung nach AGENTS.md-Standard; prüft Modulabdeckung, generiert vollständige Übungsdatei
+- **`course-dev-repo-consistency-checker.agent.md`** – Prüft Links, Modulabdeckung, NEXT_STEPS↔Übungen-Konsistenz
+- **`course-dev-curriculum.agent.md`** – Curriculum-Planung: Module, Meilensteine, Lernziele; korrigiert Inkonsistenzfunde
+- **`.github/prompts/learners-dashboard-feedback.prompt.md`** – Strukturiertes Feedback für Lernende (3 Fragen → User Stories)
+- **`.github/instructions/dashboard.instructions.md`** – `applyTo: "apps/dashboard/**"`, Stack-Vorgaben + Datenquell-Pfade als automatischer Kontext
 
 ---
 
-### Dashboard – PRD Anforderungserhebung
+### Modul 07-architecture-foundations – Neu
 
-**`apps/dashboard/prd_dashboard.md` – vollständig ausgebaut:**
-- Vision und Kernfunktionen präzisiert
-- Datenquellen-Übersicht (Lernfortschrittsdateien, NEXT_STEPS.md, GitHub API, eigene Felder)
-- MoSCoW-Priorisierung:
-  - Must: Option-A-Übersicht, Delta-Highlight + Fortschrittsmeter, Snapshot-Historie, Must/Should/Nice-Sicht
-  - Should: Lernpfad-Graph, Git-Integration (Commits/Branches/PRs/Reviews/Kommentare), Filter, View-Switch A/B
-  - Could: Cluster-Hinweise für Zusammenarbeit, aggregierte individuelle Lernwünsche
-  - Won't: Wettbewerbsmetriken, Export
-- 5 User Stories mit Akzeptanzkriterien für alle drei Personas
-- UX- und Visualisierungsanforderungen (Farbcodierung, Matrix-Layout, Delta-Darstellung)
-- TypeScript-Interfaces Sektion (strict-kompatibel, mit Datenquell-Kommentaren)
-- Definition of Done (7 Checkboxen)
-- Offene Punkte (GitHub-API, Markdown-Parsing, Schwellenwerte)
+**Neu: `modules/07-architecture-foundations/`**
+- `00-architecture-foundations-modulguide.md`: Modulguide mit inline Selbstcheck (Must/Should/Nice)
+- `01-architecture-foundations-grundlagen.md`: Konzepte (Was ist Architektur, Schichten, Verantwortlichkeiten)
+- `02-architecture-foundations-praxis.md`: Praxisbeispiele aus dem Dashboard-Kontext
 
 ---
 
-### Dashboard – Erste Code-Basis (Branch: `feature/dashboard-models-v1`)
+### Modul 02-vscode – Copilot-Erweiterung
 
-**Neu: `apps/dashboard/models/dashboard.models.ts` + `models/index.ts`**
-- Strict TypeScript-Interfaces für LearnerProgress, MilestoneStatus, ExerciseStatus, JournalEntry
-- GitActivity, PullRequestSummary, ReviewSummary (für GitHub-Integration)
-- DashboardSnapshot, CustomFieldEntry (manuelle Snapshots mit Kursentwickler-Notizen)
-- LearnerDelta, SnapshotDelta (Delta-Berechnung zwischen Snapshots)
+**Neu: `modules/02-vscode/02-vscode-copilot.md`** – Copilot-Grundlagen, Slash-Commands, Chat vs. Inline-Completion
 
-**Neu: `apps/dashboard/data/course-roadmap.data.ts`**
-- Zentrale Milestones-Definitions-Tabelle (M1–M4) mit Übungsreferenzen und Must/Should/Nice-Zählungen
+**`modules/02-vscode/00-vscode-modulguide.md`:** `02-vscode-copilot.md` in Inhaltsliste und Selbstcheck ergänzt
 
-**Neu: `apps/dashboard/data/mock/learner-markdown.mock.ts`**
-- Markdown-Eingabedaten für Daria und Dom als realistische Test-Grundlage
+---
 
-**Neu: `apps/dashboard/data/mock/github-activity.mock.ts`**
-- Mock-Daten für GitHub-Aktivität (Commits, Branches, PRs, Reviews) für Daria und Dom
+### Übungen M3 + M4 – Neu
 
-**Neu: `apps/dashboard/data/mock/ai-learner-scenarios.mock.ts`**
-- AI-Learner mit 3 Testszenarien für Dashboard-Entwicklung und -Tests:
-  - Szenario 1: Stabiler Fortschritt mit Rückfrage
-  - Szenario 2: Blockiert mit hohem Frageaufkommen
-  - Szenario 3: Kooperationspotenzial durch gleiche Lernwünsche
+**Neue Dateien in `docs/uebungen/`:**
+- `meilenstein-03-uebung-02.md` – Branches und PRs
+- `meilenstein-03-uebung-03.md` – AI Instructions (`.github/instructions/`)
+- `meilenstein-03-uebung-04.md` – PRD erstellen mit Copilot
+- `meilenstein-04-uebung-01.md` – Architektur-Grundlagen verstehen und anwenden
 
-**Neu: `apps/dashboard/services/learner-progress-parser.service.ts`**
-- Parst Lernfortschritts-Markdown zu strukturiertem LearnerProgress-Objekt
-- Extrahiert Fokus, Meilensteine, Lernjournal, Fragen, individuelle Lernwünsche
+**`docs/uebungen/README_UEBUNGEN.md`:** Meilenstein 3 + 4 in Benennungssektion ergänzt
 
-**Neu: `apps/dashboard/services/snapshot.service.ts`**
-- Erstellt Snapshots per createSnapshot (manueller Knopfdruck)
-- Persistiert Historie in localStorage; vorherige Stände bleiben erhalten
+---
 
-**Neu: `apps/dashboard/services/delta.service.ts`**
-- Berechnet LearnerDelta und SnapshotDelta zwischen zwei Snapshots
-- buildProgressMeterValue erzeugt 0–100-Wert für Fortschrittsmeter
+### NEXT_STEPS.md – Meilenstein 4
 
-**Neu: `apps/dashboard/features/overview-option-a/`**
-- `overview-option-a.component.ts/html/scss`: Erste Angular-Standalone-Komponente
-- Option-A-Übersicht: Matrix Lernende × Meilensteine × Übungen mit Farbstatus
-- Option-B-Detailansicht: Fokus, nächster Schritt, offene Fragen, Lernwünsche
-- View-Switch zwischen Option A und B
-- Snapshot-Button mit Delta-Highlight + Fortschrittsmeter
-- AI-Szenario-Umschalter für Testfälle
+- Meilenstein 4 (Architektur-Grundlagen) mit Modul-Einstiegen, Lernzielen (Must/Should/Nice) und Übungslinks ergänzt
+- `modules/04-git/01-git-grundlagen.md` umbenannt (war `02-git-grundlagen.md`), Verweise aktualisiert
 
-**Barrel-Exports: `services/index.ts`, `data/index.ts`**
+---
 
-**`apps/README_APPS.md`:** Neue Dashboard-Architektur dokumentiert
+### Dashboard – PRD & Erste Code-Basis (Branch: `feature/dashboard-models-v1`)
+
+**`apps/dashboard/prd_dashboard.md` (v1):** Vision, MoSCoW (Must/Should/Could/Won't), 5 User Stories, TypeScript-Interface-Sektion, Definition of Done, offene Punkte
+
+**Neue Dateien:**
+- `models/dashboard.models.ts` – Strict TypeScript-Interfaces: `LearnerProgress`, `MilestoneStatus`, `ExerciseStatus`, `JournalEntry`, `GitActivity`, `DashboardSnapshot`, `LearnerDelta`
+- `data/course-roadmap.data.ts` – Milestones M1–M4 mit Übungsreferenzen und Must/Should/Nice-Zählungen
+- `data/mock/learner-markdown.mock.ts` – Markdown-Eingabedaten (Daria, Dom)
+- `data/mock/github-activity.mock.ts` – GitHub-Aktivität Mock (Commits, Branches, PRs)
+- `data/mock/ai-learner-scenarios.mock.ts` – 3 Testszenarien (stabiler Fortschritt, blockiert, Kooperationspotenzial)
+- `services/learner-progress-parser.service.ts` – Markdown → `LearnerProgress`-Objekt
+- `services/snapshot.service.ts` – Snapshot erstellen + localStorage-Persistenz
+- `services/delta.service.ts` – Delta-Berechnung zwischen Snapshots, Fortschrittsmeter 0–100
+- `features/overview-option-a/` – Erste Standalone-Komponente: Option-A-Matrix, Option-B-Detail, View-Switch, Snapshot-Button, AI-Szenario-Umschalter
+
+**`apps/README_APPS.md`:** Dashboard-Architektur dokumentiert

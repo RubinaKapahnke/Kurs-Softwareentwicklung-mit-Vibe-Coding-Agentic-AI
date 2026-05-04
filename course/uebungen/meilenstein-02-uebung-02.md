@@ -1,4 +1,4 @@
-# Uebung Meilenstein 2: Terminal-Alltag und Git-Befehle selbststaendig anwenden
+﻿# Uebung Meilenstein 2: Terminal-Alltag und Git-Befehle selbststaendig anwenden
 
 ## Ziel
 Du fuehrst typische Terminal- und Git-Aktionen in deinem persoenlichen Ordner durch – ohne Befehle zu kopieren. Ausserdem uebst du, fuer eine gegebene Aufgabe das passende Modul eigenstaendig zu finden.
@@ -41,7 +41,7 @@ dir              # Siehst du deine eigenen Dateien?
 
 > **Falls `<dein-name>` einen Leerzeichen enthaelt:** Setze den Ordnernamen in Anfuehrungszeichen, z.B. `cd "dein name"`.
 
-Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../../modules/05-terminal/03-terminal-befehlsuebersicht.md)
+Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../modules/05-terminal/03-terminal-befehlsuebersicht.md)
 
 ---
 
@@ -75,7 +75,7 @@ dir              # Pruefe: Ist uebungsordner verschwunden?
 
 > **Achtung:** `del` und `rmdir` loeschen endgueltig – es gibt keinen Papierkorb. Arbeite daher nur mit Testdateien, die du wirklich loeschen kannst.
 
-Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../../modules/05-terminal/03-terminal-befehlsuebersicht.md)
+Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../modules/05-terminal/03-terminal-befehlsuebersicht.md)
 
 ---
 
@@ -122,7 +122,7 @@ Oeffne `uebung-02-notizen.md` in VS Code (z.B. mit `code uebung-02-notizen.md`) 
 
 > **Tipp fuer VS Code-Oeffnen:** Entweder `code uebung-02-notizen.md` im Terminal oder `Strg+P` → `uebung-02` eintippen → Datei auswaehlen.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -130,7 +130,7 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 
 Das ist eine Denkaufgabe – kein Terminal notig.
 
-Schreibe in `uebung-02-notizen.md` deine Antworten zu diesen drei Situationen. Navigiere dazu zu [modules/](../../modules/), gehe in den passenden Modulordner und oeffne die `00-*-modulguide.md`.
+Schreibe in `uebung-02-notizen.md` deine Antworten zu diesen drei Situationen. Navigiere dazu zu [modules/](../modules/), gehe in den passenden Modulordner und oeffne die `00-*-modulguide.md`.
 
 | Situation | Welches Modul wuerde ich oeffnen? | Welche Datei konkret? |
 |---|---|---|
@@ -139,13 +139,13 @@ Schreibe in `uebung-02-notizen.md` deine Antworten zu diesen drei Situationen. N
 | Ich verstehe nicht, warum man Branches braucht | ? | ? |
 
 > **Einstiegspunkte zum Suchen:**
-> - Terminal: [modules/05-terminal/00-terminal-modulguide.md](../../modules/05-terminal/00-terminal-modulguide.md)
-> - GitHub: [modules/03-github/00-github-modulguide.md](../../modules/03-github/00-github-modulguide.md)
-> - Git: [modules/04-git/00-git-modulguide.md](../../modules/04-git/00-git-modulguide.md)
+> - Terminal: [modules/05-terminal/00-terminal-modulguide.md](../modules/05-terminal/00-terminal-modulguide.md)
+> - GitHub: [modules/03-github/00-github-modulguide.md](../modules/03-github/00-github-modulguide.md)
+> - Git: [modules/04-git/00-git-modulguide.md](../modules/04-git/00-git-modulguide.md)
 
 > **Kein Googeln noetig:** Alle Antworten findest du in den Modulen im Repo. Das Ziel ist, die Navigation zu ueben.
 
-Quelle: [modules/04-git/00-git-modulguide.md](../../modules/04-git/00-git-modulguide.md)
+Quelle: [modules/04-git/00-git-modulguide.md](../modules/04-git/00-git-modulguide.md)
 
 ---
 
@@ -166,7 +166,7 @@ Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` und fuege eine
 
 > **Tipp:** Falls du die Datei nicht im Explorer siehst, druecke `Strg+P` (Windows) / `Cmd+P` (Mac) und tippe `lernfortschritt_` – dann den eigenen Namen auswaehlen.
 
-Quelle: [modules/01-markdown/02-formatierung_md-files.md](../../modules/01-markdown/02-formatierung_md-files.md)
+Quelle: [modules/01-markdown/02-formatierung_md-files.md](../modules/01-markdown/02-formatierung_md-files.md)
 
 ---
 
@@ -200,7 +200,7 @@ Dann auf GitHub:
 
 > Falls der gelbe Banner nicht erscheint: Klicke oben auf "Pull requests" → "New pull request" → deinen Branch auswaehlen.
 
-Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-github-grundlagen.md)
+Quelle: [modules/03-github/01-github-grundlagen.md](../modules/03-github/01-github-grundlagen.md)
 
 ---
 
@@ -218,9 +218,9 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Terminal oeffnen und im Repo-Ordner arbeiten** ([modules/05-terminal/01-terminal-grundlagen.md](../../modules/05-terminal/01-terminal-grundlagen.md))
-- **Branch erstellen und PR abschicken** – aus Meilenstein 2, Uebung 01 ([modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md))
-- **Dateien in VS Code bearbeiten und Markdown schreiben** ([modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md))
+- **Terminal oeffnen und im Repo-Ordner arbeiten** ([modules/05-terminal/01-terminal-grundlagen.md](../modules/05-terminal/01-terminal-grundlagen.md))
+- **Branch erstellen und PR abschicken** – aus Meilenstein 2, Uebung 01 ([modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md))
+- **Dateien in VS Code bearbeiten und Markdown schreiben** ([modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md))
 
 ---
 

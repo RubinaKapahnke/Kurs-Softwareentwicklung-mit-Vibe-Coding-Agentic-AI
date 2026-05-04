@@ -1,4 +1,4 @@
-# Übung Meilenstein 4: Von der PRD zur ersten Komponente
+﻿# Übung Meilenstein 4: Von der PRD zur ersten Komponente
 
 ## Ziel
 
@@ -25,8 +25,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 Lies vor dem Start:
 
-- [modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../../modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md) – Abschnitte „Komponenten-Denken" und „Ordnerstruktur als Kommunikation"
-- [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) – Schritte 1 bis 3
+- [modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md) – Abschnitte „Komponenten-Denken" und „Ordnerstruktur als Kommunikation"
+- [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) – Schritte 1 bis 3
 
 ---
 
@@ -49,7 +49,7 @@ Erstelle darunter eine kleine Tabelle mit mindestens 2 Zeilen:
 
 > **Warum in deiner PRD-Datei?** Dieser Abschnitt bleibt als Referenz erhalten und wird in Schritt 3 direkt weitergenutzt. Ausserdem kann die KI ihn spaeter als Kontext einlesen.
 
-Quelle: [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 1)
+Quelle: [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 1)
 
 ---
 
@@ -77,7 +77,7 @@ src/
     └── data/
 ```
 
-Quelle: [modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../../modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md) (Abschnitt „Ordnerstruktur als Kommunikation")
+Quelle: [modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md) (Abschnitt „Ordnerstruktur als Kommunikation")
 
 ---
 
@@ -100,7 +100,7 @@ Mein Projekt:
 
 > **Warum als eigener Abschnitt?** Du kannst ihn spaeter per `#prd_<dein-name>.md` in jeden Copilot-Prompt einbinden – die KI liest dann den gesamten Kontext mit.
 
-Quelle: [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 3)
+Quelle: [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 3)
 
 ---
 
@@ -131,8 +131,8 @@ Sie bekommt [Input-Eigenschaft] als Input und zeigt [Beschreibung] an.
 
 Notiere deine Beobachtung (1-2 Saetze): Was hat die KI gut gemacht? Was fehlt oder weicht ab?
 
-Quelle: [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 4)  
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md](../../modules/06-ai-instructions/01-prompting-grundlagen.md) (Abschnitt Kontext + Format)
+Quelle: [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](../modules/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 4)  
+Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md) (Abschnitt Kontext + Format)
 
 ---
 
@@ -168,7 +168,7 @@ git push origin UE-M4-01-<vorname>
 
 Erstelle danach auf GitHub einen Pull Request von deinem Branch auf `main`.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -185,10 +185,10 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Prompts mit Kontext-Baustein formulieren** ([modules/06-ai-instructions/01-prompting-grundlagen.md](../../modules/06-ai-instructions/01-prompting-grundlagen.md))
-- **Copilot Chat oeffnen und `#`-Kontext verwenden** ([modules/02-vscode/02-vscode-copilot.md](../../modules/02-vscode/02-vscode-copilot.md))
-- **Branch erstellen, committen, pushen und PR erstellen** ([modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md))
-- **PRD-Datei lesen und bearbeiten** ([modules/06-ai-instructions/02-prd-grundlagen.md](../../modules/06-ai-instructions/02-prd-grundlagen.md))
+- **Prompts mit Kontext-Baustein formulieren** ([modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md))
+- **Copilot Chat oeffnen und `#`-Kontext verwenden** ([modules/02-vscode/02-vscode-copilot.md](../modules/02-vscode/02-vscode-copilot.md))
+- **Branch erstellen, committen, pushen und PR erstellen** ([modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md))
+- **PRD-Datei lesen und bearbeiten** ([modules/06-ai-instructions/02-prd-grundlagen.md](../modules/06-ai-instructions/02-prd-grundlagen.md))
 
 ---
 

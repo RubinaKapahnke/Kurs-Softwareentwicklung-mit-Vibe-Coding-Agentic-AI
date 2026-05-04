@@ -1,4 +1,4 @@
-# Uebung Meilenstein 3: Prompt-Dateien erstellen und nutzen
+﻿# Uebung Meilenstein 3: Prompt-Dateien erstellen und nutzen
 
 ## Ziel
 Du verstehst, wie Prompt-Dateien die KI gezielt steuern, legst eine eigene Prompt-Datei an und erlebst den Unterschied zwischen freiem Prompting und gesteuertem Prompting.
@@ -24,7 +24,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 ## Vorbereitung
 
-Lies zuerst: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](../../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+Lies zuerst: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 Klaere fuer dich vor dem Start:
 - Was ist ein Frontmatter?
@@ -46,7 +46,7 @@ Beantworte folgende Fragen als Stichpunkte in deiner Lernfortschrittsdatei unter
 - Welche Regeln gibt diese Datei der KI?
 - Woran erkennst du, dass die KI nicht sofort antworten soll, sondern erst fragt?
 
-Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufbau einer Prompt-Datei](../../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufbau einer Prompt-Datei](../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 ---
 
@@ -82,7 +82,7 @@ Antworte auf Deutsch.
 
 > **Warum dieses Muster?** Eine feste Ausgabestruktur ist ein Format-Baustein. Damit kannst du spater viele Begriffe abfragen und immer vergleichbare Antworten bekommen – statt jedes Mal unterschiedlicher Laenge und Tiefe.
 
-Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufbau einer Prompt-Datei](../../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufbau einer Prompt-Datei](../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 ---
 
@@ -104,7 +104,7 @@ Trage das Ergebnis in deiner Lernfortschrittsdatei unter `## Prompt-Datei-Beobac
 - Wie sah die Antwort der KI aus?
 - Hat sie das Erklaermuster (1-2-3) eingehalten?
 
-Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufruf im Chat](../../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufruf im Chat](../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 ---
 
@@ -126,7 +126,7 @@ Vergleiche die beiden Antworten und notiere in deiner Lernfortschrittsdatei:
 
 > Falls kein `+`-Symbol sichtbar ist: `Strg+Shift+P` → `GitHub Copilot Chat: New Chat` → `Enter`
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md → Die KI weiss nichts von deinem Projekt](../../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md → Die KI weiss nichts von deinem Projekt](../modules/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -158,7 +158,7 @@ git push origin UE-M3-03-<vorname>
 
 Erstelle anschliessend auf GitHub einen PR von deinem Branch auf `main`.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -174,9 +174,9 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Branch erstellen und committen** ([modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md))
-- **Neue Datei anlegen (im Explorer oder Terminal)** ([modules/05-terminal/03-terminal-befehlsuebersicht.md](../../modules/05-terminal/03-terminal-befehlsuebersicht.md))
-- **PR auf GitHub erstellen** ([modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-github-grundlagen.md))
+- **Branch erstellen und committen** ([modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md))
+- **Neue Datei anlegen (im Explorer oder Terminal)** ([modules/05-terminal/03-terminal-befehlsuebersicht.md](../modules/05-terminal/03-terminal-befehlsuebersicht.md))
+- **PR auf GitHub erstellen** ([modules/03-github/01-github-grundlagen.md](../modules/03-github/01-github-grundlagen.md))
 - **Prompting-Bausteine kennen** (Uebung Meilenstein 3-02: Erfolgreich prompten)
 
 ---

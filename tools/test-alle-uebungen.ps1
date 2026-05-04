@@ -1,5 +1,5 @@
 # test-alle-uebungen.ps1
-# Laeuft ueber alle Uebungsdateien in docs/uebungen/ und prueft jede gegen den Standard.
+# Laeuft ueber alle Uebungsdateien in course/uebungen/ und prueft jede gegen den Standard.
 #
 # Aufruf (vom Repo-Root):
 #   .\tools\test-alle-uebungen.ps1
@@ -9,11 +9,11 @@
 $ErrorActionPreference = "Stop"
 
 $repoRoot  = Split-Path -Parent $PSScriptRoot
-$uebungen  = Get-ChildItem -Path "$repoRoot\docs\uebungen" -Filter "meilenstein-*.md" | Sort-Object Name
+$uebungen  = Get-ChildItem -Path "$repoRoot\course\uebungen" -Filter "meilenstein-*.md" | Sort-Object Name
 $testScript = "$PSScriptRoot\test-uebung.ps1"
 
 if ($uebungen.Count -eq 0) {
-    Write-Host "Keine Uebungsdateien gefunden in docs/uebungen/." -ForegroundColor Yellow
+    Write-Host "Keine Uebungsdateien gefunden in course/uebungen/." -ForegroundColor Yellow
     exit 0
 }
 
@@ -39,14 +39,14 @@ Write-Host ""
 
 # --- Meilenstein-Coverage-Check ---
 Write-Host ("=" * 70)
-Write-Host "  Meilenstein-Coverage-Check (NEXT_STEPS.md <-> docs/uebungen/)" -ForegroundColor Cyan
+Write-Host "  Meilenstein-Coverage-Check (NEXT_STEPS.md <-> course/uebungen/)" -ForegroundColor Cyan
 Write-Host ("=" * 70)
 
 $nextStepsPath = "$repoRoot\NEXT_STEPS.md"
 $nextStepsContent = Get-Content $nextStepsPath -Raw -Encoding UTF8
 
 # Alle referenzierten Uebungspfade aus NEXT_STEPS.md extrahieren
-$uebungMatches = [regex]::Matches($nextStepsContent, '\*\*Uebung:\*\*\s*\[.*?\]\((docs/uebungen/[^)]+)\)')
+$uebungMatches = [regex]::Matches($nextStepsContent, '\*\*Uebung:\*\*\s*\[.*?\]\((course/uebungen/[^)]+)\)')
 $referencedAbsPaths = @()
 $coverageFailed = 0
 

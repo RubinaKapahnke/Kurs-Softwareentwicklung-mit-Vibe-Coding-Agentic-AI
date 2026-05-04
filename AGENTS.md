@@ -1,10 +1,10 @@
-# AGENTS
+﻿# AGENTS
 
 ## README Sync Standard
 
 Whenever files or folders are added, renamed, or removed in the repo:
 - Update the project structure tree in `README.md` to reflect the change.
-- This applies especially to: new modules, new `.github/` subfolders, new learner files, new `docs/uebungen/` files.
+- This applies especially to: new modules, new `.github/` subfolders, new learner files, new `course/uebungen/` files.
 - Do not let the README structure fall out of sync with the actual repo.
 
 ### README-Datei Benennungskonvention
@@ -37,12 +37,12 @@ This repository is a shared learning workspace for a closed group in a vibe-codi
 The learning structure follows this hierarchy:
 
 1. **NEXT_STEPS.md** (zentral) → Defines milestones and learning goals
-2. **Modules/** (zentral) → Explain concepts and commands
+2. **course/modules/** (zentral) → Explain concepts and commands
    - `00-modulguide.md` → Navigation, overview, and **inline Selbstcheck** (Must/Should/Nice checklists)
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
    - `02/03-*-befehlsuebersicht.md` → Quick reference for commands (Terminal, Git only)
-3. **docs/uebungen/** (zentral) → Exercises with direct module source links
-4. **apps/learners/** (dezentral) → Individual learning progress per person
+3. **course/uebungen/** (zentral) → Exercises with direct module source links
+4. **course/learners/** (dezentral) → Individual learning progress per person
 
 ### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
 
@@ -86,18 +86,18 @@ Jede Lernfortschritt-Datei hat diese festen Abschnitte (einmalig, nicht pro Übu
 
 ### NEXT_STEPS.md
 - `NEXT_STEPS.md` is the central roadmap and should stay central.
-- Individual learning progress is managed only in the personal files under `apps/learners/`.
+- Individual learning progress is managed only in the personal files under `course/learners/`.
 - Do not introduce wording that assumes fixed weekly pacing in learner progress files.
 - The participant circle is closed. Do not add instructions for new participants.
 
 ### Exercise Workflow
-- Central exercises live in `docs/uebungen/`.
+- Central exercises live in `course/uebungen/`.
 - Participants do not create exercises; they solve centrally defined exercises.
 - Each participant stores their answer in their own learner folder.
 - When changing an exercise, keep it aligned with the corresponding milestone in `NEXT_STEPS.md`.
 
 ## Source Standard For Exercises
-- Every exercise task point should reference a concrete source in `modules/`.
+- Every exercise task point should reference a concrete source in `course/modules/`.
 - Sources should be clickable markdown links when the document format supports it.
 - Each exercise should include a short section named `Modulabdeckung (Check)`.
 - Each exercise must include a section named `Wiederholung aus frueheren Meilensteinen` between `Modulabdeckung (Check)` and `Lernerfolgs-Kriterien`. This section lists skills from previous milestones that are needed to complete the exercise, with links to the relevant module files.
@@ -116,7 +116,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
-- Keep `README.md`, `NEXT_STEPS.md`, and `docs/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
+- Keep `README.md`, `NEXT_STEPS.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
 
@@ -145,7 +145,7 @@ Each module follows this pattern:
 
 **Schritt 1: Modul-Ordner erstellen**
 ```
-modules/XX-<modulname>/
+course/modules/XX-<modulname>/
 ├── 00-<modulname>-modulguide.md
 ├── 01-<modulname>-grundlagen.md
 └── 03-<modulname>-befehlsuebersicht.md  (nur bei Terminal/Git)
@@ -198,7 +198,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 **Schritt 3: Zu NEXT_STEPS.md verlinken**
 - Neuen Meilenstein hinzufügen ODER
 - Existierenden Meilenstein ergänzen
-- Modul-Einstieg: `[modules/XX-name/00-modulguide.md](modules/XX-name/00-modulguide.md)`
+- Modul-Einstieg: `[course/modules/XX-name/00-modulguide.md](course/modules/XX-name/00-modulguide.md)`
 - Vertiefung: Einzelne Dateien wie `01-grundlagen.md`, `03-befehlsuebersicht.md`
 
 **Schritt 4: README.md aktualisieren**
@@ -218,7 +218,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 
 **Schritt 2: Übungsdatei erstellen**
 ```
-docs/uebungen/meilenstein-XX-uebung-YY.md
+course/uebungen/meilenstein-XX-uebung-YY.md
 ```
 
 **Template** (als Rohtext – Einrückung beim Kopieren entfernen):
@@ -258,7 +258,7 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     
     > **Warum?** (falls Inhalt später ersetzt wird): [Erklärung, warum dieser Schritt trotzdem wichtig ist]
     
-    Quelle: [modules/XX-modul/01-modul-grundlagen.md](../../modules/XX-modul/01-modul-grundlagen.md)
+    Quelle: [course/modules/XX-modul/01-modul-grundlagen.md](../../course/modules/XX-modul/01-modul-grundlagen.md)
     
     ### 2. [Aufgabe mit UI-Interaktion]
     [Beschreibung]
@@ -269,7 +269,7 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     
     > Falls [X] nicht erscheint: [Fallback-Hinweis]
     
-    Quelle: [modules/XX-modul/03-modul-befehlsuebersicht.md](../../modules/XX-modul/03-modul-befehlsuebersicht.md)
+    Quelle: [course/modules/XX-modul/03-modul-befehlsuebersicht.md](../../course/modules/XX-modul/03-modul-befehlsuebersicht.md)
     
     ### 3. [Aufgabe mit Git]
     [Beschreibung]
@@ -294,9 +294,9 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     ---
     
     ## Modulabdeckung (Check)
-    - ✓ modules/XX-modul/01-grundlagen.md: [Konzept erklärt]
-    - ✓ modules/XX-modul/03-befehlsuebersicht.md: [Befehle erklärt]
-    - ✗ modules/YY-modul: [Falls noch nicht abgedeckt, hier notieren]
+    - ✓ course/modules/XX-modul/01-grundlagen.md: [Konzept erklärt]
+    - ✓ course/modules/XX-modul/03-befehlsuebersicht.md: [Befehle erklärt]
+    - ✗ course/modules/YY-modul: [Falls noch nicht abgedeckt, hier notieren]
     
     ---
     
@@ -304,7 +304,7 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     
     Diese Übung setzt voraus, dass du folgendes bereits kannst:
     
-    - **[Fähigkeit aus früherem Meilenstein]** ([modules/XX-modul/01-grundlagen.md](../../modules/XX-modul/01-grundlagen.md))
+    - **[Fähigkeit aus früherem Meilenstein]** ([course/modules/XX-modul/01-grundlagen.md](../../course/modules/XX-modul/01-grundlagen.md))
     
     ---
     
@@ -333,11 +333,11 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 - Unter "Aktueller Umsetzungsstand" des Meilensteins:
 ```markdown
 - [ ] **[Aufgabengruppe]**
-  > **Übung:** [docs/uebungen/meilenstein-XX-uebung-YY.md](docs/uebungen/meilenstein-XX-uebung-YY.md)
-  > **Quellen zur Übung:** [modules/.../00-modulguide.md](...), [modules/.../01-grundlagen.md](...)
+  > **Übung:** [course/uebungen/meilenstein-XX-uebung-YY.md](course/uebungen/meilenstein-XX-uebung-YY.md)
+  > **Quellen zur Übung:** [course/modules/.../00-modulguide.md](...), [course/modules/.../01-grundlagen.md](...)
 ```
 
-**Schritt 4: docs/uebungen/README_UEBUNGEN.md aktualisieren**
+**Schritt 4: course/uebungen/README_UEBUNGEN.md aktualisieren**
 - Falls neuer Meilenstein: Nennung in "Benennung"-Sektion
 
 **Schritt 5: Konsistenz-Check**
@@ -366,11 +366,11 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 **Ziel:** [Kurzbeschreibung]
 
 **Modul-Einstiege:**
-- [modules/XX-modul/00-modulguide.md](modules/XX-modul/00-modulguide.md)
+- [course/modules/XX-modul/00-modulguide.md](course/modules/XX-modul/00-modulguide.md)
 
 **Vertiefung:**
-- [modules/XX-modul/01-grundlagen.md](modules/XX-modul/01-grundlagen.md)
-- [modules/YY-modul/03-befehlsuebersicht.md](modules/YY-modul/03-befehlsuebersicht.md)
+- [course/modules/XX-modul/01-grundlagen.md](course/modules/XX-modul/01-grundlagen.md)
+- [course/modules/YY-modul/03-befehlsuebersicht.md](course/modules/YY-modul/03-befehlsuebersicht.md)
 
 **Lernziele:** (Falls noch nicht über Module abgedeckt)
 
@@ -386,8 +386,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 **Aktueller Umsetzungsstand:**
 
 - [ ] **[Aufgabengruppe 1]**
-  > **Übung:** [docs/uebungen/meilenstein-N-uebung-01.md](docs/uebungen/meilenstein-N-uebung-01.md)
-  > **Quellen:** [modules/...], [modules/...]
+  > **Übung:** [course/uebungen/meilenstein-N-uebung-01.md](course/uebungen/meilenstein-N-uebung-01.md)
+  > **Quellen:** [course/modules/...], [course/modules/...]
   - [ ] [Untertask 1]
   - [ ] [Untertask 2]
 ```
@@ -395,7 +395,7 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 **Schritt 2: Übungen für Meilenstein erstellen**
 - Nach der "Neue Übung"-Checkliste oben
 
-**Schritt 3: README.md, docs/uebungen/UEBUNGEN.md aktualisieren**
+**Schritt 3: README.md, course/uebungen/UEBUNGEN.md aktualisieren**
 - Falls nötig Struktur-Erklärungen anpassen
 
 ---
@@ -406,7 +406,7 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 > ```powershell
 > .\tools\test-alle-uebungen.ps1
 > ```
-> Einzelne Datei: `.\tools\test-uebung.ps1 -File "docs/uebungen/meilenstein-XX-uebung-YY.md"`
+> Einzelne Datei: `.\tools\test-uebung.ps1 -File "course/uebungen/meilenstein-XX-uebung-YY.md"`
 > Exit-Code 0 = alles OK, 1 = mindestens ein Fehler.
 
 - [ ] **Alle Quellen existieren?** grep_search nach Links in Übungen
@@ -414,8 +414,11 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 - [ ] **Keine redundanten Lernziele?** Selbstcheck-Checklisten nur im `## Selbstcheck`-Abschnitt des Modulguide, nirgendwo sonst
 - [ ] **Alle Links funktionieren?** (Relative Pfade prüfen)
 - [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
-- [ ] **NEXT_STEPS.md ↔ docs/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
+- [ ] **NEXT_STEPS.md ↔ course/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
 - [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
+- [ ] **CHANGELOG.md aktuell?** Enthält er einen Eintrag für alle strukturellen Änderungen der aktuellen Session?
+- [ ] **CHANGELOG Tagesübersicht gepflegt?** Pro Datum genau ein grober Tagesblock unter `## Tagesübersicht (grob)`
+- [ ] **`.github/agents/*.md` Pfade korrekt?** Keine veralteten Pfade (z.B. `apps/learners/`, `docs/uebungen/`, `modules/`)
 - [ ] **Keine Tippfehler/Markdown-Fehler?** (`get_errors` auf alle neuen Dateien)
 - [ ] **"Vor dem Start"-Checkliste vorhanden?** (Max. 3 Punkte + Dateiliste)
 - [ ] **Versteckte Ordner erklärt?** (z.B. `.github/` mit Strg+P-Tipp)
@@ -432,15 +435,15 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 ### 📝 Beispiel: Kompletter Workflow für neues Modul
 
 **1. Neues Modul "Test" erstellen:**
-   - `modules/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
-   - `modules/08-test/01-test-grundlagen.md`
+   - `course/modules/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
+   - `course/modules/08-test/01-test-grundlagen.md`
 
 **2. In NEXT_STEPS.md neuen Meilenstein hinzufügen:**
    - "Meilenstein 4: Testing"
    - Modul-Einstiege + Vertiefung + Lernziele
 
 **3. Neue Übung erstellen:**
-   - `docs/uebungen/meilenstein-04-uebung-01.md`
+   - `course/uebungen/meilenstein-04-uebung-01.md`
    - Mit Quellenlinks zu Test-Modul
 
 **4. Konsistenz-Check:**
