@@ -1,10 +1,10 @@
-# 🗺️ Next Steps: Zentrale Meilensteine
+﻿# 🗺️ Next Steps: Zentrale Meilensteine
 
 Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**.
 
 Wenn du neu einsteigst:
 1. Lese [README.md](README.md) für die **Arbeitsweise und Repo-Struktur**
-2. Lese [docs/uebungen/README_UEBUNGEN.md](docs/uebungen/README_UEBUNGEN.md) für **deinen Workflow**
+2. Lese [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) für **deinen Workflow**
 3. Folge hier dem aktuellen **Meilenstein**
 
 ---
@@ -13,19 +13,19 @@ Wenn du neu einsteigst:
 **Ziel:** Die Werkzeuge sicher beherrschen.
 
 **Modul-Einstiege:**
-- [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md)
-- [modules/02-vscode/00-vscode-modulguide.md](modules/02-vscode/00-vscode-modulguide.md)
-- [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md)
-- [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md)
+- [course/modules/01-markdown/00-markdown-modulguide.md](course/modules/01-markdown/00-markdown-modulguide.md)
+- [course/modules/02-vscode/00-vscode-modulguide.md](course/modules/02-vscode/00-vscode-modulguide.md)
+- [course/modules/03-github/00-github-modulguide.md](course/modules/03-github/00-github-modulguide.md)
+- [course/modules/04-git/00-git-modulguide.md](course/modules/04-git/00-git-modulguide.md)
 
 **Vertiefung:**
-- [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md)
-- [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md)
-- [modules/02-vscode/01-vscode-grundlagen.md](modules/02-vscode/01-vscode-grundlagen.md)
-- [modules/02-vscode/02-vscode-copilot.md](modules/02-vscode/02-vscode-copilot.md)
-- [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
-- [modules/04-git/01-git-grundlagen.md](modules/04-git/01-git-grundlagen.md)
-- [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
+- [course/modules/01-markdown/01-markdown-grundlagen.md](course/modules/01-markdown/01-markdown-grundlagen.md)
+- [course/modules/01-markdown/02-formatierung_md-files.md](course/modules/01-markdown/02-formatierung_md-files.md)
+- [course/modules/02-vscode/01-vscode-grundlagen.md](course/modules/02-vscode/01-vscode-grundlagen.md)
+- [course/modules/02-vscode/02-vscode-copilot.md](course/modules/02-vscode/02-vscode-copilot.md)
+- [course/modules/03-github/01-github-grundlagen.md](course/modules/03-github/01-github-grundlagen.md)
+- [course/modules/04-git/01-git-grundlagen.md](course/modules/04-git/01-git-grundlagen.md)
+- [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md)
 
 **Lernziele:**
 
@@ -47,16 +47,16 @@ Wenn du neu einsteigst:
 **Ziel:** Das Repo sicher nutzen und den Lernstand ueberwiegend im Terminal verwalten.
 
 **Modul-Einstiege:**
-- [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md)
-- [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md)
-- [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md)
+- [course/modules/05-terminal/00-terminal-modulguide.md](course/modules/05-terminal/00-terminal-modulguide.md)
+- [course/modules/04-git/00-git-modulguide.md](course/modules/04-git/00-git-modulguide.md)
+- [course/modules/03-github/00-github-modulguide.md](course/modules/03-github/00-github-modulguide.md)
 
 **Vertiefung:**
-- [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md)
-- [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md)
-- [modules/04-git/01-git-grundlagen.md](modules/04-git/01-git-grundlagen.md)
-- [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
-- [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+- [course/modules/05-terminal/01-terminal-grundlagen.md](course/modules/05-terminal/01-terminal-grundlagen.md)
+- [course/modules/05-terminal/03-terminal-befehlsuebersicht.md](course/modules/05-terminal/03-terminal-befehlsuebersicht.md)
+- [course/modules/04-git/01-git-grundlagen.md](course/modules/04-git/01-git-grundlagen.md)
+- [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md)
+- [course/modules/03-github/01-github-grundlagen.md](course/modules/03-github/01-github-grundlagen.md)
 
 **Lernziele:**
 
@@ -101,11 +101,11 @@ Wenn du neu einsteigst:
   - [x] (Optional) Lokalen Branch loeschen und auf `main` wechseln
 
 - [ ] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
-  > **Uebung:** [docs/uebungen/meilenstein-02-uebung-01.md](docs/uebungen/meilenstein-02-uebung-01.md)
-  > **Quellen zur Uebung:** [modules/05-terminal/00-terminal-modulguide.md](modules/05-terminal/00-terminal-modulguide.md), [modules/05-terminal/01-terminal-grundlagen.md](modules/05-terminal/01-terminal-grundlagen.md), [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md), [modules/04-git/00-git-modulguide.md](modules/04-git/00-git-modulguide.md), [modules/04-git/01-git-grundlagen.md](modules/04-git/01-git-grundlagen.md), [modules/01-markdown/00-markdown-modulguide.md](modules/01-markdown/00-markdown-modulguide.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/01-markdown/02-formatierung_md-files.md](modules/01-markdown/02-formatierung_md-files.md), [modules/03-github/00-github-modulguide.md](modules/03-github/00-github-modulguide.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+  > **Uebung:** [course/uebungen/meilenstein-02-uebung-01.md](course/uebungen/meilenstein-02-uebung-01.md)
+  > **Quellen zur Uebung:** [course/modules/05-terminal/00-terminal-modulguide.md](course/modules/05-terminal/00-terminal-modulguide.md), [course/modules/05-terminal/01-terminal-grundlagen.md](course/modules/05-terminal/01-terminal-grundlagen.md), [course/modules/05-terminal/03-terminal-befehlsuebersicht.md](course/modules/05-terminal/03-terminal-befehlsuebersicht.md), [course/modules/04-git/00-git-modulguide.md](course/modules/04-git/00-git-modulguide.md), [course/modules/04-git/01-git-grundlagen.md](course/modules/04-git/01-git-grundlagen.md), [course/modules/01-markdown/00-markdown-modulguide.md](course/modules/01-markdown/00-markdown-modulguide.md), [course/modules/01-markdown/01-markdown-grundlagen.md](course/modules/01-markdown/01-markdown-grundlagen.md), [course/modules/01-markdown/02-formatierung_md-files.md](course/modules/01-markdown/02-formatierung_md-files.md), [course/modules/03-github/00-github-modulguide.md](course/modules/03-github/00-github-modulguide.md), [course/modules/03-github/01-github-grundlagen.md](course/modules/03-github/01-github-grundlagen.md)
   >
   > **Durchfuehrung der ersten Uebung:**
-  > 1. Uebungsdatei in [docs/uebungen](docs/uebungen) lesen.
+  > 1. Uebungsdatei in [course/uebungen](course/uebungen) lesen.
   > 2. Aufgaben im Terminal ausfuehren und Platzhalter ersetzen.
   > 3. Eigene Antwortdatei im persoenlichen Ordner anlegen.
   > 4. Lernfortschrittsdatei aktualisieren.
@@ -117,8 +117,8 @@ Wenn du neu einsteigst:
   - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Schritt
 
 - [ ] **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
-  > **Uebung:** [docs/uebungen/meilenstein-02-uebung-02.md](docs/uebungen/meilenstein-02-uebung-02.md)
-  > **Quellen zur Uebung:** [modules/05-terminal/03-terminal-befehlsuebersicht.md](modules/05-terminal/03-terminal-befehlsuebersicht.md), [modules/04-git/01-git-grundlagen.md](modules/04-git/01-git-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md)
+  > **Uebung:** [course/uebungen/meilenstein-02-uebung-02.md](course/uebungen/meilenstein-02-uebung-02.md)
+  > **Quellen zur Uebung:** [course/modules/05-terminal/03-terminal-befehlsuebersicht.md](course/modules/05-terminal/03-terminal-befehlsuebersicht.md), [course/modules/04-git/01-git-grundlagen.md](course/modules/04-git/01-git-grundlagen.md), [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md), [course/modules/03-github/01-github-grundlagen.md](course/modules/03-github/01-github-grundlagen.md)
   - [ ] In Ordnern navigieren (`cd`, `cd ..`, `pwd`, `dir`/`ls`)
   - [ ] Dateien anlegen (`echo. > <dateiname>.md`)
   - [ ] Dateien loeschen (`del <dateiname>`)
@@ -130,8 +130,8 @@ Wenn du neu einsteigst:
   - [ ] Passende Modulquelle fuer eine Aufgabe eigenstaendig finden
 
 - [ ] **Routine bei Branch-Wechseln und Lernstand regelmaessig dokumentieren**
-  > **Uebung:** [docs/uebungen/meilenstein-02-uebung-03.md](docs/uebungen/meilenstein-02-uebung-03.md)
-  > **Quellen zur Uebung:** [modules/04-git/01-git-grundlagen.md](modules/04-git/01-git-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md), [modules/03-github/01-github-grundlagen.md](modules/03-github/01-github-grundlagen.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md)
+  > **Uebung:** [course/uebungen/meilenstein-02-uebung-03.md](course/uebungen/meilenstein-02-uebung-03.md)
+  > **Quellen zur Uebung:** [course/modules/04-git/01-git-grundlagen.md](course/modules/04-git/01-git-grundlagen.md), [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md), [course/modules/03-github/01-github-grundlagen.md](course/modules/03-github/01-github-grundlagen.md), [course/modules/01-markdown/01-markdown-grundlagen.md](course/modules/01-markdown/01-markdown-grundlagen.md)
   - [ ] Vollstaendigen Branch-Commit-PR-Ablauf zweimal wiederholen
   - [ ] Zwischen Branches wechseln (`git checkout main`, `git pull`, neuer Branch)
   - [ ] Strukturierten Lernjournal-Eintrag mit festem Muster anlegen
@@ -142,13 +142,13 @@ Wenn du neu einsteigst:
 **Ziel:** Prompting und Kontext-Verwaltung fuer AI-gestuetzte Entwicklung sicher anwenden.
 
 **Modul-Einstiege:**
-- [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md)
+- [course/modules/06-ai-instructions/00-ai-instructions-modulguide.md](course/modules/06-ai-instructions/00-ai-instructions-modulguide.md)
 
 **Vertiefung:**
-- [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md)
-- [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md)
-- [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
-- [modules/02-vscode/02-vscode-copilot.md](modules/02-vscode/02-vscode-copilot.md)
+- [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md)
+- [course/modules/06-ai-instructions/02-prd-grundlagen.md](course/modules/06-ai-instructions/02-prd-grundlagen.md)
+- [course/modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](course/modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+- [course/modules/02-vscode/02-vscode-copilot.md](course/modules/02-vscode/02-vscode-copilot.md)
 
 **Lernziele:**
 
@@ -166,30 +166,30 @@ Wenn du neu einsteigst:
 **Aktueller Umsetzungsstand:**
 
 - [ ] **Erfolgreich prompten**
-  > **Uebung:** [docs/uebungen/meilenstein-03-uebung-02.md](docs/uebungen/meilenstein-03-uebung-02.md)
-  > **Quellen zur Uebung:** [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
+  > **Uebung:** [course/uebungen/meilenstein-03-uebung-02.md](course/uebungen/meilenstein-03-uebung-02.md)
+  > **Quellen zur Uebung:** [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md), [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md)
   - [ ] Prompt-Typen verstehen (Frage, Befehl, Kontext)
   - [ ] Eigene Prompts formulieren und testen
   - [ ] AI-Feedback auswerten und Prompts verbessern
 
 - [ ] **PRD und weitere Doku als Kontext fuer AI erstellen**
-  > **Uebung:** [docs/uebungen/meilenstein-03-uebung-01.md](docs/uebungen/meilenstein-03-uebung-01.md)
-  > **Quellen zur Uebung:** [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md), [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md), [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md), [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](modules/06-ai-instructions/03-prompt-dateien-grundlagen.md), [modules/01-markdown/01-markdown-grundlagen.md](modules/01-markdown/01-markdown-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
+  > **Uebung:** [course/uebungen/meilenstein-03-uebung-01.md](course/uebungen/meilenstein-03-uebung-01.md)
+  > **Quellen zur Uebung:** [course/modules/06-ai-instructions/00-ai-instructions-modulguide.md](course/modules/06-ai-instructions/00-ai-instructions-modulguide.md), [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md), [course/modules/06-ai-instructions/02-prd-grundlagen.md](course/modules/06-ai-instructions/02-prd-grundlagen.md), [course/modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](course/modules/06-ai-instructions/03-prompt-dateien-grundlagen.md), [course/modules/01-markdown/01-markdown-grundlagen.md](course/modules/01-markdown/01-markdown-grundlagen.md), [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md)
   - [ ] Aufbau und Zweck eines PRD verstehen
   - [ ] Eigenes PRD mit KI-Hilfe verfassen (`.github/prompts/learners-prd-assistent.prompt.md` nutzen)
   - [ ] Dokumente AI-verstaendlich strukturieren
 
 - [ ] **Umgang mit Chats und Prompt-Dateien in der Kontext-Verwaltung**
-  > **Uebung:** [docs/uebungen/meilenstein-03-uebung-03.md](docs/uebungen/meilenstein-03-uebung-03.md)
-  > **Quellen zur Uebung:** [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](modules/06-ai-instructions/03-prompt-dateien-grundlagen.md), [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md), [modules/04-git/03-git-befehlsuebersicht.md](modules/04-git/03-git-befehlsuebersicht.md)
+  > **Uebung:** [course/uebungen/meilenstein-03-uebung-03.md](course/uebungen/meilenstein-03-uebung-03.md)
+  > **Quellen zur Uebung:** [course/modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](course/modules/06-ai-instructions/03-prompt-dateien-grundlagen.md), [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md), [course/modules/04-git/03-git-befehlsuebersicht.md](course/modules/04-git/03-git-befehlsuebersicht.md)
   - [ ] Chats passend zum Kontext nutzen
   - [ ] Relevante Infos aus Chats dokumentieren
   - [ ] Kontext fuer neue Aufgaben gezielt zusammenstellen
   - [ ] Eigene Prompt-Datei anlegen und via `/` aufrufen
 
 - [ ] **Repository-Struktur fuer Context-Engineering optimieren**
-  > **Uebung:** [docs/uebungen/meilenstein-03-uebung-04.md](docs/uebungen/meilenstein-03-uebung-04.md)
-  > **Quellen zur Uebung:** [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md), [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md), [modules/02-vscode/02-vscode-copilot.md](modules/02-vscode/02-vscode-copilot.md)
+  > **Uebung:** [course/uebungen/meilenstein-03-uebung-04.md](course/uebungen/meilenstein-03-uebung-04.md)
+  > **Quellen zur Uebung:** [course/modules/06-ai-instructions/02-prd-grundlagen.md](course/modules/06-ai-instructions/02-prd-grundlagen.md), [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md), [course/modules/02-vscode/02-vscode-copilot.md](course/modules/02-vscode/02-vscode-copilot.md)
   - [ ] Bestehende Struktur analysieren
   - [ ] Verbesserungen fuer AI-freundliche Struktur ableiten
   - [ ] Eigene Ordner/Dateien entsprechend anpassen
@@ -205,14 +205,14 @@ Wenn du neu einsteigst:
 **Ziel:** Das eigene App-Projekt strukturiert aufbauen und mit KI-Unterstuetzung die erste Funktion umsetzen – mit bewusstem Kontext statt blindem Generieren.
 
 **Modul-Einstiege:**
-- [modules/07-architecture-foundations/00-architecture-foundations-modulguide.md](modules/07-architecture-foundations/00-architecture-foundations-modulguide.md)
-- [modules/06-ai-instructions/00-ai-instructions-modulguide.md](modules/06-ai-instructions/00-ai-instructions-modulguide.md)
+- [course/modules/07-architecture-foundations/00-architecture-foundations-modulguide.md](course/modules/07-architecture-foundations/00-architecture-foundations-modulguide.md)
+- [course/modules/06-ai-instructions/00-ai-instructions-modulguide.md](course/modules/06-ai-instructions/00-ai-instructions-modulguide.md)
 
 **Vertiefung:**
-- [modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
-- [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](modules/07-architecture-foundations/02-architecture-foundations-praxis.md)
-- [modules/06-ai-instructions/02-prd-grundlagen.md](modules/06-ai-instructions/02-prd-grundlagen.md)
-- [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md)
+- [course/modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](course/modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
+- [course/modules/07-architecture-foundations/02-architecture-foundations-praxis.md](course/modules/07-architecture-foundations/02-architecture-foundations-praxis.md)
+- [course/modules/06-ai-instructions/02-prd-grundlagen.md](course/modules/06-ai-instructions/02-prd-grundlagen.md)
+- [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md)
 
 **Lernziele:**
 
@@ -232,20 +232,20 @@ Wenn du neu einsteigst:
 **Aktueller Umsetzungsstand:**
 
 - [ ] **Projektstruktur verstehen und ableiten**
-  > **Uebung:** [docs/uebungen/meilenstein-04-uebung-01.md](docs/uebungen/meilenstein-04-uebung-01.md)
-  > **Quellen zur Uebung:** [modules/07-architecture-foundations/00-architecture-foundations-modulguide.md](modules/07-architecture-foundations/00-architecture-foundations-modulguide.md), [modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md), [modules/07-architecture-foundations/02-architecture-foundations-praxis.md](modules/07-architecture-foundations/02-architecture-foundations-praxis.md), [modules/06-ai-instructions/01-prompting-grundlagen.md](modules/06-ai-instructions/01-prompting-grundlagen.md)
+  > **Uebung:** [course/uebungen/meilenstein-04-uebung-01.md](course/uebungen/meilenstein-04-uebung-01.md)
+  > **Quellen zur Uebung:** [course/modules/07-architecture-foundations/00-architecture-foundations-modulguide.md](course/modules/07-architecture-foundations/00-architecture-foundations-modulguide.md), [course/modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md](course/modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md), [course/modules/07-architecture-foundations/02-architecture-foundations-praxis.md](course/modules/07-architecture-foundations/02-architecture-foundations-praxis.md), [course/modules/06-ai-instructions/01-prompting-grundlagen.md](course/modules/06-ai-instructions/01-prompting-grundlagen.md)
   - [ ] Modul 07 Grundlagen lesen
   - [ ] Komponenten-Denken auf das eigene PRD anwenden
   - [ ] Ordnerstruktur fuer das eigene Projekt skizzieren
 
 - [ ] **KI mit Strukturkontext promten**
-  > **Uebung:** [docs/uebungen/meilenstein-04-uebung-01.md](docs/uebungen/meilenstein-04-uebung-01.md) (Aufgaben 3 und 4)
+  > **Uebung:** [course/uebungen/meilenstein-04-uebung-01.md](course/uebungen/meilenstein-04-uebung-01.md) (Aufgaben 3 und 4)
   - [ ] Strukturkontext-Block formulieren (Stack, Ordner, Komponente, Datenquelle)
   - [ ] Block als Kontext vor einem Prompt verwenden und Ergebnis beurteilen
   - [ ] Strukturkontext in der eigenen PRD-Datei ablegen
 
 - [ ] **Erste Komponente mit KI bauen**
-  > **Uebung:** [docs/uebungen/meilenstein-04-uebung-01.md](docs/uebungen/meilenstein-04-uebung-01.md) (Aufgabe 4)
+  > **Uebung:** [course/uebungen/meilenstein-04-uebung-01.md](course/uebungen/meilenstein-04-uebung-01.md) (Aufgabe 4)
   - [ ] Komponente benennen und Verantwortlichkeit definieren
   - [ ] KI mit Strukturkontext + PRD beauftragen, die Komponente zu erstellen
   - [ ] Ergebnis pruefen: Liegt die Datei am richtigen Ort? Tut sie das Richtige?

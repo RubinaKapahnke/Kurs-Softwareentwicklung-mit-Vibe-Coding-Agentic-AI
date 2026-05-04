@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: professional dashboard development, implementing Progress-Hub from PRD, software architecture for vibe coding projects, Angular Material TypeScript strict implementation, refactoring dashboard architecture, dashboard developer, angular architect, material expert"
 name: "Dashboard Developer (course-dev)"
 tools: [read, edit, search, todo, execute]
@@ -42,7 +42,7 @@ Du arbeitest PRD-getrieben: erst Anforderungen sauber verankern, dann Architektu
 1. **PRD lesen und verankern**: Starte mit der User Story in `apps/dashboard/prd_dashboard.md` und den Akzeptanzkriterien. Verstehe das Warum, nicht nur das Was.
 
 2. **Datenquellen prüfen**: Schau dir die Datenstruktur an – wo kommen die Daten her?
-   - Lernfortschrittsdateien: `apps/learners/*/lernfortschritt_*.md`
+   - Lernfortschrittsdateien: `course/learners/*/lernfortschritt_*.md`
    - JSON-Struktur verstehen: TypeScript-Interfaces ableiten
    - Eindeutige IDs prüfen (Lernende, Meilensteine, Übungen)
 
@@ -54,7 +54,7 @@ Du arbeitest PRD-getrieben: erst Anforderungen sauber verankern, dann Architektu
    - Lege die Umsetzung als atomare TODO-Liste fest.
 
 4. **TypeScript-Interfaces definieren**:
-   - Jedes Interface mit Kommentar: Quelle im Repo (`// aus: apps/learners/lernfortschritt_*.md`)
+   - Jedes Interface mit Kommentar: Quelle im Repo (`// aus: course/learners/lernfortschritt_*.md`)
    - Strict Mode: keine `any`, keine `unknown` ohne Narrowing
    - Optional-Felder nur wo wirklich nötig (`field?: Type`)
 

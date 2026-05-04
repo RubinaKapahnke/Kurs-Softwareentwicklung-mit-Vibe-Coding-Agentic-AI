@@ -10,10 +10,11 @@ Das Terminal (auch Konsole oder Kommandozeile genannt) ist ein Text-basiertes We
 - **Automatisierung:** Wiederkehrende Aufgaben mit Skripten erledigen
 
 ## Die wichtigsten Terminal-Befehle (Beispiele)
-- `ls` / `dir` – Zeigt den Inhalt eines Ordners an
+- `ls` (macOS/Linux) / `dir` (Windows) – Zeigt den Inhalt eines Ordners an
 - `cd <Ordner>` – Wechselt in einen anderen Ordner
 - `mkdir <Name>` – Erstellt einen neuen Ordner
-- `rm <Datei>` / `del <Datei>` – Löscht eine Datei
+- `touch <Datei>` (macOS/Linux) / `New-Item <Datei>` (Windows/PowerShell) – Erstellt eine leere Datei
+- `rm <Datei>` (macOS/Linux) / `del <Datei>` (Windows) – Löscht eine Datei
 - `code .` – Öffnet den aktuellen Ordner in VS Code
 
 <!-- Ergaenzungen:
@@ -33,3 +34,25 @@ Das Terminal (auch Konsole oder Kommandozeile genannt) ist ein Text-basiertes We
 
 **Tipp:**
 Mit der Pfeil-nach-oben-Taste kannst du vorherige Befehle wiederholen und sparst Zeit beim Arbeiten im Terminal.
+
+---
+
+## Terminal-Befehle vs. Git-Befehle – was ist der Unterschied?
+
+Das Terminal ist das Fenster, in dem du Befehle eingibst. Git ist ein **Programm**, das du über das Terminal bedienst – genau wie `code` VS Code startet.
+
+```
+Terminal (das Fenster)
+ ├── Terminal-Befehle: cd, mkdir, ls, New-Item ...  → steuern Dateien und Ordner
+ └── Git-Befehle: git add, git commit, git push ... → steuern die Versionskontrolle
+```
+
+Der Unterschied im Alltag:
+- `mkdir lernstand` – Terminal-Befehl, legt einen Ordner an
+- `git add lernstand` – Git-Befehl, merkt sich den Ordner für den nächsten Commit
+
+Git-Befehle fangen immer mit `git` an und funktionieren auf allen Betriebssystemen gleich. Terminal-Befehle unterscheiden sich je nach System (Windows vs. macOS/Linux).
+
+Mehr zu Git: [modules/04-git/01-git-grundlagen.md](../04-git/01-git-grundlagen.md)
+
+Welche Terminals und Shells es gibt und wie sich VS Code Terminal vom System-Terminal unterscheidet: [02-terminal-typen.md](./02-terminal-typen.md)

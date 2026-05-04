@@ -1,4 +1,4 @@
-# Übung Meilenstein 3: Kontext-Qualität im Repo verbessern
+﻿# Übung Meilenstein 3: Kontext-Qualität im Repo verbessern
 
 ## Ziel
 
@@ -25,8 +25,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 Lies vor dem Start:
 
-- [modules/06-ai-instructions/02-prd-grundlagen.md](../../modules/06-ai-instructions/02-prd-grundlagen.md) – Abschnitt „Aufbau eines PRD"
-- [modules/06-ai-instructions/01-prompting-grundlagen.md](../../modules/06-ai-instructions/01-prompting-grundlagen.md) – Abschnitt „Die KI weiss nichts von deinem Projekt"
+- [modules/06-ai-instructions/02-prd-grundlagen.md](../modules/06-ai-instructions/02-prd-grundlagen.md) – Abschnitt „Aufbau eines PRD"
+- [modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md) – Abschnitt „Die KI weiss nichts von deinem Projekt"
 
 ---
 
@@ -44,7 +44,7 @@ Oeffne `apps/learners/<dein-name>/prd_<dein-name>.md` und pruefe, ob diese fuenf
 
 Halte direkt in deiner PRD-Datei fest, welche Abschnitte fehlen oder leer sind – als kurze Notiz unter einem neuen Abschnitt `## Kontext-Check`.
 
-Quelle: [modules/06-ai-instructions/02-prd-grundlagen.md](../../modules/06-ai-instructions/02-prd-grundlagen.md) (Abschnitt „Aufbau eines PRD")
+Quelle: [modules/06-ai-instructions/02-prd-grundlagen.md](../modules/06-ai-instructions/02-prd-grundlagen.md) (Abschnitt „Aufbau eines PRD")
 
 ---
 
@@ -71,8 +71,8 @@ Uebernimm die Vorschlaege, die zu deinem Projekt passen – und passe sie an. Du
 
 > Falls `#prd_<dein-name>.md` nicht funktioniert: Klicke auf das `#`-Symbol im Chat-Eingabefeld und waehle deine PRD-Datei manuell aus der Liste.
 
-Quelle: [modules/06-ai-instructions/02-prd-grundlagen.md](../../modules/06-ai-instructions/02-prd-grundlagen.md) (Abschnitt „PRD als KI-Kontext")  
-Quelle: [modules/02-vscode/02-vscode-copilot.md](../../modules/02-vscode/02-vscode-copilot.md) (Abschnitt `#`-Kontext)
+Quelle: [modules/06-ai-instructions/02-prd-grundlagen.md](../modules/06-ai-instructions/02-prd-grundlagen.md) (Abschnitt „PRD als KI-Kontext")  
+Quelle: [modules/02-vscode/02-vscode-copilot.md](../modules/02-vscode/02-vscode-copilot.md) (Abschnitt `#`-Kontext)
 
 ---
 
@@ -102,7 +102,7 @@ Vergleiche die Antworten. Halte in `lernfortschritt_<dein-name>.md` fest:
 
 > **Warum ein neuer Chat?** Ein neuer Chat hat keinen Gespraechs-Kontext mehr – so siehst du den reinen Unterschied, den dein PRD macht.
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md](../../modules/06-ai-instructions/01-prompting-grundlagen.md) (Abschnitt „Die KI weiss nichts von deinem Projekt")
+Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md) (Abschnitt „Die KI weiss nichts von deinem Projekt")
 
 ---
 
@@ -132,7 +132,7 @@ git push origin UE-M3-04-<vorname>
 
 Erstelle danach auf GitHub einen Pull Request von deinem Branch auf `main`.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -149,9 +149,9 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Prompts mit Kontext-Baustein formulieren** ([modules/06-ai-instructions/01-prompting-grundlagen.md](../../modules/06-ai-instructions/01-prompting-grundlagen.md))
-- **Copilot Chat oeffnen und `#`-Kontext verwenden** ([modules/02-vscode/02-vscode-copilot.md](../../modules/02-vscode/02-vscode-copilot.md))
-- **Branch erstellen, committen, pushen und PR erstellen** ([modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md))
+- **Prompts mit Kontext-Baustein formulieren** ([modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md))
+- **Copilot Chat oeffnen und `#`-Kontext verwenden** ([modules/02-vscode/02-vscode-copilot.md](../modules/02-vscode/02-vscode-copilot.md))
+- **Branch erstellen, committen, pushen und PR erstellen** ([modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md))
 
 ---
 

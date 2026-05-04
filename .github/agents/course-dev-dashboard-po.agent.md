@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: dashboard entwickeln, Progress-Hub Features planen, User Stories schreiben, PRD dashboard aktualisieren, Dashboard-Anforderungen aus Übungen ableiten, dashboard product owner, feature backlog priorisieren, dashboard po"
 name: "Dashboard PO (course-dev)"
 tools: [read, search, edit, todo]
@@ -37,7 +37,7 @@ Jede Anforderung betrachtest du aus drei Blickwinkeln:
 
 ## Approach
 
-1. **Kontext laden**: Lies zuerst `apps/dashboard/prd_dashboard.md` und `NEXT_STEPS.md`. Scan alle Lernfortschrittsdateien unter `apps/learners/*/lernfortschritt_*.md` und alle Übungen in `docs/uebungen/`.
+1. **Kontext laden**: Lies zuerst `apps/dashboard/prd_dashboard.md` und `NEXT_STEPS.md`. Scan alle Lernfortschrittsdateien unter `course/learners/*/lernfortschritt_*.md` und alle Übungen in `course/uebungen/`.
 
 2. **Anforderungen ableiten**: Identifiziere, welche Daten das Dashboard anzeigen muss, um den drei Personas zu helfen:
    - Welche Felder stehen in den Lernfortschrittsdateien?

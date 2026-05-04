@@ -5,7 +5,8 @@ Dieses Modul fuehrt in die Arbeit mit dem Terminal ein und ordnet die wichtigste
 ## Inhalt
 
 1. [Terminal: Grundlagen und Einstieg](./01-terminal-grundlagen.md)
-2. [Terminal-Befehlsuebersicht](./03-terminal-befehlsuebersicht.md)
+2. [Terminal-Typen: Welches Terminal nutze ich wann?](./02-terminal-typen.md)
+3. [Terminal-Befehlsuebersicht](./03-terminal-befehlsuebersicht.md)
 
 ## Selbstcheck
 
@@ -14,16 +15,15 @@ Nutze die Checklisten als Selbstcheck fuer das Terminal-Modul.
 ### Must have
 
 - [x] Ich kann das Terminal in VS Code oeffnen und nutzen.
+- [x] Ich weiss, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.
+- [x] Ich weiss, welche Shell auf meinem System standard ist (PowerShell auf Windows, zsh auf macOS).
 - [x] Ich kann mit `pwd` (oder `cd` auf Windows) meinen aktuellen Standort pruefen.
 - [x] Ich kann mit `ls` oder `dir` den Ordnerinhalt anzeigen.
 - [x] Ich kann mit `cd <ordnername>` in einen Ordner navigieren.
 - [x] Ich kann mit `cd ..` eine Ebene nach oben gehen.
 - [x] Ich kann neue Ordner mit `mkdir <ordnername>` erstellen.
-- [x] Ich kann neue Dateien mit `echo. > datei.md` (Windows) oder `touch datei.md` (Mac/Linux) anlegen.
-<!-- an stelle von [echo . > datei.md] besser [ni datei.md] echo kann dateien überschreiben -->
-- [x] Ich kann Dateien mit `rm` oder `del` loeschen.
-<!-- ergänze mit [ri datei.md] oder [Remove-Item datei.md]
-Der Befehl [Remove-Item *.txt -wh] (WhatIf) löscht keine Dateien. Er simuliert den Löschvorgang nur im Terminal und zeigt an, welche .txt-Dateien im aktuellen Pfad betroffen wären. Dies ist die sicherste Methode, um Platzhalter-Befehle (Wildcards) zu prüfen, bevor man sie scharf ausführt. -->
+- [x] Ich kann neue Dateien mit `New-Item datei.md` (Windows) oder `touch datei.md` (macOS/Linux) anlegen.
+- [x] Ich kann Dateien mit `rm` (macOS/Linux) oder `del` (Windows) loeschen.
 
 
 ### Should have
@@ -35,7 +35,9 @@ Der Befehl [Remove-Item *.txt -wh] (WhatIf) löscht keine Dateien. Er simuliert 
 - [x] Ich nutze die Pfeiltasten, um fruehere Befehle schnell zu wiederholen.
 - [x] Ich kann mit `Strg + C` einen laufenden Prozess abbrechen.
 - [x] Ich kann mit `clear` oder `cls` das Terminal aufraeumen.
-<!-- in Win geht das mit [Strg] + L -->
+- [ ] Ich weiss, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.
+- [ ] Ich weiss, warum sich Terminal-Befehle zwischen Windows und macOS unterscheiden, Git-Befehle aber nicht.
+
 ### Nice to have
 
 - [x] Ich kombiniere mehrere Befehle fluessig hintereinander.
@@ -46,4 +48,5 @@ Der Befehl [Remove-Item *.txt -wh] (WhatIf) löscht keine Dateien. Er simuliert 
 ## Wenn du etwas nachholen willst
 
 - Fuer Grundlagen: [Terminal: Grundlagen und Einstieg](./01-terminal-grundlagen.md)
+- Fuer Shell- und Terminal-Typen: [Terminal-Typen](./02-terminal-typen.md)
 - Fuer Befehle: [Terminal-Befehlsuebersicht](./03-terminal-befehlsuebersicht.md)

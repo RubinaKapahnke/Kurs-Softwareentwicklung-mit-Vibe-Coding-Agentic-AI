@@ -2,6 +2,8 @@
 
 Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen willst, warum ein Befehl noetig ist, lies vorher [Git: Grundlagen und Einstieg](./01-git-grundlagen.md).
 
+> **Gut zu wissen:** Git-Befehle sind auf allen Betriebssystemen identisch – egal ob Windows, macOS oder Linux. Unterschiede gibt es nur bei Terminal-Befehlen ausserhalb von Git (z.B. Dateien anlegen). Fuer diese Unterschiede: [Terminal-Befehlsuebersicht](../05-terminal/03-terminal-befehlsuebersicht.md).
+
 ## Orientierung
 
 | Befehl | Wofuer? | Beispiel | Achtung |

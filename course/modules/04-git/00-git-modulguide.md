@@ -5,8 +5,9 @@ Dieses Modul erklaert die Grundlagen von Git und ordnet die wichtigsten Arbeitsa
 ## Inhalt
 
 1. [Git: Grundlagen und Einstieg](./01-git-grundlagen.md)
-2. [Git-Befehlsuebersicht (Tabellen-Format)](./03-git-befehlsuebersicht.md)
-3. [Git-Befehle Spickzettel (Konversationelles Format)](./git-befehle-cheat-sheet.md)
+2. [Git Branch-Workflow: Von der Idee bis zum Aufraeumen](./02-git-branch-workflow.md)
+3. [Git-Befehlsuebersicht (Tabellen-Format)](./03-git-befehlsuebersicht.md)
+4. [Git-Befehle Spickzettel (Konversationelles Format)](./git-befehle-cheat-sheet.md)
 
 ## Zwei Wege zum Nachschlagen
 
@@ -34,6 +35,7 @@ Nutze die Checklisten nicht als starre Reihenfolge, sondern als Selbstcheck fuer
 - [ ] Ich kann `git log --oneline` nutzen, um die letzten Commits schneller zu verstehen.
 - [ ] Ich weiss, wofuer eine `.gitignore` da ist.
 - [x] Ich kann nach getaner Arbeit einen lokalen Branch wieder loeschen.
+- [ ] Ich weiss, wie ich einen abgeschlossenen Branch vollstaendig aufraeume (lokal + remote + main sync).
 - [ ] Ich verstehe, was bei einem Merge-Konflikt grundsaetzlich passiert.
 
 ### Nice to have
@@ -46,6 +48,7 @@ Nutze die Checklisten nicht als starre Reihenfolge, sondern als Selbstcheck fuer
 ## Wenn du etwas nachholen willst
 
 - Fuer das Verstaendnis hinter Git: [Git: Grundlagen und Einstieg](./01-git-grundlagen.md)
+- Fuer den vollstaendigen Branch-Ablauf inkl. Aufraeumen: [Git Branch-Workflow](./02-git-branch-workflow.md)
 - Fuer konkrete Kommandos: [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md)
 - Fuer Plattform-Themen wie Pull Requests: [modules/03-github/01-github-grundlagen.md](../03-github/01-github-grundlagen.md)
 

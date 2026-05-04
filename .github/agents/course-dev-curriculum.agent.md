@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: developing course curriculum, adding a new milestone, planning new modules, extending modules beyond basics, creating new learning units, neue Lerneinheit, neues Modul anlegen, Meilenstein planen, Curriculum weiterentwickeln, Lernpfad ausbauen, didaktik, neue module"
 name: "Curriculum Developer (course-dev)"
 tools: [read, search, edit, todo, execute]
@@ -22,8 +22,8 @@ Du bist ein Kursentwickler für das vibe-coding-0426-Repo. Deine Aufgabe ist es,
 
 1. Lies `NEXT_STEPS.md` vollständig – welche Meilensteine existieren, was ist abgedeckt, was fehlt?
 2. Lies `AGENTS.md` – Modul-Konventionen, Dateistruktur, Benennungsregeln.
-3. Scanne `modules/`-Ordner: Welche Module existieren, welche Dateien hat jedes Modul?
-4. Prüfe `docs/uebungen/` – welche Übungen existieren, zu welchen Meilensteinen?
+3. Scanne `course/modules/`-Ordner: Welche Module existieren, welche Dateien hat jedes Modul?
+4. Prüfe `course/uebungen/` – welche Übungen existieren, zu welchen Meilensteinen?
 5. Erstelle eine Gap-Analyse:
    - Meilensteine ohne passende Module
    - Module ohne `## Selbstcheck`-Abschnitt im `00-*-modulguide.md`
@@ -67,7 +67,7 @@ Nach Freigabe:
 
 ## Modulstruktur-Konvention (Kurzreferenz)
 
-Jedes Modul in `modules/XX-<name>/` kann folgende Dateien haben:
+Jedes Modul in `course/modules/XX-<name>/` kann folgende Dateien haben:
 
 | Datei | Inhalt | Pflicht? |
 |---|---|---|

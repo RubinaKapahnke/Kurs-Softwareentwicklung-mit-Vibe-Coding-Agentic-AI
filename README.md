@@ -1,4 +1,4 @@
-# 🚀 Vibe Coding Kurs: Von der Idee zum Projekt
+﻿# 🚀 Vibe Coding Kurs: Von der Idee zum Projekt
 
 Willkommen zum **Vibe Coding Kurs**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
 
@@ -32,8 +32,8 @@ Wir arbeiten mit einem klaren, einheitlichen Stack:
 1. Meilenstein in [NEXT_STEPS.md](NEXT_STEPS.md) → Sagt, was gelernt werden soll
 2. Modul-Einstiege (Module → 00-modulguide.md) → Zeigen, welche Module relevant sind
 3. Modul-Inhalte (Module → 00-modulguide mit inline Selbstcheck, 01-grundlagen, 03-befehlsuebersicht) → Erklären Konzepte und Befehle
-4. Übungen ([docs/uebungen/README_UEBUNGEN.md](docs/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
-5. Persönlicher Lernfortschritt ([apps/learners](apps/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
+4. Übungen ([course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
+5. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
 
 **Wichtig:** Jede Aufgabe in den Übungen hat direkte Quellenlinks zu den Modul-Dateien. Während du die Übung machst, klickst du direkt auf die Modul-Quelle.
 
@@ -41,10 +41,10 @@ Wir arbeiten mit einem klaren, einheitlichen Stack:
 
 ## � Aufbau der Module
 
-Jedes Modul folgt derselben Struktur. Beispiel: `modules/04-git/`
+Jedes Modul folgt derselben Struktur. Beispiel: `course/modules/04-git/`
 
 ```
-modules/04-git/
+course/modules/04-git/
 ├── 00-git-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
 ├── 01-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
 └── 03-git-befehlsuebersicht.md   ← Nachschlag: Befehle in Tabellen (nur Git, Terminal)
@@ -72,44 +72,67 @@ modules/04-git/
 /vibe-coding-0426
 ├── apps/
 │   ├── README_APPS.md
-│   ├── dashboard/
-│   │   ├── prd_dashboard.md
-│   │   ├── data/
-│   │   │   ├── course-roadmap.data.ts
-│   │   │   ├── index.ts
-│   │   │   └── mock/
-│   │   │       ├── ai-learner-scenarios.mock.ts
-│   │   │       ├── github-activity.mock.ts
-│   │   │       └── learner-markdown.mock.ts
-│   │   ├── features/
-│   │   │   └── overview-option-a/
-│   │   │       ├── overview-option-a.component.html
-│   │   │       ├── overview-option-a.component.scss
-│   │   │       └── overview-option-a.component.ts
-│   │   ├── models/
-│   │   │   ├── dashboard.models.ts
-│   │   │   └── index.ts
-│   │   └── services/
-│   │       ├── delta.service.ts
-│   │       ├── index.ts
-│   │       ├── learner-progress-parser.service.ts
-│   │       └── snapshot.service.ts
-│   └── learners/
-│       ├── daria/
-│       │   ├── prd_daria.md
-│       │   └── lernfortschritt_daria.md
-│       ├── dom/
-│       │   ├── prd_dom.md
-│       │   └── lernfortschritt_dom.md
-│       ├── medine/
-│       │   ├── prd_medine.md
-│       │   └── lernfortschritt_medine.md
-│       ├── raphael/
-│       │   ├── prd_raphael.md
-│       │   └── lernfortschritt_raphael.md
-│       └── sebastian/
-│           ├── prd_sebastian.md
-│           └── lernfortschritt_sebastian.md
+│   └── dashboard/
+│       ├── prd_dashboard.md
+│       ├── data/
+│       │   ├── course-roadmap.data.ts
+│       │   ├── index.ts
+│       │   └── mock/
+│       │       ├── ai-learner-scenarios.mock.ts
+│       │       ├── github-activity.mock.ts
+│       │       └── learner-markdown.mock.ts
+│       ├── features/
+│       │   └── overview-option-a/
+│       │       ├── overview-option-a.component.html
+│       │       ├── overview-option-a.component.scss
+│       │       └── overview-option-a.component.ts
+│       ├── models/
+│       │   ├── dashboard.models.ts
+│       │   └── index.ts
+│       └── services/
+│           ├── delta.service.ts
+│           ├── index.ts
+│           ├── learner-progress-parser.service.ts
+│           └── snapshot.service.ts
+├── course/
+│   ├── learners/
+│   │   ├── daria/
+│   │   │   ├── prd_daria.md
+│   │   │   └── lernfortschritt_daria.md
+│   │   ├── dom/
+│   │   │   ├── prd_dom.md
+│   │   │   └── lernfortschritt_dom.md
+│   │   ├── medine/
+│   │   │   ├── prd_medine.md
+│   │   │   └── lernfortschritt_medine.md
+│   │   ├── raphael/
+│   │   │   ├── prd_raphael.md
+│   │   │   └── lernfortschritt_raphael.md
+│   │   └── sebastian/
+│   │       ├── cmd_guide.md
+│   │       ├── git_guide.md
+│   │       ├── prd_sebastian.md
+│   │       └── lernfortschritt_sebastian.md
+│   ├── modules/
+│   │   ├── 01-markdown/
+│   │   ├── 02-vscode/
+│   │   ├── 03-github/
+│   │   ├── 04-git/
+│   │   ├── 05-terminal/
+│   │   ├── 06-ai-instructions/
+│   │   │   ├── 00-ai-instructions-modulguide.md
+│   │   │   ├── 01-prompting-grundlagen.md
+│   │   │   ├── 02-prd-grundlagen.md
+│   │   │   └── 03-prompt-dateien-grundlagen.md
+│   │   └── 07-architecture-foundations/
+│   │       ├── 00-architecture-foundations-modulguide.md
+│   │       ├── 01-architecture-foundations-grundlagen.md
+│   │       └── 02-architecture-foundations-praxis.md
+│   └── uebungen/
+│       ├── meilenstein-02-uebung-*.md  (3 Übungen)
+│       ├── meilenstein-03-uebung-*.md  (4 Übungen)
+│       ├── meilenstein-04-uebung-*.md  (1 Übung)
+│       └── README_UEBUNGEN.md
 ├── .github/
 │   ├── agents/
 │   │   ├── course-dev-curriculum.agent.md
@@ -122,28 +145,6 @@ modules/04-git/
 │   └── prompts/
 │       ├── learners-dashboard-feedback.prompt.md
 │       └── learners-prd-assistent.prompt.md
-├── docs/
-│   ├── GLOSSARY.md
-│   └── uebungen/
-│       ├── meilenstein-02-uebung-*.md  (3 Übungen)
-│       ├── meilenstein-03-uebung-*.md  (4 Übungen)
-│       ├── meilenstein-04-uebung-*.md  (1 Übung)
-│       └── README_UEBUNGEN.md
-├── modules/
-│   ├── 01-markdown/
-│   ├── 02-vscode/
-│   ├── 03-github/
-│   ├── 04-git/
-│   ├── 05-terminal/
-│   ├── 06-ai-instructions/
-│   │   ├── 00-ai-instructions-modulguide.md
-│   │   ├── 01-prompting-grundlagen.md
-│   │   ├── 02-prd-grundlagen.md
-│   │   └── 03-prompt-dateien-grundlagen.md
-│   └── 07-architecture-foundations/
-│       ├── 00-architecture-foundations-modulguide.md
-│       ├── 01-architecture-foundations-grundlagen.md
-│       └── 02-architecture-foundations-praxis.md
 ├── tools/
 │   ├── README_TOOLS.md
 │   ├── test-uebung.ps1
@@ -161,5 +162,5 @@ modules/04-git/
 Wenn du neu in eine Session einsteigst:
 1. [NEXT_STEPS.md](NEXT_STEPS.md) öffnen
 2. eigenen Lernfortschritt im persönlichen Ordner aktualisieren
-3. aktuelle Übung in [docs/uebungen/README_UEBUNGEN.md](docs/uebungen/README_UEBUNGEN.md) bearbeiten
+3. aktuelle Übung in [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) bearbeiten
 4. Änderungen committen, pushen und PR erstellen
