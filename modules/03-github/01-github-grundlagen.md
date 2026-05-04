@@ -17,7 +17,8 @@ GitHub ist eine Plattform zur Versionsverwaltung und Zusammenarbeit an Softwarep
 - **Actions:** Automatisierte Workflows (z. B. Tests, Deployments)
 
 ## Pull Request in 5 Schritten erstellen
-1. Stelle sicher, dass dein Branch auf GitHub liegt (`git push origin <branch-name>`).
+<!-- HINWEIS: Das Flag [-u] (oder --set-upstream) ist beim ersten Push eines neuen Branches zwingend erforderlich, um die lokale Kopie mit dem Repository auf GitHub zu verknüpfen. Nur so weiß Git bei zukünftigen Befehlen, welcher lokale Branch zu welchem Remote-Branch gehört. -->
+1. Stelle sicher, dass dein Branch auf GitHub liegt (`git push origin <branch-name>`). 
 2. Oeffne das Repository auf GitHub.
 3. Klicke auf "Compare & pull request" oder auf "New pull request".
 4. Waehle als Quelle deinen Branch und als Ziel `main`.

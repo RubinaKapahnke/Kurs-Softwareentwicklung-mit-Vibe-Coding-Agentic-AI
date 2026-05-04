@@ -7,9 +7,9 @@ Du fuehrst typische Terminal- und Git-Aktionen in deinem persoenlichen Ordner du
 
 ## Vor dem Start – Checkliste
 
-- [ ] VS Code ist geoeffnet und du siehst das Terminal (unterer Bereich – `Strg+J` oeffnet es, falls nicht sichtbar)
-- [ ] Du bist im Repo-Ordner `vibe-coding-0426` (pruefe mit `pwd`)
-- [ ] Uebung 01 aus Meilenstein 2 ist abgeschlossen (dein Ordner `apps/learners/<dein-name>/` existiert)
+- [x] VS Code ist geoeffnet und du siehst das Terminal (unterer Bereich – `Strg+J` oeffnet es, falls nicht sichtbar)
+- [x] Du bist im Repo-Ordner `vibe-coding-0426` (pruefe mit `pwd`)
+- [x] Uebung 01 aus Meilenstein 2 ist abgeschlossen (dein Ordner `apps/learners/<dein-name>/` existiert)
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/` (vorhanden – du navigierst dorthin und arbeitest darin)
@@ -100,7 +100,6 @@ git checkout main
 git pull origin main
 git checkout -b terminal-uebung-<vorname>
 ```
-<!-- wechsel von [checkout -b] zu [switch -c ] -->
 
 Erstelle nun eine Notizdatei in deinem persoenlichen Ordner:
 
@@ -201,7 +200,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 - ✓ modules/05-terminal/01-terminal-grundlagen.md: Was ist ein Terminal, Grundkonzepte
 - ✓ modules/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
 - ✓ modules/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin` <!-- wechsel von [checkout -b] zu [switch -c ] -->
+- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
 - ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
 - ✓ modules/04-git/00-git-modulguide.md + modules/05-terminal/00-terminal-modulguide.md + modules/03-github/00-github-modulguide.md: Modul-Navigation ueben
 
@@ -222,8 +221,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 Bevor du den PR erstellst, pruefe kurz:
 - [x] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
 - [x] `lernfortschritt_<name>.md` ist aktualisiert
-- [ ] PR auf GitHub ist erstellt
-<!-- vor der PR erstellung pürfen ob es ein PR gibt?  -->
+- [x] PR auf GitHub ist erstellt
+
 ---
 
 ## Lernerfolgs-Kriterien
@@ -231,7 +230,7 @@ Bevor du den PR erstellst, pruefe kurz:
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
 - [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
-- [ ] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle saßen aus dem Gedaechtnis.
+- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle saßen aus dem Gedaechtnis.
 - [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
-- [ ] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
+- [x] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
 - [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.

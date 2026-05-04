@@ -25,6 +25,10 @@ Dieses Dokument ist dein Spickzettel für die Arbeit mit Git im Terminal. Du mus
 
 ---
 
+
+<!-- für Anfänger: [git switch -c] ist sicherer als [checkout -b], da es strikt zwischen Branch-Wechsel und Datei-Wiederherstellung trennt. Es verhindert, dass lokale Dateien bei Tippfehlern versehentlich überschrieben werden und schützt vor dem ungewollten Erstellen von "Geister-Branches". -->
+
+
 ## 3. 🌿 Sicher arbeiten (Branches)
 *(Arbeite niemals direkt auf `main`! Erstelle dir immer eine eigene Arbeitskopie.)*
 
@@ -42,8 +46,10 @@ Dieses Dokument ist dein Spickzettel für die Arbeit mit Git im Terminal. Du mus
 | Schritt | Befehl | Was passiert? |
 | :--- | :--- | :--- |
 | **1. Sammeln** | `git add .` | Packt **alle** geänderten Dateien in ein virtuelles Paket (Staging Area). Der Punkt `.` steht für "alles im aktuellen Ordner". |
-| **2. Beschriften** | `git commit -m "deine nachricht"` | Verschließt das Paket und klebt einen Zettel mit deiner Beschreibung darauf (z.B. `"feat: neue karte erstellt"`). |
+| **2. Beschriften** | `git commit -m "deine nachricht"` | Verschließt das Paket und klebt einen Zettel mit deiner Beschreibung darauf (z.B. `"feat: neue karte erstellt"`). | 
 | **3. Hochladen** | `git push origin <branch-name>` | Schickt dein Paket in die Cloud zu GitHub. Ersetze `<branch-name>` durch den Namen deines aktuellen Branches. |
+
+<!--- Anmerkung zu 3. Hochladen: Nutze beim ersten Push [git push -u origin <name>]. Das -u (set-upstream) merkt sich die Verbindung, sodass du später nur noch kurz [git push] tippen musst. --->
 
 ---
 

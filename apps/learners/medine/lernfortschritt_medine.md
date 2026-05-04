@@ -12,17 +12,15 @@
 
 ## Lernjournal
 
-### 2026-04-29
-- **Was ich gemacht habe:** 
-- **Was gut lief:** 
-- **Wo ich hänge:** 
-- **Nächster Schritt:** 
+### 29.04.
+- **Was ich gemacht habe:** Clone Main, Created own branch, created own leanstand / meiensteine / fortschritte folder & mdfiles. 
+- **Was gut lief:** Meine Fragen im Chat zu stellen, und Unterstützung von Dominik zu erhalten. 
+- **Wo ich hänge:** Struktur von Folders und Erwartungen bis zum Endziel zu verstehen. 
+Die Branchen Struktur in Graph (Darstellung) ist mir noch schwierig zu verstehen.
+- **Nächster Schritt:** Übug 6 / Pull Request & Merge
 
 ## Nächster kleiner Schritt
-- [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
+- **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
 
 ## Fragen an die Gruppe
--
-
-## Individuelle Lernwuensche
--
+- ich sollte im Terminal "New Item" statt "> Echo. > " nutzen. Das hat besser funktionniert. 
