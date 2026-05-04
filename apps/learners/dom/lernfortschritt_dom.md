@@ -24,3 +24,18 @@
 
 ## Fragen an die Gruppe
 - Wie geht's euch?
+
+---
+
+### 30.04.
+- **Was ich gemacht habe:** Medine bei Uebung 1 geholfen, dabei Push/Pull/commit Prozess noch besser verstanden; dann Navigation und Terminal Befehle geübt & Übungs-Notizen angelegt
+- **Was gut lief:** eigentlich alles :P
+- **Was war schwierig oder unklar?** Link Struktur verstehen war knackig, aber jetzt kapiert
+- **Wo ich hänge:** !! Lernfortschritt war in neuem Branch "terminal-uebung-dom" und main nicht aktualisiert - warum? PR noch nicht reviewed?
+- **Nächster Schritt:** Die Übung "Meilenstein-02-uebung-02.md" erfolgreich abschließen und mutig zur nächsten Übung voranschreiten!
+
+## Nächster kleiner Schritt
+- [ ] die nächste Übung!
+
+## Fragen an die Gruppe
+- Wie geht's euch?
