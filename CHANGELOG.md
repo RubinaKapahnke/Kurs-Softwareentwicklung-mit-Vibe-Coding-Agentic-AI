@@ -4,6 +4,23 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
+## [Unreleased] – 04.05.2026 (Session 4)
+
+### Repo-Struktur – Konsolidierung in `course/`
+
+- `apps/learners/` → `course/learners/` verschoben
+- `modules/` → `course/modules/` verschoben
+- `docs/uebungen/` → `course/uebungen/` verschoben
+- `docs/GLOSSARY.md` gelöscht (war nie gepflegt)
+- Alle relativen Links in 8 Übungsdateien angepasst (`../../modules/` → `../modules/`)
+- `NEXT_STEPS.md`, `README.md`, `AGENTS.md`, `README_UEBUNGEN.md`, `README_APPS.md` auf neue Pfade aktualisiert
+- Alle 5 Agent-Dateien in `.github/agents/` auf neue Pfade aktualisiert
+- `tools/test-alle-uebungen.ps1` + `tools/test-uebung.ps1` auf neue Pfade angepasst
+- Alle 8 Übungen bestehen weiterhin (0 Fehler)
+- Branch: `refactor/repo-struktur-course-ordner`
+
+---
+
 ## [Unreleased] – 04.05.2026 (Session 3)
 
 ### Dashboard – Option A & B: Vollständiger Ausbau

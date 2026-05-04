@@ -24,6 +24,8 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
    - Verweise zwischen `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md` und Übungsdateien
    - Quellenlinks aus Übungen auf vorhandene Moduldateien
    - Benennungskonventionen für Agenten und Prompts in `.github/`
+   - Pfade in `.github/agents/*.md` auf aktuelle Repo-Struktur (z.B. `course/`, `apps/`)
+   - `CHANGELOG.md`: Enthält er einen Eintrag zur letzten Session? Fehlt ein Eintrag für sichtbare strukturelle Änderungen?
 4. Führe verfügbare Repo-Checks aus, insbesondere `./tools/test-alle-uebungen.ps1`.
 5. Sammle Findings nach Schweregrad und ordne sie direkt einer Datei zu.
 6. Leite einen Freigabe-Schritt ein:

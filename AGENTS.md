@@ -416,6 +416,8 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 - [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
 - [ ] **NEXT_STEPS.md ↔ course/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
 - [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
+- [ ] **CHANGELOG.md aktuell?** Enthält er einen Eintrag für alle strukturellen Änderungen der aktuellen Session?
+- [ ] **`.github/agents/*.md` Pfade korrekt?** Keine veralteten Pfade (z.B. `apps/learners/`, `docs/uebungen/`, `modules/`)
 - [ ] **Keine Tippfehler/Markdown-Fehler?** (`get_errors` auf alle neuen Dateien)
 - [ ] **"Vor dem Start"-Checkliste vorhanden?** (Max. 3 Punkte + Dateiliste)
 - [ ] **Versteckte Ordner erklärt?** (z.B. `.github/` mit Strg+P-Tipp)
