@@ -31,6 +31,13 @@ export class OnboardingStateService {
     sessionStorage.setItem(KEY_MAX_STEP, String(this._maxUnlockedStep()));
   }
 
+  /** Schaltet einen Schritt frei ohne ihn als "erledigt" zu markieren (für Skip-Flow) */
+  unlockStep(stepId: number): void {
+    if (stepId < 1 || stepId > 6) return;
+    this._maxUnlockedStep.update((current) => Math.max(current, stepId));
+    sessionStorage.setItem(KEY_MAX_STEP, String(this._maxUnlockedStep()));
+  }
+
   setStep2Experience(choice: Step2ExperienceChoice): void {
     this._step2Experience.set(choice);
     if (choice !== null) {

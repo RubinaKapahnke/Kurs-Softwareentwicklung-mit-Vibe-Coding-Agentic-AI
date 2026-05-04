@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -18,4 +18,10 @@ export class StartseiteComponent {
   readonly maxUnlockedStep = this.state.maxUnlockedStep;
   readonly hasProgress = computed(() => this.state.maxUnlockedStep() > 1);
   readonly isCompleted = computed(() => this.state.maxUnlockedStep() >= 6);
+
+  readonly expandedSection = signal<string | null>(null);
+
+  toggleSection(id: string): void {
+    this.expandedSection.update((current) => (current === id ? null : id));
+  }
 }

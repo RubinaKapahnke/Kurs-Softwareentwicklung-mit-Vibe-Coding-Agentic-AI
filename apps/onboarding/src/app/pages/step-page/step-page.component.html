@@ -171,18 +171,25 @@
 
     <span class="actions-spacer"></span>
 
+    @if (!isBrueckeStep()) {
+      <button
+        mat-stroked-button
+        type="button"
+        [disabled]="isDoneDisabled()"
+        (click)="markDone()">
+        <mat-icon>check_circle</mat-icon>
+        {{ isCurrentStepDone() ? '✅ Erledigt' : 'Als erledigt markieren' }}
+      </button>
+    }
+
     @if (step().id < 6) {
-      <button mat-flat-button type="button" class="secondary" (click)="goToNextStep()" [disabled]="!canGoNext()">
+      <button mat-flat-button type="button" class="secondary" (click)="goToNextStep()">
         Weiter
       </button>
     }
 
-    @if (!isBrueckeStep()) {
-      <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()" [disabled]="isDoneDisabled()">
-        Ich habe das geschafft
-      </button>
-    } @else {
-      <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()">
+    @if (isBrueckeStep()) {
+      <button mat-raised-button type="button" color="primary" (click)="finishOnboarding()">
         ✅ Onboarding abgeschlossen!
       </button>
     }
