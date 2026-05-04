@@ -22,13 +22,13 @@ Du bist ein Spezialist für das Erstellen von Lernübungen im vibe-coding-0426-R
 3. **Dateiname bestimmen**: Schema `docs/uebungen/meilenstein-XX-uebung-YY.md`. Prüfe, welche Nummer als nächste frei ist.
 4. **Übung erstellen**: Erstelle die Datei gemäß dem Template in AGENTS.md. Pflichtabschnitte in der richtigen Reihenfolge:
    - Ziel
-   - Vor dem Start – Checkliste (max. 3 Punkte + Dateiliste)
+   - Vor dem Start – Checkliste (max. 3 Punkte + Dateiliste + "Wichtig – diese Datei nicht bearbeiten"-Hinweis)
    - Vorbereitung (optional)
-   - Aufgaben (jede mit Quelle, Hinweise für versteckte Ordner, "Warum?"-Hinweise, UI-Schritte nummeriert + Fallback, Git-Abschnitte mit `git status` + `git branch` vorangestellt)
+   - Aufgaben (jede mit Quelle, Hinweise für versteckte Ordner, "Warum?"-Hinweise, UI-Schritte nummeriert + Fallback, Git-Abschnitte mit `git status` + `git branch` vorangestellt, vor dem ersten `git checkout -b` den "Tipp – falls dein letzter PR noch nicht gemerged ist"-Block mit Option A + Option B)
    - Modulabdeckung (Check)
    - Wiederholung aus frueheren Meilensteinen
-   - Abgabe
-   - Lernerfolgs-Kriterien (3–6 Checkboxen, beobachtbar + selbst bewertbar)
+   - Abgabe (beginnt mit "Kopiere diese Checkliste"-Blockzitat)
+   - Lernerfolgs-Kriterien (3–6 Checkboxen, beobachtbar + selbst bewertbar; beginnt mit "Kopiere auch diese Checkliste"-Blockzitat)
 5. **NEXT_STEPS.md aktualisieren**: Füge die Übung unter dem entsprechenden Meilenstein ein.
 6. **README_UEBUNGEN.md aktualisieren**: Füge den Eintrag zum Meilenstein hinzu.
 7. **Validieren**: Führe `.\tools\test-uebung.ps1 -File "docs/uebungen/<dateiname>"` aus und behebe Fehler.

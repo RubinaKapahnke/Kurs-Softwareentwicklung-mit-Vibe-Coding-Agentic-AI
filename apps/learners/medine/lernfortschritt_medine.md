@@ -19,9 +19,6 @@
 Die Branchen Struktur in Graph (Darstellung) ist mir noch schwierig zu verstehen.
 - **Nächster Schritt:** Übug 6 / Pull Request & Merge
 
-## Nächster kleiner Schritt
-- **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
-
 ### 02.05. (Uebung 01 – Terminal und Datei-Anlage)
 - **Was ich gemacht habe:** Ordner und Dateien im Terminal angelegt, verschiedene Dateierstellungs-Methoden ausprobiert, mit Dom dabei erste Strukturen verstanden
 - **Was gut lief:** Mit Unterstützung erste Struktur verstanden
@@ -31,7 +28,17 @@ Die Branchen Struktur in Graph (Darstellung) ist mir noch schwierig zu verstehen
 **Hinweis zu Terminal-Befehlen:**
 - `echo. > datei.md` funktioniert, aber `New-Item datei.md` ist die PowerShell-native Variante und funktioniert zuverlässiger
 
-## Nächster kleiner Schritt
+**Abgabe UE-M2-01:**
+- [x] Lernjournal-Eintrag in `lernfortschritt_medine.md` ist aktualisiert
+- [x] PR auf GitHub ist erstellt
+
+**Lernerfolgs-Kriterien UE-M2-01:**
+- [x] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
+- [x] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
+- [x] Mein Lernjournal enthaelt einen echten Eintrag von mir.
+- [x] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
+
+## Das möchte ich noch lernen
 - [ ] Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden
 
 ## Fragen an die Gruppe

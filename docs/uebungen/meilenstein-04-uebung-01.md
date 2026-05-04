@@ -17,6 +17,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/prd_<dein-name>.md` (dein PRD – bereits vorhanden)
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (dein Lernjournal)
 
+> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD- und Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+
 ---
 
 ## Vorbereitung
@@ -119,12 +121,6 @@ Beauftragte Copilot Chat, eine erste Komponente fuer dein Projekt zu erstellen.
 Sie bekommt [Input-Eigenschaft] als Input und zeigt [Beschreibung] an.
 ```
 
-Beispiel:
-```
-#prd_daria.md Erstelle die Komponente ParticipantCard.
-Sie bekommt Name und Status als Input und zeigt beides mit Angular Material Card an.
-```
-
 > Falls `#prd_<dein-name>.md` nicht funktioniert: Klicke auf das `#`-Symbol im Chat-Eingabefeld und waehle deine PRD-Datei manuell aus der Liste.
 
 **Ergebnis pruefen:**
@@ -157,12 +153,18 @@ git branch
 
 Dann:
 
+> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M4-01-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+
 ```bash
-git checkout -b m4-projektstruktur-<dein-name>
+git checkout -b UE-M4-01-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
 git add .
 git commit -m "M4: Strukturanalyse + erster Komponenten-Prompt fuer <dein-name>"
-git push origin m4-projektstruktur-<dein-name>
+git push origin UE-M4-01-<vorname>
 ```
+
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Erstelle danach auf GitHub einen Pull Request von deinem Branch auf `main`.
 
@@ -192,6 +194,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+
 Bevor du den PR erstellst, pruefe kurz:
 
 - [ ] `prd_<dein-name>.md` enthaelt die Abschnitte `## Strukturanalyse` und `## Strukturkontext`
@@ -201,6 +205,8 @@ Bevor du den PR erstellst, pruefe kurz:
 ---
 
 ## Lernerfolgs-Kriterien
+
+> **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 

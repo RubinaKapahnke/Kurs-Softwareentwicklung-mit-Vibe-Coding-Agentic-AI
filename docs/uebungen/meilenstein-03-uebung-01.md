@@ -17,6 +17,8 @@ In dieser Uebung arbeitest du hauptsaechlich mit zwei Dateien gleichzeitig:
 1. **Deine PRD-Datei** (`apps/learners/<dein-name>/prd_<dein-name>.md`) – dort schreibst du hinein
 2. **Die Prompt-Datei** (`.github/prompts/learners-prd-assistent.prompt.md`) – dort liest du nur
 
+> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD-Datei und deine Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+
 > Tipp: Du kannst beide Dateien nebeneinander oeffnen. Rechtsklick auf einen Tab → "In Gruppe aufteilen".
 
 ---
@@ -145,12 +147,18 @@ git branch   # Zeigt, auf welchem Branch du gerade bist
 
 Dann erstelle deinen Branch und committe:
 
+> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M3-01-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main` (wie oben mit `git pull origin main`). Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+
 ```bash
-git checkout -b prd-<dein-name>
+git checkout -b UE-M3-01-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
 git add .
 git commit -m "feat: prd <dein-name> erstellt"
-git push origin prd-<dein-name>
+git push origin UE-M3-01-<vorname>
 ```
+
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Danach auf GitHub einen Pull Request von deinem Branch auf `main` erstellen.
 
@@ -180,6 +188,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Deine PRD-Datei (`apps/learners/<dein-name>/prd_<dein-name>.md`) enthaelt die fertige PRD-Struktur
 - [ ] PR auf GitHub ist erstellt
@@ -187,6 +197,8 @@ Bevor du den PR erstellst, pruefe kurz:
 ---
 
 ## Lernerfolgs-Kriterien
+
+> **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 

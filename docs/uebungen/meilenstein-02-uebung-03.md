@@ -14,6 +14,8 @@ Du wiederholst den vollstaendigen Branch-Commit-PR-Ablauf zweimal hintereinander
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird strukturiert erweitert)
 
+> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+
 ---
 
 ## Vorbereitung
@@ -38,11 +40,17 @@ git branch
 
 Dann aktualisiere main und erstelle einen neuen Branch:
 
+> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M2-03a-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main` (wie unten). Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+
 ```bash
 git checkout main
 git pull origin main
-git checkout -b rueckblick-<vorname>
+git checkout -b UE-M2-03a-<vorname>   # Erster Branch dieser Uebung
 ```
+
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen. Dieser Durchlauf ist `03a`, der zweite weiter unten `03b`.
 
 Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und ergaenze im Abschnitt `## Lernjournal` einen neuen Eintrag:
 
@@ -68,7 +76,7 @@ Dann committe und pushe:
 ```bash
 git add .
 git commit -m "docs: meilenstein-2 uebung-03 gestartet"
-git push origin rueckblick-<vorname>
+git push origin UE-M2-03a-<vorname>
 ```
 
 Erstelle auf GitHub einen PR:
@@ -108,7 +116,7 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git
 Erstelle einen neuen Branch:
 
 ```bash
-git checkout -b lernjournal-<vorname>
+git checkout -b UE-M2-03b-<vorname>   # Zweiter Branch dieser Uebung
 ```
 
 Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und fuege einen neuen Journaleintrag ein. Nutze dieses Muster – tippe es ab oder kopiere es und fuell die Luecken aus:
@@ -151,7 +159,7 @@ Dann:
 ```bash
 git add .
 git commit -m "docs: lernjournal-eintrag <vorname> hinzugefuegt"
-git push origin lernjournal-<vorname>
+git push origin UE-M2-03b-<vorname>
 ```
 
 Erstelle auf GitHub einen zweiten PR (gleicher Ablauf wie in Aufgabe 1).
@@ -180,7 +188,7 @@ Committe diese letzte Aenderung direkt im laufenden Branch `lernjournal-<vorname
 git status
 git add .
 git commit -m "docs: lernjournal uebung-03 abgeschlossen"
-git push origin lernjournal-<vorname>
+git push origin UE-M2-03b-<vorname>
 ```
 
 > **Hinweis:** Dieser Commit erscheint automatisch im bereits offenen PR von Aufgabe 4 – du musst keinen neuen PR erstellen.
@@ -209,6 +217,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Zwei PRs auf GitHub sind erstellt (Aufgabe 1 und Aufgabe 4)
 - [ ] Lernjournal in `lernfortschritt_<vorname>.md` enthaelt zwei neue Eintraege (Start und Abschluss)
@@ -216,6 +226,8 @@ Bevor du den PR erstellst, pruefe kurz:
 ---
 
 ## Lernerfolgs-Kriterien
+
+> **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 

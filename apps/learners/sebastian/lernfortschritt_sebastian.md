@@ -50,13 +50,15 @@
   - *ich lasse mir den Text vorlesen und gehe Step by Step alles noch mal durch  
   Somit überprüfe ich ob ich alles verstanden habe*
 
+**Abgabe UE-M2-01:**
+- [x] Lernjournal-Eintrag in `lernfortschritt_sebastian.md` ist aktualisiert
+- [x] PR auf GitHub ist erstellt
 
-
-## Nächster kleiner Schritt
-- [ ] Meilenstein 3: AI-Instructions
-
-## Fragen an die Gruppe
--
+**Lernerfolgs-Kriterien UE-M2-01:**
+- [x] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
+- [x] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
+- [x] Mein Lernjournal enthaelt einen echten Eintrag von mir.
+- [x] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
 
 ---
 
@@ -84,7 +86,19 @@
 - `cmd_guide.md` – Nachschlagewerk für Terminal-Befehle (Dateioperationen, Navigation, Wildcards)
 - `git_guide.md` – Nachschlagewerk für Git-Befehle (Branches, Staging, Commits, Workflows)
 
-## Nächster kleiner Schritt
+**Abgabe UE-M2-02:**
+- [x] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
+- [x] `lernfortschritt_sebastian.md` ist aktualisiert
+- [x] PR auf GitHub ist erstellt
+
+**Lernerfolgs-Kriterien UE-M2-02:**
+- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
+- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle sassen aus dem Gedaechtnis.
+- [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
+- [x] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
+- [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
+
+## Das möchte ich noch lernen
 - [ ] Meilenstein 3: AI-Instructions
 
 ## Fragen an die Gruppe

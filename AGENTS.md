@@ -44,6 +44,44 @@ The learning structure follows this hierarchy:
 3. **docs/uebungen/** (zentral) → Exercises with direct module source links
 4. **apps/learners/** (dezentral) → Individual learning progress per person
 
+### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
+
+Jede Lernfortschritt-Datei hat diese festen Abschnitte (einmalig, nicht pro Übung):
+
+```markdown
+# Lernfortschritt: <Name>
+
+## Aktueller Fokus
+**Was ich gerade lerne:**
+- [ ] ...
+
+## Abgeschlossene Meilensteine
+- [ ] Meilenstein 1: ...
+
+## Lernjournal
+
+### DD.MM. (Uebung XX – Titel)
+**Was habe ich heute gemacht?**
+...
+
+**Abgabe UE-MX-YY:**
+- [x] ...
+
+**Lernerfolgs-Kriterien UE-MX-YY:**
+- [x] ...
+
+## Das möchte ich noch lernen
+- [ ] ...
+
+## Fragen an die Gruppe
+- ...
+```
+
+**Regeln:**
+- `## Das möchte ich noch lernen` und `## Fragen an die Gruppe` erscheinen **einmal** am Dateiende – nicht nach jedem Journaleintrag.
+- Abgabe- und Lernerfolgs-Kriterien-Checklisten werden **direkt unter den passenden Journaleintrag** geschrieben (nicht am Dateiende).
+- Kein separater `## Nächster kleiner Schritt`-Abschnitt – der nächste Schritt steht im letzten Journaleintrag.
+
 **Key principle:** No redundant explanations. Each element has one clear role. Exercises directly link to module sources—learners click the link, understand the concept, and complete the task.
 
 ### NEXT_STEPS.md
@@ -202,6 +240,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     - `[Datei 1]`
     - `[Datei 2]`
     
+    > **Wichtig – diese Datei nicht bearbeiten:** Die Übungsdatei (die du gerade liest) bleibt unverändert als Referenz erhalten. Deine eigene Arbeit trägst du ausschließlich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+    
     ---
     
     ## Vorbereitung
@@ -240,11 +280,16 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
         git branch   # Zeigt den aktuellen Branch
     
     Dann:
-    
-        git checkout -b [branch-name]
+    > **Tipp \u2013 falls dein letzter PR noch nicht gemerged ist:**
+    > - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` \u2013 dann `git checkout -b UE-MX-YY-<vorname>`. Dein Lernjournal ist sofort aktuell.
+    > - **Option B:** Starte von `main` (wie unten). Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt \u2013 du musst nichts weiter tun.
+
+        git checkout -b UE-MX-YY-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
         git add .
         git commit -m "[message]"
-        git push origin [branch-name]
+        git push origin UE-MX-YY-<vorname>
+    
+    > **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Übungen – UE = Übung, MX = Meilenstein (z.B. M3), YY = Übungs-Nummer (z.B. 01).
     
     ---
     
@@ -265,6 +310,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     
     ## Abgabe
     
+    > **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Übungsdatei.
+    
     Bevor du den PR erstellst, pruefe kurz:
     - [ ] [Ergebnis 1, z.B. Datei XY existiert im eigenen Ordner]
     - [ ] [Ergebnis 2, z.B. Lernjournal aktualisiert]
@@ -273,6 +320,8 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
     ---
     
     ## Lernerfolgs-Kriterien
+    
+    > **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
     
     Prüfe nach Abschluss der Übung, ob du diese Punkte mit Ja beantworten kannst:
     
@@ -300,6 +349,9 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 - Temporäre Inhalte mit "Warum?"-Hinweis versehen? ✓
 - UI-Interaktionen als nummerierte Schritte + Fallback? ✓
 - Git-Abschnitte mit `git status` + `git branch` vorangestellt? ✓
+- Branch-Name nach Muster `UE-MX-YY-<vorname>` verwendet? ✓
+- `Wichtig – diese Datei nicht bearbeiten`-Hinweis nach Dateiliste vorhanden? ✓
+- Kopier-Hinweise in `Abgabe` und `Lernerfolgs-Kriterien` vorhanden? ✓
 - `Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden? ✓
 - `Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)? ✓
 - `Lernerfolgs-Kriterien`-Abschnitt mit 3–6 Checkboxen vorhanden? ✓
@@ -373,6 +425,7 @@ docs/uebungen/meilenstein-XX-uebung-YY.md
 - [ ] **`Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden?**
 - [ ] **`Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)?**
 - [ ] **`Lernerfolgs-Kriterien`-Abschnitt mit 3–6 Checkboxen vorhanden?**
+- [ ] **`Tipp – falls dein letzter PR noch nicht gemerged ist`-Blockzitat vor dem ersten `git checkout -b` vorhanden?** (Option A + Option B mit korrekter Aussage zum Merge)
 
 ---
 
