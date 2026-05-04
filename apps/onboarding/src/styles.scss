@@ -1,0 +1,11 @@
+@use './styles/tokens';
+@use './styles/material-theme';
+@use './styles/typography';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100dvh;
+}

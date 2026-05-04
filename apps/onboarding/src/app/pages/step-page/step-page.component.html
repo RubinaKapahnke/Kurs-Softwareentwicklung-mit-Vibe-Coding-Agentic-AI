@@ -1,0 +1,86 @@
+<mat-card class="step-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Schritt {{ step().id }}: {{ step().title }}</mat-card-title>
+    <mat-card-subtitle>{{ step().goal }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <section class="step-section">
+      <h3>Was ist zu tun?</h3>
+      <mat-list>
+        @for (task of step().tasks; track task) {
+          <mat-list-item>
+            <mat-icon matListItemIcon>check_circle_outline</mat-icon>
+            <div matListItemTitle>{{ task }}</div>
+          </mat-list-item>
+        }
+      </mat-list>
+    </section>
+
+    <mat-divider></mat-divider>
+
+    <section class="step-section">
+      <h3>Falls es nicht klappt</h3>
+      <mat-list>
+        @for (tip of step().fallbackHelp; track tip.title) {
+          <mat-list-item>
+            <mat-icon matListItemIcon>help_outline</mat-icon>
+            <div matListItemTitle>{{ tip.title }}</div>
+            <div matListItemLine>{{ tip.detail }}</div>
+          </mat-list-item>
+        }
+      </mat-list>
+    </section>
+
+    <mat-divider></mat-divider>
+
+    <section class="step-section success-box" aria-label="Erfolgskriterium">
+      <h3>Woran erkenne ich Erfolg?</h3>
+      <p>{{ step().successCriterion }}</p>
+    </section>
+
+    @if (step().resources?.length) {
+      <mat-divider></mat-divider>
+      <section class="step-section">
+        <h3>Hilfreiche Links</h3>
+        <div class="link-group">
+          @for (resource of step().resources; track resource.href) {
+            <a mat-stroked-button [href]="resource.href" target="_blank" rel="noopener noreferrer">
+              {{ resource.label }}
+            </a>
+          }
+        </div>
+      </section>
+    }
+
+    @if (step().vscodeHint?.length) {
+      <mat-divider></mat-divider>
+      <section class="step-section">
+        <h3>Alternative in VS Code</h3>
+        <ol>
+          @for (hint of step().vscodeHint; track hint) {
+            <li>{{ hint }}</li>
+          }
+        </ol>
+      </section>
+    }
+  </mat-card-content>
+
+  <mat-card-actions class="actions">
+    <button mat-button type="button" (click)="goToPreviousStep()" [disabled]="!canGoBack()">
+      Zurueck
+    </button>
+
+    <span class="actions-spacer"></span>
+
+    @if (step().id < 6) {
+      <button mat-flat-button type="button" class="secondary" (click)="goToNextStep()" [disabled]="!canGoNext()">
+        Weiter
+      </button>
+    }
+
+    <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()">
+      Ich habe das geschafft
+    </button>
+  </mat-card-actions>
+</mat-card>

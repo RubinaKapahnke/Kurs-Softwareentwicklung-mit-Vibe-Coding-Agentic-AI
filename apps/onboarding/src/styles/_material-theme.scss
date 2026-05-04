@@ -1,0 +1,37 @@
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$blue-palette,
+        secondary: mat.$yellow-palette,
+        tertiary: mat.$red-palette,
+        error: mat.$red-palette,
+      ),
+      typography: Poppins,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: light;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+:root {
+  --mat-sys-primary: var(--color-primary);
+  --mat-sys-on-primary: #ffffff;
+  --mat-sys-secondary: var(--color-secondary);
+  --mat-sys-on-secondary: #ffffff;
+  --mat-sys-tertiary: var(--color-tertiary);
+  --mat-sys-on-tertiary: #ffffff;
+  --mat-sys-error: var(--color-error);
+  --mat-sys-on-error: #ffffff;
+  --mat-sys-surface: var(--color-surface);
+  --mat-sys-on-surface: var(--color-text);
+}

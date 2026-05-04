@@ -1,0 +1,17 @@
+<mat-toolbar class="shell-toolbar">
+  <span>KnOot Academy Onboarding</span>
+  <span class="spacer"></span>
+  <a mat-button href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+</mat-toolbar>
+
+<main class="shell-main">
+  <section class="progress-panel" aria-label="Onboarding-Fortschritt">
+    <div class="progress-meta">
+      <strong>Fortschritt</strong>
+      <span>Freigeschaltet bis Schritt {{ maxUnlockedStep() }} von 6</span>
+    </div>
+    <mat-progress-bar mode="determinate" [value]="progressPercent()"></mat-progress-bar>
+  </section>
+
+  <router-outlet></router-outlet>
+</main>

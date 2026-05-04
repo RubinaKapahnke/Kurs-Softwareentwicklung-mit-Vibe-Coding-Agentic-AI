@@ -1,0 +1,45 @@
+:host {
+  display: block;
+}
+
+.step-card {
+  border-radius: 20px;
+  background: var(--color-surface);
+}
+
+.step-section {
+  padding: 1rem 0;
+}
+
+.step-section h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+.success-box {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--color-tertiary) 30%, white);
+  background: color-mix(in srgb, var(--color-secondary) 18%, white);
+}
+
+.link-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.actions-spacer {
+  flex: 1;
+}
+
+.secondary {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  background: var(--color-bg);
+}
+
+.shell-toolbar {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.shell-main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+}
+
+.progress-panel {
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, white);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .progress-meta {
+    flex-direction: column;
+  }
+}
