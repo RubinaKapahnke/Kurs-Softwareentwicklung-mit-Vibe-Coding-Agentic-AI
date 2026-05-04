@@ -1,4 +1,4 @@
-﻿# 🚀 Vibe Coding Kurs: Von der Idee zum Projekt
+# 🚀 Vibe Coding Kurs: Von der Idee zum Projekt
 
 Willkommen zum **Vibe Coding Kurs**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
 
@@ -72,6 +72,18 @@ course/modules/04-git/
 /vibe-coding-0426
 ├── apps/
 │   ├── README_APPS.md
+│   ├── onboarding/
+│   │   ├── prd_onboarding.md
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── app/
+│   │   │   │   ├── data/
+│   │   │   │   ├── guards/
+│   │   │   │   ├── models/
+│   │   │   │   ├── pages/
+│   │   │   │   └── services/
+│   │   │   └── styles/
+│   │   └── package.json
 │   └── dashboard/
 │       ├── prd_dashboard.md
 │       ├── data/
@@ -139,14 +151,18 @@ course/modules/04-git/
 │   │   ├── course-dev-dashboard-developer.agent.md
 │   │   ├── course-dev-dashboard-po.agent.md
 │   │   ├── course-dev-exercise-creator.agent.md
+│   │   ├── course-dev-onboarding-web-architect.agent.md
+│   │   ├── course-dev-onboarding-ux-text.agent.md
 │   │   ├── course-dev-repo-consistency-checker.agent.md
 │   │   ├── course-dev-vibe-coding-readiness.agent.md
 │   │   └── learners-help.agent.md
 │   ├── instructions/
 │   │   ├── dashboard.instructions.md
 │   │   ├── learners-progress.instructions.md
+│   │   ├── onboarding.instructions.md
 │   │   └── uebungen-standard.instructions.md
 │   ├── prompts/
+│   │   ├── course-dev-onboarding-mvp-scope-freeze.prompt.md
 │   │   ├── learners-dashboard-feedback.prompt.md
 │   │   ├── learners-lernjournal-eintrag.prompt.md
 │   │   └── learners-prd-assistent.prompt.md
@@ -173,3 +189,5 @@ Wenn du neu in eine Session einsteigst:
 2. eigenen Lernfortschritt im persönlichen Ordner aktualisieren
 3. aktuelle Übung in [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) bearbeiten
 4. Änderungen committen, pushen und PR erstellen
+
+

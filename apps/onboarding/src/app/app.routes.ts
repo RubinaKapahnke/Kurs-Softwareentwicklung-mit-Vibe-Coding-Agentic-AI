@@ -2,13 +2,14 @@ import { Routes } from '@angular/router';
 
 import { stepAccessGuard } from './guards/step-access.guard';
 import { OnboardingShellComponent } from './pages/onboarding-shell/onboarding-shell.component';
+import { StartseiteComponent } from './pages/startseite/startseite.component';
 import { StepPageComponent } from './pages/step-page/step-page.component';
 
 export const routes: Routes = [
 	{
 		path: '',
 		pathMatch: 'full',
-		redirectTo: 'onboarding/step/1'
+		component: StartseiteComponent
 	},
 	{
 		path: 'onboarding',
@@ -28,6 +29,6 @@ export const routes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: 'onboarding/step/1'
+		redirectTo: ''
 	}
 ];

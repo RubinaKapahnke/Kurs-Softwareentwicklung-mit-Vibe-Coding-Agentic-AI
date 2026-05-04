@@ -1,0 +1,237 @@
+.startseite {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Mobile-Hinweis – nur auf kleinen Screens sichtbar */
+.mobile-notice {
+  display: none;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: color-mix(in srgb, var(--color-secondary) 18%, white);
+  border-left: 4px solid var(--color-secondary);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+
+  mat-icon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  span {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-notice {
+    display: flex;
+  }
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero-label {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Allgemeine Abschnitte */
+.section {
+  margin: 2.5rem 0;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 1rem;
+  }
+}
+
+/* Was du lernst */
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &::before {
+      content: '→';
+      color: var(--color-primary);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  }
+}
+
+/* Was du brauchst */
+.req-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    mat-icon {
+      color: var(--color-primary);
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+}
+
+/* Erfolgs-Checkliste */
+.checklist-section {
+  background: color-mix(in srgb, var(--color-primary) 6%, white);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &::before {
+      content: '✅ ';
+    }
+  }
+}
+
+/* CTAs */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .cta-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 2rem;
+    height: 48px;
+    line-height: 48px;
+
+    &:hover {
+      background-color: var(--color-primary-dark, #264d75);
+    }
+  }
+
+  .cta-secondary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 2rem;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+/* Coming Soon */
+.coming-soon-section {
+  background: var(--color-bg);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+}
+
+.coming-desc {
+  color: var(--color-text);
+  margin: 0 0 1.25rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  opacity: 0.72;
+  border: 1px dashed color-mix(in srgb, var(--color-text) 28%, transparent);
+
+  mat-card-content {
+    padding: 1rem;
+  }
+
+  h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: color-mix(in srgb, var(--color-text) 65%, transparent);
+    line-height: 1.5;
+  }
+}
+
+.badge {
+  display: inline-block;
+  background: color-mix(in srgb, var(--color-secondary) 22%, white);
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
