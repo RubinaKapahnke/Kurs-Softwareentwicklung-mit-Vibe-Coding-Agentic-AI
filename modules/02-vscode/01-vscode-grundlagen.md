@@ -21,6 +21,9 @@ VS Code wird für das Schreiben, Testen und Debuggen von Code in vielen Programm
 - **Markdown-Unterstützung:** Dokumentation und Code können im gleichen Editor gepflegt werden
 - **Flexibilität:** Für nahezu jede Sprache und jedes Framework geeignet
 
+## Preview Toggle
+- Um die Preview-Ansicht einer Datei zu fixieren, verwende die Funktion "Toggle Preview locking" im Overflow-Menu. ~Dom
+
 ---
 
 **Tipp:**
