@@ -4,9 +4,22 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 04.05.2026 (Session 4)
+## Tagesübersicht (grob)
 
-### Repo-Struktur – Konsolidierung in `course/`
+### 04.05.2026
+- Repo-Struktur auf `course/` umgestellt (`learners`, `modules`, `uebungen`) und Pfade repo-weit angepasst.
+- Dashboard deutlich ausgebaut (Option A/B, Snapshot-Infos, Blockaden, Git- und Lernstands-Sichten).
+- Lernmaterial konsolidiert (Übungen bereinigt, Lernfortschritt-Dateien vereinheitlicht, neue Prüfregeln im Testskript).
+- KI-Setup erweitert (neuer Readiness-Agent, Consistency-Checks inkl. CHANGELOG/Agents, Konventions-Updates).
+
+### 29.04.2026
+- Agenten-, Prompt- und Instruction-Basis eingeführt.
+- Neue Module und Übungen für Meilensteine 3 und 4 ergänzt.
+- Erste Dashboard-Grundstruktur mit PRD, Datenmodellen, Services und erster Übersichtskomponente aufgebaut.
+
+---
+
+## 04.05.2026 (Session 4)
 
 ### Neuer Agent: `course-dev-vibe-coding-readiness`
 
@@ -30,7 +43,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 04.05.2026 (Session 3)
+## 04.05.2026 (Session 3)
 
 ### Dashboard – Option A & B: Vollständiger Ausbau
 
@@ -61,7 +74,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 04.05.2026 (Session 2)
+## 04.05.2026 (Session 2)
 
 ### Lernstände – Konsolidierung und Bereinigung
 
@@ -128,7 +141,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 04.05.2026
+## 04.05.2026 (Session 1)
 
 ### Dashboard App – Angular-Projekt-Setup
 
@@ -183,7 +196,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## [Unreleased] – 29.04.2026
+## 29.04.2026
 
 ### Agents & Instruktionen – Neu
 

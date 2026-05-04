@@ -26,6 +26,7 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
    - Benennungskonventionen für Agenten und Prompts in `.github/`
    - Pfade in `.github/agents/*.md` auf aktuelle Repo-Struktur (z.B. `course/`, `apps/`)
    - `CHANGELOG.md`: Enthält er einen Eintrag zur letzten Session? Fehlt ein Eintrag für sichtbare strukturelle Änderungen?
+   - `CHANGELOG.md`: Ist `## Tagesübersicht (grob)` gepflegt (pro Datum genau ein grober Tagesblock, keine Duplikate)?
 4. Führe verfügbare Repo-Checks aus, insbesondere `./tools/test-alle-uebungen.ps1`.
 5. Sammle Findings nach Schweregrad und ordne sie direkt einer Datei zu.
 6. Leite einen Freigabe-Schritt ein:
