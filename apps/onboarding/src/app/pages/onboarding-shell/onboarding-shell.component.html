@@ -1,6 +1,7 @@
 <mat-toolbar class="shell-toolbar">
   <span>KnOot Academy Onboarding</span>
   <span class="spacer"></span>
+  <a mat-button routerLink="/">Startseite</a>
   <a mat-button href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
 </mat-toolbar>
 
@@ -11,6 +12,25 @@
       <span>Freigeschaltet bis Schritt {{ maxUnlockedStep() }} von 6</span>
     </div>
     <mat-progress-bar mode="determinate" [value]="progressPercent()"></mat-progress-bar>
+
+    <!-- Schritt-Navigation: freigeschaltete Schritte anklickbar -->
+    <nav class="step-nav" aria-label="Schrittnavigation">
+      @for (stepId of allSteps; track stepId) {
+        @if (isUnlocked(stepId)) {
+          <a
+            mat-mini-fab
+            class="step-pill step-pill--unlocked"
+            [routerLink]="['/onboarding/step', stepId]"
+            [attr.aria-label]="'Zu Schritt ' + stepId + ' springen'">
+            {{ stepId }}
+          </a>
+        } @else {
+          <span class="step-pill step-pill--locked" [attr.aria-label]="'Schritt ' + stepId + ' (gesperrt)'">
+            {{ stepId }}
+          </span>
+        }
+      }
+    </nav>
   </section>
 
   <router-outlet></router-outlet>

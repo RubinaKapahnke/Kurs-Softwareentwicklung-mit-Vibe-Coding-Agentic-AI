@@ -43,3 +43,92 @@
 .secondary {
   margin-right: 0.5rem;
 }
+
+/* Schritt 2 – Erfahrungsabfrage */
+.experience-check {
+  background: color-mix(in srgb, var(--color-primary) 5%, white);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-desc {
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+  margin: 0 0 1rem;
+}
+
+.exp-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.25rem;
+    border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    color: var(--color-text);
+    transition: background 0.15s, border-color 0.15s;
+
+    &.exp-selected {
+      background: color-mix(in srgb, var(--color-primary) 12%, white);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+/* GitHub-Sichtbarkeitswarnung */
+.visibility-warning {
+  background: color-mix(in srgb, var(--color-accent) 8%, white);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  border-radius: 12px;
+  padding: 1.25rem;
+
+  .warning-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+
+    mat-icon {
+      color: var(--color-accent);
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--color-accent);
+    }
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+    color: var(--color-text);
+  }
+}
+
+/* Fallback-Link */
+.fallback-hint {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.link-btn {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  padding: 0 0.25rem;
+  min-width: auto;
+  line-height: 1.4;
+  height: auto;
+  text-decoration: underline;
+}

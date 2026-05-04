@@ -3,13 +3,14 @@ import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 import { ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingStep } from '../../models/onboarding.models';
-import { OnboardingStateService } from '../../services/onboarding-state.service';
+import { OnboardingStateService, Step2ExperienceChoice } from '../../services/onboarding-state.service';
 
 @Component({
   selector: 'app-step-page',
@@ -17,6 +18,7 @@ import { OnboardingStateService } from '../../services/onboarding-state.service'
     CommonModule,
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
     MatDividerModule,
     MatIconModule,
     MatListModule
@@ -27,7 +29,7 @@ import { OnboardingStateService } from '../../services/onboarding-state.service'
 export class StepPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
-  private readonly state = inject(OnboardingStateService);
+  readonly state = inject(OnboardingStateService);
 
   readonly step = computed<OnboardingStep>(() => {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -35,7 +37,30 @@ export class StepPageComponent {
   });
 
   readonly canGoBack = computed(() => this.step().id > 1);
-  readonly canGoNext = computed(() => this.step().id < 6 && this.step().id < this.state.maxUnlockedStep());
+  readonly canGoNext = computed(
+    () => this.step().id < 6 && this.step().id < this.state.maxUnlockedStep()
+  );
+
+  readonly isStep2 = computed(() => this.step().id === 2);
+
+  readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
+
+  readonly isDoneDisabled = computed(() => {
+    if (this.isStep2() && !this.step2CanComplete()) return true;
+    return false;
+  });
+
+  selectExperience(choice: Step2ExperienceChoice): void {
+    this.state.setStep2Experience(choice);
+  }
+
+  onVisibilityCheckboxChange(checked: boolean): void {
+    this.state.confirmGithubVisibility(checked);
+  }
+
+  switchToNewPath(): void {
+    this.state.resetStep2ToNewPath();
+  }
 
   markDoneAndContinue(): void {
     const currentStep = this.step().id;

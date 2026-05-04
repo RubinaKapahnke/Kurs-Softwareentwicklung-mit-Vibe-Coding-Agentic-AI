@@ -35,6 +35,43 @@
   margin-bottom: 0.5rem;
 }
 
+/* Schritt-Navigation */
+.step-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.step-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+
+  &--unlocked {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    box-shadow: 0 1px 4px color-mix(in srgb, var(--color-primary) 35%, transparent);
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--color-primary-dark, #264d75) !important;
+    }
+  }
+
+  &--locked {
+    background-color: color-mix(in srgb, var(--color-text) 12%, transparent);
+    color: color-mix(in srgb, var(--color-text) 40%, transparent);
+    cursor: default;
+  }
+}
+
 @media (max-width: 640px) {
   .progress-meta {
     flex-direction: column;

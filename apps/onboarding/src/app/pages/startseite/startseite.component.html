@@ -75,6 +75,17 @@
         Kursüberblick
       </a>
     </div>
+
+    <!-- Rückkehr-Banner: nur sichtbar wenn Fortschritt vorhanden -->
+    @if (hasProgress()) {
+      <div class="resume-banner" role="status">
+        <mat-icon aria-hidden="true">play_circle</mat-icon>
+        <span>Du hast bereits Fortschritt gespeichert.</span>
+        <a mat-stroked-button [routerLink]="['/onboarding/step', maxUnlockedStep()]" class="resume-btn">
+          Weiter bei Schritt {{ maxUnlockedStep() }}
+        </a>
+      </div>
+    }
   </section>
 
   <!-- Weitere Kurse (Coming Soon) -->

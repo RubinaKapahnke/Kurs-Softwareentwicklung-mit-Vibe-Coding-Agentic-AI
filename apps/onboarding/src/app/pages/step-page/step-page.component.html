@@ -5,6 +5,64 @@
   </mat-card-header>
 
   <mat-card-content>
+
+    <!-- Schritt 2: Erfahrungsabfrage -->
+    @if (isStep2()) {
+      <section class="step-section experience-check">
+        <h3>Hast du bereits Erfahrung damit?</h3>
+        <p class="exp-desc">Wähle passend aus – du kannst jederzeit zur vollständigen Anleitung wechseln.</p>
+        <div class="exp-buttons">
+          <button
+            mat-stroked-button
+            type="button"
+            [class.exp-selected]="state.step2Experience() === 'new'"
+            (click)="selectExperience('new')">
+            <mat-icon>person_add</mat-icon>
+            Ich starte komplett neu
+          </button>
+          <button
+            mat-stroked-button
+            type="button"
+            [class.exp-selected]="state.step2Experience() === 'existing'"
+            (click)="selectExperience('existing')">
+            <mat-icon>person</mat-icon>
+            Ich habe schon einen GitHub-Account
+          </button>
+        </div>
+      </section>
+
+      <!-- GitHub-Sichtbarkeitswarnung bei bestehendem Account -->
+      @if (state.step2Experience() === 'existing') {
+        <section class="step-section visibility-warning" role="alert">
+          <div class="warning-header">
+            <mat-icon aria-hidden="true">visibility</mat-icon>
+            <h3>Wichtig: Dein Account ist im Kurs sichtbar</h3>
+          </div>
+          <p>
+            Im geteilten Kurs-Repository können alle anderen Teilnehmenden
+            deinen GitHub-Benutzernamen sehen – z. B. als Autor von Commits oder
+            in Pull Requests. Stelle sicher, dass du das weißt und damit einverstanden bist.
+          </p>
+          <mat-checkbox
+            [checked]="state.githubVisibilityConfirmed()"
+            (change)="onVisibilityCheckboxChange($event.checked)">
+            Ich habe verstanden, dass mein GitHub-Account im Kurs für andere sichtbar sein kann.
+          </mat-checkbox>
+        </section>
+
+        <section class="step-section">
+          <p class="fallback-hint">
+            Doch lieber mit einem neuen Account starten?
+            <button mat-button type="button" class="link-btn" (click)="switchToNewPath()">
+              Zur vollständigen Anleitung wechseln
+            </button>
+          </p>
+        </section>
+      }
+
+      <mat-divider></mat-divider>
+    }
+
     <section class="step-section">
       <h3>Was ist zu tun?</h3>
       <mat-list>
@@ -68,7 +126,7 @@
 
   <mat-card-actions class="actions">
     <button mat-button type="button" (click)="goToPreviousStep()" [disabled]="!canGoBack()">
-      Zurueck
+      Zurück
     </button>
 
     <span class="actions-spacer"></span>
@@ -79,7 +137,7 @@
       </button>
     }
 
-    <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()">
+    <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()" [disabled]="isDoneDisabled()">
       Ich habe das geschafft
     </button>
   </mat-card-actions>
