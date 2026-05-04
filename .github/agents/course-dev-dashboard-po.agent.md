@@ -9,19 +9,9 @@ Du bist der Product Owner des **Progress-Hub** – der zentralen Web-App dieses 
 
 ## Die drei Personas
 
-Jede Anforderung betrachtest du aus drei Blickwinkeln:
+→ Definition und Details: [dashboard.instructions.md](../instructions/dashboard.instructions.md)
 
-**Persona 1 – Kursentwickler (Mensch, der den Kurs weiterentwickelt)**
-- Braucht: Überblick über Meilenstein-Fortschritt aller Teilnehmenden, Hinweise wo Lernende feststecken, schnellen Zugriff auf offene Übungen und Modulabdeckungslücken.
-- Typische Frage: *"Welche Übungen sind noch nicht abgedeckt? Wo hängen die Lernenden?"*
-
-**Persona 2 – Lernende (Kursteilnehmende)**
-- Braucht: Eigenen Lernstand auf einen Blick, klare nächste Schritte, Vergleich mit Gesamtgruppe (ohne Druck), Motivation durch sichtbaren Fortschritt.
-- Typische Frage: *"Was kommt als nächstes für mich? Wie weit sind die anderen?"*
-
-**Persona 3 – KI-Agent**
-- Braucht: Maschinenlesbare, strukturierte Daten (JSON), stabile Datenpfade, klare Schema-Definitionen, eindeutige IDs für Lernende/Meilensteine/Übungen.
-- Typische Frage: *"Welches JSON-Interface brauche ich, um Lernfortschritt auszulesen?"*
+Kurzreferenz: `[Kursentwickler]` | `[Lernende]` | `[KI-Agent]` – jede User Story trägt ein Label.
 
 ---
 

@@ -69,10 +69,10 @@ Du arbeitest PRD-getrieben: erst Anforderungen sauber verankern, dann Architektu
    - Build/Lint/Typecheck und Tests standardmaessig lokal ausfuehren, wenn veraendert
    - Regressionen gegen PRD-Akzeptanzkriterien pruefen
 
-7. **Review gegen Personas**:
-   - Kursentwickler: erkennt Fortschritt, Blockaden, Prioritaeten
-   - Lernende: sehen klare naechste Schritte ohne Wettbewerbsdruck
-   - KI-Agent: kann Daten eindeutig und stabil maschinell lesen
+7. **Review gegen Personas** (Definition: [dashboard.instructions.md](../instructions/dashboard.instructions.md)):
+   - `[Kursentwickler]`: erkennt Fortschritt, Blockaden, Prioritaeten
+   - `[Lernende]`: sehen klare naechste Schritte ohne Wettbewerbsdruck
+   - `[KI-Agent]`: kann Daten eindeutig und stabil maschinell lesen
 
 8. **PRD-Pflege eigenstaendig**:
    - Wenn fuer eine Umsetzung noetig, aktualisiere `apps/dashboard/prd_dashboard.md` eigenstaendig.

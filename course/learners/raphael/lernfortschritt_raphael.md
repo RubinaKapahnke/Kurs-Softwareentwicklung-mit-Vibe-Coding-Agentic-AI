@@ -1,4 +1,4 @@
-# Lernfortschritt: Raphael
+﻿# Lernfortschritt: Raphael
 
 ## Aktueller Fokus
 **Was ich gerade lerne:**
@@ -105,5 +105,8 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
 
+
+## Das möchte ich noch lernen
+- [ ] 
 ## Fragen an die Gruppe
 -

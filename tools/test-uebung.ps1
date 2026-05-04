@@ -138,6 +138,39 @@ Test-Check `
     -Condition ($content -notmatch $zeitPattern) `
     -Hint "Zeitangaben wie 'X Minuten', 'Zeitbox' oder 'Empfohlen: ...' sind verboten"
 
+
+# --- 9. "Wichtig – diese Datei nicht bearbeiten"-Hinweis vorhanden ---
+Test-Check `
+    -Name '"Wichtig – diese Datei nicht bearbeiten"-Hinweis vorhanden' `
+    -Condition ($content -match 'Wichtig.*diese Datei nicht bearbeiten') `
+    -Hint 'Nach der Dateiliste in "Vor dem Start" muss ein "Wichtig - diese Datei nicht bearbeiten"-Blockzitat stehen'
+
+# --- 10. Kopier-Hinweise in Abgabe und Lernerfolgs-Kriterien vorhanden ---
+$abgabeHasKopier = $false
+if ($abgabeMatch.Success) {
+    $abgabeHasKopier = $abgabeMatch.Groups[1].Value -match 'Kopiere diese Checkliste'
+}
+Test-Check `
+    -Name '"Kopiere diese Checkliste"-Hinweis in Abgabe vorhanden' `
+    -Condition $abgabeHasKopier `
+    -Hint 'Abgabe-Abschnitt muss Blockzitat "Kopiere diese Checkliste in deine lernfortschritt_..." enthalten'
+
+$kriterienHasKopier = $false
+if ($kriterienMatch.Success) {
+    $kriterienHasKopier = $kriterienMatch.Groups[1].Value -match 'Kopiere auch diese Checkliste'
+}
+Test-Check `
+    -Name '"Kopiere auch diese Checkliste"-Hinweis in Lernerfolgs-Kriterien vorhanden' `
+    -Condition $kriterienHasKopier `
+    -Hint 'Lernerfolgs-Kriterien-Abschnitt muss Blockzitat "Kopiere auch diese Checkliste..." enthalten'
+
+# --- 11. PR-nicht-gemerged-Tipp vor git checkout -b vorhanden ---
+if ($content -match 'git checkout -b') {
+    Test-Check `
+        -Name '"Tipp – falls dein letzter PR nicht gemerged ist"-Block vorhanden' `
+        -Condition ($content -match 'Tipp.*letzter PR|letzter PR.*nicht gemerged') `
+        -Hint 'Vor dem ersten "git checkout -b" muss ein Blockzitat mit Option A + Option B fuer unvergegten PR stehen'
+}
 # --- Ausgabe ---
 Write-Host ""
 Write-Host "Pruefe: $File" -ForegroundColor Cyan

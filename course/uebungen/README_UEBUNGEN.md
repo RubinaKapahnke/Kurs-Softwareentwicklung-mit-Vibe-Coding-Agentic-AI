@@ -57,4 +57,4 @@ Jede Uebung muss ohne Vorkenntnisse und ohne externe Hilfe bearbeitbar sein. Daz
 
 ### Formatbeispiel
 - Aufgabe: Branch erstellen
-- Quelle: [course/modules/04-git/01-git-grundlagen.md](../course/modules/04-git/01-git-grundlagen.md)
+- Quelle: [course/modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)

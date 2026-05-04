@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD): Progress-Hub
+﻿# Product Requirements Document (PRD): Progress-Hub
 
 **Projekt:** Gruppenprojekt "Progress-Hub"  
 **Status:** Requirement Baseline v1  
@@ -13,9 +13,9 @@ Der **Progress-Hub** ist die zentrale Web-App fuer den Kurs, um Lernfortschritt,
 
 ## 2. Datenquellen im Repo
 
-- Lernfortschrittsdateien: [apps/learners/daria/lernfortschritt_daria.md](../learners/daria/lernfortschritt_daria.md), [apps/learners/dom/lernfortschritt_dom.md](../learners/dom/lernfortschritt_dom.md), [apps/learners/medine/lernfortschritt_medine.md](../learners/medine/lernfortschritt_medine.md), [apps/learners/raphael/lernfortschritt_raphael.md](../learners/raphael/lernfortschritt_raphael.md), [apps/learners/sebastian/lernfortschritt_sebastian.md](../learners/sebastian/lernfortschritt_sebastian.md)
+- Lernfortschrittsdateien: [course/learners/daria/lernfortschritt_daria.md](../../course/learners/daria/lernfortschritt_daria.md), [course/learners/dom/lernfortschritt_dom.md](../../course/learners/dom/lernfortschritt_dom.md), [course/learners/medine/lernfortschritt_medine.md](../../course/learners/medine/lernfortschritt_medine.md), [course/learners/raphael/lernfortschritt_raphael.md](../../course/learners/raphael/lernfortschritt_raphael.md), [course/learners/sebastian/lernfortschritt_sebastian.md](../../course/learners/sebastian/lernfortschritt_sebastian.md)
 - Meilensteine und Lernziele (Must/Should/Nice): [NEXT_STEPS.md](../../NEXT_STEPS.md)
-- Uebungen pro Meilenstein: [docs/uebungen/README_UEBUNGEN.md](../../docs/uebungen/README_UEBUNGEN.md) sowie Dateien unter [docs/uebungen](../../docs/uebungen)
+- Uebungen pro Meilenstein: [course/uebungen/README_UEBUNGEN.md](../../course/uebungen/README_UEBUNGEN.md) sowie Dateien unter [course/uebungen](../../course/uebungen)
 - Git-Zusammenarbeit: GitHub-Daten (Commits, Branches, PRs, Reviews, Kommentare)
 - Eigene Felder durch Kursentwickler (z. B. Notizen, ungeklaerte Rueckfragen)
 
@@ -115,7 +115,7 @@ Akzeptanzkriterien:
 ## 7. TypeScript-Interfaces (Strict Mode)
 
 ```ts
-// Quelle: apps/learners/*/lernfortschritt_*.md
+// Quelle: course/learners/*/lernfortschritt_*.md
 export interface LearnerProgress {
 	learnerId: string;
 	learnerName: string;
@@ -140,14 +140,14 @@ export interface MilestoneStatus {
 	exerciseStatus: ExerciseStatus[];
 }
 
-// Quelle: docs/uebungen/meilenstein-*-uebung-*.md
+// Quelle: course/uebungen/meilenstein-*-uebung-*.md
 export interface ExerciseStatus {
 	exerciseId: string;
 	exerciseTitle: string;
 	status: "not_started" | "in_progress" | "done";
 }
 
-// Quelle: apps/learners/*/lernfortschritt_*.md (Lernjournal)
+// Quelle: course/learners/*/lernfortschritt_*.md (Lernjournal)
 export interface JournalEntry {
 	dateIso: string;
 	did: string;

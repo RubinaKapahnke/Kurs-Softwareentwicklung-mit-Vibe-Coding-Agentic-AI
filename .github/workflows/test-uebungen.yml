@@ -1,0 +1,18 @@
+﻿name: Test Uebungen
+
+on:
+  pull_request:
+    paths:
+      - "course/uebungen/**.md"
+      - "tools/test-uebung.ps1"
+      - "tools/test-alle-uebungen.ps1"
+
+jobs:
+  test-uebungen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Uebungen gegen Standard pruefen
+        shell: pwsh
+        run: .\tools\test-alle-uebungen.ps1

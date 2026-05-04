@@ -1,4 +1,4 @@
----
+﻿---
 applyTo: "apps/dashboard/**"
 ---
 
@@ -31,9 +31,9 @@ Braucht: Maschinenlesbare JSON-Strukturen, stabile Datenpfade, eindeutige IDs f�
 
 ## Datenquellen im Repo
 
-- Lernfortschrittsdaten: `apps/learners/*/lernfortschritt_*.md`
+- Lernfortschrittsdaten: `course/learners/*/lernfortschritt_*.md`
 - Meilensteine und Übungsverknüpfungen: `NEXT_STEPS.md`
-- Übungsdateien: `docs/uebungen/meilenstein-*.md`
+- Übungsdateien: `course/uebungen/meilenstein-*.md`
 - PRD (Anforderungen): `apps/dashboard/prd_dashboard.md`
 
 ## Konventionen

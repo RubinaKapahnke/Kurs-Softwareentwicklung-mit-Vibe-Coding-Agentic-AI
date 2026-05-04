@@ -46,41 +46,7 @@ The learning structure follows this hierarchy:
 
 ### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
 
-Jede Lernfortschritt-Datei hat diese festen Abschnitte (einmalig, nicht pro Übung):
-
-```markdown
-# Lernfortschritt: <Name>
-
-## Aktueller Fokus
-**Was ich gerade lerne:**
-- [ ] ...
-
-## Abgeschlossene Meilensteine
-- [ ] Meilenstein 1: ...
-
-## Lernjournal
-
-### DD.MM. (Uebung XX – Titel)
-**Was habe ich heute gemacht?**
-...
-
-**Abgabe UE-MX-YY:**
-- [x] ...
-
-**Lernerfolgs-Kriterien UE-MX-YY:**
-- [x] ...
-
-## Das möchte ich noch lernen
-- [ ] ...
-
-## Fragen an die Gruppe
-- ...
-```
-
-**Regeln:**
-- `## Das möchte ich noch lernen` und `## Fragen an die Gruppe` erscheinen **einmal** am Dateiende – nicht nach jedem Journaleintrag.
-- Abgabe- und Lernerfolgs-Kriterien-Checklisten werden **direkt unter den passenden Journaleintrag** geschrieben (nicht am Dateiende).
-- Kein separater `## Nächster kleiner Schritt`-Abschnitt – der nächste Schritt steht im letzten Journaleintrag.
+→ Vollständige Struktur, Template und Regeln: [.github/instructions/learners-progress.instructions.md](.github/instructions/learners-progress.instructions.md)
 
 **Key principle:** No redundant explanations. Each element has one clear role. Exercises directly link to module sources—learners click the link, understand the concept, and complete the task.
 
@@ -216,145 +182,10 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 - **MUSS ERST:** Sicherstellen, dass alle benötigten Konzepte in `01-*-grundlagen.md` erklärt sind
 - Falls nicht: Modul vorher ergänzen!
 
-**Schritt 2: Übungsdatei erstellen**
-```
-course/uebungen/meilenstein-XX-uebung-YY.md
-```
+**Schritt 2–5: Template, Verlinkung und Konsistenz-Check**
 
-**Template** (als Rohtext – Einrückung beim Kopieren entfernen):
+→ Vollständiges Template und Schritte 2–5: [.github/instructions/uebungen-standard.instructions.md](.github/instructions/uebungen-standard.instructions.md)
 
-    # Übung Meilenstein XX: [Titel]
-    
-    ## Ziel
-    [1-2 Sätze: Was wird erreicht?]
-    
-    ---
-    
-    ## Vor dem Start – Checkliste
-    
-    - [ ] [Voraussetzung 1, z.B. VS Code ist geöffnet]
-    - [ ] [Voraussetzung 2, z.B. Copilot Chat ist aktiv]
-    - [ ] [Voraussetzung 3, z.B. du bist im richtigen Ordner]
-    
-    In dieser Übung arbeitest du mit diesen Dateien:
-    - `[Datei 1]`
-    - `[Datei 2]`
-    
-    > **Wichtig – diese Datei nicht bearbeiten:** Die Übungsdatei (die du gerade liest) bleibt unverändert als Referenz erhalten. Deine eigene Arbeit trägst du ausschließlich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
-    
-    ---
-    
-    ## Vorbereitung
-    [Optional: Lies zuerst Modul XY]
-    
-    ---
-    
-    ## Aufgaben
-    
-    ### 1. [Aufgabe 1]
-    [Beschreibung]
-    
-    > **Hinweis zu verstecktem Ort** (falls nötig): Der Ordner `.github/` erscheint ganz oben im Explorer. Falls nicht sichtbar: `Strg+P` → Dateinamen eintippen.
-    
-    > **Warum?** (falls Inhalt später ersetzt wird): [Erklärung, warum dieser Schritt trotzdem wichtig ist]
-    
-    Quelle: [course/modules/XX-modul/01-modul-grundlagen.md](../../course/modules/XX-modul/01-modul-grundlagen.md)
-    
-    ### 2. [Aufgabe mit UI-Interaktion]
-    [Beschreibung]
-    
-    1. [Schritt 1]
-    2. [Schritt 2]
-    3. [Schritt 3]
-    
-    > Falls [X] nicht erscheint: [Fallback-Hinweis]
-    
-    Quelle: [course/modules/XX-modul/03-modul-befehlsuebersicht.md](../../course/modules/XX-modul/03-modul-befehlsuebersicht.md)
-    
-    ### 3. [Aufgabe mit Git]
-    [Beschreibung]
-    
-    Prüfe zuerst deinen aktuellen Status:
-    
-        git status   # Zeigt offene Änderungen
-        git branch   # Zeigt den aktuellen Branch
-    
-    Dann:
-    > **Tipp \u2013 falls dein letzter PR noch nicht gemerged ist:**
-    > - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` \u2013 dann `git checkout -b UE-MX-YY-<vorname>`. Dein Lernjournal ist sofort aktuell.
-    > - **Option B:** Starte von `main` (wie unten). Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt \u2013 du musst nichts weiter tun.
-
-        git checkout -b UE-MX-YY-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
-        git add .
-        git commit -m "[message]"
-        git push origin UE-MX-YY-<vorname>
-    
-    > **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Übungen – UE = Übung, MX = Meilenstein (z.B. M3), YY = Übungs-Nummer (z.B. 01).
-    
-    ---
-    
-    ## Modulabdeckung (Check)
-    - ✓ course/modules/XX-modul/01-grundlagen.md: [Konzept erklärt]
-    - ✓ course/modules/XX-modul/03-befehlsuebersicht.md: [Befehle erklärt]
-    - ✗ course/modules/YY-modul: [Falls noch nicht abgedeckt, hier notieren]
-    
-    ---
-    
-    ## Wiederholung aus frueheren Meilensteinen
-    
-    Diese Übung setzt voraus, dass du folgendes bereits kannst:
-    
-    - **[Fähigkeit aus früherem Meilenstein]** ([course/modules/XX-modul/01-grundlagen.md](../../course/modules/XX-modul/01-grundlagen.md))
-    
-    ---
-    
-    ## Abgabe
-    
-    > **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Übungsdatei.
-    
-    Bevor du den PR erstellst, pruefe kurz:
-    - [ ] [Ergebnis 1, z.B. Datei XY existiert im eigenen Ordner]
-    - [ ] [Ergebnis 2, z.B. Lernjournal aktualisiert]
-    - [ ] PR auf GitHub ist erstellt
-    
-    ---
-    
-    ## Lernerfolgs-Kriterien
-    
-    > **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
-    
-    Prüfe nach Abschluss der Übung, ob du diese Punkte mit Ja beantworten kannst:
-    
-    - [ ] Ich habe [beobachtbare Erfahrung 1].
-    - [ ] Ich kann [benennen/erklären/zeigen] [Konzept 2].
-    - [ ] Ich habe [beobachtbare Erfahrung 3].
-
-**Schritt 3: In NEXT_STEPS.md verlinken**
-- Unter "Aktueller Umsetzungsstand" des Meilensteins:
-```markdown
-- [ ] **[Aufgabengruppe]**
-  > **Übung:** [course/uebungen/meilenstein-XX-uebung-YY.md](course/uebungen/meilenstein-XX-uebung-YY.md)
-  > **Quellen zur Übung:** [course/modules/.../00-modulguide.md](...), [course/modules/.../01-grundlagen.md](...)
-```
-
-**Schritt 4: course/uebungen/README_UEBUNGEN.md aktualisieren**
-- Falls neuer Meilenstein: Nennung in "Benennung"-Sektion
-
-**Schritt 5: Konsistenz-Check**
-- Alle Aufgaben haben direkte Modulquellen? ✓
-- Modulabdeckung am Ende dokumentiert? ✓
-- Links funktionieren (Pfade relativ)? ✓
-- "Vor dem Start"-Checkliste vorhanden (max. 3 Punkte + Dateiliste)? ✓
-- Versteckte Ordner (z.B. `.github/`) mit Strg+P-Tipp erklärt? ✓
-- Temporäre Inhalte mit "Warum?"-Hinweis versehen? ✓
-- UI-Interaktionen als nummerierte Schritte + Fallback? ✓
-- Git-Abschnitte mit `git status` + `git branch` vorangestellt? ✓
-- Branch-Name nach Muster `UE-MX-YY-<vorname>` verwendet? ✓
-- `Wichtig – diese Datei nicht bearbeiten`-Hinweis nach Dateiliste vorhanden? ✓
-- Kopier-Hinweise in `Abgabe` und `Lernerfolgs-Kriterien` vorhanden? ✓
-- `Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden? ✓
-- `Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)? ✓
-- `Lernerfolgs-Kriterien`-Abschnitt mit 3–6 Checkboxen vorhanden? ✓
 
 ---
 
@@ -400,67 +231,12 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 
 ---
 
-### 🔍 Konsistenz-Checkliste (VOR dem Commit)
+### 🔍 Konsistenz-Checkliste & Workflow-Beispiel
 
-> **Automatischer Test:** Vor dem Commit alle Übungen gegen den Standard prüfen:
+→ Vollständige Checkliste und Workflow-Beispiel: [.github/instructions/uebungen-standard.instructions.md](.github/instructions/uebungen-standard.instructions.md)
+
+> **Automatischer Test:**
 > ```powershell
 > .\tools\test-alle-uebungen.ps1
+> .\tools\test-links.ps1
 > ```
-> Einzelne Datei: `.\tools\test-uebung.ps1 -File "course/uebungen/meilenstein-XX-uebung-YY.md"`
-> Exit-Code 0 = alles OK, 1 = mindestens ein Fehler.
-
-- [ ] **Alle Quellen existieren?** grep_search nach Links in Übungen
-- [ ] **Alle Modulguides haben die gleiche Struktur?** 00-modulguide.md (mit inline Selbstcheck) + 01-grundlagen.md
-- [ ] **Keine redundanten Lernziele?** Selbstcheck-Checklisten nur im `## Selbstcheck`-Abschnitt des Modulguide, nirgendwo sonst
-- [ ] **Alle Links funktionieren?** (Relative Pfade prüfen)
-- [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
-- [ ] **NEXT_STEPS.md ↔ course/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
-- [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
-- [ ] **CHANGELOG.md aktuell?** Enthält er einen Eintrag für alle strukturellen Änderungen der aktuellen Session?
-- [ ] **CHANGELOG Tagesübersicht gepflegt?** Pro Datum genau ein grober Tagesblock unter `## Tagesübersicht (grob)`
-- [ ] **`.github/agents/*.md` Pfade korrekt?** Keine veralteten Pfade (z.B. `apps/learners/`, `docs/uebungen/`, `modules/`)
-- [ ] **Keine Tippfehler/Markdown-Fehler?** (`get_errors` auf alle neuen Dateien)
-- [ ] **"Vor dem Start"-Checkliste vorhanden?** (Max. 3 Punkte + Dateiliste)
-- [ ] **Versteckte Ordner erklärt?** (z.B. `.github/` mit Strg+P-Tipp)
-- [ ] **Temporäre Abschnitte mit "Warum?"-Hinweis versehen?**
-- [ ] **UI-Interaktionen als nummerierte Schritte + Fallback?**
-- [ ] **Git-Abschnitte mit `git status` + `git branch` vorangestellt?**
-- [ ] **`Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden?**
-- [ ] **`Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)?**
-- [ ] **`Lernerfolgs-Kriterien`-Abschnitt mit 3–6 Checkboxen vorhanden?**
-- [ ] **`Tipp – falls dein letzter PR noch nicht gemerged ist`-Blockzitat vor dem ersten `git checkout -b` vorhanden?** (Option A + Option B mit korrekter Aussage zum Merge)
-
----
-
-### 📝 Beispiel: Kompletter Workflow für neues Modul
-
-**1. Neues Modul "Test" erstellen:**
-   - `course/modules/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
-   - `course/modules/08-test/01-test-grundlagen.md`
-
-**2. In NEXT_STEPS.md neuen Meilenstein hinzufügen:**
-   - "Meilenstein 4: Testing"
-   - Modul-Einstiege + Vertiefung + Lernziele
-
-**3. Neue Übung erstellen:**
-   - `course/uebungen/meilenstein-04-uebung-01.md`
-   - Mit Quellenlinks zu Test-Modul
-
-**4. Konsistenz-Check:**
-   - `get_errors` auf alle Dateien
-   - Links testen (manuell klicken oder grep_search)
-   - Modulabdeckung prüfen
-
-**5. Dokumentation aktualisieren:**
-   - README.md (falls neue Struktur)
-   - AGENTS.md (falls neue Konvention)
-
-**6. Commit + PR mit aussagekräftiger Message:**
-   ```
-   feat: Modul 08-test hinzugefügt (Meilenstein 4)
-   
-   - 00-test-modulguide.md: Navigation + inline Selbstcheck
-   - 01-test-grundlagen.md: Konzepte
-   - meilenstein-04-uebung-01.md: Erste Übung
-   - Alle Links konsistent + Modulabdeckung dokumentiert
-   ```

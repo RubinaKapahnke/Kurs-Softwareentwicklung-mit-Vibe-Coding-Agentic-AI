@@ -140,16 +140,24 @@ course/modules/04-git/
 │   │   ├── course-dev-dashboard-po.agent.md
 │   │   ├── course-dev-exercise-creator.agent.md
 │   │   ├── course-dev-repo-consistency-checker.agent.md
-│   │   └── course-dev-vibe-coding-readiness.agent.md
+│   │   ├── course-dev-vibe-coding-readiness.agent.md
+│   │   └── learners-help.agent.md
 │   ├── instructions/
-│   │   └── dashboard.instructions.md
-│   └── prompts/
-│       ├── learners-dashboard-feedback.prompt.md
-│       └── learners-prd-assistent.prompt.md
+│   │   ├── dashboard.instructions.md
+│   │   ├── learners-progress.instructions.md
+│   │   └── uebungen-standard.instructions.md
+│   ├── prompts/
+│   │   ├── learners-dashboard-feedback.prompt.md
+│   │   ├── learners-lernjournal-eintrag.prompt.md
+│   │   └── learners-prd-assistent.prompt.md
+│   └── workflows/
+│       └── test-uebungen.yml
 ├── tools/
 │   ├── README_TOOLS.md
-│   ├── test-uebung.ps1
-│   └── test-alle-uebungen.ps1
+│   ├── test-alle-uebungen.ps1
+│   ├── test-lernfortschritt.ps1
+│   ├── test-links.ps1
+│   └── test-uebung.ps1
 ├── AGENTS.md
 ├── NEXT_STEPS.md
 └── README.md

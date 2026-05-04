@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
@@ -11,6 +11,8 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - Dashboard deutlich ausgebaut (Option A/B, Snapshot-Infos, Blockaden, Git- und Lernstands-Sichten).
 - Lernmaterial konsolidiert (Übungen bereinigt, Lernfortschritt-Dateien vereinheitlicht, neue Prüfregeln im Testskript).
 - KI-Setup erweitert (neuer Readiness-Agent, Consistency-Checks inkl. CHANGELOG/Agents, Konventions-Updates).
+- AI-Readiness-Vollausbau: QA-Skripte (test-lernfortschritt, test-links), neue Agents/Prompts, AGENTS.md auf 174 Zeilen reduziert, GitHub Action für PR-Checks.
+- Konsistenz-Check nach Session 5: Pfadfehler in Agent-Dateien und PRD behoben, alle 255 Links grün.
 
 ### 29.04.2026
 - Agenten-, Prompt- und Instruction-Basis eingeführt.
@@ -28,7 +30,48 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - Gibt AI-Readiness-Score pro Bereich (🟢/🟡/🔴) + priorisierte Automatisierungsideen aus
 - README.md Projektbaum synchronisiert
 
-### Repo-Struktur – Konsolidierung in `course/`
+---
+
+## 04.05.2026 (Session 5)
+
+### AI-Readiness-Vollausbau
+
+**Neue Skripte:**
+- `tools/test-lernfortschritt.ps1`: Prüft Pflichtstruktur aller `lernfortschritt_*.md`
+- `tools/test-links.ps1`: Validiert alle relativen Markdown-Links repo-weit
+- `.github/workflows/test-uebungen.yml`: GitHub Action – Übungstest bei PRs automatisch
+
+**Neue Agents & Prompts:**
+- `.github/agents/learners-help.agent.md`: Lernenden-Hilfe-Agent (Trigger: "stecke fest", "Hilfe bei Übung")
+- `.github/prompts/learners-lernjournal-eintrag.prompt.md`: Geführter Journaleintrag-Dialog
+
+**Neue Instructions-Dateien:**
+- `.github/instructions/uebungen-standard.instructions.md`: Übungs-Template + Konsistenz-Checkliste (`applyTo: course/uebungen/**`)
+- `.github/instructions/learners-progress.instructions.md`: Lernfortschritt-Struktur + Regeln (`applyTo: course/learners/**`)
+
+**AGENTS.md:** 376 → 174 Zeilen (Template, Lernfortschritt-Block und Konsistenz-Checkliste in Instructions ausgelagert)
+
+**Fixes:**
+- Toten Link in `course/uebungen/README_UEBUNGEN.md` behoben (`../course/modules/` → `../modules/`)
+- `lernfortschritt_raphael.md`: fehlenden Abschnitt `## Das möchte ich noch lernen` ergänzt
+- `dashboard.instructions.md`: veraltete Pfade `apps/learners/` + `docs/uebungen/` auf `course/learners/` + `course/uebungen/` korrigiert
+- Personas-Redundanz in Dashboard-Agent-Dateien entfernt (kanonisch in `dashboard.instructions.md`)
+- Links in Agent-Dateien auf korrekte relative Pfade korrigiert
+- `test-links.ps1`: `$matches`-Konflikt behoben, Platzhalter-Links werden übersprungen
+
+---
+
+## 04.05.2026 (Session 6)
+
+### Konsistenz-Check – Pfadkorrekturen nach Session 5
+
+**`apps/dashboard/prd_dashboard.md`:**
+- Linktexte auf neue Pfade aktualisiert: `apps/learners/` → `course/learners/`, `docs/uebungen/` → `course/uebungen/`
+- TypeScript-Interface-Kommentare korrigiert (`apps/learners/` → `course/learners/`, `docs/uebungen/` → `course/uebungen/`)
+
+**Ergebnis:** Alle 255 relativen Links grün (`tools/test-links.ps1`), 8 Übungen OK, 5 Lernfortschritt-Dateien OK
+
+
 
 - `apps/learners/` → `course/learners/` verschoben
 - `modules/` → `course/modules/` verschoben
