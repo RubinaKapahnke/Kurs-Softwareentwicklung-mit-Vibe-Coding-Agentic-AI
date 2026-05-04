@@ -1,0 +1,388 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left-actions,
+.view-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.snapshot-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: #555;
+  background: #f0f4f8;
+  border-radius: 4px;
+  padding: 4px 8px;
+
+  .snapshot-icon {
+    font-size: 1rem;
+    height: 1rem;
+    width: 1rem;
+    color: #0b5cab;
+  }
+
+  .snapshot-time {
+    color: #888;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.link-button {
+  border: 0;
+  background: transparent;
+  color: #0b5cab;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+// === Option A: Tabelle ===
+
+.learner-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.blocked-icon {
+  font-size: 1rem;
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+}
+
+.delta-highlight {
+  background-color: #fff3cd;
+}
+
+.row-blocked td {
+  border-left: 3px solid #e53935;
+}
+
+.milestone-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.msn-label {
+  font-size: 0.75rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.exercise-chips {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.exercise-chip {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: default;
+
+  &.chip-done {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+  }
+
+  &.chip-in-progress {
+    background-color: #fff9c4;
+    color: #f57f17;
+  }
+
+  &.chip-not-started {
+    background-color: #eeeeee;
+    color: #757575;
+  }
+}
+
+.wishes-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 200px;
+}
+
+.wish-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wish-count {
+  font-weight: 700;
+  color: #0b5cab;
+  font-size: 0.75rem;
+  background: #e3f2fd;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+.wish-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delta-value {
+  font-size: 0.7rem;
+  color: #2e7d32;
+  display: block;
+  margin-top: 2px;
+}
+
+.muted {
+  color: #999;
+  font-style: italic;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+// === Option B: Detailansicht ===
+
+.detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-title {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.25rem;
+}
+
+.detail-header-card {
+  background: #f5f9ff;
+}
+
+.detail-label {
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.focus-list {
+  margin: 0 0 0.5rem 1.25rem;
+  padding: 0;
+
+  li {
+    font-size: 0.875rem;
+  }
+}
+
+.next-step {
+  font-size: 0.875rem;
+  color: #0b5cab;
+  margin: 0;
+}
+
+.milestone-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.milestone-tile {
+  .tile-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .msn-counters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .msn-badge {
+    font-size: 0.72rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+
+    &.must {
+      background: #ffcdd2;
+      color: #b71c1c;
+    }
+
+    &.should {
+      background: #fff9c4;
+      color: #f57f17;
+    }
+
+    &.nice {
+      background: #c8e6c9;
+      color: #2e7d32;
+    }
+  }
+
+  .exercise-chips-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .exercise-chip-label {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
+}
+
+.journal-card {
+  .journal-date {
+    font-size: 0.9rem;
+  }
+
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+  }
+}
+
+.blocked-entry {
+  background: #fff3e0;
+  border-left: 3px solid #e53935;
+  padding-left: 0.5rem;
+  border-radius: 2px;
+
+  .inline-icon {
+    font-size: 1rem;
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+    color: #e53935;
+    margin-right: 0.25rem;
+  }
+}
+
+.questions-card,
+.git-card,
+.wishes-detail-card {
+  background: #fafafa;
+
+  ul {
+    margin: 0;
+    padding-left: 1.5rem;
+
+    li {
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+.git-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.git-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+
+  mat-icon {
+    font-size: 1.1rem;
+    height: 1.1rem;
+    width: 1.1rem;
+    color: #555;
+  }
+
+  code {
+    background: #eeeeee;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+}
+
+.pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.pr-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.pr-state {
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &.pr-open {
+    background: #c8e6c9;
+    color: #2e7d32;
+  }
+
+  &.pr-closed {
+    background: #ffcdd2;
+    color: #b71c1c;
+  }
+
+  &.pr-merged {
+    background: #e1bee7;
+    color: #6a1b9a;
+  }
+}
+
+.pr-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wishes-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.wish-tag-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #e3f2fd;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}

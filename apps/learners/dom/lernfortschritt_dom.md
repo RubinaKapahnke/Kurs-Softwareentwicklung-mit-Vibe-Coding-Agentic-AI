@@ -12,7 +12,7 @@
 
 ## Lernjournal
 
-### 29.04.
+### 2026-04-29
 - **Was ich gemacht habe:** 
 - **Was gut lief:** 
 - **Wo ich hänge:** 
@@ -22,4 +22,7 @@
 - [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
 
 ## Fragen an die Gruppe
+-
+
+## Individuelle Lernwuensche
 -

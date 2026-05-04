@@ -73,7 +73,27 @@ modules/04-git/
 ├── apps/
 │   ├── README_APPS.md
 │   ├── dashboard/
-│   │   └── prd_dashboard.md
+│   │   ├── prd_dashboard.md
+│   │   ├── data/
+│   │   │   ├── course-roadmap.data.ts
+│   │   │   ├── index.ts
+│   │   │   └── mock/
+│   │   │       ├── ai-learner-scenarios.mock.ts
+│   │   │       ├── github-activity.mock.ts
+│   │   │       └── learner-markdown.mock.ts
+│   │   ├── features/
+│   │   │   └── overview-option-a/
+│   │   │       ├── overview-option-a.component.html
+│   │   │       ├── overview-option-a.component.scss
+│   │   │       └── overview-option-a.component.ts
+│   │   ├── models/
+│   │   │   ├── dashboard.models.ts
+│   │   │   └── index.ts
+│   │   └── services/
+│   │       ├── delta.service.ts
+│   │       ├── index.ts
+│   │       ├── learner-progress-parser.service.ts
+│   │       └── snapshot.service.ts
 │   └── learners/
 │       ├── daria/
 │       │   ├── prd_daria.md
