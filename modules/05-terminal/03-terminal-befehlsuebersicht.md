@@ -15,6 +15,11 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 
 ## Dateien und Ordner verwalten
 
+
+<!-- [echo. > test.md] ist falsch, es muesste [echo . > test.md`] lauten
+allerdings ist der Befehl unsicher. [ni test.md] ist sicherrer-->
+
+
 | Befehl | Wofuer? | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- |
 | `mkdir <Name>` | Erstellt einen neuen Ordner (Make Directory). | `mkdir lernstand_max` | Der Ordner wird sofort angelegt. |
@@ -30,6 +35,10 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | :--- | :--- | :--- | :--- |
 | `code .` | Oeffnet den aktuellen Ordner in VS Code. | `code .` | Der Punkt `.` bedeutet "diesen Ordner". |
 | `code <Datei>` | Oeffnet eine spezifische Datei in VS Code. | `code README.md` | Dateien muessen im aktuellen Ordner sein. |
+<!-- [code "C:\test" -n] oeffnet VS-Code im Projekt und neuen Fenster
+--> 
+
+
 
 ## Praktische Tipps
 

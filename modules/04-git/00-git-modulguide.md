@@ -19,21 +19,21 @@ Nutze die Checklisten nicht als starre Reihenfolge, sondern als Selbstcheck fuer
 
 ### Must have
 
-- [ ] Ich kann erklaeren, was Git von GitHub unterscheidet.
-- [ ] Ich verstehe Arbeitsordner, Staging Area und Repository.
-- [ ] Ich kann mit `git status` meinen aktuellen Stand lesen.
-- [ ] Ich kann Aenderungen mit `git add` und `git commit -m "..."` sauber speichern.
-- [ ] Ich kann ein bestehendes Repository mit `git clone` herunterladen.
-- [ ] Ich kann einen eigenen Branch erstellen und darin arbeiten.
-- [ ] Ich kann meine Aenderungen mit `git push` auf GitHub hochladen.
+- [x] Ich kann erklaeren, was Git von GitHub unterscheidet.
+- [x] Ich verstehe Arbeitsordner, Staging Area und Repository.
+- [x] Ich kann mit `git status` meinen aktuellen Stand lesen.
+- [x] Ich kann Aenderungen mit `git add` und `git commit -m "..."` sauber speichern.
+- [x] Ich kann ein bestehendes Repository mit `git clone` herunterladen.
+- [x] Ich kann einen eigenen Branch erstellen und darin arbeiten.
+- [x] Ich kann meine Aenderungen mit `git push` auf GitHub hochladen.
 
 ### Should have
 
-- [ ] Ich kann mit `git pull origin main` vor einer Aufgabe meinen Stand aktualisieren.
-- [ ] Ich kann Branches wechseln, ohne meinen Arbeitsstand zu verlieren.
+- [x] Ich kann mit `git pull origin main` vor einer Aufgabe meinen Stand aktualisieren.
+- [x] Ich kann Branches wechseln, ohne meinen Arbeitsstand zu verlieren.
 - [ ] Ich kann `git log --oneline` nutzen, um die letzten Commits schneller zu verstehen.
 - [ ] Ich weiss, wofuer eine `.gitignore` da ist.
-- [ ] Ich kann nach getaner Arbeit einen lokalen Branch wieder loeschen.
+- [x] Ich kann nach getaner Arbeit einen lokalen Branch wieder loeschen.
 - [ ] Ich verstehe, was bei einem Merge-Konflikt grundsaetzlich passiert.
 
 ### Nice to have

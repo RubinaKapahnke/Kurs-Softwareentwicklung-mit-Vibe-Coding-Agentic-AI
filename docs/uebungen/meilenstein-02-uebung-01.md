@@ -121,6 +121,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 
 ---
 
+<!-- hier fehlen die [ ] zum ankreutzen-->
 ## Modulabdeckung (Check)
 - ? modules/04-git/01-git-grundlagen.md: Branch erstellen, pull, add/commit/push
 - ? modules/04-git/03-git-befehlsuebersicht.md: Git-Befehle als Referenz

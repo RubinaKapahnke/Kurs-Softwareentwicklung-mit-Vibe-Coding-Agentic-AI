@@ -100,6 +100,7 @@ git checkout main
 git pull origin main
 git checkout -b terminal-uebung-<vorname>
 ```
+<!-- wechsel von [checkout -b] zu [switch -c ] -->
 
 Erstelle nun eine Notizdatei in deinem persoenlichen Ordner:
 
@@ -200,7 +201,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 - ✓ modules/05-terminal/01-terminal-grundlagen.md: Was ist ein Terminal, Grundkonzepte
 - ✓ modules/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
 - ✓ modules/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
+- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin` <!-- wechsel von [checkout -b] zu [switch -c ] -->
 - ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
 - ✓ modules/04-git/00-git-modulguide.md + modules/05-terminal/00-terminal-modulguide.md + modules/03-github/00-github-modulguide.md: Modul-Navigation ueben
 
@@ -219,18 +220,18 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 ## Abgabe
 
 Bevor du den PR erstellst, pruefe kurz:
-- [ ] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
-- [ ] `lernfortschritt_<name>.md` ist aktualisiert
+- [x] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
+- [x] `lernfortschritt_<name>.md` ist aktualisiert
 - [ ] PR auf GitHub ist erstellt
-
+<!-- vor der PR erstellung pürfen ob es ein PR gibt?  -->
 ---
 
 ## Lernerfolgs-Kriterien
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
-- [ ] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
+- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
 - [ ] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle saßen aus dem Gedaechtnis.
-- [ ] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
+- [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
 - [ ] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
-- [ ] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
+- [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
