@@ -17,6 +17,16 @@
 - **Was gut lief:** die Übung war gut verständlich
 - **Wo ich hänge:** teilweise fehlte mir die Orientierung
 - **Nächster Schritt:** 
+```markdown
+**Was habe ich heute gemacht?**
+Ornder und Branch anlegen. Wissen vertieft
+
+**Was war schwierig oder unklar?**
+Ich hatte keine Schwierigkeiten, da Raphael super durchgeführt hat
+
+**Was ist mein naechster kleiner Schritt?**
+Uebung 2 selbstständig lösen
+```
 
 ## Nächster kleiner Schritt
 - [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
