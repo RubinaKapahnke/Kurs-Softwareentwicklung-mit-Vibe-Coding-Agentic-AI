@@ -13,7 +13,6 @@ Du wiederholst den vollstaendigen Branch-Commit-PR-Ablauf zweimal hintereinander
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird strukturiert erweitert)
-- `apps/learners/<dein-name>/lernstand_<vorname>/meilensteine_<vorname>.md` (vorhanden – wird aktualisiert)
 
 ---
 
@@ -45,13 +44,17 @@ git pull origin main
 git checkout -b rueckblick-<vorname>
 ```
 
-Oeffne `apps/learners/<dein-name>/lernstand_<vorname>/meilensteine_<vorname>.md` in VS Code und ergaenze ganz unten eine neue Zeile:
+Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und ergaenze im Abschnitt `## Lernjournal` einen neuen Eintrag:
 
-```
-## Meilenstein 2 – Uebung 03 gestartet: [heutiges Datum]
+```markdown
+### [heutiges Datum] – Uebung 03 gestartet
+- **Was ich gemacht habe:** Uebung 03 begonnen, Branch erstellt
+- **Was gut lief:**
+- **Wo ich haenge:**
+- **Naechster Schritt:**
 ```
 
-> **Warum das Datum eintragen?** Du baust damit eine echte Dokumentation deines Lernwegs auf – spaeter kannst du zurueckschauen, wann du welche Meilensteine angegangen hast. Diese kleine Gewohnheit macht deinen Fortschritt sichtbar.
+> **Warum ins Lernjournal eintragen?** Das Lernjournal in `lernfortschritt_<vorname>.md` ist deine zentrale Anlaufstelle fuer deinen gesamten Lernstand – alles an einem Ort, keine Doppelstruktur.
 
 Pruefe dann vor dem Commit:
 
@@ -159,12 +162,16 @@ Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundl
 
 ---
 
-### 5. Abschluss: Uebung 03 im Meilenstein-Stand eintragen
+### 5. Abschluss: Lernjournal mit Abschluss-Eintrag ergaenzen
 
-Oeffne `apps/learners/<dein-name>/lernstand_<vorname>/meilensteine_<vorname>.md` noch einmal und ergaenze unter dem Eintrag aus Aufgabe 1 eine neue Zeile:
+Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` noch einmal und ergaenze deinen Eintrag aus Aufgabe 1 oder fuege einen neuen Abschluss-Eintrag hinzu:
 
-```
-## Meilenstein 2 – Uebung 03 abgeschlossen: [heutiges Datum]
+```markdown
+### [heutiges Datum] – Uebung 03 abgeschlossen
+- **Was ich gemacht habe:** Vollstaendigen Branch-Commit-PR-Ablauf zweimal durchgefuehrt
+- **Was gut lief:**
+- **Wo ich haenge:**
+- **Naechster Schritt:**
 ```
 
 Committe diese letzte Aenderung direkt im laufenden Branch `lernjournal-<vorname>`:
@@ -172,7 +179,7 @@ Committe diese letzte Aenderung direkt im laufenden Branch `lernjournal-<vorname
 ```bash
 git status
 git add .
-git commit -m "docs: meilenstein-2 uebung-03 abgeschlossen"
+git commit -m "docs: lernjournal uebung-03 abgeschlossen"
 git push origin lernjournal-<vorname>
 ```
 
@@ -204,8 +211,7 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Zwei PRs auf GitHub sind erstellt (Aufgabe 1 und Aufgabe 4)
-- [ ] Lernjournal enthaelt einen Eintrag mit dem festen Muster (3 Fragen + Meilenstein-Fortschritt)
-- [ ] `meilensteine_<vorname>.md` enthaelt Eintraege fuer Start und Abschluss dieser Uebung
+- [ ] Lernjournal in `lernfortschritt_<vorname>.md` enthaelt zwei neue Eintraege (Start und Abschluss)
 
 ---
 

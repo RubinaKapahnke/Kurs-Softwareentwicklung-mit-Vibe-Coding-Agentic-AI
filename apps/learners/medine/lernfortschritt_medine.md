@@ -22,5 +22,17 @@ Die Branchen Struktur in Graph (Darstellung) ist mir noch schwierig zu verstehen
 ## Nächster kleiner Schritt
 - **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
 
+### 02.05. (Uebung 01 – Terminal und Datei-Anlage)
+- **Was ich gemacht habe:** Ordner und Dateien im Terminal angelegt, verschiedene Dateierstellungs-Methoden ausprobiert, mit Dom dabei erste Strukturen verstanden
+- **Was gut lief:** Mit Unterstützung erste Struktur verstanden
+- **Wo ich hänge:** Struktur von Ordnern und Erwartungen bis zum Endziel, sowie Branch-Struktur/Graph noch schwierig zu verstehen
+- **Nächster Schritt:** Übung 2 - Sichere Alltagsaktionen im Terminal + Git-Grundbefehle aus dem Gedächtnis anwenden
+
+**Hinweis zu Terminal-Befehlen:**
+- `echo. > datei.md` funktioniert, aber `New-Item datei.md` ist die PowerShell-native Variante und funktioniert zuverlässiger
+
+## Nächster kleiner Schritt
+- [ ] Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden
+
 ## Fragen an die Gruppe
-- ich sollte im Terminal "New Item" statt "> Echo. > " nutzen. Das hat besser funktionniert. 
+- Könnt ihr mir die Branch-Struktur und die Graph-Darstellung erklären? Das ist mir noch unklar. 

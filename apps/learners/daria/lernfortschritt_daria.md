@@ -28,6 +28,19 @@ Ich hatte keine Schwierigkeiten, da Raphael super durchgeführt hat
 Uebung 2 selbstständig lösen
 ```
 
+### 02.05. (Uebung 02 – Modul-Navigation)
+- **Was ich gemacht habe:** Modul-Navigation geübt und für drei Situationen die passenden Quellen gefunden
+- **Was gut lief:** Ich konnte die richtigen Module und Dateien identifizieren
+- **Wo ich hänge:** 
+- **Nächster Schritt:** Uebung 2 selbstständig lösen
+
+**Modul-Zuordnungen (aus Uebung 02, Aufgabe 4):**
+| Situation | Modul | Datei konkret |
+|---|---|---|
+| Ich weiss nicht mehr, wie ich eine Datei im Terminal anlege | 05-terminal | 03-terminal-befehlsuebersicht.md |
+| Ich vergesse, wie ich einen PR auf GitHub erstelle | 03-github | 01-github-grundlagen.md |
+| Ich verstehe nicht, warum man Branches braucht | 04-git | 01-git-grundlagen.md |
+
 ## Nächster kleiner Schritt
 - [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
 

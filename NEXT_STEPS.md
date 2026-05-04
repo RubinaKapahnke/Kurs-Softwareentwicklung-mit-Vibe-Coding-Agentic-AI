@@ -113,9 +113,6 @@ Wenn du neu einsteigst:
 
   - [ ] `git pull origin main` ausfuehren
   - [ ] Einen neuen Branch erstellen (`git checkout -b <branch-name>`)
-  - [ ] Unterordner `lernstand_vorname` anlegen
-  - [ ] Datei `meilensteine_<vorname>.md` anlegen
-  - [ ] Bisherige und kommende Aufgaben in der Datei pflegen
   - [ ] Eigene Lernfortschrittsdatei aktualisieren
   - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Schritt
 

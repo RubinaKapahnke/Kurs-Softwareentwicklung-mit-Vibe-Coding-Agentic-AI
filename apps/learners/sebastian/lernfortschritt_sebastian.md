@@ -53,27 +53,39 @@
 
 
 ## Nächster kleiner Schritt
+- [ ] Meilenstein 3: AI-Instructions
 
 ## Fragen an die Gruppe
+-
 
+---
 
-<br>
-<hr style="height:5px; border:none; color:orange; background-color:orange;">
-
-### 29.04.
+### 02.05. (Uebung 02 – Terminal-Alltag und Git vertieft)
 - **Was ich gemacht habe:**  
-  - Uebungen zum Meilenstein2 Uebungen 2 fertig
-  - eigene Guide estellt um mich in die Befehle vom Terminal und Git einzufinden
+  - Übungen zum Meilenstein 2 Übung 2 abgeschlossen
+  - Umfangreiche Guides selbst erstellt um die Befehle besser zu verstehen:
+    - `cmd_guide.md`: Detaillierte Tabellen zu PowerShell-Befehlen (Dateierstellung, Navigation, Umbenennen, Löschen)
+    - `git_guide.md`: Git-Befehle nach Kategorie (Branches, Staging, Commits, Datei-Wiederherstellung)
+  - Selbsttests durchgeführt um Zusammenhänge zu verstehen
 - **Was gut lief:**  
-  - habe die Abkuerzngen versanden wann man -a, -b oder -c schreibt 
+  - Vorkenntnisse aus PowerShell und VisualBasic Studio konnte ich anwenden
+  - Abkürzungen `-a`, `-b`, `-c` etc. in Git-Befehlen verstanden
+  - Branches, add, commit, push Ablauf funktioniert jetzt
+
 - **Wo ich hänge:**  
-  - noch zuwenig Ubung um die behfehle aus dem Kopf zu koennen
+  - Noch zu wenig Übung um alle Befehle aus dem Kopf zu können
+  - Git-Befehlsreihenfolge muss ich öfter trainieren
+
 - **Nächster Schritt:**  
-  - mich interessieren die AI-Instructions
+  - Meilenstein 3: AI-Instructions erkunden
+  - Weiter Terminal- und Git-Befehle trainieren
+
+**Persönliche Ressourcen erstellt:**
+- `cmd_guide.md` – Nachschlagewerk für Terminal-Befehle (Dateioperationen, Navigation, Wildcards)
+- `git_guide.md` – Nachschlagewerk für Git-Befehle (Branches, Staging, Commits, Workflows)
 
 ## Nächster kleiner Schritt
-<!-- was genau soll ich hier machen?-->
-- [ ] Ein Aufgabenpunkt aus aktuellem Meilenstein
+- [ ] Meilenstein 3: AI-Instructions
 
 ## Fragen an die Gruppe
 - 

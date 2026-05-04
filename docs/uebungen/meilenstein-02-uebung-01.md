@@ -13,7 +13,6 @@ Du fuehrst alle Schritte aus, um deinen persoenlichen Lernstand ueber das Termin
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden, wird aktualisiert)
-- `apps/learners/<dein-name>/lernstand_<vorname>/meilensteine_<vorname>.md` (neu, wird erstellt)
 
 ---
 
@@ -49,31 +48,7 @@ git checkout -b lernstand-<vorname>
 ```
 Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md)
 
-### 3. Unterordner anlegen
-Navigiere in deinen persoenlichen Ordner (`apps/learners/<name>/`) und erstelle dort einen Unterordner `lernstand_<vorname>`.
-```bash
-mkdir lernstand_<vorname>
-```
-Quelle: [modules/05-terminal/01-terminal-grundlagen.md](../../modules/05-terminal/01-terminal-grundlagen.md)
-
-### 4. Meilenstein-Datei anlegen
-Wechsle in den neuen Unterordner und erstelle eine Markdown-Datei fuer deine Meilensteine.
-```bash
-cd lernstand_<vorname>
-echo. > meilensteine_<vorname>.md
-<!-- echo > meilensteine_medine.md  hat nicht funktionniert. wegen Nachricht : " Cmdlet Write-Output an der Befehlspipelineposition 1
-Geben Sie Werte für die folgenden Parameter an:
-InputObject[0]: " 
-Sondern : New-Item meilensteine_medine.md  hat geklappt --> 
-echo > meilensteine_<vorname>.md
-```
-Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../../modules/05-terminal/03-terminal-befehlsuebersicht.md)
-
-### 5. Meilensteine eintragen
-Oeffne die neue Datei in VS Code und trage deine bisherigen und geplanten Meilensteine ein. Orientiere dich an den Meilensteinen aus `NEXT_STEPS.md`.
-Quelle: [modules/01-markdown/01-markdown-grundlagen.md](../../modules/01-markdown/01-markdown-grundlagen.md)
-
-### 6. Lernfortschrittsdatei aktualisieren
+### 3. Lernfortschrittsdatei aktualisieren
 Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md` und fuege einen Journaleintrag ein. Nutze dieses Muster:
 
 ```markdown
@@ -91,7 +66,7 @@ Oeffne deine persoenliche Datei `apps/learners/<name>/lernfortschritt_<name>.md`
 
 Quelle: [modules/01-markdown/02-formatierung_md-files.md](../../modules/01-markdown/02-formatierung_md-files.md)
 
-### 7. Aenderungen committen und pushen
+### 4. Aenderungen committen und pushen
 
 Pruefe zuerst, was du veraendert hast:
 ```bash
@@ -107,7 +82,7 @@ git push origin lernstand-<vorname>
 ```
 Quelle: [modules/04-git/01-git-grundlagen.md](../../modules/04-git/01-git-grundlagen.md)
 
-### 8. Pull Request erstellen
+### 5. Pull Request erstellen
 
 1. Oeffne dein Repository auf github.com
 2. Klicke auf "Compare & pull request" (gelber Banner nach dem Push)
@@ -125,9 +100,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 ## Modulabdeckung (Check)
 - ? modules/04-git/01-git-grundlagen.md: Branch erstellen, pull, add/commit/push
 - ? modules/04-git/03-git-befehlsuebersicht.md: Git-Befehle als Referenz
-- ? modules/05-terminal/01-terminal-grundlagen.md: Ordner und Dateien im Terminal anlegen
-- ? modules/05-terminal/03-terminal-befehlsuebersicht.md: `cd`, `mkdir`, `echo`
-- ? modules/01-markdown/01-markdown-grundlagen.md: Meilensteine in Markdown dokumentieren
+- ? modules/05-terminal/01-terminal-grundlagen.md: Terminal-Grundlagen
 - ? modules/01-markdown/02-formatierung_md-files.md: Lernjournal formatieren
 - ? modules/03-github/01-github-grundlagen.md: Pull Request erstellen
 
@@ -145,7 +118,6 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 ## Abgabe
 
 Bevor du den PR erstellst, pruefe kurz:
-- [ ] Unterordner `lernstand_<vorname>/` mit `meilensteine_<vorname>.md` existiert in deinem persoenlichen Ordner
 - [ ] Lernjournal-Eintrag in `lernfortschritt_<name>.md` ist aktualisiert
 - [ ] PR auf GitHub ist erstellt
 
@@ -157,6 +129,5 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
 - [ ] Ich habe mein Repo erfolgreich aktualisiert und dabei gesehen, welche Dateien neu waren.
 - [ ] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
-- [ ] Ich habe Ordner und eine Datei ueber das Terminal angelegt � ohne die Maus zu benutzen.
 - [ ] Mein Lernjournal enthaelt einen echten Eintrag von mir.
 - [ ] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
