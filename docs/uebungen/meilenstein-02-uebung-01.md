@@ -60,6 +60,11 @@ Quelle: [modules/05-terminal/01-terminal-grundlagen.md](../../modules/05-termina
 Wechsle in den neuen Unterordner und erstelle eine Markdown-Datei fuer deine Meilensteine.
 ```bash
 cd lernstand_<vorname>
+echo. > meilensteine_<vorname>.md
+<!-- echo > meilensteine_medine.md  hat nicht funktionniert. wegen Nachricht : " Cmdlet Write-Output an der Befehlspipelineposition 1
+Geben Sie Werte für die folgenden Parameter an:
+InputObject[0]: " 
+Sondern : New-Item meilensteine_medine.md  hat geklappt --> 
 echo > meilensteine_<vorname>.md
 ```
 Quelle: [modules/05-terminal/03-terminal-befehlsuebersicht.md](../../modules/05-terminal/03-terminal-befehlsuebersicht.md)
