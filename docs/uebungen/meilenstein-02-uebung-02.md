@@ -220,8 +220,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 ## Abgabe
 
 Bevor du den PR erstellst, pruefe kurz:
-- [x] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
-- [x] `lernfortschritt_<name>.md` ist aktualisiert
+- [ ] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
+- [ ] `lernfortschritt_<name>.md` ist aktualisiert
 - [ ] PR auf GitHub ist erstellt
 <!-- vor der PR erstellung pürfen ob es ein PR gibt?  -->
 ---
@@ -230,8 +230,8 @@ Bevor du den PR erstellst, pruefe kurz:
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 
-- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
-- [ ] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle saßen aus dem Gedaechtnis.
-- [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
+- [ ] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
+- [ ] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle sassen aus dem Gedaechtnis.
+- [ ] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
 - [ ] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
-- [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
+- [ ] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.

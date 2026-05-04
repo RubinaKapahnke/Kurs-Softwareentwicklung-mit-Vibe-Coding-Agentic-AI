@@ -50,6 +50,32 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 **Lernerfolgs-Kriterien**
 
 ---
+### 02.05. (Uebung 02 – Terminal-Befehle und Modul-Navigation)
+**Was habe ich heute gemacht?**
+- Terminal-Befehle wiederholt (`move`, `rmdir`) 
+- Modul-Zuordnungen für typische Situationen recherchiert
+- Markdown-Kommentare gelernt und dokumentiert
+
+**Was war schwierig oder unklar?**
+- Alles lief flüssig
+
+**Was ist mein naechster kleiner Schritt?**
+- Nächste Übung 3
+
+**Neue Learnings:**
+- Markdown-Kommentare: `<!-- Das ist ein Kommentar, wird nicht angezeigt -->`
+- `move` und `rmdir` Befehle aufgefrischt
+
+**Modul-Zuordnungen (aus Uebung 02, Aufgabe 4):**
+| Situation | Modul | Datei konkret |
+|---|---|---|
+| Ich weiss nicht mehr, wie ich eine Datei im Terminal anlege | 05-terminal | 03-terminal-befehlsübersicht.md |
+| Ich vergesse, wie ich einen PR auf GitHub erstelle | 03-github | (Hinweis: In Dateien nicht konkret gefunden) |
+| Ich verstehe nicht, warum man Branches braucht | 04-git | 01-git-grundlagen.md |
+
+**Lernerfolgs-Kriterien**
+
+---
 ### dd.mm.
 
 **Was habe ich heute gemacht?**

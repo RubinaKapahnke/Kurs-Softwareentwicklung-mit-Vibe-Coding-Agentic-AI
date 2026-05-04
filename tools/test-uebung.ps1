@@ -1,4 +1,4 @@
-# test-uebung.ps1
+﻿# test-uebung.ps1
 # Prueft eine einzelne Uebungsdatei gegen den Uebungsstandard.
 #
 # Aufruf:
@@ -119,7 +119,19 @@ Test-Check `
     -Condition ($abgabeCheckboxCount -ge 1) `
     -Hint "Abgabe-Abschnitt muss mindestens eine '- [ ]' Checkbox enthalten"
 
-# --- 7. Keine Zeitangaben ---
+# --- 7. Keine vorbefuellten [x]-Checkboxen in Abgabe oder Lernerfolgs-Kriterien ---
+$abgabeKriterienBlock = ''
+$abgabeKriterienMatch = [regex]::Match($content, '(## Abgabe[\s\S]*)', [System.Text.RegularExpressions.RegexOptions]::Multiline)
+if ($abgabeKriterienMatch.Success) {
+    $abgabeKriterienBlock = $abgabeKriterienMatch.Groups[1].Value
+}
+$prefilled = ([regex]::Matches($abgabeKriterienBlock, '- \[x\]')).Count
+Test-Check `
+    -Name "Keine vorbefuellten [x]-Checkboxen in Abgabe/Lernerfolgs-Kriterien ($prefilled gefunden)" `
+    -Condition ($prefilled -eq 0) `
+    -Hint "Checkboxen in Abgabe und Lernerfolgs-Kriterien muessen '- [ ]' sein (nicht '- [x]') – Lernende sollen selbst abhaken"
+
+# --- 8. Keine Zeitangaben ---
 $zeitPattern = '\d+[\s-]+\d*\s*(Minuten|Stunden|min\b)|Zeitbox|empfohlen:\s*\d'
 Test-Check `
     -Name "Keine Zeitangaben im Dokument" `
@@ -134,7 +146,7 @@ foreach ($r in $results) {
     $color = if ($r.Status -eq "OK  ") { "Green" } else { "Red" }
     Write-Host "  [$($r.Status)] $($r.Name)" -ForegroundColor $color
     if ($r.Hint) {
-        Write-Host "         → $($r.Hint)" -ForegroundColor Yellow
+        Write-Host "         -> $($r.Hint)" -ForegroundColor Yellow
     }
 }
 Write-Host ("-" * 70)
