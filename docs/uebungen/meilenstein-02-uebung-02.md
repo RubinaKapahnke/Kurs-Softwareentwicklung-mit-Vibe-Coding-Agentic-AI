@@ -16,6 +16,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/uebung-02-notizen.md` (neu – wird in Aufgabe 3 erstellt)
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird am Ende aktualisiert)
 
+> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+
 ---
 
 ## Aufgaben
@@ -95,12 +97,17 @@ git branch
 
 Aktualisiere main und erstelle einen neuen Branch:
 
+> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann direkt `git checkout -b UE-M2-02-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main` (wie unten). Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+
 ```bash
 git checkout main
-git pull origin main
-git checkout -b terminal-uebung-<vorname>
+git pull origin main   # Holt alle neuen Aenderungen aus dem Remote-Repo
+git checkout -b UE-M2-02-<vorname>   # Erstellt einen neuen Branch und wechselt direkt darauf
 ```
-<!-- wechsel von [checkout -b] zu [switch -c ] -->
+
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Erstelle nun eine Notizdatei in deinem persoenlichen Ordner:
 
@@ -178,7 +185,7 @@ Stagge und committe deine Aenderungen:
 ```bash
 git add .
 git commit -m "feat: uebung-02 terminal-alltag <vorname>"
-git push origin terminal-uebung-<vorname>
+git push origin UE-M2-02-<vorname>
 ```
 
 > **Pruefe:** Erscheint nach `git push` keine Fehlermeldung, hat es geklappt.
@@ -201,7 +208,7 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../../modules/03-github/01-g
 - ✓ modules/05-terminal/01-terminal-grundlagen.md: Was ist ein Terminal, Grundkonzepte
 - ✓ modules/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
 - ✓ modules/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin` <!-- wechsel von [checkout -b] zu [switch -c ] -->
+- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
 - ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
 - ✓ modules/04-git/00-git-modulguide.md + modules/05-terminal/00-terminal-modulguide.md + modules/03-github/00-github-modulguide.md: Modul-Navigation ueben
 
@@ -219,14 +226,18 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
 - [ ] `lernfortschritt_<name>.md` ist aktualisiert
 - [ ] PR auf GitHub ist erstellt
-<!-- vor der PR erstellung pürfen ob es ein PR gibt?  -->
+
 ---
 
 ## Lernerfolgs-Kriterien
+
+> **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 

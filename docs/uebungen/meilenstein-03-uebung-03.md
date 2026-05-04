@@ -16,6 +16,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 - `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` – **neu anlegen** (deine persoenliche Datei)
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` – Beobachtungen eintragen
 
+> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+
 > **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** Das abzugebende Ergebnis dieser Uebung ist die Prompt-Datei selbst – sie landet im Repo. Die Beobachtungen im Lernjournal sind dein persoenlicher Reflexionsraum und gehoeren in deinen Lernstand.
 
 ---
@@ -51,8 +53,6 @@ Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufbau e
 ### 2. Eigene Prompt-Datei anlegen
 
 Lege eine neue Datei an: `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md`
-
-Beispiel fuer jemanden, der sich "daria" nennt: `.github/prompts/learners-erklaer-assistent-daria.prompt.md`
 
 > **Warum der eigene Name im Dateinamen?** Alle Kursteilnehmenden legen diese Datei an und mergen spaeter ihre Branches auf `main`. Wenn alle dieselbe Datei anlegen, entsteht ein Merge-Konflikt. Mit dem eigenen Namen im Dateinamen legt jeder eine *andere* Datei an – kein Konflikt.
 
@@ -143,12 +143,18 @@ git branch
 
 Dann:
 
+> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M3-03-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+
 ```
-git checkout -b meilenstein-03-prompt-dateien-<dein-name>
+git checkout -b UE-M3-03-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
 git add .
 git commit -m "M3 Uebung 03: Eigene Prompt-Datei und Beobachtungen"
-git push origin meilenstein-03-prompt-dateien-<dein-name>
+git push origin UE-M3-03-<vorname>
 ```
+
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Erstelle anschliessend auf GitHub einen PR von deinem Branch auf `main`.
 
@@ -177,6 +183,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Die Datei `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` existiert und hat gueltiges Frontmatter
 - [ ] Abschnitt `## Prompt-Datei-Beobachtungen` ist in deiner Lernfortschrittsdatei eingetragen
@@ -185,6 +193,8 @@ Bevor du den PR erstellst, pruefe kurz:
 ---
 
 ## Lernerfolgs-Kriterien
+
+> **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 

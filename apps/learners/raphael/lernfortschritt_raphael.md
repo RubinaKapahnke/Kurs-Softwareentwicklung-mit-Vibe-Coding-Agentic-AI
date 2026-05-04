@@ -25,6 +25,10 @@
 **Was ist mein naechster kleiner Schritt?**
 - [ ] M2-Ü2 "Im Terminal arbeiten" 
 
+**Abgabe UE-M2-01:**
+- [x] Lernjournal-Eintrag in `lernfortschritt_raphael.md` ist aktualisiert
+- [x] PR auf GitHub ist erstellt
+
 **Lernerfolgs-Kriterien**
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
@@ -73,7 +77,17 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 | Ich vergesse, wie ich einen PR auf GitHub erstelle | 03-github | (Hinweis: In Dateien nicht konkret gefunden) |
 | Ich verstehe nicht, warum man Branches braucht | 04-git | 01-git-grundlagen.md |
 
-**Lernerfolgs-Kriterien**
+**Abgabe UE-M2-02:**
+- [x] `uebung-02-notizen.md` existiert in deinem persoenlichen Ordner und enthaelt deine Modul-Antworten
+- [x] `lernfortschritt_raphael.md` ist aktualisiert
+- [x] PR auf GitHub ist erstellt
+
+**Lernerfolgs-Kriterien UE-M2-02:**
+- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
+- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle sassen aus dem Gedaechtnis.
+- [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
+- [x] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
+- [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
 
 ---
 ### dd.mm.

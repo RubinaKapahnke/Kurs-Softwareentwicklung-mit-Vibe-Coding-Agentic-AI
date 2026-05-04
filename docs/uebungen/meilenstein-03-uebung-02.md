@@ -15,6 +15,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 - `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` – dort traegst du Beobachtungen ein
 - Copilot Chat (kein Tab, sondern das Chat-Fenster links/rechts)
 
+> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+
 > **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** In dieser Uebung geht es um persoenliche Beobachtungen waehrend du promptest – kein Ergebnis zum Abgeben, sondern ein Denktagebuch. Diese Eintraege gehoeren in deinen Lernstand, nicht in eine Aufgabenloesung.
 
 ---
@@ -127,12 +129,18 @@ git branch
 
 Dann:
 
+> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M3-02-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+
 ```
-git checkout -b meilenstein-03-prompting-<dein-name>
+git checkout -b UE-M3-02-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
 git add .
 git commit -m "M3 Uebung 02: Prompting-Beobachtungen eingetragen"
-git push origin meilenstein-03-prompting-<dein-name>
+git push origin UE-M3-02-<vorname>
 ```
+
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../../modules/04-git/03-git-befehlsuebersicht.md)
 
@@ -157,6 +165,8 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Abschnitt `## Prompting-Beobachtungen` ist in deiner Lernfortschrittsdatei eingetragen
 - [ ] Mindestens vier Eintraege vorhanden (Aufgabe 1–4)
@@ -165,6 +175,8 @@ Bevor du den PR erstellst, pruefe kurz:
 ---
 
 ## Lernerfolgs-Kriterien
+
+> **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
 Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 

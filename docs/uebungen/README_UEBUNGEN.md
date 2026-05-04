@@ -39,6 +39,9 @@ Damit kuenftige Uebungen einheitlich und selbststaendig bearbeitbar sind, gilt a
 5. Jede Uebung endet mit einem Abschnitt `Lernerfolgs-Kriterien`: 3-6 Checkboxen, mit denen Lernende selbst pruefen koennen, ob die Uebung den gewuenschten Erfolg gebracht hat. Die Kriterien beschreiben beobachtbare Erfahrungen oder Erkenntnisse – nicht nur erledigte Aufgaben.
 6. Jede Uebung enthaelt einen Abschnitt `Wiederholung aus frueheren Meilensteinen`: eine kurze Liste von Faehigkeiten aus vorherigen Meilensteinen, die fuer diese Uebung benoetigt werden – mit Links zu den jeweiligen Modulen.
 7. Jede Uebung enthaelt direkt vor `Lernerfolgs-Kriterien` einen Abschnitt `Abgabe`: eine kurze Checkliste (2-3 Punkte), was konkret abgegeben wird – als letzter Check vor dem PR.
+8. **Branch-Benennung:** Jede Uebung verwendet das Muster `UE-MX-YY-<vorname>` fuer den Branch-Namen. UE = Uebung, MX = Meilenstein-Nummer (z.B. M2), YY = Uebungs-Nummer (z.B. 01). Beispiel: `UE-M3-02-<vorname>`. Bei Uebungen mit zwei Branches: `UE-MX-YYa-<vorname>` und `UE-MX-YYb-<vorname>`.
+9. **Uebungsdatei bleibt unveraendert:** Jede Uebung enthaelt direkt nach der Dateilieste den Hinweis, dass die Uebungsdatei selbst nicht bearbeitet wird und die Checklisten in die persoenliche Lernfortschritt-Datei kopiert werden.
+10. **Kopier-Hinweis in Abgabe und Lernerfolgs-Kriterien:** Beide Abschnitte beginnen mit einem Blockzitat, das erklaert, dass die Checklisten in `lernfortschritt_<dein-name>.md` kopiert und dort abgehakt werden.
 
 **Warum?** Die Quelle ist nicht nur Referenz, sondern der **primäre Weg zum Verständnis**. Lernende klicken auf die Quelle und verstehen direkt, warum die Aufgabe wichtig ist.
 
@@ -50,6 +53,7 @@ Jede Uebung muss ohne Vorkenntnisse und ohne externe Hilfe bearbeitbar sein. Daz
 10. **"Warum?"-Hinweise fuer temporaere Inhalte:** Wenn Lernende Inhalte schreiben, die spaeter ersetzt werden, direkt dort erklaeren warum – nicht erst beim Ersetzen.
 11. **Schrittweise UI-Anleitungen:** Komplexe UI-Interaktionen (z.B. Copilot Chat oeffnen, Slash-Befehle nutzen) als nummerierte Schritte, nicht als einzelnen Satz. Immer einen Fallback-Hinweis erganzen ("Falls X nicht erscheint: ...").
 12. **Status-Check vor Git-Befehlen:** Vor jedem `git checkout`/`git add`/`git push`-Block immer zuerst `git status` und `git branch` zeigen.
+13. **Tipp fuer offene PRs:** Direkt vor dem ersten `git checkout -b`-Befehl steht immer ein Blockzitat mit Option A (vom letzten Branch starten) und Option B (von `main` starten, Merge passiert automatisch beim PR-Review).
 
 ### Formatbeispiel
 - Aufgabe: Branch erstellen
