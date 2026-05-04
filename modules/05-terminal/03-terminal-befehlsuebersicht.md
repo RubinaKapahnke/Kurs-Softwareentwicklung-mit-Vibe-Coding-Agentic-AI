@@ -23,7 +23,7 @@ allerdings ist der Befehl unsicher. [ni test.md] ist sicherrer-->
 | Befehl | Wofuer? | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- |
 | `mkdir <Name>` | Erstellt einen neuen Ordner (Make Directory). | `mkdir lernstand_max` | Der Ordner wird sofort angelegt. |
-| `touch <Datei>` (macOS/Linux) oder `echo. > <Datei>` (Windows) | Erstellt eine leere Datei. | `echo. > test.md` | Windows nutzt `echo`, macOS/Linux nutzt `touch`. |
+| `touch <Datei>` (macOS/Linux) oder `echo > <Datei>` (Windows) | Erstellt eine leere Datei. | `echo > test.md` | Windows nutzt `echo`, macOS/Linux nutzt `touch`. |
 | `cp <Quelle> <Ziel>` (macOS/Linux) oder `copy <Quelle> <Ziel>` (Windows) | Kopiert eine Datei. | `cp README.md README_backup.md` | Nutze absolute oder relative Pfade. |
 | `mv <Alt> <Neu>` (macOS/Linux) oder `move <Alt> <Neu>` (Windows) | Verschiebt oder benennt eine Datei um. | `mv alt.md neu.md` | Funktioniert auch für Ordner. |
 | `rm <Datei>` (macOS/Linux) oder `del <Datei>` (Windows) | Loescht eine Datei. | `rm test.md` | **Achtung:** Geloeschte Dateien sind sofort weg! |
