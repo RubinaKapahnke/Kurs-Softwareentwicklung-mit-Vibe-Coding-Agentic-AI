@@ -8,6 +8,15 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ### Repo-Struktur – Konsolidierung in `course/`
 
+### Neuer Agent: `course-dev-vibe-coding-readiness`
+
+- Neuer Agent `.github/agents/course-dev-vibe-coding-readiness.agent.md` hinzugefügt
+- Prüft das Repo auf KI-Tauglichkeit (Context Engineering, Prompt Engineering, QA Harness, Automatisierungspotenzial)
+- Gibt AI-Readiness-Score pro Bereich (🟢/🟡/🔴) + priorisierte Automatisierungsideen aus
+- README.md Projektbaum synchronisiert
+
+### Repo-Struktur – Konsolidierung in `course/`
+
 - `apps/learners/` → `course/learners/` verschoben
 - `modules/` → `course/modules/` verschoben
 - `docs/uebungen/` → `course/uebungen/` verschoben

@@ -139,7 +139,8 @@ course/modules/04-git/
 │   │   ├── course-dev-dashboard-developer.agent.md
 │   │   ├── course-dev-dashboard-po.agent.md
 │   │   ├── course-dev-exercise-creator.agent.md
-│   │   └── course-dev-repo-consistency-checker.agent.md
+│   │   ├── course-dev-repo-consistency-checker.agent.md
+│   │   └── course-dev-vibe-coding-readiness.agent.md
 │   ├── instructions/
 │   │   └── dashboard.instructions.md
 │   └── prompts/
