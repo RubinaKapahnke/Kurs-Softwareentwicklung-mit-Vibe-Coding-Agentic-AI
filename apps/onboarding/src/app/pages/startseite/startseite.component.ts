@@ -17,4 +17,5 @@ export class StartseiteComponent {
 
   readonly maxUnlockedStep = this.state.maxUnlockedStep;
   readonly hasProgress = computed(() => this.state.maxUnlockedStep() > 1);
+  readonly isCompleted = computed(() => this.state.maxUnlockedStep() >= 6);
 }

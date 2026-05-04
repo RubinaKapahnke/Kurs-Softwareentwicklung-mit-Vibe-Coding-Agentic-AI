@@ -77,7 +77,16 @@
     </div>
 
     <!-- Rückkehr-Banner: nur sichtbar wenn Fortschritt vorhanden -->
-    @if (hasProgress()) {
+    @if (isCompleted()) {
+      <div class="resume-banner resume-banner--done" role="status">
+        <mat-icon aria-hidden="true">check_circle</mat-icon>
+        <span>Du hast das Onboarding abgeschlossen! 🎉</span>
+        <a mat-stroked-button href="https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md"
+           target="_blank" rel="noopener noreferrer" class="resume-btn">
+          Zum Kursfluss
+        </a>
+      </div>
+    } @else if (hasProgress()) {
       <div class="resume-banner" role="status">
         <mat-icon aria-hidden="true">play_circle</mat-icon>
         <span>Du hast bereits Fortschritt gespeichert.</span>

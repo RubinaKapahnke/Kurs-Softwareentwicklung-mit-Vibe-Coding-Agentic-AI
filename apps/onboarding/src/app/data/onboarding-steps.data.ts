@@ -138,8 +138,18 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     successCriterion:
       'Du hast NEXT_STEPS.md geöffnet und kennst deinen konkreten nächsten Kursschritt.',
+    resources: [
+      {
+        label: 'NEXT_STEPS.md auf GitHub',
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
+      },
+      {
+        label: 'README_UEBUNGEN.md auf GitHub',
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/uebungen/README_UEBUNGEN.md'
+      }
+    ],
     vscodeHint: [
-      'Drücke Strg+P in VS Code.',
+      'Drücke Strg+P in VS Code (Windows: Ctrl+P, Mac: Cmd+P).',
       'Tippe NEXT_STEPS.md und bestätige mit Enter.',
       'Wiederhole es mit README_UEBUNGEN.md.'
     ]

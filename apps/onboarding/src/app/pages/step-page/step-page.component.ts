@@ -42,6 +42,7 @@ export class StepPageComponent {
   );
 
   readonly isStep2 = computed(() => this.step().id === 2);
+  readonly isBrueckeStep = computed(() => this.step().id === 6);
 
   readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
 
@@ -62,12 +63,19 @@ export class StepPageComponent {
     this.state.resetStep2ToNewPath();
   }
 
+  skipToStart(): void {
+    void this.router.navigate(['/']);
+  }
+
   markDoneAndContinue(): void {
     const currentStep = this.step().id;
     this.state.markStepCompleted(currentStep);
 
     if (currentStep < 6) {
       void this.router.navigate(['/onboarding/step', currentStep + 1]);
+    } else {
+      // Onboarding abgeschlossen → zurück zur Startseite
+      void this.router.navigate(['/']);
     }
   }
 

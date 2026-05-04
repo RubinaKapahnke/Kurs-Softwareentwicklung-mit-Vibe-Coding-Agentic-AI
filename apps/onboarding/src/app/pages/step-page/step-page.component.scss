@@ -132,3 +132,73 @@
   height: auto;
   text-decoration: underline;
 }
+
+/* Brücke (Schritt 6) */
+.bridge-section {
+  background: color-mix(in srgb, var(--color-primary) 5%, white);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.bridge-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bridge-col {
+  strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+}
+
+.bridge-steps {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.skip-block {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skip-hint {
+  flex: 1;
+  min-width: 180px;
+  margin: 0;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  line-height: 1.5;
+}
+
+.skip-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}

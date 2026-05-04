@@ -205,6 +205,15 @@
     min-width: 120px;
     color: var(--color-text);
   }
+
+  &--done {
+    background: color-mix(in srgb, var(--color-secondary) 15%, white);
+    border-color: color-mix(in srgb, var(--color-secondary) 50%, transparent);
+
+    mat-icon {
+      color: var(--color-accent);
+    }
+  }
 }
 
 .resume-btn {

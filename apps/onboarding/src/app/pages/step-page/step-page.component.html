@@ -97,7 +97,7 @@
       <p>{{ step().successCriterion }}</p>
     </section>
 
-    @if (step().resources?.length) {
+    @if (step().resources?.length && !isBrueckeStep()) {
       <mat-divider></mat-divider>
       <section class="step-section">
         <h3>Hilfreiche Links</h3>
@@ -111,7 +111,7 @@
       </section>
     }
 
-    @if (step().vscodeHint?.length) {
+    @if (step().vscodeHint?.length && !isBrueckeStep()) {
       <mat-divider></mat-divider>
       <section class="step-section">
         <h3>Alternative in VS Code</h3>
@@ -120,6 +120,46 @@
             <li>{{ hint }}</li>
           }
         </ol>
+      </section>
+    }
+
+    <!-- Brücke in den Kursfluss (nur Schritt 6) -->
+    @if (isBrueckeStep()) {
+      <mat-divider></mat-divider>
+      <section class="step-section bridge-section">
+        <h3>Zwei Wege in den Kursfluss</h3>
+
+        <div class="bridge-columns">
+          <div class="bridge-col">
+            <strong>Weg A – GitHub (Browser)</strong>
+            <p>Öffne die Dateien direkt im Browser auf GitHub:</p>
+            <div class="link-group">
+              @for (resource of step().resources; track resource.href) {
+                <a mat-stroked-button [href]="resource.href" target="_blank" rel="noopener noreferrer">
+                  {{ resource.label }}
+                </a>
+              }
+            </div>
+          </div>
+
+          <div class="bridge-col">
+            <strong>Weg B – VS Code (lokal)</strong>
+            <p>Das Repo ist bereits lokal auf deinem Rechner. Öffne es in VS Code:</p>
+            <ol class="bridge-steps">
+              @for (hint of step().vscodeHint; track hint) {
+                <li>{{ hint }}</li>
+              }
+            </ol>
+          </div>
+        </div>
+
+        <div class="skip-block">
+          <p class="skip-hint">Kein Stress – du kannst jederzeit zur Startseite zurück und später weitermachen.</p>
+          <button mat-button type="button" class="skip-btn" (click)="skipToStart()">
+            <mat-icon>home</mat-icon>
+            Zur Startseite (später weitermachen)
+          </button>
+        </div>
       </section>
     }
   </mat-card-content>
@@ -137,8 +177,14 @@
       </button>
     }
 
-    <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()" [disabled]="isDoneDisabled()">
-      Ich habe das geschafft
-    </button>
+    @if (!isBrueckeStep()) {
+      <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()" [disabled]="isDoneDisabled()">
+        Ich habe das geschafft
+      </button>
+    } @else {
+      <button mat-raised-button type="button" color="primary" (click)="markDoneAndContinue()">
+        ✅ Onboarding abgeschlossen!
+      </button>
+    }
   </mat-card-actions>
 </mat-card>
