@@ -1,0 +1,2 @@
+- github stammordner ohne VSCode verknüpfen?
+- con
