@@ -15,9 +15,9 @@
 
 .shell-main {
   width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 1.25rem clamp(1rem, 3vw, 2.5rem) 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem clamp(1rem, 3vw, 2rem) 2.5rem;
 }
 
 .progress-panel {

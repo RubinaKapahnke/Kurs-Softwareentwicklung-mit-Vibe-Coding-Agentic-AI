@@ -1,5 +1,5 @@
-﻿---
-description: "Use when: creating a new exercise, adding an Übung, writing a milestone task, building meilenstein-XX-uebung-YY.md, exercise creator, Übung erstellen"
+---
+description: "Use when: neue Uebung erstellen, Uebung fuer Meilenstein schreiben, meilenstein-XX-uebung-YY.md anlegen, Aufgabenstellung formulieren, Lernerfolgs-Kriterien definieren, Modulabdeckung pruefen, Uebung nach Standard erstellen, exercise creator, Uebung erstellen, neue Aufgabe fuer Lernende, Vor-dem-Start-Checkliste"
 name: "Exercise Creator (course-dev)"
 tools: [read, search, edit, todo, execute]
 argument-hint: "Beschreibe die neue Übung: Meilenstein-Nr., Thema, Lernziel"

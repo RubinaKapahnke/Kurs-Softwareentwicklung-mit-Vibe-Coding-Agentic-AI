@@ -1,261 +1,299 @@
-<div class="startseite">
-  <div class="hero-shell">
-    <div class="hero-backdrop" aria-hidden="true"></div>
+﻿<div class="page" id="top">
 
-    <div class="mobile-notice" role="alert">
-      <mat-icon aria-hidden="true">warning</mat-icon>
-      <span>
-        Für die Installation brauchst du einen Desktop-Rechner oder Laptop.
-        Auf dem Handy kannst du die Seite lesen – aber nicht alle Schritte ausführen.
-      </span>
-    </div>
-
-    <section class="hero">
-      <p class="hero-label">KnOot Academy</p>
-      <h1 class="hero-title">Vibe Coding mit KI</h1>
-      <p class="hero-desc">
-        Du lernst, wie du mit KI-Unterstützung eine echte Software-Anwendung baust:
-        von Setup und Prompting über Architektur, Testing und CI/CD bis zum fertigen Produkt.
-      </p>
-
-      <div class="hero-cta-row">
-        <a mat-flat-button routerLink="/onboarding/step/1" class="cta-primary">Onboarding starten</a>
-        <a mat-stroked-button href="#kurs" class="cta-secondary">Inhalte ansehen</a>
+  <!-- Top Navigation Bar -->
+  <header class="top-navbar" aria-label="Hauptnavigation">
+    <div class="navbar-container">
+      <div class="navbar-branding">
+        <img src="assets/logos/knoot-penguin.png" alt="KnOot Academy" class="navbar-logo" />
+        <span class="navbar-title">KnOot Academy</span>
       </div>
+      <nav class="navbar-menu">
+        <a href="#top" class="navbar-link">Start</a>
+        <a href="#value" class="navbar-link">Wert</a>
+        <a href="#courses" class="navbar-link">Kurse</a>
+        <a routerLink="/kursstart" mat-flat-button class="navbar-cta">Einstieg</a>
+      </nav>
+    </div>
+  </header>
 
-      @if (isCompleted()) {
-        <div class="resume-banner resume-banner--done" role="status">
-          <mat-icon aria-hidden="true">check_circle</mat-icon>
-          <span>Du hast das Onboarding abgeschlossen! 🎉</span>
-          <a
-            mat-stroked-button
-            href="https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resume-btn">
-            Zum Kursfluss
-          </a>
+  @if (hasProgress()) {
+    <section class="resume-banner" aria-label="Fortsetzen">
+      <div class="container resume-inner">
+        <div>
+          <p class="resume-kicker">Dein letzter Stand</p>
+          <strong>
+            @if (isCompleted()) {
+              Onboarding abgeschlossen - du kannst direkt wieder in den Kursfluss springen.
+            } @else {
+              Du hast bereits begonnen. Dein nächster freigeschalteter Schritt ist {{ maxUnlockedStep() }}.
+            }
+          </strong>
         </div>
-      } @else if (hasProgress()) {
-        <div class="resume-banner" role="status">
-          <mat-icon aria-hidden="true">play_circle</mat-icon>
-          <span>Du hast bereits Fortschritt gespeichert.</span>
-          <a mat-stroked-button [routerLink]="['/onboarding/step', maxUnlockedStep()]" class="resume-btn">
+        <a
+          mat-stroked-button
+          [routerLink]="isCompleted() ? '/kursstart' : ['/onboarding/step', maxUnlockedStep()]"
+          class="resume-action">
+          @if (isCompleted()) {
+            Kursfluss öffnen
+          } @else {
             Weiter bei Schritt {{ maxUnlockedStep() }}
-          </a>
-        </div>
-      }
+          }
+        </a>
+      </div>
     </section>
-  </div>
+  }
 
-  <section class="section story-section">
-    <p class="section-label">💡 Warum dieser Kurs?</p>
-    <h2>Was sich verändert</h2>
-    <div class="story-grid">
-      <div class="story-col story-col--before">
-        <p class="story-col-title">Ohne Kurs</p>
-        <ul class="story-list">
-          <li>Du öffnest ChatGPT und hoffst, dass die Antwort stimmt</li>
-          <li>Fehlermeldungen fühlen sich wie Wände an</li>
-          <li>Neue Tools erfordern jedes Mal komplettes Neulernen</li>
-          <li>Projekte bleiben auf halbem Weg stecken</li>
-        </ul>
-      </div>
-      <div class="story-col story-col--after">
-        <p class="story-col-title">Nach dem Kurs</p>
-        <ul class="story-list">
-          <li>Du schreibst präzise Prompts und weißt warum sie funktionieren</li>
-          <li>Fehler sind lesbare Signale – du weißt was zu tun ist</li>
-          <li>Du denkst in Prinzipien, nicht in Tool-Namen</li>
-          <li>Du lieferst: von Setup bis Deployment</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <section class="hero-section">
+    <div class="container hero-stage">
 
-  <section class="section" id="kurs">
-    <p class="section-label">🧱 Kursinhalt</p>
-    <h2>Was du lernst</h2>
-    <p class="section-desc">
-      Ein fixer Kern für alle, plus Zusatzeinheiten je nach Karriereziel.
-      Du verstehst Prinzipien so, dass du Technologien später austauschen kannst.
-    </p>
+      <article class="hero-featured-card" aria-label="Featured Kurskarte">
+        <div class="featured-badge-wrap">
+          <img src="assets/graphics/course-preview.png" alt="Vibe Coding Foundations Vorschau" class="hero-featured-image" />
+          <span class="free-badge">Jetzt kostenlos testen</span>
+        </div>
+        <div class="hero-featured-body">
+          <span class="course-status course-status--live">FEATURED</span>
+          <h2>01 - Vibe Coding Foundations</h2>
+          <p>Vibe Coding ist viel mehr als nur Prompting. Erlerne alle Konzepte der Software-Entwicklung die benötigt werden um mit KI auslieferbare und wartbare Software zu entwickeln. Nach dem Kurs bist du in der Lage die Entwicklung eines Produktes vom Scratch bis zur auslieferbaren Software durchzuführen und zu begleiten.</p>
+          <ul class="featured-list">
+            <li>AI Rapid Prototyping und Requirement Engineering</li>
+            <li>Setup der Architektur und Repositories für nachhaltiges Vibe Coding</li>
+            <li>Prompting-, Context- und Harness Engineering</li>
+            <li>Agent Management und Orchestrierung</li>
+          </ul>
+          <div class="featured-actions">
+            <a routerLink="/kursstart" class="card-cta">Kurs starten &rarr;</a>
+          </div>
+        </div>
+      </article>
 
-    <div class="topic-grid">
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🧱</span>
-        <div>
-          <strong>Grundlagen &amp; Werkzeuge</strong>
-          <p>Markdown, VS Code, GitHub, Git, Terminal.</p>
+      <!-- RECHTS: Alle anderen Infos -->
+      <div class="hero-right">
+        <div class="hero-text">
+          <p class="eyebrow">KI-Kurse der KnOot Academy</p>
+          <h1 class="hero-title">Wir machen dich <strong>AI-Ready</strong></h1>
+          <p class="hero-subtitle">KI-Kompetenzen erwerben – anschlussfähig bleiben</p>
+          <p class="hero-lead">Entwickelt und durchgeführt mit echten Expert*innen. Substanz, Fachkompetenz und Tiefe, abgestimmt auf deine Rolle und deinen Karrierepfad.</p>
         </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🤖</span>
-        <div>
-          <strong>KI-Zusammenarbeit</strong>
-          <p>Prompting, PRDs, Context-Engineering, Agents.</p>
-        </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🏗️</span>
-        <div>
-          <strong>Architektur &amp; Requirements</strong>
-          <p>Projektstruktur, Komponenten, klare Anforderungen.</p>
-        </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🗄️</span>
-        <div>
-          <strong>Leichtgewichtige Backends</strong>
-          <p>SQLite, Parquet, Supabase/Firebase, No-Code Optionen.</p>
-        </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🧪</span>
-        <div>
-          <strong>Testing &amp; Debugging</strong>
-          <p>Test-Harness, Fehleranalyse, Qualitätskontrolle.</p>
-        </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">⚙️</span>
-        <div>
-          <strong>Automatisierung &amp; CI/CD</strong>
-          <p>Pipelines, Linting, Build- und Deploy-Automation.</p>
-        </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🚀</span>
-        <div>
-          <strong>Deployment &amp; Betrieb</strong>
-          <p>Release-Flow, Secrets, Monitoring, Iteration.</p>
-        </div>
-      </article>
-      <article class="topic-card">
-        <span class="topic-icon" aria-hidden="true">🔄</span>
-        <div>
-          <strong>Transfer auf neue Stacks</strong>
-          <p>Angular zu React, SQLite zu Postgres, Prinzip bleibt.</p>
-        </div>
-      </article>
-    </div>
 
-    <div class="accordion-wrap">
-      <div class="accordion">
-        <button
-          class="accordion-trigger"
-          type="button"
-          (click)="toggleSection('karriere')"
-          [attr.aria-expanded]="expandedSection() === 'karriere'">
-          <mat-icon aria-hidden="true">{{ expandedSection() === 'karriere' ? 'expand_less' : 'expand_more' }}</mat-icon>
-          Zusatzeinheiten nach Karriereziel
-        </button>
-        @if (expandedSection() === 'karriere') {
-          <div class="accordion-body">
-            <div class="career-grid">
-              <article class="career-card">
-                <strong>🛠️ Full-Stack</strong>
-                <p>APIs, Datenmodelle, Frontend-Backend-Flow.</p>
-              </article>
-              <article class="career-card">
-                <strong>📊 Data &amp; Analytics</strong>
-                <p>Parquet, DuckDB, visualisierte Datenprodukte.</p>
-              </article>
-              <article class="career-card">
-                <strong>🤖 AI-Automatisierung</strong>
-                <p>Agent-Workflows und KI-gestützte Prozesse.</p>
-              </article>
-              <article class="career-card">
-                <strong>🏢 Team &amp; Enterprise</strong>
-                <p>Review-Routinen, Standards, CI-Governance.</p>
-              </article>
-              <article class="career-card">
-                <strong>🚀 Produkt &amp; Startup</strong>
-                <p>MVP-Zyklen, schnelles Lernen aus Nutzerfeedback.</p>
-              </article>
+        <div class="hero-media">
+          <img src="assets/photos/hero-workspace.png" alt="Entwickler am Arbeitsplatz" class="hero-img" />
+          <div class="hero-panels">
+            <div class="panel-row panel-row--bad">
+              <span class="panel-kicker">Nicht das Ziel</span>
+              <p>Schnell irgendetwas generieren und später das Chaos aufräumen.</p>
+            </div>
+            <div class="panel-row panel-row--good">
+              <span class="panel-kicker">Unser Anspruch</span>
+              <p>Mit KI schneller werden, ohne Qualität, Nachvollziehbarkeit und Release-Fähigkeit zu verlieren.</p>
             </div>
           </div>
-        }
-      </div>
+        </div>
 
-      <div class="accordion">
-        <button
-          class="accordion-trigger"
-          type="button"
-          (click)="toggleSection('tech')"
-          [attr.aria-expanded]="expandedSection() === 'tech'">
-          <mat-icon aria-hidden="true">{{ expandedSection() === 'tech' ? 'expand_less' : 'expand_more' }}</mat-icon>
-          Prinzipien statt Tool-Fixierung
-        </button>
-        @if (expandedSection() === 'tech') {
-          <div class="accordion-body">
-            <p class="accordion-intro">
-              Der Stack ist im Kurs eng gesetzt, damit du sauber lernst. Danach kannst du austauschen:
-            </p>
-            <div class="tech-table-wrapper">
-              <table class="tech-table">
-                <thead>
-                  <tr><th>Im Kurs</th><th>Alternative mit gleichem Prinzip</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Angular</td><td>React, Vue, Svelte</td></tr>
-                  <tr><td>TypeScript</td><td>JavaScript, Python</td></tr>
-                  <tr><td>SCSS</td><td>Tailwind, CSS Modules</td></tr>
-                  <tr><td>SQLite</td><td>PostgreSQL, MySQL</td></tr>
-                  <tr><td>Supabase/Firebase</td><td>Directus, PocketBase, Custom Backend</td></tr>
-                  <tr><td>GitHub Actions</td><td>GitLab CI, Jenkins, CircleCI</td></tr>
-                  <tr><td>Parquet/CSV</td><td>DuckDB, Feather, Pandas</td></tr>
-                </tbody>
-              </table>
-            </div>
+        <div class="audience-chips">
+          <span class="audience-label">Geeignet für</span>
+          <div class="chip-row">
+            <span class="chip">Product Owner</span>
+            <span class="chip">Scrum Master</span>
+            <span class="chip">Führungskräfte</span>
+            <span class="chip">Projektmanager</span>
+            <span class="chip">Fachkräfte</span>
           </div>
-        }
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="value-section" id="value">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Warum Kurse der KnOot Academy?</p>
+        <h2 class="section-title">Slop vs. Shipping</h2>
+        <p class="section-text">
+          Der Einstieg soll nicht nur neugierig machen, sondern zeigen, wie sich der Kurs von losem Prompting
+          in Richtung wartbarer Software bewegt.
+        </p>
+      </div>
+      <div class="value-layout">
+        <div class="meme-grid" aria-label="Slop und Shipping Bilder">
+          <figure class="meme-card meme-card--slop">
+            <img src="assets/graphics/vibe-meme.jpg" alt="Vibe Coding Meme" class="svs-full-img" />
+            <figcaption>Wenn die Agenten sich selbstständig machen oder den Kontext verlieren, kann alles passieren.</figcaption>
+          </figure>
+          <figure class="meme-card meme-card--shipping">
+            <img src="assets/graphics/shipping.png" alt="Shipping Meme" class="svs-full-img" />
+            <figcaption>In der Praxis entsteht oft sehr schnell viel Code, aber ohne gemeinsame Leitplanken für Architektur, Qualität und Zusammenarbeit.</figcaption>
+            <div class="meme-explainer">
+              <p>Typische Folgen im Alltag: Features wirken zuerst "fertig", brechen aber bei Änderungen oder sind für das Team kaum noch sicher weiterzuentwickeln.</p>
+              <ul>
+                <li>Inkonsistenter Stil und widersprüchliche Logik zwischen Dateien</li>
+                <li>fehlende Tests und dadurch hohe Fehlerquote bei Deployments</li>
+                <li>unklare Git-Historie, wodurch Reviews und Fehleranalyse schwer werden</li>
+                <li>Prompt- oder Kontext-Verlust, der zu Halluzinationen und Regressionen führt</li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+        <div class="value-column">
+          <article class="value-card value-card--accent">
+            <h3>Was du hier lernst</h3>
+            <p>Wie man KI nutzt, ohne dass Codebasis, Git-Historie und Teamarbeit unlesbar werden.</p>
+          </article>
+          <article class="value-card">
+            <h3>Was AI-Ready hier bedeutet</h3>
+            <p>Mitarbeitende lernen, KI nicht nur anzuschalten, sondern sie in saubere Prozesse, Reviews und Releases einzubetten.</p>
+          </article>
+          <article class="value-card">
+            <h3>Weg vom Mythos hin zur Realität</h3>
+            <p>Viele denken, KI kann jetzt alles. Wir helfen dir, die Möglichkeiten wirklich auszuschöpfen und gleichzeitig die Grenzen klar zu kennen.</p>
+          </article>
+          <article class="value-card">
+            <h3>Auch langfristig im Beruf Erfolg haben</h3>
+            <p>Viele Kurse bleiben an der Oberfläche. Bei uns lernst du neben der Theorie immer ein festes Setting kennen, das sich auf andere Technologien übertragen lässt.</p>
+          </article>
+          <article class="value-card">
+            <h3>Mensch und KI – Ethik ist uns wichtig</h3>
+            <p>Fortschritt und Innovation lassen sich nicht aufhalten, und das ist auch gut so. Entscheidend ist, dass neue Technologien allen Menschen zugutekommen. Deshalb verbinden wir in unseren Kursen technische Befähigung mit Verantwortung, fairen Chancen und einer klaren Haltung im Umgang mit KI.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section panel-section">
-    <div class="panel panel--outcome">
-      <p class="section-label">🎯 Zielbild</p>
-      <h2>Was du am Ende kannst</h2>
-      <ul class="outcome-list">
-        <li>Produkte von Scratch bis Deployment umsetzen</li>
-        <li>KI als Co-Pilot einsetzen und Ergebnisse sicher bewerten</li>
-        <li>Testing, Debugging und CI/CD in den Alltag integrieren</li>
-        <li>Anforderungen klar formulieren und strukturiert bauen</li>
-      </ul>
-    </div>
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <div class="section-head section-head--inline">
+        <div>
+          <p class="section-kicker">Angebot</p>
+          <h2 class="section-title">Kurse</h2>
+        </div>
+        <a mat-stroked-button routerLink="/kursstart">Vor dem Buchen: Einstieg ansehen</a>
+      </div>
 
-    <div class="panel panel--requirements">
-      <p class="section-label">✅ Voraussetzungen</p>
-      <h2>Was du brauchst</h2>
-      <ul class="req-list">
-        <li><mat-icon aria-hidden="true">computer</mat-icon><span>Desktop oder Laptop</span></li>
-        <li><mat-icon aria-hidden="true">wifi</mat-icon><span>Stabile Internetverbindung</span></li>
-        <li><mat-icon aria-hidden="true">schedule</mat-icon><span>30–60 Minuten für das erste Setup</span></li>
-        <li><mat-icon aria-hidden="true">person</mat-icon><span>Keine Programmiererfahrung notwendig</span></li>
-      </ul>
+      <!-- Kurs-Grid -->
+      <div class="courses-grid">
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">IN PLANUNG</span>
+            <h3>AI Product Engineering</h3>
+            <p>PRD, Architektur und verlässlicher Release-Flow mit KI.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>Rapid Prototyping mit KI</h3>
+            <p>Von der Idee zum funktionierenden Prototypen in Stunden.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>Software-Architektur für Vibe Coding</h3>
+            <p>Skalierbare Strukturen für KI-gestützte Codebasen.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>RAG: Retrieval-Augmented Generation</h3>
+            <p>Eigene Wissensdatenbanken mit LLMs verbinden und nutzen.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>Agenten-Systeme entwickeln</h3>
+            <p>Autonome KI-Agenten planen, bauen und orchestrieren.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>AI Transformation Management</h3>
+            <p>Organisationen durch den KI-Wandel führen.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>AI Automation Management</h3>
+            <p>Workflows automatisieren und Prozesse neu denken.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>AI Strategie</h3>
+            <p>Strategische KI-Planung für Teams und Unternehmen.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>AI Literacy</h3>
+            <p>Grundlagen und kritisches Verständnis von KI für alle.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>KI im Arbeitsalltag</h3>
+            <p>Konkrete Anwendungsgebiete für den täglichen Einsatz.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>Ethik in der Künstlichen Intelligenz</h3>
+            <p>Verantwortungsvoller Umgang mit KI-Systemen und -Entscheidungen.</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-card-body">
+            <span class="course-status">DEMNÄCHST</span>
+            <h3>Urheberrecht für KI-Produkte</h3>
+            <p>Rechtliche Grundlagen für KI-entwickelte Software und Inhalte.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="filter-note"><strong>Alle Kurse:</strong> praxisnah, pruefbar, ohne Buzzword-Nebel.</p>
     </div>
   </section>
 
-  <section class="section coming-soon-section">
-    <h2>Weitere Kurse</h2>
-    <p class="coming-desc">Als nächstes folgen Spezialisierungen, die auf dem Kern aufbauen.</p>
-    <div class="courses-grid">
-      <mat-card class="course-card">
-        <mat-card-content>
-          <span class="badge">Im Aufbau</span>
-          <h3>Rapid Prototyping mit KI</h3>
-          <p>Von der Idee zu testbaren Produktprototypen in kurzer Zeit.</p>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="course-card">
-        <mat-card-content>
-          <span class="badge">Im Aufbau</span>
-          <h3>AI Literacy</h3>
-          <p>Modelle verstehen, Risiken erkennen und KI verantwortungsvoll einsetzen.</p>
-        </mat-card-content>
-      </mat-card>
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <p class="section-kicker section-kicker--light">Bereit fuer den naechsten Schritt?</p>
+        <h2>Informieren, buchen und direkt starten.</h2>
+      </div>
+      <div class="cta-actions">
+        <a mat-flat-button routerLink="/kursstart" class="btn-primary btn-primary--lg">Kurse entdecken &amp; buchen</a>
+        <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-contact">Kontakt aufnehmen</a>
+      </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">KnOot Academy</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
 </div>

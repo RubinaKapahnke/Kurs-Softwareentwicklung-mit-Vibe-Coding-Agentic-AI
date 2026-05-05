@@ -1,5 +1,5 @@
-﻿---
-description: "Use when: professional dashboard development, implementing Progress-Hub from PRD, software architecture for vibe coding projects, Angular Material TypeScript strict implementation, refactoring dashboard architecture, dashboard developer, angular architect, material expert"
+---
+description: "Use when: dashboard implementieren, Angular Komponenten bauen, TypeScript dashboard code schreiben, Progress-Hub aus PRD umsetzen, Architektur fuer dashboard entwerfen, dashboard refactoring, Angular Material strict TypeScript, dashboard build oder test reparieren, dashboard developer, angular architect"
 name: "Dashboard Developer (course-dev)"
 tools: [read, edit, search, todo, execute]
 user-invocable: true

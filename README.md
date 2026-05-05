@@ -81,6 +81,10 @@ course/modules/04-git/
 │   │   │   │   ├── guards/
 │   │   │   │   ├── models/
 │   │   │   │   ├── pages/
+│   │   │   │   │   ├── kursstart/
+│   │   │   │   │   ├── onboarding-shell/
+│   │   │   │   │   ├── startseite/
+│   │   │   │   │   └── step-page/
 │   │   │   │   └── services/
 │   │   │   └── styles/
 │   │   └── package.json

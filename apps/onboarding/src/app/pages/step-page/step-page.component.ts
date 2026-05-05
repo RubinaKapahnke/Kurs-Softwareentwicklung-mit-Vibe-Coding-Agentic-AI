@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -34,15 +35,18 @@ export class StepPageComponent {
   private readonly router = inject(Router);
   private readonly dialog = inject(MatDialog);
   readonly state = inject(OnboardingStateService);
+  private readonly routeParamMap = toSignal(this.route.paramMap, {
+    initialValue: this.route.snapshot.paramMap
+  });
 
   readonly step = computed<OnboardingStep>(() => {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = Number(this.routeParamMap().get('id'));
     return ONBOARDING_STEPS.find((item) => item.id === id) ?? ONBOARDING_STEPS[0];
   });
 
   readonly canGoBack = computed(() => this.step().id > 1);
 
-  readonly isStep2 = computed(() => this.step().id === 2);
+  readonly isAccountChoiceStep = computed(() => this.step().id === 1);
   readonly isBrueckeStep = computed(() => this.step().id === 6);
 
   /** Schritt gilt als erledigt wenn der nächste bereits freigeschaltet ist */
@@ -52,9 +56,9 @@ export class StepPageComponent {
 
   readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
 
-  /** "Als erledigt markieren" nur bei Schritt 2 blockiert, bis Erfahrung gewählt */
+  /** "Als erledigt markieren" nur beim GitHub-Einstieg blockiert, bis die Auswahl gesetzt ist */
   readonly isDoneDisabled = computed(
-    () => this.isStep2() && !this.step2CanComplete()
+    () => this.isAccountChoiceStep() && !this.step2CanComplete()
   );
 
   selectExperience(choice: Step2ExperienceChoice): void {

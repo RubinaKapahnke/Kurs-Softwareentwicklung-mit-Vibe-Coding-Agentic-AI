@@ -1,5 +1,5 @@
-﻿---
-description: "Use when: checking repository completeness and consistency, link validation, status consistency across README/NEXT_STEPS/exercises, finding mismatches, repo audit, konsistenz prüfen, vollständigkeit prüfen"
+---
+description: "Use when: tote Links pruefen, README Projektbaum stimmt nicht, Uebung fehlt in NEXT_STEPS, Datei fehlt im Projektbaum, Link-Validierung, Struktur des Repos pruefen, Markdown-Links defekt, konsistenz pruefen zwischen README und Dateisystem, fehlende Pflichtabschnitte in Uebungen, vollstaendigkeit pruefen"
 name: "Repo Consistency Checker (course-dev)"
 tools: [read, search, edit, execute, todo]
 argument-hint: "Optional: Prüfbereich einschränken. Ohne Angabe wird das gesamte Repo geprüft."

@@ -1,0 +1,113 @@
+<div class="intro-page">
+  <section class="intro-hero">
+    <div class="intro-shell">
+      <a routerLink="/" class="back-link">
+        <mat-icon aria-hidden="true">west</mat-icon>
+        Zur Landingpage
+      </a>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Bevor du startest</p>
+        <h1>Was dich im Kurs konkret erwartet</h1>
+        <p class="lead">
+          Du startest nicht in einer Demo, sondern in einem echten Arbeitsfluss mit Git,
+          VS Code, Angular und GitHub Copilot. Diese Seite klaert kurz den Rahmen,
+          danach gehst du in den eigentlichen Setup-Flow.
+        </p>
+
+        <div class="hero-actions">
+          <a mat-flat-button routerLink="/onboarding/step/1" class="primary-action">
+            Onboarding jetzt starten
+          </a>
+          @if (hasProgress()) {
+            <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]">
+              Bei Schritt {{ resumeStep() }} weitermachen
+            </a>
+          }
+        </div>
+      </div>
+
+      <mat-card class="hero-card" appearance="outlined">
+        <mat-card-content>
+          <p class="card-kicker">Kursprofil</p>
+          <h2>Vibe Coding Foundations</h2>
+          <div class="chip-row" aria-label="Kursmerkmale">
+            <mat-chip>Angular</mat-chip>
+            <mat-chip>Git + GitHub</mat-chip>
+            <mat-chip>Copilot</mat-chip>
+            <mat-chip>Praxisnah</mat-chip>
+          </div>
+          <ul class="bullet-list">
+            @for (point of promisePoints; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="intro-grid-section">
+    <div class="intro-shell intro-grid">
+      <mat-card class="info-card" appearance="outlined">
+        <mat-card-content>
+          <p class="card-kicker">Fuer wen?</p>
+          <h2>Gut geeignet, wenn du Struktur statt Rumprobieren willst</h2>
+          <p>
+            Der Kurs passt, wenn du mit KI entwickeln willst, aber trotzdem nachvollziehbar,
+            versioniert und teamfaehig arbeiten moechtest.
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="info-card" appearance="outlined">
+        <mat-card-content>
+          <p class="card-kicker">Was du brauchst</p>
+          <h2>Vor dem eigentlichen Kursstart</h2>
+          <ul class="bullet-list compact">
+            <li>einen Rechner mit Internetzugang</li>
+            <li>die Bereitschaft, Git und VS Code lokal zu nutzen</li>
+            <li>ungefaehr 6 klare Setup-Schritte ohne Fachjargon-Marathon</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="journey-section">
+    <div class="intro-shell">
+      <div class="section-head">
+        <p class="eyebrow">Dein Weg</p>
+        <h2>So laeuft das Onboarding danach ab</h2>
+      </div>
+
+      <div class="journey-list" aria-label="Onboarding-Schritte">
+        @for (step of onboardingSteps; track step; let index = $index) {
+          <article class="journey-item">
+            <span class="journey-number">0{{ index + 1 }}</span>
+            <p>{{ step }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="intro-shell cta-box">
+      <div>
+        <p class="eyebrow">Naechster Schritt</p>
+        <h2>Wenn das fuer dich passt, geh jetzt in den Setup-Flow.</h2>
+      </div>
+      <div class="hero-actions">
+        <a mat-flat-button routerLink="/onboarding/step/1" class="primary-action">
+          Setup starten
+        </a>
+        @if (hasProgress()) {
+          <a mat-button [routerLink]="['/onboarding/step', resumeStep()]">
+            Vorhandenen Stand oeffnen
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+</div>

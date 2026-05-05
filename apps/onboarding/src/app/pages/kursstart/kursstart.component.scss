@@ -1,0 +1,240 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--color-secondary) 28%, white) 0, transparent 28%),
+    radial-gradient(circle at right 20%, color-mix(in srgb, var(--color-primary) 14%, white) 0, transparent 32%),
+    var(--color-bg);
+  color: var(--color-text);
+}
+
+.intro-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.intro-page {
+  padding: 2rem 0 3rem;
+}
+
+.intro-hero {
+  padding: 1rem 0 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-copy h1,
+.section-head h2,
+.info-card h2,
+.cta-box h2,
+.hero-card h2 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.intro-shell.intro-grid,
+.intro-shell,
+.cta-box {
+  display: grid;
+}
+
+.intro-hero .intro-shell {
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.hero-copy {
+  padding: 1.5rem;
+  border-radius: 28px;
+  background: linear-gradient(155deg, color-mix(in srgb, var(--color-text) 96%, white), color-mix(in srgb, var(--color-primary) 88%, black));
+  color: var(--color-surface);
+  box-shadow: 0 30px 80px rgba(1, 32, 61, 0.18);
+}
+
+.hero-copy .eyebrow {
+  color: var(--color-secondary);
+}
+
+.hero-copy h1 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 0.98;
+  max-width: 11ch;
+}
+
+.lead {
+  margin: 1rem 0 0;
+  max-width: 58ch;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.primary-action {
+  --mdc-filled-button-container-color: var(--color-secondary);
+  --mdc-filled-button-label-text-color: var(--color-text);
+  --mat-filled-button-state-layer-color: var(--color-text);
+  font-weight: 700;
+}
+
+.hero-card,
+.info-card {
+  border-radius: 24px;
+  border-color: color-mix(in srgb, var(--color-primary) 20%, white);
+  background: color-mix(in srgb, var(--color-surface) 92%, var(--color-secondary));
+  box-shadow: 0 20px 48px rgba(52, 105, 149, 0.08);
+}
+
+.hero-card mat-card-content,
+.info-card mat-card-content {
+  padding: 1.5rem;
+}
+
+.card-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--color-primary) 84%, white);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.1rem;
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.65rem;
+  line-height: 1.55;
+}
+
+.bullet-list.compact {
+  gap: 0.4rem;
+}
+
+.intro-grid-section,
+.journey-section,
+.cta-section {
+  padding: 1rem 0 0;
+}
+
+.intro-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-head {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.journey-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.journey-item {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.15rem;
+  border-radius: 22px;
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, white);
+}
+
+.journey-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--color-primary) 12%, white);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.journey-item p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cta-box {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 90%, white), color-mix(in srgb, var(--color-text) 94%, black));
+  color: var(--color-surface);
+}
+
+.cta-box .eyebrow {
+  color: color-mix(in srgb, var(--color-secondary) 88%, white);
+}
+
+@media (max-width: 900px) {
+  .intro-hero .intro-shell,
+  .intro-grid,
+  .journey-list,
+  .cta-box {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-page {
+    padding-top: 1rem;
+  }
+
+  .intro-shell {
+    width: min(100% - 1rem, 1120px);
+  }
+
+  .hero-copy,
+  .hero-card mat-card-content,
+  .info-card mat-card-content,
+  .cta-box {
+    padding: 1.1rem;
+  }
+}

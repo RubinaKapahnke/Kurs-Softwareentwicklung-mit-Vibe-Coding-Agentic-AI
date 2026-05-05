@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
@@ -13,6 +13,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - KI-Setup erweitert (neuer Readiness-Agent, Consistency-Checks inkl. CHANGELOG/Agents, Konventions-Updates).
 - AI-Readiness-Vollausbau: QA-Skripte (test-lernfortschritt, test-links), neue Agents/Prompts, AGENTS.md auf 174 Zeilen reduziert, GitHub Action für PR-Checks.
 - Konsistenz-Check nach Session 5: Pfadfehler in Agent-Dateien und PRD behoben, alle 255 Links grün.
+- Onboarding-Website geplant: Agents, Prompts, Instructions + Brand-Setup (Session 7).
 
 ### 29.04.2026
 - Agenten-, Prompt- und Instruction-Basis eingeführt.
@@ -20,6 +21,34 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - Erste Dashboard-Grundstruktur mit PRD, Datenmodellen, Services und erster Übersichtskomponente aufgebaut.
 
 ---
+
+---
+
+## 04.05.2026 (Session 7)
+
+### Onboarding-Website: Planung, Agents, Brand-Setup
+
+**Neue Agents:**
+- `.github/agents/course-dev-onboarding-web-architect.agent.md`: Plant und baut die Onboarding-Website (Angular/M3/TypeScript) fuer absolute Einsteiger. Kombiniert Curriculum-, PO-, Readiness- und Developer-Perspektive. Delegiert bei Bedarf an Subagents.
+- `.github/agents/course-dev-onboarding-ux-text.agent.md`: Prueft Texte in `apps/onboarding/` auf Anfaengertauglichkeit nach 6 Kriterien (Satzlaenge, Fachbegriff-Erklaerung, beobachtbares Ergebnis, kein Vorwissen, Fehlerfall, aktive Sprache).
+
+**Neuer Prompt:**
+- `.github/prompts/course-dev-onboarding-mvp-scope-freeze.prompt.md`: Scope-Freeze-Tool – verhindert Feature-Drift durch verbindliche In/Out-of-Scope-Definition vor Implementierungsstart.
+
+**Neue Instructions:**
+- `.github/instructions/onboarding.instructions.md` (`applyTo: apps/onboarding/**`): Architekturregeln fuer Copilot bei Arbeit in der Onboarding-App. Enthaelt Stack (Angular Standalone, Material 3, TypeScript Strict), MVP-Scope (max. 6 Schritte), Struktur-Konvention, UX-Regeln und vollstaendiges Brand-Setup.
+
+**Brand-Setup in `onboarding.instructions.md`:**
+- 9 CSS-Tokens aus KnOot Academy Styleguide (Calypso `#346995`, Amber `#FBBE02`, Mojo `#CA4242` + Neutralfarben)
+- Kontrast-Regeln (Weiss auf Hauptfarben nur bei grosser, halbfetter Schrift)
+- Typografie: Poppins (Standard) + Recoleta (sparsam fuer Untertitel)
+- Material Design 3 (M3/MDC-based): `mat.define-theme()`, keine Legacy-APIs, keine `.mdc-*`-Klassen-Overrides
+
+**Agent-Descriptions geschaerft (4 Agents):**
+- `dashboard-po`: Trigger jetzt klar auf Anforderungen/PRD/Stories, kein Konflikt mehr mit `dashboard-developer`
+- `dashboard-developer`: Trigger auf Implementierung/Code fokussiert
+- `repo-consistency-checker`: `"repo audit"` entfernt (Konflikt mit `vibe-coding-readiness`), jetzt spezifisch auf Links/Struktur
+- `exercise-creator`: Von 6 auf 11 Trigger erweitert, deutsche Kontexte ergaenzt
 
 ## 04.05.2026 (Session 4)
 
