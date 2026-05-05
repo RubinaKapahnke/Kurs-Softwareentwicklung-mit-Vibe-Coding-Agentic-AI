@@ -9,27 +9,37 @@
   <section class="progress-panel" aria-label="Onboarding-Fortschritt">
     <div class="progress-meta">
       <strong>Fortschritt</strong>
-      <span>Freigeschaltet bis Schritt {{ maxUnlockedStep() }} von 6</span>
+      <span>{{ completedCount() }} von 6 Schritten erledigt</span>
     </div>
     <mat-progress-bar mode="determinate" [value]="progressPercent()"></mat-progress-bar>
 
-    <!-- Schritt-Navigation: freigeschaltete Schritte anklickbar -->
     <nav class="step-nav" aria-label="Schrittnavigation">
       @for (stepId of allSteps; track stepId) {
-        @if (isUnlocked(stepId)) {
-          <a
-            mat-mini-fab
-            class="step-pill step-pill--unlocked"
-            [routerLink]="['/onboarding/step', stepId]"
-            [attr.aria-label]="'Zu Schritt ' + stepId + ' springen'">
+        <a
+          mat-mini-fab
+          class="step-pill"
+          routerLinkActive="step-pill--active"
+          [class.step-pill--done]="isStepDone(stepId)"
+          [routerLink]="['/onboarding/step', stepId]"
+          [attr.aria-label]="(isStepDone(stepId) ? 'Schritt ' + stepId + ' (erledigt)' : 'Zu Schritt ' + stepId)"
+          [attr.aria-current]="isCurrentStep(stepId) ? 'step' : null">
+          @if (isStepDone(stepId) && !isCurrentStep(stepId)) {
+            <mat-icon class="step-check">check</mat-icon>
+          } @else {
             {{ stepId }}
-          </a>
-        } @else {
-          <span class="step-pill step-pill--locked" [attr.aria-label]="'Schritt ' + stepId + ' (gesperrt)'">
-            {{ stepId }}
-          </span>
-        }
+          }
+        </a>
       }
+
+      <a
+        mat-stroked-button
+        class="summary-link"
+        routerLink="/onboarding/zusammenfassung"
+        routerLinkActive="summary-link--active"
+        aria-label="Zur Zusammenfassung">
+        <mat-icon>checklist</mat-icon>
+        Zusammenfassung
+      </a>
     </nav>
   </section>
 

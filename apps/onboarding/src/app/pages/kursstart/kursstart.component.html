@@ -1,113 +1,213 @@
-<div class="intro-page">
-  <section class="intro-hero">
-    <div class="intro-shell">
-      <a routerLink="/" class="back-link">
-        <mat-icon aria-hidden="true">west</mat-icon>
-        Zur Landingpage
+﻿<div class="page" id="top">
+
+  <!-- ── Navbar ───────────────────────────────────────────────── -->
+  <header class="top-navbar" aria-label="Hauptnavigation">
+    <div class="navbar-container">
+      <a routerLink="/" class="navbar-branding">
+        <img src="assets/logos/knoot-penguin.png" alt="KnOot Academy" class="navbar-logo" />
+        <span class="navbar-title">KnOot Academy</span>
       </a>
+      <nav class="navbar-menu">
+        <a href="#inhalte" class="navbar-link">Inhalte</a>
+        <a href="#ablauf" class="navbar-link">Ablauf</a>
+        <a href="#fuer-wen" class="navbar-link">Für wen?</a>
+        <a mat-flat-button routerLink="/onboarding/step/1" class="navbar-cta">Setup starten</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="hero-copy">
-        <p class="eyebrow">Bevor du startest</p>
-        <h1>Was dich im Kurs konkret erwartet</h1>
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="hero-section">
+    <div class="shell">
+      <div class="hero-text">
+        <p class="eyebrow">Vibe Coding Foundations</p>
+        <h1>Dein Einstieg in KI-gestütztes Entwickeln</h1>
         <p class="lead">
-          Du startest nicht in einer Demo, sondern in einem echten Arbeitsfluss mit Git,
-          VS Code, Angular und GitHub Copilot. Diese Seite klaert kurz den Rahmen,
-          danach gehst du in den eigentlichen Setup-Flow.
+          Du lernst, wie echte Softwareentwicklung mit KI aussieht – nicht als Demo,
+          sondern mit Git, VS Code, Angular und GitHub Copilot in einem realen
+          Kursfluss, den du sofort nutzen kannst.
         </p>
-
         <div class="hero-actions">
-          <a mat-flat-button routerLink="/onboarding/step/1" class="primary-action">
-            Onboarding jetzt starten
+          <a mat-flat-button routerLink="/onboarding/step/1" class="btn-primary">
+            Setup starten
           </a>
           @if (hasProgress()) {
-            <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]">
+            <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]" class="btn-resume">
               Bei Schritt {{ resumeStep() }} weitermachen
             </a>
           }
+          <a mat-button routerLink="/" class="btn-back">
+            <mat-icon aria-hidden="true">west</mat-icon>
+            Zurück zur Übersicht
+          </a>
+        </div>
+
+        <div class="voucher-notice">
+          <mat-icon aria-hidden="true">vpn_key</mat-icon>
+          <div>
+            <strong>Zugang nur mit Voucher-Code</strong>
+            <p>
+              Für den Kursstart benötigst du einen persönlichen Voucher-Code.
+              Du gibst ihn direkt im ersten Onboarding-Schritt ein.
+            </p>
+            <p>
+              Noch keinen Code?
+              <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener">Kursplatz anfragen →</a>
+            </p>
+          </div>
         </div>
       </div>
 
-      <mat-card class="hero-card" appearance="outlined">
-        <mat-card-content>
-          <p class="card-kicker">Kursprofil</p>
-          <h2>Vibe Coding Foundations</h2>
-          <div class="chip-row" aria-label="Kursmerkmale">
-            <mat-chip>Angular</mat-chip>
-            <mat-chip>Git + GitHub</mat-chip>
-            <mat-chip>Copilot</mat-chip>
-            <mat-chip>Praxisnah</mat-chip>
-          </div>
-          <ul class="bullet-list">
-            @for (point of promisePoints; track point) {
-              <li>{{ point }}</li>
-            }
+      <div class="hero-facts">
+        <div class="fact-card">
+          <p class="fact-label">Kursdauer</p>
+          <p class="fact-value">6 Meilensteine</p>
+        </div>
+        <div class="fact-card">
+          <p class="fact-label">Format</p>
+          <p class="fact-value">Selbstlernend + Praxis</p>
+        </div>
+        <div class="fact-card">
+          <p class="fact-label">Ergebnis</p>
+          <p class="fact-value">Eigenes KI-Projekt</p>
+        </div>
+        <div class="fact-card fact-card--highlight">
+          <p class="fact-label">Was du danach kannst</p>
+          <ul class="fact-list">
+            <li>Mit Git &amp; GitHub im Team arbeiten</li>
+            <li>Angular-Apps mit Copilot bauen</li>
+            <li>KI sinnvoll in deinen Workflow einbinden</li>
           </ul>
-        </mat-card-content>
-      </mat-card>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="intro-grid-section">
-    <div class="intro-shell intro-grid">
-      <mat-card class="info-card" appearance="outlined">
-        <mat-card-content>
-          <p class="card-kicker">Fuer wen?</p>
-          <h2>Gut geeignet, wenn du Struktur statt Rumprobieren willst</h2>
-          <p>
-            Der Kurs passt, wenn du mit KI entwickeln willst, aber trotzdem nachvollziehbar,
-            versioniert und teamfaehig arbeiten moechtest.
-          </p>
-        </mat-card-content>
-      </mat-card>
-
-      <mat-card class="info-card" appearance="outlined">
-        <mat-card-content>
-          <p class="card-kicker">Was du brauchst</p>
-          <h2>Vor dem eigentlichen Kursstart</h2>
-          <ul class="bullet-list compact">
-            <li>einen Rechner mit Internetzugang</li>
-            <li>die Bereitschaft, Git und VS Code lokal zu nutzen</li>
-            <li>ungefaehr 6 klare Setup-Schritte ohne Fachjargon-Marathon</li>
-          </ul>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </section>
-
-  <section class="journey-section">
-    <div class="intro-shell">
+  <!-- ── Kursmodule / Inhalte ──────────────────────────────────── -->
+  <section class="modules-section" id="inhalte">
+    <div class="shell">
       <div class="section-head">
-        <p class="eyebrow">Dein Weg</p>
-        <h2>So laeuft das Onboarding danach ab</h2>
+        <p class="eyebrow">Kursinhalt</p>
+        <h2>Was du in 6 Modulen lernst</h2>
+        <p class="section-sub">
+          Jedes Modul hat ein klares Ziel, sichtbare Übungen und direkte Verbindung
+          zum nächsten Schritt – kein Theorie-Block ohne Praxisbezug.
+        </p>
       </div>
 
-      <div class="journey-list" aria-label="Onboarding-Schritte">
-        @for (step of onboardingSteps; track step; let index = $index) {
-          <article class="journey-item">
-            <span class="journey-number">0{{ index + 1 }}</span>
-            <p>{{ step }}</p>
+      <div class="modules-grid">
+        @for (mod of courseModules; track mod.title) {
+          <article class="module-card">
+            <div class="module-icon-wrap">
+              <mat-icon aria-hidden="true">{{ mod.icon }}</mat-icon>
+            </div>
+            <h3>{{ mod.title }}</h3>
+            <ul class="module-topics">
+              @for (t of mod.topics; track t) {
+                <li>{{ t }}</li>
+              }
+            </ul>
           </article>
         }
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <div class="intro-shell cta-box">
-      <div>
-        <p class="eyebrow">Naechster Schritt</p>
-        <h2>Wenn das fuer dich passt, geh jetzt in den Setup-Flow.</h2>
+  <!-- ── Onboarding-Ablauf ──────────────────────────────────────── -->
+  <section class="journey-section" id="ablauf">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow">Setup in 6 Schritten</p>
+        <h2>So richtest du deine Umgebung ein</h2>
+        <p class="section-sub">
+          Bevor du mit dem Kurs beginnst, richtest du einmalig deine Arbeitsumgebung ein.
+          Das dauert ca. 20–40 Minuten und ist danach für alle Kurse nutzbar.
+        </p>
       </div>
-      <div class="hero-actions">
-        <a mat-flat-button routerLink="/onboarding/step/1" class="primary-action">
+
+      <div class="journey-grid">
+        @for (step of onboardingSteps; track step.label; let i = $index) {
+          <article class="journey-card">
+            <span class="step-num">{{ i + 1 }}</span>
+            <div>
+              <p class="step-label">{{ step.label }}</p>
+              <p class="step-detail">{{ step.detail }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Für wen ────────────────────────────────────────────────── -->
+  <section class="audience-section" id="fuer-wen">
+    <div class="shell audience-shell">
+      <div class="audience-text">
+        <p class="eyebrow">Für wen?</p>
+        <h2>Gut geeignet, wenn du Struktur statt Rumprobieren willst</h2>
+        <p>
+          Der Kurs ist für alle, die mit KI entwickeln wollen – aber trotzdem
+          nachvollziehbar, versioniert und teamfähig arbeiten möchten.
+          Kein Vorwissen in Angular oder Git erforderlich.
+        </p>
+        <ul class="audience-list">
+          @for (a of targetAudience; track a.label) {
+            <li>
+              <mat-icon aria-hidden="true">{{ a.icon }}</mat-icon>
+              {{ a.label }}
+            </li>
+          }
+        </ul>
+      </div>
+      <div class="prereq-card">
+        <p class="card-kicker">Das brauchst du</p>
+        <ul class="prereq-list">
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Rechner mit Internetzugang
+          </li>
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Bereitschaft, Git und VS Code zu nutzen
+          </li>
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Ca. 30 Min. für das einmalige Setup
+          </li>
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Keine Programmiererfahrung nötig
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="shell cta-inner">
+      <div>
+        <p class="eyebrow eyebrow--light">Bereit?</p>
+        <h2>Starte jetzt mit dem Setup – dauert ca. 30 Minuten.</h2>
+      </div>
+      <div class="cta-actions">
+        <a mat-flat-button routerLink="/onboarding/step/1" class="btn-primary btn-primary--lg">
           Setup starten
         </a>
         @if (hasProgress()) {
-          <a mat-button [routerLink]="['/onboarding/step', resumeStep()]">
-            Vorhandenen Stand oeffnen
+          <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]" class="btn-resume-cta">
+            Fortfahren (Schritt {{ resumeStep() }})
           </a>
         }
       </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span class="footer-logo">KnOot Academy</span>
+      <span>&copy; 2026</span>
+    </div>
+  </footer>
+
 </div>

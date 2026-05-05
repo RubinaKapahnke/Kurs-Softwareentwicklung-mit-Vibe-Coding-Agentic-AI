@@ -14,7 +14,7 @@ import { OnboardingStateService } from '../../services/onboarding-state.service'
 export class StartseiteComponent {
   private readonly state = inject(OnboardingStateService);
 
-  readonly maxUnlockedStep = this.state.maxUnlockedStep;
-  readonly hasProgress = computed(() => this.state.maxUnlockedStep() > 1);
-  readonly isCompleted = computed(() => this.state.maxUnlockedStep() >= 6);
+  readonly completedCount = computed(() => this.state.getCompletedCount());
+  readonly hasProgress = computed(() => this.state.getCompletedCount() > 0);
+  readonly isCompleted = computed(() => this.state.getCompletedCount() >= 6);
 }

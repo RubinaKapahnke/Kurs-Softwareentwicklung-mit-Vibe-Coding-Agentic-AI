@@ -42,6 +42,7 @@
   gap: 0.5rem;
   margin-top: 0.75rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .step-pill {
@@ -54,22 +55,58 @@
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
+  background-color: color-mix(in srgb, var(--color-primary) 10%, white) !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
 
-  &--unlocked {
-    background-color: var(--color-primary) !important;
-    color: #fff !important;
-    box-shadow: 0 1px 4px color-mix(in srgb, var(--color-primary) 35%, transparent);
-    text-decoration: none;
+  &:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, white) !important;
+    box-shadow: 0 2px 6px color-mix(in srgb, var(--color-primary) 25%, transparent) !important;
+  }
+
+  &--done {
+    background-color: #e8f5e9 !important;
+    border-color: #2e7d32 !important;
+    color: #2e7d32 !important;
+
+    .step-check {
+      font-size: 16px;
+      height: 16px;
+      width: 16px;
+    }
 
     &:hover {
-      background-color: var(--color-primary-dark, #264d75) !important;
+      background-color: #c8e6c9 !important;
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2) !important;
     }
   }
 
-  &--locked {
-    background-color: color-mix(in srgb, var(--color-text) 12%, transparent);
-    color: color-mix(in srgb, var(--color-text) 40%, transparent);
+  &--active {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 40%, transparent) !important;
     cursor: default;
+    pointer-events: none;
+  }
+}
+
+.summary-link {
+  margin-left: 0.25rem;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 0.75rem;
+  font-size: 0.82rem;
+  border-color: color-mix(in srgb, var(--color-primary) 40%, white) !important;
+  color: var(--color-primary) !important;
+  transition: background 0.15s;
+
+  mat-icon { font-size: 16px; height: 16px; width: 16px; margin-right: 0.2rem; }
+
+  &--active, &:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 8%, white) !important;
   }
 }
 

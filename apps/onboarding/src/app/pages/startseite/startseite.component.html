@@ -25,18 +25,18 @@
             @if (isCompleted()) {
               Onboarding abgeschlossen - du kannst direkt wieder in den Kursfluss springen.
             } @else {
-              Du hast bereits begonnen. Dein nächster freigeschalteter Schritt ist {{ maxUnlockedStep() }}.
+              Du hast {{ completedCount() }} von 6 Schritten abgeschlossen.
             }
           </strong>
         </div>
         <a
           mat-stroked-button
-          [routerLink]="isCompleted() ? '/kursstart' : ['/onboarding/step', maxUnlockedStep()]"
+          [routerLink]="isCompleted() ? '/kursstart' : '/onboarding/zusammenfassung'"
           class="resume-action">
           @if (isCompleted()) {
             Kursfluss öffnen
           } @else {
-            Weiter bei Schritt {{ maxUnlockedStep() }}
+            Zur Zusammenfassung
           }
         </a>
       </div>

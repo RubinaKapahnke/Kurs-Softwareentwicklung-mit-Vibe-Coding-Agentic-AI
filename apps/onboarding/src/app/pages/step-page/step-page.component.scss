@@ -33,6 +33,7 @@
 .actions {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   padding: 1rem;
 }
 
@@ -44,6 +45,25 @@
   margin-right: 0.5rem;
 }
 
+.done-btn {
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+
+  mat-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    transition: color 0.2s;
+  }
+}
+
+.done-btn--done {
+  background: color-mix(in srgb, #2e7d32 8%, white);
+  border-color: #2e7d32 !important;
+  color: #2e7d32 !important;
+
+  mat-icon { color: #2e7d32; }
+}
+
 /* Schritt 2 – Erfahrungsabfrage */
 .experience-check {
   background: color-mix(in srgb, var(--color-primary) 5%, white);
@@ -52,36 +72,322 @@
   margin-bottom: 0.5rem;
 }
 
-.exp-desc {
-  font-size: 0.95rem;
-  color: color-mix(in srgb, var(--color-text) 70%, transparent);
-  margin: 0 0 1rem;
+// ── Eingangsfrage (prominent) ─────────────────────────────────────────────────
+.entry-question {
+  margin: 0;
+  padding: 2rem 1.5rem 1.75rem;
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--color-text) 94%, white),
+    color-mix(in srgb, var(--color-primary) 86%, black));
+  border-radius: 0;
 }
 
-.exp-buttons {
+.entry-question__kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--color-secondary) 88%, white);
+}
+
+.entry-question__heading {
+  margin: 0 0 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.entry-question__sub {
+  margin: 0 0 1.5rem;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.92rem;
+}
+
+.entry-question__options {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
 
-  button {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1.25rem;
-    border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
-    color: var(--color-text);
-    transition: background 0.15s, border-color 0.15s;
+.entry-option {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0.9rem 1.2rem !important;
+  min-width: 200px;
+  height: auto !important;
+  border-color: rgba(255,255,255,0.3) !important;
+  color: rgba(255,255,255,0.85) !important;
+  border-radius: 14px !important;
+  text-align: left;
+  line-height: 1.3;
+  transition: background 0.15s, border-color 0.15s;
 
-    &.exp-selected {
-      background: color-mix(in srgb, var(--color-primary) 12%, white);
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-      font-weight: 600;
+  mat-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  &:hover {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: rgba(255,255,255,0.6) !important;
+  }
+
+  &.entry-option--selected {
+    background: rgba(251,190,2,0.18) !important;
+    border-color: var(--color-secondary) !important;
+    color: #fff !important;
+    mat-icon { color: var(--color-secondary); }
+  }
+
+  &.entry-option--info {
+    border-style: dashed !important;
+    border-color: rgba(255,255,255,0.22) !important;
+    color: rgba(255,255,255,0.65) !important;
+    &:hover { border-color: rgba(255,255,255,0.5) !important; color: rgba(255,255,255,0.9) !important; }
+    &.entry-option--active {
+      background: rgba(255,255,255,0.08) !important;
+      border-style: solid !important;
+      border-color: rgba(255,255,255,0.4) !important;
+      color: #fff !important;
     }
   }
 }
 
-/* GitHub-Sichtbarkeitswarnung */
+.entry-option__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.entry-option__label {
+  font-weight: 600;
+  font-size: 0.93rem;
+  display: block;
+}
+
+.entry-option__desc {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: 400;
+  display: block;
+}
+
+// ── Sicherheitshinweis ────────────────────────────────────────────────────────
+.security-hint {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--color-primary) 5%, white);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, white);
+  margin: 0.5rem 0;
+  font-size: 0.88rem;
+
+  mat-icon {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 0.1rem;
+  }
+
+  strong { display: block; margin-bottom: 0.35rem; font-size: 0.92rem; }
+  p { margin: 0 0 0.4rem; line-height: 1.6; &:last-child { margin-bottom: 0; } }
+}
+
+// ── GitHub-Erklärer ───────────────────────────────────────────────────────────
+.github-explainer {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.92rem;
+  line-height: 1.65;
+
+  p { margin: 0 0 0.75rem; }
+  ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+    li { margin-bottom: 0.3rem; }
+  }
+  a { color: var(--color-secondary); }
+  strong { color: #fff; }
+  em { color: rgba(255,255,255,0.75); font-style: normal; font-weight: 500; }
+}
+
+.github-explainer__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  strong { font-size: 1rem; }
+  mat-icon { color: var(--color-secondary); }
+}
+
+.github-explainer__action {
+  margin-top: 1rem;
+}
+
+.btn-start-new {
+  --mdc-filled-button-container-color: var(--color-secondary);
+  --mdc-filled-button-label-text-color: var(--color-text);
+  font-weight: 700;
+}
+
+/* ── Voucher-Gate (Schritt 1) ── */
+.voucher-sub-question {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+}
+
+.voucher-input-block {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+}
+
+.voucher-input-block__label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+
+  mat-icon { font-size: 18px; }
+}
+
+.voucher-input-block__row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.voucher-input {
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  height: 40px;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+  border-radius: 8px;
+  outline: none;
+  color: var(--color-text);
+  background: white;
+  transition: border-color 0.15s;
+
+  &:focus {
+    border-color: var(--color-primary);
+  }
+}
+
+.voucher-error {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #c0392b;
+
+  mat-icon { font-size: 18px; }
+}
+
+.voucher-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+
+  mat-icon { font-size: 16px; flex-shrink: 0; }
+}
+
+.voucher-success {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 0.9rem 1.1rem;
+  background: color-mix(in srgb, #27ae60 8%, white);
+  border: 1px solid color-mix(in srgb, #27ae60 35%, transparent);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  mat-icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    margin-top: 0.05rem;
+    color: #27ae60;
+  }
+
+  strong { display: block; margin-bottom: 0.2rem; font-size: 0.92rem; color: #1e8449; }
+  p { margin: 0; color: var(--color-text); }
+}
+
+.contact-info-block {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  background: color-mix(in srgb, var(--color-secondary) 8%, white);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, transparent);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.contact-info-block__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+
+  mat-icon { color: color-mix(in srgb, var(--color-secondary) 70%, var(--color-text)); }
+}
+
+.contact-message-box {
+  margin-top: 0.75rem;
+  background: white;
+  border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-message-box__text {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  color: var(--color-text);
+}
+
+.copy-btn {
+  width: 100%;
+  border-radius: 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+  font-size: 0.85rem;
+}
+
+
 .visibility-warning {
   background: color-mix(in srgb, var(--color-accent) 8%, white);
   border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
@@ -133,47 +439,383 @@
   text-decoration: underline;
 }
 
+// ── Git-Schritt Intro ─────────────────────────────────────────────────────────
+.git-intro-section {
+  padding: 1rem 0 0.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.git-intro-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.git-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+// ── OS Tabs ───────────────────────────────────────────────────────────────────
+.os-tabs {
+  .tab-icon {
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+    margin-right: 0.3rem;
+    vertical-align: middle;
+  }
+}
+
+.os-tab-content {
+  padding: 1.1rem 0.25rem 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+
+  p { margin: 0 0 0.65rem; &:last-child { margin-bottom: 0; } }
+  ol { margin: 0 0 0.65rem; padding-left: 1.25rem; li { margin-bottom: 0.4rem; } }
+  ul { margin: 0 0 0.5rem; padding-left: 1.25rem; }
+}
+
+.os-hint {
+  font-size: 0.87rem;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+  margin: 0 0 0.4rem !important;
+}
+
+.install-option {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-primary) 4%, white);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 14%, white);
+  margin-bottom: 0.75rem;
+}
+
+.install-option--recommended {
+  background: color-mix(in srgb, var(--color-secondary) 8%, white);
+  border-color: color-mix(in srgb, var(--color-secondary) 40%, white);
+}
+
+.install-option__label {
+  margin: 0 0 0.5rem !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: color-mix(in srgb, var(--color-primary) 80%, black);
+}
+
+.install-option--recommended .install-option__label {
+  color: color-mix(in srgb, var(--color-secondary) 60%, var(--color-text));
+}
+
+.code-inline {
+  display: inline;
+  font-family: monospace;
+  font-size: 0.88em;
+  background: color-mix(in srgb, var(--color-primary) 8%, white);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, white);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+}
+
+.code-block {
+  display: block;
+  font-family: monospace;
+  font-size: 0.88rem;
+  background: color-mix(in srgb, var(--color-text) 6%, white);
+  border: 1px solid color-mix(in srgb, var(--color-text) 14%, white);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.4rem;
+}
+
+// ── Linux no-support ──────────────────────────────────────────────────────────
+.os-tab-content--no-support {
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+
+.no-support-banner {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--color-text) 5%, white);
+  border: 1px solid color-mix(in srgb, var(--color-text) 18%, white);
+  border-radius: 10px;
+  margin-bottom: 0.85rem;
+  font-size: 0.88rem;
+
+  mat-icon { flex-shrink: 0; color: color-mix(in srgb, var(--color-text) 50%, transparent); margin-top: 0.1rem; }
+  strong { display: block; margin-bottom: 0.3rem; }
+  p { margin: 0; line-height: 1.55; }
+}
+
+.linux-cmds {
+  margin: 0.25rem 0 0.75rem;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+
+  li {
+    font-size: 0.88rem;
+    code {
+      font-family: monospace;
+      background: color-mix(in srgb, var(--color-text) 6%, white);
+      border-radius: 4px;
+      padding: 0.1em 0.4em;
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+.git-explain-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px dashed color-mix(in srgb, var(--color-primary) 35%, transparent);
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: background 0.15s, border-color 0.15s;
+  align-self: flex-start;
+
+  mat-icon { font-size: 18px; width: 18px; height: 18px; }
+
+  &:hover {
+    background: color-mix(in srgb, var(--color-primary) 6%, white);
+    border-color: var(--color-primary);
+  }
+
+  &.git-explain-toggle--open {
+    background: color-mix(in srgb, var(--color-primary) 8%, white);
+    border-style: solid;
+    border-color: var(--color-primary);
+  }
+}
+
+.git-explainer {
+  padding: 1.1rem 1.25rem;
+  background: color-mix(in srgb, var(--color-primary) 5%, white);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, white);
+  border-radius: 12px;
+  font-size: 0.91rem;
+  line-height: 1.65;
+
+  p { margin: 0 0 0.65rem; &:last-of-type { margin-bottom: 0; } }
+  ul {
+    margin: 0 0 0.65rem;
+    padding-left: 1.2rem;
+    li { margin-bottom: 0.25rem; }
+  }
+  strong { color: var(--color-primary-dark, var(--color-text)); }
+  em { font-style: normal; font-weight: 600; color: var(--color-primary); }
+}
+
+.git-explainer__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  strong { font-size: 0.97rem; }
+  mat-icon { color: var(--color-primary); }
+}
+
+.git-nowwhat-hint {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  background: color-mix(in srgb, var(--color-secondary) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 35%, white);
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  mat-icon {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    color: color-mix(in srgb, var(--color-secondary) 70%, var(--color-text));
+    font-size: 20px;
+  }
+
+  strong { display: block; margin-bottom: 0.4rem; font-size: 0.92rem; }
+  p { margin: 0 0 0.5rem; &:last-child { margin-bottom: 0; } }
+}
+
+/* Walkthrough-Abschnitte (Schritt 2, 3) */
+.walkthrough-section {
+  padding: 0.25rem 0 0.5rem;
+}
+
+.walkthrough-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem;
+}
+
+.walkthrough-steps {
+  margin: 0;
+  padding-left: 1.4rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text);
+
+  li { margin-bottom: 0.35rem; }
+  code { font-size: 0.85em; }
+}
+
+/* Einladungs-Hinweis (Schritt 3) */
+.invite-hint {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--color-primary) 6%, white);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  mat-icon {
+    flex-shrink: 0;
+    font-size: 20px;
+    margin-top: 0.05rem;
+    color: var(--color-primary);
+  }
+
+  p { margin: 0; }
+}
+
+/* Übungs-Abschnitte (Schritt 4) */
+.exercise-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exercise-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exercise-item__num {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+  background: var(--color-primary);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  align-self: flex-start;
+}
+
+.exercise-item__title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.exercise-trainer-note {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--color-secondary) 12%, white);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, white);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  mat-icon {
+    flex-shrink: 0;
+    font-size: 20px;
+    margin-top: 0.05rem;
+    color: color-mix(in srgb, var(--color-secondary) 80%, var(--color-text));
+  }
+
+  strong { display: block; margin-bottom: 0.3rem; font-size: 0.92rem; }
+  p { margin: 0; }
+}
+
+/* VS Code & Terminal (Schritt 5) */
+.vscode-install-section,
+.terminal-check-section {
+  padding: 0.5rem 0;
+}
+
+.section-subtitle {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem;
+}
+
 /* Brücke (Schritt 6) */
 .bridge-section {
   background: color-mix(in srgb, var(--color-primary) 5%, white);
   border-radius: 12px;
   padding: 1.25rem;
-}
 
-.bridge-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 0.75rem;
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+  .walkthrough-steps {
+    margin-bottom: 0;
   }
 }
 
-.bridge-col {
-  strong {
-    display: block;
-    font-size: 1rem;
-    color: var(--color-primary);
-    margin-bottom: 0.4rem;
+.invite-pending-notice {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.75rem;
+  padding: 1rem 1.1rem;
+  background: color-mix(in srgb, #f0a500 10%, white);
+  border: 1px solid color-mix(in srgb, #f0a500 40%, transparent);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  > mat-icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    margin-top: 0.1rem;
+    color: #b37400;
   }
 
-  p {
-    font-size: 0.9rem;
-    margin: 0 0 0.75rem;
-    color: var(--color-text);
-    line-height: 1.5;
+  strong { font-size: 0.92rem; display: block; margin-bottom: 0.4rem; }
+
+  ul {
+    margin: 0.4rem 0 0.75rem;
+    padding-left: 1.2rem;
+    li { margin-bottom: 0.35rem; }
   }
 }
 
-.bridge-steps {
+.invite-pending-sub {
   margin: 0;
-  padding-left: 1.25rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--color-text);
+  font-size: 0.82rem;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
 }
+
+.bridge-prereq {
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--color-text) 65%, transparent);
+}
+
 
 .skip-block {
   margin-top: 1.5rem;

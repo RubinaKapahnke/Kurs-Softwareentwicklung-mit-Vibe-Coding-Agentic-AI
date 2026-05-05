@@ -31,48 +31,94 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   },
   {
     id: 2,
-    title: 'Git installieren',
-    goal: 'Du installierst Git lokal auf deinem Rechner.',
+    title: 'Eigenes Übungs-Repo anlegen',
+    goal: 'Du erstellst dein erstes eigenes Repository auf GitHub – hier machst du alle Übungen.',
     tasks: [
-      'Lade Git für dein Betriebssystem von git-scm.com herunter.',
-      'Starte den Installer und übernimm die Standardoptionen.',
-      'Schließe die Installation ab.'
+      'Lege auf GitHub ein neues Repository an (Private reicht – die Trainerin wird eingeladen).',
+      'Wähle einen Namen wie mein-vibe-coding und aktiviere die README-Datei.',
+      'Prüfe, dass dein Repo angelegt ist und eine README.md enthält.'
     ],
     fallbackHelp: [
       {
-        title: 'Installer startet nicht',
-        detail: 'Lade die Datei erneut herunter und starte sie mit Rechtsklick als Administrator.'
+        title: 'Das „+" fehlt oben rechts',
+        detail: 'Stelle sicher, dass du eingeloggt bist. Das + ist oben rechts in der GitHub-Toolbar.'
       },
       {
-        title: 'Unklar bei Optionen',
-        detail: 'Nutze durchgehend die Standardwerte, das reicht für den Kurs.'
+        title: 'Repository-Name ist vergeben',
+        detail: 'Füge einfach eine Zahl hinzu, z. B. mein-vibe-coding-2025.'
       }
     ],
-    successCriterion: 'Der Befehl git --version zeigt eine Versionsnummer.',
+    successCriterion: 'Dein Repository ist auf github.com angelegt und enthält eine README.md.'
+  },
+  {
+    id: 3,
+    title: 'Trainerin einladen',
+    goal: 'Du gibst der Trainerin Zugriff auf dein Repo, damit sie deine Übungen sehen und freigeben kann.',
+    tasks: [
+      'Öffne die Settings deines Repos auf GitHub.',
+      'Gehe zu Collaborators und sende eine Einladung an RubinaKapahnke.',
+      'Warte auf die Bestätigung – die Trainerin nimmt die Einladung per E-Mail an.'
+    ],
+    fallbackHelp: [
+      {
+        title: '"Collaborators" nicht sichtbar',
+        detail: 'Du musst Owner des Repos sein. Prüfe, ob du in deinem eigenen Repo bist – nicht im Kurs-Repo.'
+      },
+      {
+        title: 'Profil erscheint nicht beim Tippen',
+        detail: 'Tippe den Benutzernamen vollständig: RubinaKapahnke – Groß-/Kleinschreibung beachten.'
+      }
+    ],
+    successCriterion: 'Die Einladung wurde gesendet. Du siehst in Collaborators den Status „Pending invite".'
+  },
+  {
+    id: 4,
+    title: 'Erste Übungen im eigenen Repo',
+    goal: 'Du machst deine ersten GitHub-Aktionen direkt im Browser – ohne lokale Installation.',
+    tasks: [
+      'Lege die Datei uebung-01.md in deinem Repo an und committe sie.',
+      'Bearbeite die README.md und ergänze eine Zeile über dich.',
+      'Prüfe, dass beide Commits in der Commit-Historie deines Repos sichtbar sind.'
+    ],
+    fallbackHelp: [
+      {
+        title: 'Ich sehe kein „Add file"',
+        detail: 'Gehe zur Hauptseite deines Repos (Code-Tab). Der Button ist direkt über der Dateiliste.'
+      },
+      {
+        title: 'Commit-Button ist ausgegraut',
+        detail: 'Füge zuerst Inhalt in die Datei ein – leere Dateien können nicht committet werden.'
+      }
+    ],
+    successCriterion:
+      'Dein Repo enthält mindestens 2 Commits. Die Trainerin kann sie sehen und gibt grünes Licht für Schritt 5.'
+  },
+  {
+    id: 5,
+    title: 'Git & VS Code installieren',
+    goal: 'Du installierst die lokalen Werkzeuge und prüfst, dass alles funktioniert.',
+    tasks: [
+      'Installiere Git von git-scm.com (alle Standardoptionen übernehmen).',
+      'Installiere VS Code von code.visualstudio.com.',
+      'Öffne das Terminal in VS Code und bestätige: git --version zeigt eine Versionsnummer.'
+    ],
+    fallbackHelp: [
+      {
+        title: 'git --version liefert Fehler',
+        detail: 'Starte VS Code nach der Git-Installation komplett neu (schließen und wieder öffnen).'
+      },
+      {
+        title: 'Terminal nicht sichtbar in VS Code',
+        detail: 'Menü Terminal → Neues Terminal. Oder Tastenkombination Strg+` (Windows) / Ctrl+` (Mac).'
+      }
+    ],
+    successCriterion:
+      'Im VS-Code-Terminal zeigt git --version eine gültige Versionsnummer (z. B. git version 2.x.x).',
     resources: [
       {
         label: 'Git Download',
         href: 'https://git-scm.com/downloads'
-      }
-    ]
-  },
-  {
-    id: 3,
-    title: 'VS Code installieren',
-    goal: 'Du installierst VS Code und startest den Editor erfolgreich.',
-    tasks: [
-      'Lade VS Code von code.visualstudio.com herunter.',
-      'Installiere VS Code mit den empfohlenen Optionen.',
-      'Starte VS Code nach Abschluss der Installation.'
-    ],
-    fallbackHelp: [
-      {
-        title: 'VS Code öffnet nicht',
-        detail: 'Starte den Rechner neu und öffne VS Code erneut über das Startmenü.'
-      }
-    ],
-    successCriterion: 'VS Code ist geöffnet und zeigt ein leeres Startfenster.',
-    resources: [
+      },
       {
         label: 'VS Code Download',
         href: 'https://code.visualstudio.com/'
@@ -80,78 +126,43 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ]
   },
   {
-    id: 4,
-    title: 'Terminal öffnen und prüfen',
-    goal: 'Du öffnest das Terminal in VS Code und prüfst Git dort.',
+    id: 6,
+    title: 'Kurs-Repo klonen',
+    goal: 'Du klonst das gemeinsame Kurs-Repository auf deinen Rechner und öffnest es in VS Code.',
     tasks: [
-      'Öffne in VS Code das Menü Terminal und wähle Neues Terminal.',
-      'Führe den Befehl git --version aus.',
-      'Prüfe, ob eine Versionsnummer angezeigt wird.'
+      'Warte auf die Einladung zum Kurs-Repo von der Trainerin (kommt per GitHub-Benachrichtigung).',
+      'Kopiere die HTTPS-Clone-URL des Kurs-Repos auf GitHub.',
+      'Führe im VS-Code-Terminal git clone <URL> aus und öffne den Ordner.'
     ],
     fallbackHelp: [
       {
-        title: 'Terminal nicht sichtbar',
-        detail: 'Nutze die Tastenkombination Strg+` oder View > Terminal.'
+        title: 'Einladung noch nicht da',
+        detail: 'Schau in deinen GitHub-Benachrichtigungen nach – oder kontaktiere die Trainerin direkt.'
       },
       {
-        title: 'git wird nicht erkannt',
-        detail: 'Schließe VS Code komplett und öffne es nach der Git-Installation neu.'
-      }
-    ],
-    successCriterion: 'Im VS-Code-Terminal erscheint bei git --version eine gültige Version.'
-  },
-  {
-    id: 5,
-    title: 'Repo klonen',
-    goal: 'Du klonst das Kurs-Repository lokal und öffnest es in VS Code.',
-    tasks: [
-      'Kopiere auf GitHub die HTTPS-Clone-URL des Kurs-Repos.',
-      'Führe im Terminal git clone <repo-url> aus.',
-      'Wechsle in den Ordner mit cd vibe-coding-0426 und öffne ihn mit code .'
-    ],
-    fallbackHelp: [
-      {
-        title: 'Fehler bei git clone',
-        detail: 'Prüfe, ob die URL korrekt kopiert wurde und ob Internetzugang besteht.'
+        title: 'git clone schlägt fehl',
+        detail: 'Stelle sicher, dass du die HTTPS-URL kopiert hast (nicht SSH) und ins Kurs-Repo eingeladen bist.'
       },
       {
         title: 'code . funktioniert nicht',
-        detail: 'Öffne den Ordner in VS Code über Datei > Ordner öffnen.'
-      }
-    ],
-    successCriterion: 'Der lokale Ordner vibe-coding-0426 ist in VS Code geöffnet.'
-  },
-  {
-    id: 6,
-    title: 'Einstieg in den Kursfluss',
-    goal: 'Du wechselst direkt aus dem Onboarding in den regulären Kursablauf.',
-    tasks: [
-      'Öffne NEXT_STEPS.md und lies den aktuellen Meilenstein.',
-      'Öffne danach README_UEBUNGEN.md und prüfe deinen Übungs-Workflow.',
-      'Notiere den ersten kleinen nächsten Schritt aus dem aktuellen Meilenstein.'
-    ],
-    fallbackHelp: [
-      {
-        title: 'Datei nicht direkt gefunden',
-        detail: 'Nutze in VS Code Strg+P und tippe den Dateinamen ein.'
+        detail: 'Öffne den Ordner in VS Code über Datei → Ordner öffnen.'
       }
     ],
     successCriterion:
-      'Du hast NEXT_STEPS.md geöffnet und kennst deinen konkreten nächsten Kursschritt.',
+      'Der Kurs-Ordner ist in VS Code geöffnet. Du siehst NEXT_STEPS.md in der Dateiliste.',
     resources: [
       {
-        label: 'NEXT_STEPS.md auf GitHub',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
+        label: 'Kurs-Repo auf GitHub',
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426'
       },
       {
-        label: 'README_UEBUNGEN.md auf GitHub',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/uebungen/README_UEBUNGEN.md'
+        label: 'NEXT_STEPS.md',
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
       }
     ],
     vscodeHint: [
-      'Drücke Strg+P in VS Code (Windows: Ctrl+P, Mac: Cmd+P).',
-      'Tippe NEXT_STEPS.md und bestätige mit Enter.',
-      'Wiederhole es mit README_UEBUNGEN.md.'
+      'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
+      'Tippe NEXT_STEPS.md und bestätige mit Enter.'
     ]
   }
 ] as const;

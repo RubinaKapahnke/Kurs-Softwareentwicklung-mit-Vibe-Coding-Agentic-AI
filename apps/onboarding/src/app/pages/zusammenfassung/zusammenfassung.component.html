@@ -1,0 +1,73 @@
+<mat-card class="summary-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Onboarding-Zusammenfassung</mat-card-title>
+    <mat-card-subtitle>
+      {{ completedCount() }} von 6 Schritten als erledigt markiert
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    @if (allDone()) {
+      <div class="all-done-banner">
+        <mat-icon>celebration</mat-icon>
+        <div>
+          <strong>Alles erledigt!</strong>
+          <p>Du hast alle Setup-Schritte abgeschlossen. Herzlich willkommen im Kurs!</p>
+        </div>
+      </div>
+    } @else {
+      <div class="pending-banner">
+        <mat-icon>info</mat-icon>
+        <div>
+          <strong>Noch nicht ganz fertig</strong>
+          <p>
+            {{ 6 - completedCount() }} Schritt{{ (6 - completedCount()) === 1 ? '' : 'e' }}
+            {{ (6 - completedCount()) === 1 ? 'ist' : 'sind' }} noch nicht als erledigt markiert.
+            Klicke auf einen Schritt, um ihn abzuschließen.
+          </p>
+        </div>
+      </div>
+    }
+
+    <ul class="step-list">
+      @for (step of steps; track step.id) {
+        <li class="step-item" [class.step-item--done]="isStepDone(step.id)">
+          <div class="step-item__status">
+            @if (isStepDone(step.id)) {
+              <mat-icon class="icon-done">check_circle</mat-icon>
+            } @else {
+              <mat-icon class="icon-pending">radio_button_unchecked</mat-icon>
+            }
+          </div>
+          <div class="step-item__body">
+            <span class="step-item__num">Schritt {{ step.id }}</span>
+            <span class="step-item__title">{{ step.title }}</span>
+          </div>
+          @if (!isStepDone(step.id)) {
+            <a
+              mat-stroked-button
+              class="step-item__cta"
+              [routerLink]="['/onboarding/step', step.id]">
+              Erledigen
+              <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+            </a>
+          }
+        </li>
+      }
+    </ul>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    @if (allDone()) {
+      <a mat-flat-button routerLink="/">
+        <mat-icon>school</mat-icon>
+        Zum Kurs
+      </a>
+    }
+    <a mat-button routerLink="/onboarding/step/1">
+      Zurück zu Schritt 1
+    </a>
+  </mat-card-actions>
+</mat-card>

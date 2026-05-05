@@ -1,19 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingStep } from '../../models/onboarding.models';
-import { OnboardingStateService, Step2ExperienceChoice } from '../../services/onboarding-state.service';
-import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialog.component';
+import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } from '../../services/onboarding-state.service';
 
 @Component({
   selector: 'app-step-page',
@@ -22,10 +21,10 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
-    MatDialogModule,
     MatDividerModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule
   ],
   templateUrl: './step-page.component.html',
   styleUrl: './step-page.component.scss'
@@ -33,7 +32,6 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
 export class StepPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
-  private readonly dialog = inject(MatDialog);
   readonly state = inject(OnboardingStateService);
   private readonly routeParamMap = toSignal(this.route.paramMap, {
     initialValue: this.route.snapshot.paramMap
@@ -47,22 +45,76 @@ export class StepPageComponent {
   readonly canGoBack = computed(() => this.step().id > 1);
 
   readonly isAccountChoiceStep = computed(() => this.step().id === 1);
+  readonly isOwnRepoStep = computed(() => this.step().id === 2);
+  readonly isInviteStep = computed(() => this.step().id === 3);
+  readonly isExerciseStep = computed(() => this.step().id === 4);
+  readonly isSetupStep = computed(() => this.step().id === 5);
   readonly isBrueckeStep = computed(() => this.step().id === 6);
 
-  /** Schritt gilt als erledigt wenn der nächste bereits freigeschaltet ist */
+  // Voucher-Gate
+  readonly showVoucherInput = computed(() => {
+    const status = this.state.participationStatus();
+    const hasVoucher = this.state.hasVoucherAnswer();
+    return status === 'active' || (status === 'new' && hasVoucher === true);
+  });
+  readonly showContactInfo = computed(() =>
+    this.state.participationStatus() === 'new' && this.state.hasVoucherAnswer() === false
+  );
+  readonly voucherInput = signal('');
+  readonly voucherError = signal(false);
+  readonly voucherCopied = signal(false);
+
+  /** Schritt gilt als erledigt wenn er explizit markiert wurde */
   readonly isCurrentStepDone = computed(
-    () => this.state.maxUnlockedStep() > this.step().id
+    () => this.state.isStepDone(this.step().id)
   );
 
   readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
 
-  /** "Als erledigt markieren" nur beim GitHub-Einstieg blockiert, bis die Auswahl gesetzt ist */
+  /** Inline-Erklärung "Was ist GitHub?" */
+  readonly showGithubExplanation = signal(false);
+  toggleGithubExplanation(): void {
+    this.showGithubExplanation.update(v => !v);
+  }
+
+  /** Inline-Erklärung "Was ist Git?" */
+  readonly showGitExplanation = signal(false);
+  toggleGitExplanation(): void {
+    this.showGitExplanation.update(v => !v);
+  }
+
+  /** "Als erledigt markieren" blockiert bis Voucher validiert UND Auswahl getroffen */
   readonly isDoneDisabled = computed(
-    () => this.isAccountChoiceStep() && !this.step2CanComplete()
+    () => this.isAccountChoiceStep() && (!this.state.voucherValidated() || !this.step2CanComplete())
   );
 
   selectExperience(choice: Step2ExperienceChoice): void {
     this.state.setStep2Experience(choice);
+  }
+
+  setParticipationStatus(status: ParticipationStatus): void {
+    this.state.setParticipationStatus(status);
+    this.voucherInput.set('');
+    this.voucherError.set(false);
+  }
+
+  setHasVoucher(val: boolean): void {
+    this.state.setHasVoucherAnswer(val);
+    this.voucherInput.set('');
+    this.voucherError.set(false);
+  }
+
+  submitVoucher(): void {
+    const valid = this.state.validateVoucher(this.voucherInput());
+    this.voucherError.set(!valid);
+  }
+
+  copyContactMessage(): void {
+    const msg = `Hallo KnOot Academy Team,\n\nich interessiere mich für die Teilnahme an eurem Kurs "Vibe Coding Basics" und bitte um einen Zugangs-Voucher.\n\nVielen Dank!\n[Dein Name]`;
+    navigator.clipboard.writeText(msg).then(() => {
+      this.voucherCopied.set(true);
+      setTimeout(() => this.voucherCopied.set(false), 2500);
+    });
   }
 
   onVisibilityCheckboxChange(checked: boolean): void {
@@ -87,30 +139,15 @@ export class StepPageComponent {
     }
   }
 
-  /** Weiter ist immer erlaubt – bei nicht erledigtem Schritt erscheint ein Dialog */
+  /** Weiter: immer erlaubt, einfach navigieren */
   goToNextStep(): void {
     const currentStep = this.step().id;
     if (currentStep >= 6) return;
-
-    if (this.isCurrentStepDone()) {
-      void this.router.navigate(['/onboarding/step', currentStep + 1]);
-      return;
-    }
-
-    const ref = this.dialog.open(StepSkipDialogComponent, { width: '420px' });
-    ref.afterClosed().subscribe((result: StepSkipDialogResult | undefined) => {
-      if (result === 'mark-done') {
-        this.state.markStepCompleted(currentStep);
-      }
-      // In beiden Fällen (mark-done + skip) navigieren wir weiter
-      // Schritt bleibt zugänglich, Guard erlaubt Vorwärts-Navigation via maxUnlockedStep
-      this.state.unlockStep(currentStep + 1);
-      void this.router.navigate(['/onboarding/step', currentStep + 1]);
-    });
+    void this.router.navigate(['/onboarding/step', currentStep + 1]);
   }
 
   finishOnboarding(): void {
     this.state.markStepCompleted(6);
-    void this.router.navigate(['/']);
+    void this.router.navigate(['/onboarding/zusammenfassung']);
   }
 }
