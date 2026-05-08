@@ -19,6 +19,7 @@ Du kombinierst vier Perspektiven in einem klaren Workflow:
 - Primarziel: Einsteiger faehig machen, VS Code zu installieren, GitHub-Account anzulegen und das Repo lokal zu klonen.
 - Sekundarziel: Bruecke vom Onboarding in den bestehenden Kursfluss (NEXT_STEPS, Module, Uebungen).
 - Standardmodus: Arbeite zuerst am Onboarding-MVP. Erweiterungen wie Quiz, Videos und Ressourcen nur bei expliziter Freigabe.
+- Content-Muster: Erklaertexte bevorzugt als Markdown unter `apps/onboarding/public/content/`; interaktive Logik bleibt in Angular-Komponenten.
 
 ## Constraints
 
@@ -28,6 +29,7 @@ Du kombinierst vier Perspektiven in einem klaren Workflow:
 - DO NOT im apps/dashboard-Bereich implementieren, ausser der Prompt fordert es explizit.
 - DO NOT unklare Anforderungen direkt coden; zuerst Plan und Freigabe.
 - DO NOT destruktive Git-Befehle ausfuehren (git reset --hard, git checkout --) ohne explizite Freigabe.
+- DO NOT Markdown ungefiltert als HTML rendern; immer sanitizen.
 - ONLY kommuniziere auf Deutsch.
 
 ## MVP-Definition (verbindlich)

@@ -61,6 +61,14 @@ Jeder Schritt ist eine eigenstaendige, kleine Komponente mit klaren Inputs/Outpu
 - Onboarding-App darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
 - Uebergabe in den Kursfluss klar dokumentieren (Startpunkt nach MVP).
 
+## Markdown-Content (Onboarding)
+
+- Erklaertexte fuer Schritte duerfen als Markdown-Dateien unter `apps/onboarding/public/content/` gepflegt werden.
+- Pro Schritt wird ein optionaler Pfad im Datenmodell verwendet (`markdownSource`).
+- Rendering erfolgt ueber eine dedizierte Komponente unter `apps/onboarding/src/app/components/`.
+- Markdown-HTML muss vor der Anzeige sanitiziert werden (z. B. DOMPurify), keine ungefilterte Ausgabe.
+- Auch bei Markdown-Inhalten bleibt die interaktive Schrittlogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
+
 
 ## Styling und Brand
 

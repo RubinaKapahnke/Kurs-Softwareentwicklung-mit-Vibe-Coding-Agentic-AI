@@ -23,6 +23,7 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
    - Struktur in `README.md` gegen tatsächliche Ordner/Dateien
    - Verweise zwischen `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md` und Übungsdateien
    - Quellenlinks aus Übungen auf vorhandene Moduldateien
+   - Onboarding-Markdown-Konvention: Inhalte unter `apps/onboarding/public/content/`, Referenz über `markdownSource`, sichere Ausgabe (sanitizing)
    - Benennungskonventionen für Agenten und Prompts in `.github/`
    - Pfade in `.github/agents/*.md` auf aktuelle Repo-Struktur (z.B. `course/`, `apps/`)
    - `CHANGELOG.md`: Enthält er einen Eintrag zur letzten Session? Fehlt ein Eintrag für sichtbare strukturelle Änderungen?

@@ -3,6 +3,7 @@ import { Injectable, signal } from '@angular/core';
 const KEY_EXP = 'onboarding_step2_exp';
 const KEY_VISIBILITY = 'onboarding_visibility_confirmed';
 const KEY_COMPLETED = 'onboarding_completed_steps';
+const KEY_SUBTASKS = 'onboarding_completed_subtasks';
 const KEY_VOUCHER = 'onboarding_voucher';
 
 /** MVP: Ein einziger gültiger Code. Wird später durch echte API-Validierung ersetzt. */
@@ -17,6 +18,7 @@ export type HasVoucherAnswer = boolean | null;
 })
 export class OnboardingStateService {
   private readonly _completedSteps = signal<Set<number>>(this.loadCompletedSteps());
+  private readonly _completedSubtasks = signal<Record<number, Set<number>>>(this.loadCompletedSubtasks());
   private readonly _step2Experience = signal<Step2ExperienceChoice>(this.loadExp());
   private readonly _githubVisibilityConfirmed = signal(this.loadVisibility());
 
@@ -47,6 +49,52 @@ export class OnboardingStateService {
     if (stepId < 1 || stepId > 6) return;
     this._completedSteps.update(set => new Set([...set, stepId]));
     this.persistCompletedSteps();
+  }
+
+  toggleStepCompleted(stepId: number): void {
+    if (this.isStepDone(stepId)) {
+      this.unmarkStepCompleted(stepId);
+      return;
+    }
+    this.markStepCompleted(stepId);
+  }
+
+  unmarkStepCompleted(stepId: number): void {
+    this._completedSteps.update(set => {
+      const next = new Set(set);
+      next.delete(stepId);
+      return next;
+    });
+    this.persistCompletedSteps();
+  }
+
+  isSubtaskDone(stepId: number, taskIndex: number): boolean {
+    return this._completedSubtasks()[stepId]?.has(taskIndex) ?? false;
+  }
+
+  areStepSubtasksDone(stepId: number, taskCount: number): boolean {
+    if (taskCount === 0) return true;
+    const completedTasks = this._completedSubtasks()[stepId];
+    return Array.from({ length: taskCount }).every((_, index) => completedTasks?.has(index));
+  }
+
+  setSubtaskDone(stepId: number, taskIndex: number, done: boolean): void {
+    if (stepId < 1 || stepId > 6 || taskIndex < 0) return;
+    this._completedSubtasks.update(current => {
+      const next: Record<number, Set<number>> = { ...current };
+      const stepTasks = new Set(next[stepId] ?? []);
+      if (done) {
+        stepTasks.add(taskIndex);
+      } else {
+        stepTasks.delete(taskIndex);
+      }
+      next[stepId] = stepTasks;
+      return next;
+    });
+    if (!done) {
+      this.unmarkStepCompleted(stepId);
+    }
+    this.persistCompletedSubtasks();
   }
 
   /** Keine Sperre mehr – behalten für mögliche externe Aufrufe, tut nichts */
@@ -115,6 +163,33 @@ export class OnboardingStateService {
 
   private persistCompletedSteps(): void {
     sessionStorage.setItem(KEY_COMPLETED, [...this._completedSteps()].join(','));
+  }
+
+  private loadCompletedSubtasks(): Record<number, Set<number>> {
+    const stored = sessionStorage.getItem(KEY_SUBTASKS);
+    if (!stored) return {};
+
+    try {
+      const parsed = JSON.parse(stored) as Record<string, number[]>;
+      return Object.entries(parsed).reduce<Record<number, Set<number>>>((result, [stepId, indexes]) => {
+        const numericStepId = Number(stepId);
+        if (!Number.isInteger(numericStepId) || numericStepId < 1 || numericStepId > 6 || !Array.isArray(indexes)) {
+          return result;
+        }
+        result[numericStepId] = new Set(indexes.filter(index => Number.isInteger(index) && index >= 0));
+        return result;
+      }, {});
+    } catch {
+      return {};
+    }
+  }
+
+  private persistCompletedSubtasks(): void {
+    const serializable = Object.entries(this._completedSubtasks()).reduce<Record<string, number[]>>(
+      (result, [stepId, indexes]) => ({ ...result, [stepId]: [...indexes].sort((a, b) => a - b) }),
+      {}
+    );
+    sessionStorage.setItem(KEY_SUBTASKS, JSON.stringify(serializable));
   }
 
   private loadExp(): Step2ExperienceChoice {

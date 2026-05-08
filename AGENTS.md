@@ -25,7 +25,7 @@ Prompt-Dateien liegen in `.github/prompts/` und folgen dem gleichen Rollenpräfi
 ---
 
 ## Purpose
-This repository is a shared learning workspace for a closed group in a vibe-coding course.
+This repository is a shared learning workspace for a closed group in the course "Softwareentwicklung mit Vibe Coding & Agentic AI".
 
 ## Language
 - Communicate with the user in German unless the user explicitly asks for another language.
@@ -33,16 +33,25 @@ This repository is a shared learning workspace for a closed group in a vibe-codi
 
 ## Core Workflow
 
-### Central Architecture: NEXT_STEPS → Modules → Exercises
+### Central Architecture: Course Description → Course Modules → NEXT_STEPS → Materials → Exercises
 The learning structure follows this hierarchy:
 
-1. **NEXT_STEPS.md** (zentral) → Defines milestones and learning goals
-2. **course/modules/** (zentral) → Explain concepts and commands
+1. **KURSBESCHREIBUNG.md** (zentral) → Defines the overall course vision, paths, module logic, and milestone meaning
+2. **course/kursmodule/** (zentral) → Represents standalone course modules / bookable learning blocks
+  - Each course module has a `00-kursmodul.md`
+  - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
+  - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
+3. **NEXT_STEPS.md** (zentral) → Defines current learning milestones and group progress
+4. **course/modules/** (zentral) → Explain concepts and commands as the learning material collection
    - `00-modulguide.md` → Navigation, overview, and **inline Selbstcheck** (Must/Should/Nice checklists)
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
    - `02/03-*-befehlsuebersicht.md` → Quick reference for commands (Terminal, Git only)
-3. **course/uebungen/** (zentral) → Exercises with direct module source links
-4. **course/learners/** (dezentral) → Individual learning progress per person
+5. **course/uebungen/** (zentral) → Exercises with direct module source links
+6. **course/learners/** (dezentral) → Individual learning progress per person
+
+**Important distinction:**
+- `course/kursmodule/` = course offer/curriculum layer (what standalone learning block is this?)
+- `course/modules/` = learning material/source layer (where is the explanation learners read?)
 
 ### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
 
@@ -83,6 +92,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
 - Keep `README.md`, `NEXT_STEPS.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
+- For onboarding explanatory content, use `apps/onboarding/public/content/` Markdown files referenced via `markdownSource`; keep interactive step logic in Angular components.
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
 

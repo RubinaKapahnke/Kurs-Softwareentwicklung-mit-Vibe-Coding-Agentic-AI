@@ -1,7 +1,9 @@
 <mat-card class="step-card" appearance="outlined">
   <mat-card-header>
     <mat-card-title>Schritt {{ step().id }}: {{ step().title }}</mat-card-title>
-    <mat-card-subtitle>{{ step().goal }}</mat-card-subtitle>
+    @if (step().goal) {
+      <mat-card-subtitle>{{ step().goal }}</mat-card-subtitle>
+    }
   </mat-card-header>
 
   @if (isAccountChoiceStep()) {
@@ -138,17 +140,18 @@ Vielen Dank!
 
         } @else {
           <!-- ── Voucher validiert: Bestätigung + GitHub-Frage ── -->
-          <div class="voucher-success" role="status">
-            <mat-icon>check_circle</mat-icon>
-            <div>
-              <strong>Voucher bestätigt!</strong>
-              <p>Dein Zugang wurde freigeschaltet. Weiter geht's mit dem Setup.</p>
+          @if (showVoucherSuccess()) {
+            <div class="voucher-success" role="status" aria-live="polite">
+              <mat-icon>check_circle</mat-icon>
+              <div>
+                <strong>Voucher bestätigt!</strong>
+                <p>Dein Zugang wurde freigeschaltet. Weiter geht's mit dem Setup.</p>
+              </div>
             </div>
-          </div>
+          }
 
           <p class="entry-question__kicker">Bevor es losgeht</p>
           <h2 class="entry-question__heading">Hast du schon einen GitHub-Account?</h2>
-          <p class="entry-question__sub">Wähle eine Option – der Rest dieser Seite passt sich danach an.</p>
 
           <div class="entry-question__options">
             <button
@@ -191,37 +194,6 @@ Vielen Dank!
             </button>
           </div>
 
-          @if (showGithubExplanation()) {
-            <div class="github-explainer" role="region" aria-label="Was ist GitHub?">
-              <div class="github-explainer__header">
-                <mat-icon aria-hidden="true">school</mat-icon>
-                <strong>GitHub kurz erklärt</strong>
-              </div>
-              <p>
-                <strong>GitHub</strong> ist eine Plattform, auf der Code gespeichert und geteilt wird –
-                ähnlich wie Google Drive, aber speziell für Software-Projekte.
-              </p>
-              <p>
-                In diesem Kurs benutzt du GitHub, um:
-              </p>
-              <ul>
-                <li>das Kursmaterial auf deinen Rechner zu holen (<em>Klonen</em>)</li>
-                <li>deine Lösungen zu speichern und zu teilen (<em>Commits &amp; Push</em>)</li>
-                <li>gemeinsam mit anderen zu arbeiten (<em>Pull Requests</em>)</li>
-              </ul>
-              <p>
-                Für den Kurs brauchst du einen <strong>kostenlosen Account</strong> auf
-                <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.
-                Das Einrichten dauert ca. 5 Minuten.
-              </p>
-              <div class="github-explainer__action">
-                <button mat-flat-button type="button" class="btn-start-new" (click)="selectExperience('new'); showGithubExplanation.set(false)">
-                  <mat-icon>person_add</mat-icon>
-                  Gut erklärt – ich richte jetzt einen Account ein
-                </button>
-              </div>
-            </div>
-          }
         }
 
       </div>
@@ -230,42 +202,51 @@ Vielen Dank!
 
   <mat-card-content>
 
-      <!-- Nur anzeigen wenn Voucher validiert UND Auswahl getroffen -->
+    <!-- Markdown-Erklärung falls vorhanden -->
+    @if (step().markdownSource) {
+      <app-markdown-view [src]="step().markdownSource"></app-markdown-view>
+      <mat-divider></mat-divider>
+    }
+
+      <!-- Nur anzeigen wenn Voucher validiert UND Auswahl getroffen oder Erklärmodus aktiv -->
       @if (isAccountChoiceStep() && state.voucherValidated() && state.step2Experience()) {
 
         <!-- GitHub-Sichtbarkeitswarnung bei bestehendem Account -->
         @if (state.step2Experience() === 'existing') {
-          <section class="step-section visibility-warning" role="alert">
-            <div class="warning-header">
-              <mat-icon aria-hidden="true">visibility</mat-icon>
-              <h3>Wichtig: Dein Account ist im Kurs sichtbar</h3>
+          <section class="security-hint" role="alert">
+            <div class="security-hint__header">
+              <span class="security-hint__icon" aria-hidden="true">
+                <mat-icon>priority_high</mat-icon>
+              </span>
+              <strong class="security-hint__title">Wichtig: Dein Account ist im Kurs sichtbar</strong>
             </div>
-            <p>
-              Im geteilten Kurs-Repository können alle anderen Teilnehmenden
-              deinen GitHub-Benutzernamen sehen – z. B. als Autor von Commits oder
-              in Pull Requests. Stelle sicher, dass du das weißt und damit einverstanden bist.
-            </p>
-            <mat-checkbox
-              [checked]="state.githubVisibilityConfirmed()"
-              (change)="onVisibilityCheckboxChange($event.checked)">
-              Ich habe verstanden, dass mein GitHub-Account im Kurs für andere sichtbar sein kann.
-            </mat-checkbox>
+            <div class="security-hint__content">
+              <p class="security-hint__reason">
+                Im geteilten Kurs-Repository können alle anderen Teilnehmenden deinen GitHub-Benutzernamen sehen – z. B. als Autor von Commits oder in Pull Requests. Stelle sicher, dass du das weißt und damit einverstanden bist.
+              </p>
+              <mat-checkbox
+                class="security-hint__checkbox"
+                [checked]="state.githubVisibilityConfirmed()"
+                (change)="onVisibilityCheckboxChange($event.checked)">
+                Ich habe verstanden, dass mein GitHub-Account im Kurs für andere sichtbar sein kann.
+              </mat-checkbox>
+            </div>
           </section>
 
           <section class="step-section">
-            <p class="fallback-hint">
-              Doch lieber mit einem neuen Account starten?
-              <button mat-button type="button" class="link-btn" (click)="switchToNewPath()">
-                Zur vollständigen Anleitung wechseln
+            <div class="account-path-actions" aria-label="Account-Pfad wählen">
+              <button mat-stroked-button type="button" class="account-path-actions__secondary" (click)="switchToNewPath()">
+                <mat-icon>person_add</mat-icon>
+                Stattdessen neuen Account erstellen
               </button>
-            </p>
+            </div>
           </section>
         }
 
         <mat-divider></mat-divider>
       }
 
-    @if (!isAccountChoiceStep() || (state.voucherValidated() && state.step2Experience())) {
+    @if (showAccountStepContent()) {
 
     <!-- Schritt 2: Eigenes Übungs-Repo anlegen -->
     @if (isOwnRepoStep()) {
@@ -578,69 +559,94 @@ Vielen Dank!
       <mat-divider></mat-divider>
     }
 
-    <section class="step-section">
-      <h3>Was ist zu tun?</h3>
-      <mat-list>
-        @for (task of step().tasks; track task) {
-          <mat-list-item>
-            <mat-icon matListItemIcon>check_circle_outline</mat-icon>
-            <div matListItemTitle>{{ task }}</div>
-          </mat-list-item>
-        }
-      </mat-list>
-    </section>
+    @if (showAccountStepFullInstructions() || (isAccountChoiceStep() && showAccountStepContent())) {
+      <section class="step-section">
+        <h3>Was ist zu tun?</h3>
+        <div class="subtask-list" role="list">
+          @if (showAccountStepFullInstructions()) {
+            @for (task of step().tasks; track task; let index = $index) {
+              <mat-checkbox
+                class="subtask-item"
+                role="listitem"
+                [checked]="isSubtaskDone(index)"
+                (change)="onSubtaskChange(index, $event.checked)">
+                {{ task }}
+              </mat-checkbox>
+            }
+          }
+          @if (isAccountChoiceStep()) {
+            <mat-checkbox
+              class="subtask-item"
+              role="listitem"
+              [checked]="githubProfileShareDone()"
+              (change)="onSubtaskChange(githubProfileShareTaskIndex(), $event.checked)">
+              {{ githubProfileShareTask }}
+            </mat-checkbox>
+          }
+        </div>
+      </section>
+    }
 
-    @if (isAccountChoiceStep()) {
-      <div class="security-hint">
-        <mat-icon aria-hidden="true">security</mat-icon>
-        <div>
-          <strong>Sicherheit: Passwort &amp; Zwei-Faktor-Authentifizierung</strong>
-          <p>
-            W&auml;hle ein <strong>starkes, einzigartiges Passwort</strong> f&uuml;r GitHub &ndash; verwende es nirgendwo sonst.
-            Richte anschlie&szlig;end unbedingt die <strong>Zwei-Faktor-Authentifizierung (2FA)</strong> ein:
-            GitHub &rarr; Settings &rarr; Password and authentication &rarr; Two-factor authentication.
-          </p>
-          <p>
-            Warum? Dein Account gew&auml;hrt Zugriff auf das gemeinsame Kurs-Repository.
-            Ein kompromittiertes Konto k&ouml;nnte den Code aller Teilnehmenden gef&auml;hrden.
+    @if (showAccountSecurityHint()) {
+      <div class="security-hint" role="alert">
+        <div class="security-hint__header">
+          <span class="security-hint__icon" aria-hidden="true">
+            <mat-icon>priority_high</mat-icon>
+          </span>
+          <strong class="security-hint__title">Wichtig: Sch&uuml;tze deinen GitHub-Account</strong>
+        </div>
+        <div class="security-hint__content">
+          <ul class="security-hint__list">
+            <li>Nutze ein starkes Passwort, das du nirgendwo sonst verwendest.</li>
+            <li>Aktiviere Zwei-Faktor-Authentifizierung (2FA) in den GitHub-Einstellungen.</li>
+          </ul>
+          <p class="security-hint__reason">
+            Dein Account bekommt Zugriff auf das Kurs-Repository. Wenn er gehackt wird, kann auch Kurscode betroffen sein.
           </p>
         </div>
       </div>
     }
 
+    @if (step().fallbackHelp.length) {
+      <mat-divider></mat-divider>
+
+      <section class="step-section">
+        <h3>Falls es nicht klappt</h3>
+        <mat-list>
+          @for (tip of step().fallbackHelp; track tip.title) {
+            <mat-list-item>
+              <mat-icon matListItemIcon>help_outline</mat-icon>
+              <div matListItemTitle>{{ tip.title }}</div>
+              <div matListItemLine>{{ tip.detail }}</div>
+            </mat-list-item>
+          }
+        </mat-list>
+      </section>
+    }
+
     <mat-divider></mat-divider>
 
-    <section class="step-section">
-      <h3>Falls es nicht klappt</h3>
-      <mat-list>
-        @for (tip of step().fallbackHelp; track tip.title) {
-          <mat-list-item>
-            <mat-icon matListItemIcon>help_outline</mat-icon>
-            <div matListItemTitle>{{ tip.title }}</div>
-            <div matListItemLine>{{ tip.detail }}</div>
-          </mat-list-item>
-        }
-      </mat-list>
-    </section>
+    @if (step().successCriterion) {
+      <section class="step-section success-box" aria-label="Erfolgskriterium">
+        <h3>Woran erkenne ich Erfolg?</h3>
+        <p>{{ step().successCriterion }}</p>
+      </section>
+    }
 
-    <mat-divider></mat-divider>
-
-    <section class="step-section success-box" aria-label="Erfolgskriterium">
-      <h3>Woran erkenne ich Erfolg?</h3>
-      <p>{{ step().successCriterion }}</p>
-    </section>
-
-    @if (step().resources?.length && !isBrueckeStep()) {
+    @if (step().resources?.length && showStepResources()) {
       <mat-divider></mat-divider>
       <section class="step-section">
         <h3>Hilfreiche Links</h3>
-        <div class="link-group">
+        <ul class="resource-link-list">
           @for (resource of step().resources; track resource.href) {
-            <a mat-stroked-button [href]="resource.href" target="_blank" rel="noopener noreferrer">
+            <li>
+            <a class="resource-link" [href]="resource.href" target="_blank" rel="noopener noreferrer">
               {{ resource.label }}
+              <mat-icon aria-hidden="true">open_in_new</mat-icon>
             </a>
+            </li>
           }
-        </div>
+        </ul>
       </section>
     }
 

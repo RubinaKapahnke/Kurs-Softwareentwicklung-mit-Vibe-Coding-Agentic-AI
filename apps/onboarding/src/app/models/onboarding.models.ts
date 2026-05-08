@@ -17,4 +17,5 @@ export interface OnboardingStep {
   successCriterion: string;
   resources?: OnboardingResourceLink[];
   vscodeHint?: string[];
+  markdownSource?: string; // Pfad zur optionalen Markdown-Erklärung
 }

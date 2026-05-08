@@ -6,6 +6,13 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ## Tagesübersicht (grob)
 
+### 08.05.2026
+- Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/kursmodule/` mit 14 Kursmodulen.
+- Root-Dokumentation synchronisiert (`README.md`, `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md`, `apps/README_APPS.md`).
+- Onboarding-App um Markdown-Content-Workflow erweitert (`public/content`, `markdownSource`, Renderer-Komponente mit Sanitizing).
+- Agent-/Instruction-Set für Konsistenz und Onboarding-Markdown-Flow erweitert (`AGENTS.md`, Onboarding-Instruction, Onboarding-Web-Architect, Repo-Consistency-Checker).
+- Validierung erfolgreich: Onboarding-Build grün, 313 Linkchecks OK, alle 8 Uebungen bestanden.
+
 ### 04.05.2026
 - Repo-Struktur auf `course/` umgestellt (`learners`, `modules`, `uebungen`) und Pfade repo-weit angepasst.
 - Dashboard deutlich ausgebaut (Option A/B, Snapshot-Infos, Blockaden, Git- und Lernstands-Sichten).

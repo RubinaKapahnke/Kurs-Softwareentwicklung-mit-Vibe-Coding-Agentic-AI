@@ -11,7 +11,7 @@ Der Onboarding Hub führt absolute Einsteiger verständlich und sicher bis zum l
 
 Wichtig für v1:
 - Die Seite zeigt klar, dass weitere Kurse noch im Aufbau sind.
-- Aktuell ist nur ein Kurs verfügbar: der Einstieg in den vibe-coding-Kurs.
+- Aktuell ist nur ein Kurs verfügbar: der Einstieg in **Softwareentwicklung mit Vibe Coding & Agentic AI**.
 
 ---
 

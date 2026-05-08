@@ -10,9 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 
+
 import { ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingStep } from '../../models/onboarding.models';
 import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } from '../../services/onboarding-state.service';
+import { MarkdownViewComponent } from '../../components/markdown-view/markdown-view.component';
 
 @Component({
   selector: 'app-step-page',
@@ -24,7 +26,8 @@ import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } fr
     MatDividerModule,
     MatIconModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MarkdownViewComponent
   ],
   templateUrl: './step-page.component.html',
   styleUrl: './step-page.component.scss'
@@ -63,6 +66,9 @@ export class StepPageComponent {
   readonly voucherInput = signal('');
   readonly voucherError = signal(false);
   readonly voucherCopied = signal(false);
+  readonly showVoucherSuccess = signal(false);
+  private voucherSuccessTimeout: ReturnType<typeof setTimeout> | null = null;
+  readonly githubProfileShareTask = 'Link zum GitHub-Profil an Dozent*in schicken (Teams oder E-Mail).';
 
   /** Schritt gilt als erledigt wenn er explizit markiert wurde */
   readonly isCurrentStepDone = computed(
@@ -70,11 +76,38 @@ export class StepPageComponent {
   );
 
   readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
+  readonly allSubtasksDone = computed(() =>
+    this.state.areStepSubtasksDone(this.step().id, this.step().tasks.length)
+  );
+  readonly githubProfileShareTaskIndex = computed(() => this.step().tasks.length);
+  readonly githubProfileShareDone = computed(() =>
+    this.state.isSubtaskDone(this.step().id, this.githubProfileShareTaskIndex())
+  );
+  readonly showAccountStepContent = computed(() =>
+    !this.isAccountChoiceStep() || (
+      this.state.voucherValidated() && (this.state.step2Experience() !== null || this.showGithubExplanation())
+    )
+  );
+  readonly showAccountStepFullInstructions = computed(() =>
+    !this.isAccountChoiceStep() || this.state.step2Experience() === 'new' || this.showGithubExplanation()
+  );
+  readonly showAccountSecurityHint = computed(() =>
+    this.isAccountChoiceStep() && this.state.step2Experience() === 'new'
+  );
+  readonly showStepResources = computed(() =>
+    !this.isBrueckeStep() && (!this.isAccountChoiceStep() || this.showAccountStepContent())
+  );
 
   /** Inline-Erklärung "Was ist GitHub?" */
   readonly showGithubExplanation = signal(false);
   toggleGithubExplanation(): void {
-    this.showGithubExplanation.update(v => !v);
+    this.showGithubExplanation.update(v => {
+      const next = !v;
+      if (next) {
+        this.state.setStep2Experience(null);
+      }
+      return next;
+    });
   }
 
   /** Inline-Erklärung "Was ist Git?" */
@@ -84,11 +117,27 @@ export class StepPageComponent {
   }
 
   /** "Als erledigt markieren" blockiert bis Voucher validiert UND Auswahl getroffen */
-  readonly isDoneDisabled = computed(
-    () => this.isAccountChoiceStep() && (!this.state.voucherValidated() || !this.step2CanComplete())
-  );
+  readonly isDoneDisabled = computed(() => {
+    if (!this.isAccountChoiceStep()) {
+      return !this.allSubtasksDone();
+    }
+
+    if (!this.state.voucherValidated()) return true;
+    if (this.state.step2Experience() === 'existing') return !this.step2CanComplete() || !this.githubProfileShareDone();
+    if (this.state.step2Experience() === 'new') return !this.allSubtasksDone() || !this.githubProfileShareDone();
+    return true;
+  });
+
+  isSubtaskDone(taskIndex: number): boolean {
+    return this.state.isSubtaskDone(this.step().id, taskIndex);
+  }
+
+  onSubtaskChange(taskIndex: number, checked: boolean): void {
+    this.state.setSubtaskDone(this.step().id, taskIndex, checked);
+  }
 
   selectExperience(choice: Step2ExperienceChoice): void {
+    this.showGithubExplanation.set(false);
     this.state.setStep2Experience(choice);
   }
 
@@ -107,6 +156,20 @@ export class StepPageComponent {
   submitVoucher(): void {
     const valid = this.state.validateVoucher(this.voucherInput());
     this.voucherError.set(!valid);
+    if (valid) {
+      this.showTemporaryVoucherSuccess();
+    }
+  }
+
+  private showTemporaryVoucherSuccess(): void {
+    if (this.voucherSuccessTimeout) {
+      clearTimeout(this.voucherSuccessTimeout);
+    }
+    this.showVoucherSuccess.set(true);
+    this.voucherSuccessTimeout = setTimeout(() => {
+      this.showVoucherSuccess.set(false);
+      this.voucherSuccessTimeout = null;
+    }, 3500);
   }
 
   copyContactMessage(): void {
@@ -130,7 +193,8 @@ export class StepPageComponent {
   }
 
   markDone(): void {
-    this.state.markStepCompleted(this.step().id);
+    if (!this.isCurrentStepDone() && this.isDoneDisabled()) return;
+    this.state.toggleStepCompleted(this.step().id);
   }
 
   goToPreviousStep(): void {

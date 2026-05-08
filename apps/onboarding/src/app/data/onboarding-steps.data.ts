@@ -4,30 +4,27 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 1,
     title: 'GitHub-Account anlegen',
-    goal: 'Du erstellst deinen GitHub-Account und bestätigst deine E-Mail-Adresse.',
+    goal: '',
     tasks: [
-      'Öffne github.com und wähle Sign up.',
-      'Gib E-Mail-Adresse, Passwort und Benutzernamen ein.',
-      'Bestätige deine E-Mail über den Link in der Mail von GitHub.'
+      'Lege auf GitHub einen Account an.'
     ],
-    fallbackHelp: [
-      {
-        title: 'Bestätigungs-Mail fehlt',
-        detail: 'Prüfe den Spam-Ordner und fordere die E-Mail in den GitHub-Einstellungen erneut an.'
-      },
-      {
-        title: 'Benutzername ist belegt',
-        detail: 'Füge eine Zahl oder ein kurzes Wort hinzu, bis der Name verfügbar ist.'
-      }
-    ],
-    successCriterion:
-      'Du bist auf github.com eingeloggt und siehst rechts oben dein Profil-Icon.',
+    fallbackHelp: [],
+    successCriterion: '',
     resources: [
       {
         label: 'GitHub',
         href: 'https://github.com'
+      },
+      {
+        label: 'Video: Was ist GitHub?',
+        href: 'https://www.youtube.com/watch?v=0jzjz4MZ4ZU&t'
+      },
+      {
+        label: 'GitHub Docs: Account erstellen',
+        href: 'https://docs.github.com/de/get-started/start-your-journey/creating-an-account-on-github'
       }
-    ]
+    ],
+    markdownSource: '/content/github-account.md'
   },
   {
     id: 2,
