@@ -38,7 +38,7 @@ The learning structure follows this hierarchy:
 
 1. **KURSBESCHREIBUNG.md** (zentral) → Defines the overall course vision, paths, module logic, and milestone meaning
 2. **course/kursmodule/** (zentral) → Represents standalone course modules / bookable learning blocks
-  - Each course module has a `00-kursmodul.md`
+  - Each course module has a `modulziele.md`
   - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
   - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
 3. **NEXT_STEPS.md** (zentral) → Defines current learning milestones and group progress

@@ -235,6 +235,32 @@ course/modules/04-git/
 
 ---
 
+## 📄 Markdown-Dateien als PDF exportieren
+
+Einzelne Markdown-Dateien (Übungen, Kursmodule, Lernmaterial) können lokal als PDF exportiert werden.
+
+**Voraussetzungen (einmalig installieren):**
+```powershell
+winget install --id JohnMacFarlane.Pandoc   # Pandoc
+winget install --id MiKTeX.MiKTeX           # LaTeX-Engine für PDF
+```
+
+Nach der Installation das Terminal neu starten.
+
+**Verwendung:**
+```powershell
+# Beliebige Markdown-Datei als PDF exportieren:
+pandoc <pfad-zur-datei.md> -o <ausgabe.pdf>
+
+# Beispiele:
+pandoc course/uebungen/meilenstein-02-uebung-01.md -o uebung-m2-01.pdf
+pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/modulziele.md" -o kursmodul-01.pdf
+```
+
+> **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach – das dauert einmalig etwas länger.
+
+---
+
 ## ✅ Nächster Einstiegspunkt
 Wenn du neu in eine Session einsteigst:
 1. [NEXT_STEPS.md](NEXT_STEPS.md) öffnen
