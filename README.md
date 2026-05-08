@@ -1,39 +1,49 @@
-# 🚀 Vibe Coding Kurs: Von der Idee zum Projekt
+# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
 
-Willkommen zum **Vibe Coding Kurs**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
+Willkommen zum Kurs **Softwareentwicklung mit Vibe Coding & Agentic AI**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
 
-Beim Vibe Coding nutzen wir die natürliche Sprache und KI-Unterstützung, um schnell Prototypen zu bauen, ohne dabei die Struktur und Qualität aus den Augen zu verlieren.
+Beim Vibe Coding nutzen wir natürliche Sprache und KI-Unterstützung, um Produkte iterativ zu planen, Prototypen zu bauen und agentische Entwicklungsworkflows nachvollziehbar einzusetzen, ohne dabei Struktur, Qualität und Verantwortung aus den Augen zu verlieren.
+
+Die zentrale Kursbeschreibung steht in [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md).
 
 ---
 
 ## 🎯 Ziel des Kurses
-Wir durchlaufen den Entwicklungszyklus in einem **engen Setup**, damit der Fokus auf den wichtigsten Hebeln liegt:
+Wir durchlaufen den Entwicklungszyklus in einem **engen, praktischen Setup**: zuerst mit den wichtigsten Hebeln für saubere Zusammenarbeit, dann Schritt für Schritt von der Produktidee bis zum betreibbaren AI-gestützten Produkt.
+
+Der Fokus liegt auf:
 - Zusammenarbeit im Repository
 - Prompting und Context-Engineering
 - saubere, nachvollziehbare Arbeitsschritte
+- iterative Produktentwicklung und klare Produktbeschreibung
+- Programmierlogik, Architektur, Debugging und Qualitätssicherung
+- Agentic Software Engineering, Datenanforderungen, RAG, Reporting, Deployment und Monitoring
 
 ---
 
-## 🛠 Setup
-Wir arbeiten mit einem klaren, einheitlichen Stack:
+## 🛠 Aktueller Repo-Stack
+Die ersten Lernschritte arbeiten mit einem klaren, einheitlichen Stack:
 - **Editor:** VS Code
 - **KI-Assistent:** GitHub Copilot
 - **Framework:** Angular (TypeScript)
 - **UI-Library:** Angular Material
 - **Datenformat:** JSON
 
+Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten und Deployment-Werkzeuge sind im Kursrahmen in [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md) beschrieben.
+
 ---
 
 ## 🧭 Arbeitsweise im Repo
 
-**Zentrale Koordination:** [NEXT_STEPS.md](NEXT_STEPS.md) definiert Meilensteine und verlinkt zu Modulen.
+**Zentrale Koordination:** [NEXT_STEPS.md](NEXT_STEPS.md) definiert den aktuellen Kursfortschritt. [course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md) beschreibt die eigenständigen Kursbausteine.
 
 **Architektur der Verknüpfung:**
-1. Meilenstein in [NEXT_STEPS.md](NEXT_STEPS.md) → Sagt, was gelernt werden soll
-2. Modul-Einstiege (Module → 00-modulguide.md) → Zeigen, welche Module relevant sind
-3. Modul-Inhalte (Module → 00-modulguide mit inline Selbstcheck, 01-grundlagen, 03-befehlsuebersicht) → Erklären Konzepte und Befehle
-4. Übungen ([course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
-5. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
+1. Kursbeschreibung ([KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md)) → Beschreibt Gesamtbild, Pfade und Kurslogik
+2. Kursmodule ([course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md)) → Beschreiben eigenständige Kursbausteine mit Rollenbezug und Praxisartefakt
+3. Meilensteine in [NEXT_STEPS.md](NEXT_STEPS.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
+4. Modul-Inhalte ([course/modules](course/modules)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
+5. Übungen ([course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
+6. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
 
 **Wichtig:** Jede Aufgabe in den Übungen hat direkte Quellenlinks zu den Modul-Dateien. Während du die Übung machst, klickst du direkt auf die Modul-Quelle.
 
@@ -66,17 +76,24 @@ course/modules/04-git/
 
 ---
 
-## �📂 Aktuelle Projektstruktur
+## Aktuelle Projektstruktur
 
 ```text
 /vibe-coding-0426
+├── KURSBESCHREIBUNG.md
 ├── apps/
 │   ├── README_APPS.md
 │   ├── onboarding/
 │   │   ├── prd_onboarding.md
 │   │   ├── README.md
+│   │   ├── public/
+│   │   │   └── content/
+│   │   │       └── github-account.md
 │   │   ├── src/
 │   │   │   ├── app/
+│   │   │   │   ├── components/
+│   │   │   │   │   └── markdown-view/
+│   │   │   │   │       └── markdown-view.component.ts
 │   │   │   │   ├── data/
 │   │   │   │   ├── guards/
 │   │   │   │   ├── models/
@@ -129,6 +146,36 @@ course/modules/04-git/
 │   │       ├── git_guide.md
 │   │       ├── prd_sebastian.md
 │   │       └── lernfortschritt_sebastian.md
+│   ├── kursmodule/
+│   │   ├── README_KURSMODULE.md
+│   │   ├── 01-arbeitsumgebung-dokumentation-versionsverwaltung/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 02-produktbeschreibung-inkrementelle-planung/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 03-vibe-coding-prompting-context-engineering/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 04-ai-literacy-modellverstaendnis/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 05-grundlagen-programmierlogik/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 06-debugging-testing-harness-engineering/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 07-architektur-wartbare-produktstruktur/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 08-ai-system-architecture-modellwahl-token-management/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 09-agentic-software-engineering-autonome-agenten/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 10-daten-reporting-rag-grundlagen/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 11-schwerpunktpfad-web-app-oder-datenprodukt/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 12-teamarbeit-datenschutz-urheberrecht-governance/
+│   │   │   └── 00-kursmodul.md
+│   │   ├── 13-deployment-monitoring-release-management/
+│   │   │   └── 00-kursmodul.md
+│   │   └── 14-abschlussprojekt-portfolio/
+│   │       └── 00-kursmodul.md
 │   ├── modules/
 │   │   ├── 01-markdown/
 │   │   ├── 02-vscode/

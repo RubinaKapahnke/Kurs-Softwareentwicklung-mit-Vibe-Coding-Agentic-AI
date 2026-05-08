@@ -4,6 +4,8 @@ In diesem Ordner liegen zentral vorgegebene Uebungsaufgaben fuer alle Lernenden.
 
 Wie Übungen mit Modulen und NEXT_STEPS verknüpft sind, erklärt [NEXT_STEPS.md → Architektur](../../NEXT_STEPS.md).
 
+Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](../kursmodule/README_KURSMODULE.md). Wichtig: Uebungen referenzieren weiterhin als Quelle die Lernmaterial-Sammlung in `course/modules`.
+
 ## Uebersicht
 
 | Datei | Meilenstein | Titel | Lernziel-Stufe |
