@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
@@ -51,8 +51,8 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 **Konsistenz-Fixes (Paket A+B – Repo-Consistency-Checker Session 8):**
 - Alle `apps/learners/` → `course/learners/` in 9 Uebungsdateien + README_UEBUNGEN korrigiert
 - `docs/uebungen`-Linktexte in Uebungen auf `course/uebungen` aktualisiert
-- `course/modules/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
-- `course/modules/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
+- `course/course-library/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
+- `course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
 - `apps/dashboard/models/dashboard.models.ts`: Interface-Kommentare auf korrekte Pfade (`course/learners/`, `course/uebungen/`) aktualisiert
 - `README.md`: `course/notizen-kursentwicklung.md` in Projektstruktur ergaenzt
 
@@ -117,7 +117,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 **AGENTS.md:** 376 → 174 Zeilen (Template, Lernfortschritt-Block und Konsistenz-Checkliste in Instructions ausgelagert)
 
 **Fixes:**
-- Toten Link in `course/uebungen/README_UEBUNGEN.md` behoben (`../course/modules/` → `../modules/`)
+- Toten Link in `course/uebungen/README_UEBUNGEN.md` behoben (`../course/course-library/` → `../modules/`)
 - `lernfortschritt_raphael.md`: fehlenden Abschnitt `## Das möchte ich noch lernen` ergänzt
 - `dashboard.instructions.md`: veraltete Pfade `apps/learners/` + `docs/uebungen/` auf `course/learners/` + `course/uebungen/` korrigiert
 - Personas-Redundanz in Dashboard-Agent-Dateien entfernt (kanonisch in `dashboard.instructions.md`)
@@ -139,7 +139,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 
 - `apps/learners/` → `course/learners/` verschoben
-- `modules/` → `course/modules/` verschoben
+- `modules/` → `course/course-library/` verschoben
 - `docs/uebungen/` → `course/uebungen/` verschoben
 - `docs/GLOSSARY.md` gelöscht (war nie gepflegt)
 - Alle relativen Links in 8 Übungsdateien angepasst (`../../modules/` → `../modules/`)

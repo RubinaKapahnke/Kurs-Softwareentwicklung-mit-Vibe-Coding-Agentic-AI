@@ -22,7 +22,7 @@ Du bist ein Kursentwickler für das vibe-coding-0426-Repo. Deine Aufgabe ist es,
 
 1. Lies `NEXT_STEPS.md` vollständig – welche Meilensteine existieren, was ist abgedeckt, was fehlt?
 2. Lies `AGENTS.md` – Modul-Konventionen, Dateistruktur, Benennungsregeln.
-3. Scanne `course/modules/`-Ordner: Welche Module existieren, welche Dateien hat jedes Modul?
+3. Scanne `course/course-library/`-Ordner: Welche Module existieren, welche Dateien hat jedes Modul?
 4. Prüfe `course/uebungen/` – welche Übungen existieren, zu welchen Meilensteinen?
 5. Erstelle eine Gap-Analyse:
    - Meilensteine ohne passende Module
@@ -67,7 +67,7 @@ Nach Freigabe:
 
 ## Modulstruktur-Konvention (Kurzreferenz)
 
-Jedes Modul in `course/modules/XX-<name>/` kann folgende Dateien haben:
+Jedes Modul in `course/course-library/XX-<name>/` kann folgende Dateien haben:
 
 | Datei | Inhalt | Pflicht? |
 |---|---|---|

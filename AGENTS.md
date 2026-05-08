@@ -42,7 +42,7 @@ The learning structure follows this hierarchy:
   - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
   - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
 3. **NEXT_STEPS.md** (zentral) → Defines current learning milestones and group progress
-4. **course/modules/** (zentral) → Explain concepts and commands as the learning material collection
+4. **course/course-library/** (zentral) → Explain concepts and commands as the learning material collection
    - `00-modulguide.md` → Navigation, overview, and **inline Selbstcheck** (Must/Should/Nice checklists)
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
    - `02/03-*-befehlsuebersicht.md` → Quick reference for commands (Terminal, Git only)
@@ -51,7 +51,7 @@ The learning structure follows this hierarchy:
 
 **Important distinction:**
 - `course/kursmodule/` = course offer/curriculum layer (what standalone learning block is this?)
-- `course/modules/` = learning material/source layer (where is the explanation learners read?)
+- `course/course-library/` = learning material/source layer (where is the explanation learners read?)
 
 ### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
 
@@ -72,7 +72,7 @@ The learning structure follows this hierarchy:
 - When changing an exercise, keep it aligned with the corresponding milestone in `NEXT_STEPS.md`.
 
 ## Source Standard For Exercises
-- Every exercise task point should reference a concrete source in `course/modules/`.
+- Every exercise task point should reference a concrete source in `course/course-library/`.
 - Sources should be clickable markdown links when the document format supports it.
 - Each exercise should include a short section named `Modulabdeckung (Check)`.
 - Each exercise must include a section named `Wiederholung aus frueheren Meilensteinen` between `Modulabdeckung (Check)` and `Lernerfolgs-Kriterien`. This section lists skills from previous milestones that are needed to complete the exercise, with links to the relevant module files.
@@ -121,7 +121,7 @@ Each module follows this pattern:
 
 **Schritt 1: Modul-Ordner erstellen**
 ```
-course/modules/XX-<modulname>/
+course/course-library/XX-<modulname>/
 ├── 00-<modulname>-modulguide.md
 ├── 01-<modulname>-grundlagen.md
 └── 03-<modulname>-befehlsuebersicht.md  (nur bei Terminal/Git)
@@ -174,7 +174,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 **Schritt 3: Zu NEXT_STEPS.md verlinken**
 - Neuen Meilenstein hinzufügen ODER
 - Existierenden Meilenstein ergänzen
-- Modul-Einstieg: `[course/modules/XX-name/00-modulguide.md](course/modules/XX-name/00-modulguide.md)`
+- Modul-Einstieg: `[course/course-library/XX-name/00-modulguide.md](course/course-library/XX-name/00-modulguide.md)`
 - Vertiefung: Einzelne Dateien wie `01-grundlagen.md`, `03-befehlsuebersicht.md`
 
 **Schritt 4: README.md aktualisieren**
@@ -207,11 +207,11 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 **Ziel:** [Kurzbeschreibung]
 
 **Modul-Einstiege:**
-- [course/modules/XX-modul/00-modulguide.md](course/modules/XX-modul/00-modulguide.md)
+- [course/course-library/XX-modul/00-modulguide.md](course/course-library/XX-modul/00-modulguide.md)
 
 **Vertiefung:**
-- [course/modules/XX-modul/01-grundlagen.md](course/modules/XX-modul/01-grundlagen.md)
-- [course/modules/YY-modul/03-befehlsuebersicht.md](course/modules/YY-modul/03-befehlsuebersicht.md)
+- [course/course-library/XX-modul/01-grundlagen.md](course/course-library/XX-modul/01-grundlagen.md)
+- [course/course-library/YY-modul/03-befehlsuebersicht.md](course/course-library/YY-modul/03-befehlsuebersicht.md)
 
 **Lernziele:** (Falls noch nicht über Module abgedeckt)
 
@@ -228,7 +228,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 
 - [ ] **[Aufgabengruppe 1]**
   > **Übung:** [course/uebungen/meilenstein-N-uebung-01.md](course/uebungen/meilenstein-N-uebung-01.md)
-  > **Quellen:** [course/modules/...], [course/modules/...]
+  > **Quellen:** [course/course-library/...], [course/course-library/...]
   - [ ] [Untertask 1]
   - [ ] [Untertask 2]
 ```

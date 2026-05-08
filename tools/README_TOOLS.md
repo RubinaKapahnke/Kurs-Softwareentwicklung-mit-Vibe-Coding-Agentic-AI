@@ -6,7 +6,7 @@ Dieser Ordner enthält Skripte für den **Kursbetrieb** – sie werden von Dozen
 
 - [`course/learners/<dein-name>/`](../course/learners/) → deine persönlichen Dateien
 - [`course/uebungen/`](../course/uebungen/) → zentrale Übungsaufgaben
-- [`course/modules/`](../course/modules/) → Lernmaterial
+- [`course/course-library/`](../course/course-library/) → Lernmaterial
 
 ---
 

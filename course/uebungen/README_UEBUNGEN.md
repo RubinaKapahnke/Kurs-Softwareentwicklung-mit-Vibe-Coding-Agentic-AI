@@ -35,7 +35,7 @@ Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](..
 ## Standard fuer neue Uebungen (Quellen-Standard)
 Damit kuenftige Uebungen einheitlich und selbststaendig bearbeitbar sind, gilt ab sofort:
 1. Jeder Aufgabenpunkt bekommt direkt darunter eine Quelle.
-2. Die Quelle ist ein klickbarer Link auf ein konkretes Modul-Dokument in course/modules/.
+2. Die Quelle ist ein klickbarer Link auf ein konkretes Modul-Dokument in course/course-library/.
 3. Am Ende der Uebung steht ein kurzer Abschnitt "Modulabdeckung (Check)".
 4. Wenn ein Aufgabenpunkt keine passende Quelle in den Modulen hat, wird die Uebung erst nach Ergaenzung des passenden Moduls veroeffentlicht.
 5. Jede Uebung endet mit einem Abschnitt `Lernerfolgs-Kriterien`: 3-6 Checkboxen, mit denen Lernende selbst pruefen koennen, ob die Uebung den gewuenschten Erfolg gebracht hat. Die Kriterien beschreiben beobachtbare Erfahrungen oder Erkenntnisse – nicht nur erledigte Aufgaben.
@@ -59,4 +59,4 @@ Jede Uebung muss ohne Vorkenntnisse und ohne externe Hilfe bearbeitbar sein. Daz
 
 ### Formatbeispiel
 - Aufgabe: Branch erstellen
-- Quelle: [course/modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+- Quelle: [course/course-library/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)

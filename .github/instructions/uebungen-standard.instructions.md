@@ -34,7 +34,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
     ## Aufgaben
     
     ### 1. [Aufgabe 1]
-    Quelle: [course/modules/XX-modul/01-grundlagen.md](../../course/modules/XX-modul/01-grundlagen.md)
+    Quelle: [course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md)
     
     ### 2. [Aufgabe mit Git]
     Prüfe zuerst deinen aktuellen Status:
@@ -54,12 +54,12 @@ course/uebungen/meilenstein-XX-uebung-YY.md
     ---
     
     ## Modulabdeckung (Check)
-    - ✓ course/modules/XX-modul/01-grundlagen.md: [Konzept erklärt]
+    - ✓ course/course-library/XX-modul/01-grundlagen.md: [Konzept erklärt]
     
     ---
     
     ## Wiederholung aus frueheren Meilensteinen
-    - **[Fähigkeit]** ([course/modules/XX-modul/01-grundlagen.md](../../course/modules/XX-modul/01-grundlagen.md))
+    - **[Fähigkeit]** ([course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md))
     
     ---
     
@@ -116,8 +116,8 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 ## 📝 Beispiel: Kompletter Workflow für neues Modul
 
 **1. Neues Modul "Test" erstellen:**
-   - `course/modules/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
-   - `course/modules/08-test/01-test-grundlagen.md`
+   - `course/course-library/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
+   - `course/course-library/08-test/01-test-grundlagen.md`
 
 **2. In NEXT_STEPS.md neuen Meilenstein hinzufügen:**
    - "Meilenstein 4: Testing"

@@ -1,4 +1,4 @@
-# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
+﻿# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
 
 Willkommen zum Kurs **Softwareentwicklung mit Vibe Coding & Agentic AI**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
 
@@ -51,10 +51,10 @@ Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten
 
 ## � Aufbau der Module
 
-Jedes Modul folgt derselben Struktur. Beispiel: `course/modules/04-git/`
+Jedes Modul folgt derselben Struktur. Beispiel: `course/course-library/04-git/`
 
 ```
-course/modules/04-git/
+course/course-library/04-git/
 ├── 00-git-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
 ├── 01-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
 └── 03-git-befehlsuebersicht.md   ← Nachschlag: Befehle in Tabellen (nur Git, Terminal)

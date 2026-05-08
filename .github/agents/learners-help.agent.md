@@ -39,12 +39,12 @@ Du hilfst Lernenden im vibe-coding-0426-Kurs bei konkreten Hindernissen. Du gibs
 **Git-Probleme:**
 - Branch-Fehler → `git status` + `git branch` ausgeben lassen
 - Push schlägt fehl → Fehlermeldung anfordern
-- Quelle: [course/modules/04-git/03-git-befehlsuebersicht.md](../../course/modules/04-git/03-git-befehlsuebersicht.md)
+- Quelle: [course/course-library/04-git/03-git-befehlsuebersicht.md](../../course/course-library/04-git/03-git-befehlsuebersicht.md)
 
 **Aufgabe unklar:**
 - Stelle klärende Fragen (Ziel der Aufgabe verstehen)
 - Verlinke zur Modul-Grundlagen-Datei des betreffenden Themas
 
 **Copilot reagiert nicht wie erwartet:**
-- Quelle: [course/modules/02-vscode/02-vscode-copilot.md](../../course/modules/02-vscode/02-vscode-copilot.md)
-- [course/modules/06-ai-instructions/01-prompting-grundlagen.md](../../course/modules/06-ai-instructions/01-prompting-grundlagen.md)
+- Quelle: [course/course-library/02-vscode/02-vscode-copilot.md](../../course/course-library/02-vscode/02-vscode-copilot.md)
+- [course/course-library/06-ai-instructions/01-prompting-grundlagen.md](../../course/course-library/06-ai-instructions/01-prompting-grundlagen.md)
