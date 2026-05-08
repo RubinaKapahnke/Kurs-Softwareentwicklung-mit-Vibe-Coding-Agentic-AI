@@ -9,10 +9,10 @@ Am Ende dieser Uebung hast du deinen eigenen Branch erstellt, deine persoenliche
 
 - [ ] VS Code ist geoeffnet
 - [ ] Du hast ein Terminal geoeffnet und bist im Repo-Ordner (erkennbar am Pfad `vibe-coding-0426`)
-- [ ] Du kennst deinen Ordner in `apps/learners/` – er traegt deinen Vornamen in Kleinbuchstaben
+- [ ] Du kennst deinen Ordner in `course/learners/` – er traegt deinen Vornamen in Kleinbuchstaben
 
 In dieser Uebung arbeitest du mit dieser Datei:
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden, wird von dir aktualisiert)
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden, wird von dir aktualisiert)
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
@@ -70,7 +70,7 @@ git checkout -b UE-M2-01-<vorname>   # Erstellt einen neuen Branch und wechselt 
 Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
 
 ### 3. Lernfortschrittsdatei aktualisieren
-Oeffne **deine persoenliche Datei** `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (ersetze `<dein-name>` durch deinen eigenen Vornamen).
+Oeffne **deine persoenliche Datei** `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (ersetze `<dein-name>` durch deinen eigenen Vornamen).
 
 > **Tipp:** Falls du die Datei nicht im Explorer findest: `Strg+P` (Windows) / `Cmd+P` (Mac) eingeben, dann `lernfortschritt_` tippen und deinen Namen auswaehlen.
 

@@ -9,10 +9,10 @@ Du lernst, wie du Prompts strukturiert aufbaust, iterativ verbesserst und dabei 
 
 - [ ] VS Code ist geoeffnet und du siehst den Repo-Ordner im Explorer (linke Leiste)
 - [ ] GitHub Copilot Chat ist aktiv – erkennbar am Chat-Symbol in der linken Leiste
-- [ ] Du hast deine persoenliche Lernfortschrittsdatei gefunden: `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md`
+- [ ] Du hast deine persoenliche Lernfortschrittsdatei gefunden: `course/learners/<dein-name>/lernfortschritt_<dein-name>.md`
 
 In dieser Uebung arbeitest du mit diesen Dateien:
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` – dort traegst du Beobachtungen ein
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` – dort traegst du Beobachtungen ein
 - Copilot Chat (kein Tab, sondern das Chat-Fenster links/rechts)
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.

@@ -12,7 +12,7 @@ Du wiederholst den vollstaendigen Branch-Commit-PR-Ablauf zweimal hintereinander
 - [ ] Du kannst `git status`, `git checkout -b` und `git push` bereits ohne nachzuschauen
 
 In dieser Uebung arbeitest du mit diesen Dateien:
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird strukturiert erweitert)
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird strukturiert erweitert)
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
@@ -52,7 +52,7 @@ git checkout -b UE-M2-03a-<vorname>   # Erster Branch dieser Uebung
 
 > **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen. Dieser Durchlauf ist `03a`, der zweite weiter unten `03b`.
 
-Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und ergaenze im Abschnitt `## Lernjournal` einen neuen Eintrag:
+Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und ergaenze im Abschnitt `## Lernjournal` einen neuen Eintrag:
 
 ```markdown
 ### [heutiges Datum] – Uebung 03 gestartet
@@ -119,7 +119,7 @@ Erstelle einen neuen Branch:
 git checkout -b UE-M2-03b-<vorname>   # Zweiter Branch dieser Uebung
 ```
 
-Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und fuege einen neuen Journaleintrag ein. Nutze dieses Muster – tippe es ab oder kopiere es und fuell die Luecken aus:
+Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code und fuege einen neuen Journaleintrag ein. Nutze dieses Muster – tippe es ab oder kopiere es und fuell die Luecken aus:
 
 ```markdown
 ## Eintrag [heutiges Datum]
@@ -172,7 +172,7 @@ Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlage
 
 ### 5. Abschluss: Lernjournal mit Abschluss-Eintrag ergaenzen
 
-Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` noch einmal und ergaenze deinen Eintrag aus Aufgabe 1 oder fuege einen neuen Abschluss-Eintrag hinzu:
+Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` noch einmal und ergaenze deinen Eintrag aus Aufgabe 1 oder fuege einen neuen Abschluss-Eintrag hinzu:
 
 ```markdown
 ### [heutiges Datum] – Uebung 03 abgeschlossen

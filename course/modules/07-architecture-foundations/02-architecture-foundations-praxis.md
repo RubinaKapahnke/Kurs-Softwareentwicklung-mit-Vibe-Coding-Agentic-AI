@@ -6,7 +6,7 @@ Diese Datei fuehrt dich durch den praktischen Weg: Du hast ein PRD – jetzt lei
 
 ## Schritt 1: PRD lesen und Bausteine identifizieren
 
-Oeffne dein PRD (`apps/learners/<dein-name>/prd_<dein-name>.md`) und beantworte diese Fragen:
+Oeffne dein PRD (`course/learners/<dein-name>/prd_<dein-name>.md`) und beantworte diese Fragen:
 
 **Was zeigt die App an?**
 → Alles, was sichtbar auf dem Bildschirm erscheint, ist ein Kandidat fuer eine Komponente.

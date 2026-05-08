@@ -11,10 +11,10 @@ Stelle sicher, bevor du beginnst:
 
 - [ ] VS Code ist geoeffnet und du siehst den Repo-Ordner im Explorer (linke Leiste)
 - [ ] GitHub Copilot Chat ist aktiv – erkennbar am Chat-Symbol in der linken Leiste
-- [ ] Du weisst, wo deine persoenliche PRD-Datei liegt: `apps/learners/<dein-name>/prd_<dein-name>.md`
+- [ ] Du weisst, wo deine persoenliche PRD-Datei liegt: `course/learners/<dein-name>/prd_<dein-name>.md`
 
 In dieser Uebung arbeitest du hauptsaechlich mit zwei Dateien gleichzeitig:
-1. **Deine PRD-Datei** (`apps/learners/<dein-name>/prd_<dein-name>.md`) – dort schreibst du hinein
+1. **Deine PRD-Datei** (`course/learners/<dein-name>/prd_<dein-name>.md`) – dort schreibst du hinein
 2. **Die Prompt-Datei** (`.github/prompts/learners-prd-assistent.prompt.md`) – dort liest du nur
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD-Datei und deine Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
@@ -28,7 +28,7 @@ In dieser Uebung arbeitest du hauptsaechlich mit zwei Dateien gleichzeitig:
 Lies zuerst: [modules/06-ai-instructions/02-prd-grundlagen.md → Was ist ein PRD?](../modules/06-ai-instructions/02-prd-grundlagen.md)
 
 Dann oeffne deine persoenliche PRD-Datei in VS Code:
-`apps/learners/<dein-name>/prd_<dein-name>.md`
+`course/learners/<dein-name>/prd_<dein-name>.md`
 
 ---
 
@@ -40,7 +40,7 @@ Oeffne die Datei [.github/prompts/learners-prd-assistent.prompt.md](../../.githu
 
 > **Hinweis:** Der Ordner `.github/` ist ein versteckter Ordner – er erscheint ganz oben im VS Code Explorer. Falls du ihn nicht findest: Druecke `Strg+P` (Windows) bzw. `Cmd+P` (Mac) und tippe `.github/prompts/learners-prd-assistent.prompt.md` – dann direkt oeffnen.
 
-Schreibe deine Antworten als Stichpunkte direkt in deine PRD-Datei (`apps/learners/<dein-name>/prd_<dein-name>.md`), als neuen Abschnitt `## Meine Beobachtungen zur Prompt-Datei`:
+Schreibe deine Antworten als Stichpunkte direkt in deine PRD-Datei (`course/learners/<dein-name>/prd_<dein-name>.md`), als neuen Abschnitt `## Meine Beobachtungen zur Prompt-Datei`:
 - Welche Regeln gibt der Prompt der KI?
 - Warum fragt die KI zuerst – statt sofort zu antworten?
 - Was wuerde passieren, wenn diese Regeln nicht da waeren?
@@ -136,7 +136,7 @@ Quelle: [modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/0
 
 Erstelle einen eigenen Branch fuer deine Aenderungen, committe und pushe – und erstelle danach einen Pull Request auf GitHub.
 
-Den vollstaendigen Ablauf findest du hier: [docs/uebungen/README_UEBUNGEN.md → Vorgehen fuer Lernende](../uebungen/README_UEBUNGEN.md)
+Den vollstaendigen Ablauf findest du hier: [course/uebungen/README_UEBUNGEN.md → Vorgehen fuer Lernende](../uebungen/README_UEBUNGEN.md)
 
 Pruefe zuerst deinen aktuellen Status – damit du weisst, wo du stehst:
 
@@ -181,7 +181,7 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-be
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 - **Markdown formatieren** – du strukturierst dein PRD mit Ueberschriften, Listen und Code-Bloecken ([modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md))
-- **Datei im eigenen Ordner anlegen und bearbeiten** – du arbeitest in `apps/learners/<dein-name>/` ([modules/05-terminal/01-terminal-grundlagen.md](../modules/05-terminal/01-terminal-grundlagen.md))
+- **Datei im eigenen Ordner anlegen und bearbeiten** – du arbeitest in `course/learners/<dein-name>/` ([modules/05-terminal/01-terminal-grundlagen.md](../modules/05-terminal/01-terminal-grundlagen.md))
 - **Branch erstellen, committen und pushen** – du versionierst deine Aenderungen ([modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md))
 
 ---
@@ -191,7 +191,7 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 > **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
 
 Bevor du den PR erstellst, pruefe kurz:
-- [ ] Deine PRD-Datei (`apps/learners/<dein-name>/prd_<dein-name>.md`) enthaelt die fertige PRD-Struktur
+- [ ] Deine PRD-Datei (`course/learners/<dein-name>/prd_<dein-name>.md`) enthaelt die fertige PRD-Struktur
 - [ ] PR auf GitHub ist erstellt
 
 ---

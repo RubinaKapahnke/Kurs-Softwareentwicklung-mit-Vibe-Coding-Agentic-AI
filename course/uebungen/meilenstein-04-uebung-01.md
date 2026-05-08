@@ -14,8 +14,8 @@ Du leitest aus deinem PRD eine Projektstruktur ab, formulierst einen Strukturkon
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 
-- `apps/learners/<dein-name>/prd_<dein-name>.md` (dein PRD – bereits vorhanden)
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (dein Lernjournal)
+- `course/learners/<dein-name>/prd_<dein-name>.md` (dein PRD – bereits vorhanden)
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (dein Lernjournal)
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD- und Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
@@ -34,7 +34,7 @@ Lies vor dem Start:
 
 ### 1. Dein PRD lesen und Bausteine identifizieren
 
-Oeffne dein PRD (`apps/learners/<dein-name>/prd_<dein-name>.md`) und beantworte schriftlich diese drei Fragen direkt in der Datei unter einem neuen Abschnitt `## Strukturanalyse`:
+Oeffne dein PRD (`course/learners/<dein-name>/prd_<dein-name>.md`) und beantworte schriftlich diese drei Fragen direkt in der Datei unter einem neuen Abschnitt `## Strukturanalyse`:
 
 1. **Was zeigt deine App an?** (Alles Sichtbare = Kandidat fuer eine Komponente)
 2. **Was passiert bei Interaktion?** (Klicks, Formulare, Filter – eigene Komponenten oder Services)

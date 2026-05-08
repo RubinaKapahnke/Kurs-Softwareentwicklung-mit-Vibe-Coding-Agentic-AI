@@ -14,7 +14,7 @@ Du verstehst, wie Prompt-Dateien die KI gezielt steuern, legst eine eigene Promp
 In dieser Uebung arbeitest du mit diesen Dateien:
 - `.github/prompts/learners-prd-assistent.prompt.md` – lesen als Vorbild
 - `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` – **neu anlegen** (deine persoenliche Datei)
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` – Beobachtungen eintragen
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` – Beobachtungen eintragen
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 

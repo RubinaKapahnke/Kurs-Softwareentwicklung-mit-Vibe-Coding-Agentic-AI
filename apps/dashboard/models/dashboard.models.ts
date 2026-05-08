@@ -1,4 +1,4 @@
-// Datenquelle: apps/learners/*/lernfortschritt_*.md
+// Datenquelle: course/learners/*/lernfortschritt_*.md
 export interface LearnerProgress {
   learnerId: string;
   learnerName: string;
@@ -23,14 +23,14 @@ export interface MilestoneStatus {
   exerciseStatus: ExerciseStatus[];
 }
 
-// Datenquelle: docs/uebungen/meilenstein-*-uebung-*.md
+// Datenquelle: course/uebungen/meilenstein-*-uebung-*.md
 export interface ExerciseStatus {
   exerciseId: string;
   exerciseTitle: string;
   status: 'not_started' | 'in_progress' | 'done';
 }
 
-// Datenquelle: apps/learners/*/lernfortschritt_*.md (Lernjournal)
+// Datenquelle: course/learners/*/lernfortschritt_*.md (Lernjournal)
 export interface JournalEntry {
   dateIso: string;
   did: string;

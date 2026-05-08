@@ -14,8 +14,8 @@ Du pruefst, wie gut deine Dateien als KI-Kontext funktionieren, verbesserst dein
 
 In dieser Uebung arbeitest du mit diesen Dateien:
 
-- `apps/learners/<dein-name>/prd_<dein-name>.md` (dein PRD)
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (dein Lernjournal)
+- `course/learners/<dein-name>/prd_<dein-name>.md` (dein PRD)
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (dein Lernjournal)
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD- und Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
@@ -34,7 +34,7 @@ Lies vor dem Start:
 
 ### 1. Dein PRD auf Vollstaendigkeit pruefen
 
-Oeffne `apps/learners/<dein-name>/prd_<dein-name>.md` und pruefe, ob diese fuenf Abschnitte vorhanden und ausgefuellt sind:
+Oeffne `course/learners/<dein-name>/prd_<dein-name>.md` und pruefe, ob diese fuenf Abschnitte vorhanden und ausgefuellt sind:
 
 1. `## 1. Vision & Zielsetzung` – Ein Satz: Was ist das Ziel der App?
 2. `## 2. Kernfunktionen (Features)` – Was soll die App koennen?

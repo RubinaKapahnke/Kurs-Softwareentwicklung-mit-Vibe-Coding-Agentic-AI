@@ -29,6 +29,35 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
+## 08.05.2026 (Session 8)
+
+### Onboarding-MVP: Markdown-Renderer, Kursmodule, Konsistenz-Fixes
+
+**Onboarding-App – Markdown-Content-Workflow:**
+- `apps/onboarding/src/app/components/markdown-view/markdown-view.component.ts`: Neue Komponente zum sicheren Rendern von Markdown (DOMPurify + `bypassSecurityTrustHtml`)
+- `apps/onboarding/public/content/github-account.md`: Erste Markdown-Erklaerungsdatei fuer Onboarding-Schritt "GitHub Account"
+- Schrittmodell (`markdownSource`-Feld) auf optionale Markdown-Einbindung erweitert
+
+**Kursmodule-Ebene neu:**
+- `KURSBESCHREIBUNG.md`: Gesamtkursbeschreibung mit Pfaden, Kurslogik und Meilensteinbedeutung konsolidiert
+- `course/kursmodule/` mit 14 eigenstaendigen Kursmodulen (`00-kursmodul.md` je Modul) angelegt
+- `course/kursmodule/README_KURSMODULE.md`: Uebersicht aller Kursbausteine
+
+**Agents/Instructions erweitert:**
+- `AGENTS.md`: Abschnitt Markdown-Content-Konvention und neue Architektur-Ebene `course/kursmodule/` dokumentiert
+- `.github/instructions/onboarding.instructions.md`: Markdown-Content-Regeln (DOMPurify, `markdownSource`, Komponenten-Trennung) erganzt
+- `.github/agents/course-dev-onboarding-web-architect.agent.md`: Neu angelegt
+
+**Konsistenz-Fixes (Paket A+B – Repo-Consistency-Checker Session 8):**
+- Alle `apps/learners/` → `course/learners/` in 9 Uebungsdateien + README_UEBUNGEN korrigiert
+- `docs/uebungen`-Linktexte in Uebungen auf `course/uebungen` aktualisiert
+- `course/modules/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
+- `course/modules/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
+- `apps/dashboard/models/dashboard.models.ts`: Interface-Kommentare auf korrekte Pfade (`course/learners/`, `course/uebungen/`) aktualisiert
+- `README.md`: `course/notizen-kursentwicklung.md` in Projektstruktur ergaenzt
+
+**Ergebnis:** 313 Links OK, 8 Uebungen OK, 5 Lernfortschritt-Dateien OK (unveraendert)
+
 ---
 
 ## 04.05.2026 (Session 7)

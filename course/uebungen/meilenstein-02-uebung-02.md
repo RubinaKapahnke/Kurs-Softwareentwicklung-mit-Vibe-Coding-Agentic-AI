@@ -9,12 +9,12 @@ Du fuehrst typische Terminal- und Git-Aktionen in deinem persoenlichen Ordner du
 
 - [ ] VS Code ist geoeffnet und du siehst das Terminal (unterer Bereich – `Strg+J` oeffnet es, falls nicht sichtbar)
 - [ ] Du bist im Repo-Ordner `vibe-coding-0426` (pruefe mit `pwd`)
-- [ ] Uebung 01 aus Meilenstein 2 ist abgeschlossen (dein Ordner `apps/learners/<dein-name>/` existiert)
+- [ ] Uebung 01 aus Meilenstein 2 ist abgeschlossen (dein Ordner `course/learners/<dein-name>/` existiert)
 
 In dieser Uebung arbeitest du mit diesen Dateien:
-- `apps/learners/<dein-name>/` (vorhanden – du navigierst dorthin und arbeitest darin)
-- `apps/learners/<dein-name>/uebung-02-notizen.md` (neu – wird in Aufgabe 3 erstellt)
-- `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird am Ende aktualisiert)
+- `course/learners/<dein-name>/` (vorhanden – du navigierst dorthin und arbeitest darin)
+- `course/learners/<dein-name>/uebung-02-notizen.md` (neu – wird in Aufgabe 3 erstellt)
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (vorhanden – wird am Ende aktualisiert)
 
 > **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
@@ -112,7 +112,7 @@ git checkout -b UE-M2-02-<vorname>   # Erstellt einen neuen Branch und wechselt 
 Erstelle nun eine Notizdatei in deinem persoenlichen Ordner:
 
 ```bash
-cd apps/learners/<dein-name>
+cd course/learners/<dein-name>
 echo. > uebung-02-notizen.md
 ```
 
@@ -151,7 +151,7 @@ Quelle: [modules/04-git/00-git-modulguide.md](../modules/04-git/00-git-modulguid
 
 ### 5. Lernfortschrittsdatei aktualisieren
 
-Oeffne `apps/learners/<dein-name>/lernfortschritt_<dein-name>.md` und fuege einen Journaleintrag ein. Nutze dieses Muster:
+Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` und fuege einen Journaleintrag ein. Nutze dieses Muster:
 
 ```markdown
 **Was habe ich heute gemacht?**

@@ -25,10 +25,10 @@ Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](..
 ## Vorgehen fuer Lernende
 1. **Meilenstein öffnen:** [NEXT_STEPS.md](../../NEXT_STEPS.md) → Relevant Meilenstein suchen
 2. **Module erkunden:** Modul-Einstiege von dort → Für jedes Modul `00-modulguide.md` öffnen → Von dort zu Grundlagen/Befehlsuebersicht und Selbstcheck navigieren
-3. **Aufgabe lesen:** [docs/uebungen](.) → Aktuelle Übung öffnen
+3. **Aufgabe lesen:** [course/uebungen](.) → Aktuelle Übung öffnen
 4. **Mit Quellen arbeiten:** Für jede Aufgabe: Quelle (Link zu Modul) klicken → Modul lesen → Aufgabe lösen
 5. **Lösen und dokumentieren:** Antwortdatei im eigenen Ordner anlegen
-   `apps/learners/<name>/uebung-meilenstein-XX-YY.md`
+   `course/learners/<name>/uebung-meilenstein-XX-YY.md`
 6. **Fortschritt eintragen:** Lernjournal in Lernfortschrittsdatei aktualisieren
 7. **Abgabe:** Push + PR erstellen
 

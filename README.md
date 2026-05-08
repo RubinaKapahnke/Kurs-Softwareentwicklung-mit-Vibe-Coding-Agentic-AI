@@ -128,6 +128,7 @@ course/modules/04-git/
 │           ├── learner-progress-parser.service.ts
 │           └── snapshot.service.ts
 ├── course/
+│   ├── notizen-kursentwicklung.md
 │   ├── learners/
 │   │   ├── daria/
 │   │   │   ├── prd_daria.md
