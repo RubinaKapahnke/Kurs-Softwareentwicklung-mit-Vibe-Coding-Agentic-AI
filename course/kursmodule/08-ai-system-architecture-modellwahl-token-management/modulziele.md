@@ -1,4 +1,4 @@
-# Kursmodul 08: AI System Architecture, Modellwahl & Token Management
+﻿# Kursmodul 08: AI System Architecture, Modellwahl & Token Management
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für AI Product Owner, Solution Architects, Entwickler\*innen, Data/AI 
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: AI System Architecture, Modellwahl und Token Management.
-- Übergangsweise relevant: [Prompting Grundlagen](../../modules/06-ai-instructions/01-prompting-grundlagen.md), [PRD Grundlagen](../../modules/06-ai-instructions/02-prd-grundlagen.md)
+- Übergangsweise relevant: [Prompting Grundlagen](../../course-library/06-ai-instructions/01-prompting-grundlagen.md), [PRD Grundlagen](../../course-library/06-ai-instructions/02-prd-grundlagen.md)
 
 ## Abschlussnachweis
 

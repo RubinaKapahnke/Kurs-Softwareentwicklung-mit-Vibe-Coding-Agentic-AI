@@ -41,7 +41,7 @@ Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten
 1. Kursbeschreibung ([KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md)) → Beschreibt Gesamtbild, Pfade und Kurslogik
 2. Kursmodule ([course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md)) → Beschreiben eigenständige Kursbausteine mit Rollenbezug und Praxisartefakt
 3. Meilensteine in [NEXT_STEPS.md](NEXT_STEPS.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
-4. Modul-Inhalte ([course/modules](course/modules)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
+4. Modul-Inhalte ([course/course-library](course/course-library)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
 5. Übungen ([course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
 6. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
 
@@ -150,33 +150,33 @@ course/course-library/04-git/
 │   ├── kursmodule/
 │   │   ├── README_KURSMODULE.md
 │   │   ├── 01-arbeitsumgebung-dokumentation-versionsverwaltung/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 02-produktbeschreibung-inkrementelle-planung/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 03-vibe-coding-prompting-context-engineering/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 04-ai-literacy-modellverstaendnis/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 05-grundlagen-programmierlogik/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 06-debugging-testing-harness-engineering/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 07-architektur-wartbare-produktstruktur/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 08-ai-system-architecture-modellwahl-token-management/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 09-agentic-software-engineering-autonome-agenten/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 10-daten-reporting-rag-grundlagen/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 11-schwerpunktpfad-web-app-oder-datenprodukt/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 12-teamarbeit-datenschutz-urheberrecht-governance/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   ├── 13-deployment-monitoring-release-management/
-│   │   │   └── 00-kursmodul.md
+│   │   │   └── modulziele.md
 │   │   └── 14-abschlussprojekt-portfolio/
-│   │       └── 00-kursmodul.md
+│   │       └── modulziele.md
 │   ├── modules/
 │   │   ├── 01-markdown/
 │   │   ├── 02-vscode/

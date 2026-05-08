@@ -33,10 +33,10 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 
 | Befehl | Wofuer? | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- |
-| `git checkout -b <branch-name>` | Erstellt einen neuen Branch und wechselt direkt hinein. | `git checkout -b feat/lernstand-dom` | Im Repo wird dieser Befehl bereits genutzt. |
+| `git checkout -b <branch-name>` | Erstellt einen neuen Branch und wechselt direkt hinein. | `git checkout -b feat/mein-thema` | Sprechenden Branch-Namen wählen. |
 | `git checkout <branch-name>` | Wechselt in einen vorhandenen Branch. | `git checkout main` | Vorher pruefen, ob lokale Aenderungen offen sind. |
-| `git push origin <branch-name>` | Laedt genau diesen Branch zu GitHub hoch. | `git push origin feat/lernstand-dom` | Branch-Name muss stimmen. |
-| `git branch -d <branch-name>` | Loescht einen lokalen Branch nach dem Merge. | `git branch -d feat/lernstand-dom` | Nur nutzen, wenn der Branch wirklich fertig ist. |
+| `git push origin <branch-name>` | Laedt genau diesen Branch zu GitHub hoch. | `git push origin feat/mein-thema` | Branch-Name muss stimmen. |
+| `git branch -d <branch-name>` | Loescht einen lokalen Branch nach dem Merge. | `git branch -d feat/mein-thema` | Nur nutzen, wenn der Branch wirklich fertig ist. |
 
 ## Synchronisieren
 

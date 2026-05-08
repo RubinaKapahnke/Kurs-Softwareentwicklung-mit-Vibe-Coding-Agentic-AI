@@ -1,4 +1,4 @@
-# Kursmodul 11: Schwerpunktpfad Web/App oder Datenprodukt
+﻿# Kursmodul 11: Schwerpunktpfad Web/App oder Datenprodukt
 
 ## Kurzbeschreibung
 
@@ -22,7 +22,7 @@ Relevant für Einsteiger\*innen mit Projektziel, Entwickler\*innen, UX, Data Ana
 
 ## Quellen aus der Lernmaterial-Sammlung
 
-- Für Web/App: [Architecture Foundations Praxis](../../modules/07-architecture-foundations/02-architecture-foundations-praxis.md)
+- Für Web/App: [Architecture Foundations Praxis](../../course-library/07-architecture-foundations/02-architecture-foundations-praxis.md)
 - Für Datenprodukte: noch als eigenes Lernmaterial anzulegen.
 
 ## Abschlussnachweis

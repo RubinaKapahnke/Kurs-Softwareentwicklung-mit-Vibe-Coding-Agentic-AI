@@ -1,4 +1,4 @@
-# Kursmodul 13: Deployment, Monitoring & Release Management
+﻿# Kursmodul 13: Deployment, Monitoring & Release Management
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für Entwickler\*innen, Operations, DevOps, Product Owner, Support, Pro
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: Deployment, Monitoring, Semantic Versioning und Release Management.
-- Übergangsweise relevant: [Git Befehlsübersicht](../../modules/04-git/03-git-befehlsuebersicht.md)
+- Übergangsweise relevant: [Git Befehlsübersicht](../../course-library/04-git/03-git-befehlsuebersicht.md)
 
 ## Abschlussnachweis
 

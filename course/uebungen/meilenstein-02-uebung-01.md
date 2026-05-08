@@ -23,7 +23,7 @@ In dieser Uebung arbeitest du mit dieser Datei:
 ### 1. Aktuellen Stand holen
 Stelle sicher, dass du auf dem neuesten Stand von `main` bist.
 
-> **Lies zuerst:** [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md) – Abschnitt "Wie aktualisiere ich mein lokales Repo?". Kehre dann hierher zurueck.
+> **Lies zuerst:** [course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md) – Abschnitt "Wie aktualisiere ich mein lokales Repo?". Kehre dann hierher zurueck.
 
 Pruefe zuerst deinen aktuellen Status:
 ```bash
@@ -36,12 +36,12 @@ Dann:
 git pull origin main   # Holt alle neuen Aenderungen aus dem Remote-Repo auf deinen Rechner
 ```
 
-Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+Quelle: [course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md)
 
 ### 2. Eigenen Branch erstellen
 Fuer jede Uebung erstellst du einen neuen, eigenen Branch. Das stellt sicher, dass deine Aenderungen sauber getrennt sind und als Pull Request eingereicht werden koennen. Verwende nie einen Branch aus einer frueheren Uebung wieder.
 
-> **Lies zuerst:** [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md) – Abschnitt "Was ist ein Branch und warum brauche ich das?". Kehre dann hierher zurueck.
+> **Lies zuerst:** [course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md) – Abschnitt "Was ist ein Branch und warum brauche ich das?". Kehre dann hierher zurueck.
 
 Pruefe zuerst, dass du auf `main` bist:
 ```bash
@@ -67,7 +67,7 @@ git checkout -b UE-M2-01-<vorname>   # Erstellt einen neuen Branch und wechselt 
 
 > **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
-Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+Quelle: [course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md)
 
 ### 3. Lernfortschrittsdatei aktualisieren
 Oeffne **deine persoenliche Datei** `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (ersetze `<dein-name>` durch deinen eigenen Vornamen).
@@ -89,9 +89,9 @@ Hier eigene Antwort eintippen – was hat nicht funktioniert oder verwirrt?
 Hier eigene Antwort eintippen – was moechtest du als naechstes lernen oder ausprobieren?
 ```
 
-> **Lies zuerst:** [modules/01-markdown/02-formatierung_md-files.md](../modules/01-markdown/02-formatierung_md-files.md) – dort siehst du, wie du Markdown-Abschnitte korrekt formatierst. Kehre dann hierher zurueck.
+> **Lies zuerst:** [course-library/01-markdown/02-formatierung_md-files.md](../course-library/01-markdown/02-formatierung_md-files.md) – dort siehst du, wie du Markdown-Abschnitte korrekt formatierst. Kehre dann hierher zurueck.
 
-Quelle: [modules/01-markdown/02-formatierung_md-files.md](../modules/01-markdown/02-formatierung_md-files.md)
+Quelle: [course-library/01-markdown/02-formatierung_md-files.md](../course-library/01-markdown/02-formatierung_md-files.md)
 
 ### 4. Aenderungen committen und pushen
 
@@ -107,7 +107,7 @@ git add .          # Alle Aenderungen fuer den Commit vormerken
 git commit -m "feat: lernstand <vorname> angelegt"
 git push origin UE-M2-01-<vorname>
 ```
-Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+Quelle: [course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md)
 
 ### 5. Pull Request erstellen
 
@@ -119,9 +119,9 @@ Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlage
 
 > Falls der gelbe Banner nicht erscheint: Klicke auf "Pull requests" -> "New pull request" -> Branch auswaehlen.
 
-> **Lies zuerst:** [modules/03-github/01-github-grundlagen.md](../modules/03-github/01-github-grundlagen.md) – Abschnitt "Pull Request erstellen". Kehre dann hierher zurueck.
+> **Lies zuerst:** [course-library/03-github/01-github-grundlagen.md](../course-library/03-github/01-github-grundlagen.md) – Abschnitt "Pull Request erstellen". Kehre dann hierher zurueck.
 
-Quelle: [modules/03-github/01-github-grundlagen.md](../modules/03-github/01-github-grundlagen.md)
+Quelle: [course-library/03-github/01-github-grundlagen.md](../course-library/03-github/01-github-grundlagen.md)
 
 ---
 
@@ -138,8 +138,8 @@ Quelle: [modules/03-github/01-github-grundlagen.md](../modules/03-github/01-gith
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Markdown-Grundlagen** – du strukturierst deine Dateien mit Ueberschriften und Listen ([modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md))
-- **VS Code bedienen** – du oeffnest Dateien und navigierst im Explorer ([modules/02-vscode/01-vscode-grundlagen.md](../modules/02-vscode/01-vscode-grundlagen.md))
+- **Markdown-Grundlagen** – du strukturierst deine Dateien mit Ueberschriften und Listen ([course-library/01-markdown/01-markdown-grundlagen.md](../course-library/01-markdown/01-markdown-grundlagen.md))
+- **VS Code bedienen** – du oeffnest Dateien und navigierst im Explorer ([course-library/02-vscode/01-vscode-grundlagen.md](../course-library/02-vscode/01-vscode-grundlagen.md))
 
 ---
 

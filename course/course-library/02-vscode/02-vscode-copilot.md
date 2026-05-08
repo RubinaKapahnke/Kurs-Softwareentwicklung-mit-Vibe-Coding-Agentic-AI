@@ -38,11 +38,11 @@ Die KI sieht standardmaessig nicht, welche Dateien du geoeffnet hast. Du musst i
 Tippe `#` im Chat-Eingabefeld → eine Liste erscheint → Datei auswaehlen.
 
 Beispiel:
-> `#prd_daria.md Erstelle eine Komponentenstruktur fuer dieses PRD.`
+> `#prd_meinprojekt.md Erstelle eine Komponentenstruktur fuer dieses PRD.`
 
 **Mehrere Dateien:**
 Du kannst mehrere `#`-Referenzen im gleichen Prompt kombinieren:
-> `#prd_daria.md #participants.json Erstelle einen Service, der die Daten aus der JSON-Datei laedt.`
+> `#prd_meinprojekt.md #participants.json Erstelle einen Service, der die Daten aus der JSON-Datei laedt.`
 
 > **Warum das wichtig ist:** Ohne `#`-Kontext erfindet die KI Annahmen. Mit `#` arbeitest du praezise – das ist der Kern des Context-Engineering.
 

@@ -4,7 +4,7 @@ In diesem Ordner liegen zentral vorgegebene Uebungsaufgaben fuer alle Lernenden.
 
 Wie Übungen mit Modulen und NEXT_STEPS verknüpft sind, erklärt [NEXT_STEPS.md → Architektur](../../NEXT_STEPS.md).
 
-Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](../kursmodule/README_KURSMODULE.md). Wichtig: Uebungen referenzieren weiterhin als Quelle die Lernmaterial-Sammlung in `course/modules`.
+Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](../kursmodule/README_KURSMODULE.md). Wichtig: Uebungen referenzieren weiterhin als Quelle die Lernmaterial-Sammlung in `course/course-library`.
 
 ## Uebersicht
 
@@ -59,4 +59,4 @@ Jede Uebung muss ohne Vorkenntnisse und ohne externe Hilfe bearbeitbar sein. Daz
 
 ### Formatbeispiel
 - Aufgabe: Branch erstellen
-- Quelle: [course/course-library/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+- Quelle: [course/course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md)

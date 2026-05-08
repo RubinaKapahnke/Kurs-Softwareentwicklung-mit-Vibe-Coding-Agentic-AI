@@ -23,7 +23,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 ## Vorbereitung
 
-Lies zuerst: [modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Lies zuerst: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 Behalte die Datei offen – du wirst waehrend der Aufgaben immer wieder darauf zurueckschauen.
 
@@ -34,7 +34,7 @@ Behalte die Datei offen – du wirst waehrend der Aufgaben immer wieder darauf z
 ### 1. Vier Bausteine an einem Beispiel erkennen
 
 Lies noch einmal den Abschnitt **"Die vier Grundbausteine eines Prompts"** in:
-[modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+[course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 Lies dann diesen Beispiel-Prompt und trage in deiner Lernfortschrittsdatei unter einem neuen Abschnitt `## Prompting-Beobachtungen` ein, welche Bausteine du erkennst:
 
@@ -42,7 +42,7 @@ Lies dann diesen Beispiel-Prompt und trage in deiner Lernfortschrittsdatei unter
 
 Schreibe fuer jeden Baustein (Rolle, Aufgabe, Kontext, Format) ob er vorhanden ist, und wenn ja, was genau er aussagt.
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md → Die vier Grundbausteine](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Die vier Grundbausteine](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -64,7 +64,7 @@ Schreibe einen **Zero-Shot-Prompt** – also einen Prompt ohne Beispiele und ohn
 
 Trage die **Antwort der KI stichpunktartig** in deiner Lernfortschrittsdatei im Abschnitt `## Prompting-Beobachtungen` ein: War sie hilfreich? Was hat gefehlt?
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md → Zero-Shot vs. Few-Shot Prompting](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Zero-Shot vs. Few-Shot Prompting](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -89,7 +89,7 @@ Notiere in deiner Lernfortschrittsdatei unter `## Prompting-Beobachtungen`:
 
 > **Warum im gleichen Chat?** Die KI kennt den vorherigen Austausch noch – das ist selbst schon Kontext. Wenn du das bewusst nutzt, hast du den naechsten Schritt des Prompting-Dialogs verstanden.
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md → Die KI weiss nichts von deinem Projekt](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Die KI weiss nichts von deinem Projekt](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -107,7 +107,7 @@ Trage danach in deiner Lernfortschrittsdatei unter `## Prompting-Beobachtungen` 
 - Wie hat sich die Qualitaet der Antworten veraendert?
 - Was hast du im Dialog gelernt, das du vorher nicht wusstest?
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md → Iteratives Prompting](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Iteratives Prompting](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -142,7 +142,7 @@ git push origin UE-M3-02-<vorname>
 
 > **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -157,9 +157,9 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-be
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Branch erstellen und committen** ([modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md))
-- **Lernfortschrittsdatei bearbeiten und speichern** ([modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md))
-- **PR auf GitHub erstellen** ([modules/03-github/01-github-grundlagen.md](../modules/03-github/01-github-grundlagen.md))
+- **Branch erstellen und committen** ([course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md))
+- **Lernfortschrittsdatei bearbeiten und speichern** ([course-library/01-markdown/01-markdown-grundlagen.md](../course-library/01-markdown/01-markdown-grundlagen.md))
+- **PR auf GitHub erstellen** ([course-library/03-github/01-github-grundlagen.md](../course-library/03-github/01-github-grundlagen.md))
 
 ---
 

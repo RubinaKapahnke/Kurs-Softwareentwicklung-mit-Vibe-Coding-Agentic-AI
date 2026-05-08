@@ -1,4 +1,4 @@
-# Kursmodul 12: Teamarbeit, Datenschutz, Urheberrecht & Governance
+﻿# Kursmodul 12: Teamarbeit, Datenschutz, Urheberrecht & Governance
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für Team Leads, Projektleitung, Legal, Compliance, Datenschutz, HR/Lea
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: Datenschutz, Urheberrecht und Governance.
-- Übergangsweise relevant: [GitHub Grundlagen](../../modules/03-github/01-github-grundlagen.md), [Git Branch Workflow](../../modules/04-git/02-git-branch-workflow.md)
+- Übergangsweise relevant: [GitHub Grundlagen](../../course-library/03-github/01-github-grundlagen.md), [Git Branch Workflow](../../course-library/04-git/02-git-branch-workflow.md)
 
 ## Abschlussnachweis
 

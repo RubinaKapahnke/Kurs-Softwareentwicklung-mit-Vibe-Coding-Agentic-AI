@@ -21,7 +21,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 ## Vorbereitung
 
 Lies kurz den Abschnitt "Branches: sicher getrennt arbeiten" in:
-[modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+[course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md)
 
 Danach solltest du in einem Satz erklaeren koennen, warum man nicht direkt auf `main` arbeitet.
 
@@ -88,7 +88,7 @@ Erstelle auf GitHub einen PR:
 
 > Falls der gelbe Banner nicht erscheint: Klicke auf "Pull requests" → "New pull request" → Branch auswaehlen.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -105,9 +105,9 @@ git branch         # Pruefe: Bist du auf main (mit * markiert)?
 
 > **Falls `git status` noch unveraenderte Aenderungen anzeigt:** Committe zuerst (`git add .` → `git commit -m "..."`) oder parke sie kurz mit `git stash`. Erst dann `git checkout main` ausfuehren.
 
-> **Was ist `git stash`?** Es parkt deine ungespeicherten Aenderungen kurz zur Seite, ohne sie zu committen – wie ein temporaeres Notizbuch. Mit `git stash pop` holst du sie zurueck. Mehr dazu: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
+> **Was ist `git stash`?** Es parkt deine ungespeicherten Aenderungen kurz zur Seite, ohne sie zu committen – wie ein temporaeres Notizbuch. Mit `git stash pop` holst du sie zurueck. Mehr dazu: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md)
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -141,7 +141,7 @@ Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code u
 
 > **Warum dieses Muster?** Ein festes Format macht Eintraege leichter zu schreiben – auch wenn keine Lust da ist. Drei Fragen, fertig. Der Meilenstein-Fortschritt hilft dir, den Ueberblick zu behalten.
 
-Quelle: [modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md)
+Quelle: [course-library/01-markdown/01-markdown-grundlagen.md](../course-library/01-markdown/01-markdown-grundlagen.md)
 
 ---
 
@@ -166,7 +166,7 @@ Erstelle auf GitHub einen zweiten PR (gleicher Ablauf wie in Aufgabe 1).
 
 > **Pruefe:** Du hast jetzt zwei offene PRs auf GitHub – einen von Aufgabe 1, einen von hier. Das ist beabsichtigt – du laeuft gerade zwei parallele Aenderungen, wie es im Alltag vorkommt.
 
-Quelle: [modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md)
+Quelle: [course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md)
 
 ---
 
@@ -193,7 +193,7 @@ git push origin UE-M2-03b-<vorname>
 
 > **Hinweis:** Dieser Commit erscheint automatisch im bereits offenen PR von Aufgabe 4 – du musst keinen neuen PR erstellen.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md)
+Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md)
 
 ---
 
@@ -209,9 +209,9 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-be
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Branch erstellen und PR abschicken** – aus Uebung 01 und 02 ([modules/04-git/01-git-grundlagen.md](../modules/04-git/01-git-grundlagen.md))
-- **Dateien in VS Code bearbeiten und Markdown schreiben** ([modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md))
-- **Lernfortschritt-Datei kennen und oeffnen** ([modules/02-vscode/01-vscode-grundlagen.md](../modules/02-vscode/01-vscode-grundlagen.md))
+- **Branch erstellen und PR abschicken** – aus Uebung 01 und 02 ([course-library/04-git/01-git-grundlagen.md](../course-library/04-git/01-git-grundlagen.md))
+- **Dateien in VS Code bearbeiten und Markdown schreiben** ([course-library/01-markdown/01-markdown-grundlagen.md](../course-library/01-markdown/01-markdown-grundlagen.md))
+- **Lernfortschritt-Datei kennen und oeffnen** ([course-library/02-vscode/01-vscode-grundlagen.md](../course-library/02-vscode/01-vscode-grundlagen.md))
 
 ---
 

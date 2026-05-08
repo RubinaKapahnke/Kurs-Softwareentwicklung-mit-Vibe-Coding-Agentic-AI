@@ -96,7 +96,7 @@ Diesen Block in deiner PRD-Datei unter einem neuen Abschnitt `## Strukturkontext
 
 Mit dem fertigen Strukturkontext sieht ein Prompt so aus:
 
-> `#prd_daria.md Erstelle die Komponente ParticipantCard. Sie bekommt Name und Status als Input und zeigt beides mit Angular Material Card an.`
+> `#prd_meinprojekt.md Erstelle die Komponente ParticipantCard. Sie bekommt Name und Status als Input und zeigt beides mit Angular Material Card an.`
 
 Die KI legt die Datei automatisch im richtigen Ordner an und nutzt den richtigen Stack – weil du ihr den Kontext gegeben hast.
 

@@ -11,7 +11,7 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | Wofuer? | Windows (PowerShell) | macOS/Linux (zsh/bash) | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- | :--- |
 | Aktuellen Pfad anzeigen | `pwd` | `pwd` | Du tippst `pwd` und siehst z.B. `D:\DEV\GitHub Repos\Kurse\vibe-coding-0426` | Hilfreich, wenn du nicht mehr weisst, in welchem Ordner du gerade bist. |
-| In anderen Ordner wechseln | `cd <Ordnername>` | `cd <Ordnername>` | `cd course/learners/daria` navigiert in Darias Lernordner; `cd ..` geht eine Ebene hoch | `.` ist der aktuelle Ordner, `..` ist der Elternordner. |
+| In anderen Ordner wechseln | `cd <Ordnername>` | `cd <Ordnername>` | `cd course/learners/mein-name` navigiert in den eigenen Lernordner; `cd ..` geht eine Ebene hoch | `.` ist der aktuelle Ordner, `..` ist der Elternordner. |
 | Ins Home-Verzeichnis wechseln | `cd ~` | `cd ~` | Du bist irgendwo tief im Repo und willst schnell raus: `cd ~` bringt dich ins Home-Verzeichnis | Guter Reset-Punkt, wenn du dich verirrt hast. |
 | Ordnerinhalt anzeigen | `dir` | `ls` | `dir` im Repo-Ordner zeigt alle Dateien wie `README.md`, `NEXT_STEPS.md` | `ls -la` (macOS) zeigt auch versteckte Dateien wie `.github/`. |
 
@@ -21,9 +21,9 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | :--- | :--- | :--- | :--- | :--- |
 | Neuen Ordner erstellen | `mkdir <Name>` | `mkdir <Name>` | `mkdir course/learners/alex` legt einen neuen Lernordner fuer Alex an | Der Ordner wird sofort angelegt. |
 | Leere Datei erstellen | `New-Item <Datei>` | `touch <Datei>` | `New-Item lernfortschritt_alex.md` (Windows) bzw. `touch lernfortschritt_alex.md` (macOS) | Nicht `echo > datei.md` nutzen – schreibt ungewollten Text in die Datei. |
-| Datei kopieren | `copy <Quelle> <Ziel>` | `cp <Quelle> <Ziel>` | `copy lernfortschritt_daria.md lernfortschritt_daria_backup.md` sichert die Datei | Nutze relative Pfade, wenn Quelle und Ziel im selben Ordner liegen. |
+| Datei kopieren | `copy <Quelle> <Ziel>` | `cp <Quelle> <Ziel>` | `copy lernfortschritt_mein-name.md lernfortschritt_mein-name_backup.md` sichert die Datei | Nutze relative Pfade, wenn Quelle und Ziel im selben Ordner liegen. |
 | Datei verschieben oder umbenennen | `move <Alt> <Neu>` | `mv <Alt> <Neu>` | `move notizen.md lernjournal.md` benennt die Datei um | Funktioniert auch fuer ganze Ordner. |
-| Datei loeschen | `del <Datei>` | `rm <Datei>` | `del lernfortschritt_daria_backup.md` loescht die Sicherungskopie | **Achtung:** Geloeschte Dateien sind sofort weg – kein Papierkorb! |
+| Datei loeschen | `del <Datei>` | `rm <Datei>` | `del lernfortschritt_mein-name_backup.md` loescht die Sicherungskopie | **Achtung:** Geloeschte Dateien sind sofort weg – kein Papierkorb! |
 | Leeren Ordner loeschen | `rmdir <Ordner>` | `rmdir <Ordner>` | `rmdir course/learners/alex` entfernt den Ordner wieder | Der Ordner muss voellig leer sein. |
 
 ## Mit VS Code arbeiten
@@ -31,7 +31,7 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | Wofuer? | Windows (PowerShell) | macOS/Linux (zsh/bash) | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- | :--- |
 | Aktuellen Ordner in VS Code oeffnen | `code .` | `code .` | Du bist im Repo-Ordner und tippst `code .` – VS Code oeffnet das gesamte Projekt | Der Punkt `.` bedeutet "diesen Ordner". |
-| Einzelne Datei in VS Code oeffnen | `code <Datei>` | `code <Datei>` | `code lernfortschritt_daria.md` oeffnet direkt Darias Lernfortschritt-Datei | Die Datei muss im aktuellen Ordner liegen oder du gibst den vollen Pfad an. |
+| Einzelne Datei in VS Code oeffnen | `code <Datei>` | `code <Datei>` | `code lernfortschritt_mein-name.md` oeffnet direkt die eigene Lernfortschritt-Datei | Die Datei muss im aktuellen Ordner liegen oder du gibst den vollen Pfad an. |
 
 ## Praktische Tipps
 

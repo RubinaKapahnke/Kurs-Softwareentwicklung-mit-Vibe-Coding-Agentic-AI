@@ -1,4 +1,4 @@
-# Kursmodul 14: Abschlussprojekt & Portfolio
+﻿# Kursmodul 14: Abschlussprojekt & Portfolio
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für alle Teilnehmenden, besonders Bewerber\*innen, Gründer\*innen, Fa
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Quellen abhängig vom gewählten Schwerpunktpfad.
-- Gemeinsame Basis: [Kursmodule Übersicht](../README_KURSMODULE.md), [Architecture Foundations Modulguide](../../modules/07-architecture-foundations/00-architecture-foundations-modulguide.md), [PRD Grundlagen](../../modules/06-ai-instructions/02-prd-grundlagen.md)
+- Gemeinsame Basis: [Kursmodule Übersicht](../README_KURSMODULE.md), [Architecture Foundations Modulguide](../../course-library/07-architecture-foundations/00-architecture-foundations-modulguide.md), [PRD Grundlagen](../../course-library/06-ai-instructions/02-prd-grundlagen.md)
 
 ## Abschlussnachweis
 

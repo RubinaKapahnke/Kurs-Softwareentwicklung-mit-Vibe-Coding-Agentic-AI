@@ -5,7 +5,7 @@ Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**.
 ## Kurskontext
 - Kursrahmen und Zielbild: [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md)
 - Eigenstaendige Kursbausteine: [course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md)
-- Lernmaterial-Sammlung: [course/modules](course/modules)
+- Lernmaterial-Sammlung: [course/course-library](course/course-library)
 
 Wenn du neu einsteigst:
 1. Lese [README.md](README.md) für die **Arbeitsweise und Repo-Struktur**

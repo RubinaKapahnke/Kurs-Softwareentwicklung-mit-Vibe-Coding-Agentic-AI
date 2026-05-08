@@ -1,4 +1,4 @@
-# Kursmodul 04: AI Literacy & Modellverständnis
+﻿# Kursmodul 04: AI Literacy & Modellverständnis
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für Führungskräfte, Entscheider\*innen, Compliance, Legal, HR/Learni
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: AI Literacy, Modellverständnis und KI-Begrifflichkeiten.
-- Übergangsweise relevant: [Prompting Grundlagen](../../modules/06-ai-instructions/01-prompting-grundlagen.md)
+- Übergangsweise relevant: [Prompting Grundlagen](../../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ## Abschlussnachweis
 

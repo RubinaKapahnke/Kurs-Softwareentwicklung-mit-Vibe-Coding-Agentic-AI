@@ -1,4 +1,4 @@
-# Kursmodul 03: Vibe Coding, Prompting & Context Engineering
+﻿# Kursmodul 03: Vibe Coding, Prompting & Context Engineering
 
 ## Kurzbeschreibung
 
@@ -22,10 +22,10 @@ Relevant für Wissensarbeiter\*innen, Product Owner, Entwickler\*innen, UX, Mark
 
 ## Quellen aus der Lernmaterial-Sammlung
 
-- [AI Instructions Modulguide](../../modules/06-ai-instructions/00-ai-instructions-modulguide.md)
-- [Prompting Grundlagen](../../modules/06-ai-instructions/01-prompting-grundlagen.md)
-- [Prompt-Dateien Grundlagen](../../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
-- [GitHub Copilot in VS Code](../../modules/02-vscode/02-vscode-copilot.md)
+- [AI Instructions Modulguide](../../course-library/06-ai-instructions/00-ai-instructions-modulguide.md)
+- [Prompting Grundlagen](../../course-library/06-ai-instructions/01-prompting-grundlagen.md)
+- [Prompt-Dateien Grundlagen](../../course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+- [GitHub Copilot in VS Code](../../course-library/02-vscode/02-vscode-copilot.md)
 
 ## Abschlussnachweis
 

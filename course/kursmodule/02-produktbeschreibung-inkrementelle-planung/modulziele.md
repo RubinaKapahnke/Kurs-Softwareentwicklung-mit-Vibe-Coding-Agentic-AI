@@ -1,4 +1,4 @@
-# Kursmodul 02: Produktbeschreibung & inkrementelle Planung
+﻿# Kursmodul 02: Produktbeschreibung & inkrementelle Planung
 
 ## Kurzbeschreibung
 
@@ -22,8 +22,8 @@ Relevant für Gründer\*innen, Product Owner, Business Analyst\*innen, Fachberei
 
 ## Quellen aus der Lernmaterial-Sammlung
 
-- [PRD Grundlagen](../../modules/06-ai-instructions/02-prd-grundlagen.md)
-- [Markdown Grundlagen](../../modules/01-markdown/01-markdown-grundlagen.md)
+- [PRD Grundlagen](../../course-library/06-ai-instructions/02-prd-grundlagen.md)
+- [Markdown Grundlagen](../../course-library/01-markdown/01-markdown-grundlagen.md)
 
 ## Abschlussnachweis
 

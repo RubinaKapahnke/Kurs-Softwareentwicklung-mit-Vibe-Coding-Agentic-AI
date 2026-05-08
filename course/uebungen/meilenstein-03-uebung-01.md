@@ -25,7 +25,7 @@ In dieser Uebung arbeitest du hauptsaechlich mit zwei Dateien gleichzeitig:
 
 ## Vorbereitung
 
-Lies zuerst: [modules/06-ai-instructions/02-prd-grundlagen.md → Was ist ein PRD?](../modules/06-ai-instructions/02-prd-grundlagen.md)
+Lies zuerst: [course-library/06-ai-instructions/02-prd-grundlagen.md → Was ist ein PRD?](../course-library/06-ai-instructions/02-prd-grundlagen.md)
 
 Dann oeffne deine persoenliche PRD-Datei in VS Code:
 `course/learners/<dein-name>/prd_<dein-name>.md`
@@ -47,7 +47,7 @@ Schreibe deine Antworten als Stichpunkte direkt in deine PRD-Datei (`course/lear
 
 > **Warum schreibst du das hier rein?** Diese Beobachtungen sind dein Denkzettel. Du entwickelst damit ein Verstaendnis, *bevor* du die KI einsetzt. In Aufgabe 5 wirst du diesen Abschnitt durch das fertige PRD ersetzen – das ist so gewollt.
 
-Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md](../course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 ---
 
@@ -63,7 +63,7 @@ Schreibe deine eigenen Antworten – die KI kommt erst im naechsten Schritt.
 
 > **Warum erst ohne KI?** Wer sofort die KI fragt, bekommt eine Antwort, die gut klingt – aber vielleicht gar nicht das eigene Projekt trifft. Erst wenn du selbst weisst, was du willst, kannst du beurteilen, ob die KI dir wirklich hilft.
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -84,7 +84,7 @@ Der Assistent stellt dir drei Fragen – eine nach der anderen. Antworte mit dem
 
 Beobachte: Wie genau trifft der Output das, was du tatsaechlich meinst? Was hat die KI trotzdem falsch interpretiert?
 
-Quelle: [modules/06-ai-instructions/03-prompt-dateien-grundlagen.md](../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md](../course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 ---
 
@@ -98,7 +98,7 @@ Lies die Formulierungen der KI durch:
 
 Antworte der KI im Chat: Sag ihr, was du aendern oder ergaenzen moechtest. Probiere mindestens eine Iteration aus.
 
-Quelle: [modules/06-ai-instructions/01-prompting-grundlagen.md](../modules/06-ai-instructions/01-prompting-grundlagen.md)
+Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
 ---
 
@@ -128,7 +128,7 @@ Uebertrage nur, was wirklich zu deinem Projekt passt, in die vollstaendige Struk
 
 > Tipp: Nicht alle Abschnitte muessen vollstaendig sein. Wichtig ist, dass Abschnitte 1, 4 und 5 ausgefuellt sind.
 
-Quelle: [modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md)
+Quelle: [course-library/01-markdown/01-markdown-grundlagen.md](../course-library/01-markdown/01-markdown-grundlagen.md)
 
 ---
 
@@ -162,7 +162,7 @@ git push origin UE-M3-01-<vorname>
 
 Danach auf GitHub einen Pull Request von deinem Branch auf `main` erstellen.
 
-Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md), [modules/03-github/01-github-grundlagen.md](../modules/03-github/01-github-grundlagen.md)
+Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md), [course-library/03-github/01-github-grundlagen.md](../course-library/03-github/01-github-grundlagen.md)
 
 ---
 
@@ -180,9 +180,9 @@ Quelle: [modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-be
 
 Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
-- **Markdown formatieren** – du strukturierst dein PRD mit Ueberschriften, Listen und Code-Bloecken ([modules/01-markdown/01-markdown-grundlagen.md](../modules/01-markdown/01-markdown-grundlagen.md))
-- **Datei im eigenen Ordner anlegen und bearbeiten** – du arbeitest in `course/learners/<dein-name>/` ([modules/05-terminal/01-terminal-grundlagen.md](../modules/05-terminal/01-terminal-grundlagen.md))
-- **Branch erstellen, committen und pushen** – du versionierst deine Aenderungen ([modules/04-git/03-git-befehlsuebersicht.md](../modules/04-git/03-git-befehlsuebersicht.md))
+- **Markdown formatieren** – du strukturierst dein PRD mit Ueberschriften, Listen und Code-Bloecken ([course-library/01-markdown/01-markdown-grundlagen.md](../course-library/01-markdown/01-markdown-grundlagen.md))
+- **Datei im eigenen Ordner anlegen und bearbeiten** – du arbeitest in `course/learners/<dein-name>/` ([course-library/05-terminal/01-terminal-grundlagen.md](../course-library/05-terminal/01-terminal-grundlagen.md))
+- **Branch erstellen, committen und pushen** – du versionierst deine Aenderungen ([course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md))
 
 ---
 

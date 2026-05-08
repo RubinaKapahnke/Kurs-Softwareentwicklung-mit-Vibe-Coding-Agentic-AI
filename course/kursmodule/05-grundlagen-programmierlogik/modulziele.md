@@ -1,4 +1,4 @@
-# Kursmodul 05: Grundlagen Programmierlogik
+﻿# Kursmodul 05: Grundlagen Programmierlogik
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für Einsteiger\*innen, Product Owner mit technischem Anspruch, QA, UX,
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: Grundlagen Programmierlogik.
-- Übergangsweise relevant: [Architecture Foundations Grundlagen](../../modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
+- Übergangsweise relevant: [Architecture Foundations Grundlagen](../../course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
 
 ## Abschlussnachweis
 

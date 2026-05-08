@@ -1,4 +1,4 @@
-# Kursmodul 09: Agentic Software Engineering & autonome Agenten
+﻿# Kursmodul 09: Agentic Software Engineering & autonome Agenten
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Relevant für Entwickler\*innen, Automation Specialists, Operations, Data Teams,
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: Agentic Software Engineering und autonome Agenten.
-- Übergangsweise relevant: [Prompt-Dateien Grundlagen](../../modules/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+- Übergangsweise relevant: [Prompt-Dateien Grundlagen](../../course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
 ## Abschlussnachweis
 

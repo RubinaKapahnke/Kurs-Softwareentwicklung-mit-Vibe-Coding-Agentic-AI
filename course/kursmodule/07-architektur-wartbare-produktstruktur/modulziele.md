@@ -1,4 +1,4 @@
-# Kursmodul 07: Architektur & wartbare Produktstruktur
+﻿# Kursmodul 07: Architektur & wartbare Produktstruktur
 
 ## Kurzbeschreibung
 
@@ -22,9 +22,9 @@ Relevant für Architekt\*innen, Entwickler\*innen, Product Owner, UX, Data Engin
 
 ## Quellen aus der Lernmaterial-Sammlung
 
-- [Architecture Foundations Modulguide](../../modules/07-architecture-foundations/00-architecture-foundations-modulguide.md)
-- [Architecture Foundations Grundlagen](../../modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
-- [Architecture Foundations Praxis](../../modules/07-architecture-foundations/02-architecture-foundations-praxis.md)
+- [Architecture Foundations Modulguide](../../course-library/07-architecture-foundations/00-architecture-foundations-modulguide.md)
+- [Architecture Foundations Grundlagen](../../course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
+- [Architecture Foundations Praxis](../../course-library/07-architecture-foundations/02-architecture-foundations-praxis.md)
 
 ## Abschlussnachweis
 

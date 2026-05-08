@@ -1,4 +1,4 @@
-# Kursmodul 01: Arbeitsumgebung, Dokumentation & Versionsverwaltung
+﻿# Kursmodul 01: Arbeitsumgebung, Dokumentation & Versionsverwaltung
 
 ## Kurzbeschreibung
 
@@ -22,10 +22,10 @@ Relevant für Einsteiger\*innen, Product Owner, Projektmanager\*innen, Fachberei
 
 ## Quellen aus der Lernmaterial-Sammlung
 
-- [Markdown Modulguide](../../modules/01-markdown/00-markdown-modulguide.md)
-- [VS Code Modulguide](../../modules/02-vscode/00-vscode-modulguide.md)
-- [GitHub Modulguide](../../modules/03-github/00-github-modulguide.md)
-- [Git Modulguide](../../modules/04-git/00-git-modulguide.md)
+- [Markdown Modulguide](../../course-library/01-markdown/00-markdown-modulguide.md)
+- [VS Code Modulguide](../../course-library/02-vscode/00-vscode-modulguide.md)
+- [GitHub Modulguide](../../course-library/03-github/00-github-modulguide.md)
+- [Git Modulguide](../../course-library/04-git/00-git-modulguide.md)
 
 ## Abschlussnachweis
 
@@ -149,7 +149,7 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
     - Nummerierte Listen
     - Verschachtelte Listen
     - Links: `[Linktext](URL)`
-    - Bilder: `![Alt-Text](Pfad)`
+    - Bilder: `![Alt-Text] plus Dateipfad`
 * Fortgeschrittene Elemente
     - Tabellen
     - Code-Blöcke mit Sprachangabe (` ```python `, ` ```json `)
