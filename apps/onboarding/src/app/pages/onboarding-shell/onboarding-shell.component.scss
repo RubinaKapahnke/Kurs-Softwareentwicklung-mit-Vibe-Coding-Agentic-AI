@@ -91,12 +91,16 @@
   }
 
   &--active {
-    border-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
     box-shadow: var(--shadow-focus);
     cursor: default;
     pointer-events: none;
+    color: var(--color-on-dark);
     --mdc-fab-small-container-color: var(--color-primary-dark);
     --mat-fab-small-foreground-color: var(--color-on-dark);
+    --mat-fab-small-state-layer-color: var(--color-on-dark);
+    // Sicherstellen dass Zahl weiß auf dunklem Hintergrund erscheint
+    background-color: var(--color-primary-dark);
   }
 }
 

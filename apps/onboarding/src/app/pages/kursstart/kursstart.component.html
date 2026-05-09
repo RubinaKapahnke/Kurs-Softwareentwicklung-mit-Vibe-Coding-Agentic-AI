@@ -20,7 +20,8 @@
     </div>
   </header>
 
-  <!-- ── Hero ─────────────────────────────────────────────────── -->
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
   <section class="hero-section">
     <div class="shell">
       <app-course-header
@@ -32,6 +33,23 @@
         [resumeLink]="resumeLink()"
         [resumeLabel]="resumeLabel()"
       ></app-course-header>
+
+      <!-- Kursvideo (ONB-038) -->
+      <div class="course-video-section">
+        <h2 class="video-title">Kursüberblick: Was erwartet dich?</h2>
+        <p class="video-intro">
+          Schau dir das kurze Einführungsvideo an, um einen ersten Eindruck vom Kurs und den wichtigsten Themen zu bekommen.
+        </p>
+        <div class="video-embed-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/BK__F-ac1YE"
+            title="Kursüberblick: Softwareentwicklung mit Vibe Coding & Agentic AI"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
 
       <div class="hero-facts">
         <div class="fact-card">

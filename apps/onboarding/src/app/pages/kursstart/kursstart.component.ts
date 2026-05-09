@@ -62,7 +62,7 @@ export class KursstartComponent {
       title: 'Softwareentwicklung mit Vibe Coding & Agentic AI',
       lead: 'Dieser Kurs vermittelt moderne Softwareentwicklung mit KI-Unterstützung: von der Produktidee über strukturierte Planung, Prototyping und Implementierung bis zu Deployment, Monitoring und Weiterentwicklung. Ziel ist ein wartbares, auslieferbares Produkt, das du verstehst, prüfen und verantworten kannst.',
       status: 'live',
-      statusLabel: 'Jetzt verfuegbar',
+      statusLabel: 'Jetzt verfügbar',
       onboardingEnabled: true
     },
     {

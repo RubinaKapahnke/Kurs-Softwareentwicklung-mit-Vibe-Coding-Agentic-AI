@@ -653,13 +653,13 @@ $rail-width: 96px;
 }
 
 .panel-row--bad {
-  background: var(--surface-on-dark-danger);
-  border: 1px solid var(--border-on-dark-danger);
+  background: color-mix(in srgb, var(--color-error) 42%, #0d0000);
+  border: 1px solid color-mix(in srgb, var(--color-error) 55%, transparent);
 }
 
 .panel-row--good {
-  background: var(--surface-on-dark-selected);
-  border: 1px solid var(--color-secondary);
+  background: color-mix(in srgb, var(--color-secondary-dark) 52%, #0a0900);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
 }
 
 .panel-kicker {

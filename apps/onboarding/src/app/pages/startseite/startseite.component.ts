@@ -35,7 +35,7 @@ export class StartseiteComponent {
       title: 'Softwareentwicklung mit Vibe Coding & Agentic AI',
       shortDescription: 'Von der Produktidee über Planung, Prototyping und Implementierung bis zu Deployment und Weiterentwicklung.',
       status: 'live',
-      statusLabel: 'Jetzt verfuegbar',
+      statusLabel: 'Jetzt verfügbar',
       preview: 'assets/graphics/course-preview.png'
     },
     {

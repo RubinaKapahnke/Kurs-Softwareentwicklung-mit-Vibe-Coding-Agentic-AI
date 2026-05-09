@@ -4,13 +4,7 @@
 
 - [ ] Trennung zwischen Kurs Startseite, Kurs Beschreibungsseite und Onboarding Steps. So dass es später auch weitere Module dort geben kann. 
 
-## Notizen Review (2026-05-10)
-- Slop vs. Shipping darunter erklären was damit gemeint ist
-- Impressumm, Datenschutz, AGB und Kontakt im Footer einbauen. Hier hin verlinken: https://www.knoot-academy.de/impressum https://www.knoot-academy.de/datenschutz https://www.knoot-academy.de/agb https://www.knoot-academy.de/kontakt 
-- Bei Anzeige dein letzter stand auch Kursname und Modulname anzeigen. In diesem Fall Kurs: Softwareentwicklung mit Vibe Coding & Agentic AI Modul 1 "Onboarding"
-- http://localhost:4200/kurse/vibe-coding-agentic-ai einige stellen in denen blau auf blau und weiß auf weiß ist 
-- Was du in 14 Modulen lernst ist zu breit. Module und text kleben links und rechts an der page
--  
+
 
 
 ### Accessibility & Design
@@ -234,6 +228,20 @@ Ziel: Eine neu aufgenommene Person kann ohne Hilfe vom Einstieg bis zur aktiven 
 	 - Dateien:
 	 	 - apps/onboarding/src/app/app.component.html
 	 	 - apps/onboarding/src/app/components/ (neuer Footer-Component falls nötig)
+
+14. [ ] ONB-038: Video zum Kurs auf Kursseite einbinden
+	 - Scope:
+	 	 - YouTube-Video in die Kursstart-Seite integrieren: https://youtu.be/BK__F-ac1YE
+	 	 - Positionierung direkt im Kurskontext (nicht im globalen Hub), mit kurzer Einleitung fuer Einsteiger
+	 	 - Responsives Einbettungs-Layout (Desktop/Mobile) inkl. lesbarem Titel/Alt-Text-Hinweis
+	 - DoD:
+	 	 - Video ist auf der Kursseite sichtbar und abspielbar.
+	 	 - Layout bleibt auf kleinen Bildschirmen stabil.
+	 	 - Kein Bruch im visuellen Fluss der Seite.
+	 - Dateien:
+	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.html
+	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.scss
+	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.ts
 		 - Neue Sektion (Hero oder nach Zusammenfassung) erklären:
 			 - Schritte CAN übersprungen werden
 			 - Aber bauen aufeinander auf
@@ -323,7 +331,8 @@ Ziel: Eine neu aufgenommene Person kann ohne Hilfe vom Einstieg bis zur aktiven 
 9. ONB-035 (Wie der Kurs funktioniert)
 10. ONB-036 (Resume-Banner erweitern) – neu
 11. ONB-037 (Footer) – neu
-12. ONB-040 (README & Betriebsklarheit)
+12. ONB-038 (Video auf Kursseite einbinden) – neu
+13. ONB-040 (README & Betriebsklarheit)
 
 
 ## Go-Live Check (Abnahme)

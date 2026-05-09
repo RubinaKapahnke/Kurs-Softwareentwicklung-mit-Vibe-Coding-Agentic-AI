@@ -208,3 +208,39 @@
   border-radius: 0;
   font-size: var(--font-size-xs);
 }
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.mailto-btn {
+  --mdc-filled-button-container-color: var(--color-primary);
+  --mdc-filled-button-label-text-color: var(--color-on-dark);
+  font-size: var(--font-size-sm);
+
+  mat-icon {
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+    margin-right: 0.3rem;
+  }
+}
+
+.contact-divider {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.contact-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
