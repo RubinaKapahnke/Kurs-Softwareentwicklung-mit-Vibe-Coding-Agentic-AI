@@ -6,7 +6,7 @@ applyTo: "apps/onboarding/**"
 
 ## Ziel des Bereichs
 
-Diese App fuehrt absolute Anfaenger in einem linearen Ablauf bis zum lokalen Clone des Kurs-Repos.
+Diese App fuehrt bereits aufgenommene Kursteilnehmende ohne Vorwissen in einem linearen Ablauf vom Einstieg ueber das Onboarding bis zum lokalen Clone des Kurs-Repos und zum Startpunkt in `NEXT_STEPS.md`.
 
 ## Stack (verbindlich)
 
@@ -29,15 +29,19 @@ Schlage keine alternativen Frameworks oder UI-Libraries vor.
 
 ## Struktur-Konvention
 
-Empfohlene Struktur unter apps/onboarding:
+Bestehende Struktur unter `apps/onboarding/src/app/` als Standard weiterverwenden:
 
-- features/step-01-... bis step-06-...
-- models/onboarding.models.ts
-- services/onboarding-state.service.ts
-- services/onboarding-checks.service.ts
-- pages/onboarding-shell/
+- `components/markdown-view/` fuer Markdown-Rendering
+- `data/onboarding-steps.data.ts` fuer die Schrittdefinitionen
+- `models/onboarding.models.ts` fuer Typen
+- `services/onboarding-state.service.ts` fuer lokalen Onboarding-Zustand
+- `pages/startseite/` fuer Landing-Einstieg
+- `pages/kursstart/` fuer Voucher-/Kurszugangslogik
+- `pages/onboarding-shell/` fuer den gerahmten Schrittfluss
+- `pages/step-page/` fuer die eigentlichen Schrittseiten unter `/onboarding/step/:id`
+- `pages/zusammenfassung/` fuer den Abschluss vor dem Kursstart
 
-Jeder Schritt ist eine eigenstaendige, kleine Komponente mit klaren Inputs/Outputs.
+Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine parallele `features/step-01-*`-Struktur ein, solange dafuer kein expliziter Umbau beschlossen ist.
 
 ## UX- und Textregeln
 
@@ -59,13 +63,13 @@ Jeder Schritt ist eine eigenstaendige, kleine Komponente mit klaren Inputs/Outpu
 
 - Bei neuen Dateien/Foldern README-Projektstruktur synchron halten.
 - Onboarding-App darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
-- Uebergabe in den Kursfluss klar dokumentieren (Startpunkt nach MVP).
+- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Onboarding ist `NEXT_STEPS.md` der fachliche Startpunkt.
 
 ## Markdown-Content (Onboarding)
 
 - Erklaertexte fuer Schritte duerfen als Markdown-Dateien unter `apps/onboarding/public/content/` gepflegt werden.
 - Pro Schritt wird ein optionaler Pfad im Datenmodell verwendet (`markdownSource`).
-- Rendering erfolgt ueber eine dedizierte Komponente unter `apps/onboarding/src/app/components/`.
+- Rendering erfolgt ueber die bestehende Komponente `apps/onboarding/src/app/components/markdown-view/`.
 - Markdown-HTML muss vor der Anzeige sanitiziert werden (z. B. DOMPurify), keine ungefilterte Ausgabe.
 - Auch bei Markdown-Inhalten bleibt die interaktive Schrittlogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
 

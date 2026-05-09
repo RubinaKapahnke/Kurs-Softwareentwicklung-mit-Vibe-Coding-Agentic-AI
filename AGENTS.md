@@ -38,7 +38,7 @@ The learning structure follows this hierarchy:
 
 1. **KURSBESCHREIBUNG.md** (zentral) → Defines the overall course vision, paths, module logic, and milestone meaning
 2. **course/kursmodule/** (zentral) → Represents standalone course modules / bookable learning blocks
-  - Each course module has a `modulziele.md`
+  - Each course module has a `00-modulziele.md`
   - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
   - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
 3. **NEXT_STEPS.md** (zentral) → Defines current learning milestones and group progress
@@ -47,11 +47,13 @@ The learning structure follows this hierarchy:
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
    - `02/03-*-befehlsuebersicht.md` → Quick reference for commands (Terminal, Git only)
 5. **course/uebungen/** (zentral) → Exercises with direct module source links
-6. **course/learners/** (dezentral) → Individual learning progress per person
+6. **course/learners/** (personenbezogen, aber zentral im Kurs-Repo) → Individual learning progress per person and canonical reporting source
 
 **Important distinction:**
 - `course/kursmodule/` = course offer/curriculum layer (what standalone learning block is this?)
 - `course/course-library/` = learning material/source layer (where is the explanation learners read?)
+- `course/course-library/` enthaelt nur allgemeine, erklaerende Inhalte ohne direkten Kursbezug.
+- Konkrete kursinterne Ablaeufe, Aufgabenanleitungen, Rollen/Dozent:innen-Hinweise und Templates fuer den Kurs liegen in `course/kursmodule/`.
 
 ### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
 
@@ -63,21 +65,23 @@ The learning structure follows this hierarchy:
 - `NEXT_STEPS.md` is the central roadmap and should stay central.
 - Individual learning progress is managed only in the personal files under `course/learners/`.
 - Do not introduce wording that assumes fixed weekly pacing in learner progress files.
-- The participant circle is closed. Do not add instructions for new participants.
+- The participant circle is closed. Do not add public open-enrollment onboarding or wording for unknown external participants.
+- Onboarding content in `apps/onboarding/` is for already accepted course participants and should hand off clearly into `NEXT_STEPS.md`.
 
 ### Exercise Workflow
 - Central exercises live in `course/uebungen/`.
 - Participants do not create exercises; they solve centrally defined exercises.
-- Each participant stores their answer in their own learner folder.
+- Solution artefacts live standardmaessig in the participant's own repo unless an exercise explicitly requires changes in this course repo.
+- `course/learners/` remains the canonical place for learning-progress reporting and dashboard-compatible overview data.
 - When changing an exercise, keep it aligned with the corresponding milestone in `NEXT_STEPS.md`.
 
 ## Source Standard For Exercises
-- Every exercise task point should reference a concrete source in `course/course-library/`.
+- Every exercise task point should reference a concrete source in `course/course-library/` oder `course/kursmodule/`.
 - Sources should be clickable markdown links when the document format supports it.
 - Each exercise should include a short section named `Modulabdeckung (Check)`.
 - Each exercise must include a section named `Wiederholung aus frueheren Meilensteinen` between `Modulabdeckung (Check)` and `Lernerfolgs-Kriterien`. This section lists skills from previous milestones that are needed to complete the exercise, with links to the relevant module files.
 - Each exercise must include a section named `Lernerfolgs-Kriterien` at the end, after `Modulabdeckung (Check)`. This section contains 3-6 checkboxes that let learners verify whether the exercise achieved its intended outcome. Criteria must be observable and self-assessable (e.g. "Ich habe X erlebt", "Ich kann Y benennen"), not just task completion.
-- If an exercise step has no matching module explanation, improve the module coverage before relying on that exercise.
+- If an exercise step has no matching source explanation, improve coverage in `course/course-library/` (allgemein) oder `course/kursmodule/` (kursspezifisch) before relying on that exercise.
 - **Why this standard?** The module source is not just a reference—it's the primary path to understanding. Learners click the source link to understand *why* the task matters, then complete it.
 
 ## Beginner-Friendliness Standard For Exercises
@@ -95,12 +99,26 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - For onboarding explanatory content, use `apps/onboarding/public/content/` Markdown files referenced via `markdownSource`; keep interactive step logic in Angular components.
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
+- Checkbox-Regel: In `course/uebungen/` und Guide-Dateien (`*guide*.md`, inklusive `00-*-modulguide.md`) bleiben Checklisten standardmaessig offen (`[ ]`). Abgehakt (`[x]`) ist nur in `course/learners/**/lernfortschritt_*.md` erlaubt.
+
+## Recurring Workflow: Fremdtexte verarbeiten
+- Eingang fuer Rohtexte ist `course/notizen-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
+- Jeder verarbeitete Block wird in **eigene Formulierungen** ueberfuehrt (keine langen wortwoertlichen Uebernahmen).
+- Fremdtexte in Englisch werden vor der Einarbeitung in **Deutsch** uebertragen.
+- Beim Uebertrag werden **Form und Struktur deutlich veraendert** (didaktische Neuordnung statt Satz-fuer-Satz-Naehe), um Urheberrechtsrisiken zu vermeiden.
+- Allgemeine Inhalte gehen in `course/course-library/`, kursspezifische Anwendung in `course/kursmodule/`.
+- Nach Verarbeitung wird der Rohtext-Block im Fremdtexte-Abschnitt entfernt.
+- Danach wird unter `# Erledigte Themen` ein Log-Eintrag mit Datum, Quelle, Kurz-Summary und Ziel-Dateien angelegt.
+- Fuer die wiederkehrende Ausfuehrung den Prompt `course-dev-fremdtexte-verarbeiten.prompt.md` nutzen.
 
 ## Module Coverage Expectations
 - Before referencing a module as a source, verify that it actually explains the relevant command or workflow.
 - If coverage is missing, update the module or choose a more accurate source.
 
 ## Module Structure (Conventions)
+Kursmodul-Datei in `course/kursmodule/<nr>-<name>/`:
+- `00-modulziele.md` → Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis
+
 Each module follows this pattern:
 - `00-<modulname>-modulguide.md` → Intro + Inhalt (links) + **inline Selbstcheck** (Must/Should/Nice + "Wenn du nachholen willst")
 - `01-<modulname>-grundlagen.md` → Conceptual explanation (not commands)
@@ -236,7 +254,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 **Schritt 2: Übungen für Meilenstein erstellen**
 - Nach der "Neue Übung"-Checkliste oben
 
-**Schritt 3: README.md, course/uebungen/UEBUNGEN.md aktualisieren**
+**Schritt 3: README.md, course/uebungen/README_UEBUNGEN.md aktualisieren**
 - Falls nötig Struktur-Erklärungen anpassen
 
 ---

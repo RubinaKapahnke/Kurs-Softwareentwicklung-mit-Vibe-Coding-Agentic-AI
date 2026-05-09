@@ -10,7 +10,7 @@ applyTo: "apps/dashboard/**"
 |:---|:---|
 | **Framework** | Angular (Standalone Architecture) |
 | **UI-Library** | Angular Material |
-| **Datenformat** | Strukturiertes JSON |
+| **Datenformat** | Strukturierte, typisierte Datenobjekte (TypeScript; bei Persistenz/Import JSON-nah) |
 | **Sprache** | TypeScript (Strict Mode) |
 | **Versionierung** | Git-Flow (Feature Branches & PRs auf Main) |
 
@@ -27,7 +27,7 @@ Braucht: Überblick über Meilenstein-Fortschritt aller Teilnehmenden, Hinweise 
 Braucht: Eigenen Lernstand auf einen Blick, klare nächste Schritte, Vergleich mit Gesamtgruppe (ohne Druck), Motivation durch sichtbaren Fortschritt.
 
 **[KI-Agent]** – Automatisierte Agents, die Daten lesen und schreiben  
-Braucht: Maschinenlesbare JSON-Strukturen, stabile Datenpfade, eindeutige IDs für Lernende/Meilensteine/Übungen, TypeScript-Interfaces im Strict Mode.
+Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form, eindeutige IDs fuer Lernende/Meilensteine/Uebungen, TypeScript-Interfaces im Strict Mode.
 
 ## Datenquellen im Repo
 

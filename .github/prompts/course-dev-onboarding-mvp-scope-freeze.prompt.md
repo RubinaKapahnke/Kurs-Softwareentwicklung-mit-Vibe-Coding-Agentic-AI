@@ -4,9 +4,9 @@ name: "Onboarding MVP Scope Freeze (course-dev)"
 agent: "Onboarding Web Architect (course-dev)"
 ---
 
-Du bist im Scope-Freeze-Modus fuer die Onboarding-Website.
+Du bist im Scope-Freeze-Modus fuer die bestehende Onboarding-Website in `apps/onboarding`.
 
-Ziel: Das Onboarding-MVP so scharf eingrenzen, dass es in kurzer Zeit umsetzbar bleibt und keine Nebenbaustellen startet.
+Ziel: Das Onboarding-MVP so scharf eingrenzen, dass es in kurzer Zeit innerhalb der vorhandenen App-Struktur umsetzbar bleibt und keine Nebenbaustellen startet.
 
 Arbeite in genau dieser Reihenfolge:
 
@@ -35,10 +35,10 @@ Arbeite in genau dieser Reihenfolge:
 - Mindestens enthalten:
   - Linearer Flow mit hoechstens 6 Schritten
   - Pro Schritt ein Erfolgskriterium
-  - Eine neue Person erreicht lokalen Clone ohne Vorwissen
+  - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `NEXT_STEPS.md` ohne Vorwissen
 
 6. **Naechster Umsetzungsschritt**
-- Nenne genau einen kleinsten technischen Startschritt im Repo.
+- Nenne genau einen kleinsten technischen Startschritt im bestehenden App-Schnitt des Repos.
 
 Antwortformat:
 - MVP-Zielsatz

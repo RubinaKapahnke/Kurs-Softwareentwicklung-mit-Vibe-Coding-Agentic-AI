@@ -33,8 +33,8 @@ course/uebungen/meilenstein-XX-uebung-YY.md
     
     ## Aufgaben
     
-    ### 1. [Aufgabe 1]
-    Quelle: [course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md)
+   ### 1. [Aufgabe 1]
+   Quelle: [course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md) oder [course/kursmodule/XX-modul/YY-datei.md](../../course/kursmodule/XX-modul/YY-datei.md)
     
     ### 2. [Aufgabe mit Git]
     Prüfe zuerst deinen aktuellen Status:
@@ -53,13 +53,13 @@ course/uebungen/meilenstein-XX-uebung-YY.md
     
     ---
     
-    ## Modulabdeckung (Check)
-    - ✓ course/course-library/XX-modul/01-grundlagen.md: [Konzept erklärt]
+   ## Modulabdeckung (Check)
+   - ✓ course/course-library/XX-modul/01-grundlagen.md oder course/kursmodule/XX-modul/YY-datei.md: [Konzept erklärt]
     
     ---
     
     ## Wiederholung aus frueheren Meilensteinen
-    - **[Fähigkeit]** ([course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md))
+   - **[Fähigkeit]** ([course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md)) oder ([course/kursmodule/XX-modul/YY-datei.md](../../course/kursmodule/XX-modul/YY-datei.md))
     
     ---
     
@@ -92,7 +92,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 - [ ] **Keine redundanten Lernziele?** Selbstcheck-Checklisten nur im `## Selbstcheck`-Abschnitt des Modulguide, nirgendwo sonst
 - [ ] **Alle Links funktionieren?** (Relative Pfade prüfen) → `.\tools\test-links.ps1` ausführen
 - [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
-- [ ] **NEXT_STEPS.md ↔ course/uebungen/UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
+- [ ] **NEXT_STEPS.md ↔ course/uebungen/README_UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
 - [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
 - [ ] **CHANGELOG.md aktuell?** Enthält er einen Eintrag für alle strukturellen Änderungen der aktuellen Session?
 - [ ] **CHANGELOG Tagesübersicht gepflegt?** Pro Datum genau ein grober Tagesblock unter `## Tagesübersicht (grob)`

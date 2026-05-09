@@ -22,7 +22,9 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
 3. Prüfe zentrale Konsistenzachsen:
    - Struktur in `README.md` gegen tatsächliche Ordner/Dateien
    - Verweise zwischen `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md` und Übungsdateien
-   - Quellenlinks aus Übungen auf vorhandene Moduldateien
+   - Quellenlinks aus Übungen auf vorhandene Quellen in `course/course-library/` oder `course/kursmodule/`
+   - Dateikonvention in `course/kursmodule/`: pro Modul mindestens `00-modulziele.md`
+   - Trennungsebene: `course/course-library/` nur allgemein/kursneutral, `course/kursmodule/` kursspezifisch
    - Onboarding-Markdown-Konvention: Inhalte unter `apps/onboarding/public/content/`, Referenz über `markdownSource`, sichere Ausgabe (sanitizing)
    - Benennungskonventionen für Agenten und Prompts in `.github/`
    - Pfade in `.github/agents/*.md` auf aktuelle Repo-Struktur (z.B. `course/`, `apps/`)

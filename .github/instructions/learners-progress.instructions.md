@@ -4,6 +4,8 @@ applyTo: "course/learners/**"
 
 # Lernfortschritt-Standard: Struktur und Regeln
 
+Diese Datei bleibt bewusst im Kurs-Repo unter `course/learners/`. Sie ist die kanonische Quelle fuer Kursueberblick, Betreuung und Dashboard. Uebungsartefakte duerfen im eigenen Repo liegen, der Lernfortschritt selbst wird hier zentral gepflegt.
+
 ## Pflichtstruktur jeder `lernfortschritt_<name>.md`
 
 ```markdown
@@ -20,6 +22,9 @@ applyTo: "course/learners/**"
 
 ### DD.MM. (Uebung XX – Titel)
 **Was habe ich heute gemacht?**
+...
+
+**Link zur Abgabe / PR im eigenen Repo (optional):**
 ...
 
 **Abgabe UE-MX-YY:**
@@ -42,6 +47,7 @@ applyTo: "course/learners/**"
 | `## Das möchte ich noch lernen` | Erscheint **einmal** am Dateiende – nicht nach jedem Journaleintrag |
 | `## Fragen an die Gruppe` | Erscheint **einmal** am Dateiende – nicht nach jedem Journaleintrag |
 | Abgabe- und Lernerfolgs-Kriterien | Stehen **direkt unter den passenden Journaleintrag** (nicht am Dateiende) |
+| Repo-Trennung | Loesungsartefakte duerfen im eigenen Repo liegen; diese Datei bleibt trotzdem zentral unter `course/learners/` |
 | `## Nächster kleiner Schritt` | **Verboten als eigener Abschnitt** – der nächste Schritt steht im letzten Journaleintrag |
 | Journaleinträge | Format `### DD.MM. (Uebung XX – Titel)` |
 

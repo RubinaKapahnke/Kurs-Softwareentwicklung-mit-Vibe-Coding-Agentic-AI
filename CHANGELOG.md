@@ -72,6 +72,16 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - Neue Inhalte zu VS-Code-Speicherkonflikten (`Compare`/`Overwrite`, `Revert Block`, Fallback bei wiederholtem Save-Fehler) in Library und Kursmodul ergaenzt.
 - `NEXT_STEPS.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
 - Uebungsbereich erweitert/angepasst (inkl. Meilenstein-01-Uebungen und Standardkonformitaet ohne vorausabgehakte Checklisten).
+
+## 09.05.2026 (Session 9b)
+
+### Agenten-, Prompt- und Instruction-Updates
+
+- Agent-Dateien in `.github/agents/` inhaltlich auf die aktuelle Kursarchitektur und Benennungsregeln synchronisiert.
+- Prompt-Dateien in `.github/prompts/` auf aktuelle Pfade und Rollenlogik angepasst.
+- Neuer wiederkehrender Prompt fuer Fremdtext-Verarbeitung eingefuehrt: `.github/prompts/course-dev-fremdtexte-verarbeiten.prompt.md`.
+- Instruction-Dateien in `.github/instructions/` konsolidiert und auf aktuelle Struktur-/Workflow-Regeln gebracht.
+- `AGENTS.md` erweitert um klare Regeln zu Fremdtext-Workflow, Checkbox-Status und Trennung course-library vs kursmodule.
 - `.github/agents/course-dev-onboarding-ux-text.agent.md`: Prueft Texte in `apps/onboarding/` auf Anfaengertauglichkeit nach 6 Kriterien (Satzlaenge, Fachbegriff-Erklaerung, beobachtbares Ergebnis, kein Vorwissen, Fehlerfall, aktive Sprache).
 
 **Neuer Prompt:**
