@@ -1,0 +1,37 @@
+<section class="journey-section" id="ablauf">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Setup in {{ stepCount() }} Schritten</p>
+      @if (selectedCourseIsLive()) {
+        <h2>So richtest du deine Umgebung ein</h2>
+        <p class="section-sub">
+          Bevor du mit dem Kurs beginnst, richtest du einmalig deine Arbeitsumgebung ein.
+          Danach ist sie fuer den weiteren Kursfluss direkt nutzbar.
+        </p>
+      } @else {
+        <h2>Onboarding folgt in diesem Kurs</h2>
+        <p class="section-sub">Sobald dieser Kurs freigeschaltet wird, bekommst du hier den passenden Onboarding-Ablauf.</p>
+      }
+    </div>
+
+    @if (selectedOnboardingSteps().length) {
+    <div class="journey-grid">
+      @for (step of selectedOnboardingSteps(); track step.label; let i = $index) {
+        <article class="journey-card">
+          <span class="step-num">{{ i + 1 }}</span>
+          <div>
+            <p class="step-label">{{ step.label }}</p>
+            <p class="step-detail">{{ step.detail }}</p>
+          </div>
+        </article>
+      }
+    </div>
+    } @else {
+    <mat-card class="coming-soon-card" appearance="outlined">
+      <mat-card-content>
+        <p>Der konkrete Onboarding-Flow fuer diesen Kurs wird aktuell vorbereitet.</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>

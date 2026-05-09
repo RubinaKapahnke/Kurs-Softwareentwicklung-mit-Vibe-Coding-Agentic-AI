@@ -1,0 +1,70 @@
+<div class="hero-text">
+  <p class="eyebrow">Kursueberblick</p>
+  <h1>{{ selectedCourse().title }}</h1>
+  <p class="lead">{{ selectedCourse().lead }}</p>
+
+  <div class="course-switcher" aria-label="Kursauswahl">
+    @for (course of courseCatalog(); track course.id) {
+      <a
+        mat-stroked-button
+        [routerLink]="['/kurse', course.id]"
+        class="course-switcher__item"
+        [class.course-switcher__item--active]="course.id === selectedCourse().id">
+        {{ course.shortTitle }}
+      </a>
+    }
+  </div>
+
+  <p class="course-status-hint" [class.course-status-hint--live]="selectedCourseIsLive()">
+    @if (selectedCourseIsLive()) {
+      Jetzt verfügbar
+    } @else {
+      Im Aufbau
+    }
+  </p>
+
+  <div class="hero-actions">
+    @if (selectedCourseIsLive()) {
+      <a mat-flat-button [routerLink]="resumeLink()" class="btn-primary">
+        @if (hasProgress()) {
+          {{ resumeLabel() }}
+        } @else {
+          Onboarding jetzt starten
+        }
+      </a>
+    } @else {
+      <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-primary">
+        Interesse melden
+      </a>
+    }
+    <a mat-button routerLink="/" class="btn-back">
+      <mat-icon aria-hidden="true">west</mat-icon>
+      Zurück zur Übersicht
+    </a>
+  </div>
+
+  @if (selectedCourseIsLive()) {
+  <div class="voucher-notice">
+    <mat-icon aria-hidden="true">vpn_key</mat-icon>
+    <div>
+      <strong>Zugang nur mit Voucher-Code</strong>
+      <p>
+        Für den Kursstart benötigst du einen persönlichen Voucher-Code.
+        Du gibst ihn direkt im ersten Onboarding-Schritt ein.
+      </p>
+      <p>
+        Noch keinen Code?
+        <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener">Kursplatz anfragen →</a>
+      </p>
+    </div>
+  </div>
+  } @else {
+  <div class="voucher-notice">
+    <mat-icon aria-hidden="true">construction</mat-icon>
+    <div>
+      <strong>Dieser Kurs ist im Aufbau</strong>
+      <p>Der Kurs ist noch nicht buchbar. Du kannst bereits Interesse melden, damit wir dich informieren, sobald der Einstieg freigeschaltet ist.</p>
+    </div>
+  </div>
+  }
+</div>

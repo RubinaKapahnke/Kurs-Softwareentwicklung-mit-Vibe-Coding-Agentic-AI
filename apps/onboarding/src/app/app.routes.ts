@@ -15,10 +15,15 @@ export const routes: Routes = [
 	},
 	{
 		path: 'kursstart',
+		pathMatch: 'full',
+		redirectTo: 'kurse/vibe-coding-agentic-ai'
+	},
+	{
+		path: 'kurse/:courseId',
 		component: KursstartComponent
 	},
 	{
-		path: 'onboarding',
+		path: 'kurse/:courseId/onboarding',
 		component: OnboardingShellComponent,
 		children: [
 			{
@@ -36,6 +41,19 @@ export const routes: Routes = [
 				component: ZusammenfassungComponent
 			}
 		]
+	},
+	{
+		path: 'onboarding',
+		pathMatch: 'full',
+		redirectTo: 'kurse/vibe-coding-agentic-ai/onboarding'
+	},
+	{
+		path: 'onboarding/step/:id',
+		redirectTo: 'kurse/vibe-coding-agentic-ai/onboarding/step/:id'
+	},
+	{
+		path: 'onboarding/zusammenfassung',
+		redirectTo: 'kurse/vibe-coding-agentic-ai/onboarding/zusammenfassung'
 	},
 	{
 		path: '**',

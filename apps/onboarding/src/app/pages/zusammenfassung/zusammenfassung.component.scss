@@ -93,6 +93,88 @@
   font-size: var(--font-size-xs);
 }
 
+// ── Course Bridge ───────────────────────────────────────────────────────────
+.course-bridge {
+  margin-top: 1.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-subtle);
+
+  h3 {
+    margin: 0 0 0.4rem;
+    color: var(--color-primary-dark);
+    font-size: var(--font-size-lg);
+  }
+}
+
+.course-bridge__intro {
+  margin: 0 0 0.85rem;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.course-bridge__paths {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.bridge-path-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+  padding: 0.85rem 0.95rem;
+
+  h4 {
+    margin: 0 0 0.35rem;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+    font-size: var(--font-size-xs);
+    color: color-mix(in srgb, var(--color-text) 86%, white);
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.3rem;
+    font-size: var(--font-size-xs);
+    color: var(--color-text);
+  }
+}
+
+.bridge-path-card__actions {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.course-bridge__rule {
+  margin-top: 0.85rem;
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  border: 1px solid var(--border-warning);
+  background: var(--surface-warning);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 0.8rem;
+
+  mat-icon {
+    flex-shrink: 0;
+    color: color-mix(in srgb, var(--color-secondary) 70%, var(--color-text));
+  }
+
+  p {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text);
+    line-height: var(--line-height-base);
+  }
+}
+
 // ── Actions ───────────────────────────────────────────────────────────────────
 mat-card-actions {
   display: flex;

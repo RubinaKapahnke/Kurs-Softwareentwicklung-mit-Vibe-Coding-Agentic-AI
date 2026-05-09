@@ -31,3 +31,18 @@ Nach den gemeinsamen Grundlagen (Meilensteine 1–3) waehlst du einen Schwerpunk
 - **Agentic AI**: Agenten-Workflows, RAG, Modellwahl und AI System Architecture
 
 Die anderen Bereiche bleiben als Orientierung erhalten – du musst nicht jeden Stack produktiv beherrschen.
+
+### Wichtige Arbeitsregel ab Meilenstein 1
+
+Damit du sauber im Kursfluss bleibst, gilt immer:
+
+- **Kurs-Repo:** Meilensteine lesen, Uebungen oeffnen, Lernfortschritt pflegen
+- **Eigenes Repo:** Loesungen bauen, Dateien aendern, Commits und Pull Requests erstellen
+
+### Deine ersten Schritte nach dem Onboarding
+
+1. Oeffne im Kurs-Repo die Datei `NEXT_STEPS.md`.
+2. Oeffne danach `course/uebungen/README_UEBUNGEN.md`.
+3. Waehle die passende Uebung aus.
+4. Setze die Loesung in deinem eigenen Repo um.
+5. Trage den Stand in `course/learners/<name>/lernfortschritt_<name>.md` ein.

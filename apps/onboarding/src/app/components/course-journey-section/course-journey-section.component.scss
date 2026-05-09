@@ -1,0 +1,62 @@
+.journey-section {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.journey-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--color-surface);
+  display: flex;
+  gap: 1rem;
+
+  .step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+  }
+
+  .step-label {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+  }
+
+  .step-detail {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-base);
+    color: var(--color-text-muted);
+  }
+}
+
+.coming-soon-card {
+  margin-top: 2rem;
+  background: color-mix(in srgb, var(--color-surface) 95%, var(--color-primary));
+
+  mat-card-content {
+    padding: 2rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+  }
+}

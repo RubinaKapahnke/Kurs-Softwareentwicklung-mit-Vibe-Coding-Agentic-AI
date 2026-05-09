@@ -20,7 +20,7 @@
           class="step-pill"
           routerLinkActive="step-pill--active"
           [class.step-pill--done]="isStepDone(stepId)"
-          [routerLink]="['/onboarding/step', stepId]"
+          [routerLink]="getStepLink(stepId)"
           [attr.aria-label]="(isStepDone(stepId) ? 'Schritt ' + stepId + ' (erledigt)' : 'Zu Schritt ' + stepId)"
           [attr.aria-current]="isCurrentStep(stepId) ? 'step' : null">
           @if (isStepDone(stepId) && !isCurrentStep(stepId)) {
@@ -34,7 +34,7 @@
       <a
         mat-stroked-button
         class="summary-link"
-        routerLink="/onboarding/zusammenfassung"
+        [routerLink]="summaryLink()"
         routerLinkActive="summary-link--active"
         aria-label="Zur Zusammenfassung">
         <mat-icon>checklist</mat-icon>

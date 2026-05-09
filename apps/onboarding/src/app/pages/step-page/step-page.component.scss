@@ -11,8 +11,8 @@
 .step-header-banner {
   padding: 1.1rem 1.25rem 1rem;
   background: linear-gradient(160deg,
-    color-mix(in srgb, var(--color-text) 94%, white),
-    color-mix(in srgb, var(--color-primary) 86%, black));
+    color-mix(in srgb, var(--color-primary) 24%, white),
+    color-mix(in srgb, var(--color-primary) 42%, white));
 }
 
 .step-header-banner__kicker {
@@ -21,12 +21,12 @@
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-caps);
   font-weight: var(--font-weight-bold);
-  color: color-mix(in srgb, var(--color-secondary) 88%, white);
+  color: var(--color-primary-dark);
 }
 
 .step-header-banner__title {
   margin: 0;
-  color: var(--color-on-dark);
+  color: var(--color-text);
   line-height: var(--line-height-tight);
   font-size: var(--font-size-2xl);
   letter-spacing: var(--letter-spacing-normal);
@@ -34,7 +34,7 @@
 
 .step-header-banner__subtitle {
   margin: 0.45rem 0 0;
-  color: var(--color-on-dark-muted);
+  color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
 }
@@ -43,11 +43,65 @@
   padding: 1rem 0;
 }
 
+.lesson-followup-hint {
+  width: 100%;
+  margin: 0.8rem 0 0.2rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 42%, white);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-primary) 8%, white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  text-align: left;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.lesson-followup-hint__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.lesson-followup-hint__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+}
+
+.lesson-followup-hint mat-icon {
+  animation: lesson-followup-bounce 1.4s ease-in-out infinite;
+}
+
+@keyframes lesson-followup-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+@media (max-width: 760px) {
+  .lesson-followup-hint {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lesson-followup-hint__action {
+    white-space: normal;
+  }
+}
+
 .step-section h3 {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-heading);
   margin: 0 0 0.5rem;
-  color: var(--color-primary-dark);
+  color: var(--color-text);
 }
 
 .link-group {
@@ -71,7 +125,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   text-decoration: underline;

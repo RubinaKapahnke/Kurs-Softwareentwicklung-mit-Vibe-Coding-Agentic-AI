@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
@@ -30,12 +30,21 @@ export class OnboardingShellComponent {
   private readonly state = inject(OnboardingStateService);
   private readonly route = inject(ActivatedRoute);
   readonly stepCount = ONBOARDING_STEP_COUNT;
+  readonly currentCourseId = toSignal(
+    this.route.paramMap.pipe(map(params => params.get('courseId') ?? 'vibe-coding-agentic-ai')),
+    { initialValue: this.route.snapshot.paramMap.get('courseId') ?? 'vibe-coding-agentic-ai' }
+  );
 
   readonly progressPercent = computed(() => this.state.getProgressPercent());
   readonly completedCount = computed(() => this.state.getCompletedCount());
 
   /** Liste aller Schritte fuer die Navigation */
   readonly allSteps = ONBOARDING_STEPS.map((step) => step.id);
+  readonly summaryLink = computed(() => ['/kurse', this.currentCourseId(), 'onboarding', 'zusammenfassung']);
+
+  private readonly syncCourseContext = effect(() => {
+    this.state.setCourseContext(this.currentCourseId());
+  });
 
   private readonly currentStepId = toSignal(
     this.route.firstChild!.params.pipe(map(p => Number(p['id']))),
@@ -48,5 +57,9 @@ export class OnboardingShellComponent {
 
   isCurrentStep(stepId: number): boolean {
     return stepId === this.currentStepId();
+  }
+
+  getStepLink(stepId: number): string[] {
+    return ['/kurse', this.currentCourseId(), 'onboarding', 'step', String(stepId)];
   }
 }

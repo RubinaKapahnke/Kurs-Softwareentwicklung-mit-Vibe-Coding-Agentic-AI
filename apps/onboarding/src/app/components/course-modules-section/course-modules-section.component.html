@@ -1,0 +1,42 @@
+<section class="modules-section" id="inhalte">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Kursinhalt</p>
+      @if (selectedCourseIsLive()) {
+        <h2>Was du in 14 Modulen lernst</h2>
+        <p class="section-sub">
+          Jedes Modul baut auf dem vorherigen auf und liefert eine neue nutzbare Fertigkeit –
+          von der Arbeitsumgebung über Vibe Coding, AI Literacy und Architektur bis zum eigenen Abschlussprojekt.
+          Module können auch als eigenständige Workshops genutzt werden.
+        </p>
+      } @else {
+        <h2>Inhalte werden gerade vorbereitet</h2>
+        <p class="section-sub">Diese Kursseite ist bereits als Platzhalter aktiv. Detailmodule und Lernpfade folgen in der naechsten Ausbauphase.</p>
+      }
+    </div>
+
+    @if (selectedCourseModules().length) {
+    <div class="modules-grid">
+      @for (mod of selectedCourseModules(); track mod.title) {
+        <article class="module-card">
+          <div class="module-icon-wrap">
+            <mat-icon aria-hidden="true">{{ mod.icon }}</mat-icon>
+          </div>
+          <h3>{{ mod.title }}</h3>
+          <ul class="module-topics">
+            @for (t of mod.topics; track t) {
+              <li>{{ t }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+    } @else {
+    <mat-card class="coming-soon-card" appearance="outlined">
+      <mat-card-content>
+        <p>Die inhaltliche Struktur dieses Kurses wird aktuell erstellt. Du siehst hier spaeter Modulziele, Inhalte und den passenden Onboarding-Einstieg.</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>

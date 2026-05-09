@@ -25,6 +25,22 @@ Kurz gesagt:
 - **Loesung bauen:** im eigenen Repo
 - **Fortschritt festhalten:** wieder im Kurs-Repo
 
+### Schnell-Entscheidung: In welchem Repo arbeite ich jetzt?
+
+| Wenn du gerade ... | Dann arbeite in ... |
+|---|---|
+| den naechsten Meilenstein pruefst | Kurs-Repo |
+| eine Uebungsaufgabe liest | Kurs-Repo |
+| Code oder Dateien fuer eine Loesung erstellst | eigenem Repo |
+| committen und PR fuer deine Loesung machst | eigenem Repo |
+| deinen Lernstand eintraegst | Kurs-Repo |
+
+Wenn du unsicher bist, nutze diese 3 Fragen:
+
+1. Lese ich gerade eine zentrale Vorgabe? -> Kurs-Repo
+2. Baue ich gerade eine Loesung oder ein Artefakt? -> eigenes Repo
+3. Melde ich gerade meinen Lernstand? -> Kurs-Repo
+
 ### 3. Warum bleibt der Lernfortschritt zentral?
 
 Die Datei `lernfortschritt_<name>.md` bleibt bewusst im Kurs-Repo.
@@ -42,6 +58,15 @@ Das hat drei Gruende:
 3. Setze die Aufgabe in deinem eigenen Repo um.
 4. Erstelle dort deinen Commit und deine PR.
 5. Trage danach deinen Stand in `course/learners/<name>/lernfortschritt_<name>.md` ein.
+
+### 5. Typische Verwechslungen (und wie du sie vermeidest)
+
+- **Fehler:** Uebungsloesung im Kurs-Repo erstellen.
+	**Besser:** Loesung im eigenen Repo bauen, im Kurs-Repo nur den Lernstand dokumentieren.
+- **Fehler:** Direkt im eigenen Repo starten, ohne `NEXT_STEPS.md` zu lesen.
+	**Besser:** Immer zuerst `NEXT_STEPS.md` im Kurs-Repo oeffnen.
+- **Fehler:** Lernfortschritt nur lokal notieren.
+	**Besser:** Lernfortschritt in `course/learners/<name>/lernfortschritt_<name>.md` im Kurs-Repo pflegen.
 
 ### Merksatz
 

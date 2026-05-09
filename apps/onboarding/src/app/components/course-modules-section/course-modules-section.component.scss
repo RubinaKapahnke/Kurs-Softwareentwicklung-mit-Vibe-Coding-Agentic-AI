@@ -1,0 +1,108 @@
+.modules-section {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.section-head {
+  margin-bottom: 3rem;
+
+  .eyebrow {
+    margin: 0 0 0.5rem 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-caps);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0 0 1rem 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-bold);
+    max-width: 720px;
+  }
+
+  .section-sub {
+    margin: 0;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-muted);
+    max-width: 720px;
+  }
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.module-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--color-surface);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 15%, transparent);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    margin: 0.75rem 0 0.75rem 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+  }
+}
+
+.module-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.module-topics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-base);
+    color: var(--color-text-muted);
+
+    &:before {
+      content: "→ ";
+      color: var(--color-primary);
+      font-weight: var(--font-weight-bold);
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.coming-soon-card {
+  margin-top: 2rem;
+  background: color-mix(in srgb, var(--color-surface) 95%, var(--color-primary));
+
+  mat-card-content {
+    padding: 2rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+  }
+}

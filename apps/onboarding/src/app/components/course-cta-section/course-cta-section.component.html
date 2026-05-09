@@ -1,0 +1,23 @@
+<section class="cta-section">
+  <div class="shell cta-inner">
+    <div>
+      <p class="eyebrow eyebrow--light">Bereit?</p>
+      <h2>@if (selectedCourseIsLive()) { Starte jetzt mit dem Setup. } @else { Kursstart folgt nach Freischaltung. }</h2>
+    </div>
+    <div class="cta-actions">
+      @if (selectedCourseIsLive()) {
+        <a mat-stroked-button [routerLink]="resumeLink()" class="btn-resume-cta">
+          @if (hasProgress()) {
+            {{ resumeLabel() }}
+          } @else {
+            Onboarding starten
+          }
+        </a>
+      } @else {
+        <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-resume-cta">
+          Interesse vormerken
+        </a>
+      }
+    </div>
+  </div>
+</section>

@@ -11,7 +11,11 @@
         <a href="#inhalte" class="navbar-link">Inhalte</a>
         <a href="#ablauf" class="navbar-link">Ablauf</a>
         <a href="#fuer-wen" class="navbar-link">Für wen?</a>
-        <a mat-flat-button routerLink="/onboarding/step/1" class="navbar-cta">Onboarding jetzt starten</a>
+        @if (selectedCourseIsLive()) {
+          <a mat-stroked-button [routerLink]="resumeLink()" class="navbar-cta">Onboarding</a>
+        } @else {
+          <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta">Interesse melden</a>
+        }
       </nav>
     </div>
   </header>
@@ -19,45 +23,15 @@
   <!-- ── Hero ─────────────────────────────────────────────────── -->
   <section class="hero-section">
     <div class="shell">
-      <div class="hero-text">
-        <p class="eyebrow">Softwareentwicklung mit Vibe Coding &amp; Agentic AI</p>
-        <h1>Dein Einstieg in KI-gestütztes Entwickeln</h1>
-        <p class="lead">
-          Dieser Kurs vermittelt moderne Softwareentwicklung mit KI-Unterstützung:
-          von der Produktidee über strukturierte Planung, Prototyping und Implementierung
-          bis zu Deployment, Monitoring und Weiterentwicklung. Ziel ist ein wartbares,
-          auslieferbares Produkt, das du verstehst, prüfen und verantworten kannst.
-        </p>
-        <div class="hero-actions">
-          <a mat-flat-button routerLink="/onboarding/step/1" class="btn-primary">
-            Onboarding jetzt starten
-          </a>
-          @if (hasProgress()) {
-            <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]" class="btn-resume">
-              Bei Schritt {{ resumeStep() }} weitermachen
-            </a>
-          }
-          <a mat-button routerLink="/" class="btn-back">
-            <mat-icon aria-hidden="true">west</mat-icon>
-            Zurück zur Übersicht
-          </a>
-        </div>
-
-        <div class="voucher-notice">
-          <mat-icon aria-hidden="true">vpn_key</mat-icon>
-          <div>
-            <strong>Zugang nur mit Voucher-Code</strong>
-            <p>
-              Für den Kursstart benötigst du einen persönlichen Voucher-Code.
-              Du gibst ihn direkt im ersten Onboarding-Schritt ein.
-            </p>
-            <p>
-              Noch keinen Code?
-              <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener">Kursplatz anfragen →</a>
-            </p>
-          </div>
-        </div>
-      </div>
+      <app-course-header
+        [courseCatalog]="courseCatalog"
+        [selectedCourse]="selectedCourse()"
+        [selectedCourseIsLive]="selectedCourseIsLive()"
+        [hasProgress]="hasProgress()"
+        [isCompleted]="isCompleted()"
+        [resumeLink]="resumeLink()"
+        [resumeLabel]="resumeLabel()"
+      ></app-course-header>
 
       <div class="hero-facts">
         <div class="fact-card">
@@ -86,131 +60,29 @@
   </section>
 
   <!-- ── Kursmodule / Inhalte ──────────────────────────────────── -->
-  <section class="modules-section" id="inhalte">
-    <div class="shell">
-      <div class="section-head">
-        <p class="eyebrow">Kursinhalt</p>
-        <h2>Was du in 14 Modulen lernst</h2>
-        <p class="section-sub">
-          Jedes Modul baut auf dem vorherigen auf und liefert eine neue nutzbare Fertigkeit –
-          von der Arbeitsumgebung über Vibe Coding, AI Literacy und Architektur bis zum eigenen Abschlussprojekt.
-          Module können auch als eigenständige Workshops genutzt werden.
-        </p>
-      </div>
-
-      <div class="modules-grid">
-        @for (mod of courseModules; track mod.title) {
-          <article class="module-card">
-            <div class="module-icon-wrap">
-              <mat-icon aria-hidden="true">{{ mod.icon }}</mat-icon>
-            </div>
-            <h3>{{ mod.title }}</h3>
-            <ul class="module-topics">
-              @for (t of mod.topics; track t) {
-                <li>{{ t }}</li>
-              }
-            </ul>
-          </article>
-        }
-      </div>
-    </div>
-  </section>
+  <app-course-modules-section
+    [selectedCourseIsLive]="selectedCourseIsLive()"
+    [selectedCourseModules]="selectedCourseModules()"
+  ></app-course-modules-section>
 
   <!-- ── Onboarding-Ablauf ──────────────────────────────────────── -->
-  <section class="journey-section" id="ablauf">
-    <div class="shell">
-      <div class="section-head">
-        <p class="eyebrow">Setup in {{ stepCount }} Schritten</p>
-        <h2>So richtest du deine Umgebung ein</h2>
-        <p class="section-sub">
-          Bevor du mit dem Kurs beginnst, richtest du einmalig deine Arbeitsumgebung ein.
-          Das dauert ca. 20–40 Minuten und ist danach für alle Kurse nutzbar.
-        </p>
-      </div>
-
-      <div class="journey-grid">
-        @for (step of onboardingSteps; track step.label; let i = $index) {
-          <article class="journey-card">
-            <span class="step-num">{{ i + 1 }}</span>
-            <div>
-              <p class="step-label">{{ step.label }}</p>
-              <p class="step-detail">{{ step.detail }}</p>
-            </div>
-          </article>
-        }
-      </div>
-    </div>
-  </section>
+  <app-course-journey-section
+    [stepCount]="stepCount"
+    [selectedCourseIsLive]="selectedCourseIsLive()"
+    [selectedOnboardingSteps]="selectedOnboardingSteps()"
+  ></app-course-journey-section>
 
   <!-- ── Für wen ────────────────────────────────────────────────── -->
-  <section class="audience-section" id="fuer-wen">
-    <div class="shell audience-shell">
-      <div class="audience-text">
-        <p class="eyebrow">Für wen?</p>
-        <h2>Für alle, die mit KI Produkte bauen oder begleiten wollen</h2>
-        <p>
-          Der Kurs richtet sich an Menschen, die KI-gestützte Softwareprodukte planen, entwickeln
-          oder fachlich begleiten wollen. Niemand muss den gesamten Stack beherrschen –
-          nach den gemeinsamen Grundlagen wählst du deinen eigenen Schwerpunktpfad.
-        </p>
-        <ul class="audience-list">
-          @for (a of targetAudience; track a.label) {
-            <li>
-              <mat-icon aria-hidden="true">{{ a.icon }}</mat-icon>
-              {{ a.label }}
-            </li>
-          }
-        </ul>
-      </div>
-      <div class="prereq-card">
-        <p class="card-kicker">Das brauchst du</p>
-        <ul class="prereq-list">
-          <li>
-            <mat-icon>check_circle</mat-icon>
-            Rechner mit Internetzugang
-          </li>
-          <li>
-            <mat-icon>check_circle</mat-icon>
-            Bereitschaft, Git und VS Code zu nutzen
-          </li>
-          <li>
-            <mat-icon>check_circle</mat-icon>
-            Ca. 30 Min. für das einmalige Setup
-          </li>
-          <li>
-            <mat-icon>check_circle</mat-icon>
-            Keine Programmiererfahrung nötig
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <app-course-audience-section
+    [selectedTargetAudience]="selectedTargetAudience()"
+  ></app-course-audience-section>
 
   <!-- ── CTA ───────────────────────────────────────────────────── -->
-  <section class="cta-section">
-    <div class="shell cta-inner">
-      <div>
-        <p class="eyebrow eyebrow--light">Bereit?</p>
-        <h2>Starte jetzt mit dem Setup – dauert ca. 30 Minuten.</h2>
-      </div>
-      <div class="cta-actions">
-        <a mat-flat-button routerLink="/onboarding/step/1" class="btn-primary btn-primary--lg">
-          Onboarding jetzt starten
-        </a>
-        @if (hasProgress()) {
-          <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]" class="btn-resume-cta">
-            Fortfahren (Schritt {{ resumeStep() }})
-          </a>
-        }
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <span class="footer-logo">KnOot Academy</span>
-      <span>&copy; 2026</span>
-    </div>
-  </footer>
+  <app-course-cta-section
+    [selectedCourseIsLive]="selectedCourseIsLive()"
+    [hasProgress]="hasProgress()"
+    [resumeLink]="resumeLink()"
+    [resumeLabel]="resumeLabel()"
+  ></app-course-cta-section>
 
 </div>

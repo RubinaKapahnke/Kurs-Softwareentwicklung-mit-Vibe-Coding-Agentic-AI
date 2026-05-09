@@ -11,7 +11,7 @@
         <a href="#top" class="navbar-link">Start</a>
         <a href="#value" class="navbar-link">Wert</a>
         <a href="#courses" class="navbar-link">Kurse</a>
-        <a routerLink="/kursstart" mat-flat-button class="navbar-cta">Einstieg</a>
+        <a [routerLink]="['/kurse', featuredCourse().id]" mat-button class="navbar-cta">Kursüberblick</a>
       </nav>
     </div>
   </header>
@@ -19,8 +19,9 @@
   @if (hasProgress()) {
     <section class="resume-banner" aria-label="Fortsetzen">
       <div class="container resume-inner">
-        <div>
+        <div class="resume-content">
           <p class="resume-kicker">Dein letzter Stand</p>
+          <p class="resume-course-info">{{ resumeCourseInfo() }}</p>
           <strong>
             @if (isCompleted()) {
               Onboarding abgeschlossen - du kannst direkt wieder in den Kursfluss springen.
@@ -48,13 +49,13 @@
 
       <article class="hero-featured-card" aria-label="Featured Kurskarte">
         <div class="featured-badge-wrap">
-          <img src="assets/graphics/course-preview.png" alt="Softwareentwicklung mit Vibe Coding & Agentic AI Vorschau" class="hero-featured-image" />
+          <img [src]="featuredCourse().preview || 'assets/graphics/course-preview.png'" [alt]="featuredCourse().title + ' Vorschau'" class="hero-featured-image" />
           <span class="free-badge">Jetzt kostenlos testen</span>
         </div>
         <div class="hero-featured-body">
           <span class="course-status course-status--live">FEATURED</span>
-          <h2>Softwareentwicklung mit Vibe Coding &amp; Agentic AI</h2>
-          <p>Softwareentwicklung mit Vibe Coding &amp; Agentic AI: Von der Produktidee über Planung, Prototyping und Implementierung bis zu Deployment und Weiterentwicklung. Du lernst, wie KI-gestützte Produkte entstehen – und verstehst, was gebaut wird, warum es funktioniert und wo du prüfen, korrigieren oder bewusst anders entscheiden sollst.</p>
+          <h2>{{ featuredCourse().title }}</h2>
+          <p>{{ featuredCourse().shortDescription }}</p>
           <ul class="featured-list">
             <li>Vibe Coding, Prompting, Context Engineering &amp; Harness Engineering</li>
             <li>AI Literacy, Modellwahl, Token Management &amp; AI System Architecture</li>
@@ -74,6 +75,12 @@
           <h1 class="hero-title">Wir machen dich <strong>AI-Ready</strong></h1>
           <p class="hero-subtitle">KI-Kompetenzen erwerben – anschlussfähig bleiben</p>
           <p class="hero-lead">Entwickelt und durchgeführt mit echten Expert*innen. Substanz, Fachkompetenz und Tiefe, abgestimmt auf deine Rolle und deinen Karrierepfad.</p>
+        </div>
+
+        <div class="hero-primary-actions" aria-label="3 Hauptaktionen">
+          <a mat-flat-button [routerLink]="featuredCourseLink()">{{ featuredCourseLabel() }}</a>
+          <a mat-flat-button [routerLink]="['/kurse', featuredCourse().id]">Kursüberblick</a>
+          <a mat-flat-button href="#courses">Weitere Kurse im Aufbau</a>
         </div>
 
         <div class="hero-media">
@@ -147,6 +154,12 @@
             </div>
           </figure>
         </div>
+        <div class="slop-shipping-explainer">
+          <h3>Was bedeutet "Slop" und "Shipping"?</h3>
+          <p><strong>Slop:</strong> (Englisch für "Matsch")<br>KI-generierter Output, der schnell entstand, aber keine Qualitätsstandards erfüllt – wild, ungeordnet, oft fehlerhaft.</p>
+          <p><strong>Shipping:</strong> (Englisch für "Ausliefern")<br>Produktionsreifer Code, der gemeinsame Leitplanken einhält – getestet, dokumentiert, wartbar, als Team sicher weiterzuentwickeln.</p>
+          <p><strong>Unser Fokus im Kurs:</strong> Wie nutzen wir KI nicht nur für schnelle erste Entwürfe, sondern entwickeln damit <em>wirklich wartbare</em> Software?</p>
+        </div>
         <div class="value-column">
           <article class="value-card value-card--accent">
             <h3>Was du hier lernst</h3>
@@ -173,6 +186,71 @@
     </div>
   </section>
 
+  <!-- Wie der Kurs funktioniert -->
+  <section class="course-flow-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Kursverlauf & Struktur</p>
+        <h2 class="section-title">Wie der Kurs funktioniert</h2>
+        <p class="section-text">
+          Du bestimmst dein Tempo, aber nicht die Reihenfolge. Die Schritte können übersprungen werden – bauen aber stark aufeinander auf.
+        </p>
+      </div>
+
+      <div class="flow-grid">
+        <article class="flow-card flow-card--overview">
+          <h3>Das Wichtigste in Kürze</h3>
+          <ul>
+            <li><strong>12 Schritte</strong> zum Onboarding und Kurs-Start</li>
+            <li><strong>Freie Geschwindigkeit:</strong> Du entscheidest, wann du einen Schritt machst</li>
+            <li><strong>Abhängigkeiten:</strong> Manche Schritte bauen auf anderen auf – Übungen funktionieren nur, wenn vorherige Schritte erledigt sind</li>
+            <li><strong>Dein Workspace:</strong> Alles (Notizen, Code, Lösungen) landet in deinem persönlichen Repository</li>
+          </ul>
+        </article>
+
+        <article class="flow-card flow-card--dependencies">
+          <h3>Schritt-Abhängigkeiten auf einen Blick</h3>
+          <div class="dependency-chain">
+            <div class="flow-stage">
+              <span class="stage-number">1–3</span>
+              <span class="stage-label">Setup</span>
+              <p class="stage-detail">Voucher, Kursfluss verstehen, GitHub-Account (neu oder besteht)</p>
+            </div>
+            <svg class="flow-arrow" viewBox="0 0 40 30" aria-hidden="true">
+              <path d="M 0 15 L 35 15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" />
+              <path d="M 30 10 L 35 15 L 30 20" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+            <div class="flow-stage">
+              <span class="stage-number">4–6</span>
+              <span class="stage-label">Repository</span>
+              <p class="stage-detail">Eigenes Repo anlegen, Trainerin einladen, erste Commits</p>
+            </div>
+            <svg class="flow-arrow" viewBox="0 0 40 30" aria-hidden="true">
+              <path d="M 0 15 L 35 15" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" />
+              <path d="M 30 10 L 35 15 L 30 20" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+            <div class="flow-stage">
+              <span class="stage-number">7–12</span>
+              <span class="stage-label">Tools & Kursfluss</span>
+              <p class="stage-detail">VS Code, Git, Clone, erste Übungen, Kurs-Start</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flow-card flow-card--caution">
+          <h3>Wenn du einen Schritt überspringst</h3>
+          <p><strong>Das ist möglich!</strong> Du kannst direkt zu Schritt 8 oder 10 springen, wenn du willst.</p>
+          <p><strong>Aber Achtung:</strong> Manche Übungen im Kurs funktionieren nur, wenn du Schritte zuvor erledigt hast. Beispiel:</p>
+          <ul>
+            <li>Ohne <strong>Schritt 4</strong> (Repository anlegen) kannst du keine Dateien committen</li>
+            <li>Ohne <strong>Schritt 9</strong> (Git installieren) kann lokal nichts gecloned werden</li>
+          </ul>
+          <p>Wenn eine Übung nicht startbar ist, schau nach welcher Schritt vorher erforderlich ist – navigiere zurück und hole ihn nach.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="courses-section" id="courses">
     <div class="container">
       <div class="section-head section-head--inline">
@@ -180,108 +258,25 @@
           <p class="section-kicker">Angebot</p>
           <h2 class="section-title">Kurse</h2>
         </div>
-        <a mat-stroked-button routerLink="/kursstart">Vor dem Buchen: Einstieg ansehen</a>
+        <a mat-button [routerLink]="['/kurse', featuredCourse().id]">Kursueberblick anzeigen</a>
       </div>
 
       <!-- Kurs-Grid -->
       <div class="courses-grid">
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">IN PLANUNG</span>
-            <h3>AI Product Engineering</h3>
-            <p>PRD, Architektur und verlässlicher Release-Flow mit KI.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>Rapid Prototyping mit KI</h3>
-            <p>Von der Idee zum funktionierenden Prototypen in Stunden.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>Software-Architektur für Vibe Coding</h3>
-            <p>Skalierbare Strukturen für KI-gestützte Codebasen.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>RAG: Retrieval-Augmented Generation</h3>
-            <p>Eigene Wissensdatenbanken mit LLMs verbinden und nutzen.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>Agenten-Systeme entwickeln</h3>
-            <p>Autonome KI-Agenten planen, bauen und orchestrieren.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>AI Transformation Management</h3>
-            <p>Organisationen durch den KI-Wandel führen.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>AI Automation Management</h3>
-            <p>Workflows automatisieren und Prozesse neu denken.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>AI Strategie</h3>
-            <p>Strategische KI-Planung für Teams und Unternehmen.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>AI Literacy</h3>
-            <p>Grundlagen und kritisches Verständnis von KI für alle.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>KI im Arbeitsalltag</h3>
-            <p>Konkrete Anwendungsgebiete für den täglichen Einsatz.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>Ethik in der Künstlichen Intelligenz</h3>
-            <p>Verantwortungsvoller Umgang mit KI-Systemen und -Entscheidungen.</p>
-          </div>
-        </article>
-
-        <article class="course-card">
-          <div class="course-card-body">
-            <span class="course-status">DEMNÄCHST</span>
-            <h3>Urheberrecht für KI-Produkte</h3>
-            <p>Rechtliche Grundlagen für KI-entwickelte Software und Inhalte.</p>
-          </div>
-        </article>
-
+        @for (course of courseCatalog; track course.id) {
+          <article class="course-card">
+            <div class="course-card-body">
+              <span class="course-status" [class.course-status--live]="course.status === 'live'">
+                {{ course.statusLabel | uppercase }}
+              </span>
+              <h3>{{ course.title }}</h3>
+              <p>{{ course.shortDescription }}</p>
+              @if (course.status === 'live') {
+                <a [routerLink]="['/kurse', course.id]" class="course-card-link">Zum Kurs &rarr;</a>
+              }
+            </div>
+          </article>
+        }
       </div>
 
       <p class="filter-note"><strong>Alle Kurse:</strong> praxisnah, pruefbar, ohne Buzzword-Nebel.</p>
@@ -295,17 +290,11 @@
         <h2>Informieren, buchen und direkt starten.</h2>
       </div>
       <div class="cta-actions">
-        <a mat-flat-button routerLink="/kursstart" class="btn-primary btn-primary--lg">Kurse entdecken &amp; buchen</a>
+        <a mat-stroked-button routerLink="/kurse/vibe-coding-agentic-ai" class="btn-primary btn-primary--lg">Kursueberblick anzeigen</a>
         <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-contact">Kontakt aufnehmen</a>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">KnOot Academy</span>
-      <span>© 2026</span>
-    </div>
-  </footer>
 
 </div>

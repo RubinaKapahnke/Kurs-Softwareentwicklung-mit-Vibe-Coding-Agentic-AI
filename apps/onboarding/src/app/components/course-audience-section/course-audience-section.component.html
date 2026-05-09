@@ -1,0 +1,42 @@
+<section class="audience-section" id="fuer-wen">
+  <div class="shell audience-shell">
+    <div class="audience-text">
+      <p class="eyebrow">Für wen?</p>
+      <h2>Für alle, die mit KI Produkte bauen oder begleiten wollen</h2>
+      <p>
+        Der Kurs richtet sich an Menschen, die KI-gestützte Softwareprodukte planen, entwickeln
+        oder fachlich begleiten wollen. Niemand muss den gesamten Stack beherrschen –
+        nach den gemeinsamen Grundlagen wählst du deinen eigenen Schwerpunktpfad.
+      </p>
+      <ul class="audience-list">
+        @for (a of selectedTargetAudience(); track a.label) {
+          <li>
+            <mat-icon aria-hidden="true">{{ a.icon }}</mat-icon>
+            {{ a.label }}
+          </li>
+        }
+      </ul>
+    </div>
+    <div class="prereq-card">
+      <p class="card-kicker">Das brauchst du</p>
+      <ul class="prereq-list">
+        <li>
+          <mat-icon>check_circle</mat-icon>
+          Rechner mit Internetzugang
+        </li>
+        <li>
+          <mat-icon>check_circle</mat-icon>
+          Bereitschaft, Git und VS Code zu nutzen
+        </li>
+        <li>
+          <mat-icon>check_circle</mat-icon>
+          Ca. 30 Min. für das einmalige Setup
+        </li>
+        <li>
+          <mat-icon>check_circle</mat-icon>
+          Keine Programmiererfahrung nötig
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

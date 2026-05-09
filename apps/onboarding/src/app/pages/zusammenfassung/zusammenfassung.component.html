@@ -28,6 +28,15 @@
           </p>
         </div>
       </div>
+
+      @if (firstIncompleteStepId(); as nextStepId) {
+        <div class="summary-resume">
+          <a mat-flat-button [routerLink]="getStepLink(nextStepId)">
+            Bei Schritt {{ nextStepId }} weitermachen
+            <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+          </a>
+        </div>
+      }
     }
 
     <ul class="step-list">
@@ -48,7 +57,7 @@
             <a
               mat-stroked-button
               class="step-item__cta"
-              [routerLink]="['/onboarding/step', step.id]">
+              [routerLink]="getStepLink(step.id)">
               Erledigen
               <mat-icon iconPositionEnd>arrow_forward</mat-icon>
             </a>
@@ -56,6 +65,42 @@
         </li>
       }
     </ul>
+
+    <section class="course-bridge" aria-label="Bruecke in den Kursfluss">
+      <h3>Weiter im Kursfluss</h3>
+
+      <div class="course-bridge__paths">
+        <article class="bridge-path-card">
+          <h4>Weg 1: GitHub</h4>
+          <div class="bridge-path-card__actions">
+            <a mat-stroked-button [href]="nextStepsUrl" target="_blank" rel="noopener noreferrer">
+              NEXT_STEPS.md
+              <mat-icon iconPositionEnd>open_in_new</mat-icon>
+            </a>
+            <a mat-stroked-button [href]="exercisesReadmeUrl" target="_blank" rel="noopener noreferrer">
+              README_UEBUNGEN.md
+              <mat-icon iconPositionEnd>open_in_new</mat-icon>
+            </a>
+          </div>
+        </article>
+
+        <article class="bridge-path-card">
+          <h4>Weg 2: VS Code</h4>
+          <ol>
+            @for (hint of vscodeCourseEntryHints; track hint) {
+              <li>{{ hint }}</li>
+            }
+          </ol>
+        </article>
+      </div>
+
+      <div class="course-bridge__rule" role="note">
+        <mat-icon aria-hidden="true">rule</mat-icon>
+        <p>
+          Merksatz: Kurs-Repo lesen, eigenes Repo bauen, Lernfortschritt im Kurs-Repo pflegen.
+        </p>
+      </div>
+    </section>
 
   </mat-card-content>
 
@@ -66,7 +111,7 @@
         Zum Kurs
       </a>
     }
-    <a mat-button routerLink="/onboarding/step/1">
+    <a mat-button [routerLink]="getStepLink(1)">
       Zurück zu Schritt 1
     </a>
   </mat-card-actions>

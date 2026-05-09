@@ -6,15 +6,15 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     title: 'Zugang mit Voucher freischalten',
     goal: 'Du gibst deinen Voucher-Code ein und schaltest das Onboarding frei.',
     tasks: [
-      'Gib deinen Voucher-Code ein und bestaetige ihn.'
+      'Gib deinen Voucher-Code ein und bestätige ihn.'
     ],
     fallbackHelp: [
       {
         title: 'Voucher-Code funktioniert nicht',
-        detail: 'Pruefe die Eingabe und kontaktiere bei Bedarf die Trainerin fuer einen gueltigen Code.'
+        detail: 'Prüfe die Eingabe und kontaktiere bei Bedarf die Trainerin für einen gültigen Code.'
       }
     ],
-    successCriterion: 'Dein Voucher wurde bestaetigt und Schritt 2 ist freigeschaltet.'
+    successCriterion: 'Dein Voucher wurde bestätigt und Schritt 2 ist freigeschaltet.'
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               paragraphs: [
-                'Das Modul Onboarding richtet deine Arbeitsumgebung ein. Mit Arbeitsumgebung ist alles gemeint, was du zum Arbeiten im Kurs brauchst: GitHub-Account, dein eigenes Uebungs-Repository, VS Code, Git und eine lauffaehige Verbindung zum Kurs-Repository. Was diese Begriffe jeweils bedeuten, lernst du waehrend des Moduls Schritt fuer Schritt.'
+                'Das Modul Onboarding richtet deine Arbeitsumgebung ein. Mit Arbeitsumgebung ist alles gemeint, was du zum Arbeiten im Kurs brauchst: GitHub-Account, dein eigenes Übungs-Repository, VS Code, Git und eine laufähige Verbindung zum Kurs-Repository. Was diese Begriffe jeweils bedeuten, lernst du während des Moduls Schritt für Schritt.'
               ]
             },
             {
@@ -239,11 +239,11 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   },
   {
     id: 4,
-    title: 'Eigenes Übungs-Repo anlegen',
+    title: 'Eigenes Übungs-Repository anlegen',
     goal: 'Du erstellst dein erstes eigenes Repository auf GitHub – hier machst du alle Übungen.',
     tasks: [
-      'Lege auf GitHub ein neues Repository an (Private reicht – die Trainerin wird eingeladen).',
-      'Wähle einen Namen wie mein-vibe-coding und aktiviere die README-Datei.'
+      'Lege auf GitHub ein neues Repository an.',
+      'Wähle einen Namen wie mein-vibe-coding, stelle die Sichtbarkeit auf Private und aktiviere die README-Datei.'
     ],
     fallbackHelp: [
       {
@@ -320,6 +320,20 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
               paragraphs: [
                 'Die README ist wichtig. Ohne README wirkt das Repo für Einsteiger oft „leer" und unklar.'
               ]
+            },
+            {
+              heading: 'Wichtig: Sichtbarkeit und Copyright',
+              paragraphs: [
+                'Du kannst dein Repository als Private (nur du und eingeladene Personen) oder Public (für alle sichtbar) erstellen.'
+              ]
+            },
+            {
+              heading: 'Wenn dein Repository Public wird',
+              orderedItems: [
+                'Du darfst KEINE Kursinhalte aus diesem Kurs (Knoot Academy Copyright) 1:1 duplizieren oder veröffentlichen.',
+                'Du kannst deine LÖSUNGEN und deinen EIGENEN CODE veröffentlichen, den du im Kurs entwickelst.',
+                'Nutze ein Lizenzmodell wie Creative Commons (CC) oder Open Source (MIT, Apache 2.0) um klar zu machen, unter welchen Bedingungen andere deine Arbeit nutzen dürfen.'
+              ]
             }
           ]
         },
@@ -368,15 +382,16 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 5,
     title: 'Trainerin einladen',
-    goal: 'Du gibst der Trainerin Zugriff auf dein Repo, damit sie deine Übungen sehen und freigeben kann.',
+    goal: 'Du gibst der Trainerin Zugriff auf dein Repository, damit sie deine Übungen sehen und freigeben kann.',
     tasks: [
-      'Öffne die Settings deines Repos auf GitHub.',
-      'Gehe zu Collaborators und sende eine Einladung an RubinaKapahnke.'
+      'Öffne die Settings deines Repositories auf GitHub.',
+      'Gehe zu Collaborators und sende eine Einladung an RubinaKapahnke.',
+      'Stelle sicher, dass dein Repository Private ist – die Trainerin wird explizit eingeladen und hat dann Zugriff.'
     ],
     fallbackHelp: [
       {
         title: '"Collaborators" nicht sichtbar',
-        detail: 'Du musst Owner des Repos sein. Prüfe, ob du in deinem eigenen Repo bist – nicht im Kurs-Repo.'
+        detail: 'Du musst Owner des Repositories sein. Prüfe, ob du in deinem eigenen Repository bist – nicht im Kurs-Repository.'
       },
       {
         title: 'Profil erscheint nicht beim Tippen',
@@ -387,17 +402,17 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   },
   {
     id: 6,
-    title: 'Erste Übungen im eigenen Repo',
+    title: 'Erste Übungen im eigenen Repository',
     goal: 'Du machst deine ersten GitHub-Aktionen direkt im Browser – ohne lokale Installation.',
     tasks: [
-      'Lege die Datei uebung-01.md in deinem Repo an und committe sie.',
+      'Lege die Datei uebung-01.md in deinem Repository an und committe sie.',
       'Bearbeite die README.md und ergänze eine Zeile über dich.',
-      'Prüfe, dass beide Commits in der Commit-Historie deines Repos sichtbar sind.'
+      'Prüfe, dass beide Commits in der Commit-Historie deines Repositories sichtbar sind.'
     ],
     fallbackHelp: [
       {
         title: 'Ich sehe kein „Add file"',
-        detail: 'Gehe zur Hauptseite deines Repos (Code-Tab). Der Button ist direkt über der Dateiliste.'
+        detail: 'Gehe zur Hauptseite deines Repositories (Code-Tab). Der Button ist direkt über der Dateiliste.'
       },
       {
         title: 'Commit-Button ist ausgegraut',
@@ -405,7 +420,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     successCriterion:
-      'Dein Repo enthält mindestens 2 Commits. Die Trainerin kann sie sehen und gibt grünes Licht für Schritt 5.'
+      'Dein Repository enthält mindestens 2 Commits. Die Trainerin kann sie sehen und gibt grünes Licht für Schritt 6.'
   },
   {
     id: 7,
@@ -509,6 +524,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     successCriterion: 'VS Code ist installiert und öffnet sich ohne Fehler.',
+    desktopHint: [
+      'Führe diesen Schritt nach Möglichkeit an einem Laptop oder Desktop-Rechner aus.',
+      'Download, Installation und die ersten Prüfungen sind dort deutlich einfacher als auf dem Smartphone.'
+    ],
     resources: [
       {
         label: 'VS Code Download',
@@ -649,6 +668,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     successCriterion:
       'Im VS-Code-Terminal zeigt git --version eine gültige Versionsnummer (z. B. git version 2.x.x).',
+    desktopHint: [
+      'Dieser Schritt braucht einen Rechner mit installierbarem Git und einem VS-Code-Terminal.',
+      'Auf dem Smartphone kannst du die Hinweise lesen, den Schritt aber spaeter besser am Rechner ausfuehren.'
+    ],
     resources: [
       {
         label: 'Git Download',
@@ -681,6 +704,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     successCriterion:
       'Der Kurs-Ordner ist in VS Code geöffnet. Du siehst NEXT_STEPS.md in der Dateiliste.',
+    desktopHint: [
+      'Klonen und Öffnen des Kurs-Repositories ist ein Desktop-Schritt.',
+      'Wenn du gerade mobil liest, nutze diesen Schritt später an deinem Rechner weiter.'
+    ],
     resources: [
       {
         label: 'Kurs-Repo auf GitHub',
@@ -701,22 +728,22 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     title: 'Kurs-Handhabung verstehen',
     goal: 'Du verstehst, welche Dateien im Kurs-Repo bleiben, was in deinem eigenen Repo entsteht und warum der Lernfortschritt zentral gepflegt wird.',
     tasks: [
-      'Oeffne im Kurs-Repo die Datei NEXT_STEPS.md und lies Meilenstein 1.',
-      'Oeffne im Kurs-Repo die Datei course/uebungen/README_UEBUNGEN.md und lies den Uebungsablauf.',
-      'Pruefe fuer dich die Grundregel: Aufgaben zentral lesen, Loesungen im eigenen Repo umsetzen.',
-      'Pruefe fuer dich die Grundregel: lernfortschritt_<name>.md bleibt zentral im Kurs-Repo fuer Ueberblick und Dashboard.'
+      'Öffne im Kurs-Repository die Datei NEXT_STEPS.md und lies Meilenstein 1.',
+      'Öffne im Kurs-Repository die Datei course/uebungen/README_UEBUNGEN.md und lies den Übungsablauf.',
+      'Prüfe für dich die Grundregel: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.',
+      'Prüfe für dich die Grundregel: lernfortschritt_<name>.md bleibt zentral im Kurs-Repository für Überblick und Dashboard.'
     ],
     fallbackHelp: [
       {
-        title: 'Ich verwechsle eigenes Repo und Kurs-Repo',
-        detail: 'Merke dir: NEXT_STEPS, course/uebungen und course/learners gehoeren ins Kurs-Repo. Deine Loesungsdateien und Projektartefakte gehoeren standardmaessig in dein eigenes Repo.'
+        title: 'Ich verwechsle eigenes Repository und Kurs-Repository',
+        detail: 'Merke dir: NEXT_STEPS, course/uebungen und course/learners gehören ins Kurs-Repository. Deine Lösungsdateien und Projektartefakte gehören standardmäßig in dein eigenes Repository.'
       },
       {
         title: 'Ich finde README_UEBUNGEN.md nicht',
         detail: 'Nutze in VS Code Strg+P (Windows) / Cmd+P (Mac) und tippe README_UEBUNGEN.md.'
       }
     ],
-    successCriterion: 'Du kannst erklaeren, was im Kurs-Repo bleibt, was in deinem eigenen Repo liegt und warum die Lernfortschrittsdatei zentral gepflegt wird.',
+    successCriterion: 'Du kannst erklären, was im Kurs-Repository bleibt, was in deinem eigenen Repository liegt und warum die Lernfortschrittsdatei zentral gepflegt wird.',
     resources: [
       {
         label: 'NEXT_STEPS.md',
@@ -728,8 +755,8 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     vscodeHint: [
-      'Druecke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe NEXT_STEPS.md oder README_UEBUNGEN.md und bestaetige mit Enter.'
+      'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
+      'Tippe NEXT_STEPS.md oder README_UEBUNGEN.md und bestätige mit Enter.'
     ],
     markdownSource: '/content/kurs-handhabung.md'
   }

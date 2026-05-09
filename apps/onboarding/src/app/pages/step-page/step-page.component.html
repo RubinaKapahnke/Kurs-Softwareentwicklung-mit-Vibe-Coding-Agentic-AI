@@ -73,6 +73,15 @@
       <div class="lesson-flow-section" #lessonFlowSection>
         <app-lesson-flow [lesson]="lessonFlow" (finished)="onLessonFinished()"></app-lesson-flow>
       </div>
+      @if (hasLessonFollowUpContent()) {
+        <button type="button" class="lesson-followup-hint" (click)="scrollToFollowUpContent()">
+          <span class="lesson-followup-hint__text">{{ lessonFollowUpLabel() }}</span>
+          <span class="lesson-followup-hint__action">
+            Weiter unten ansehen
+            <mat-icon aria-hidden="true">south</mat-icon>
+          </span>
+        </button>
+      }
       <mat-divider></mat-divider>
     }
 
@@ -88,22 +97,22 @@
         <!-- Step 3b: Zweite Frage - wie sicher mit Repos? (nur wenn 'existing' gewählt) -->
         @if (showRepoExperienceQuestion()) {
           <section class="step-section repo-experience-section">
-            <h3>Wie sicher bist du mit GitHub Repos und Git-Befehlen?</h3>
+            <h3>Wie sicher bist du mit GitHub-Repositories und Git-Befehlen?</h3>
             <p>Das bestimmt, welche Erklärungen du jetzt brauchst.</p>
 
             <div class="repo-experience-options">
               <app-choice-card
                 icon="school"
                 label="Anfänger - ich brauche Erklärungen"
-                description="Ich habe GitHub genutzt, aber nicht mit Repos/Git."
+                description="Ich habe GitHub genutzt, aber nicht mit Repositories/Git."
                 tone="light"
                 [selected]="state.step2Experience() === 'existing-beginner'"
                 (pressed)="selectRepoExperience('beginner')" />
 
               <app-choice-card
                 icon="verified_user"
-                label="Erfahren - ich kenne Repos und Git"
-                description="Ich arbeite regelmäßig mit Git und Repos."
+                label="Erfahren - ich kenne Repositories und Git"
+                description="Ich arbeite regelmäßig mit Git und Repositories."
                 tone="light"
                 [selected]="state.step2Experience() === 'existing-experienced'"
                 (pressed)="selectRepoExperience('experienced')" />
@@ -115,7 +124,7 @@
         @if (state.step2Experience() === 'existing-beginner') {
           <app-callout icon="info" title="Du bekommst eine volle Erklärung" roleName="status">
             <p class="info-section__text">
-              Wir erklären dir Schritt für Schritt, wie GitHub Repos funktionieren und wie du sie im Kurs verwendest. Keine Vorkenntnisse nötig.
+              Wir erklären dir Schritt für Schritt, wie GitHub-Repositories funktionieren und wie du sie im Kurs verwendest. Keine Vorkenntnisse nötig.
             </p>
           </app-callout>
           <mat-divider></mat-divider>
@@ -175,8 +184,8 @@
       <section class="walkthrough-section">
         <h3 class="walkthrough-title">So lädst du die Trainerin ein</h3>
         <ol class="walkthrough-steps">
-          <li>Öffne dein Übungs-Repo auf github.com.</li>
-          <li>Klick auf <strong>„Settings"</strong> (Zahnrad-Tab ganz rechts in der Repo-Navigation).</li>
+          <li>Öffne dein Übungs-Repository auf github.com.</li>
+          <li>Klick auf <strong>"Settings"</strong> (Zahnrad-Tab ganz rechts in der Repository-Navigation).</li>
           <li>Im linken Menü unter <em>Access</em>: <strong>„Collaborators"</strong>.</li>
           <li>Klick auf <strong>„Add people"</strong>.</li>
           <li>
@@ -200,7 +209,7 @@
           <div class="exercise-item__num">Übung 1</div>
           <h4 class="exercise-item__title">Neue Datei anlegen und committen</h4>
           <ol class="walkthrough-steps">
-            <li>Öffne dein Repo auf github.com (Code-Tab).</li>
+            <li>Öffne dein Repository auf github.com (Code-Tab).</li>
             <li>Klick auf <strong>„Add file"</strong> → <strong>„Create new file"</strong>.</li>
             <li>Dateiname: <code class="code-inline">uebung-01.md</code></li>
             <li>Schreib etwas rein, z. B.: <code class="code-inline">Meine erste Datei im Kurs!</code></li>
@@ -216,7 +225,7 @@
           <div class="exercise-item__num">Übung 2</div>
           <h4 class="exercise-item__title">README bearbeiten</h4>
           <ol class="walkthrough-steps">
-            <li>Klick auf <strong>README.md</strong> in deinem Repo.</li>
+            <li>Klick auf <strong>README.md</strong> in deinem Repository.</li>
             <li>Klick auf das <strong>Stift-Icon</strong> oben rechts (Edit this file).</li>
             <li>Füge eine neue Zeile hinzu: <code class="code-inline">Dieses Repo gehört mir – Teilnehmer:in beim Vibe Coding Kurs.</code></li>
             <li>Commit-Nachricht: <code class="code-inline">docs: README mit meinen Infos ergaenzt</code></li>
@@ -482,6 +491,18 @@
               <mat-icon aria-hidden="true">open_in_new</mat-icon>
             </a>
             </li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (step().desktopHint?.length) {
+      <mat-divider></mat-divider>
+      <section class="step-section">
+        <h3>Wichtiger Hinweis fuer diesen Schritt</h3>
+        <ul class="resource-link-list">
+          @for (hint of step().desktopHint; track hint) {
+            <li>{{ hint }}</li>
           }
         </ul>
       </section>

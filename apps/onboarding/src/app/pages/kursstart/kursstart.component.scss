@@ -152,6 +152,35 @@ $section-v: clamp(2.5rem, 5vw, 4.5rem);
   align-items: center;
 }
 
+.course-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 0.8rem;
+}
+
+.course-switcher__item {
+  --mdc-outlined-button-label-text-color: var(--color-on-dark-muted);
+  --mdc-outlined-button-outline-color: var(--border-on-dark);
+}
+
+.course-switcher__item--active {
+  --mdc-outlined-button-label-text-color: var(--color-on-dark);
+  --mdc-outlined-button-outline-color: var(--color-secondary);
+}
+
+.course-status-hint {
+  margin: 0 0 0.9rem;
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-on-dark-subtle);
+}
+
+.course-status-hint--live {
+  color: color-mix(in srgb, var(--color-secondary) 88%, white);
+}
+
 .voucher-notice {
   display: flex;
   gap: 0.75rem;
@@ -277,6 +306,18 @@ $section-v: clamp(2.5rem, 5vw, 4.5rem);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.coming-soon-card {
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-subtle);
+  background: var(--surface-muted);
+}
+
+.coming-soon-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-base);
 }
 
 .module-card {

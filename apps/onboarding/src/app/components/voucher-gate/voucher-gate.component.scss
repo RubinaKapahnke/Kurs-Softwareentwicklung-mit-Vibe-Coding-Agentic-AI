@@ -98,10 +98,25 @@
 }
 
 .voucher-error {
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-danger);
+  border: 1px solid var(--border-danger);
   color: var(--color-error);
 
   mat-icon {
     font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  a {
+    color: inherit;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: underline;
+
+    &:hover {
+      color: color-mix(in srgb, var(--color-error) 100%, var(--color-error));
+    }
   }
 }
 

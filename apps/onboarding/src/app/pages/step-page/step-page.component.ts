@@ -5,6 +5,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialog } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -19,6 +20,7 @@ import { ChoiceCardComponent } from '../../components/choice-card/choice-card.co
 import { CalloutComponent } from '../../components/callout/callout.component';
 import { VoucherGateComponent } from '../../components/voucher-gate/voucher-gate.component';
 import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/step-tasks.component';
+import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialog.component';
 
 @Component({
   selector: 'app-step-page',
@@ -35,7 +37,8 @@ import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/s
     ChoiceCardComponent,
     CalloutComponent,
     VoucherGateComponent,
-    StepTasksComponent
+    StepTasksComponent,
+    StepSkipDialogComponent
   ],
   templateUrl: './step-page.component.html',
   styleUrl: './step-page.component.scss'
@@ -43,11 +46,25 @@ import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/s
 export class StepPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
+  private readonly dialog = inject(MatDialog);
   readonly state = inject(OnboardingStateService);
   readonly stepCount = ONBOARDING_STEP_COUNT;
+  private readonly fallbackCourseId = 'vibe-coding-agentic-ai';
   private readonly routeParamMap = toSignal(this.route.paramMap, {
     initialValue: this.route.snapshot.paramMap
   });
+
+  private getCourseId(): string {
+    return this.route.parent?.snapshot.paramMap.get('courseId') ?? this.fallbackCourseId;
+  }
+
+  private buildStepLink(stepId: number): string[] {
+    return ['/kurse', this.getCourseId(), 'onboarding', 'step', String(stepId)];
+  }
+
+  private buildSummaryLink(): string[] {
+    return ['/kurse', this.getCourseId(), 'onboarding', 'zusammenfassung'];
+  }
 
   readonly step = computed<OnboardingStep>(() => {
     const id = Number(this.routeParamMap().get('id'));
@@ -135,6 +152,39 @@ export class StepPageComponent {
   readonly showStepResources = computed(() =>
     !this.isAccountChoiceStep() || this.showAccountStepContent()
   );
+  readonly hasLessonFollowUpContent = computed(() => {
+    if (!this.visibleLessonFlow()) {
+      return false;
+    }
+
+    return this.showRepoExperienceQuestion() ||
+      this.state.step2Experience() === 'existing-beginner' ||
+      this.state.step2Experience() === 'existing-experienced' ||
+      this.isInviteStep() ||
+      this.isExerciseStep() ||
+      this.isVscodeInstallStep() ||
+      this.isGitInstallStep() ||
+      this.isCloneStep() ||
+      this.showTodoSection() ||
+      this.showAccountSecurityHint() ||
+      (this.step().resources?.length ?? 0) > 0 && this.showStepResources() ||
+      (this.step().vscodeHint?.length ?? 0) > 0 && !this.isCloneStep();
+  });
+  readonly lessonFollowUpLabel = computed(() => {
+    if (this.showTodoSection()) {
+      return 'Unter der Lektion folgen noch Aufgaben.';
+    }
+
+    if (this.showRepoExperienceQuestion() || this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced') {
+      return 'Unter der Lektion folgt noch deine Auswahl fuer diesen Schritt.';
+    }
+
+    if (this.isCloneStep()) {
+      return 'Unter der Lektion folgen noch die naechsten Kursschritte.';
+    }
+
+    return 'Unter der Lektion folgen noch weitere Hinweise.';
+  });
 
   // Step 3: Unterschiedliche Inhalte für 'new' vs 'existing-beginner' vs 'existing-experienced'
   readonly step3Title = computed(() => {
@@ -285,20 +335,41 @@ export class StepPageComponent {
 
   goToPreviousStep(): void {
     if (this.step().id > 1) {
-      void this.router.navigate(['/onboarding/step', this.step().id - 1]);
+      void this.router.navigate(this.buildStepLink(this.step().id - 1));
     }
   }
 
-  /** Weiter: immer erlaubt, einfach navigieren */
+  /** Weiter: zeige Dialog wenn Schritt 2 nicht erledigt ist */
   goToNextStep(): void {
     const currentStep = this.step().id;
     if (currentStep >= ONBOARDING_STEP_COUNT) return;
-    void this.router.navigate(['/onboarding/step', currentStep + 1]);
+
+    // Für Schritt 2: Dialog zeigen wenn nicht als erledigt markiert
+    if (currentStep === 2 && !this.isCurrentStepDone()) {
+      this.showStepSkipDialog();
+      return;
+    }
+
+    void this.router.navigate(this.buildStepLink(currentStep + 1));
+  }
+
+  private showStepSkipDialog(): void {
+    const dialogRef = this.dialog.open(StepSkipDialogComponent);
+    dialogRef.afterClosed().subscribe((result: StepSkipDialogResult | undefined) => {
+      if (result === 'mark-done') {
+        this.markDone();
+        const currentStep = this.step().id;
+        void this.router.navigate(this.buildStepLink(currentStep + 1));
+      } else if (result === 'skip') {
+        const currentStep = this.step().id;
+        void this.router.navigate(this.buildStepLink(currentStep + 1));
+      }
+    });
   }
 
   finishOnboarding(): void {
     this.state.markStepCompleted(this.step().id);
-    void this.router.navigate(['/onboarding/zusammenfassung']);
+    void this.router.navigate(this.buildSummaryLink());
   }
 
   onLessonFinished(): void {
@@ -311,5 +382,9 @@ export class StepPageComponent {
 
     // If no todo section exists on this step, scroll a bit further down in the same page.
     window.scrollBy({ top: Math.max(lessonBottom * 0.6, 220), behavior: 'smooth' });
+  }
+
+  scrollToFollowUpContent(): void {
+    this.onLessonFinished();
   }
 }

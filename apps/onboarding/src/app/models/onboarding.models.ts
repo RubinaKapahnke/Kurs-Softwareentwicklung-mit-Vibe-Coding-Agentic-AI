@@ -56,6 +56,7 @@ export interface OnboardingStep {
   fallbackHelp: OnboardingHelpItem[];
   successCriterion: string;
   resources?: OnboardingResourceLink[];
+  desktopHint?: string[];
   vscodeHint?: string[];
   markdownSource?: string; // Pfad zur optionalen Markdown-Erklärung
   lessonFlow?: OnboardingLessonFlow;
