@@ -53,6 +53,6 @@ Der Unterschied im Alltag:
 
 Git-Befehle fangen immer mit `git` an und funktionieren auf allen Betriebssystemen gleich. Terminal-Befehle unterscheiden sich je nach System (Windows vs. macOS/Linux).
 
-Mehr zu Git: [modules/04-git/01-git-grundlagen.md](../04-git/01-git-grundlagen.md)
+Mehr zu Git: [course/course-library/04-git/01-git-grundlagen.md](../04-git/01-git-grundlagen.md)
 
 Welche Terminals und Shells es gibt und wie sich VS Code Terminal vom System-Terminal unterscheidet: [02-terminal-typen.md](./02-terminal-typen.md)

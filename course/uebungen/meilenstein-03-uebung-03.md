@@ -164,9 +164,9 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 
 ## Modulabdeckung (Check)
 
-- ✓ `modules/06-ai-instructions/03-prompt-dateien-grundlagen.md`: Frontmatter, Aufbau, Aufruf via `/`
-- ✓ `modules/06-ai-instructions/01-prompting-grundlagen.md`: Kontext- und Format-Baustein
-- ✓ `modules/04-git/03-git-befehlsuebersicht.md`: Branch + Commit + Push + PR
+- ✓ `course/course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md`: Frontmatter, Aufbau, Aufruf via `/`
+- ✓ `course/course-library/06-ai-instructions/01-prompting-grundlagen.md`: Kontext- und Format-Baustein
+- ✓ `course/course-library/04-git/03-git-befehlsuebersicht.md`: Branch + Commit + Push + PR
 
 ---
 
@@ -203,3 +203,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe die Prompt-Datei erfolgreich ueber `/` im Copilot Chat aufgerufen.
 - [ ] Ich habe erlebt, wie eine Prompt-Datei die KI-Antwort kontrollierbar strukturiert.
 - [ ] Ich kann benennen, wann eine Prompt-Datei nuetzlicher ist als einfaches Prompting.
+

@@ -12,16 +12,15 @@ Nutze die Checklisten als Selbstcheck fuer das GitHub-Modul.
 
 ### Must have
 
-- [x] Ich weiss, was GitHub ist und wie es sich von Git unterscheidet.
-- [x] Ich verstehe die Begriffe Repository, Branch, Pull Request und Issue.
-- [x] Ich kann ein Repository auf GitHub erkunden und den Code durchstoebern.
-- [x] Ich kann einen eigenen Branch erstellen und einen Pull Request oeffnen.
-- [x] Ich kann grundlegende GitHub-Navigation im Kurs-Repo durchfuehren.
+- [ ] Ich weiss, was GitHub ist und wie es sich von Git unterscheidet.
+- [ ] Ich verstehe die Begriffe Repository, Branch, Pull Request und Issue.
+- [ ] Ich kann ein Repository auf GitHub erkunden und den Code durchstoebern.
+- [ ] Ich kann den typischen Lebenszyklus einer Aenderung auf GitHub erklaeren.
 
 ### Should have
 
-- [x] Ich kann einen Pull Request sinnvoll vorbereiten und mit einer guten Beschreibung eroeffnen.
-- [x] Ich verstehe, wie GitHub die Zusammenarbeit zwischen mehreren Personen unterstuetzt.
+- [ ] Ich kann einen Pull Request sinnvoll vorbereiten und mit einer guten Beschreibung eroeffnen.
+- [ ] Ich verstehe, wie GitHub die Zusammenarbeit zwischen mehreren Personen unterstuetzt.
 - [ ] Ich kann Code-Kommentare und Feedback auf andere Pull Requests verstehen.
 - [ ] Ich weiss, wofuer Issues und Diskussionen auf GitHub gut sind.
 
@@ -34,5 +33,6 @@ Nutze die Checklisten als Selbstcheck fuer das GitHub-Modul.
 
 ## Wenn du etwas nachholen willst
 
-- Fuer GitHub-Grundlagen: [GitHub: Grundlagen und Einstieg](./01-github-grundlagen.md)
-- Fuer Git-Verbindung: [modules/04-git/00-git-modulguide.md](../04-git/00-git-modulguide.md)
+- Fuer allgemeine Grundlagen: [GitHub: Grundlagen und Einstieg](./01-github-grundlagen.md)
+- Fuer Git-Verbindung: [Git Modulguide](../04-git/00-git-modulguide.md)
+- Fuer kursspezifische Praxis: [Kursmodul 01](../../kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md)

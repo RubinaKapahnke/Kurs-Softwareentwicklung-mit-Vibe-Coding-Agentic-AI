@@ -14,36 +14,36 @@ Nutze die Checklisten als Selbstcheck fuer das Terminal-Modul.
 
 ### Must have
 
-- [x] Ich kann das Terminal in VS Code oeffnen und nutzen.
-- [x] Ich weiss, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.
-- [x] Ich weiss, welche Shell auf meinem System standard ist (PowerShell auf Windows, zsh auf macOS).
-- [x] Ich kann mit `pwd` (oder `cd` auf Windows) meinen aktuellen Standort pruefen.
-- [x] Ich kann mit `ls` oder `dir` den Ordnerinhalt anzeigen.
-- [x] Ich kann mit `cd <ordnername>` in einen Ordner navigieren.
-- [x] Ich kann mit `cd ..` eine Ebene nach oben gehen.
-- [x] Ich kann neue Ordner mit `mkdir <ordnername>` erstellen.
-- [x] Ich kann neue Dateien mit `New-Item datei.md` (Windows) oder `touch datei.md` (macOS/Linux) anlegen.
-- [x] Ich kann Dateien mit `rm` (macOS/Linux) oder `del` (Windows) loeschen.
+- [ ] Ich kann das Terminal in VS Code oeffnen und nutzen.
+- [ ] Ich weiss, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.
+- [ ] Ich weiss, welche Shell auf meinem System standard ist (PowerShell auf Windows, zsh auf macOS).
+- [ ] Ich kann mit `pwd` (oder `cd` auf Windows) meinen aktuellen Standort pruefen.
+- [ ] Ich kann mit `ls` oder `dir` den Ordnerinhalt anzeigen.
+- [ ] Ich kann mit `cd <ordnername>` in einen Ordner navigieren.
+- [ ] Ich kann mit `cd ..` eine Ebene nach oben gehen.
+- [ ] Ich kann neue Ordner mit `mkdir <ordnername>` erstellen.
+- [ ] Ich kann neue Dateien mit `New-Item datei.md` (Windows) oder `touch datei.md` (macOS/Linux) anlegen.
+- [ ] Ich kann Dateien mit `rm` (macOS/Linux) oder `del` (Windows) loeschen.
 
 
 ### Should have
 
-- [x] Ich verstehe relative vs. absolute Pfade im Dateisystem.
-- [x] Ich kann Dateien mit `mv` verschieben und umbenennen.
-- [x] Ich kann Dateien mit `cp` kopieren.
-- [x] Ich nutze die Tab-Taste zur Auto-Vervollstaendigung.
-- [x] Ich nutze die Pfeiltasten, um fruehere Befehle schnell zu wiederholen.
-- [x] Ich kann mit `Strg + C` einen laufenden Prozess abbrechen.
-- [x] Ich kann mit `clear` oder `cls` das Terminal aufraeumen.
+- [ ] Ich verstehe relative vs. absolute Pfade im Dateisystem.
+- [ ] Ich kann Dateien mit `mv` verschieben und umbenennen.
+- [ ] Ich kann Dateien mit `cp` kopieren.
+- [ ] Ich nutze die Tab-Taste zur Auto-Vervollstaendigung.
+- [ ] Ich nutze die Pfeiltasten, um fruehere Befehle schnell zu wiederholen.
+- [ ] Ich kann mit `Strg + C` einen laufenden Prozess abbrechen.
+- [ ] Ich kann mit `clear` oder `cls` das Terminal aufraeumen.
 - [ ] Ich weiss, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.
 - [ ] Ich weiss, warum sich Terminal-Befehle zwischen Windows und macOS unterscheiden, Git-Befehle aber nicht.
 
 ### Nice to have
 
-- [x] Ich kombiniere mehrere Befehle fluessig hintereinander.
-- [x] Ich nutze Terminal-Shortcuts routiniert und spare mir damit Zeit.
-- [x] Ich kann Fehlermeldungen im Terminal lesen und verstehen, was schiefgelaufen ist.
-- [x] Ich arbeite ueberwiegend im Terminal statt mit der graphischen Oberflaeche.
+- [ ] Ich kombiniere mehrere Befehle fluessig hintereinander.
+- [ ] Ich nutze Terminal-Shortcuts routiniert und spare mir damit Zeit.
+- [ ] Ich kann Fehlermeldungen im Terminal lesen und verstehen, was schiefgelaufen ist.
+- [ ] Ich arbeite ueberwiegend im Terminal statt mit der graphischen Oberflaeche.
 
 ## Wenn du etwas nachholen willst
 

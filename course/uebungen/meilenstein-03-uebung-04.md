@@ -138,10 +138,10 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 
 ## Modulabdeckung (Check)
 
-- ✓ modules/06-ai-instructions/02-prd-grundlagen.md: PRD-Aufbau (5 Abschnitte), PRD als KI-Kontext
-- ✓ modules/06-ai-instructions/01-prompting-grundlagen.md: Die KI weiss nichts vom Projekt, Kontext-Baustein
-- ✓ modules/02-vscode/02-vscode-copilot.md: `#`-Kontext im Copilot Chat
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: Branch, Commit, Push, PR
+- ✓ course/course-library/06-ai-instructions/02-prd-grundlagen.md: PRD-Aufbau (5 Abschnitte), PRD als KI-Kontext
+- ✓ course/course-library/06-ai-instructions/01-prompting-grundlagen.md: Die KI weiss nichts vom Projekt, Kontext-Baustein
+- ✓ course/course-library/02-vscode/02-vscode-copilot.md: `#`-Kontext im Copilot Chat
+- ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: Branch, Commit, Push, PR
 
 ---
 
@@ -177,3 +177,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe erlebt, wie sich die Qualitaet der KI-Antwort verbessert, wenn ich mein PRD als Kontext einbinde.
 - [ ] Ich habe mindestens einen fehlenden oder duennen PRD-Abschnitt mit KI-Unterstuetzung verbessert.
 - [ ] Ich verstehe, warum ein neuer Chat ein echtes Vorher-Nachher sichtbar macht.
+

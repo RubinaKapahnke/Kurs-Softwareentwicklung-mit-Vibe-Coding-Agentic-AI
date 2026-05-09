@@ -134,8 +134,8 @@ Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code u
 [Eigene Antwort]
 
 **Meilenstein-Fortschritt:**
-- [x] Uebung 01 – Lernstand im Terminal verwalten
-- [x] Uebung 02 – Terminal-Alltag und Git selbststaendig
+- [ ] Uebung 01 – Lernstand im Terminal verwalten
+- [ ] Uebung 02 – Terminal-Alltag und Git selbststaendig
 - [ ] Uebung 03 – Routine aufbauen (in Bearbeitung)
 ```
 
@@ -198,10 +198,10 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 ---
 
 ## Modulabdeckung (Check)
-- ✓ modules/04-git/01-git-grundlagen.md: Branches erklaert, Grundablauf (status, add, commit, push, pull)
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout main`, `pull`, `checkout -b`, `stash`, `add`, `commit`, `push`
-- ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
-- ✓ modules/01-markdown/01-markdown-grundlagen.md: Strukturierter Lernjournal-Eintrag in Markdown
+- ✓ course/course-library/04-git/01-git-grundlagen.md: Branches erklaert, Grundablauf (status, add, commit, push, pull)
+- ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: `checkout main`, `pull`, `checkout -b`, `stash`, `add`, `commit`, `push`
+- ✓ course/course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
+- ✓ course/course-library/01-markdown/01-markdown-grundlagen.md: Strukturierter Lernjournal-Eintrag in Markdown
 
 ---
 
@@ -235,3 +235,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe zwischen Branches gewechselt und verstehe, warum man vorher `git status` prueft.
 - [ ] Ich habe ein Lernjournal-Eintrag-Muster angelegt, das ich spaeter einfach wiederholen kann.
 - [ ] Ich kann erklaeren, was "Routine aufbauen" bei Git konkret bedeutet: gleicher Ablauf, mehrmals.
+

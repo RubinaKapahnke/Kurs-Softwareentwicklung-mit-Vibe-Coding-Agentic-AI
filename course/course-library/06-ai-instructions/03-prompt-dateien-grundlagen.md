@@ -50,7 +50,7 @@ HTML-Kommentare (`<!-- ... -->`) werden von Copilot beim Ausfuehren ignoriert, s
 ```markdown
 <!-- 
   Aufruf im Chat: / → "Name der Datei" auswaehlen
-  Mehr dazu: modules/06-ai-instructions/03-prompt-dateien-grundlagen.md
+  Mehr dazu: course/course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
 -->
 ```
 

@@ -8,6 +8,7 @@ Dieses Modul erklaert die Grundlagen von Git und ordnet die wichtigsten Arbeitsa
 2. [Git Branch-Workflow: Von der Idee bis zum Aufraeumen](./02-git-branch-workflow.md)
 3. [Git-Befehlsuebersicht (Tabellen-Format)](./03-git-befehlsuebersicht.md)
 4. [Git-Befehle Spickzettel (Konversationelles Format)](./git-befehle-cheat-sheet.md)
+5. [Version Control und GitOps: Grundlagen](./04-version-control-und-gitops-grundlagen.md)
 
 ## Zwei Wege zum Nachschlagen
 
@@ -20,21 +21,21 @@ Nutze die Checklisten nicht als starre Reihenfolge, sondern als Selbstcheck fuer
 
 ### Must have
 
-- [x] Ich kann erklaeren, was Git von GitHub unterscheidet.
-- [x] Ich verstehe Arbeitsordner, Staging Area und Repository.
-- [x] Ich kann mit `git status` meinen aktuellen Stand lesen.
-- [x] Ich kann Aenderungen mit `git add` und `git commit -m "..."` sauber speichern.
-- [x] Ich kann ein bestehendes Repository mit `git clone` herunterladen.
-- [x] Ich kann einen eigenen Branch erstellen und darin arbeiten.
-- [x] Ich kann meine Aenderungen mit `git push` auf GitHub hochladen.
+- [ ] Ich kann erklaeren, was Git von GitHub unterscheidet.
+- [ ] Ich verstehe Arbeitsordner, Staging Area und Repository.
+- [ ] Ich kann mit `git status` meinen aktuellen Stand lesen.
+- [ ] Ich kann Aenderungen mit `git add` und `git commit -m "..."` sauber speichern.
+- [ ] Ich kann ein bestehendes Repository mit `git clone` herunterladen.
+- [ ] Ich kann einen eigenen Branch erstellen und darin arbeiten.
+- [ ] Ich kann meine Aenderungen mit `git push` auf GitHub hochladen.
 
 ### Should have
 
-- [x] Ich kann mit `git pull origin main` vor einer Aufgabe meinen Stand aktualisieren.
-- [x] Ich kann Branches wechseln, ohne meinen Arbeitsstand zu verlieren.
+- [ ] Ich kann mit `git pull origin main` vor einer Aufgabe meinen Stand aktualisieren.
+- [ ] Ich kann Branches wechseln, ohne meinen Arbeitsstand zu verlieren.
 - [ ] Ich kann `git log --oneline` nutzen, um die letzten Commits schneller zu verstehen.
 - [ ] Ich weiss, wofuer eine `.gitignore` da ist.
-- [x] Ich kann nach getaner Arbeit einen lokalen Branch wieder loeschen.
+- [ ] Ich kann nach getaner Arbeit einen lokalen Branch wieder loeschen.
 - [ ] Ich weiss, wie ich einen abgeschlossenen Branch vollstaendig aufraeume (lokal + remote + main sync).
 - [ ] Ich verstehe, was bei einem Merge-Konflikt grundsaetzlich passiert.
 
@@ -50,7 +51,8 @@ Nutze die Checklisten nicht als starre Reihenfolge, sondern als Selbstcheck fuer
 - Fuer das Verstaendnis hinter Git: [Git: Grundlagen und Einstieg](./01-git-grundlagen.md)
 - Fuer den vollstaendigen Branch-Ablauf inkl. Aufraeumen: [Git Branch-Workflow](./02-git-branch-workflow.md)
 - Fuer konkrete Kommandos: [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md)
-- Fuer Plattform-Themen wie Pull Requests: [modules/03-github/01-github-grundlagen.md](../03-github/01-github-grundlagen.md)
+- Fuer Plattform-Themen wie Pull Requests: [course/course-library/03-github/01-github-grundlagen.md](../03-github/01-github-grundlagen.md)
+- Fuer Version-Control- und GitOps-Einordnung: [Version Control und GitOps: Grundlagen](./04-version-control-und-gitops-grundlagen.md)
 
 ## Weiterlernen
 

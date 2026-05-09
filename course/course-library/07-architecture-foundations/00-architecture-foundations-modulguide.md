@@ -27,5 +27,5 @@ Nutze die Checklisten als Selbstcheck fuer das Architecture-Foundations-Modul.
 
 ## Wenn du etwas nachholen willst
 
-- Kontext fuer KI aufbauen: [modules/06-ai-instructions/01-prompting-grundlagen.md](../06-ai-instructions/01-prompting-grundlagen.md)
-- Eigenes PRD verstehen: [modules/06-ai-instructions/02-prd-grundlagen.md](../06-ai-instructions/02-prd-grundlagen.md)
+- Kontext fuer KI aufbauen: [course/course-library/06-ai-instructions/01-prompting-grundlagen.md](../06-ai-instructions/01-prompting-grundlagen.md)
+- Eigenes PRD verstehen: [course/course-library/06-ai-instructions/02-prd-grundlagen.md](../06-ai-instructions/02-prd-grundlagen.md)

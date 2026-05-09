@@ -148,8 +148,8 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 
 ## Modulabdeckung (Check)
 
-- ✓ `modules/06-ai-instructions/01-prompting-grundlagen.md`: Vier Bausteine, Zero-Shot, Kontext, iteratives Prompting
-- ✓ `modules/04-git/03-git-befehlsuebersicht.md`: Branch + Commit + Push
+- ✓ `course/course-library/06-ai-instructions/01-prompting-grundlagen.md`: Vier Bausteine, Zero-Shot, Kontext, iteratives Prompting
+- ✓ `course/course-library/04-git/03-git-befehlsuebersicht.md`: Branch + Commit + Push
 
 ---
 
@@ -185,3 +185,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe mindestens zwei Mal iterativ nachgefragt und dabei eine Verbesserung beobachtet.
 - [ ] Ich kann erklaeren, warum die KI ohne Kontext Annahmen erfindet.
 - [ ] Ich weiss, dass ich im gleichen Chat weiterarbeiten kann und das selbst schon Kontext ist.
+

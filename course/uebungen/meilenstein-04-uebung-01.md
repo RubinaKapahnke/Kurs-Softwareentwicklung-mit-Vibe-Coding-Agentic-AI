@@ -174,10 +174,10 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 
 ## Modulabdeckung (Check)
 
-- ✓ modules/07-architecture-foundations/01-architecture-foundations-grundlagen.md: Komponenten-Denken, Ordnerstruktur
-- ✓ modules/07-architecture-foundations/02-architecture-foundations-praxis.md: PRD → Bausteine, Ordnerstruktur ableiten, Strukturkontext formulieren, KI beauftragen
-- ✓ modules/06-ai-instructions/01-prompting-grundlagen.md: Kontext-Baustein, `#`-Syntax
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: Branch, Commit, Push, PR
+- ✓ course/course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md: Komponenten-Denken, Ordnerstruktur
+- ✓ course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md: PRD → Bausteine, Ordnerstruktur ableiten, Strukturkontext formulieren, KI beauftragen
+- ✓ course/course-library/06-ai-instructions/01-prompting-grundlagen.md: Kontext-Baustein, `#`-Syntax
+- ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: Branch, Commit, Push, PR
 
 ---
 
@@ -215,3 +215,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe einen Strukturkontext-Block formuliert, der Stack, Ordner, Komponente und Datenquelle beschreibt.
 - [ ] Ich habe die KI mit dem Strukturkontext beauftragt und das Ergebnis auf Korrektheit geprueft.
 - [ ] Ich habe erlebt, wie sich ein Prompt mit Kontext vom Prompt ohne Kontext unterscheidet.
+

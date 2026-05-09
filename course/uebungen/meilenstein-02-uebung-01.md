@@ -126,11 +126,11 @@ Quelle: [course-library/03-github/01-github-grundlagen.md](../course-library/03-
 ---
 
 ## Modulabdeckung (Check)
-- ✓ modules/04-git/01-git-grundlagen.md: Branch erstellen, pull, add/commit/push
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: Git-Befehle als Referenz
-- ✓ modules/05-terminal/01-terminal-grundlagen.md: Terminal-Grundlagen
-- ✓ modules/01-markdown/02-formatierung_md-files.md: Lernjournal formatieren
-- ✓ modules/03-github/01-github-grundlagen.md: Pull Request erstellen
+- ✓ course/course-library/04-git/01-git-grundlagen.md: Branch erstellen, pull, add/commit/push
+- ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: Git-Befehle als Referenz
+- ✓ course/course-library/05-terminal/01-terminal-grundlagen.md: Terminal-Grundlagen
+- ✓ course/course-library/01-markdown/02-formatierung_md-files.md: Lernjournal formatieren
+- ✓ course/course-library/03-github/01-github-grundlagen.md: Pull Request erstellen
 
 ---
 
@@ -163,3 +163,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
 - [ ] Mein Lernjournal enthaelt einen echten Eintrag von mir.
 - [ ] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
+

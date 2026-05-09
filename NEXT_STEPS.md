@@ -8,55 +8,105 @@ Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**.
 - Lernmaterial-Sammlung: [course/course-library](course/course-library)
 
 Wenn du neu einsteigst:
-1. Lese [README.md](README.md) für die **Arbeitsweise und Repo-Struktur**
-2. Lese [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) für **deinen Workflow**
-3. Folge hier dem aktuellen **Meilenstein**
+1. Starte mit **Meilenstein 1: Onboarding & Kursstart** in diesem Dokument.
+2. Lese [README.md](README.md) fuer die **Arbeitsweise und Repo-Struktur**.
+3. Lese [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) fuer **deinen Workflow** ab Meilenstein 2.
 
 ---
 
-## ✅ Meilenstein 1: Vibe Coding Basics (bereits gelernt)
-**Ziel:** Die Werkzeuge sicher beherrschen.
+## 🧭 Meilenstein 1: Onboarding & Kursstart
+**Ziel:** Den Kurseinstieg sauber abschliessen, die Arbeitsumgebung vorbereiten und den fachlichen Startpunkt in diesem Repo sicher finden.
 
 **Modul-Einstiege:**
-- [course/course-library/01-markdown/00-markdown-modulguide.md](course/course-library/01-markdown/00-markdown-modulguide.md)
-- [course/course-library/02-vscode/00-vscode-modulguide.md](course/course-library/02-vscode/00-vscode-modulguide.md)
 - [course/course-library/03-github/00-github-modulguide.md](course/course-library/03-github/00-github-modulguide.md)
 - [course/course-library/04-git/00-git-modulguide.md](course/course-library/04-git/00-git-modulguide.md)
+- [course/course-library/05-terminal/00-terminal-modulguide.md](course/course-library/05-terminal/00-terminal-modulguide.md)
+- [course/course-library/02-vscode/00-vscode-modulguide.md](course/course-library/02-vscode/00-vscode-modulguide.md)
 
 **Vertiefung:**
-- [course/course-library/01-markdown/01-markdown-grundlagen.md](course/course-library/01-markdown/01-markdown-grundlagen.md)
-- [course/course-library/01-markdown/02-formatierung_md-files.md](course/course-library/01-markdown/02-formatierung_md-files.md)
-- [course/course-library/02-vscode/01-vscode-grundlagen.md](course/course-library/02-vscode/01-vscode-grundlagen.md)
-- [course/course-library/02-vscode/02-vscode-copilot.md](course/course-library/02-vscode/02-vscode-copilot.md)
 - [course/course-library/03-github/01-github-grundlagen.md](course/course-library/03-github/01-github-grundlagen.md)
+- [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/01-github-im-kurs.md](course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/01-github-im-kurs.md)
+- [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/02-github-konto-profil-und-collaborator-aufgabe.md](course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/02-github-konto-profil-und-collaborator-aufgabe.md)
+- [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/03-github-features-repositories-und-readme-vorlage.md](course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/03-github-features-repositories-und-readme-vorlage.md)
+- [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/README-template-tn-repo.md](course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/README-template-tn-repo.md)
 - [course/course-library/04-git/01-git-grundlagen.md](course/course-library/04-git/01-git-grundlagen.md)
+- [course/course-library/05-terminal/01-terminal-grundlagen.md](course/course-library/05-terminal/01-terminal-grundlagen.md)
+- [course/course-library/02-vscode/01-vscode-grundlagen.md](course/course-library/02-vscode/01-vscode-grundlagen.md)
 - [course/course-library/04-git/03-git-befehlsuebersicht.md](course/course-library/04-git/03-git-befehlsuebersicht.md)
 
 **Lernziele:**
 
 ### Must have
-- [x] Du schreibst strukturierte und saubere Dokumentation fuer Menschen und KI.
-- [x] Du findest dich sicher in der Entwicklungsumgebung zurecht.
-- [x] Du verstehst Repository, Branch, Commit, Push und Merge-Konflikte.
+- [ ] Du hast den Zugang zum Kurs geklaert und kennst den Einstieg ueber Onboarding, Kursstart und `NEXT_STEPS.md`.
+- [ ] Du hast einen GitHub-Account, ein eigenes Uebungs-Repo und den Zugriff fuer die Trainerin eingerichtet.
+- [ ] Du hast Git und VS Code lokal eingerichtet und das Kurs-Repo in VS Code geoeffnet.
 
 ### Should have
-- [x] Du kannst Modulguide (mit inline Selbstcheck), Grundlagen und Befehlsuebersicht als unterschiedliche Dokumenttypen einordnen.
-- [x] Du erkennst, wie Markdown, VS Code, GitHub und Git im Repo zusammenhaengen.
+- [ ] Du erkennst den Unterschied zwischen eigenem Uebungs-Repo und gemeinsamem Kurs-Repo.
+- [ ] Du verstehst, warum Lernfortschritt zentral im Kurs-Repo bleibt und trotzdem in eigenen Repos gearbeitet wird.
+- [ ] Du findest in VS Code Terminal, Explorer und `NEXT_STEPS.md` ohne enge Anleitung.
 
 ### Nice to have
-- [x] Du kannst erste typische Arbeitsablaeufe im Repo schon ohne enge Anleitung nachvollziehen.
+- [ ] Du kannst den Onboarding-Ablauf einer anderen Person knapp erklaeren.
+
+**Aktueller Umsetzungsstand:**
+
+- [ ] **Übungen für Meilenstein 1 (Browser-Einstieg)**
+  > **Uebung:** [course/uebungen/meilenstein-01-uebung-01.md](course/uebungen/meilenstein-01-uebung-01.md)
+  > **Uebung:** [course/uebungen/meilenstein-01-uebung-02.md](course/uebungen/meilenstein-01-uebung-02.md)
+  - [ ] [Meilenstein 1, Übung 1: GitHub-Konto anlegen und Profil vervollständigen](course/uebungen/meilenstein-01-uebung-01.md)
+  - [ ] [Meilenstein 1, Übung 2: Erstes Repository erkunden und erstellen](course/uebungen/meilenstein-01-uebung-02.md)
+
+- [ ] **Kurszugang und Orientierung klaeren**
+  - [ ] Startseite und Kursstart aufrufen
+  - [ ] Eigenen Teilnahmestatus klaeren
+  - [ ] Persoenlichen Voucher-Code eingeben, falls er fuer deinen Zugang gebraucht wird
+
+- [ ] **GitHub-Zugang und eigenes Uebungs-Repo vorbereiten**
+  - [ ] GitHub-Account anlegen oder einloggen
+  - [ ] Eigenes Uebungs-Repo mit README erstellen
+  - [ ] Verstehen, dass Uebungen im eigenen Repo und nicht direkt im Kurs-Repo bearbeitet werden
+  - [ ] Die Trainerin als Collaborator einladen
+
+- [ ] **Erste GitHub-Schritte im Browser durchfuehren**
+  - [ ] `uebung-01.md` im eigenen Repo anlegen
+  - [ ] README im Browser bearbeiten
+  - [ ] Pruefen, dass mindestens zwei Commits sichtbar sind
+
+- [ ] **Lokale Arbeitsumgebung einrichten**
+  - [ ] Git installieren und `git --version` pruefen
+  - [ ] VS Code installieren
+  - [ ] Terminal in VS Code oeffnen
+
+- [ ] **Kurs-Repo lokal oeffnen und Startpunkt finden**
+  - [ ] Einladung zum Kurs-Repo annehmen
+  - [ ] HTTPS-Clone-URL kopieren
+  - [ ] Kurs-Repo mit `git clone` herunterladen
+  - [ ] Projektordner in VS Code oeffnen
+  - [ ] `NEXT_STEPS.md` im geklonten Repo finden und oeffnen
+
+- [ ] **Kurs-Handhabung verstehen**
+  - [ ] Verstehen, dass Uebungen zentral im Kurs-Repo beschrieben werden
+  - [ ] Verstehen, dass Loesungen standardmaessig im eigenen Repo entstehen
+  - [ ] Verstehen, dass `lernfortschritt_<name>.md` zentral im Kurs-Repo bleibt
+  - [ ] Verstehen, dass diese zentrale Lernfortschrittsdatei fuer Kursueberblick und Dashboard gebraucht wird
 
 ---
 
 ## 🛠️ Meilenstein 2: Setup & Umgebung
-**Ziel:** Das Repo sicher nutzen und den Lernstand ueberwiegend im Terminal verwalten.
+**Ziel:** Das Repo sicher lokal nutzen, dich in der Entwicklungsumgebung orientieren und den Lernstand ueberwiegend im Terminal verwalten.
 
 **Modul-Einstiege:**
+- [course/course-library/01-markdown/00-markdown-modulguide.md](course/course-library/01-markdown/00-markdown-modulguide.md)
+- [course/course-library/02-vscode/00-vscode-modulguide.md](course/course-library/02-vscode/00-vscode-modulguide.md)
 - [course/course-library/05-terminal/00-terminal-modulguide.md](course/course-library/05-terminal/00-terminal-modulguide.md)
 - [course/course-library/04-git/00-git-modulguide.md](course/course-library/04-git/00-git-modulguide.md)
 - [course/course-library/03-github/00-github-modulguide.md](course/course-library/03-github/00-github-modulguide.md)
 
 **Vertiefung:**
+- [course/course-library/01-markdown/01-markdown-grundlagen.md](course/course-library/01-markdown/01-markdown-grundlagen.md)
+- [course/course-library/01-markdown/02-formatierung_md-files.md](course/course-library/01-markdown/02-formatierung_md-files.md)
+- [course/course-library/02-vscode/01-vscode-grundlagen.md](course/course-library/02-vscode/01-vscode-grundlagen.md)
 - [course/course-library/05-terminal/01-terminal-grundlagen.md](course/course-library/05-terminal/01-terminal-grundlagen.md)
 - [course/course-library/05-terminal/03-terminal-befehlsuebersicht.md](course/course-library/05-terminal/03-terminal-befehlsuebersicht.md)
 - [course/course-library/04-git/01-git-grundlagen.md](course/course-library/04-git/01-git-grundlagen.md)
@@ -66,14 +116,17 @@ Wenn du neu einsteigst:
 **Lernziele:**
 
 ### Must have
-- [x] Repository lokal einrichten.
-- [x] Persoenlichen Arbeitsbereich anlegen.
-- [x] Einen erstellten Branch per PR auf `main` bringen.
+- [ ] Repository lokal einrichten.
+- [ ] Persoenlichen Arbeitsbereich anlegen.
+- [ ] Einen erstellten Branch per PR auf `main` bringen.
 - [ ] Eigenen Lernstand verwalten und dabei ueberwiegend im Terminal arbeiten.
+- [ ] Du findest dich sicher in der Entwicklungsumgebung zurecht.
 
 ### Should have
 - [ ] Sichere Alltagsaktionen im Terminal ausfuehren.
 - [ ] Git-Grundbefehle im Alltag ohne Copy-Paste zusammensetzen.
+- [ ] Du kannst Modulguide, Grundlagen und Befehlsuebersicht als unterschiedliche Dokumenttypen einordnen.
+- [ ] Du erkennst, wie Markdown, VS Code, GitHub, Git und Terminal im Repo zusammenhaengen.
 - [ ] Quellen aus Modulguide und Vertiefung passend zur Aufgabe auswaehlen.
 
 ### Nice to have
@@ -82,28 +135,28 @@ Wenn du neu einsteigst:
 
 **Aktueller Umsetzungsstand:**
 
-- [x] **Repository lokal einrichten**
-  - [x] Terminal in VS Code finden und oeffnen
-  - [x] Grundlagen der Terminal-Nutzung lernen
-  - [x] Pruefen, ob Git installiert ist (`git --version`)
-  - [x] Ggf. Git installieren und lokales Namensschild (E-Mail/Name) anlegen
-  - [x] HTTPS-URL des Repositories auf GitHub kopieren
-  - [x] Projekt mit `git clone` herunterladen
-  - [x] Projektordner in VS Code oeffnen
+- [ ] **Repository lokal einrichten**
+  - [ ] Terminal in VS Code finden und oeffnen
+  - [ ] Grundlagen der Terminal-Nutzung lernen
+  - [ ] Pruefen, ob Git installiert ist (`git --version`)
+  - [ ] Ggf. Git installieren und lokales Namensschild (E-Mail/Name) anlegen
+  - [ ] HTTPS-URL des Repositories auf GitHub kopieren
+  - [ ] Projekt mit `git clone` herunterladen
+  - [ ] Projektordner in VS Code oeffnen
 
-- [x] **Persoenlichen Arbeitsbereich anlegen**
-  - [x] Eigenen Arbeits-Branch erstellen
-  - [x] In den bestehenden Ordner navigieren
-  - [x] Einen eigenen Ordner erstellen
-  - [x] `prd_vorname.md` anlegen
+- [ ] **Persoenlichen Arbeitsbereich anlegen**
+  - [ ] Eigenen Arbeits-Branch erstellen
+  - [ ] In den bestehenden Ordner navigieren
+  - [ ] Einen eigenen Ordner erstellen
+  - [ ] `prd_vorname.md` anlegen
 
-- [x] **Erstellten Branch auf main mergen**
-  - [x] Aenderungen committen und pushen
-  - [x] PR von Branch auf `main` erstellen
-  - [x] PR-Beschreibung ausfuellen
-  - [x] (Optional) Code-Review abwarten
-  - [x] PR mergen
-  - [x] (Optional) Lokalen Branch loeschen und auf `main` wechseln
+- [ ] **Erstellten Branch auf main mergen**
+  - [ ] Aenderungen committen und pushen
+  - [ ] PR von Branch auf `main` erstellen
+  - [ ] PR-Beschreibung ausfuellen
+  - [ ] (Optional) Code-Review abwarten
+  - [ ] PR mergen
+  - [ ] (Optional) Lokalen Branch loeschen und auf `main` wechseln
 
 - [ ] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
   > **Uebung:** [course/uebungen/meilenstein-02-uebung-01.md](course/uebungen/meilenstein-02-uebung-01.md)
@@ -112,9 +165,9 @@ Wenn du neu einsteigst:
   > **Durchfuehrung der ersten Uebung:**
   > 1. Uebungsdatei in [course/uebungen](course/uebungen) lesen.
   > 2. Aufgaben im Terminal ausfuehren und Platzhalter ersetzen.
-  > 3. Eigene Antwortdatei im persoenlichen Ordner anlegen.
-  > 4. Lernfortschrittsdatei aktualisieren.
-  > 5. Committen, pushen, PR erstellen.
+  > 3. Eigene Loesung im eigenen Repo anlegen.
+  > 4. Lernfortschrittsdatei im Kurs-Repo aktualisieren.
+  > 5. Committen, pushen, PR erstellen und den Stand sauber dokumentieren.
 
   - [ ] `git pull origin main` ausfuehren
   - [ ] Einen neuen Branch erstellen (`git checkout -b <branch-name>`)

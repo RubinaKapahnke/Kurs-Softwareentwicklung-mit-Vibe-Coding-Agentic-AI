@@ -167,12 +167,12 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 ---
 
 ## Modulabdeckung (Check)
-- ✓ modules/06-ai-instructions/01-prompting-grundlagen.md: Grundbausteine eines Prompts, iteratives Prompting
-- ✓ modules/06-ai-instructions/02-prd-grundlagen.md: Was ist ein PRD, Struktur, PRD als KI-Kontext
-- ✓ modules/06-ai-instructions/03-prompt-dateien-grundlagen.md: Prompt-Datei lesen und Verhalten der KI verstehen
-- ✓ modules/01-markdown/01-markdown-grundlagen.md: Strukturiertes Markdown schreiben
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: Branch erstellen, Commit und Push
-- ✓ modules/03-github/01-github-grundlagen.md: Pull Request erstellen
+- ✓ course/course-library/06-ai-instructions/01-prompting-grundlagen.md: Grundbausteine eines Prompts, iteratives Prompting
+- ✓ course/course-library/06-ai-instructions/02-prd-grundlagen.md: Was ist ein PRD, Struktur, PRD als KI-Kontext
+- ✓ course/course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md: Prompt-Datei lesen und Verhalten der KI verstehen
+- ✓ course/course-library/01-markdown/01-markdown-grundlagen.md: Strukturiertes Markdown schreiben
+- ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: Branch erstellen, Commit und Push
+- ✓ course/course-library/03-github/01-github-grundlagen.md: Pull Request erstellen
 
 ---
 
@@ -207,3 +207,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe mindestens eine Rueckmeldung an die KI gegeben und den Output dadurch verbessert.
 - [ ] Mein PRD enthaelt nur Inhalte, die wirklich mein Projekt beschreiben – nichts Erfundenes.
 - [ ] Ich weiss, was eine Prompt-Datei ist und wie ich sie im Chat aufrufe.
+

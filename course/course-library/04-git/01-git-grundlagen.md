@@ -61,3 +61,4 @@ Eher vorsichtig solltest du mit Befehlen umgehen, die Historie ueberschreiben. W
 - Starte hier in den Grundlagen, wenn du das Denken hinter Git verstehen willst.
 - Nutze danach die [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md), wenn du einen konkreten Befehl brauchst.
 - Verwende den [Selbstcheck im Git-Modulguide](./00-git-modulguide.md), um deinen Stand einzuordnen.
+- Lies [Version Control und GitOps: Grundlagen](./04-version-control-und-gitops-grundlagen.md), wenn du die naechste Ebene zwischen Entwicklungs- und Betriebsworkflow verstehen willst.

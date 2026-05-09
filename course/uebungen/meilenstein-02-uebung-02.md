@@ -205,12 +205,12 @@ Quelle: [course-library/03-github/01-github-grundlagen.md](../course-library/03-
 ---
 
 ## Modulabdeckung (Check)
-- ✓ modules/05-terminal/01-terminal-grundlagen.md: Was ist ein Terminal, Grundkonzepte
-- ✓ modules/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
-- ✓ modules/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
-- ✓ modules/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
-- ✓ modules/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
-- ✓ modules/04-git/00-git-modulguide.md + modules/05-terminal/00-terminal-modulguide.md + modules/03-github/00-github-modulguide.md: Modul-Navigation ueben
+- ✓ course/course-library/05-terminal/01-terminal-grundlagen.md: Was ist ein Terminal, Grundkonzepte
+- ✓ course/course-library/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
+- ✓ course/course-library/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
+- ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
+- ✓ course/course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
+- ✓ course/course-library/04-git/00-git-modulguide.md + course/course-library/05-terminal/00-terminal-modulguide.md + course/course-library/03-github/00-github-modulguide.md: Modul-Navigation ueben
 
 ---
 
@@ -246,3 +246,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
 - [ ] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
 - [ ] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
+

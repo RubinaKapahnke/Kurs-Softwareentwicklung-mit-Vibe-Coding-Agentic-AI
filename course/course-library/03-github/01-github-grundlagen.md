@@ -1,41 +1,61 @@
 # GitHub: Grundlagen und Einstieg
 
+Dieser Artikel erklaert GitHub allgemein und ohne konkreten Projektkontext.
+
 ## Was ist GitHub?
-GitHub ist eine Plattform zur Versionsverwaltung und Zusammenarbeit an Softwareprojekten. Sie basiert auf dem Versionskontrollsystem Git und ermöglicht es, Code gemeinsam zu entwickeln, zu verwalten und zu veröffentlichen.
 
-## Wofür wird GitHub genutzt?
-- **Quellcode-Verwaltung:** Änderungen am Code werden nachvollziehbar gespeichert.
-- **Zusammenarbeit:** Teams können gleichzeitig an Projekten arbeiten, Feedback geben und Aufgaben verteilen.
-- **Open Source:** Viele Projekte sind öffentlich und laden zur Mitarbeit ein.
-- **Dokumentation:** Readme-Dateien, Wikis und Issues helfen beim Wissensaustausch.
+GitHub ist eine webbasierte Plattform fuer Versionsverwaltung und Zusammenarbeit mit Git-Repositories.
 
-## Die wichtigsten Features im Überblick
-- **Repositories:** Speicherorte für Projekte und deren Historie
-- **Branches:** Parallele Entwicklungszweige für neue Features oder Bugfixes
-- **Pull Requests:** Vorschläge für Änderungen, die diskutiert und zusammengeführt werden können
-- **Issues:** Aufgaben, Fehler und Ideen verwalten
-- **Actions:** Automatisierte Workflows (z. B. Tests, Deployments)
+## Git und GitHub: der Unterschied
 
-## Pull Request in 5 Schritten erstellen
-<!-- HINWEIS: Das Flag [-u] (oder --set-upstream) ist beim ersten Push eines neuen Branches zwingend erforderlich, um die lokale Kopie mit dem Repository auf GitHub zu verknüpfen. Nur so weiß Git bei zukünftigen Befehlen, welcher lokale Branch zu welchem Remote-Branch gehört. -->
-1. Stelle sicher, dass dein Branch auf GitHub liegt (`git push origin <branch-name>`). 
-2. Oeffne das Repository auf GitHub.
-3. Klicke auf "Compare & pull request" oder auf "New pull request".
-4. Waehle als Quelle deinen Branch und als Ziel `main`.
-5. Schreibe eine kurze PR-Beschreibung (Was wurde gemacht? Warum?) und erstelle den PR.
+| Aspekt | Git | GitHub |
+|---|---|---|
+| Typ | Versionskontrollsystem | Plattform fuer Hosting und Zusammenarbeit |
+| Laufort | lokal auf Rechnern/Servern | online im Browser |
+| Hauptfunktion | Historie und Branches verwalten | Repositories teilen, reviewen, koordinieren |
 
-### PR-Checkliste
-- Ist klar beschrieben, was geaendert wurde?
-- Sind relevante Dateien und Schritte genannt?
-- Ist der Branch korrekt und auf dem aktuellen Stand?
+## Zentrale Begriffe
 
-## Warum ist GitHub ideal für Vibe Coding?
-- **Kollaboration:** Einfaches gemeinsames Arbeiten und Feedback
-- **Transparenz:** Jede Änderung ist nachvollziehbar
-- **Automatisierung:** KI- und Workflow-Tools lassen sich leicht integrieren
-- **Dokumentation:** Alles an einem Ort – Code, Aufgaben und Wissen
+### Repository
 
----
+Ein Repository enthaelt Dateien, Historie, Branches und Metadaten eines Projekts.
 
-**Tipp:**
-Mit dem Befehl `git clone <URL>` kannst du ein Repository auf deinen Rechner holen und lokal bearbeiten.
+### Commit
+
+Ein Commit ist ein gespeicherter Aenderungsstand mit Nachricht, Autor und Zeitstempel.
+
+### Branch
+
+Ein Branch ist ein separater Entwicklungszweig.
+
+### Pull Request
+
+Ein Pull Request ist ein Vorschlag, Aenderungen aus einem Branch in einen Zielbranch zu uebernehmen.
+
+### Issue
+
+Ein Issue dient zur Erfassung von Aufgaben, Fehlern oder Ideen.
+
+## Typischer Workflow
+
+1. Aenderung in einem Branch erstellen
+2. Commits anlegen
+3. Branch auf Remote pushen
+4. Pull Request erstellen
+5. Review und Merge
+
+## Sichtbarkeit von Repositories
+
+| Typ | Bedeutung |
+|---|---|
+| Public | Jeder kann Inhalte lesen |
+| Private | Zugriff nur fuer berechtigte Personen |
+
+## README als Einstiegspunkt
+
+Die Datei README.md erklaert Zweck, Nutzung und Struktur eines Repositories. Sie ist haeufig die erste Datei, die Besuchende lesen.
+
+## Weiterfuehrung
+
+- Allgemeines zu Git: [../04-git/01-git-grundlagen.md](../04-git/01-git-grundlagen.md)
+- Kursspezifische Anwendung: [../../kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md](../../kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md)

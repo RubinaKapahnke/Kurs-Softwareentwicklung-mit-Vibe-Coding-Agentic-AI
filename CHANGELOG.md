@@ -62,10 +62,16 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ## 04.05.2026 (Session 7)
 
-### Onboarding-Website: Planung, Agents, Brand-Setup
+## 09.05.2026 (Session 9a)
 
-**Neue Agents:**
-- `.github/agents/course-dev-onboarding-web-architect.agent.md`: Plant und baut die Onboarding-Website (Angular/M3/TypeScript) fuer absolute Einsteiger. Kombiniert Curriculum-, PO-, Readiness- und Developer-Perspektive. Delegiert bei Bedarf an Subagents.
+### Kurs-, Modul- und Uebungs-Updates
+
+- Modul- und Kursstruktur auf `00-modulziele.md` vereinheitlicht (inkl. Umstellung in `course/kursmodule/` und Folgepfaden).
+- GitHub-Inhalte fuer Kursmodul 01 ausgebaut und sauber zwischen `course/kursmodule/` (kursbezogen) und `course/course-library/` (allgemein) getrennt.
+- Neue Inhalte zu Version Control / GitOps ergaenzt (allgemein + kursspezifische Einordnung).
+- Neue Inhalte zu VS-Code-Speicherkonflikten (`Compare`/`Overwrite`, `Revert Block`, Fallback bei wiederholtem Save-Fehler) in Library und Kursmodul ergaenzt.
+- `NEXT_STEPS.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
+- Uebungsbereich erweitert/angepasst (inkl. Meilenstein-01-Uebungen und Standardkonformitaet ohne vorausabgehakte Checklisten).
 - `.github/agents/course-dev-onboarding-ux-text.agent.md`: Prueft Texte in `apps/onboarding/` auf Anfaengertauglichkeit nach 6 Kriterien (Satzlaenge, Fachbegriff-Erklaerung, beobachtbares Ergebnis, kein Vorwissen, Fehlerfall, aktive Sprache).
 
 **Neuer Prompt:**

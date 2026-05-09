@@ -6,6 +6,7 @@ Dieses Modul erklaert die Rolle von VS Code im Kurs und gibt dir einen kompakten
 
 1. [VS Code: Grundlagen und Einstieg](./01-vscode-grundlagen.md)
 2. [GitHub Copilot Chat in VS Code](./02-vscode-copilot.md)
+3. [VS Code: Speicherkonflikt bei geaenderter Datei (Compare/Overwrite)](./03-vscode-speicherkonflikt-compare-overwrite.md)
 
 ## Selbstcheck
 
@@ -27,6 +28,7 @@ Nutze die Checklisten als Selbstcheck fuer das VS Code-Modul.
 - [ ] Ich kann Copilot Chat oeffnen und eine Frage stellen.
 - [ ] Ich kann mit `#` eine Datei als Kontext zu einem Prompt hinzufuegen.
 - [ ] Ich kann mit `/` Prompt-Dateien aufrufen.
+- [ ] Ich weiss, wie ich bei der Meldung "content of the file is newer" mit Compare/Overwrite sicher entscheide.
 
 ### Nice to have
 
@@ -39,3 +41,4 @@ Nutze die Checklisten als Selbstcheck fuer das VS Code-Modul.
 
 - Fuer Grundlagen: [VS Code: Grundlagen und Einstieg](./01-vscode-grundlagen.md)
 - Fuer Copilot Chat: [GitHub Copilot Chat in VS Code](./02-vscode-copilot.md)
+- Fuer Speicherkonflikte beim Speichern: [VS Code: Speicherkonflikt bei geaenderter Datei (Compare/Overwrite)](./03-vscode-speicherkonflikt-compare-overwrite.md)
