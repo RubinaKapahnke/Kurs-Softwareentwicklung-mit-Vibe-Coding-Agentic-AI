@@ -265,12 +265,15 @@ Wenn du neu einsteigst:
 **Modul-Einstiege:**
 - [course/course-library/07-architecture-foundations/00-architecture-foundations-modulguide.md](course/course-library/07-architecture-foundations/00-architecture-foundations-modulguide.md)
 - [course/course-library/06-ai-instructions/00-ai-instructions-modulguide.md](course/course-library/06-ai-instructions/00-ai-instructions-modulguide.md)
+- [course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md](course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md)
 
 **Vertiefung:**
 - [course/course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md](course/course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
 - [course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md)
 - [course/course-library/06-ai-instructions/02-prd-grundlagen.md](course/course-library/06-ai-instructions/02-prd-grundlagen.md)
 - [course/course-library/06-ai-instructions/01-prompting-grundlagen.md](course/course-library/06-ai-instructions/01-prompting-grundlagen.md)
+- [course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md](course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md)
+- [course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md)
 
 **Lernziele:**
 
@@ -307,3 +310,10 @@ Wenn du neu einsteigst:
   - [ ] Komponente benennen und Verantwortlichkeit definieren
   - [ ] KI mit Strukturkontext + PRD beauftragen, die Komponente zu erstellen
   - [ ] Ergebnis pruefen: Liegt die Datei am richtigen Ort? Tut sie das Richtige?
+
+- [ ] **Programmierlogik im KI-Code verstehen**
+  > **Uebung:** [course/uebungen/meilenstein-04-uebung-02.md](course/uebungen/meilenstein-04-uebung-02.md)
+  > **Quellen zur Uebung:** [course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md](course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md), [course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md](course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md), [course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md), [course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md), [course/course-library/06-ai-instructions/01-prompting-grundlagen.md](course/course-library/06-ai-instructions/01-prompting-grundlagen.md), [course/course-library/04-git/03-git-befehlsuebersicht.md](course/course-library/04-git/03-git-befehlsuebersicht.md)
+  - [ ] Variablen, Funktionen und Bedingungen in der ersten eigenen Komponente markieren
+  - [ ] Datenfluss in 3-5 Stichpunkten dokumentieren (Input, Verarbeitung, Ausgabe)
+  - [ ] Eine kleine Logikverbesserung mit geringem Risiko umsetzen (z. B. Umbenennung oder fruehe Rueckgabe)

@@ -12,6 +12,8 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - StepPage refaktoriert: wiederverwendbare Komponenten fuer Choice Cards, Callouts, Voucher-Gate und Aufgabenlisten eingefuehrt.
 - Kursmaterial zu Code-Monstern und Refactoring ergaenzt, inklusive inertem Beispiel fuer den Unterricht.
 - Kontext-, Agent- und Prompt-Regeln gegen Code-Monster, Style-Wucher und unnoetige Komponenten-Vermehrung geschaerft.
+- Neues Lernmodul `08-programmierlogik` aufgebaut und in Meilenstein 4 verankert.
+- Folgeuebung `meilenstein-04-uebung-02.md` fuer KI-Code-Verstehen + kleine Logikverbesserung erstellt und in Kursnavigation integriert.
 
 ### 08.05.2026
 - Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/kursmodule/` mit 14 Kursmodulen.
@@ -47,7 +49,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Kursmodule-Ebene neu:**
 - `KURSBESCHREIBUNG.md`: Gesamtkursbeschreibung mit Pfaden, Kurslogik und Meilensteinbedeutung konsolidiert
-- `course/kursmodule/` mit 14 eigenstaendigen Kursmodulen (`00-kursmodul.md` je Modul) angelegt
+- `course/kursmodule/` mit 14 eigenstaendigen Kursmodulen (`00-modulziele.md` je Modul) angelegt
 - `course/kursmodule/README_KURSMODULE.md`: Uebersicht aller Kursbausteine
 
 **Agents/Instructions erweitert:**
@@ -99,8 +101,6 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-## 04.05.2026 (Session 7)
-
 ## 09.05.2026 (Session 9a)
 
 ### Kurs-, Modul- und Uebungs-Updates
@@ -140,6 +140,29 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `dashboard-developer`: Trigger auf Implementierung/Code fokussiert
 - `repo-consistency-checker`: `"repo audit"` entfernt (Konflikt mit `vibe-coding-readiness`), jetzt spezifisch auf Links/Struktur
 - `exercise-creator`: Von 6 auf 11 Trigger erweitert, deutsche Kontexte ergaenzt
+
+## 09.05.2026 (Session 10b)
+
+### Programmierlogik-Modul und Meilenstein-4-Folgeuebung
+
+**Neues Lernmodul in der Course Library:**
+- `course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md`: Modul-Einstieg mit Must/Should/Nice-Selbstcheck.
+- `course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md`: Variablen, Funktionen, Bedingungen, Datenfluss und typische Logikfehler in KI-Code.
+- `course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md`: Schrittweise Methode zum Lesen, Rueckfragen und risikoarmen Verbessern von KI-Code.
+
+**Meilenstein-4-Integration:**
+- `NEXT_STEPS.md`: Modul 08 als Einstieg/Vertiefung in Meilenstein 4 aufgenommen und Umsetzungsblock "Programmierlogik im KI-Code verstehen" ergaenzt.
+- `course/uebungen/meilenstein-04-uebung-02.md`: Neue Folgeuebung "KI-Code lesen und gezielt verbessern" erstellt.
+- `course/uebungen/README_UEBUNGEN.md`: Uebersicht um Meilenstein-04-Uebung-02 erweitert.
+
+**Dokumentation und Agent-Workflow:**
+- `README.md`: Projektstruktur um `course/course-library/08-programmierlogik/` und den neuen Prompt-Eintrag in `.github/prompts/` erweitert.
+- `.github/prompts/course-dev-meilenstein-04-folgeuebung.prompt.md`: Prompt-Handoff fuer den Exercise-Creator-Agent angelegt.
+
+**Validierung:**
+- `tools/test-uebung.ps1 -File "course/uebungen/meilenstein-04-uebung-02.md"`: 21 OK, 0 Fehler.
+- `tools/test-alle-uebungen.ps1`: alle 11 Uebungen bestanden, Coverage-Check konsistent.
+- `tools/test-links.ps1`: alle geprueften Links OK.
 
 ## 04.05.2026 (Session 4)
 

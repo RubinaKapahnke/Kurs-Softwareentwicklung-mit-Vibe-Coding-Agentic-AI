@@ -10,6 +10,8 @@ Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](..
 
 | Datei | Meilenstein | Titel | Lernziel-Stufe |
 | :--- | :--- | :--- | :--- |
+| [meilenstein-01-uebung-01.md](meilenstein-01-uebung-01.md) | 1 – Onboarding & Kursstart | GitHub-Konto anlegen und Profil vervollständigen | Must have |
+| [meilenstein-01-uebung-02.md](meilenstein-01-uebung-02.md) | 1 – Onboarding & Kursstart | Erstes Repository erkunden und erstellen | Must have |
 | [meilenstein-02-uebung-01.md](meilenstein-02-uebung-01.md) | 2 – Setup & Umgebung | Eigenen Lernstand im Terminal verwalten | Must have |
 | [meilenstein-02-uebung-02.md](meilenstein-02-uebung-02.md) | 2 – Setup & Umgebung | Terminal-Alltag und Git-Befehle selbststaendig anwenden | Should have |
 | [meilenstein-02-uebung-03.md](meilenstein-02-uebung-03.md) | 2 – Setup & Umgebung | Routine aufbauen und Lernstand dokumentieren | Nice to have |
@@ -18,6 +20,7 @@ Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](..
 | [meilenstein-03-uebung-03.md](meilenstein-03-uebung-03.md) | 3 – Prompting & Context-Engineering | Prompt-Dateien erstellen und nutzen | Should have |
 | [meilenstein-03-uebung-04.md](meilenstein-03-uebung-04.md) | 3 – Prompting & Context-Engineering | Kontext-Qualität im Repo verbessern | Should have |
 | [meilenstein-04-uebung-01.md](meilenstein-04-uebung-01.md) | 4 – Projekt starten | Von der PRD zur ersten Komponente | Must have |
+| [meilenstein-04-uebung-02.md](meilenstein-04-uebung-02.md) | 4 – Projekt starten | KI-Code lesen und gezielt verbessern | Should have |
 
 ## Benennung
 - meilenstein-XX-uebung-YY.md

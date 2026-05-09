@@ -246,10 +246,14 @@ course/course-library/04-git/
 │   │   │   ├── 01-prompting-grundlagen.md
 │   │   │   ├── 02-prd-grundlagen.md
 │   │   │   └── 03-prompt-dateien-grundlagen.md
-│   │   └── 07-architecture-foundations/
+│   │   ├── 07-architecture-foundations/
 │   │       ├── 00-architecture-foundations-modulguide.md
 │   │       ├── 01-architecture-foundations-grundlagen.md
 │   │       └── 02-architecture-foundations-praxis.md
+│   │   └── 08-programmierlogik/
+│   │       ├── 00-programmierlogik-modulguide.md
+│   │       ├── 01-programmierlogik-grundlagen.md
+│   │       └── 02-programmierlogik-code-lesen.md
 │   └── uebungen/
 │       ├── meilenstein-01-uebung-01.md
 │       ├── meilenstein-01-uebung-02.md
@@ -274,6 +278,7 @@ course/course-library/04-git/
 │   │   ├── onboarding.instructions.md
 │   │   └── uebungen-standard.instructions.md
 │   ├── prompts/
+│   │   ├── course-dev-meilenstein-04-folgeuebung.prompt.md
 │   │   ├── course-dev-onboarding-mvp-scope-freeze.prompt.md
 │   │   ├── course-dev-fremdtexte-verarbeiten.prompt.md
 │   │   ├── learners-dashboard-feedback.prompt.md
