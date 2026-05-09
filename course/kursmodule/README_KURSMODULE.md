@@ -19,6 +19,7 @@ Falls ein Kursmodul später stärker ausgearbeitet wird, kann es zusätzliche Da
 - `01-praxisprojekt.md`
 - `02-rollen-und-einsatz.md`
 - `03-quellen-und-uebungen.md`
+- `beispiel-*.txt` - reine Anschauungsdateien ohne produktive Funktion
 
 ## Übersicht
 
@@ -30,7 +31,7 @@ Falls ein Kursmodul später stärker ausgearbeitet wird, kann es zusätzliche Da
 | [04-ai-literacy-modellverstaendnis](./04-ai-literacy-modellverstaendnis/00-modulziele.md) | AI Literacy, LLMs, RAG, Agenten, Fehlerquellen |
 | [05-grundlagen-programmierlogik](./05-grundlagen-programmierlogik/00-modulziele.md) | Programmierlogik, Kontrollstrukturen, Datenstrukturen |
 | [06-debugging-testing-harness-engineering](./06-debugging-testing-harness-engineering/00-modulziele.md) | Debugging, Testing, Harness Engineering |
-| [07-architektur-wartbare-produktstruktur](./07-architektur-wartbare-produktstruktur/00-modulziele.md) | Architektur, Komponenten, Datenflüsse, Wartbarkeit |
+| [07-architektur-wartbare-produktstruktur](./07-architektur-wartbare-produktstruktur/00-modulziele.md) | Architektur, Komponenten, Datenflüsse, Wartbarkeit, Code-Monster erkennen |
 | [08-ai-system-architecture-modellwahl-token-management](./08-ai-system-architecture-modellwahl-token-management/00-modulziele.md) | Modellwahl, Right Sizing, Token Management, Routing |
 | [09-agentic-software-engineering-autonome-agenten](./09-agentic-software-engineering-autonome-agenten/00-modulziele.md) | Agentic Software Engineering, autonome Agenten |
 | [10-daten-reporting-rag-grundlagen](./10-daten-reporting-rag-grundlagen/00-modulziele.md) | Daten, Reporting, RAG, SQLite, Parquet, Pandas, Streamlit |

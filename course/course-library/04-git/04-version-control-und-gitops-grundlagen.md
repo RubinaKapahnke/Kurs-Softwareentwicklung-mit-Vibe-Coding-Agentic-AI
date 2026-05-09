@@ -1,75 +1,98 @@
-# Version Control und GitOps: Grundlagen
+# Versionsverwaltung und GitOps: Einordnung
 
-Dieses Dokument ordnet zwei Konzepte ein:
+Dieses Dokument erklaert zwei Konzepte, die aufeinander aufbauen:
 
-1. **Version Control** als Grundlage fuer nachvollziehbare Softwareentwicklung
-2. **GitOps** als weiterfuehrender Betriebsansatz mit Git als Steuerzentrale
+1. **Versionsverwaltung** – wie Softwareteams sicher mit gemeinsamen Codebases arbeiten
+2. **GitOps** – wie dieselbe Git-Logik auf den laufenden Betrieb ausgeweitet wird
 
-## Was ist Version Control?
+---
 
-Version Control bedeutet, Aenderungen an Dateien dauerhaft nachvollziehbar zu speichern.
+## Das Problem, das Versionsverwaltung loest
 
-Wichtige Idee:
-- Nicht nur der aktuelle Stand ist wichtig, sondern auch der Weg dorthin.
+Stell dir vor, drei Personen arbeiten gleichzeitig an derselben Datei. Eine speichert
+ihre Version lokal, eine zweite schickt eine angepasste Kopie per E-Mail, eine dritte
+macht „schnell noch einen Fix" direkt auf dem Server. Zwei Stunden spaeter gibt es
+vier verschiedene Staende – und niemand weiss, welcher der richtige ist.
 
-Ein gutes Versionssystem speichert:
-- wer eine Aenderung gemacht hat
-- wann die Aenderung passiert ist
-- welche Dateien betroffen sind
-- warum die Aenderung gemacht wurde (Commit-Nachricht)
+Dieses Szenario passiert ueberall dort, wo kein gemeinsames Versionssystem genutzt
+wird. Bei Code ist es besonders kritisch, weil eine einzige fehlerhafte Zeile ganze
+Features kaputtmachen kann.
 
-## Warum das in Teams entscheidend ist
+Versionsverwaltung loest genau dieses Koordinationsproblem: Alle Aenderungen laufen
+ueber eine gemeinsame Zeitlinie. Wer was wann und warum geaendert hat, ist dauerhaft
+nachvollziehbar.
 
-Ohne Version Control entstehen schnell typische Probleme:
-- mehrere "final-final-neu" Dateikopien
-- unklare Verantwortlichkeit
-- schwer nachvollziehbare Fehler
-- Konflikte zwischen parallelen Aenderungen
+---
 
-Mit Version Control werden diese Risiken kleiner, weil Aenderungen sichtbar, pruefbar und rueckholbar bleiben.
+## Wie Git Aenderungen speichert
 
-## Drei Kernnutzen von Version Control
+Git merkt sich nicht einfach Dateizustaende – es speichert **Aenderungen als
+Schnappschuesse** (Commits). Jeder Commit enthaelt:
 
-1. **Historie**
-   - Der komplette Verlauf hilft bei Fehlersuche und Rueckblick.
-2. **Branching und Merging**
-   - Parallele Arbeit bleibt getrennt und kann spaeter zusammengefuehrt werden.
-3. **Traceability**
-   - Aenderungen sind mit Kontext verknuepft und spaeter besser erklaerbar.
+- den Differenztext (was genau hat sich veraendert)
+- den Autor und Zeitstempel
+- eine Nachricht, die erklaert, warum diese Aenderung gemacht wurde
+- eine eindeutige ID (Hash), die spaeter fuer Ruecksprunge genutzt werden kann
 
-## Was ist GitOps?
+Das Ergebnis ist eine lueckenlose Entwicklungsgeschichte. Wenn etwas auf einmal nicht
+mehr funktioniert, laesst sich der letzte funktionsfaehige Zustand wiederherstellen –
+ohne Datenverlust, ohne Raterei.
 
-GitOps nutzt Git nicht nur fuer Code, sondern auch fuer Betriebs- und Infrastrukturkonfiguration.
+---
 
-Grundidee:
-- Der gewuenschte Systemzustand steht in einem Repository.
-- Aenderungen laufen ueber Pull Requests.
-- Nach Freigabe wird der Live-Zustand automatisiert an den Repository-Zustand angepasst.
+## Paralleles Arbeiten mit Branches
 
-## GitOps in einfachen Bausteinen
+Ein Kernmerkmal von Git ist, dass Aenderungen auf **Branches** (Abzweigungen)
+entwickelt werden koennen, ohne den Hauptzweig zu beeinflussen.
 
-1. **Deklarative Konfiguration**
-   - Gewuenschter Zielzustand wird beschrieben, nicht nur einzelne Klick-Schritte.
-2. **Git als Single Source of Truth**
-   - Das Repository ist der verbindliche Soll-Zustand.
-3. **Automatisierte Synchronisierung**
-   - Pipeline/Operator gleichen Live-System und Repo-Stand ab.
+Typisches Muster:
+- `main` bleibt der stabile Stand, der tatsaechlich in Betrieb ist
+- Neue Funktionen entstehen auf eigenen Feature-Branches
+- Erst nach Pruefung und Freigabe kommt der neue Stand in `main` zurueck
 
-## Nutzen und Grenzen von GitOps
+Das bedeutet: Experimente koennen gefahrlos ausprobiert werden. Falls etwas
+schiefgeht, wird der Branch einfach verworfen – der Hauptzweig bleibt unberuehrt.
 
-Moegliche Vorteile:
-- hoehere Transparenz bei Infrastruktur-Aenderungen
-- reproduzierbare Zustaende
-- schnellere, kontrollierte Rollbacks
-- bessere Zusammenarbeit zwischen Entwicklung und Betrieb
+---
 
-Wichtige Voraussetzung:
-- saubere Git-Disziplin (PR-Workflow, klare Commit-Nachrichten, Review)
+## Von Git zu GitOps
+
+Klassische Versionsverwaltung bezieht sich auf Code. GitOps dehnt dieselbe Logik
+auf eine andere Frage aus: **Wer oder was entscheidet, wie eine laufende
+Software-Infrastruktur aussehen soll?**
+
+Die Antwort bei GitOps: Das Repository entscheidet.
+
+Der Unterschied in der Praxis:
+
+| Klassisch | GitOps |
+|---|---|
+| Jemand loggt sich auf dem Server ein und macht Aenderungen | Niemand loggt sich manuell ein |
+| Aenderungen sind schwer rueckverfolgbar | Alle Aenderungen laufen als Commits durch Git |
+| Verschiedene Umgebungen driften auseinander | Repo-Stand = Live-Stand (automatisch synchronisiert) |
+
+---
+
+## Git als Single Source of Truth
+
+Bei GitOps ist das Repository die einzige verbindliche Quelle fuer den
+Systemzustand. Konfiguration, Infrastruktur und Deployment-Einstellungen liegen als
+Dateien im Repo. Wer etwas aendern will, erstellt einen Pull Request – genau so wie
+bei Code.
+
+Das bringt zwei praktische Vorteile:
+- **Rueckverfolgbarkeit**: Jede Infrastruktur-Aenderung hat einen Autor, einen
+  Zeitstempel und eine Begruendung.
+- **Reproduzierbarkeit**: Der Zustand einer Umgebung laesst sich aus dem Repo
+  jederzeit neu aufbauen.
+
+---
 
 ## Einordnung im Kurs
 
-- In fruehen Meilensteinen liegt der Fokus auf klassischem Git-Workflow.
-- GitOps ist ein weiterfuehrendes Konzept fuer spaetere Betriebs-/Deployment-Themen.
+In den ersten Meilensteinen arbeiten wir mit klassischem Git – Commits, Branches,
+Pull Requests. GitOps wird spaeter relevant, wenn es um Deployment und
+Infrastruktur geht (Modul 13).
 
 Kursspezifische Einordnung:
 - [../../kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/04-version-control-und-gitops-im-kurs.md](../../kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/04-version-control-und-gitops-im-kurs.md)

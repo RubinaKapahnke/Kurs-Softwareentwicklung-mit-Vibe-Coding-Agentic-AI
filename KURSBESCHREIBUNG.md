@@ -117,7 +117,7 @@ Jedes Modul ist außerdem so gedacht, dass es potentiell als eigener Kursbaustei
 | 2. Produktbeschreibung & inkrementelle Planung | Ideen in Problem, Zielgruppe, Nutzen, Anforderungen, Entwicklungsstufe und nächste Schritte übersetzen | PRDs, User Stories, Akzeptanzkriterien, PoC-/Prototyp-/MVP-Scope und Roadmaps erstellen | Gründer\*innen, Product Owner, Business Analyst\*innen, Fachbereich, UX, Projektleitung, Innovation Teams, Berater\*innen, Dozent\*innen |
 | 3. Vibe Coding, Prompting & Context Engineering | KI über natürliche Sprache, klare Ziele und passenden Kontext steuern | Prompts, Kontextdateien und Projektbeschreibungen erstellen, mit denen KI und Menschen effizient am selben Produkt arbeiten | Alle Wissensarbeiter\*innen, Product Owner, Entwickler\*innen, UX, Marketing/Content, Fachbereich, Data Analysts, Support, Enablement |
 | 4. AI Literacy & Modellverständnis | LLMs, RAG, Agenten, Halluzinationen, Kontextfenster, Tokens und typische Fehlerquellen einordnen | KI-Ergebnisse kritisch bewerten, richtige Rückfragen stellen, Modelle passend auswählen und Erwartungen realistisch halten | Führungskräfte, Entscheider\*innen, Compliance, Legal, HR/Learning, Product, Fachbereich, Entwickler\*innen, Data Teams |
-| 5. Grundlagen Programmierlogik | Variablen, Funktionen, Bedingungen, Events, Schleifen, Datenstrukturen, Iteration, Rekursion und Abstraktion verstehen | Von KI erzeugten Code lesen, Logikfehler erkennen und kleine Funktionen oder UI-Logiken nachvollziehbar anpassen | Einsteiger\*innen, Product Owner mit technischem Anspruch, QA, UX, Data Analysts, Support Engineers, Entwickler\*innen |
+| 5. Grundlagen Programmierlogik | Variablen, Funktionen, Bedingungen, Schleifen, Datenstrukturen, Iteration, Rekursion und Abstraktion verstehen | Von KI erzeugten Code lesen, Logikfehler erkennen und kleine Funktionen oder UI-Logiken nachvollziehbar anpassen | Einsteiger\*innen, Product Owner mit technischem Anspruch, QA, UX, Data Analysts, Support Engineers, Entwickler\*innen |
 | 6. Debugging, Testing & Harness Engineering | Fehler systematisch eingrenzen, Tests verstehen und wiederholbare Prüfabläufe aufbauen | Tool-Ausgaben, Logs und Fehlermeldungen nutzen; Testfälle, Prüfprompts und Harnesses für Software- und AI-Ergebnisse erstellen | QA, Entwickler\*innen, Support, Operations, Product Owner, Data Teams, Compliance, technische Projektleitung |
 | 7. Architektur & wartbare Produktstruktur | Produkte in Komponenten, Datenflüsse, Verantwortlichkeiten, Schnittstellen und Kontextgrenzen zerlegen | Strukturierte Repos, verständliche Komponenten, klare Datenflüsse und technische Entscheidungsdokumente aufbauen | Architekt\*innen, Entwickler\*innen, Product Owner, UX, Data Engineers, Team Leads, technische Projektleitung, Consultants |
 | 8. AI System Architecture, Modellwahl & Token Management | Modelle, Kontext, Routing, Kosten, Tokens, Tools und menschliche Kontrollpunkte als System planen | Right Sizing anwenden, Modellrouting definieren, Tokenverbrauch begrenzen, Kosten kontrollieren und AI-Systeme nachvollziehbar betreiben | AI Product Owner, Solution Architects, Entwickler\*innen, Data/AI Teams, Operations, Controlling, Compliance, Führungskräfte |
@@ -134,7 +134,7 @@ Module beschreiben, **was gelernt wird**. Meilensteine beschreiben, **woran man 
 
 Jeder Meilenstein endet mit einem sichtbaren Artefakt: einer Datei, einem Commit, einem PR, einem getesteten Produktinkrement, einem Review, einem Deployment-Plan oder einer dokumentierten Entscheidung. So wird Lernfortschritt nicht nur behauptet, sondern nachvollziehbar.
 
-| Meilenstein | Nachweis im Projekt oder Repo | Woran der Fortschritt erkennbar ist |
+| Meilenstein | Nachweis im Projekt oder Repository | Woran der Fortschritt erkennbar ist |
 | :--- | :--- | :--- |
 | 1. Arbeitsfähigkeit hergestellt | Lokales Setup, persönlicher Arbeitsbereich, erster Commit oder PR | Teilnehmende können VS Code, Markdown, GitHub und Git nutzen, um dokumentierte Änderungen nachvollziehbar zu teilen. |
 | 2. Produktidee versioniert beschrieben | Erste Produktbeschreibung oder PRD im eigenen Repository | Problem, Zielgruppe, Nutzen, Entwicklungsstufe und nächste Schritte sind so beschrieben, dass Menschen und KI damit arbeiten können. |
@@ -143,7 +143,7 @@ Jeder Meilenstein endet mit einem sichtbaren Artefakt: einer Datei, einem Commit
 | 5. Fehleranalyse und Qualitätssicherung nachgewiesen | Debugging-Notiz, Testfall, Prüfprompt oder kleiner Harness | Ein Fehler, Risiko oder erwartetes Verhalten wurde systematisch geprüft statt nur geschätzt. |
 | 6. AI Literacy praktisch angewendet | Modell-/Tool-Entscheidung, Halluzinationscheck oder Quellenprüfung | KI-Ergebnisse wurden kritisch bewertet und nicht ungeprüft übernommen. |
 | 7. AI-Systemarchitektur bewusst geplant | Skizze oder Beschreibung zu Modellwahl, Kontext, Routing, Tokens, Kosten und Kontrollpunkten | Teilnehmende können begründen, welches Modell, welcher Kontext und welche Kontrollmechanismen für ihren Anwendungsfall passen. |
-| 8. Schwerpunktpfad gewählt | Entscheidung für Web/App, Datenprodukt oder Agentic-AI-Pfad | Der weitere Lern- und Projektfokus ist klar, ohne dass der gesamte Stack gleichermaßen beherrscht werden muss. |
+| 8. Schwerpunktpfad gewählt | Entscheidung für Webapp, App, Datenprodukt oder Agentic-AI-Pfad | Der weitere Lern- und Projektfokus ist klar, ohne dass der gesamte Stack gleichermaßen beherrscht werden muss. |
 | 9. Erstes nutzbares Produktinkrement gebaut | Kleine Web-App, Daten-App, RAG-Demo, Automatisierung oder Agentenworkflow | Das Projekt tut etwas Nutzbares und kann von anderen ausprobiert oder geprüft werden. |
 | 10. Team- und Governance-Fähigkeit gezeigt | Review, Pull Request, Datenschutz-/Lizenznotiz oder Entscheidungsprotokoll | Zusammenarbeit, Verantwortlichkeit und rechtliche Grenzen sind sichtbar dokumentiert. |
 | 11. Versionierung und Release-Logik angewendet | Versionsnummer, Release Notes oder Deployment-/Betriebsplan | Der Produktstand ist nachvollziehbar, Änderungen sind eingeordnet und nächste Releases können geplant werden. |
@@ -175,8 +175,8 @@ Diese Stufen helfen, KI-Unterstützung sinnvoll zu steuern: Die KI braucht ander
 ### Grundlagen der Programmierlogik
 
 - Werte, Variablen und Datenflüsse
-- Funktionen und Verantwortlichkeiten
-- Events und Zustandsänderungen
+- Funktionen
+- Zustandsänderungen
 - Bedingungen und Kontrollstrukturen
 - Schleifen, Iteration und Rekursion
 - Datenstrukturen und einfache Algorithmen
@@ -301,7 +301,7 @@ Die folgenden Skills werden im Kurs schrittweise aufgebaut. Nicht alle müssen z
 | Modellwahl und Right Sizing | passende Modelle für Aufgaben wählen und Modellgröße, Kontextumfang, Qualität, Geschwindigkeit und Kosten abwägen | Effiziente AI-Nutzung entsteht durch bewusst passende Mittel, nicht durch automatisch maximale Modellleistung. |
 | Kontext-, Token- und Kostenverwaltung | Kontextfenster, Tokenverbrauch, Promptlänge, wiederverwendbare Kontextdateien, Routing und Kostenkontrolle steuern | AI-Systeme bleiben nur nutzbar und bezahlbar, wenn Kontext und Kosten aktiv verwaltet werden. |
 | AI System Architecture | Modelle, Tools, Datenquellen, RAG, Routing, Speicher, Monitoring und menschliche Kontrollpunkte als System entwerfen | KI-Produkte brauchen Architekturentscheidungen, damit sie zuverlässig, wartbar und kontrollierbar bleiben. |
-| Programmierlogik | Variablen, Funktionen, Events, Bedingungen, Schleifen, Datenstrukturen, Algorithmen, Iteration und Rekursion verstehen | Wer Logik versteht, kann generierten Code besser prüfen und verbessern. |
+| Programmierlogik | Variablen, Funktionen, Bedingungen, Schleifen, Datenstrukturen, Algorithmen, Iteration und Rekursion verstehen | Wer Logik versteht, kann generierten Code besser prüfen und verbessern. |
 | Debugging | Fehler eingrenzen, Hypothesen bilden, Tool-Ausgaben lesen und KI gezielt zur Analyse einsetzen | Fehlerbehebung passiert nicht nur durch Coding, sondern durch systematisches Denken. |
 | Testing und Harness Engineering | Tests, Prüffälle, Testdaten, Evaluationskriterien und wiederholbare Prüfabläufe erstellen | Software- und AI-Ergebnisse müssen überprüfbar sein. |
 | Architektur- und Systemdenken | Komponenten, Verantwortlichkeiten, Datenflüsse, Schnittstellen und Abhängigkeiten erkennen | Größere Produkte brauchen Struktur, damit Mensch und KI zuverlässig daran arbeiten können. |

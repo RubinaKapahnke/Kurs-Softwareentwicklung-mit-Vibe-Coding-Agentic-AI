@@ -26,6 +26,11 @@ Relevant für Architekt\*innen, Entwickler\*innen, Product Owner, UX, Data Engin
 - [Architecture Foundations Grundlagen](../../course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
 - [Architecture Foundations Praxis](../../course-library/07-architecture-foundations/02-architecture-foundations-praxis.md)
 
+## Kursinterne Praxisbeispiele
+
+- [Warum ein Code-Monster entstehen kann](./01-code-monster-entstehung-und-refactoring.md)
+- [Beispiel-Datei: Code-Monster in einer Step-Page-SCSS](./beispiel-code-monster-step-page.component.scss.txt) *(nicht produktiv, nur Anschauungsmaterial)*
+
 ## Abschlussnachweis
 
 Der Baustein gilt als abgeschlossen, wenn die Struktur eines Projekts so erklärt ist, dass ein Mensch oder KI-Assistent sinnvoll daran weiterarbeiten kann.
