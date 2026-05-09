@@ -2,6 +2,8 @@
 
 Dieser Ordner enthält zwei Bereiche:
 
+Ergänzende Arbeitsnotizen für App-Ideen liegen in `apps/notizen_todos_apps.md`.
+
 ## `onboarding/`
 Der lineare Einstieg für absolute Anfänger bis zum lokalen Repo-Clone.
 
@@ -12,6 +14,7 @@ Aktuell wichtige Dateien:
 - `apps/onboarding/src/app/data/onboarding-steps.data.ts` (6 Onboarding-Schritte inkl. Erfolgskriterien)
 - `apps/onboarding/src/app/components/markdown-view/markdown-view.component.ts` (sicheres Rendering von Markdown-Inhalten)
 - `apps/onboarding/public/content/` (Markdown-Erklaertexte pro Schritt, z. B. `github-account.md`)
+- `apps/onboarding/content-sync.config.mjs` + `apps/onboarding/sync-content.mjs` (Synchronisation ausgewaehlter Kursinhalte in Onboarding-Markdown)
 - `apps/onboarding/src/styles/_tokens.scss` (KnOot Brand-Tokens)
 - `apps/onboarding/src/styles/_material-theme.scss` (Material 3 Rollen: Primary/Secondary/Tertiary/Error)
 

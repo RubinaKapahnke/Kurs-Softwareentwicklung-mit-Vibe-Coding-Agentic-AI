@@ -6,6 +6,13 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ## Tagesübersicht (grob)
 
+### 09.05.2026
+- Onboarding-App zum nutzbaren MVP-Flow ausgebaut: Startseite/Kursstart, Schrittlogik, Lesson Flow, Zusammenfassung, Content-Sync und Markdown-Inhalte erweitert.
+- Designsystem und Styles konsolidiert: Tokens, Typografie, Material-Variablen, Button-/Surface-/State-Utilities und keine hardcodierten Komponentenfarben.
+- StepPage refaktoriert: wiederverwendbare Komponenten fuer Choice Cards, Callouts, Voucher-Gate und Aufgabenlisten eingefuehrt.
+- Kursmaterial zu Code-Monstern und Refactoring ergaenzt, inklusive inertem Beispiel fuer den Unterricht.
+- Kontext-, Agent- und Prompt-Regeln gegen Code-Monster, Style-Wucher und unnoetige Komponenten-Vermehrung geschaerft.
+
 ### 08.05.2026
 - Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/kursmodule/` mit 14 Kursmodulen.
 - Root-Dokumentation synchronisiert (`README.md`, `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md`, `apps/README_APPS.md`).
@@ -57,6 +64,38 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `README.md`: `course/notizen-kursentwicklung.md` in Projektstruktur ergaenzt
 
 **Ergebnis:** 313 Links OK, 8 Uebungen OK, 5 Lernfortschritt-Dateien OK (unveraendert)
+
+---
+
+## 09.05.2026 (Session 10)
+
+### Onboarding-MVP, Designsystem und Refactoring-Governance
+
+**Onboarding-App – Flow und Content:**
+- Startseite, Kursstart, Onboarding-Shell, StepPage und Zusammenfassung fuer den Kursstart-Flow erweitert.
+- `apps/onboarding/src/app/data/onboarding-steps.data.ts`: Schrittdefinitionen, Lesson-Flow-Inhalte, Aufgaben und Ressourcen deutlich ausgebaut.
+- `apps/onboarding/content-sync.config.mjs` und `apps/onboarding/sync-content.mjs`: Content-Sync fuer ausgewaehlte Kursinhalte in `apps/onboarding/public/content/` ergaenzt.
+- Neue Onboarding-Markdown-Inhalte: `github-repository-erstellen.md`, `kurs-handhabung.md`, `kurs-ueberblick.md`.
+
+**Designsystem und UI-Refactoring:**
+- Globale Style-Partial-Struktur ergaenzt: `_buttons.scss`, `_states.scss`, `_surfaces.scss`, erweiterte `_tokens.scss`, `_typography.scss` und `_material-theme.scss`.
+- Wiederverwendbare Komponenten eingefuehrt: `callout`, `choice-card`, `lesson-flow`, `step-tasks`, `voucher-gate`.
+- StepPage von wiederholten Auswahl-, Voucher- und Task-Bloecken entlastet; Page-Komponente bleibt staerker Orchestrator.
+- Dynamic CTA: Startseite/Kursstart koennen bei vorhandenem Fortschritt zu `Kurs fortsetzen` und dem ersten offenen Schritt springen.
+
+**Kursmaterial und Architektur-Lernen:**
+- `course/kursmodule/07-architektur-wartbare-produktstruktur/01-code-monster-entstehung-und-refactoring.md`: Erklaertext fuer den Kurs ergaenzt.
+- `course/kursmodule/07-architektur-wartbare-produktstruktur/beispiel-code-monster-step-page.component.scss.txt`: Inertes Beispiel fuer Code-Monster ohne App-Funktion.
+- GitHub-/Git-Grundlagen und Kursnotizen erweitert, inklusive Repository-Erstellen-Anleitung.
+
+**Agenten, Prompts und Kontext-Regeln:**
+- `AGENTS.md`, Onboarding-/Dashboard-Instructions und App-Agents um Guardrails gegen Code-Monster, Style-Wucher und Komponenten-Inflation erweitert.
+- MVP-Scope-Freeze-Prompt um Architektur-Gate ergaenzt: Wiederverwendung vor Neuanlage, Rueckfrage bei unklarem Einmalfall.
+
+**Validierung:**
+- Onboarding-Build erfolgreich (`npm run build`).
+- VS-Code-Diagnosen fuer Onboarding nach Refactoring sauber.
+- Style-Suchchecks: keine `!important`, keine hardcodierten Hex-/RGBA-Farben in Komponenten-SCSS.
 
 ---
 

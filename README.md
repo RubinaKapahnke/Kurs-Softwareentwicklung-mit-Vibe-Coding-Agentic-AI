@@ -82,18 +82,41 @@ course/course-library/04-git/
 /vibe-coding-0426
 ├── KURSBESCHREIBUNG.md
 ├── apps/
+│   ├── notizen_todos_apps.md
 │   ├── README_APPS.md
 │   ├── onboarding/
+│   │   ├── content-sync.config.mjs
 │   │   ├── prd_onboarding.md
 │   │   ├── README.md
 │   │   ├── public/
 │   │   │   └── content/
-│   │   │       └── github-account.md
+│   │   │       ├── github-account.md
+│   │   │       ├── github-repository-erstellen.md
+│   │   │       ├── kurs-handhabung.md
+│   │   │       └── kurs-ueberblick.md
 │   │   ├── src/
 │   │   │   ├── app/
 │   │   │   │   ├── components/
-│   │   │   │   │   └── markdown-view/
-│   │   │   │   │       └── markdown-view.component.ts
+│   │   │   │   │   ├── callout/
+│   │   │   │   │   │   └── callout.component.ts
+│   │   │   │   │   ├── choice-card/
+│   │   │   │   │   │   ├── choice-card.component.html
+│   │   │   │   │   │   ├── choice-card.component.scss
+│   │   │   │   │   │   └── choice-card.component.ts
+│   │   │   │   │   ├── lesson-flow/
+│   │   │   │   │   │   ├── lesson-flow.component.html
+│   │   │   │   │   │   ├── lesson-flow.component.scss
+│   │   │   │   │   │   └── lesson-flow.component.ts
+│   │   │   │   │   ├── markdown-view/
+│   │   │   │   │   │   └── markdown-view.component.ts
+│   │   │   │   │   ├── step-tasks/
+│   │   │   │   │   │   ├── step-tasks.component.html
+│   │   │   │   │   │   ├── step-tasks.component.scss
+│   │   │   │   │   │   └── step-tasks.component.ts
+│   │   │   │   │   └── voucher-gate/
+│   │   │   │   │       ├── voucher-gate.component.html
+│   │   │   │   │       ├── voucher-gate.component.scss
+│   │   │   │   │       └── voucher-gate.component.ts
 │   │   │   │   ├── data/
 │   │   │   │   ├── guards/
 │   │   │   │   ├── models/
@@ -104,7 +127,14 @@ course/course-library/04-git/
 │   │   │   │   │   └── step-page/
 │   │   │   │   └── services/
 │   │   │   └── styles/
-│   │   └── package.json
+│   │   │       ├── _buttons.scss
+│   │   │       ├── _material-theme.scss
+│   │   │       ├── _states.scss
+│   │   │       ├── _surfaces.scss
+│   │   │       ├── _tokens.scss
+│   │   │       └── _typography.scss
+│   │   ├── package.json
+│   │   └── sync-content.mjs
 │   └── dashboard/
 │       ├── prd_dashboard.md
 │       ├── data/
@@ -150,39 +180,67 @@ course/course-library/04-git/
 │   ├── kursmodule/
 │   │   ├── README_KURSMODULE.md
 │   │   ├── 01-arbeitsumgebung-dokumentation-versionsverwaltung/
-│   │   │   └── modulziele.md
+│   │   │   ├── 00-modulziele.md
+│   │   │   ├── 01-github-im-kurs.md
+│   │   │   ├── 02-github-konto-profil-und-collaborator-aufgabe.md
+│   │   │   ├── 03-github-features-repositories-und-readme-vorlage.md
+│   │   │   ├── 04-version-control-und-gitops-im-kurs.md
+│   │   │   ├── 05-vscode-speicherkonflikt-im-kurs.md
+│   │   │   ├── github-repository-erstellen.md
+│   │   │   ├── modulziele.md
+│   │   │   └── README-template-tn-repo.md
 │   │   ├── 02-produktbeschreibung-inkrementelle-planung/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 03-vibe-coding-prompting-context-engineering/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 04-ai-literacy-modellverstaendnis/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 05-grundlagen-programmierlogik/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 06-debugging-testing-harness-engineering/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 07-architektur-wartbare-produktstruktur/
-│   │   │   └── modulziele.md
+│   │   │   ├── 00-modulziele.md
+│   │   │   ├── 01-code-monster-entstehung-und-refactoring.md
+│   │   │   └── beispiel-code-monster-step-page.component.scss.txt
 │   │   ├── 08-ai-system-architecture-modellwahl-token-management/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 09-agentic-software-engineering-autonome-agenten/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 10-daten-reporting-rag-grundlagen/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 11-schwerpunktpfad-web-app-oder-datenprodukt/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 12-teamarbeit-datenschutz-urheberrecht-governance/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   ├── 13-deployment-monitoring-release-management/
-│   │   │   └── modulziele.md
+│   │   │   └── 00-modulziele.md
 │   │   └── 14-abschlussprojekt-portfolio/
-│   │       └── modulziele.md
-│   ├── modules/
+│   │       └── 00-modulziele.md
+│   ├── course-library/
 │   │   ├── 01-markdown/
+│   │   │   ├── 00-markdown-modulguide.md
+│   │   │   ├── 01-markdown-grundlagen.md
+│   │   │   └── 02-formatierung_md-files.md
 │   │   ├── 02-vscode/
+│   │   │   ├── 00-vscode-modulguide.md
+│   │   │   ├── 01-vscode-grundlagen.md
+│   │   │   ├── 02-vscode-copilot.md
+│   │   │   └── 03-vscode-speicherkonflikt-compare-overwrite.md
 │   │   ├── 03-github/
+│   │   │   ├── 00-github-modulguide.md
+│   │   │   └── 01-github-grundlagen.md
 │   │   ├── 04-git/
+│   │   │   ├── 00-git-modulguide.md
+│   │   │   ├── 01-git-grundlagen.md
+│   │   │   ├── 02-git-branch-workflow.md
+│   │   │   ├── 03-git-befehlsuebersicht.md
+│   │   │   ├── 04-version-control-und-gitops-grundlagen.md
+│   │   │   └── git-befehle-cheat-sheet.md
 │   │   ├── 05-terminal/
+│   │   │   ├── 00-terminal-modulguide.md
+│   │   │   ├── 01-terminal-grundlagen.md
+│   │   │   └── 03-terminal-befehlsuebersicht.md
 │   │   ├── 06-ai-instructions/
 │   │   │   ├── 00-ai-instructions-modulguide.md
 │   │   │   ├── 01-prompting-grundlagen.md
@@ -193,6 +251,8 @@ course/course-library/04-git/
 │   │       ├── 01-architecture-foundations-grundlagen.md
 │   │       └── 02-architecture-foundations-praxis.md
 │   └── uebungen/
+│       ├── meilenstein-01-uebung-01.md
+│       ├── meilenstein-01-uebung-02.md
 │       ├── meilenstein-02-uebung-*.md  (3 Übungen)
 │       ├── meilenstein-03-uebung-*.md  (4 Übungen)
 │       ├── meilenstein-04-uebung-*.md  (1 Übung)
@@ -215,6 +275,7 @@ course/course-library/04-git/
 │   │   └── uebungen-standard.instructions.md
 │   ├── prompts/
 │   │   ├── course-dev-onboarding-mvp-scope-freeze.prompt.md
+│   │   ├── course-dev-fremdtexte-verarbeiten.prompt.md
 │   │   ├── learners-dashboard-feedback.prompt.md
 │   │   ├── learners-lernjournal-eintrag.prompt.md
 │   │   └── learners-prd-assistent.prompt.md
@@ -254,7 +315,7 @@ pandoc <pfad-zur-datei.md> -o <ausgabe.pdf>
 
 # Beispiele:
 pandoc course/uebungen/meilenstein-02-uebung-01.md -o uebung-m2-01.pdf
-pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/modulziele.md" -o kursmodul-01.pdf
+pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md" -o kursmodul-01.pdf
 ```
 
 > **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach – das dauert einmalig etwas länger.
