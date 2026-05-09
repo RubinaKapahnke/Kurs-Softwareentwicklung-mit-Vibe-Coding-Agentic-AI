@@ -125,20 +125,20 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               paragraphs: [
-                'Nach diesem Modul arbeitest du mit NEXT_STEPS.md – das ist deine zentrale Roadmap. Dort stehen die aktuellen Meilensteine und was als nächstes kommt.'
+                'Nach diesem Modul hast du eine klare Roadmap: Du siehst, wo du gerade stehst und was als nächstes kommt.'
               ],
               tone: 'highlight'
             },
             {
               heading: 'Wie der Kurs funktioniert',
               paragraphs: [
-                'Du arbeitest in zwei Repos: einem gemeinsamen Kurs-Repo und deinem eigenen Übungs-Repo. Aufgaben, Lernmaterial und dein persönlicher Fortschritt liegen im Kurs-Repo – dein Code und deine Lösungen entstehen bei dir.',
-                'Der Einstieg in jeden Meilenstein läuft immer über NEXT_STEPS.md. Was dort steht, bestimmt, woran du als nächstes arbeitest.'
+                'Du arbeitest in zwei Repositories: einem gemeinsamen Kurs-Repository und deinem eigenen Übungs-Repository. Aufgaben, Lernmaterial und dein persönlicher Fortschritt liegen im Kurs-Repository - dein Code und deine Lösungen entstehen bei dir.',
+                'Der Einstieg in jeden Meilenstein läuft über eine zentrale Datei im Kurs-Repository. Was dort steht, bestimmt, woran du als nächstes arbeitest.'
               ]
             },
             {
               paragraphs: [
-                'Du musst dir das jetzt noch nicht merken – alles wird erklärt, wenn du es brauchst. Jetzt erst mal: Werkzeuge einrichten.'
+                'Du musst dir das jetzt noch nicht merken - alles wird erklärt, wenn du es brauchst. Jetzt erst mal: Werkzeuge einrichten.'
               ]
             }
           ]
@@ -181,14 +181,14 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               paragraphs: [
-                'GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst. Stell es dir wie eine Wolke für deinen Code vor – mit eingebautem Änderungsverlauf.'
+                'GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst. Stell es dir wie eine Wolke für deinen Code vor - mit eingebautem Änderungsverlauf.'
               ]
             },
             {
               heading: 'Warum brauchen wir GitHub im Kurs?',
               orderedItems: [
-                'Dein eigenes Übungs-Repo liegt auf GitHub – von dort aus arbeitest du.',
-                'Das gemeinsame Kurs-Repo liegt ebenfalls auf GitHub – dort findest du Aufgaben und Lernmaterial.',
+                'Dein eigenes Übungs-Repository liegt auf GitHub - von dort aus arbeitest du.',
+                'Das gemeinsame Kurs-Repository liegt ebenfalls auf GitHub - dort findest du Aufgaben und Lernmaterial.',
                 'Die Trainerin sieht deine Commits und kann dir Feedback geben.'
               ]
             },
@@ -202,16 +202,16 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Account erstellen – Schritt für Schritt',
+          title: 'Account erstellen - Schritt für Schritt',
           sections: [
             {
               orderedItems: [
                 'Öffne github.com in deinem Browser.',
                 'Klick auf "Sign up" (oben rechts).',
                 'Gib deine E-Mail-Adresse ein und wähle ein Passwort.',
-                'Wähle einen Benutzernamen – dieser ist im Kurs für andere sichtbar.',
+                'Wähle einen Benutzernamen - dieser ist im Kurs für andere sichtbar.',
                 'Bestätige deine E-Mail-Adresse über den Link in der Bestätigungsmail.',
-                'Fertig – du bist jetzt auf GitHub.'
+                'Fertig - du bist jetzt auf GitHub.'
               ]
             },
             {
@@ -274,7 +274,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               heading: 'Warum brauchst du dein eigenes Repository?',
               orderedItems: [
-                'Das Kurs-Repository bleibt zentral – dort liegt das Lernmaterial und die Aufgaben.',
+                'Das Kurs-Repository bleibt zentral - dort liegt das Lernmaterial und die Aufgaben.',
                 'Dein eigenes Repository ist dein privater Workspace zum Experimentieren und Lernen.',
                 'Hier machst du deine Übungen, speicherst deine Lösungen und dokumentierst deinen Fortschritt.',
                 'Die Trainerin kann deine Commits sehen und dir Feedback geben.'
@@ -284,7 +284,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Schritt 1 und 2: Einloggen und Repo erstellen',
+          title: 'Schritt 1 und 2: Einloggen und Repository erstellen',
           sections: [
             {
               heading: 'Schritt 1: GitHub öffnen und einloggen',
@@ -318,7 +318,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               tone: 'highlight',
               paragraphs: [
-                'Die README ist wichtig. Ohne README wirkt das Repo für Einsteiger oft „leer" und unklar.'
+                'Die README ist wichtig. Ohne README wirkt das Repository für Einsteiger oft leer und unklar.'
               ]
             },
             {
@@ -363,7 +363,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               orderedItems: [
-                'Repo wurde erstellt',
+                'Repository wurde erstellt',
                 'Sichtbarkeit steht auf Private',
                 'README ist vorhanden'
               ]
@@ -726,7 +726,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 12,
     title: 'Kurs-Handhabung verstehen',
-    goal: 'Du verstehst, welche Dateien im Kurs-Repo bleiben, was in deinem eigenen Repo entsteht und warum der Lernfortschritt zentral gepflegt wird.',
+    goal: 'Du verstehst, welche Dateien im Kurs-Repository bleiben, was in deinem eigenen Repository entsteht und warum der Lernfortschritt zentral gepflegt wird.',
     tasks: [
       'Öffne im Kurs-Repository die Datei NEXT_STEPS.md und lies Meilenstein 1.',
       'Öffne im Kurs-Repository die Datei course/uebungen/README_UEBUNGEN.md und lies den Übungsablauf.',
