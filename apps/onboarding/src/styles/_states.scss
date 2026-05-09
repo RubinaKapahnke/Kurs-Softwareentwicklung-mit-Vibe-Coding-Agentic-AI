@@ -1,0 +1,28 @@
+.ui-text-muted {
+  color: var(--color-text-muted);
+}
+
+.ui-text-subtle {
+  color: var(--color-text-subtle);
+}
+
+.ui-text-success {
+  color: var(--color-success);
+}
+
+.ui-text-warning {
+  color: var(--color-warning);
+}
+
+.ui-text-danger {
+  color: var(--color-error);
+}
+
+.ui-kicker {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-caps);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}

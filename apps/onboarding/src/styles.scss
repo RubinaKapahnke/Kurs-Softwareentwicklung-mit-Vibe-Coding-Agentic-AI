@@ -1,6 +1,9 @@
 @use './styles/tokens';
 @use './styles/material-theme';
 @use './styles/typography';
+@use './styles/buttons';
+@use './styles/surfaces';
+@use './styles/states';
 
 * {
 	box-sizing: border-box;

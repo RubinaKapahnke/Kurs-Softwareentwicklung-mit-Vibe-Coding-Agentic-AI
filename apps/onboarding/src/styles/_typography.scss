@@ -1,15 +1,43 @@
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
 }
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
 h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5,
+h6 {
+  font-size: var(--font-size-md);
 }
 
 .subtitle-accent {
-  font-family: 'Recoleta', serif;
+  font-family: var(--font-family-accent);
 }

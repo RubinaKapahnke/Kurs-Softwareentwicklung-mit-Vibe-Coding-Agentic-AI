@@ -1,0 +1,48 @@
+.ui-surface {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.ui-surface-muted {
+  background: var(--surface-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.ui-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.ui-callout {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.ui-callout--info {
+  background: var(--surface-info);
+  border: 1px solid var(--border-info);
+}
+
+.ui-callout--success {
+  background: var(--surface-success);
+  border: 1px solid var(--border-success);
+}
+
+.ui-callout--warning {
+  background: var(--surface-warning);
+  border: 1px solid var(--border-warning);
+}
+
+.ui-callout--danger {
+  background: var(--surface-danger);
+  border: 1px solid var(--border-danger);
+}

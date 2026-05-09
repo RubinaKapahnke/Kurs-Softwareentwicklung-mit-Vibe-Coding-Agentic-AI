@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, ElementRef, ViewChild, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
@@ -7,14 +7,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 
 
-import { ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
+import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingStep } from '../../models/onboarding.models';
 import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } from '../../services/onboarding-state.service';
 import { MarkdownViewComponent } from '../../components/markdown-view/markdown-view.component';
+import { LessonFlowComponent } from '../../components/lesson-flow/lesson-flow.component';
+import { ChoiceCardComponent } from '../../components/choice-card/choice-card.component';
+import { CalloutComponent } from '../../components/callout/callout.component';
+import { VoucherGateComponent } from '../../components/voucher-gate/voucher-gate.component';
+import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/step-tasks.component';
 
 @Component({
   selector: 'app-step-page',
@@ -25,9 +29,13 @@ import { MarkdownViewComponent } from '../../components/markdown-view/markdown-v
     MatCheckboxModule,
     MatDividerModule,
     MatIconModule,
-    MatListModule,
     MatTabsModule,
-    MarkdownViewComponent
+    MarkdownViewComponent,
+    LessonFlowComponent,
+    ChoiceCardComponent,
+    CalloutComponent,
+    VoucherGateComponent,
+    StepTasksComponent
   ],
   templateUrl: './step-page.component.html',
   styleUrl: './step-page.component.scss'
@@ -36,6 +44,7 @@ export class StepPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   readonly state = inject(OnboardingStateService);
+  readonly stepCount = ONBOARDING_STEP_COUNT;
   private readonly routeParamMap = toSignal(this.route.paramMap, {
     initialValue: this.route.snapshot.paramMap
   });
@@ -45,14 +54,33 @@ export class StepPageComponent {
     return ONBOARDING_STEPS.find((item) => item.id === id) ?? ONBOARDING_STEPS[0];
   });
 
+  readonly visibleLessonFlow = computed(() => {
+    const lessonFlow = this.step().lessonFlow;
+    if (!lessonFlow) {
+      return null;
+    }
+
+    if (this.isAccountChoiceStep() && !this.showAccountStepFullInstructions()) {
+      return null;
+    }
+
+    return lessonFlow;
+  });
+
   readonly canGoBack = computed(() => this.step().id > 1);
 
-  readonly isAccountChoiceStep = computed(() => this.step().id === 1);
-  readonly isOwnRepoStep = computed(() => this.step().id === 2);
-  readonly isInviteStep = computed(() => this.step().id === 3);
-  readonly isExerciseStep = computed(() => this.step().id === 4);
-  readonly isSetupStep = computed(() => this.step().id === 5);
-  readonly isBrueckeStep = computed(() => this.step().id === 6);
+  readonly isVoucherStep = computed(() => this.step().id === 1);
+  readonly isAccountChoiceStep = computed(() => this.step().id === 3);
+  readonly isOwnRepoStep = computed(() => this.step().id === 4);
+  readonly isInviteStep = computed(() => this.step().id === 5);
+  readonly isExerciseStep = computed(() => this.step().id === 6);
+  readonly isVscodeInstallStep = computed(() => this.step().id === 8);
+  readonly isGitInstallStep = computed(() => this.step().id === 10);
+  readonly isCloneStep = computed(() => this.step().id === 11);
+  readonly isFinishStep = computed(() => this.step().id === ONBOARDING_STEP_COUNT);
+
+  @ViewChild('todoSection', { read: ElementRef }) private todoSection?: ElementRef<HTMLElement>;
+  @ViewChild('lessonFlowSection') private lessonFlowSection?: ElementRef<HTMLElement>;
 
   // Voucher-Gate
   readonly showVoucherInput = computed(() => {
@@ -85,46 +113,86 @@ export class StepPageComponent {
   );
   readonly showAccountStepContent = computed(() =>
     !this.isAccountChoiceStep() || (
-      this.state.voucherValidated() && (this.state.step2Experience() !== null || this.showGithubExplanation())
+      this.state.voucherValidated() && this.state.step2Experience() !== null
     )
   );
   readonly showAccountStepFullInstructions = computed(() =>
-    !this.isAccountChoiceStep() || this.state.step2Experience() === 'new' || this.showGithubExplanation()
+    !this.isAccountChoiceStep() || (
+      this.state.step2Experience() === 'new' ||
+      this.state.step2Experience() === 'existing-beginner'
+    )
   );
   readonly showAccountSecurityHint = computed(() =>
     this.isAccountChoiceStep() && this.state.step2Experience() === 'new'
   );
+  readonly showRepoExperienceQuestion = computed(() =>
+    this.isAccountChoiceStep() && this.state.voucherValidated() &&
+    this.state.step2Experience() === 'existing' // Nur erste Frage beantwortet, noch nicht spezialisiert
+  );
+  readonly showExistingExperiencedOnlyContent = computed(() =>
+    this.isAccountChoiceStep() && this.state.step2Experience() === 'existing-experienced'
+  );
   readonly showStepResources = computed(() =>
-    !this.isBrueckeStep() && (!this.isAccountChoiceStep() || this.showAccountStepContent())
+    !this.isAccountChoiceStep() || this.showAccountStepContent()
   );
 
-  /** Inline-Erklärung "Was ist GitHub?" */
-  readonly showGithubExplanation = signal(false);
-  toggleGithubExplanation(): void {
-    this.showGithubExplanation.update(v => {
-      const next = !v;
-      if (next) {
-        this.state.setStep2Experience(null);
-      }
-      return next;
-    });
-  }
+  // Step 3: Unterschiedliche Inhalte für 'new' vs 'existing-beginner' vs 'existing-experienced'
+  readonly step3Title = computed(() => {
+    if (!this.isAccountChoiceStep()) return this.step().title;
+    const exp = this.state.step2Experience();
+    if (exp === 'new') return 'GitHub-Account anlegen';
+    if (exp === 'existing' || exp === 'existing-beginner') return 'GitHub Repos und Git verstehen';
+    if (exp === 'existing-experienced') return 'GitHub-Account verifizieren';
+    return this.step().title;
+  });
 
-  /** Inline-Erklärung "Was ist Git?" */
-  readonly showGitExplanation = signal(false);
-  toggleGitExplanation(): void {
-    this.showGitExplanation.update(v => !v);
-  }
+  readonly step3Goal = computed(() => {
+    if (!this.isAccountChoiceStep()) return this.step().goal || '';
+    const exp = this.state.step2Experience();
+    if (exp === 'new')
+      return 'Du erstellst deinen ersten GitHub-Account und stellst sicher, dass alles funktioniert.';
+    if (exp === 'existing' || exp === 'existing-beginner')
+      return 'Du lernst, wie GitHub Repos funktionieren und wie du sie im Kurs nutzt.';
+    if (exp === 'existing-experienced')
+      return 'Du überprüfst deinen Account und verstehst, wie die Sichtbarkeit im Kurs funktioniert.';
+    return this.step().goal || '';
+  });
+
+  readonly step3VisibleTasks = computed(() => {
+    if (!this.isAccountChoiceStep() || !this.showAccountStepFullInstructions()) {
+      return [];
+    }
+    return this.step().tasks;
+  });
+  readonly showTodoSection = computed(() => {
+    if (this.isVoucherStep() || !this.showAccountStepContent()) {
+      return false;
+    }
+
+    if (this.isAccountChoiceStep() && this.state.step2Experience() === 'existing') {
+      return false;
+    }
+
+    const hasStepTasks = this.showAccountStepFullInstructions() && this.step().tasks.length > 0;
+    const hasAccountExtraTask = this.isAccountChoiceStep();
+    return hasStepTasks || hasAccountExtraTask;
+  });
 
   /** "Als erledigt markieren" blockiert bis Voucher validiert UND Auswahl getroffen */
   readonly isDoneDisabled = computed(() => {
+    if (this.isVoucherStep()) {
+      return !this.state.voucherValidated();
+    }
+
     if (!this.isAccountChoiceStep()) {
       return !this.allSubtasksDone();
     }
 
     if (!this.state.voucherValidated()) return true;
-    if (this.state.step2Experience() === 'existing') return !this.step2CanComplete() || !this.githubProfileShareDone();
-    if (this.state.step2Experience() === 'new') return !this.allSubtasksDone() || !this.githubProfileShareDone();
+    const exp = this.state.step2Experience();
+    if (exp === null || exp === 'existing') return true; // Nicht fertig bis spezialisiert
+    if (exp === 'existing-beginner' || exp === 'existing-experienced') return !this.step2CanComplete();
+    if (exp === 'new') return !this.allSubtasksDone();
     return true;
   });
 
@@ -132,13 +200,23 @@ export class StepPageComponent {
     return this.state.isSubtaskDone(this.step().id, taskIndex);
   }
 
+  readonly isStepSubtaskDone = (taskIndex: number): boolean =>
+    this.state.isSubtaskDone(this.step().id, taskIndex);
+
   onSubtaskChange(taskIndex: number, checked: boolean): void {
     this.state.setSubtaskDone(this.step().id, taskIndex, checked);
   }
 
-  selectExperience(choice: Step2ExperienceChoice): void {
-    this.showGithubExplanation.set(false);
+  onStepSubtaskChange(change: SubtaskChange): void {
+    this.onSubtaskChange(change.index, change.checked);
+  }
+
+  selectExperience(choice: 'new' | 'existing'): void {
     this.state.setStep2Experience(choice);
+  }
+
+  selectRepoExperience(experience: 'beginner' | 'experienced'): void {
+    this.state.setRepoExperience(experience);
   }
 
   setParticipationStatus(status: ParticipationStatus): void {
@@ -153,11 +231,19 @@ export class StepPageComponent {
     this.voucherError.set(false);
   }
 
+  updateVoucherInput(value: string): void {
+    this.voucherInput.set(value);
+    this.voucherError.set(false);
+  }
+
   submitVoucher(): void {
     const valid = this.state.validateVoucher(this.voucherInput());
     this.voucherError.set(!valid);
     if (valid) {
+      this.state.markStepCompleted(this.step().id);
       this.showTemporaryVoucherSuccess();
+    } else {
+      this.state.unmarkStepCompleted(this.step().id);
     }
   }
 
@@ -206,12 +292,24 @@ export class StepPageComponent {
   /** Weiter: immer erlaubt, einfach navigieren */
   goToNextStep(): void {
     const currentStep = this.step().id;
-    if (currentStep >= 6) return;
+    if (currentStep >= ONBOARDING_STEP_COUNT) return;
     void this.router.navigate(['/onboarding/step', currentStep + 1]);
   }
 
   finishOnboarding(): void {
-    this.state.markStepCompleted(6);
+    this.state.markStepCompleted(this.step().id);
     void this.router.navigate(['/onboarding/zusammenfassung']);
+  }
+
+  onLessonFinished(): void {
+    const lessonBottom = this.lessonFlowSection?.nativeElement.getBoundingClientRect().bottom ?? 0;
+
+    if (this.todoSection?.nativeElement) {
+      this.todoSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    // If no todo section exists on this step, scroll a bit further down in the same page.
+    window.scrollBy({ top: Math.max(lessonBottom * 0.6, 220), behavior: 'smooth' });
   }
 }

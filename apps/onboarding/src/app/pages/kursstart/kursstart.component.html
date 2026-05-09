@@ -11,7 +11,7 @@
         <a href="#inhalte" class="navbar-link">Inhalte</a>
         <a href="#ablauf" class="navbar-link">Ablauf</a>
         <a href="#fuer-wen" class="navbar-link">Für wen?</a>
-        <a mat-flat-button routerLink="/onboarding/step/1" class="navbar-cta">Setup starten</a>
+        <a mat-flat-button routerLink="/onboarding/step/1" class="navbar-cta">Onboarding jetzt starten</a>
       </nav>
     </div>
   </header>
@@ -20,16 +20,17 @@
   <section class="hero-section">
     <div class="shell">
       <div class="hero-text">
-        <p class="eyebrow">Vibe Coding Foundations</p>
+        <p class="eyebrow">Softwareentwicklung mit Vibe Coding &amp; Agentic AI</p>
         <h1>Dein Einstieg in KI-gestütztes Entwickeln</h1>
         <p class="lead">
-          Du lernst, wie echte Softwareentwicklung mit KI aussieht – nicht als Demo,
-          sondern mit Git, VS Code, Angular und GitHub Copilot in einem realen
-          Kursfluss, den du sofort nutzen kannst.
+          Dieser Kurs vermittelt moderne Softwareentwicklung mit KI-Unterstützung:
+          von der Produktidee über strukturierte Planung, Prototyping und Implementierung
+          bis zu Deployment, Monitoring und Weiterentwicklung. Ziel ist ein wartbares,
+          auslieferbares Produkt, das du verstehst, prüfen und verantworten kannst.
         </p>
         <div class="hero-actions">
           <a mat-flat-button routerLink="/onboarding/step/1" class="btn-primary">
-            Setup starten
+            Onboarding jetzt starten
           </a>
           @if (hasProgress()) {
             <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]" class="btn-resume">
@@ -60,8 +61,8 @@
 
       <div class="hero-facts">
         <div class="fact-card">
-          <p class="fact-label">Kursdauer</p>
-          <p class="fact-value">6 Meilensteine</p>
+          <p class="fact-label">Kursumfang</p>
+          <p class="fact-value">14 Module · 12 Meilensteine</p>
         </div>
         <div class="fact-card">
           <p class="fact-label">Format</p>
@@ -74,9 +75,10 @@
         <div class="fact-card fact-card--highlight">
           <p class="fact-label">Was du danach kannst</p>
           <ul class="fact-list">
-            <li>Mit Git &amp; GitHub im Team arbeiten</li>
-            <li>Angular-Apps mit Copilot bauen</li>
-            <li>KI sinnvoll in deinen Workflow einbinden</li>
+            <li>Ein KI-gestütztes Produkt planen, entwickeln und ausliefern</li>
+            <li>Prompts, Kontext und Agenten gezielt einsetzen</li>
+            <li>Ergebnisse testen, reviewen und verantwortungsvoll freigeben</li>
+            <li>Eigenen Schwerpunktpfad (Web/App oder Daten) vertiefen</li>
           </ul>
         </div>
       </div>
@@ -88,10 +90,11 @@
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow">Kursinhalt</p>
-        <h2>Was du in 6 Modulen lernst</h2>
+        <h2>Was du in 14 Modulen lernst</h2>
         <p class="section-sub">
-          Jedes Modul hat ein klares Ziel, sichtbare Übungen und direkte Verbindung
-          zum nächsten Schritt – kein Theorie-Block ohne Praxisbezug.
+          Jedes Modul baut auf dem vorherigen auf und liefert eine neue nutzbare Fertigkeit –
+          von der Arbeitsumgebung über Vibe Coding, AI Literacy und Architektur bis zum eigenen Abschlussprojekt.
+          Module können auch als eigenständige Workshops genutzt werden.
         </p>
       </div>
 
@@ -117,7 +120,7 @@
   <section class="journey-section" id="ablauf">
     <div class="shell">
       <div class="section-head">
-        <p class="eyebrow">Setup in 6 Schritten</p>
+        <p class="eyebrow">Setup in {{ stepCount }} Schritten</p>
         <h2>So richtest du deine Umgebung ein</h2>
         <p class="section-sub">
           Bevor du mit dem Kurs beginnst, richtest du einmalig deine Arbeitsumgebung ein.
@@ -144,11 +147,11 @@
     <div class="shell audience-shell">
       <div class="audience-text">
         <p class="eyebrow">Für wen?</p>
-        <h2>Gut geeignet, wenn du Struktur statt Rumprobieren willst</h2>
+        <h2>Für alle, die mit KI Produkte bauen oder begleiten wollen</h2>
         <p>
-          Der Kurs ist für alle, die mit KI entwickeln wollen – aber trotzdem
-          nachvollziehbar, versioniert und teamfähig arbeiten möchten.
-          Kein Vorwissen in Angular oder Git erforderlich.
+          Der Kurs richtet sich an Menschen, die KI-gestützte Softwareprodukte planen, entwickeln
+          oder fachlich begleiten wollen. Niemand muss den gesamten Stack beherrschen –
+          nach den gemeinsamen Grundlagen wählst du deinen eigenen Schwerpunktpfad.
         </p>
         <ul class="audience-list">
           @for (a of targetAudience; track a.label) {
@@ -192,7 +195,7 @@
       </div>
       <div class="cta-actions">
         <a mat-flat-button routerLink="/onboarding/step/1" class="btn-primary btn-primary--lg">
-          Setup starten
+          Onboarding jetzt starten
         </a>
         @if (hasProgress()) {
           <a mat-stroked-button [routerLink]="['/onboarding/step', resumeStep()]" class="btn-resume-cta">

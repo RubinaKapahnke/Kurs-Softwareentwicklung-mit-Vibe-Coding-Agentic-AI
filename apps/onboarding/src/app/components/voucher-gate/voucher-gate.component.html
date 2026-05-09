@@ -1,0 +1,118 @@
+<section class="entry-question">
+  <div class="entry-question__inner">
+    @if (!voucherValidated()) {
+      <p class="entry-question__kicker">Bevor es losgeht</p>
+      <h2 class="entry-question__heading">Nimmst du bereits aktiv an einem Kurs der KnOot Academy teil?</h2>
+      <p class="entry-question__sub">Wähle eine Option - wir prüfen kurz deinen Zugang.</p>
+
+      <div class="entry-question__options">
+        <app-choice-card
+          icon="school"
+          label="Ja, ich bin aktiv dabei"
+          description="Ich nehme bereits an einem KnOot-Kurs teil."
+          [selected]="participationStatus() === 'active'"
+          (pressed)="participationStatusSelected.emit('active')" />
+
+        <app-choice-card
+          icon="waving_hand"
+          label="Nein, noch nicht"
+          description="Ich möchte mit dem Kurs starten."
+          [selected]="participationStatus() === 'new'"
+          (pressed)="participationStatusSelected.emit('new')" />
+      </div>
+
+      @if (participationStatus() === 'new') {
+        <div class="voucher-sub-question">
+          <p class="entry-question__sub">Hast du bereits einen Voucher-Code erhalten?</p>
+          <div class="entry-question__options">
+            <app-choice-card
+              icon="confirmation_number"
+              label="Ja, ich habe einen Code"
+              description="Ich gebe ihn gleich ein."
+              [selected]="hasVoucherAnswer() === true"
+              (pressed)="hasVoucherSelected.emit(true)" />
+
+            <app-choice-card
+              icon="mail_outline"
+              label="Nein, noch keinen"
+              description="Ich möchte einen Kursplatz anfragen."
+              [selected]="hasVoucherAnswer() === false"
+              (pressed)="hasVoucherSelected.emit(false)" />
+          </div>
+        </div>
+      }
+
+      @if (showVoucherInput()) {
+        <div class="voucher-input-block">
+          <label class="voucher-input-block__label" for="voucher-input">
+            <mat-icon>vpn_key</mat-icon>
+            Dein Voucher-Code
+          </label>
+          <div class="voucher-input-block__row">
+            <input
+              id="voucher-input"
+              class="voucher-input"
+              type="text"
+              placeholder="Voucher-Code eingeben"
+              autocomplete="off"
+              [value]="voucherInput()"
+              (input)="onVoucherInput($any($event.target).value)"
+              (keydown.enter)="voucherSubmitted.emit()">
+            <button mat-flat-button type="button" color="primary" (click)="voucherSubmitted.emit()">
+              Bestätigen
+            </button>
+          </div>
+          @if (voucherError()) {
+            <p class="voucher-error" role="alert">
+              <mat-icon>error_outline</mat-icon>
+              Probleme mit dem Code? Kontaktiere uns:
+              <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener noreferrer">
+                https://www.knoot-academy.de/kontakt
+              </a>
+            </p>
+          }
+          @if (participationStatus() === 'active') {
+            <p class="voucher-hint">
+              <mat-icon>info_outline</mat-icon>
+              Noch keinen Code erhalten? Sprich deine Dozentin darauf an.
+            </p>
+          }
+        </div>
+      }
+
+      @if (showContactInfo()) {
+        <div class="contact-info-block">
+          <div class="contact-info-block__header">
+            <mat-icon aria-hidden="true">info</mat-icon>
+            <strong>Noch kein Kursplatz?</strong>
+          </div>
+          <p>
+            Schreib uns über das
+            <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener">Kontaktformular</a>
+            an. Du kannst diese Nachricht einfach kopieren:
+          </p>
+          <div class="contact-message-box">
+            <pre class="contact-message-box__text">Hallo KnOot Academy Team,
+
+ich interessiere mich für die Teilnahme an eurem Kurs "Vibe Coding Basics" und bitte um einen Zugangs-Voucher.
+
+Vielen Dank!
+[Dein Name]</pre>
+            <button mat-stroked-button type="button" class="copy-btn" (click)="contactMessageCopied.emit()">
+              <mat-icon>{{ voucherCopied() ? 'check' : 'content_copy' }}</mat-icon>
+              {{ voucherCopied() ? 'Kopiert!' : 'Nachricht kopieren' }}
+            </button>
+          </div>
+        </div>
+      }
+    } @else {
+      <div class="voucher-success" role="status" aria-live="polite">
+        <mat-icon>check_circle</mat-icon>
+        <div>
+          <strong>Voucher bestätigt!</strong>
+          <p>Dein Zugang wurde freigeschaltet. Weiter geht's mit Schritt 2.</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

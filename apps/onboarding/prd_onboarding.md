@@ -1,13 +1,13 @@
-# Product Requirements Document (PRD): Onboarding Hub
+# Product Requirements Document (PRD): Kurs-Tool (Modul Onboarding)
 
-**Projekt:** KnOot Academy Onboarding Hub 
-**Status:** Requirement Baseline v1 
+**Projekt:** KnOot Academy Kurs-Tool
+**Status:** Requirement Baseline v1
 **Geltungsbereich:** `apps/onboarding/`
 
 ---
 
 ## 1. Zielbild
-Der Onboarding Hub führt absolute Einsteiger verständlich und sicher bis zum lokalen Clone des Kurs-Repos. Gleichzeitig ist die Startseite so gestaltet, dass sie später als Einstieg für weitere KI-Kurse genutzt werden kann (z. B. Rapid Prototyping, AI Literacy, Vertiefungsmodule).
+Das Kurs-Tool führt absolute Einsteiger verständlich und sicher durch das erste Modul (Onboarding) bis zum lokalen Clone des Kurs-Repos. Gleichzeitig ist die Startseite so gestaltet, dass sie später als Einstieg für weitere KI-Kursmodule genutzt werden kann (z. B. Rapid Prototyping, AI Literacy, Vertiefungsmodule).
 
 Wichtig für v1:
 - Die Seite zeigt klar, dass weitere Kurse noch im Aufbau sind.
@@ -29,7 +29,7 @@ Wichtig für v1:
  - Kursüberblick
  - Weitere Kurse (im Aufbau)
 3. Sichtbarer Hinweis, dass weitere Kurse/Vertiefungsmodule aktuell noch nicht verfügbar sind.
-4. Onboarding-Flow mit 6 Kernschritten bis zum lokalen Clone.
+4. Modul-Flow (Modul Onboarding) mit Kernschritten bis zum lokalen Clone.
 5. Schritt 2 fragt Vorerfahrung ab und bietet je nach Antwort unterschiedliche Folgepfade/Hinweise.
 6. Bei bestehendem GitHub-Account: verpflichtender Hinweis inkl. Pflicht-Checkbox,
  dass der Account im geteilten Repo für andere sichtbar sein kann.
@@ -71,7 +71,7 @@ Inhalte:
 - 6-Schritte-Teaser in kompakter Form (Q3-Empfehlung 3C)
 - Drei CTAs (Q19)
 
-### Onboarding-Flow (`/onboarding/...`)
+### Modul-Flow (`/onboarding/...`)
 - Schrittseiten mit Aufgaben, Erfolgskriterium und Hilfe
 - Schritt 2 mit Vorerfahrungsabfrage und adaptiven Hinweisen/Pfaden
 - Ich weiß es doch nicht-Fallback zur sicheren Standardführung
@@ -143,6 +143,27 @@ Akzeptanzkriterien:
 - [ ] Rückkehr-Modus und freie Schrittauswahl verfügbar.
 - [ ] Brücke in den Kursfluss mit Links + VS-Code-Alternative + Skip umgesetzt.
 - [ ] Mobile lauffähig, mit sichtbarem Desktop-Hinweis bei kritischen Schritten.
+
+---
+
+## 11. Architekturentscheidung (neu)
+
+Ab jetzt wird die Anwendung fachlich als **Kurs-Tool** geführt. Der bisherige Bereich unter `/onboarding/...` ist das **Modul Onboarding** innerhalb eines größeren Kurskontexts.
+
+### Konsequenz für nächste Refactoring-Phase
+1. Routing von reinem Onboarding-Denken auf modulare Struktur vorbereiten:
+ - heute: `/onboarding/step/:id`
+ - Ziel: `/kurs/modul/:moduleId/step/:stepId`
+2. Datenmodell erweitern:
+ - heute: `ONBOARDING_STEPS`
+ - Ziel: `COURSE_MODULES` mit verschachtelten `steps`
+3. Zustandsspeicherung modularisieren:
+ - heute: ein Onboarding-State
+ - Ziel: Zustand pro Modul (Fortschritt, Subtasks, Abschlussstatus)
+4. UI-Texte vollständig auf Modul/Kurs-Sprache umstellen:
+ - keine Nutzertexte mit "Onboarding-Tool" mehr
+ - stattdessen "Kurs-Tool" und "Modul Onboarding"
+5. Nach Modul Onboarding sollen weitere Module im gleichen technischen Muster ergänzt werden (gleiches Layout, gleiche Fortschrittslogik, neue Inhalte).
 
 ---
 

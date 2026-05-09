@@ -6,7 +6,7 @@
 
 .shell-toolbar {
   background: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-on-dark);
 }
 
 .spacer {
@@ -17,30 +17,35 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 1.25rem clamp(1rem, 3vw, 2rem) 2.5rem;
+  padding: 0.85rem clamp(1rem, 3vw, 2rem) 2.5rem;
 }
 
 .progress-panel {
   background: var(--color-surface);
-  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, white);
-  border-radius: 16px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 0.85rem;
+  margin-bottom: 0.75rem;
+
+  mat-progress-bar {
+    height: 4px;
+  }
 }
 
 .progress-meta {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-heading);
+  margin-bottom: 0.45rem;
 }
 
 /* Schritt-Navigation */
 .step-nav {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
+  gap: 0.42rem;
+  margin-top: 0.58rem;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -49,69 +54,77 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
   line-height: 1;
-  background-color: color-mix(in srgb, var(--color-primary) 10%, white) !important;
-  color: var(--color-primary) !important;
-  border: 2px solid var(--color-primary) !important;
+  border: 2px solid var(--color-primary);
   text-decoration: none;
   transition: background 0.15s, box-shadow 0.15s;
+  --mdc-fab-small-container-color: var(--surface-info);
+  --mat-fab-small-foreground-color: var(--color-primary);
+  --mdc-fab-small-container-shape: var(--radius-pill);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 20%, white) !important;
-    box-shadow: 0 2px 6px color-mix(in srgb, var(--color-primary) 25%, transparent) !important;
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-sm);
+    --mdc-fab-small-container-color: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
   }
 
   &--done {
-    background-color: #e8f5e9 !important;
-    border-color: #2e7d32 !important;
-    color: #2e7d32 !important;
+    border-color: var(--color-success);
+    --mdc-fab-small-container-color: var(--surface-success);
+    --mat-fab-small-foreground-color: var(--color-success);
 
     .step-check {
-      font-size: 16px;
-      height: 16px;
-      width: 16px;
+      font-size: var(--font-size-sm);
+      height: var(--font-size-sm);
+      width: var(--font-size-sm);
     }
 
     &:hover {
-      background-color: #c8e6c9 !important;
-      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2) !important;
+      box-shadow: var(--shadow-sm);
+      --mdc-fab-small-container-color: var(--surface-success-strong);
     }
   }
 
   &--active {
-    background-color: var(--color-primary) !important;
-    color: #fff !important;
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 40%, transparent) !important;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-focus);
     cursor: default;
     pointer-events: none;
+    --mdc-fab-small-container-color: var(--color-primary);
+    --mat-fab-small-foreground-color: var(--color-on-dark);
   }
 }
 
 .summary-link {
-  margin-left: 0.25rem;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 0.75rem;
-  font-size: 0.82rem;
-  border-color: color-mix(in srgb, var(--color-primary) 40%, white) !important;
-  color: var(--color-primary) !important;
+  margin-left: 0.15rem;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 0.65rem;
+  font-size: var(--font-size-xs);
+  --mdc-outlined-button-outline-color: var(--border-strong);
+  --mdc-outlined-button-label-text-color: var(--color-primary);
+  --mdc-outlined-button-container-height: var(--button-height-sm);
   transition: background 0.15s;
 
-  mat-icon { font-size: 16px; height: 16px; width: 16px; margin-right: 0.2rem; }
+  mat-icon { font-size: var(--font-size-sm); height: var(--font-size-sm); width: var(--font-size-sm); margin-right: 0.15rem; }
 
   &--active, &:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 8%, white) !important;
+    background-color: var(--surface-muted);
   }
 }
 
 @media (max-width: 640px) {
   .progress-meta {
     flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .progress-panel {
+    padding: 0.7rem 0.75rem;
   }
 }

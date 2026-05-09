@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingStateService } from '../../services/onboarding-state.service';
 
 @Component({
@@ -28,12 +29,13 @@ import { OnboardingStateService } from '../../services/onboarding-state.service'
 export class OnboardingShellComponent {
   private readonly state = inject(OnboardingStateService);
   private readonly route = inject(ActivatedRoute);
+  readonly stepCount = ONBOARDING_STEP_COUNT;
 
   readonly progressPercent = computed(() => this.state.getProgressPercent());
   readonly completedCount = computed(() => this.state.getCompletedCount());
 
-  /** Liste aller 6 Schritte für die Navigation */
-  readonly allSteps = [1, 2, 3, 4, 5, 6] as const;
+  /** Liste aller Schritte fuer die Navigation */
+  readonly allSteps = ONBOARDING_STEPS.map((step) => step.id);
 
   private readonly currentStepId = toSignal(
     this.route.firstChild!.params.pipe(map(p => Number(p['id']))),

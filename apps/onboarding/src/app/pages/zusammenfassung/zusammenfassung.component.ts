@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
-import { ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
+import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingStateService } from '../../services/onboarding-state.service';
 
 @Component({
@@ -17,9 +17,10 @@ import { OnboardingStateService } from '../../services/onboarding-state.service'
 export class ZusammenfassungComponent {
   private readonly state = inject(OnboardingStateService);
 
+  readonly stepCount = ONBOARDING_STEP_COUNT;
   readonly steps = ONBOARDING_STEPS;
   readonly completedCount = computed(() => this.state.getCompletedCount());
-  readonly allDone = computed(() => this.completedCount() === 6);
+  readonly allDone = computed(() => this.completedCount() === ONBOARDING_STEP_COUNT);
 
   isStepDone(stepId: number): boolean {
     return this.state.isStepDone(stepId);

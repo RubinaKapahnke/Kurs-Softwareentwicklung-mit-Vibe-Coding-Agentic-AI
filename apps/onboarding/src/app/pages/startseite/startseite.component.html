@@ -25,18 +25,18 @@
             @if (isCompleted()) {
               Onboarding abgeschlossen - du kannst direkt wieder in den Kursfluss springen.
             } @else {
-              Du hast {{ completedCount() }} von 6 Schritten abgeschlossen.
+              Du hast {{ completedCount() }} von {{ stepCount }} Schritten abgeschlossen.
             }
           </strong>
         </div>
         <a
           mat-stroked-button
-          [routerLink]="isCompleted() ? '/kursstart' : '/onboarding/zusammenfassung'"
+          [routerLink]="featuredCourseLink()"
           class="resume-action">
           @if (isCompleted()) {
             Kursfluss öffnen
           } @else {
-            Zur Zusammenfassung
+            Kurs fortsetzen
           }
         </a>
       </div>
@@ -48,21 +48,21 @@
 
       <article class="hero-featured-card" aria-label="Featured Kurskarte">
         <div class="featured-badge-wrap">
-          <img src="assets/graphics/course-preview.png" alt="Vibe Coding Foundations Vorschau" class="hero-featured-image" />
+          <img src="assets/graphics/course-preview.png" alt="Softwareentwicklung mit Vibe Coding & Agentic AI Vorschau" class="hero-featured-image" />
           <span class="free-badge">Jetzt kostenlos testen</span>
         </div>
         <div class="hero-featured-body">
           <span class="course-status course-status--live">FEATURED</span>
-          <h2>01 - Vibe Coding Foundations</h2>
-          <p>Vibe Coding ist viel mehr als nur Prompting. Erlerne alle Konzepte der Software-Entwicklung die benötigt werden um mit KI auslieferbare und wartbare Software zu entwickeln. Nach dem Kurs bist du in der Lage die Entwicklung eines Produktes vom Scratch bis zur auslieferbaren Software durchzuführen und zu begleiten.</p>
+          <h2>Softwareentwicklung mit Vibe Coding &amp; Agentic AI</h2>
+          <p>Softwareentwicklung mit Vibe Coding &amp; Agentic AI: Von der Produktidee über Planung, Prototyping und Implementierung bis zu Deployment und Weiterentwicklung. Du lernst, wie KI-gestützte Produkte entstehen – und verstehst, was gebaut wird, warum es funktioniert und wo du prüfen, korrigieren oder bewusst anders entscheiden sollst.</p>
           <ul class="featured-list">
-            <li>AI Rapid Prototyping und Requirement Engineering</li>
-            <li>Setup der Architektur und Repositories für nachhaltiges Vibe Coding</li>
-            <li>Prompting-, Context- und Harness Engineering</li>
-            <li>Agent Management und Orchestrierung</li>
+            <li>Vibe Coding, Prompting, Context Engineering &amp; Harness Engineering</li>
+            <li>AI Literacy, Modellwahl, Token Management &amp; AI System Architecture</li>
+            <li>Agentic Software Engineering &amp; autonome Agenten orchestrieren</li>
+            <li>Eigenes Produkt im gewählten Schwerpunktpfad planen, bauen und ausliefern</li>
           </ul>
           <div class="featured-actions">
-            <a routerLink="/kursstart" class="card-cta">Kurs starten &rarr;</a>
+            <a [routerLink]="featuredCourseLink()" class="card-cta">{{ featuredCourseLabel() }} &rarr;</a>
           </div>
         </div>
       </article>
@@ -93,11 +93,23 @@
         <div class="audience-chips">
           <span class="audience-label">Geeignet für</span>
           <div class="chip-row">
-            <span class="chip">Product Owner</span>
-            <span class="chip">Scrum Master</span>
-            <span class="chip">Führungskräfte</span>
-            <span class="chip">Projektmanager</span>
-            <span class="chip">Fachkräfte</span>
+            <span class="chip">Produktverantwortliche</span>
+            <span class="chip">Fachpersonen</span>
+            <span class="chip">Einsteiger·innen</span>
+            <span class="chip">Teams mit KI-Ambitionen</span>
+          </div>
+          <span class="audience-label">Themen</span>
+          <div class="chip-row">
+            <span class="chip chip--topic">Vibe Coding</span>
+            <span class="chip chip--topic">Agentic AI</span>
+            <span class="chip chip--topic">Context Engineering</span>
+            <span class="chip chip--topic">Harness Engineering</span>
+            <span class="chip chip--topic">AI Literacy</span>
+            <span class="chip chip--topic">Prompt Engineering</span>
+            <span class="chip chip--topic">AI System Architecture</span>
+            <span class="chip chip--topic">RAG</span>
+            <span class="chip chip--topic">Right Sizing</span>
+            <span class="chip chip--topic">Token Management</span>
           </div>
         </div>
       </div>

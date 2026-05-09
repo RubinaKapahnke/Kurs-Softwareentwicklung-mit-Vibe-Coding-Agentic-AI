@@ -1,5 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 
+import { ONBOARDING_STEP_COUNT } from '../data/onboarding-steps.data';
+
 const KEY_EXP = 'onboarding_step2_exp';
 const KEY_VISIBILITY = 'onboarding_visibility_confirmed';
 const KEY_COMPLETED = 'onboarding_completed_steps';
@@ -9,7 +11,7 @@ const KEY_VOUCHER = 'onboarding_voucher';
 /** MVP: Ein einziger gültiger Code. Wird später durch echte API-Validierung ersetzt. */
 const VALID_VOUCHER_CODE = '90001';
 
-export type Step2ExperienceChoice = 'new' | 'existing' | null;
+export type Step2ExperienceChoice = 'new' | 'existing' | 'existing-beginner' | 'existing-experienced' | null;
 export type ParticipationStatus = 'active' | 'new' | null;
 export type HasVoucherAnswer = boolean | null;
 
@@ -45,8 +47,17 @@ export class OnboardingStateService {
     return [...this._completedSteps()].sort((a, b) => a - b);
   }
 
+  getFirstIncompleteStepId(): number | null {
+    for (let stepId = 1; stepId <= ONBOARDING_STEP_COUNT; stepId++) {
+      if (!this.isStepDone(stepId)) {
+        return stepId;
+      }
+    }
+    return null;
+  }
+
   markStepCompleted(stepId: number): void {
-    if (stepId < 1 || stepId > 6) return;
+    if (stepId < 1 || stepId > ONBOARDING_STEP_COUNT) return;
     this._completedSteps.update(set => new Set([...set, stepId]));
     this.persistCompletedSteps();
   }
@@ -79,7 +90,7 @@ export class OnboardingStateService {
   }
 
   setSubtaskDone(stepId: number, taskIndex: number, done: boolean): void {
-    if (stepId < 1 || stepId > 6 || taskIndex < 0) return;
+    if (stepId < 1 || stepId > ONBOARDING_STEP_COUNT || taskIndex < 0) return;
     this._completedSubtasks.update(current => {
       const next: Record<number, Set<number>> = { ...current };
       const stepTasks = new Set(next[stepId] ?? []);
@@ -132,6 +143,13 @@ export class OnboardingStateService {
     }
   }
 
+  /** Spezialisiert 'existing' zu 'existing-beginner' oder 'existing-experienced' */
+  setRepoExperience(experience: 'beginner' | 'experienced'): void {
+    const choice: Step2ExperienceChoice = experience === 'beginner' ? 'existing-beginner' : 'existing-experienced';
+    this._step2Experience.set(choice);
+    sessionStorage.setItem(KEY_EXP, choice);
+  }
+
   confirmGithubVisibility(confirmed: boolean): void {
     this._githubVisibilityConfirmed.set(confirmed);
     sessionStorage.setItem(KEY_VISIBILITY, confirmed ? '1' : '0');
@@ -139,8 +157,10 @@ export class OnboardingStateService {
 
   canCompleteStep2(): boolean {
     const exp = this._step2Experience();
-    if (exp === null) return false;
-    if (exp === 'existing') return this._githubVisibilityConfirmed();
+    if (exp === null || exp === 'existing') return false; // Nicht fertig bis spezialisiert
+    if (exp === 'existing-beginner' || exp === 'existing-experienced') {
+      return this._githubVisibilityConfirmed();
+    }
     return true;
   }
 
@@ -152,13 +172,13 @@ export class OnboardingStateService {
   }
 
   getProgressPercent(): number {
-    return (this._completedSteps().size / 6) * 100;
+    return (this._completedSteps().size / ONBOARDING_STEP_COUNT) * 100;
   }
 
   private loadCompletedSteps(): Set<number> {
     const stored = sessionStorage.getItem(KEY_COMPLETED);
     if (!stored) return new Set();
-    return new Set(stored.split(',').map(Number).filter(n => Number.isInteger(n) && n >= 1 && n <= 6));
+    return new Set(stored.split(',').map(Number).filter(n => Number.isInteger(n) && n >= 1 && n <= ONBOARDING_STEP_COUNT));
   }
 
   private persistCompletedSteps(): void {
@@ -173,7 +193,7 @@ export class OnboardingStateService {
       const parsed = JSON.parse(stored) as Record<string, number[]>;
       return Object.entries(parsed).reduce<Record<number, Set<number>>>((result, [stepId, indexes]) => {
         const numericStepId = Number(stepId);
-        if (!Number.isInteger(numericStepId) || numericStepId < 1 || numericStepId > 6 || !Array.isArray(indexes)) {
+        if (!Number.isInteger(numericStepId) || numericStepId < 1 || numericStepId > ONBOARDING_STEP_COUNT || !Array.isArray(indexes)) {
           return result;
         }
         result[numericStepId] = new Set(indexes.filter(index => Number.isInteger(index) && index >= 0));

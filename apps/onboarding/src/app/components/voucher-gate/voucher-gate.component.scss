@@ -1,0 +1,195 @@
+:host {
+  display: block;
+}
+
+.entry-question {
+  margin: 0;
+  padding: 2rem 1.5rem 1.75rem;
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--color-text) 94%, white),
+    color-mix(in srgb, var(--color-primary) 86%, black));
+}
+
+.entry-question__kicker {
+  margin: 0 0 0.5rem;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-caps);
+  font-weight: var(--font-weight-bold);
+  color: color-mix(in srgb, var(--color-secondary) 88%, white);
+}
+
+.entry-question__heading {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xl);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-on-dark);
+  line-height: var(--line-height-heading);
+}
+
+.entry-question__sub {
+  margin: 0 0 1.5rem;
+  color: var(--color-on-dark-subtle);
+  font-size: var(--font-size-sm);
+}
+
+.entry-question__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.voucher-sub-question,
+.voucher-input-block {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+}
+
+.voucher-input-block__label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-on-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  mat-icon {
+    font-size: 18px;
+  }
+}
+
+.voucher-input-block__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.voucher-input {
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  height: var(--button-height-md);
+  padding: 0 0.75rem;
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  transition: border-color 0.15s;
+
+  &:focus {
+    border-color: var(--color-primary);
+  }
+}
+
+.voucher-error,
+.voucher-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.6rem 0 0;
+  font-size: var(--font-size-xs);
+}
+
+.voucher-error {
+  color: var(--color-error);
+
+  mat-icon {
+    font-size: 18px;
+  }
+}
+
+.voucher-hint {
+  color: var(--color-on-dark-subtle);
+
+  mat-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+}
+
+.voucher-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border-success);
+  border-radius: var(--radius-md);
+  background: var(--surface-success);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+
+  mat-icon {
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+    color: var(--color-success);
+    font-size: var(--icon-size-lg);
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--color-success);
+    font-size: var(--font-size-sm);
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-text);
+  }
+}
+
+.contact-info-block {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border-warning);
+  border-radius: var(--radius-md);
+  background: var(--surface-warning);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.contact-info-block__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: var(--font-size-sm);
+
+  mat-icon {
+    color: color-mix(in srgb, var(--color-secondary) 70%, var(--color-text));
+  }
+}
+
+.contact-message-box {
+  margin-top: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.contact-message-box__text {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
+  white-space: pre-wrap;
+}
+
+.copy-btn {
+  width: 100%;
+  border-top: 1px solid var(--border-subtle);
+  border-radius: 0;
+  font-size: var(--font-size-xs);
+}

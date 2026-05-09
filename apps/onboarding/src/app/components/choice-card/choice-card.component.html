@@ -1,0 +1,17 @@
+<button
+  mat-stroked-button
+  type="button"
+  class="choice-card"
+  [class.choice-card--light]="tone() === 'light'"
+  [class.choice-card--selected]="selected()"
+  [class.choice-card--compact]="compact()"
+  [attr.aria-pressed]="selected()"
+  (click)="pressed.emit()">
+  <mat-icon aria-hidden="true">{{ icon() }}</mat-icon>
+  <span class="choice-card__text">
+    <span class="choice-card__label">{{ label() }}</span>
+    @if (description(); as text) {
+      <span class="choice-card__description">{{ text }}</span>
+    }
+  </span>
+</button>

@@ -25,13 +25,13 @@ body {
 
 :root {
   --mat-sys-primary: var(--color-primary);
-  --mat-sys-on-primary: #ffffff;
+  --mat-sys-on-primary: var(--color-on-dark);
   --mat-sys-secondary: var(--color-secondary);
-  --mat-sys-on-secondary: #ffffff;
+  --mat-sys-on-secondary: var(--color-on-dark);
   --mat-sys-tertiary: var(--color-tertiary);
-  --mat-sys-on-tertiary: #ffffff;
+  --mat-sys-on-tertiary: var(--color-on-dark);
   --mat-sys-error: var(--color-error);
-  --mat-sys-on-error: #ffffff;
+  --mat-sys-on-error: var(--color-on-dark);
   --mat-sys-surface: var(--color-surface);
   --mat-sys-on-surface: var(--color-text);
 }

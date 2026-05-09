@@ -1,8 +1,8 @@
 <mat-card class="summary-card" appearance="outlined">
   <mat-card-header>
-    <mat-card-title>Onboarding-Zusammenfassung</mat-card-title>
+    <mat-card-title>Modul-Zusammenfassung</mat-card-title>
     <mat-card-subtitle>
-      {{ completedCount() }} von 6 Schritten als erledigt markiert
+      {{ completedCount() }} von {{ stepCount }} Schritten als erledigt markiert
     </mat-card-subtitle>
   </mat-card-header>
 
@@ -13,7 +13,7 @@
         <mat-icon>celebration</mat-icon>
         <div>
           <strong>Alles erledigt!</strong>
-          <p>Du hast alle Setup-Schritte abgeschlossen. Herzlich willkommen im Kurs!</p>
+          <p>Du hast alle Schritte in diesem Modul abgeschlossen. Weiter geht es im Kurs.</p>
         </div>
       </div>
     } @else {
@@ -22,8 +22,8 @@
         <div>
           <strong>Noch nicht ganz fertig</strong>
           <p>
-            {{ 6 - completedCount() }} Schritt{{ (6 - completedCount()) === 1 ? '' : 'e' }}
-            {{ (6 - completedCount()) === 1 ? 'ist' : 'sind' }} noch nicht als erledigt markiert.
+            {{ stepCount - completedCount() }} Schritt{{ (stepCount - completedCount()) === 1 ? '' : 'e' }}
+            {{ (stepCount - completedCount()) === 1 ? 'ist' : 'sind' }} noch nicht als erledigt markiert.
             Klicke auf einen Schritt, um ihn abzuschließen.
           </p>
         </div>

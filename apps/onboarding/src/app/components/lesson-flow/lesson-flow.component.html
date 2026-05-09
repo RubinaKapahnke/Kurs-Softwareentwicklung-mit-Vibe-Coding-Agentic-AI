@@ -1,0 +1,135 @@
+@if (activeSlide(); as slide) {
+  <section class="lesson-flow">
+    <header class="lesson-flow__header">
+      <h3 class="lesson-flow__title">{{ lesson.title }}</h3>
+      <div class="lesson-flow__step-dots" aria-label="Lektionsfortschritt">
+        @for (slide of lesson.slides; track $index; let i = $index) {
+          <button
+            type="button"
+            class="lesson-flow__step-dot"
+            [class.lesson-flow__step-dot--active]="i === activeIndex()"
+            [attr.aria-current]="i === activeIndex() ? 'step' : null"
+            [attr.aria-label]="'Teil ' + (i + 1) + ' von ' + lesson.slides.length"
+            (click)="goToSlide(i)"
+          ></button>
+        }
+      </div>
+    </header>
+
+    @if (slide.type === 'content') {
+      <div class="lesson-flow__content">
+        @if (slide.title) {
+          <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
+        }
+
+        @for (section of slide.sections; track $index) {
+          <article class="lesson-section" [class.lesson-section--highlight]="section.tone === 'highlight'">
+            @if (section.heading) {
+              <h5 class="lesson-section__heading">{{ section.heading }}</h5>
+            }
+
+            @if (section.paragraphs?.length) {
+              @for (paragraph of section.paragraphs; track paragraph) {
+                <p [innerHTML]="linkifyText(paragraph)"></p>
+              }
+            }
+
+            @if (section.orderedItems?.length) {
+              <ol>
+                @for (item of section.orderedItems; track item) {
+                  <li [innerHTML]="linkifyText(item)"></li>
+                }
+              </ol>
+            }
+          </article>
+        }
+      </div>
+    }
+
+    @if (slide.type === 'quiz') {
+      <div class="lesson-flow__quiz">
+        <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
+        <p class="lesson-flow__prompt">{{ slide.prompt }}</p>
+        @if (slide.instruction) {
+          <p class="lesson-flow__instruction">{{ slide.instruction }}</p>
+        }
+
+        <div class="lesson-quiz-options">
+          @if (slide.multiSelect) {
+            @for (option of slide.options; track option.id) {
+              <div
+                class="lesson-quiz-option"
+                [class.lesson-quiz-option--correct]="showOptionCorrect(option.id)"
+                [class.lesson-quiz-option--incorrect]="showOptionIncorrect(option.id)">
+                <mat-checkbox
+                  [checked]="isOptionSelected(option.id)"
+                  [disabled]="quizEvaluated() && quizPassed()"
+                  (change)="onOptionToggle(option.id, $event.checked)">
+                  {{ option.label }}
+                </mat-checkbox>
+                @if (showOptionCorrect(option.id)) {
+                  <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--correct">check_circle</mat-icon>
+                }
+                @if (showOptionIncorrect(option.id)) {
+                  <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--incorrect">cancel</mat-icon>
+                }
+              </div>
+            }
+          } @else {
+            <mat-radio-group class="lesson-quiz-radio-group">
+              @for (option of slide.options; track option.id) {
+                <div
+                  class="lesson-quiz-option"
+                  [class.lesson-quiz-option--correct]="showOptionCorrect(option.id)"
+                  [class.lesson-quiz-option--incorrect]="showOptionIncorrect(option.id)">
+                  <mat-radio-button
+                    [value]="option.id"
+                    [checked]="isOptionSelected(option.id)"
+                    [disabled]="quizEvaluated() && quizPassed()"
+                    (change)="onRadioChange(option.id)">
+                    {{ option.label }}
+                  </mat-radio-button>
+                  @if (showOptionCorrect(option.id)) {
+                    <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--correct">check_circle</mat-icon>
+                  }
+                  @if (showOptionIncorrect(option.id)) {
+                    <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--incorrect">cancel</mat-icon>
+                  }
+                </div>
+              }
+            </mat-radio-group>
+          }
+        </div>
+
+        <div class="lesson-flow__quiz-actions">
+          <button mat-stroked-button type="button" (click)="checkQuizAnswers()">Antworten prüfen</button>
+        </div>
+
+        @if (quizEvaluated()) {
+          <p class="lesson-flow__quiz-feedback" [class.lesson-flow__quiz-feedback--success]="quizPassed()" [class.lesson-flow__quiz-feedback--error]="!quizPassed()">
+            {{ quizPassed() ? slide.successMessage : (slide.errorMessage ?? 'Bitte prüfe deine Auswahl erneut.') }}
+          </p>
+        }
+      </div>
+    }
+
+    <footer class="lesson-flow__actions">
+      <button
+        mat-stroked-button
+        type="button"
+        class="lesson-flow__back"
+        [style.visibility]="isFirstSlide() ? 'hidden' : 'visible'"
+        (click)="goPrev()">
+        Zurück
+      </button>
+      <button
+        mat-flat-button
+        type="button"
+        class="lesson-flow__continue"
+        [disabled]="!canContinue() || (isLastSlide() && lesson.disableFinishAction)"
+        (click)="continue()">
+        {{ isLastSlide() ? (lesson.disableFinishAction ? 'Lektion abgeschlossen' : (lesson.finishLabel ?? 'Lektion abgeschlossen')) : (lesson.continueLabel ?? 'Weiter') }}
+      </button>
+    </footer>
+  </section>
+}

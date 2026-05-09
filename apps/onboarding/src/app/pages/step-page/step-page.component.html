@@ -1,145 +1,34 @@
 <mat-card class="step-card" appearance="outlined">
-  <mat-card-header>
-    <mat-card-title>Schritt {{ step().id }}: {{ step().title }}</mat-card-title>
-    @if (step().goal) {
-      <mat-card-subtitle>{{ step().goal }}</mat-card-subtitle>
+  <section class="step-header-banner" aria-label="Schrittüberschrift">
+    <p class="step-header-banner__kicker">Schritt {{ step().id }}</p>
+    <h1 class="step-header-banner__title">{{ isAccountChoiceStep() ? step3Title() : step().title }}</h1>
+    @if (isAccountChoiceStep() ? step3Goal() : step().goal) {
+      <p class="step-header-banner__subtitle">{{ isAccountChoiceStep() ? step3Goal() : step().goal }}</p>
     }
-  </mat-card-header>
+  </section>
+
+  @if (isVoucherStep()) {
+    <app-voucher-gate
+      [voucherValidated]="state.voucherValidated()"
+      [participationStatus]="state.participationStatus()"
+      [hasVoucherAnswer]="state.hasVoucherAnswer()"
+      [showVoucherInput]="showVoucherInput()"
+      [showContactInfo]="showContactInfo()"
+      [voucherInput]="voucherInput()"
+      [voucherError]="voucherError()"
+      [voucherCopied]="voucherCopied()"
+      (participationStatusSelected)="setParticipationStatus($event)"
+      (hasVoucherSelected)="setHasVoucher($event)"
+      (voucherInputChanged)="updateVoucherInput($event)"
+      (voucherSubmitted)="submitVoucher()"
+      (contactMessageCopied)="copyContactMessage()"></app-voucher-gate>
+  }
 
   @if (isAccountChoiceStep()) {
-    <section class="entry-question">
+    <section class="entry-question account-choice">
       <div class="entry-question__inner">
 
-        @if (!state.voucherValidated()) {
-          <!-- ── Voucher-Gate ── -->
-          <p class="entry-question__kicker">Bevor es losgeht</p>
-          <h2 class="entry-question__heading">Nimmst du bereits aktiv an einem Kurs der KnOot Academy teil?</h2>
-          <p class="entry-question__sub">Wähle eine Option – wir prüfen kurz deinen Zugang.</p>
-
-          <div class="entry-question__options">
-            <button
-              mat-stroked-button
-              type="button"
-              class="entry-option"
-              [class.entry-option--selected]="state.participationStatus() === 'active'"
-              (click)="setParticipationStatus('active')">
-              <mat-icon>school</mat-icon>
-              <span class="entry-option__text">
-                <span class="entry-option__label">Ja, ich bin aktiv dabei</span>
-                <span class="entry-option__desc">Ich nehme bereits an einem KnOot-Kurs teil.</span>
-              </span>
-            </button>
-
-            <button
-              mat-stroked-button
-              type="button"
-              class="entry-option"
-              [class.entry-option--selected]="state.participationStatus() === 'new'"
-              (click)="setParticipationStatus('new')">
-              <mat-icon>waving_hand</mat-icon>
-              <span class="entry-option__text">
-                <span class="entry-option__label">Nein, noch nicht</span>
-                <span class="entry-option__desc">Ich möchte mit dem Kurs starten.</span>
-              </span>
-            </button>
-          </div>
-
-          @if (state.participationStatus() === 'new') {
-            <div class="voucher-sub-question">
-              <p class="entry-question__sub">Hast du bereits einen Voucher-Code erhalten?</p>
-              <div class="entry-question__options">
-                <button
-                  mat-stroked-button
-                  type="button"
-                  class="entry-option"
-                  [class.entry-option--selected]="state.hasVoucherAnswer() === true"
-                  (click)="setHasVoucher(true)">
-                  <mat-icon>confirmation_number</mat-icon>
-                  <span class="entry-option__text">
-                    <span class="entry-option__label">Ja, ich habe einen Code</span>
-                    <span class="entry-option__desc">Ich gebe ihn gleich ein.</span>
-                  </span>
-                </button>
-
-                <button
-                  mat-stroked-button
-                  type="button"
-                  class="entry-option"
-                  [class.entry-option--selected]="state.hasVoucherAnswer() === false"
-                  (click)="setHasVoucher(false)">
-                  <mat-icon>mail_outline</mat-icon>
-                  <span class="entry-option__text">
-                    <span class="entry-option__label">Nein, noch keinen</span>
-                    <span class="entry-option__desc">Ich möchte einen Kursplatz anfragen.</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          }
-
-          @if (showVoucherInput()) {
-            <div class="voucher-input-block">
-              <label class="voucher-input-block__label" for="voucher-input">
-                <mat-icon>vpn_key</mat-icon>
-                Dein Voucher-Code
-              </label>
-              <div class="voucher-input-block__row">
-                <input
-                  id="voucher-input"
-                  class="voucher-input"
-                  type="text"
-                  placeholder="Voucher-Code eingeben"
-                  autocomplete="off"
-                  [value]="voucherInput()"
-                  (input)="voucherInput.set($any($event.target).value); voucherError.set(false)"
-                  (keydown.enter)="submitVoucher()">
-                <button mat-flat-button type="button" color="primary" (click)="submitVoucher()">
-                  Bestätigen
-                </button>
-              </div>
-              @if (voucherError()) {
-                <p class="voucher-error" role="alert">
-                  <mat-icon>error_outline</mat-icon>
-                  Code ungültig. Bitte prüfe deine Eingabe oder wende dich an die Trainerin.
-                </p>
-              }
-              @if (state.participationStatus() === 'active') {
-                <p class="voucher-hint">
-                  <mat-icon>info_outline</mat-icon>
-                  Noch keinen Code erhalten? Sprich deine Dozentin darauf an.
-                </p>
-              }
-            </div>
-          }
-
-          @if (showContactInfo()) {
-            <div class="contact-info-block">
-              <div class="contact-info-block__header">
-                <mat-icon aria-hidden="true">info</mat-icon>
-                <strong>Noch kein Kursplatz?</strong>
-              </div>
-              <p>
-                Schreib uns über das
-                <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener">Kontaktformular</a>
-                an. Du kannst diese Nachricht einfach kopieren:
-              </p>
-              <div class="contact-message-box">
-                <pre class="contact-message-box__text">Hallo KnOot Academy Team,
-
-ich interessiere mich für die Teilnahme an eurem Kurs "Vibe Coding Basics" und bitte um einen Zugangs-Voucher.
-
-Vielen Dank!
-[Dein Name]</pre>
-                <button mat-stroked-button type="button" class="copy-btn" (click)="copyContactMessage()">
-                  <mat-icon>{{ voucherCopied() ? 'check' : 'content_copy' }}</mat-icon>
-                  {{ voucherCopied() ? 'Kopiert!' : 'Nachricht kopieren' }}
-                </button>
-              </div>
-            </div>
-          }
-
-        } @else {
-          <!-- ── Voucher validiert: Bestätigung + GitHub-Frage ── -->
+        @if (state.voucherValidated() && state.step2Experience() === null) {
           @if (showVoucherSuccess()) {
             <div class="voucher-success" role="status" aria-live="polite">
               <mat-icon>check_circle</mat-icon>
@@ -153,45 +42,22 @@ Vielen Dank!
           <p class="entry-question__kicker">Bevor es losgeht</p>
           <h2 class="entry-question__heading">Hast du schon einen GitHub-Account?</h2>
 
-          <div class="entry-question__options">
-            <button
-              mat-stroked-button
-              type="button"
-              class="entry-option"
-              [class.entry-option--selected]="state.step2Experience() === 'new'"
-              (click)="selectExperience('new')">
-              <mat-icon>person_add</mat-icon>
-              <span class="entry-option__text">
-                <span class="entry-option__label">Nein, ich starte neu</span>
-                <span class="entry-option__desc">Ich richte jetzt einen GitHub-Account ein.</span>
-              </span>
-            </button>
+          <div class="entry-question__options entry-question__options--account">
+            <app-choice-card
+              icon="person_add"
+              label="Nein, ich starte neu"
+              tone="light"
+              [compact]="true"
+              [selected]="state.step2Experience() === 'new'"
+              (pressed)="selectExperience('new')" />
 
-            <button
-              mat-stroked-button
-              type="button"
-              class="entry-option"
-              [class.entry-option--selected]="state.step2Experience() === 'existing'"
-              (click)="selectExperience('existing')">
-              <mat-icon>person</mat-icon>
-              <span class="entry-option__text">
-                <span class="entry-option__label">Ja, ich habe bereits einen</span>
-                <span class="entry-option__desc">Ich nutze meinen bestehenden Account.</span>
-              </span>
-            </button>
-
-            <button
-              mat-stroked-button
-              type="button"
-              class="entry-option entry-option--info"
-              [class.entry-option--active]="showGithubExplanation()"
-              (click)="toggleGithubExplanation()">
-              <mat-icon>help_outline</mat-icon>
-              <span class="entry-option__text">
-                <span class="entry-option__label">Was ist GitHub?</span>
-                <span class="entry-option__desc">Ich bin noch nicht sicher, was das ist.</span>
-              </span>
-            </button>
+            <app-choice-card
+              icon="person"
+              label="Ja, ich habe bereits einen"
+              tone="light"
+              [compact]="true"
+              [selected]="state.step2Experience() === 'existing'"
+              (pressed)="selectExperience('existing')" />
           </div>
 
         }
@@ -202,8 +68,16 @@ Vielen Dank!
 
   <mat-card-content>
 
-    <!-- Markdown-Erklärung falls vorhanden -->
-    @if (step().markdownSource) {
+    <!-- Lesson Flow (z.B. Schritt 3: GitHub, Schritt 7: Was ist VS Code?, Schritt 9: Was ist Git?) -->
+    @if (visibleLessonFlow(); as lessonFlow) {
+      <div class="lesson-flow-section" #lessonFlowSection>
+        <app-lesson-flow [lesson]="lessonFlow" (finished)="onLessonFinished()"></app-lesson-flow>
+      </div>
+      <mat-divider></mat-divider>
+    }
+
+    <!-- Markdown-Erklärung nur ohne Lesson Flow -->
+    @if (step().markdownSource && !step().lessonFlow) {
       <app-markdown-view [src]="step().markdownSource"></app-markdown-view>
       <mat-divider></mat-divider>
     }
@@ -211,8 +85,54 @@ Vielen Dank!
       <!-- Nur anzeigen wenn Voucher validiert UND Auswahl getroffen oder Erklärmodus aktiv -->
       @if (isAccountChoiceStep() && state.voucherValidated() && state.step2Experience()) {
 
-        <!-- GitHub-Sichtbarkeitswarnung bei bestehendem Account -->
-        @if (state.step2Experience() === 'existing') {
+        <!-- Step 3b: Zweite Frage - wie sicher mit Repos? (nur wenn 'existing' gewählt) -->
+        @if (showRepoExperienceQuestion()) {
+          <section class="step-section repo-experience-section">
+            <h3>Wie sicher bist du mit GitHub Repos und Git-Befehlen?</h3>
+            <p>Das bestimmt, welche Erklärungen du jetzt brauchst.</p>
+
+            <div class="repo-experience-options">
+              <app-choice-card
+                icon="school"
+                label="Anfänger - ich brauche Erklärungen"
+                description="Ich habe GitHub genutzt, aber nicht mit Repos/Git."
+                tone="light"
+                [selected]="state.step2Experience() === 'existing-beginner'"
+                (pressed)="selectRepoExperience('beginner')" />
+
+              <app-choice-card
+                icon="verified_user"
+                label="Erfahren - ich kenne Repos und Git"
+                description="Ich arbeite regelmäßig mit Git und Repos."
+                tone="light"
+                [selected]="state.step2Experience() === 'existing-experienced'"
+                (pressed)="selectRepoExperience('experienced')" />
+            </div>
+          </section>
+        }
+
+        <!-- Für Anfänger mit Account: Info, dass volle Erklärung kommt -->
+        @if (state.step2Experience() === 'existing-beginner') {
+          <app-callout icon="info" title="Du bekommst eine volle Erklärung" roleName="status">
+            <p class="info-section__text">
+              Wir erklären dir Schritt für Schritt, wie GitHub Repos funktionieren und wie du sie im Kurs verwendest. Keine Vorkenntnisse nötig.
+            </p>
+          </app-callout>
+          <mat-divider></mat-divider>
+        }
+
+        <!-- Für erfahrene GitHub-Nutzer: Info, dass Erklärung übersprungen wird -->
+        @if (state.step2Experience() === 'existing-experienced') {
+          <app-callout icon="info" title="Du kennst dich aus - wir machen es kurz" roleName="status">
+            <p class="info-section__text">
+              Wir überspringen die ausführliche GitHub/Git-Erklärung. Wichtig ist nur: Du bist mit deinem Account eingeloggt, und du verstehst, dass dein Benutzername im gemeinsamen Kurs-Repository sichtbar sein wird.
+            </p>
+          </app-callout>
+          <mat-divider></mat-divider>
+        }
+
+        <!-- GitHub-Sichtbarkeitswarnung bei bestehendem Account (beide existing-* Pfade) -->
+        @if (state.step2Experience() === 'existing-beginner' || state.step2Experience() === 'existing-experienced') {
           <section class="security-hint" role="alert">
             <div class="security-hint__header">
               <span class="security-hint__icon" aria-hidden="true">
@@ -243,26 +163,12 @@ Vielen Dank!
           </section>
         }
 
-        <mat-divider></mat-divider>
+        @if (!showRepoExperienceQuestion()) {
+          <mat-divider></mat-divider>
+        }
       }
 
     @if (showAccountStepContent()) {
-
-    <!-- Schritt 2: Eigenes Übungs-Repo anlegen -->
-    @if (isOwnRepoStep()) {
-      <section class="walkthrough-section">
-        <h3 class="walkthrough-title">So legst du dein Übungs-Repo an</h3>
-        <ol class="walkthrough-steps">
-          <li>Gehe zu <a href="https://github.com" target="_blank" rel="noopener">github.com</a> – stelle sicher, dass du eingeloggt bist.</li>
-          <li>Klick oben rechts auf das <strong>+</strong> → <strong>„New repository"</strong>.</li>
-          <li>Gib deinem Repo einen Namen, z. B. <code class="code-inline">mein-vibe-coding</code>.</li>
-          <li>Sichtbarkeit: <strong>Private</strong> reicht – du lädst die Trainerin gleich im nächsten Schritt ein.</li>
-          <li>Setze den Haken bei <strong>„Add a README file"</strong>.</li>
-          <li>Klick auf <strong>„Create repository"</strong>.</li>
-        </ol>
-      </section>
-      <mat-divider></mat-divider>
-    }
 
     <!-- Schritt 3: Trainerin einladen -->
     @if (isInviteStep()) {
@@ -273,7 +179,10 @@ Vielen Dank!
           <li>Klick auf <strong>„Settings"</strong> (Zahnrad-Tab ganz rechts in der Repo-Navigation).</li>
           <li>Im linken Menü unter <em>Access</em>: <strong>„Collaborators"</strong>.</li>
           <li>Klick auf <strong>„Add people"</strong>.</li>
-          <li>Tippe den Benutzernamen: <code class="code-inline">RubinaKapahnke</code></li>
+          <li>
+            Tippe den Benutzernamen:
+            <a href="https://github.com/RubinaKapahnke" target="_blank" rel="noopener" class="git-link">RubinaKapahnke</a>
+          </li>
           <li>Klick auf das erscheinende Profil → <strong>„Add collaborator"</strong>.</li>
         </ol>
         <div class="invite-hint">
@@ -326,8 +235,88 @@ Vielen Dank!
       <mat-divider></mat-divider>
     }
 
-    <!-- Schritt 5: Git + VS Code + Terminal installieren -->
-    @if (isSetupStep()) {
+
+
+    <!-- Schritt 7: VS Code installieren -->
+    @if (isVscodeInstallStep()) {
+      <section class="vscode-install-section">
+        <p>
+          Lade VS Code von
+          <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="git-link">code.visualstudio.com</a>
+          herunter.
+        </p>
+
+        <mat-tab-group class="os-tabs" animationDuration="150ms">
+
+          <!-- ── Windows ── -->
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="tab-icon">desktop_windows</mat-icon>
+              Windows
+            </ng-template>
+            <div class="os-tab-content">
+              <ol>
+                <li>Öffne <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="git-link">code.visualstudio.com</a> und klicke auf den großen blauen „Download for Windows"-Button.</li>
+                <li>Starte den heruntergeladenen Installer (<code class="code-inline">.exe</code>).</li>
+                <li>Alle Standardwerte übernehmen – einfach auf „Weiter" klicken. Am Ende auf „Installieren" klicken.</li>
+              </ol>
+              <p class="os-hint"><strong>Tipp:</strong> Setze beim Installer den Haken bei „Zu PATH hinzufügen" – dann kannst du VS Code später direkt aus dem Terminal öffnen.</p>
+            </div>
+          </mat-tab>
+
+          <!-- ── macOS ── -->
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="tab-icon">laptop_mac</mat-icon>
+              macOS
+            </ng-template>
+            <div class="os-tab-content">
+              <p><strong>Option A: Direktdownload (einfachster Weg)</strong></p>
+              <ol>
+                <li>Öffne <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="git-link">code.visualstudio.com</a> und klicke auf „Download for Mac".</li>
+                <li>Entpacke die heruntergeladene <code class="code-inline">.zip</code>-Datei (Doppelklick).</li>
+                <li>Ziehe <strong>Visual Studio Code.app</strong> in den <strong>Programme</strong>-Ordner.</li>
+              </ol>
+              <p class="os-hint"><strong>Damit du VS Code auch aus dem Terminal öffnen kannst:</strong><br>
+                VS Code öffnen → <kbd>Cmd+Shift+P</kbd> → „shell command" eingeben →
+                <em>Shell Command: Install 'code' command in PATH</em> auswählen und bestätigen.</p>
+              <p><strong>Option B: Homebrew</strong></p>
+              <code class="code-block">brew install --cask visual-studio-code</code>
+            </div>
+          </mat-tab>
+
+          <!-- ── Linux ── -->
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="tab-icon">terminal</mat-icon>
+              Linux
+            </ng-template>
+            <div class="os-tab-content os-tab-content--no-support">
+              <div class="no-support-banner">
+                <mat-icon aria-hidden="true">build_circle</mat-icon>
+                <div>
+                  <strong>Linux: kein offizieller Kurssupport</strong>
+                  <p>
+                    Du kannst VS Code auf Linux problemlos nutzen –
+                    Installation und Problemlösung liegen aber in deiner eigenen Verantwortung.
+                  </p>
+                </div>
+              </div>
+              <p>Empfohlener Weg (Snap):</p>
+              <code class="code-block">sudo snap install code --classic</code>
+              <p>Oder über das offizielle Repository:
+                <a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener" class="git-link">code.visualstudio.com/docs/setup/linux</a>
+              </p>
+            </div>
+          </mat-tab>
+
+        </mat-tab-group>
+      </section>
+      <mat-divider></mat-divider>
+    }
+
+    <!-- Schritt 9: Git installieren -->
+    @if (isGitInstallStep()) {
       <section class="git-intro-section">
 
         <mat-tab-group class="os-tabs" animationDuration="150ms">
@@ -418,43 +407,6 @@ Vielen Dank!
 
         </mat-tab-group>
 
-        <button
-          type="button"
-          class="git-explain-toggle"
-          [class.git-explain-toggle--open]="showGitExplanation()"
-          (click)="toggleGitExplanation()"
-          [attr.aria-expanded]="showGitExplanation()">
-          <mat-icon>{{ showGitExplanation() ? 'expand_less' : 'help_outline' }}</mat-icon>
-          <span>Was ist Git und warum muss ich es installieren?</span>
-        </button>
-
-        @if (showGitExplanation()) {
-          <div class="git-explainer" role="region" aria-label="Was ist Git?">
-            <div class="git-explainer__header">
-              <mat-icon aria-hidden="true">school</mat-icon>
-              <strong>Git kurz erklärt</strong>
-            </div>
-            <p>
-              <strong>Git</strong> ist ein Programm, das Änderungen an Dateien
-              aufzeichnet – wie eine Zeitmaschine für deinen Code.
-              Wenn du etwas kaputt machst, kannst du einfach zu einem
-              früheren Stand zurückgehen.
-            </p>
-            <p>Im Kurs benutzt du Git, um:</p>
-            <ul>
-              <li>deine Änderungen zu speichern (<em>Commit</em>)</li>
-              <li>parallel an verschiedenen Aufgaben zu arbeiten (<em>Branch</em>)</li>
-              <li>deine Arbeit auf GitHub hochzuladen (<em>Push</em>)</li>
-            </ul>
-            <p>
-              Git läuft lokal auf deinem Rechner und ist
-              <strong>komplett kostenlos</strong>.
-              GitHub (das haben wir im letzten Schritt eingerichtet) ist die
-              Online-Plattform, auf der Git-Projekte gespeichert werden.
-            </p>
-          </div>
-        }
-
         <div class="git-nowwhat-hint" role="note">
           <mat-icon aria-hidden="true">info</mat-icon>
           <div>
@@ -473,82 +425,6 @@ Vielen Dank!
         </div>
       </section>
 
-      <section class="vscode-install-section">
-        <h3 class="section-subtitle">VS Code installieren</h3>
-        <p>
-          VS Code ist der Code-Editor, den wir im Kurs verwenden.
-          Lade ihn von
-          <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="git-link">code.visualstudio.com</a>
-          herunter.
-        </p>
-
-        <mat-tab-group class="os-tabs" animationDuration="150ms">
-
-          <!-- ── Windows ── -->
-          <mat-tab>
-            <ng-template mat-tab-label>
-              <mat-icon class="tab-icon">desktop_windows</mat-icon>
-              Windows
-            </ng-template>
-            <div class="os-tab-content">
-              <ol>
-                <li>Öffne <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="git-link">code.visualstudio.com</a> und klicke auf den großen blauen „Download for Windows"-Button.</li>
-                <li>Starte den heruntergeladenen Installer (<code class="code-inline">.exe</code>).</li>
-                <li>Alle Standardwerte übernehmen – einfach auf „Weiter" klicken. Am Ende auf „Installieren" klicken.</li>
-              </ol>
-              <p class="os-hint"><strong>Tipp:</strong> Setze beim Installer den Haken bei „Zu PATH hinzufügen" – dann kannst du VS Code später direkt aus dem Terminal öffnen.</p>
-            </div>
-          </mat-tab>
-
-          <!-- ── macOS ── -->
-          <mat-tab>
-            <ng-template mat-tab-label>
-              <mat-icon class="tab-icon">laptop_mac</mat-icon>
-              macOS
-            </ng-template>
-            <div class="os-tab-content">
-              <p><strong>Option A: Direktdownload (einfachster Weg)</strong></p>
-              <ol>
-                <li>Öffne <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="git-link">code.visualstudio.com</a> und klicke auf „Download for Mac".</li>
-                <li>Entpacke die heruntergeladene <code class="code-inline">.zip</code>-Datei (Doppelklick).</li>
-                <li>Ziehe <strong>Visual Studio Code.app</strong> in den <strong>Programme</strong>-Ordner.</li>
-              </ol>
-              <p class="os-hint"><strong>Damit du VS Code auch aus dem Terminal öffnen kannst:</strong><br>
-                VS Code öffnen → <kbd>Cmd+Shift+P</kbd> → „shell command" eingeben →
-                <em>Shell Command: Install 'code' command in PATH</em> auswählen und bestätigen.</p>
-              <p><strong>Option B: Homebrew</strong></p>
-              <code class="code-block">brew install --cask visual-studio-code</code>
-            </div>
-          </mat-tab>
-
-          <!-- ── Linux ── -->
-          <mat-tab>
-            <ng-template mat-tab-label>
-              <mat-icon class="tab-icon">terminal</mat-icon>
-              Linux
-            </ng-template>
-            <div class="os-tab-content os-tab-content--no-support">
-              <div class="no-support-banner">
-                <mat-icon aria-hidden="true">build_circle</mat-icon>
-                <div>
-                  <strong>Linux: kein offizieller Kurssupport</strong>
-                  <p>
-                    Du kannst VS Code auf Linux problemlos nutzen –
-                    Installation und Problemlösung liegen aber in deiner eigenen Verantwortung.
-                  </p>
-                </div>
-              </div>
-              <p>Empfohlener Weg (Snap):</p>
-              <code class="code-block">sudo snap install code --classic</code>
-              <p>Oder über das offizielle Repository:
-                <a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener" class="git-link">code.visualstudio.com/docs/setup/linux</a>
-              </p>
-            </div>
-          </mat-tab>
-
-        </mat-tab-group>
-      </section>
-
       <section class="terminal-check-section">
         <h3 class="section-subtitle">Git im Terminal prüfen</h3>
         <p>Starte VS Code, öffne ein Terminal (<strong>Terminal → Neues Terminal</strong>) und tippe:</p>
@@ -559,32 +435,19 @@ Vielen Dank!
       <mat-divider></mat-divider>
     }
 
-    @if (showAccountStepFullInstructions() || (isAccountChoiceStep() && showAccountStepContent())) {
-      <section class="step-section">
-        <h3>Was ist zu tun?</h3>
-        <div class="subtask-list" role="list">
-          @if (showAccountStepFullInstructions()) {
-            @for (task of step().tasks; track task; let index = $index) {
-              <mat-checkbox
-                class="subtask-item"
-                role="listitem"
-                [checked]="isSubtaskDone(index)"
-                (change)="onSubtaskChange(index, $event.checked)">
-                {{ task }}
-              </mat-checkbox>
-            }
-          }
-          @if (isAccountChoiceStep()) {
-            <mat-checkbox
-              class="subtask-item"
-              role="listitem"
-              [checked]="githubProfileShareDone()"
-              (change)="onSubtaskChange(githubProfileShareTaskIndex(), $event.checked)">
-              {{ githubProfileShareTask }}
-            </mat-checkbox>
-          }
-        </div>
-      </section>
+    @if (showTodoSection()) {
+      <app-step-tasks
+        #todoSection
+        [tasks]="step().tasks"
+        [isAccountChoiceStep]="isAccountChoiceStep()"
+        [isInviteStep]="isInviteStep()"
+        [showAccountStepFullInstructions]="showAccountStepFullInstructions()"
+        [step2Experience]="state.step2Experience()"
+        [isSubtaskDone]="isStepSubtaskDone"
+        [githubProfileShareTask]="githubProfileShareTask"
+        [githubProfileShareTaskIndex]="githubProfileShareTaskIndex()"
+        [githubProfileShareDone]="githubProfileShareDone()"
+        (subtaskChanged)="onStepSubtaskChange($event)"></app-step-tasks>
     }
 
     @if (showAccountSecurityHint()) {
@@ -601,36 +464,10 @@ Vielen Dank!
             <li>Aktiviere Zwei-Faktor-Authentifizierung (2FA) in den GitHub-Einstellungen.</li>
           </ul>
           <p class="security-hint__reason">
-            Dein Account bekommt Zugriff auf das Kurs-Repository. Wenn er gehackt wird, kann auch Kurscode betroffen sein.
+            Dein Account bekommt Zugriff auf das Kurs-Repository. Wenn er gehackt wird, kann der ganze Kurs betroffen sein.
           </p>
         </div>
       </div>
-    }
-
-    @if (step().fallbackHelp.length) {
-      <mat-divider></mat-divider>
-
-      <section class="step-section">
-        <h3>Falls es nicht klappt</h3>
-        <mat-list>
-          @for (tip of step().fallbackHelp; track tip.title) {
-            <mat-list-item>
-              <mat-icon matListItemIcon>help_outline</mat-icon>
-              <div matListItemTitle>{{ tip.title }}</div>
-              <div matListItemLine>{{ tip.detail }}</div>
-            </mat-list-item>
-          }
-        </mat-list>
-      </section>
-    }
-
-    <mat-divider></mat-divider>
-
-    @if (step().successCriterion) {
-      <section class="step-section success-box" aria-label="Erfolgskriterium">
-        <h3>Woran erkenne ich Erfolg?</h3>
-        <p>{{ step().successCriterion }}</p>
-      </section>
     }
 
     @if (step().resources?.length && showStepResources()) {
@@ -650,7 +487,7 @@ Vielen Dank!
       </section>
     }
 
-    @if (step().vscodeHint?.length && !isBrueckeStep()) {
+    @if (step().vscodeHint?.length && !isCloneStep()) {
       <mat-divider></mat-divider>
       <section class="step-section">
         <h3>Alternative in VS Code</h3>
@@ -663,7 +500,7 @@ Vielen Dank!
     }
 
     <!-- Schritt 6: Kurs-Repo klonen -->
-    @if (isBrueckeStep()) {
+    @if (isCloneStep()) {
       <mat-divider></mat-divider>
       <section class="step-section bridge-section">
 
@@ -729,7 +566,7 @@ Vielen Dank!
 
     <span class="actions-spacer"></span>
 
-    @if (!isBrueckeStep()) {
+    @if (!isFinishStep() && !isVoucherStep()) {
       <button
         mat-stroked-button
         type="button"
@@ -742,13 +579,13 @@ Vielen Dank!
       </button>
     }
 
-    @if (step().id < 6) {
+    @if (step().id < stepCount) {
       <button mat-flat-button type="button" class="secondary" (click)="goToNextStep()">
         Weiter
       </button>
     }
 
-    @if (isBrueckeStep()) {
+    @if (isFinishStep()) {
       <button mat-raised-button type="button" color="primary" (click)="finishOnboarding()">
         <mat-icon>celebration</mat-icon>
         Onboarding abgeschlossen!
