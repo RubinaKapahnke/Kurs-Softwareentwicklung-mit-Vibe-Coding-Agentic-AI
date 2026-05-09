@@ -30,14 +30,21 @@ Arbeite in genau dieser Reihenfolge:
 - Definiere klare Signale, wann ein Vorschlag nicht mehr MVP ist.
 - Gib je Signal eine kurze Gegenmassnahme.
 
-5. **Definition of Done (DoD)**
+5. **Architektur-Gate gegen Code-Monster**
+- Pruefe, welche bestehenden Komponenten, Material-Patterns, Tokens, Markdown-Dateien oder Datenmodelle genutzt werden koennen.
+- Nenne neue Komponenten nur, wenn sie absehbar mehrfach eingesetzt werden oder eine monolithische Datei deutlich entlasten.
+- Falls eine neue Komponente nur fuer einen Einzelfall gedacht ist: nicht direkt anlegen, sondern die Rueckfrage formulieren, wie damit umgegangen werden soll.
+- Halte Styles klein und tokenbasiert: keine hardcodierten Komponentenfarben, kein `!important`, keine Inline-Styles.
+
+6. **Definition of Done (DoD)**
 - 3 bis 5 pruefbare Kriterien.
 - Mindestens enthalten:
   - Linearer Flow mit hoechstens 6 Schritten
   - Pro Schritt ein Erfolgskriterium
   - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `NEXT_STEPS.md` ohne Vorwissen
+  - Keine neue monolithische Page/Komponente und keine unnoetige Komponenten-Vermehrung
 
-6. **Naechster Umsetzungsschritt**
+7. **Naechster Umsetzungsschritt**
 - Nenne genau einen kleinsten technischen Startschritt im bestehenden App-Schnitt des Repos.
 
 Antwortformat:
@@ -45,5 +52,6 @@ Antwortformat:
 - In-Scope
 - Out-of-Scope
 - Drift-Signale
+- Architektur-Gate
 - DoD
 - Naechster Schritt

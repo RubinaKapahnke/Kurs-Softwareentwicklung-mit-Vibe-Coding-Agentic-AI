@@ -43,6 +43,18 @@ Bestehende Struktur unter `apps/onboarding/src/app/` als Standard weiterverwende
 
 Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine parallele `features/step-01-*`-Struktur ein, solange dafuer kein expliziter Umbau beschlossen ist.
 
+## Komponenten-Governance gegen Code-Monster
+
+- `pages/**` sind Orchestratoren: Route, State-Anbindung, grobe Seitengliederung und Events. Sie sollen keine langen, wiederholten UI-Bloecke oder fachlichen Mini-Flows aufnehmen.
+- Wiederkehrende UI-Muster zuerst mit bestehenden Komponenten loesen: `app-choice-card`, `app-callout`, `app-lesson-flow`, `app-markdown-view`, `app-step-tasks`, `app-voucher-gate`.
+- Neue Komponenten nur anlegen, wenn mindestens eines gilt:
+  - Das Muster wird absehbar an mehreren Stellen genutzt.
+  - Ein bestehendes Template/SCSS-File wird sonst deutlich zu gross oder schwer lesbar.
+  - Die Komponente hat eine klare fachliche Verantwortung mit eigenen Inputs/Outputs.
+- Keine Komponenten fuer einmalige Kleinst-Markups anlegen. Nutze dafuer bestehende Material-Komponenten, CSS-Utilities oder lokale Template-Struktur.
+- Wenn unklar ist, ob neue Komponente oder bestehende Wiederverwendung besser ist: erst kurz die Optionen mit Folgen nennen und nach Freigabe fragen.
+- Vor groesseren App-Erweiterungen kurz pruefen: Welche vorhandene Komponente kann erweitert werden? Welche Daten/Markdown-Inhalte koennen statt Template-Code genutzt werden?
+
 ## UX- und Textregeln
 
 - Schreibe anfaengerfreundlich und konkret.
@@ -56,6 +68,7 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 - TypeScript Strict ohne any.
 - Keine monolithischen Komponenten.
+- Keine wachsenden Template-/SCSS-Monolithe: bei wiederholten Bloecken oder schwer scanbaren Dateien frueh extrahieren oder vereinfachen.
 - Relevante Typen und Zustandsuebergaenge explizit modellieren.
 - Build und Typecheck nach groesseren Aenderungen ausfuehren.
 
@@ -72,6 +85,41 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 - Rendering erfolgt ueber die bestehende Komponente `apps/onboarding/src/app/components/markdown-view/`.
 - Markdown-HTML muss vor der Anzeige sanitiziert werden (z. B. DOMPurify), keine ungefilterte Ausgabe.
 - Auch bei Markdown-Inhalten bleibt die interaktive Schrittlogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
+
+## Verbindlicher Component-Contract: Lesson Flow
+
+Die Komponente `app-lesson-flow` gilt als UI- und Verhaltens-Standard fuer Onboarding-Schritte mit Lektionen.
+Alle Agents muessen diese Regeln beibehalten, solange keine explizite Produktentscheidung etwas anderes festlegt.
+
+### Layout und Navigation
+
+- Die Lesson-Flow-Komponente hat eine feste, viewport-basierte Hoehe mit Ober-/Untergrenze (derzeit: `height: clamp(420px, 58dvh, 680px)`).
+- Der Footer mit den Buttons bleibt innerhalb der Komponente am unteren Rand (`.lesson-flow__actions`), niemals als globaler Seiten-Footer.
+- Der Inhaltsbereich scrollt nur innerhalb der Komponente (`.lesson-flow__content` / `.lesson-flow__quiz`), Scrollbar darf visuell verborgen sein.
+- Der `Weiter`-Button im Lesson-Footer hat dieselbe Breite wie `Zurueck` und steht rechts.
+
+### Inhaltliche Struktur
+
+- Lange Inhalte werden nicht in einer einzelnen Folie gequetscht.
+- Wenn eine Folie zu lang wird, ist sie in mehrere Slides aufzuteilen.
+- Ziel: Lesson-Slides bleiben ohne starkes Scrollen erfassbar; die eigentlichen Aufgaben darunter bleiben im Schritt sichtbar.
+
+### Verhalten beim letzten Lesson-Button
+
+- Das `finished`-Event der Lesson darf nicht automatisch in den naechsten Onboarding-Schritt navigieren.
+- Falls unterhalb der Lesson **keine weiteren Schrittinhalte** folgen, ist der letzte Lesson-Button inaktiv und zeigt `Lektion abgeschlossen`.
+- Falls unterhalb der Lesson **weitere Schrittinhalte** folgen (z. B. Aufgabenblock), fuehrt der letzte Lesson-Button innerhalb desselben Schritts genau dorthin (z. B. Scroll zu `Was ist zu tun?`) und bleibt dafuer aktiv.
+- Labels auf der letzten Folie muessen dieses Verhalten eindeutig widerspiegeln (z. B. `Lektion abgeschlossen` bei inaktivem Ende oder `Zu den Aufgaben` bei Sprung zum Folgeinhalt; niemals `weiter zu Schritt X`).
+
+### Link-Konvention in Lesson-Texten
+
+- Vorkommen wie `github.com` oder `github.com/new` in Lesson-Texten muessen klickbar sein.
+- Plaintext-URLs in `paragraphs` und `orderedItems` werden automatisch verlinkt; dieses Verhalten ist beizubehalten.
+
+### Aenderungsregel
+
+- Aenderungen an Hoehe, Footer-Position, Button-Verhalten oder Linkify-Logik nur mit expliziter Freigabe.
+- Bei Refactorings muss das sichtbare Verhalten identisch bleiben.
 
 
 ## Styling und Brand
@@ -114,6 +162,10 @@ Weitere Sekundaerfarben (nur bei Bedarf): Ziggurat `#BED4E3`, Casper `#A7BECE`, 
 
 - Alle Token in `src/styles/_tokens.scss` als CSS Custom Properties definieren.
 - Kein `!important`, kein Inline-Style.
+- Keine hardcodierten Hex-/RGBA-Farben in Komponenten-SCSS; nutze Tokens, `color-mix()` mit Tokens oder bestehende Surface-/Border-Tokens.
+- Wiederverwendbare Button-, Card-, Callout-, State- und Layout-Muster zuerst ueber bestehende Komponenten oder globale `ui-*` Utilities loesen.
+- Neue globale Style-Utilities nur anlegen, wenn sie an mehreren Stellen gebraucht werden; sonst lokal und klein halten.
+- Direktes Styling von Material-Interna vermeiden; Material ueber `--mdc-*` und `--mat-*` Variablen anpassen.
 - Angular Material Theme auf Basis von `--color-primary` (Calypso) konfigurieren.
 ### Material Design 3 (M3) – Konventionen
 

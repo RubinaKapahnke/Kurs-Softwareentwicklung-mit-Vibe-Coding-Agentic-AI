@@ -41,3 +41,11 @@ Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form
 - TypeScript-Interfaces immer mit Kommentar versehen, welche Repo-Datei die Datenquelle ist.
 - User Stories im Format kennzeichnen: `[Kursentwickler]`, `[Lernende]` oder `[KI-Agent]`.
 - Neue Features erst in `apps/dashboard/prd_dashboard.md` (User Stories + Definition of Done) dokumentieren, bevor Code geschrieben wird.
+
+## Komponenten- und Style-Governance
+
+- Page-/Feature-Komponenten bleiben Orchestratoren fuer Datenfluss, Layout und Events; wiederholte UI-Muster oder fachliche Teilbereiche werden in kleinere Komponenten oder Services ausgelagert.
+- Bestehende Komponenten, Angular Material, Datenmodelle und Utilities zuerst pruefen und wiederverwenden, bevor neue Komponenten entstehen.
+- Neue Komponenten nur anlegen, wenn sie eine klare Verantwortung haben und absehbar wiederverwendet werden oder wenn sie eine sonst monolithische Datei deutlich entlasten.
+- Keine Komponenten fuer einmalige Kleinst-Markups erzeugen. Wenn Wiederverwendung unklar ist, erst Optionen und Folgen benennen und nach Freigabe fragen.
+- Styles duerfen nicht wuchern: keine hardcodierten Komponentenfarben, kein `!important`, keine Inline-Styles, keine direkten `.mdc-*` Overrides. Gemeinsame Styles ueber Tokens, Material-Variablen oder bestehende Utilities loesen.

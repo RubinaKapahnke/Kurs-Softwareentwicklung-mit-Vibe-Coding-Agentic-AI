@@ -55,6 +55,16 @@ Analysiere den gesamten Workflow (Übungen erstellen, Lernfortschritt tracken, P
 - **Neue Hooks:** Welche deterministischen Checks könnten als Pre-Commit-Hook laufen?
 - **CI/CD-Potenzial:** Was könnte in GitHub Actions automatisiert werden?
 
+### 5. App-Architektur – Code-Monster und Style-Wucher
+
+Pruefe in `apps/**`, besonders bei Angular-Komponenten:
+
+- **Monolithische Komponenten:** Wachsen Page-/Feature-Komponenten zu stark an? Enthalten sie Routing, State, Template-Sonderfaelle, lange Texte und Styles gleichzeitig?
+- **Wiederverwendung:** Werden bestehende Komponenten, Material-Patterns, Tokens, Services oder Markdown-Inhalte genutzt, bevor neue Komponenten entstehen?
+- **Komponenten-Vermehrung:** Gibt es viele Einmal-Komponenten ohne erkennbare Wiederverwendung oder klare Verantwortung?
+- **Style-Wucher:** Gibt es hardcodierte Farben in Komponenten-SCSS, `!important`, Inline-Styles, direkte `.mdc-*` Overrides oder duplizierte Button-/Card-/Callout-Styles?
+- **Entscheidungsregel:** Wenn Wiederverwendung vs. neue Komponente unklar ist, muss der Agent Optionen mit Folgen nennen und vor Umsetzung fragen.
+
 ## Approach
 
 1. Lies `AGENTS.md` für Konventionen und aktuelle Struktur.
@@ -62,9 +72,10 @@ Analysiere den gesamten Workflow (Übungen erstellen, Lernfortschritt tracken, P
 3. Miss Zeilenlängen, prüfe Struktur, identifiziere Redundanzen.
 4. Führe `.\tools\test-alle-uebungen.ps1` aus – Testabdeckung einschätzen.
 5. Prüfe alle Agent-descriptions auf Trigger-Qualität.
-6. Sammle Findings nach Schweregrad.
-7. Formuliere konkrete Verbesserungsvorschläge + Automatisierungsideen.
-8. Frage vor jeder Änderung nach Freigabe.
+6. Pruefe App-Komponenten stichprobenartig auf Code-Monster, Wiederverwendungsgrad und Style-Wucher.
+7. Sammle Findings nach Schweregrad.
+8. Formuliere konkrete Verbesserungsvorschläge + Automatisierungsideen.
+9. Frage vor jeder Änderung nach Freigabe.
 
 ## Output Format
 

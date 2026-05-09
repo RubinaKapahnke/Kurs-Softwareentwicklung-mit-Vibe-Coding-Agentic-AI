@@ -97,9 +97,17 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - Prefer clickable markdown links for workspace files in documentation.
 - Keep `README.md`, `NEXT_STEPS.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
 - For onboarding explanatory content, use `apps/onboarding/public/content/` Markdown files referenced via `markdownSource`; keep interactive step logic in Angular components.
+- Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
 - Checkbox-Regel: In `course/uebungen/` und Guide-Dateien (`*guide*.md`, inklusive `00-*-modulguide.md`) bleiben Checklisten standardmaessig offen (`[ ]`). Abgehakt (`[x]`) ist nur in `course/learners/**/lernfortschritt_*.md` erlaubt.
+
+## App Architecture Guardrails
+- In `apps/**`, avoid code monsters: page components orchestrate routing, state and layout; reusable UI or fachliche Teilbereiche belong in smaller components or services.
+- Before adding a new component, first check whether an existing component, Material component, style utility, token, data model, or Markdown content can be reused.
+- Add a new component only when it has a clear responsibility and is likely to be reused, or when it removes meaningful complexity from a page/component that is already growing too large.
+- Do not create one-off component sprawl. If reuse is unclear, explain the tradeoff and ask how to proceed before adding the new component.
+- Keep styles token-based and local: no hardcoded component colors, no `!important`, no inline styles, and no direct `.mdc-*` overrides. Shared style decisions go into existing tokens/utilities instead of page-specific patches.
 
 ## Recurring Workflow: Fremdtexte verarbeiten
 - Eingang fuer Rohtexte ist `course/notizen-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.

@@ -20,6 +20,7 @@ Du kombinierst vier Perspektiven in einem klaren Workflow:
 - Sekundarziel: Bruecke vom Onboarding in den bestehenden Kursfluss (NEXT_STEPS, Module, Uebungen).
 - Standardmodus: Arbeite zuerst am Onboarding-MVP. Erweiterungen wie Quiz, Videos und Ressourcen nur bei expliziter Freigabe.
 - Content-Muster: Erklaertexte bevorzugt als Markdown unter `apps/onboarding/public/content/`; interaktive Logik bleibt in Angular-Komponenten.
+- Architektur-Muster: Page-Komponenten bleiben Orchestratoren. Wiederholte UI, fachliche Mini-Flows und wachsende SCSS-Bloecke werden frueh in bestehende oder klar abgegrenzte Komponenten/Services verschoben.
 
 ## Constraints
 
@@ -30,6 +31,10 @@ Du kombinierst vier Perspektiven in einem klaren Workflow:
 - DO NOT unklare Anforderungen direkt coden; zuerst Plan und Freigabe.
 - DO NOT destruktive Git-Befehle ausfuehren (git reset --hard, git checkout --) ohne explizite Freigabe.
 - DO NOT Markdown ungefiltert als HTML rendern; immer sanitizen.
+- DO NOT Code-Monster entstehen lassen: keine langen, gemischten Dateien mit Routing, State, Text, UI-Details und Style-Sonderfaellen in einem Block.
+- DO NOT neue Komponenten inflationaer anlegen. Wiederverwende zuerst vorhandene Komponenten (`choice-card`, `callout`, `lesson-flow`, `markdown-view`, `step-tasks`, `voucher-gate`), Material-Komponenten, Tokens und Datenmodelle.
+- DO NOT neue Styles lokal duplizieren, wenn ein Token, eine Material-Variable oder eine bestehende Utility/Komponente passt.
+- ASK zuerst nach Freigabe, wenn unklar ist, ob eine neue Komponente ausreichend wiederverwendbar ist oder nur ein einmaliger Spezialfall waere.
 - ONLY kommuniziere auf Deutsch.
 
 ## MVP-Definition (verbindlich)
@@ -55,12 +60,15 @@ Ein MVP gilt als fertig, wenn alle Kriterien erfuellt sind:
    - Formuliere User Stories und Akzeptanzkriterien.
    - Entwerfe Informationsarchitektur und Schrittfluss (linear, anfaengerfreundlich).
    - Plane Angular-Struktur entlang der bestehenden App-Slices (`pages/`, `components/`, `services/`, `models/`, `data/`) strict-typed.
+   - Pruefe vor jeder neuen Komponente: vorhandene Wiederverwendung, erwartete Mehrfachnutzung, Verantwortung, Inputs/Outputs, Style-Auswirkung.
+   - Wenn die Antwort nicht eindeutig ist: Optionen mit Folgen nennen und Freigabe einholen.
 
 4. **Umsetzung in kleinen Schritten**
    - Default-Zielpfad ist die bestehende App unter `apps/onboarding/`.
    - Implementiere zuerst den lauffaehigen Happy Path.
    - Ergaenze danach Fehlerfaelle, Hinweise und Erfolgstests je Schritt.
    - Nutze Material-Komponenten konsistent und barrierearm.
+   - Extrahiere nur dann neu, wenn echte Komplexitaet oder Wiederholung reduziert wird; ansonsten bestehende Komponenten erweitern.
 
 5. **Kursintegration sichern**
    - Verknuepfe Onboarding sauber mit Meilensteinen und Uebungsworkflow.
@@ -69,6 +77,7 @@ Ein MVP gilt als fertig, wenn alle Kriterien erfuellt sind:
 6. **Qualitaet und Readiness validieren**
    - Fuehre Build/Typecheck aus.
    - Pruefe Link- und Strukturkonsistenz gegen Repo-Standards.
+   - Pruefe vor Abschluss: keine neuen Code-Monster, keine unnoetige Komponenten-Vermehrung, keine wuchernden SCSS-Sonderfaelle.
    - Benenne offene Punkte klar mit priorisiertem Vorschlag.
 
 ## Delegationspolicy fuer Subagents
@@ -92,6 +101,6 @@ Ein MVP gilt als fertig, wenn alle Kriterien erfuellt sind:
 
 - Ist-Stand: Relevante Befunde zu Einstiegshuerden und Repo-Anknuepfung.
 - MVP-Plan: Scope, Seitenstruktur, DoD, Out-of-Scope.
-- Umsetzungsplan: Konkrete Dateien/Komponenten in Reihenfolge.
+- Umsetzungsplan: Konkrete Dateien/Komponenten in Reihenfolge, inklusive Wiederverwendungscheck und Begruendung fuer neue Komponenten.
 - Validierung: Welche Checks gelaufen sind, was offen ist.
 - Naechste Schritte: Maximal 3 priorisierte Optionen.
