@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 interface CourseCatalogEntry {
   id: string;
-  shortTitle: string;
   title: string;
   lead: string;
 }
@@ -18,7 +17,6 @@ interface CourseCatalogEntry {
   styleUrl: './course-header.component.scss'
 })
 export class CourseHeaderComponent {
-  readonly courseCatalog = input.required<CourseCatalogEntry[]>();
   readonly selectedCourse = input.required<CourseCatalogEntry>();
   readonly selectedCourseIsLive = input.required<boolean>();
   readonly hasProgress = input.required<boolean>();

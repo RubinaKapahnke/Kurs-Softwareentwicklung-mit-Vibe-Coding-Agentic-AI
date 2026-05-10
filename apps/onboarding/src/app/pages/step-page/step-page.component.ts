@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild, computed, inject, signal } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, ElementRef, ViewChild, computed, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
@@ -39,13 +39,13 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     ChoiceCardComponent,
     CalloutComponent,
     VoucherGateComponent,
-    StepTasksComponent,
-    StepSkipDialogComponent
+    StepTasksComponent
   ],
   templateUrl: './step-page.component.html',
   styleUrl: './step-page.component.scss'
 })
 export class StepPageComponent {
+  private readonly document = inject(DOCUMENT);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly dialog = inject(MatDialog);
@@ -54,6 +54,10 @@ export class StepPageComponent {
   private readonly fallbackCourseId = 'vibe-coding-agentic-ai';
   private readonly routeParamMap = toSignal(this.route.paramMap, {
     initialValue: this.route.snapshot.paramMap
+  });
+  private readonly resetScrollOnStepChange = effect(() => {
+    this.step().id;
+    queueMicrotask(() => this.scrollPageTop());
   });
 
   private getCourseId(): string {
@@ -245,6 +249,7 @@ export class StepPageComponent {
     }
 
     if (!this.state.voucherValidated()) return true;
+    
     const exp = this.state.step2Experience();
     if (exp === null || exp === 'existing') return true; // Nicht fertig bis spezialisiert
     if (exp === 'existing-beginner' || exp === 'existing-experienced') return !this.step2CanComplete();
@@ -330,7 +335,18 @@ export class StepPageComponent {
     this.state.resetStep2ToNewPath();
   }
 
+  private scrollPageTop(): void {
+    const shellMain = this.document.querySelector('.shell-main');
+    if (shellMain instanceof HTMLElement) {
+      shellMain.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+
+    this.document.scrollingElement?.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    this.document.defaultView?.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }
+
   skipToStart(): void {
+    this.scrollPageTop();
     void this.router.navigate(['/']);
   }
 
@@ -341,6 +357,7 @@ export class StepPageComponent {
 
   goToPreviousStep(): void {
     if (this.step().id > 1) {
+      this.scrollPageTop();
       void this.router.navigate(this.buildStepLink(this.step().id - 1));
     }
   }
@@ -356,17 +373,23 @@ export class StepPageComponent {
       return;
     }
 
+    this.scrollPageTop();
     void this.router.navigate(this.buildStepLink(currentStep + 1));
   }
 
   private showStepSkipDialog(): void {
-    const dialogRef = this.dialog.open(StepSkipDialogComponent);
+    const dialogRef = this.dialog.open(StepSkipDialogComponent, {
+      width: '560px',
+      maxWidth: '92vw'
+    });
     dialogRef.afterClosed().subscribe((result: StepSkipDialogResult | undefined) => {
       if (result === 'mark-done') {
         this.markDone();
+        this.scrollPageTop();
         const currentStep = this.step().id;
         void this.router.navigate(this.buildStepLink(currentStep + 1));
       } else if (result === 'skip') {
+        this.scrollPageTop();
         const currentStep = this.step().id;
         void this.router.navigate(this.buildStepLink(currentStep + 1));
       }
@@ -374,6 +397,7 @@ export class StepPageComponent {
   }
 
   finishOnboarding(): void {
+    this.scrollPageTop();
     this.state.markStepCompleted(this.step().id);
     void this.router.navigate(this.buildSummaryLink());
   }

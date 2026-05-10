@@ -1,7 +1,7 @@
 .cta-section {
   padding: clamp(2rem, 5vw, 4rem) 0;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  color: var(--color-on-primary);
+  background: linear-gradient(160deg, #082138 0%, #10385c 55%, #123e66 100%);
+  color: var(--color-on-dark);
 }
 
 .cta-inner {
@@ -43,6 +43,11 @@
   }
 }
 
+.shell {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
 .cta-actions {
   display: flex;
   gap: 1rem;
@@ -50,11 +55,6 @@
 }
 
 .btn-resume-cta {
-  background: var(--color-surface) !important;
-  color: var(--color-text) !important;
-  font-weight: var(--font-weight-bold) !important;
-
-  &:hover {
-    background: var(--color-on-primary) !important;
-  }
+  padding-inline: 1rem;
+  font-weight: var(--font-weight-semibold);
 }

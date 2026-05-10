@@ -49,7 +49,15 @@
 
       <article class="hero-featured-card" aria-label="Featured Kurskarte">
         <div class="featured-badge-wrap">
-          <img [src]="featuredCourse().preview || 'assets/graphics/course-preview.png'" [alt]="featuredCourse().title + ' Vorschau'" class="hero-featured-image" />
+          <div class="hero-featured-video">
+            <iframe
+              src="https://www.youtube.com/embed/BK__F-ac1YE"
+              title="Kursüberblick: Softwareentwicklung mit Vibe Coding & Agentic AI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
           <span class="free-badge">Jetzt kostenlos testen</span>
         </div>
         <div class="hero-featured-body">
@@ -63,7 +71,7 @@
             <li>Eigenes Produkt im gewählten Schwerpunktpfad planen, bauen und ausliefern</li>
           </ul>
           <div class="featured-actions">
-            <a [routerLink]="featuredCourseLink()" class="card-cta">{{ featuredCourseLabel() }} &rarr;</a>
+            <a [routerLink]="featuredCourseLink()" class="card-cta">Kursdetails</a>
           </div>
         </div>
       </article>
@@ -78,9 +86,8 @@
         </div>
 
         <div class="hero-primary-actions" aria-label="3 Hauptaktionen">
-          <a mat-flat-button [routerLink]="featuredCourseLink()">{{ featuredCourseLabel() }}</a>
-          <a mat-flat-button [routerLink]="['/kurse', featuredCourse().id]">Kursüberblick</a>
-          <a mat-flat-button href="#courses">Weitere Kurse im Aufbau</a>
+          <a mat-flat-button [routerLink]="['/kurse', featuredCourse().id]">Kursübersicht</a>
+          <a mat-flat-button href="#value">Warum KnOot</a>
         </div>
 
         <div class="hero-media">
@@ -127,11 +134,10 @@
   <section class="value-section" id="value">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">Warum Kurse der KnOot Academy?</p>
+        <p class="section-kicker">Warum KI-Kurse der KnOot Academy?</p>
         <h2 class="section-title">Slop vs. Shipping</h2>
         <p class="section-text">
-          Der Einstieg soll nicht nur neugierig machen, sondern zeigen, wie sich der Kurs von losem Prompting
-          in Richtung wartbarer Software bewegt.
+          In unseren Kursen lernt man nicht wie man AI Slop produziert, Buzzwords reproduziert und Autonome Codezerstörer entwickelt, sondern wie man mit Hilfe von KI nachhaltigen Mehrwert erzielt.
         </p>
       </div>
       <div class="value-layout">
@@ -142,15 +148,16 @@
           </figure>
           <figure class="meme-card meme-card--shipping">
             <img src="assets/graphics/shipping.png" alt="Shipping Meme" class="svs-full-img" />
-            <figcaption>In der Praxis entsteht oft sehr schnell viel Code, aber ohne gemeinsame Leitplanken für Architektur, Qualität und Zusammenarbeit.</figcaption>
+            <figcaption>In der Praxis entsteht mit KI oft sehr schnell viel Code, aber ohne gemeinsame Leitplanken für Architektur, Qualität und Zusammenarbeit bleibt er selten stabil.</figcaption>
             <div class="meme-explainer">
-              <p>Typische Folgen im Alltag: Features wirken zuerst "fertig", brechen aber bei Änderungen oder sind für das Team kaum noch sicher weiterzuentwickeln.</p>
+              <p>Typische Folge im Alltag: Features wirken zuerst „fertig“, brechen aber bei Änderungen oder lassen sich im Team nur unsicher weiterentwickeln.</p>
               <ul>
                 <li>Inkonsistenter Stil und widersprüchliche Logik zwischen Dateien</li>
-                <li>fehlende Tests und dadurch hohe Fehlerquote bei Deployments</li>
-                <li>unklare Git-Historie, wodurch Reviews und Fehleranalyse schwer werden</li>
-                <li>Prompt- oder Kontext-Verlust, der zu Halluzinationen und Regressionen führt</li>
+                <li>Fehlende Tests und dadurch eine höhere Fehlerquote bei Deployments</li>
+                <li>Unklare Git-Historie, wodurch Reviews und Fehleranalyse unnötig schwer werden</li>
+                <li>Prompt- oder Kontextverlust, der Halluzinationen und Regressionen begünstigt</li>
               </ul>
+              <p>Im Kurs lernst du deshalb ein Vorgehen mit klaren Anforderungen, reproduzierbaren Workflows und überprüfbaren Ergebnissen.</p>
             </div>
           </figure>
         </div>
@@ -162,8 +169,9 @@
         </div>
         <div class="value-column">
           <article class="value-card value-card--accent">
-            <h3>Was du hier lernst</h3>
-            <p>Wie man KI nutzt, ohne dass Codebasis, Git-Historie und Teamarbeit unlesbar werden.</p>
+            <h3>14 Module als Milestones</h3>
+            <p>14 Module als Milestones.</p>
+            <p>Jedes Modul führt dich Schritt für Schritt zu einer klaren Kernkompetenz.</p>
           </article>
           <article class="value-card">
             <h3>Was AI-Ready hier bedeutet</h3>
@@ -258,7 +266,7 @@
           <p class="section-kicker">Angebot</p>
           <h2 class="section-title">Kurse</h2>
         </div>
-        <a mat-button [routerLink]="['/kurse', featuredCourse().id]">Kursueberblick anzeigen</a>
+        <a mat-button [routerLink]="['/kurse', featuredCourse().id]">Kursüberblick anzeigen</a>
       </div>
 
       <!-- Kurs-Grid -->
@@ -290,7 +298,7 @@
         <h2>Informieren, buchen und direkt starten.</h2>
       </div>
       <div class="cta-actions">
-        <a mat-stroked-button routerLink="/kurse/vibe-coding-agentic-ai" class="btn-primary btn-primary--lg">Kursueberblick anzeigen</a>
+        <a mat-stroked-button routerLink="/kurse/vibe-coding-agentic-ai" class="btn-primary btn-primary--lg">Kursüberblick anzeigen</a>
         <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-contact">Kontakt aufnehmen</a>
       </div>
     </div>

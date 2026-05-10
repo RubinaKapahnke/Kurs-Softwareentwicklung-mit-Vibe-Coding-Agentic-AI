@@ -1,61 +1,41 @@
 <div class="hero-text">
-  <p class="eyebrow">Kursueberblick</p>
+  <p class="eyebrow">Kursüberblick</p>
   <h1>{{ selectedCourse().title }}</h1>
   <p class="lead">{{ selectedCourse().lead }}</p>
 
-  <div class="course-switcher" aria-label="Kursauswahl">
-    @for (course of courseCatalog(); track course.id) {
-      <a
-        mat-stroked-button
-        [routerLink]="['/kurse', course.id]"
-        class="course-switcher__item"
-        [class.course-switcher__item--active]="course.id === selectedCourse().id">
-        {{ course.shortTitle }}
-      </a>
-    }
-  </div>
-
-  <p class="course-status-hint" [class.course-status-hint--live]="selectedCourseIsLive()">
-    @if (selectedCourseIsLive()) {
-      Jetzt verfügbar
-    } @else {
-      Im Aufbau
-    }
-  </p>
-
-  <div class="hero-actions">
-    @if (selectedCourseIsLive()) {
-      <a mat-flat-button [routerLink]="resumeLink()" class="btn-primary">
-        @if (hasProgress()) {
-          {{ resumeLabel() }}
-        } @else {
-          Onboarding jetzt starten
-        }
-      </a>
-    } @else {
-      <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-primary">
-        Interesse melden
-      </a>
-    }
+  <div class="hero-secondary-nav">
     <a mat-button routerLink="/" class="btn-back">
       <mat-icon aria-hidden="true">west</mat-icon>
       Zurück zur Übersicht
     </a>
   </div>
 
+  <div class="hero-actions">
+    @if (selectedCourseIsLive()) {
+      <a mat-flat-button [routerLink]="resumeLink()" class="btn-primary ui-primary-button-on-dark" [class.btn-primary--shimmer]="!hasProgress()">
+        @if (hasProgress()) {
+          {{ resumeLabel() }}
+        } @else {
+          Kurs jetzt starten
+        }
+      </a>
+    } @else {
+      <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-primary ui-primary-button-on-dark">
+        Interesse melden
+      </a>
+    }
+  </div>
+
   @if (selectedCourseIsLive()) {
   <div class="voucher-notice">
-    <mat-icon aria-hidden="true">vpn_key</mat-icon>
-    <div>
-      <strong>Zugang nur mit Voucher-Code</strong>
+    <mat-icon aria-hidden="true">science</mat-icon>
+    <div class="voucher-content">
+      <strong>Kurs aktuell in der Beta-Phase</strong>
       <p>
-        Für den Kursstart benötigst du einen persönlichen Voucher-Code.
-        Du gibst ihn direkt im ersten Onboarding-Schritt ein.
+        Für kurze Zeit gibt es zusätzliche Test-Plätze.
+        Wenn du teilnehmen möchtest, kannst du dir jetzt einen Platz anfragen.
       </p>
-      <p>
-        Noch keinen Code?
-        <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener">Kursplatz anfragen →</a>
-      </p>
+      <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="voucher-link">Teilnahme am Beta-Test anfragen</a>
     </div>
   </div>
   } @else {

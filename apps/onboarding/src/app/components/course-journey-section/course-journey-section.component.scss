@@ -46,6 +46,11 @@
   }
 }
 
+.shell {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
 .coming-soon-card {
   margin-top: 2rem;
   background: color-mix(in srgb, var(--color-surface) 95%, var(--color-primary));

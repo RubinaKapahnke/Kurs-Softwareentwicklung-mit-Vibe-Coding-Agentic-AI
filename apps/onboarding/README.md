@@ -18,7 +18,7 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 ### A. Einstieg und Orientierung
 
 - [ ] Die Startseite bietet genau 3 primaere Handlungsoptionen (Onboarding starten, Kursueberblick, weitere Kurse im Aufbau).
-- [ ] Die Sprache bleibt einsteigerfreundlich und konkret.
+- [ ] Die Sprache bleibt einsteigerfreundlich und konkret für Anfänger*innen.
 - [ ] Der Hinweis "weitere Kurse im Aufbau" ist sichtbar, aber klar sekundaer.
 
 ### B. Schrittlogik und Sicherheit

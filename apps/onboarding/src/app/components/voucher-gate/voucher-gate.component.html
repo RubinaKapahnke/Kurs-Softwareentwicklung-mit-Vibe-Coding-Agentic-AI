@@ -1,126 +1,134 @@
 <section class="entry-question">
   <div class="entry-question__inner">
     @if (!voucherValidated()) {
-      <p class="entry-question__kicker">Bevor es losgeht</p>
-      <h2 class="entry-question__heading">Nimmst du bereits aktiv an einem Kurs der KnOot Academy teil?</h2>
-      <p class="entry-question__sub">Wähle eine Option - wir prüfen kurz deinen Zugang.</p>
-
-      <div class="entry-question__options">
-        <app-choice-card
-          icon="school"
-          label="Ja, ich bin aktiv dabei"
-          description="Ich nehme bereits an einem KnOot-Kurs teil."
-          [selected]="participationStatus() === 'active'"
-          (pressed)="participationStatusSelected.emit('active')" />
-
-        <app-choice-card
-          icon="waving_hand"
-          label="Nein, noch nicht"
-          description="Ich möchte mit dem Kurs starten."
-          [selected]="participationStatus() === 'new'"
-          (pressed)="participationStatusSelected.emit('new')" />
+      <div class="entry-question__hero">
+        <p class="entry-question__kicker">Bevor es losgeht</p>
+        <h2 class="entry-question__heading">Nimmst du bereits aktiv an einem Kurs der KnOot Academy teil?</h2>
+        <p class="entry-question__sub">Wähle eine Option - wir prüfen kurz deinen Zugang.</p>
       </div>
 
-      @if (participationStatus() === 'new') {
-        <div class="voucher-sub-question">
-          <p class="entry-question__sub">Hast du bereits einen Voucher-Code erhalten?</p>
-          <div class="entry-question__options">
-            <app-choice-card
-              icon="confirmation_number"
-              label="Ja, ich habe einen Code"
-              description="Ich gebe ihn gleich ein."
-              [selected]="hasVoucherAnswer() === true"
-              (pressed)="hasVoucherSelected.emit(true)" />
+      <div class="entry-question__body">
+        <div class="entry-question__options">
+          <app-choice-card
+            icon="school"
+            label="Ja, ich bin aktiv dabei"
+            description="Ich nehme bereits an einem KnOot-Kurs teil."
+            [selected]="participationStatus() === 'active'"
+            tone="light"
+            (pressed)="participationStatusSelected.emit('active')" />
 
-            <app-choice-card
-              icon="mail_outline"
-              label="Nein, noch keinen"
-              description="Ich möchte einen Kursplatz anfragen."
-              [selected]="hasVoucherAnswer() === false"
-              (pressed)="hasVoucherSelected.emit(false)" />
-          </div>
+          <app-choice-card
+            icon="waving_hand"
+            label="Nein, noch nicht"
+            description="Ich möchte mit dem Kurs starten."
+            [selected]="participationStatus() === 'new'"
+            tone="light"
+            (pressed)="participationStatusSelected.emit('new')" />
         </div>
-      }
 
-      @if (showVoucherInput()) {
-        <div class="voucher-input-block">
-          <label class="voucher-input-block__label" for="voucher-input">
-            <mat-icon>vpn_key</mat-icon>
-            Dein Voucher-Code
-          </label>
-          <div class="voucher-input-block__row">
-            <input
-              id="voucher-input"
-              class="voucher-input"
-              type="text"
-              placeholder="Voucher-Code eingeben"
-              autocomplete="off"
-              [value]="voucherInput()"
-              (input)="onVoucherInput($any($event.target).value)"
-              (keydown.enter)="voucherSubmitted.emit()">
-            <button mat-flat-button type="button" color="primary" (click)="voucherSubmitted.emit()">
-              Bestätigen
-            </button>
+        @if (participationStatus() === 'new') {
+          <div class="voucher-sub-question">
+            <p class="entry-question__sub entry-question__sub--body">Hast du bereits einen Voucher-Code erhalten?</p>
+            <div class="entry-question__options">
+              <app-choice-card
+                icon="confirmation_number"
+                label="Ja, ich habe einen Code"
+                description="Ich gebe ihn gleich ein."
+                [selected]="hasVoucherAnswer() === true"
+                tone="light"
+                (pressed)="hasVoucherSelected.emit(true)" />
+
+              <app-choice-card
+                icon="mail_outline"
+                label="Nein, noch keinen"
+                description="Ich möchte einen Kursplatz anfragen."
+                [selected]="hasVoucherAnswer() === false"
+                tone="light"
+                (pressed)="hasVoucherSelected.emit(false)" />
+            </div>
           </div>
-          @if (voucherError()) {
-            <p class="voucher-error" role="alert">
-              <mat-icon>error_outline</mat-icon>
-              Probleme mit dem Code? Kontaktiere uns:
-              <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener noreferrer">
-                https://www.knoot-academy.de/kontakt
+        }
+
+        @if (showVoucherInput()) {
+          <div class="voucher-input-block">
+            <label class="voucher-input-block__label" for="voucher-input">
+              <mat-icon>vpn_key</mat-icon>
+              Dein Voucher-Code
+            </label>
+            <div class="voucher-input-block__row">
+              <input
+                id="voucher-input"
+                class="voucher-input"
+                type="text"
+                placeholder="Voucher-Code eingeben"
+                autocomplete="off"
+                [value]="voucherInput()"
+                (input)="onVoucherInput($any($event.target).value)"
+                (keydown.enter)="voucherSubmitted.emit()">
+              <button mat-flat-button type="button" color="primary" (click)="voucherSubmitted.emit()">
+                Bestätigen
+              </button>
+            </div>
+            @if (voucherError()) {
+              <p class="voucher-error" role="alert">
+                <mat-icon>error_outline</mat-icon>
+                Probleme mit dem Code? Kontaktiere uns:
+                <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener noreferrer">
+                  https://www.knoot-academy.de/kontakt
+                </a>
+              </p>
+            }
+            @if (participationStatus() === 'active') {
+              <p class="voucher-hint">
+                <mat-icon>info_outline</mat-icon>
+                Noch keinen Code erhalten? Sprich deine Dozentin darauf an.
+              </p>
+            }
+          </div>
+        }
+
+        @if (showContactInfo()) {
+          <div class="contact-info-block">
+            <div class="contact-info-block__header">
+              <mat-icon aria-hidden="true">info</mat-icon>
+              <strong>Noch kein Kursplatz?</strong>
+            </div>
+            <p>
+              Kontaktiere uns via Email oder Kontaktformular.
+            </p>
+            <div class="contact-actions">
+              <a
+                mat-flat-button
+                class="mailto-btn"
+                href="mailto:info@knoot-academy.de?subject=Anfrage%20Kursplatz%3A%20Vibe%20Coding%20%26%20Agentic%20AI&body=Hallo%20KnOot%20Academy%20Team%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20die%20Teilnahme%20an%20eurem%20Kurs%20%22Softwareentwicklung%20mit%20Vibe%20Coding%20%26%20Agentic%20AI%22%20und%20bitte%20um%20einen%20Zugangs-Voucher.%0A%0AVielen%20Dank!%0A%5BDein%20Name%5D"
+                rel="noopener">
+                <mat-icon>email</mat-icon>
+                E-Mail an info&#64;knoot-academy.de
               </a>
-            </p>
-          }
-          @if (participationStatus() === 'active') {
-            <p class="voucher-hint">
-              <mat-icon>info_outline</mat-icon>
-              Noch keinen Code erhalten? Sprich deine Dozentin darauf an.
-            </p>
-          }
-        </div>
-      }
-
-      @if (showContactInfo()) {
-        <div class="contact-info-block">
-          <div class="contact-info-block__header">
-            <mat-icon aria-hidden="true">info</mat-icon>
-            <strong>Noch kein Kursplatz?</strong>
-          </div>
-          <p>
-            Schreib uns direkt eine E-Mail - der Text ist schon vorausgefüllt:
-          </p>
-          <div class="contact-actions">
-            <a
-              mat-flat-button
-              class="mailto-btn"
-              href="mailto:info@knoot-academy.de?subject=Anfrage%20Kursplatz%3A%20Vibe%20Coding%20%26%20Agentic%20AI&body=Hallo%20KnOot%20Academy%20Team%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20die%20Teilnahme%20an%20eurem%20Kurs%20%22Softwareentwicklung%20mit%20Vibe%20Coding%20%26%20Agentic%20AI%22%20und%20bitte%20um%20einen%20Zugangs-Voucher.%0A%0AVielen%20Dank!%0A%5BDein%20Name%5D"
-              rel="noopener">
-              <mat-icon>email</mat-icon>
-              E-Mail an info&#64;knoot-academy.de
-            </a>
-            <span class="contact-divider">oder</span>
-            <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="contact-link">Kontaktformular öffnen</a>
-          </div>
-          <div class="contact-message-box">
-            <pre class="contact-message-box__text">Hallo KnOot Academy Team,
+              <span class="contact-divider">oder</span>
+              <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="contact-link">Kontaktformular öffnen</a>
+            </div>
+            <div class="contact-message-box">
+              <pre class="contact-message-box__text">Hallo KnOot Academy Team,
 
 ich interessiere mich für die Teilnahme an eurem Kurs "Softwareentwicklung mit Vibe Coding & Agentic AI" und bitte um einen Zugangs-Voucher.
 
 Vielen Dank!
 [Dein Name]</pre>
-            <button mat-stroked-button type="button" class="copy-btn" (click)="contactMessageCopied.emit()">
-              <mat-icon>{{ voucherCopied() ? 'check' : 'content_copy' }}</mat-icon>
-              {{ voucherCopied() ? 'Kopiert!' : 'Nachricht kopieren' }}
-            </button>
+              <button mat-stroked-button type="button" class="copy-btn" (click)="contactMessageCopied.emit()">
+                <mat-icon>{{ voucherCopied() ? 'check' : 'content_copy' }}</mat-icon>
+                {{ voucherCopied() ? 'Kopiert!' : 'Nachricht kopieren' }}
+              </button>
+            </div>
           </div>
-        </div>
-      }
+        }
+      </div>
     } @else {
       <div class="voucher-success" role="status" aria-live="polite">
         <mat-icon>check_circle</mat-icon>
         <div>
           <strong>Voucher bestätigt!</strong>
-          <p>Dein Zugang wurde freigeschaltet. Weiter geht's mit Schritt 2.</p>
+          <p>Dein Zugang wurde freigeschaltet. Viel Spaß und Erfolg in deinem Kurs!</p>
         </div>
       </div>
     }

@@ -63,29 +63,40 @@ $rail-width: 96px;
 
 .navbar-link {
   text-decoration: none;
+    white-space: nowrap;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-muted);
+  color: var(--color-link);
   transition: color 0.2s ease;
   
   &:hover {
-    color: var(--color-primary);
-  }
+    min-height: 100%;
+    color: var(--color-link-hover);
 }
 
 .navbar-cta {
+      white-space: nowrap;
   flex-shrink: 0;
   --mdc-filled-button-container-color: var(--color-secondary);
+
+  .hero-actions a,
+  .hero-actions button {
+    min-height: 40px;
+  }
   --mdc-filled-button-label-text-color: var(--color-text);
 }
 
-.container {
-  width: min(1440px, 100%);
   margin: 0 auto;
+      --mdc-filled-button-container-height: 40px;
+      border-radius: var(--radius-pill);
+      padding-inline: 1rem;
+      white-space: nowrap;
   padding-left: clamp(0.8rem, 1.5vw, 1.2rem);
   padding-right: clamp(0.8rem, 1.8vw, 1.4rem);
 }
 
+    .navbar-container,
+    .container {
 .resume-banner {
   position: relative;
   z-index: 210;
@@ -124,25 +135,12 @@ $rail-width: 96px;
   color: var(--color-primary);
 }
 
-.resume-action {
-  flex-shrink: 0;
+.resume-banner {
+  position: relative;
+  z-index: 210;
+  background: var(--surface-warning);
+  border-bottom: 1px solid var(--border-subtle);
 }
-
-.nav-rail {
-  display: none;
-}
-
-.rail-fab {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--color-primary) 22%, white), color-mix(in srgb, var(--color-primary) 12%, white));
-  color: var(--color-primary);
-  text-decoration: none;
-  margin-bottom: 6px;
 }
 
 .rail-items {
@@ -209,7 +207,7 @@ $rail-width: 96px;
 
 .hero-stage {
   display: grid;
-  grid-template-columns: 60fr 40fr;
+  grid-template-columns: 64fr 36fr;
   gap: 2rem;
   align-items: stretch;
 }
@@ -411,12 +409,47 @@ $rail-width: 96px;
   margin-top: 1.5rem;
 }
 
+.hero-featured-video {
+  width: min(95%, 100%);
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-image-dark);
+  margin: 1.5rem auto 0;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-featured-video {
+    width: 100%;
+  }
+}
+
 .hero-featured-body {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  justify-content: space-between;
+  gap: 0.8rem;
   padding: 1.1rem;
   flex: 1;
+
+  .course-status {
+    background: color-mix(in srgb, var(--color-primary) 78%, white);
+    color: var(--color-on-dark);
+    border: 1px solid color-mix(in srgb, var(--color-primary-dark) 52%, transparent);
+  }
+
+  .course-status--live {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border-color: color-mix(in srgb, var(--color-secondary-dark) 60%, transparent);
+  }
 
   h2 {
     margin: 0;
@@ -437,7 +470,7 @@ $rail-width: 96px;
   margin: 0;
   padding-left: 0.9rem;
   display: grid;
-  gap: 0.3rem;
+  gap: 0.38rem;
   color: var(--color-text-muted);
   line-height: 1.45;
   font-size: var(--font-size-xs);
@@ -457,14 +490,14 @@ $rail-width: 96px;
 .meme-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .meme-card {
   margin: 0;
   display: grid;
-  gap: 0.75rem;
-  padding: 0.9rem;
+  gap: 0.5rem;
+  padding: 0.75rem;
   border-radius: var(--radius-xl);
   background: color-mix(in srgb, var(--color-surface) 95%, var(--color-primary));
   border: 1px solid var(--border-subtle);
@@ -473,28 +506,36 @@ $rail-width: 96px;
   figcaption {
     font-size: var(--font-size-sm);
     line-height: 1.5;
-    color: var(--color-text-muted);
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
   }
 }
 
 .meme-card--slop {
-  background: color-mix(in srgb, var(--color-error) 16%, var(--color-surface));
-  border-color: color-mix(in srgb, var(--color-error) 35%, transparent);
+  background: color-mix(in srgb, var(--color-error) 10%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-error) 25%, transparent);
 }
 
 .meme-card--shipping {
-  background: color-mix(in srgb, var(--color-success) 12%, var(--color-surface));
-  border-color: color-mix(in srgb, var(--color-success) 35%, transparent);
+  grid-template-rows: auto auto 1fr;
+  background: color-mix(in srgb, var(--color-secondary) 8%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-secondary) 25%, transparent);
 }
 
 .meme-explainer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   gap: 0.45rem;
+  min-height: 100%;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-surface) 90%, var(--color-secondary));
 
   p {
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.45;
+    font-size: 0.85rem;
+    line-height: 1.4;
     color: color-mix(in srgb, var(--color-text) 72%, transparent);
   }
 
@@ -502,34 +543,34 @@ $rail-width: 96px;
     margin: 0;
     padding-left: 1rem;
     display: grid;
-    gap: 0.22rem;
-    font-size: 0.86rem;
-    line-height: 1.4;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
     color: color-mix(in srgb, var(--color-text) 68%, transparent);
   }
 }
 
 .slop-shipping-explainer {
   display: grid;
-  gap: 0.75rem;
-  padding: 1.2rem;
-  background: var(--surface-selected);
-  border: 1px solid var(--border-warning);
+  gap: 0.4rem;
+  padding: 0.75rem 0.85rem;
+  background: color-mix(in srgb, var(--color-surface) 92%, var(--color-bg));
+  border: none;
   border-radius: var(--radius-lg);
   grid-column: 1 / -1;
 
   h3 {
     margin: 0;
-    font-size: var(--font-size-md);
+    font-size: 0.86rem;
     font-weight: var(--font-weight-bold);
-    color: var(--color-text);
+    color: color-mix(in srgb, var(--color-text) 74%, transparent);
   }
 
   p {
     margin: 0;
-    font-size: var(--font-size-sm);
-    line-height: 1.5;
-    color: var(--color-text);
+    font-size: 0.79rem;
+    line-height: 1.4;
+    color: color-mix(in srgb, var(--color-text) 70%, transparent);
   }
 }
 
@@ -653,13 +694,13 @@ $rail-width: 96px;
 }
 
 .panel-row--bad {
-  background: color-mix(in srgb, var(--color-error) 42%, #0d0000);
-  border: 1px solid color-mix(in srgb, var(--color-error) 55%, transparent);
+  background: color-mix(in srgb, var(--color-error) 28%, #1a0a0a);
+  border: 1px solid color-mix(in srgb, var(--color-error) 40%, transparent);
 }
 
 .panel-row--good {
-  background: color-mix(in srgb, var(--color-secondary-dark) 52%, #0a0900);
-  border: 1px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
+  background: color-mix(in srgb, var(--color-secondary) 35%, #0f0e0a);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 45%, transparent);
 }
 
 .panel-kicker {
@@ -670,8 +711,8 @@ $rail-width: 96px;
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-caps);
   line-height: 1.4;
-  background: var(--surface-on-dark-hover);
-  color: var(--color-on-dark);
+  background: var(--color-on-dark);
+  color: var(--color-text);
 }
 
 .value-section,
@@ -700,7 +741,7 @@ $rail-width: 96px;
   letter-spacing: var(--letter-spacing-caps);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .section-kicker--light {
@@ -717,19 +758,26 @@ $rail-width: 96px;
 .value-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(360px, 0.7fr);
-  gap: 1rem;
-  align-items: stretch;
+  grid-template-areas:
+    'meme value'
+    'explainer value';
+  gap: 0.75rem;
+  align-items: start;
 }
 
 .value-column {
+  grid-area: value;
   display: grid;
   gap: 0.9rem;
-  height: 100%;
-  align-content: stretch;
+  align-content: start;
 }
 
 .meme-grid {
-  height: 100%;
+  grid-area: meme;
+}
+
+.slop-shipping-explainer {
+  grid-area: explainer;
 }
 
 .section-title {
@@ -958,6 +1006,7 @@ $rail-width: 96px;
 .featured-actions {
   display: grid;
   gap: 0.3rem;
+  margin-top: auto;
 }
 
 .course-card--live {

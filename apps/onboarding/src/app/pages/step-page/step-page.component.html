@@ -28,8 +28,8 @@
     <section class="entry-question account-choice">
       <div class="entry-question__inner">
 
-        @if (state.voucherValidated() && state.step2Experience() === null) {
-          @if (showVoucherSuccess()) {
+        @if (state.voucherValidated()) {
+          @if (showVoucherSuccess() && state.step2Experience() === null) {
             <div class="voucher-success" role="status" aria-live="polite">
               <mat-icon>check_circle</mat-icon>
               <div>
@@ -45,17 +45,15 @@
           <div class="entry-question__options entry-question__options--account">
             <app-choice-card
               icon="person_add"
-              label="Nein, ich starte neu"
+              label="Nein, bisher nicht"
               tone="light"
-              [compact]="true"
               [selected]="state.step2Experience() === 'new'"
               (pressed)="selectExperience('new')" />
 
             <app-choice-card
               icon="person"
-              label="Ja, ich habe bereits einen"
+              label="Ja, ich habe einen Account"
               tone="light"
-              [compact]="true"
               [selected]="state.step2Experience() === 'existing'"
               (pressed)="selectExperience('existing')" />
           </div>
@@ -98,12 +96,12 @@
         @if (showRepoExperienceQuestion()) {
           <section class="step-section repo-experience-section">
             <h3>Wie sicher bist du mit GitHub-Repositories und Git-Befehlen?</h3>
-            <p>Das bestimmt, welche Erklärungen du jetzt brauchst.</p>
+            <p>Das bestimmt, welche Erklärungen du als Anfänger*in brauchst oder ob du erfahren bist.</p>
 
             <div class="repo-experience-options">
               <app-choice-card
                 icon="school"
-                label="Anfänger - ich brauche Erklärungen"
+                label="Anfänger*in - ich brauche Erklärungen"
                 description="Ich habe GitHub genutzt, aber nicht mit Repositories/Git."
                 tone="light"
                 [selected]="state.step2Experience() === 'existing-beginner'"

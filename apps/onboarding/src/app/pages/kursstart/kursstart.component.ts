@@ -179,7 +179,7 @@ export class KursstartComponent {
     { label: 'Terminal prüfen', detail: 'Integriertes Terminal in VS Code testen' },
     { label: 'Repo klonen', detail: 'Kursmaterial lokal verfügbar machen' },
     { label: 'Kurs-Handhabung verstehen', detail: 'Kurs-Repo, eigenes Repo und Lernfortschritt richtig einordnen' },
-    { label: 'Kursstart in NEXT_STEPS.md', detail: 'Erster echter Schritt im Kursfluss' }
+    { label: 'Kurs im Kursrepository starten', detail: 'Einstieg in Modul 2' }
   ];
 
   private readonly vibeTargetAudience = [

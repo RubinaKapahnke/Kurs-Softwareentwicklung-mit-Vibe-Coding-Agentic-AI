@@ -19,7 +19,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 2,
     title: 'So laufen Kurs und Module ab',
-    goal: 'Du weißt, was dich in den nächsten Schritten erwartet und wie es nach diesem Modul weitergeht.',
+    goal: 'Du verstehst den Ablauf und weißt, wie es nach dem Onboarding weitergeht.',
     tasks: [],
     fallbackHelp: [],
     successCriterion: '',
@@ -35,9 +35,9 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               heading: 'Kursablauf im Überblick',
               orderedItems: [
-                'Der Kurs startet mit Grundlagen und führt Schritt für Schritt zu komplexeren Themen.',
-                'Die Inhalte sind in Meilensteine aufgeteilt, damit du den Fortschritt klar sehen kannst.',
-                'Später arbeitest du in einem Schwerpunktbereich weiter und vertiefst deine Praxis.',
+                'Du startest mit Grundlagen.',
+                'Die Inhalte sind in Meilensteine aufgeteilt.',
+                'Danach vertiefst du einen Schwerpunkt.',
                 'Zum Abschluss setzt du ein eigenes Projekt um.'
               ]
             },
@@ -45,16 +45,18 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
               heading: 'So funktioniert dieses Kurs-Tool',
               orderedItems: [
                 'Oben siehst du deinen Fortschritt über alle Schritte.',
-                'Jeder Schritt enthält konkrete Teilaufgaben (Subtasks), die du einzeln abhaken kannst.',
-                'Wenn alles im Schritt erledigt ist, markierst du den Schritt mit "Als erledigt markieren".',
-                'Mit "Weiter" und "Zurück" kannst du jederzeit zwischen den Schritten navigieren.',
-                'Du kannst auch weiterklicken, ohne sofort alles zu erledigen, und später zu offenen Punkten zurückkehren.'
+                'Jeder Schritt enthält Teilaufgaben, die du einzeln abhaken kannst.',
+                'Sind alle Teilaufgaben fertig, markierst du den Schritt als erledigt.',
+                'Mit "Weiter" und "Zurück" wechselst du zwischen den Schritten.',
+                'Offene Punkte kannst du später nachholen.'
               ]
             },
             {
-              heading: 'Wichtig für jetzt',
+              heading: 'Wichtig für den Ablauf',
+              tone: 'highlight',
               paragraphs: [
-                'In diesem Schritt geht es nur um die Orientierung. Die genaue Handhabung für den weiteren Ablauf nach diesem Modul kommt im nächsten Modul.'
+                'Du kannst in den Steps springen.',
+                'Da sie aufeinander aufbauen, ist es sinnvoll, sie der Reihe nach abzuarbeiten.'
               ]
             }
           ]
@@ -65,7 +67,9 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               paragraphs: [
-                'Das Modul Onboarding richtet deine Arbeitsumgebung ein. Mit Arbeitsumgebung ist alles gemeint, was du zum Arbeiten im Kurs brauchst: GitHub-Account, dein eigenes Übungs-Repository, VS Code, Git und eine laufähige Verbindung zum Kurs-Repository. Was diese Begriffe jeweils bedeuten, lernst du während des Moduls Schritt für Schritt.'
+                'Im Onboarding richtest du deine Arbeitsumgebung ein.',
+                'Dazu gehört alles, was du für den Kursstart brauchst: dein Zugang, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten.',
+                'Alle Begriffe und Schritte lernst du nacheinander im Modul.'
               ]
             },
             {
@@ -73,72 +77,14 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
               orderedItems: [
                 'GitHub-Account anlegen und erste Übungen im Browser machen.',
                 'VS Code und Git installieren.',
-                'Das Kurs-Repository auf deinen Rechner klonen.'
+                'Dein Repository lokal bedienen und Versionierung üben.',
+                'Kurs-Repository klonen und Modul 2 starten.'
               ]
             },
             {
               tone: 'highlight',
               paragraphs: [
-                'Sobald das Modul Onboarding abgeschlossen ist, startest du mit Meilenstein 1.'
-              ]
-            }
-          ]
-        },
-        {
-          type: 'content',
-          title: 'Was dich in diesem Modul erwartet',
-          sections: [
-            {
-              paragraphs: [
-                'Das Modul Onboarding begleitet dich durch alle Einrichtungsschritte, bevor du mit dem eigentlichen Kurs startest. Es ist in drei Phasen aufgeteilt:'
-              ]
-            },
-            {
-              heading: 'Phase 1: GitHub einrichten',
-              orderedItems: [
-                'GitHub-Account anlegen',
-                'Eigenes Übungs-Repository erstellen',
-                'Erste Übungen direkt im Browser machen'
-              ]
-            },
-            {
-              heading: 'Phase 2: Werkzeuge installieren',
-              orderedItems: [
-                'Was ist VS Code?',
-                'VS Code installieren',
-                'Was ist Git?',
-                'Git installieren und prüfen'
-              ]
-            },
-            {
-              heading: 'Phase 3: Kurs-Start',
-              orderedItems: [
-                'Kurs-Repository auf deinen Rechner klonen',
-                'Ablauf und Struktur des Kurses kennenlernen'
-              ]
-            }
-          ]
-        },
-        {
-          type: 'content',
-          title: 'Wie es nach diesem Modul weitergeht',
-          sections: [
-            {
-              paragraphs: [
-                'Nach diesem Modul hast du eine klare Roadmap: Du siehst, wo du gerade stehst und was als nächstes kommt.'
-              ],
-              tone: 'highlight'
-            },
-            {
-              heading: 'Wie der Kurs funktioniert',
-              paragraphs: [
-                'Du arbeitest in zwei Repositories: einem gemeinsamen Kurs-Repository und deinem eigenen Übungs-Repository. Aufgaben, Lernmaterial und dein persönlicher Fortschritt liegen im Kurs-Repository - dein Code und deine Lösungen entstehen bei dir.',
-                'Der Einstieg in jeden Meilenstein läuft über eine zentrale Datei im Kurs-Repository. Was dort steht, bestimmt, woran du als nächstes arbeitest.'
-              ]
-            },
-            {
-              paragraphs: [
-                'Du musst dir das jetzt noch nicht merken - alles wird erklärt, wenn du es brauchst. Jetzt erst mal: Werkzeuge einrichten.'
+                'Keine Sorge: Auch wenn du jetzt noch nicht weißt, was sich hinter diesen Begriffen verbirgt, ist nach dem Onboarding vieles klarer. Versprochen!'
               ]
             }
           ]
@@ -230,6 +176,13 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
               heading: 'Hinweis zum Benutzernamen',
               paragraphs: [
                 'Dein GitHub-Benutzername ist öffentlich sichtbar - auch für andere Kursteilnehmende. Wähle einen Namen, mit dem du dich wohlfühlst.'
+              ]
+            },
+            {
+              heading: 'Wichtiger Hinweis zur E-Mail-Adresse',
+              paragraphs: [
+                'Wenn du eine KnOot E-Mail-Adresse hast, denke daran: Diese wird nach den Kursen deaktiviert.',
+                'Wenn du dein Repository dauerhaft behalten willst - wovon auszugehen ist - verwende lieber eine E-Mail-Adresse, die in deinem Besitz bleibt.'
               ]
             }
           ]
@@ -330,7 +283,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               tone: 'highlight',
               paragraphs: [
-                'Die README ist wichtig. Ohne README wirkt das Repository für Einsteiger oft leer und unklar.'
+                'Die README ist wichtig. Ohne README wirkt das Repository für Einsteiger*innen oft leer und unklar.'
               ]
             },
             {
@@ -554,6 +507,12 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     tasks: [],
     fallbackHelp: [],
     successCriterion: '',
+    resources: [
+      {
+        label: 'InterGit – Interaktives Git-Visualisierungstool',
+        href: 'https://inter-git.com/'
+      }
+    ],
     lessonFlow: {
       title: 'Mini-Lektion: Warum Versionskontrolle?',
       continueLabel: 'Weiter',
@@ -688,6 +647,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       {
         label: 'Git Download',
         href: 'https://git-scm.com/downloads'
+      },
+      {
+        label: 'InterGit – Interaktives Git-Visualisierungstool',
+        href: 'https://inter-git.com/'
       }
     ]
   },
@@ -728,6 +691,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       {
         label: 'NEXT_STEPS.md',
         href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
+      },
+      {
+        label: 'InterGit – Interaktives Git-Visualisierungstool',
+        href: 'https://inter-git.com/'
       }
     ],
     vscodeHint: [

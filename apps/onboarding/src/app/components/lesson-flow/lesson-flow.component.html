@@ -17,7 +17,7 @@
     </header>
 
     @if (slide.type === 'content') {
-      <div class="lesson-flow__content">
+      <div #contentContainer class="lesson-flow__content">
         @if (slide.title) {
           <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
         }
@@ -47,7 +47,7 @@
     }
 
     @if (slide.type === 'quiz') {
-      <div class="lesson-flow__quiz">
+      <div #quizContainer class="lesson-flow__quiz">
         <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
         <p class="lesson-flow__prompt">{{ slide.prompt }}</p>
         @if (slide.instruction) {

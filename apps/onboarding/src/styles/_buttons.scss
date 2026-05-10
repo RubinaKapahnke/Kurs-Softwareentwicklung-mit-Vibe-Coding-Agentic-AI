@@ -36,3 +36,83 @@
   padding-inline: var(--space-sm);
   font-size: var(--font-size-xs);
 }
+
+.ui-link {
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+.ui-link-on-dark {
+  color: var(--color-link-on-dark);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link-on-dark-hover);
+  }
+}
+
+.ui-primary-button-light,
+.ui-primary-button-on-dark,
+.ui-secondary-button-light,
+.ui-secondary-button-on-dark {
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-semibold);
+
+  .mdc-button__label {
+    color: inherit !important;
+  }
+}
+
+.ui-primary-button-light {
+  background: var(--color-button-primary-light) !important;
+  color: var(--color-button-primary-light-text) !important;
+  --mdc-filled-button-container-color: var(--color-button-primary-light);
+  --mdc-filled-button-label-text-color: var(--color-button-primary-light-text);
+  --mat-filled-button-state-layer-color: var(--color-button-primary-light-text);
+}
+
+.ui-primary-button-on-dark {
+  background: var(--color-button-primary-dark) !important;
+  color: var(--color-button-primary-dark-text) !important;
+  --mdc-filled-button-container-color: var(--color-button-primary-dark);
+  --mdc-filled-button-label-text-color: var(--color-button-primary-dark-text);
+  --mat-filled-button-state-layer-color: var(--color-button-primary-dark-text);
+}
+
+.ui-secondary-button-light {
+  background: transparent !important;
+  color: var(--color-button-secondary-light-text) !important;
+  --mdc-text-button-label-text-color: var(--color-button-secondary-light-text);
+  --mat-text-button-state-layer-color: var(--color-button-secondary-light-text);
+  --mdc-outlined-button-label-text-color: var(--color-button-secondary-light-text);
+  --mdc-outlined-button-outline-color: var(--color-primary);
+}
+
+.ui-secondary-button-on-dark {
+  background: var(--color-button-secondary-dark) !important;
+  color: var(--color-button-secondary-dark-text) !important;
+  --mdc-text-button-label-text-color: var(--color-button-secondary-dark-text);
+  --mat-text-button-state-layer-color: var(--color-button-secondary-dark-text);
+  --mdc-filled-button-label-text-color: var(--color-button-secondary-dark-text);
+  --mat-filled-button-state-layer-color: var(--color-button-secondary-dark-text);
+
+  &:hover {
+    background: color-mix(in srgb, var(--color-button-secondary-dark) 88%, white) !important;
+  }
+}
+
+.ui-button-on-dark {
+  color: var(--color-on-dark);
+  --mdc-text-button-label-text-color: var(--color-on-dark);
+  --mat-text-button-state-layer-color: var(--color-on-dark);
+  --mdc-filled-button-label-text-color: var(--color-on-dark);
+  --mat-filled-button-state-layer-color: var(--color-on-dark);
+
+  &:hover {
+    color: var(--color-secondary);
+  }
+}

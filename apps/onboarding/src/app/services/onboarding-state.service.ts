@@ -197,9 +197,19 @@ export class OnboardingStateService {
   }
 
   resetStep2ToNewPath(): void {
+    const wasExperienced = this._step2Experience() === 'existing-experienced';
     this.resetAccountSetupProgress();
     this._step2Experience.set('new');
-    this._githubVisibilityConfirmed.set(false);
+    // Für erfahrene User, die zu neuem Account wechseln: Subtasks sind direkt erledigt
+    // weil sie nicht die Anfänger-Tasks durchlaufen brauchen
+    if (wasExperienced) {
+      this.setSubtaskDone(ACCOUNT_SETUP_STEP_ID, 0, true);
+    }
+    // Für erfahrene User, die zu neuem Account wechseln: GitHub-Sichtbarkeit bleibt bestätigt
+    // da sie bereits verstanden haben, dass ihr Account sichtbar sein wird
+    if (!wasExperienced) {
+      this._githubVisibilityConfirmed.set(false);
+    }
     sessionStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), 'new');
     sessionStorage.removeItem(this.storageKey(KEY_VISIBILITY_SUFFIX));
   }

@@ -9,10 +9,10 @@
 }
 
 .step-header-banner {
-  padding: 1.1rem 1.25rem 1rem;
+  padding: 1.1rem 1.25rem 0.5rem;
   background: linear-gradient(160deg,
-    color-mix(in srgb, var(--color-primary) 24%, white),
-    color-mix(in srgb, var(--color-primary) 42%, white));
+    color-mix(in srgb, var(--color-text) 94%, white),
+    color-mix(in srgb, var(--color-primary) 86%, black));
 }
 
 .step-header-banner__kicker {
@@ -21,12 +21,12 @@
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-caps);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary-dark);
+  color: color-mix(in srgb, var(--color-secondary) 88%, white);
 }
 
 .step-header-banner__title {
   margin: 0;
-  color: var(--color-text);
+  color: var(--color-on-dark);
   line-height: var(--line-height-tight);
   font-size: var(--font-size-2xl);
   letter-spacing: var(--letter-spacing-normal);
@@ -34,7 +34,7 @@
 
 .step-header-banner__subtitle {
   margin: 0.45rem 0 0;
-  color: var(--color-text-muted);
+  color: var(--color-on-dark-subtle);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
 }
@@ -125,7 +125,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   text-decoration: underline;
@@ -154,22 +154,31 @@
 }
 
 .done-btn {
+  min-height: var(--button-height-md);
+  padding-inline: 0.95rem;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
+  --mdc-outlined-button-container-height: var(--button-height-md);
 
   mat-icon {
     font-size: var(--icon-size-md);
     height: var(--icon-size-md);
     width: var(--icon-size-md);
+    margin-right: 0.2rem;
     transition: color 0.2s;
   }
 }
 
 .done-btn--done {
-  background: var(--surface-success);
+  background: var(--surface-success-strong);
   --mdc-outlined-button-outline-color: var(--color-success);
   --mdc-outlined-button-label-text-color: var(--color-success);
+  --mat-outlined-button-state-layer-color: var(--color-success);
 
-  mat-icon { color: var(--color-success); }
+  mat-icon {
+    color: var(--color-success);
+    background: color-mix(in srgb, var(--color-success) 18%, var(--color-surface));
+    border-radius: 50%;
+  }
 }
 
 // ── Eingangsfrage (prominent) ─────────────────────────────────────────────────
@@ -226,13 +235,14 @@
 }
 
 .account-choice {
-  padding: 1.15rem 1.5rem 1.35rem;
-  background: var(--surface-muted);
-  border-top: 1px solid var(--border-subtle);
+  padding: 1rem 1.5rem 0;
+  background: transparent !important;
+  margin: 0;
 }
 
 .account-choice .entry-question__kicker {
-  color: color-mix(in srgb, var(--color-primary) 80%, var(--color-text));
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
 }
 
 .account-choice .entry-question__heading {
@@ -277,6 +287,20 @@
 
   .repo-experience-options {
     grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .secondary,
+  .done-btn {
+    margin-right: 0;
+  }
+
+  .done-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -355,6 +379,14 @@
   --mdc-checkbox-unselected-hover-icon-color: var(--color-text);
   --mdc-checkbox-unselected-focus-icon-color: var(--color-text);
   --mdc-checkbox-unselected-pressed-icon-color: var(--color-text);
+
+  ::ng-deep .mdc-checkbox__label {
+    text-decoration: underline;
+  }
+}
+
+.required-label {
+  display: none;
 }
 
 .voucher-success {

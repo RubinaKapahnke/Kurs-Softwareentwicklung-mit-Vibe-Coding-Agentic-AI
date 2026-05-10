@@ -6,7 +6,7 @@
     </div>
     <div class="cta-actions">
       @if (selectedCourseIsLive()) {
-        <a mat-stroked-button [routerLink]="resumeLink()" class="btn-resume-cta">
+        <a mat-flat-button [routerLink]="resumeLink()" class="btn-resume-cta ui-primary-button-on-dark">
           @if (hasProgress()) {
             {{ resumeLabel() }}
           } @else {
@@ -14,7 +14,7 @@
           }
         </a>
       } @else {
-        <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-resume-cta">
+        <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-resume-cta ui-primary-button-on-dark">
           Interesse vormerken
         </a>
       }

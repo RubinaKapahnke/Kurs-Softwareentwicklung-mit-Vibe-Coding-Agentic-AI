@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, computed, signal } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild, computed, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,16 +18,22 @@ import {
   templateUrl: './lesson-flow.component.html',
   styleUrl: './lesson-flow.component.scss'
 })
-export class LessonFlowComponent {
+export class LessonFlowComponent implements OnChanges {
   @Input({ required: true }) lesson!: OnboardingLessonFlow;
   @Output() readonly finished = new EventEmitter<void>();
+  @ViewChild('contentContainer') private contentContainer?: ElementRef<HTMLDivElement>;
+  @ViewChild('quizContainer') private quizContainer?: ElementRef<HTMLDivElement>;
 
   readonly activeIndex = signal(0);
+  // Force recomputation when a different step provides a new lesson input.
+  readonly lessonVersion = signal(0);
   readonly selectedOptionIds = signal<Set<string>>(new Set());
   readonly quizEvaluated = signal(false);
   readonly quizPassed = signal(false);
 
   readonly activeSlide = computed<OnboardingLessonSlide | null>(() => {
+    this.lessonVersion();
+
     if (!this.lesson?.slides?.length) {
       return null;
     }
@@ -42,6 +48,17 @@ export class LessonFlowComponent {
     return total > 0 && this.activeIndex() >= total - 1;
   });
   readonly isFirstSlide = computed(() => this.activeIndex() === 0);
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (!changes['lesson']) {
+      return;
+    }
+
+    this.lessonVersion.update((value) => value + 1);
+    this.activeIndex.set(0);
+    this.resetQuizState();
+    this.resetSlideScroll();
+  }
 
   onOptionToggle(optionId: string, checked: boolean): void {
     const next = new Set(this.selectedOptionIds());
@@ -94,6 +111,7 @@ export class LessonFlowComponent {
 
     this.activeIndex.update((value) => value + 1);
     this.resetQuizState();
+    this.resetSlideScroll();
   }
 
   goPrev(): void {
@@ -103,6 +121,7 @@ export class LessonFlowComponent {
 
     this.activeIndex.update((value) => value - 1);
     this.resetQuizState();
+    this.resetSlideScroll();
   }
 
   goToSlide(index: number): void {
@@ -113,6 +132,7 @@ export class LessonFlowComponent {
 
     this.activeIndex.set(index);
     this.resetQuizState();
+    this.resetSlideScroll();
   }
 
   isOptionSelected(optionId: string): boolean {
@@ -183,5 +203,12 @@ export class LessonFlowComponent {
     this.selectedOptionIds.set(new Set());
     this.quizEvaluated.set(false);
     this.quizPassed.set(false);
+  }
+
+  private resetSlideScroll(): void {
+    requestAnimationFrame(() => {
+      this.contentContainer?.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      this.quizContainer?.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
   }
 }

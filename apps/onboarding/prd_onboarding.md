@@ -7,7 +7,7 @@
 ---
 
 ## 1. Zielbild
-Das Kurs-Tool führt absolute Einsteiger verständlich und sicher durch das erste Modul (Onboarding) bis zum lokalen Clone des Kurs-Repos. Gleichzeitig ist die Startseite so gestaltet, dass sie später als Einstieg für weitere KI-Kursmodule genutzt werden kann (z. B. Rapid Prototyping, AI Literacy, Vertiefungsmodule).
+Das Kurs-Tool führt absolute Einsteiger*innen verständlich und sicher durch das erste Modul (Onboarding) bis zum lokalen Clone des Kurs-Repos. Gleichzeitig ist die Startseite so gestaltet, dass sie später als Einstieg für weitere KI-Kursmodule genutzt werden kann (z. B. Rapid Prototyping, AI Literacy, Vertiefungsmodule).
 
 Wichtig für v1:
 - Die Seite zeigt klar, dass weitere Kurse noch im Aufbau sind.
@@ -59,7 +59,7 @@ Wichtig für v1:
 
 ### Startseite (`/`)
 Zweck:
-- Orientierung für absolute Einsteiger
+- Orientierung für absolute Einsteiger*innen
 - Einstieg in den aktuellen Kurs
 - Sichtbarer Ausblick auf weitere KI-Kurse (im Aufbau)
 
@@ -95,8 +95,8 @@ Inhalte:
 
 ## 7. User Stories mit Akzeptanzkriterien
 
-### [Einsteiger]
-Als Einsteiger möchte ich auf einer Startseite verstehen, was der Kurs ist und wie ich beginne, damit ich ohne Vorwissen sicher starten kann.
+### [Einsteiger*in]
+Als Einsteiger*in möchte ich auf einer Startseite verstehen, was der Kurs ist und wie ich beginne, damit ich ohne Vorwissen sicher starten kann.
 
 Akzeptanzkriterien:
 - [ ] Startseite hat genau 3 Hauptaktionen.

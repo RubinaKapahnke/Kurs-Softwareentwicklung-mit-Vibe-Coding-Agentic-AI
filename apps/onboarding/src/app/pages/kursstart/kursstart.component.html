@@ -12,9 +12,9 @@
         <a href="#ablauf" class="navbar-link" (click)="scrollTo($event, 'ablauf')">Ablauf</a>
         <a href="#fuer-wen" class="navbar-link" (click)="scrollTo($event, 'fuer-wen')">Für wen?</a>
         @if (selectedCourseIsLive()) {
-          <a mat-stroked-button [routerLink]="resumeLink()" class="navbar-cta">{{ navbarCta() }}</a>
+          <a mat-flat-button [routerLink]="resumeLink()" class="navbar-cta ui-primary-button-light">{{ navbarCta() }}</a>
         } @else {
-          <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta">Interesse melden</a>
+          <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta ui-primary-button-light">Interesse melden</a>
         }
       </nav>
     </div>
@@ -25,7 +25,6 @@
   <section class="hero-section">
     <div class="shell">
       <app-course-header
-        [courseCatalog]="courseCatalog"
         [selectedCourse]="selectedCourse()"
         [selectedCourseIsLive]="selectedCourseIsLive()"
         [hasProgress]="hasProgress()"
@@ -34,46 +33,29 @@
         [resumeLabel]="resumeLabel()"
       ></app-course-header>
 
-      <!-- Kursvideo (ONB-038) -->
-      <div class="course-video-section">
-        <h2 class="video-title">Kursüberblick: Was erwartet dich?</h2>
-        <p class="video-intro">
-          Schau dir das kurze Einführungsvideo an, um einen ersten Eindruck vom Kurs und den wichtigsten Themen zu bekommen.
-        </p>
-        <div class="video-embed-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/BK__F-ac1YE"
-            title="Kursüberblick: Softwareentwicklung mit Vibe Coding & Agentic AI"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="hero-facts">
-        <div class="fact-card">
-          <p class="fact-label">Kursumfang</p>
-          <p class="fact-value">14 Module · 12 Meilensteine</p>
-        </div>
-        <div class="fact-card">
-          <p class="fact-label">Format</p>
-          <p class="fact-value">Selbstlernend + Praxis</p>
-        </div>
-        <div class="fact-card">
-          <p class="fact-label">Ergebnis</p>
-          <p class="fact-value">Eigenes KI-Projekt</p>
-        </div>
-        <div class="fact-card fact-card--highlight">
-          <p class="fact-label">Was du danach kannst</p>
-          <ul class="fact-list">
-            <li>Ein KI-gestütztes Produkt planen, entwickeln und ausliefern</li>
-            <li>Prompts, Kontext und Agenten gezielt einsetzen</li>
-            <li>Ergebnisse testen, reviewen und verantwortungsvoll freigeben</li>
-            <li>Eigenen Schwerpunktpfad (Web/App oder Daten) vertiefen</li>
+      <div class="hero-right-column">
+        <!-- Kompetenzen im rechten Fokus-Panel -->
+        <div class="course-video-section">
+          <h2 class="video-title">Relevante Kernkompetenzen</h2>
+          <p class="video-intro">
+            Diese Fähigkeiten bauen wir im Kurs Schritt für Schritt auf.
+          </p>
+          <ul class="competencies-list">
+            <li>Mit Hilfe von KI ein Produkt planen, entwickeln und ausliefern</li>
+            <li>Prompts, Kontext und Agenten entwickeln und effizient einsetzen</li>
+            <li>Grundkonzepte der Softwareentwicklung und Softwarearchitektur verstehen</li>
+            <li>Ergebnisse testen, reviewen, debuggen und verantwortungsvoll freigeben</li>
+            <li>Agenten orchestrieren und erstes Multiagentensystem gestalten</li>
           </ul>
         </div>
+
+        <a href="#inhalte" class="video-next-link" (click)="scrollTo($event, 'inhalte')">
+          Alle Kursinhalte entdecken
+          <span class="video-next-link__arrow" aria-hidden="true">v</span>
+        </a>
+
       </div>
+
     </div>
   </section>
 

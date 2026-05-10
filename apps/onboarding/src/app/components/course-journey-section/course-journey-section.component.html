@@ -1,15 +1,15 @@
 <section class="journey-section" id="ablauf">
   <div class="shell">
     <div class="section-head">
-      <p class="eyebrow">Setup in {{ stepCount() }} Schritten</p>
+      <p class="eyebrow">Modul 1: Onboarding in {{ stepCount() }} Schritten</p>
       @if (selectedCourseIsLive()) {
-        <h2>So richtest du deine Umgebung ein</h2>
+        <h2>Inhalte aus Modul 1: So richtest du deine Umgebung ein</h2>
         <p class="section-sub">
-          Bevor du mit dem Kurs beginnst, richtest du einmalig deine Arbeitsumgebung ein.
-          Danach ist sie fuer den weiteren Kursfluss direkt nutzbar.
+          Dieser Abschnitt gehoert zum Onboarding aus Modul 1.
+          Du richtest einmalig deine Arbeitsumgebung ein und startest danach in den regulaeren Kursfluss.
         </p>
       } @else {
-        <h2>Onboarding folgt in diesem Kurs</h2>
+        <h2>Modul 1 (Onboarding) folgt in diesem Kurs</h2>
         <p class="section-sub">Sobald dieser Kurs freigeschaltet wird, bekommst du hier den passenden Onboarding-Ablauf.</p>
       }
     </div>

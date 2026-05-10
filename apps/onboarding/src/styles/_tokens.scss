@@ -12,11 +12,23 @@
   --color-warning: #b37400;
   --color-info: var(--color-primary);
   --color-text: #01203d;
-  --color-text-muted: color-mix(in srgb, var(--color-text) 72%, transparent);
-  --color-text-subtle: color-mix(in srgb, var(--color-text) 56%, transparent);
+  --color-text-muted: #506680;
+  --color-text-subtle: #7a8ca0;
+  --color-link: var(--color-primary-dark);
+  --color-link-hover: var(--color-secondary-dark);
+  --color-button-primary-light: var(--color-primary-dark);
+  --color-button-primary-light-text: var(--color-on-dark);
+  --color-button-primary-dark: var(--color-error);
+  --color-button-primary-dark-text: var(--color-on-dark);
+  --color-button-secondary-light: transparent;
+  --color-button-secondary-light-text: var(--color-primary-dark);
+  --color-button-secondary-dark: var(--color-secondary);
+  --color-button-secondary-dark-text: var(--color-text);
   --color-on-dark: #ffffff;
   --color-on-dark-muted: rgba(255, 255, 255, 0.74);
   --color-on-dark-subtle: rgba(255, 255, 255, 0.58);
+  --color-link-on-dark: var(--color-on-dark);
+  --color-link-on-dark-hover: var(--color-secondary);
   --border-on-dark: rgba(255, 255, 255, 0.3);
   --border-on-dark-strong: rgba(255, 255, 255, 0.6);
   --surface-on-dark-hover: rgba(255, 255, 255, 0.1);
@@ -53,8 +65,8 @@
   --font-weight-bold: 700;
 
   --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-md: 1rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-md: 0.9375rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.375rem;
   --font-size-2xl: 1.75rem;
