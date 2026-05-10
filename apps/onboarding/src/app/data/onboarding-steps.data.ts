@@ -167,6 +167,18 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       {
         label: 'GitHub Docs: Account erstellen',
         href: 'https://docs.github.com/de/get-started/start-your-journey/creating-an-account-on-github'
+      },
+      {
+        label: 'GitHub Dokumentation (Deutsch)',
+        href: 'https://docs.github.com/de'
+      },
+      {
+        label: 'GitHub Support',
+        href: 'https://support.github.com'
+      },
+      {
+        label: 'GitHub Community',
+        href: 'https://github.com/orgs/community/discussions'
       }
     ],
     markdownSource: '/content/github-account.md',
@@ -217,7 +229,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               heading: 'Hinweis zum Benutzernamen',
               paragraphs: [
-                'Dein GitHub-Benutzername ist öffentlich sichtbar – auch für andere Kursteilnehmende. Wähle einen Namen, mit dem du dich wohlfühlst.'
+                'Dein GitHub-Benutzername ist öffentlich sichtbar - auch für andere Kursteilnehmende. Wähle einen Namen, mit dem du dich wohlfühlst.'
               ]
             }
           ]
@@ -232,7 +244,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             { id: 'c', label: 'Als Video-Lernplattform für Kursinhalte.', isCorrect: false }
           ],
           successMessage: 'Richtig! GitHub ist deine Plattform für Code und Zusammenarbeit im Kurs.',
-          errorMessage: 'Nicht ganz. GitHub ist eine Plattform für Code – mit eingebautem Versionsverlauf und Zusammenarbeit.'
+          errorMessage: 'Nicht ganz. GitHub ist eine Plattform für Code - mit eingebautem Versionsverlauf und Zusammenarbeit.'
         }
       ]
     }
@@ -240,7 +252,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 4,
     title: 'Eigenes Übungs-Repository anlegen',
-    goal: 'Du erstellst dein erstes eigenes Repository auf GitHub – hier machst du alle Übungen.',
+    goal: 'Du erstellst dein erstes eigenes Repository auf GitHub - hier machst du alle Übungen.',
     tasks: [
       'Lege auf GitHub ein neues Repository an.',
       'Wähle einen Namen wie mein-vibe-coding, stelle die Sichtbarkeit auf Private und aktiviere die README-Datei.'
@@ -344,7 +356,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               orderedItems: [
                 'Klick auf den grünen Button „Create repository".',
-                'Fertig – dein Repository ist erstellt!'
+                'Fertig - dein Repository ist erstellt!'
               ]
             },
             {
@@ -386,16 +398,16 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     tasks: [
       'Öffne die Settings deines Repositories auf GitHub.',
       'Gehe zu Collaborators und sende eine Einladung an RubinaKapahnke.',
-      'Stelle sicher, dass dein Repository Private ist – die Trainerin wird explizit eingeladen und hat dann Zugriff.'
+      'Stelle sicher, dass dein Repository Private ist. Die Trainerin wird als Collaborator eingeladen und erhält dann Zugriff.'
     ],
     fallbackHelp: [
       {
         title: '"Collaborators" nicht sichtbar',
-        detail: 'Du musst Owner des Repositories sein. Prüfe, ob du in deinem eigenen Repository bist – nicht im Kurs-Repository.'
+        detail: 'Du musst Owner des Repositories sein. Prüfe, ob du in deinem eigenen Repository bist - nicht im Kurs-Repository.'
       },
       {
         title: 'Profil erscheint nicht beim Tippen',
-        detail: 'Tippe den Benutzernamen vollständig: RubinaKapahnke (https://github.com/RubinaKapahnke) – Groß-/Kleinschreibung beachten.'
+        detail: 'Tippe den Benutzernamen vollständig: RubinaKapahnke (https://github.com/RubinaKapahnke) - Groß-/Kleinschreibung beachten.'
       }
     ],
     successCriterion: 'Die Einladung wurde gesendet.'
@@ -403,7 +415,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 6,
     title: 'Erste Übungen im eigenen Repository',
-    goal: 'Du machst deine ersten GitHub-Aktionen direkt im Browser – ohne lokale Installation.',
+    goal: 'Du machst deine ersten GitHub-Aktionen direkt im Browser - ohne lokale Installation.',
     tasks: [
       'Lege die Datei uebung-01.md in deinem Repository an und committe sie.',
       'Bearbeite die README.md und ergänze eine Zeile über dich.',
@@ -416,7 +428,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       },
       {
         title: 'Commit-Button ist ausgegraut',
-        detail: 'Füge zuerst Inhalt in die Datei ein – leere Dateien können nicht committet werden.'
+        detail: 'Füge zuerst Inhalt in die Datei ein - leere Dateien können nicht committet werden.'
       }
     ],
     successCriterion:
@@ -436,11 +448,11 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       slides: [
         {
           type: 'content',
-          title: 'Ein Editor – und noch viel mehr',
+          title: 'Ein Editor - und noch viel mehr',
           sections: [
             {
               paragraphs: [
-                'VS Code (Visual Studio Code) ist ein kostenloses Programm von Microsoft, das du auf deinem Rechner installierst. Es sieht auf den ersten Blick aus wie ein einfacher Text-Editor – aber darunter steckt eine vollständige Entwicklungsumgebung.'
+                'VS Code (Visual Studio Code) ist ein kostenloses Programm von Microsoft, das du auf deinem Rechner installierst. Es sieht auf den ersten Blick aus wie ein einfacher Text-Editor - aber darunter steckt eine vollständige Entwicklungsumgebung.'
               ]
             },
             {
@@ -449,7 +461,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
                 'Du siehst alle Dateien deines Projekts in einer übersichtlichen Baumstruktur.',
                 'Ein eingebautes Terminal erspart dir den Wechsel in ein separates Fenster.',
                 'Erweiterungen (Extensions) machen aus VS Code ein KI-Assistenzsystem, einen Git-Client und vieles mehr.',
-                'GitHub Copilot ist direkt integrierbar – das nutzen wir im Kurs intensiv.'
+                'GitHub Copilot ist direkt integrierbar - das nutzen wir im Kurs intensiv.'
               ]
             }
           ]
@@ -460,13 +472,13 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               paragraphs: [
-                'In echten Softwareprojekten ist VS Code das meistgenutzte Werkzeug – quer durch alle Branchen und Programmiersprachen.'
+                'In echten Softwareprojekten ist VS Code das meistgenutzte Werkzeug - quer durch alle Branchen und Programmiersprachen.'
               ],
               tone: 'highlight'
             },
             {
               paragraphs: [
-                'Das heißt: Was du hier lernst, ist direkt übertragbar. Du arbeitest mit denselben Werkzeugen wie professionelle Entwicklerinnen und Entwickler – vom ersten Tag an.'
+                'Das heißt: Was du hier lernst, ist direkt übertragbar. Du arbeitest mit denselben Werkzeugen wie professionelle Entwicklerinnen und Entwickler - vom ersten Tag an.'
               ]
             }
           ]
@@ -498,8 +510,8 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
               isCorrect: false
             }
           ],
-          successMessage: 'Genau. VS Code ist unser zentrales Arbeitsgerät im Kurs – Editor, Terminal und KI-Assistent in einem.',
-          errorMessage: 'Nicht ganz. VS Code ist ein Editor, der weit mehr kann als nur Text anzeigen – Terminal, Extensions und KI-Integration inklusive.'
+          successMessage: 'Genau. VS Code ist unser zentrales Arbeitsgerät im Kurs - Editor, Terminal und KI-Assistent in einem.',
+          errorMessage: 'Nicht ganz. VS Code ist ein Editor, der weit mehr kann als nur Text anzeigen - Terminal, Extensions und KI-Integration inklusive.'
         }
       ]
     }
@@ -516,7 +528,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     fallbackHelp: [
       {
         title: 'Welche Version soll ich herunterladen?',
-        detail: 'Windows: den großen „Download for Windows"-Button. Mac: „Download for Mac". Lass dich nicht von den Varianten (User Installer, System Installer, ARM64) verwirren – der Hauptbutton wählt automatisch die richtige Version.'
+        detail: 'Windows: den großen „Download for Windows“-Button. Mac: „Download for Mac“. Lass dich nicht von den Varianten (User Installer, System Installer, ARM64) verwirren - der Hauptbutton wählt automatisch die richtige Version.'
       },
       {
         title: 'VS Code öffnet sich nicht',
@@ -691,7 +703,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     fallbackHelp: [
       {
         title: 'Einladung noch nicht da',
-        detail: 'Schau in deinen GitHub-Benachrichtigungen nach – oder kontaktiere die Trainerin direkt.'
+        detail: 'Schau in deinen GitHub-Benachrichtigungen nach - oder kontaktiere die Trainerin direkt.'
       },
       {
         title: 'git clone schlägt fehl',

@@ -4,7 +4,7 @@ Ein Repository ist dein persönlicher Arbeitsbereich auf GitHub. Dort speicherst
 
 ## Warum brauchst du dein eigenes Repository?
 
-Das Kurs-Repository bleibt zentral – dort liegt das Lernmaterial und die Aufgaben. Dein eigenes Repository ist dein privater Workspace zum Experimentieren und Lernen. Hier machst du deine Übungen, speicherst deine Lösungen und dokumentierst deinen Fortschritt.
+Das Kurs-Repository bleibt zentral - dort liegt das Lernmaterial und die Aufgaben. Dein eigenes Repository ist dein privater Workspace zum Experimentieren und Lernen. Hier machst du deine Übungen, speicherst deine Lösungen und dokumentierst deinen Fortschritt.
 
 ---
 
@@ -28,7 +28,7 @@ Diese Einstellungen sind wichtig:
 |------|---------|
 | **Repository name** | `vibe-coding-uebungen` oder `mein-vibe-coding` |
 | **Description** (optional) | `Meine Übungslösungen für den Vibe Coding Kurs` |
-| **Sichtbarkeit** | **Private** (nur du und die Trainerin sehen es) |
+| **Sichtbarkeit** | **Private** (empfohlen) |
 | **Initialize with README** | ☑ Häkchen setzen (wichtig!) |
 
 ### 4. Repository erstellen
@@ -46,7 +46,7 @@ Du siehst jetzt:
 - Die Datei **README.md**
 - Den grünen **„Code"-Button** (für später)
 
-Die README.md kannst du anklicken und mit dem Stift-Icon bearbeiten – das machst du in der nächsten Übung.
+Die README.md kannst du anklicken und mit dem Stift-Icon bearbeiten - das machst du in der nächsten Übung.
 
 ---
 
