@@ -601,9 +601,15 @@
     }
 
     @if (step().id < stepCount) {
-      <button mat-flat-button type="button" class="secondary" (click)="goToNextStep()">
-        Weiter
-      </button>
+      <span
+        [matTooltip]="isNextDisabled() ? 'Gib zuerst deinen Voucher-Code ein, um fortzufahren.' : ''"
+        matTooltipPosition="above">
+        <button mat-flat-button type="button" class="secondary"
+          [disabled]="isNextDisabled()"
+          (click)="goToNextStep()">
+          Weiter
+        </button>
+      </span>
     }
 
     @if (isFinishStep()) {

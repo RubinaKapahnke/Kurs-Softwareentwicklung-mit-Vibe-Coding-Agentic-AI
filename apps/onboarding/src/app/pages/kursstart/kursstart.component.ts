@@ -203,4 +203,15 @@ export class KursstartComponent {
       { icon: 'school', label: 'Fachpersonen mit Interesse an praxisnaher KI-Weiterbildung' }
     ]
   );
+
+  readonly navbarCta = computed(() => {
+    if (this.isCompleted()) return 'Zur Zusammenfassung';
+    if (this.hasProgress()) return 'Kurs fortsetzen';
+    return 'Starte mit Modul 1';
+  });
+
+  scrollTo(event: Event, id: string): void {
+    event.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }

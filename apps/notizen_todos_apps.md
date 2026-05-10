@@ -1,5 +1,13 @@
 # Onboarding App
 
+## Review 10.05.26 01:50
+
+### Überführung in Aufgaben
+- [ ] Kursstartseite-Header: Anker-Links (Inhalte/Ablauf/Für wen?) zur eigenen Seite, nicht zur Hauptseite → ONB-039 (neu)
+- [ ] Kursstartseite-Header: CTA-Button-Label kontextabhängig ("Starte mit Modul 1" oder "Kurs fortsetzen") → ONB-039
+- [ ] Step 1: "Weiter"-Button deaktivieren wenn kein Voucher eingegeben → ONB-041 (neu)
+
+
 ## Architektur
 
 - [ ] Trennung zwischen Kurs Startseite, Kurs Beschreibungsseite und Onboarding Steps. So dass es später auch weitere Module dort geben kann. 
@@ -8,19 +16,19 @@
 
 
 ### Accessibility & Design
-- [ ] Kontrast überall erhöhen: Blau auf Blau fixen, nie weiß auf hellblau verwenden (Fortschrittskomponente!)
-- [ ] Kursstartseite: Meme-Panels ("Nicht das Ziel" / "Unser Anspruch") mit Vollfarbe statt Transparenz-Mischton
+- [x] Kontrast überall erhöhen: Blau auf Blau fixen, nie weiß auf hellblau verwenden (Fortschrittskomponente!) → ONB-030 ✓
+- [x] Kursstartseite: Meme-Panels ("Nicht das Ziel" / "Unser Anspruch") mit Vollfarbe statt Transparenz-Mischton → ONB-030 ✓
 - [ ] Visuelle Elemente (Grafiken, Bilder) hinzufügen, damit Text leichter zu lesen wird
-- [ ] Scroll-Hinweis (Pfeil nach unten) wenn nach erstem Abschnitt noch Inhalte folgen
+- [x] Scroll-Hinweis (Pfeil nach unten) wenn nach erstem Abschnitt noch Inhalte folgen → ONB-034 ✓
 
 ### Content & Copy
-- [ ] Umlaute überall fixen (z.B. "verfuegbar" → "verfügbar")
-- [ ] "Repo" → "Repository" ausschreiben (außer in Code/Befehlen)
-- [ ] Bindestrich – nicht verwenden (stattdessen -)
-- [ ] Step 1: Nur essenzielle High-Level-Punkte, nicht zu detailliert, NEXT_STEPS.md nicht erwähnen, kein Git-Jargon
-- [ ] Step 3: GitHub Dokumentation Link hinzufügen (https://docs.github.com/de, Support Hub, Community)
+- [x] Umlaute überall fixen (z.B. "verfuegbar" → "verfügbar") → ONB-031 ✓
+- [x] "Repo" → "Repository" ausschreiben (außer in Code/Befehlen) → ONB-031 ✓
+- [x] Bindestrich – nicht verwenden (stattdessen -) → ONB-031 ✓
+- [x] Step 1: Nur essenzielle High-Level-Punkte, nicht zu detailliert, NEXT_STEPS.md nicht erwähnen, kein Git-Jargon → ONB-031 ✓
+- [x] Step 3: GitHub Dokumentation Link hinzufügen (https://docs.github.com/de, Support Hub, Community) → ONB-031 ✓
 - [ ] Step 4: Nicht nochmal erklären "was ist GitHub", nur "was ist ein Repo", Frage ob User schon mit Repos gearbeitet hat
-- [ ] CTA "Noch kein Kursplatz?" mit Email-Button versehen (Email: info@knoot-academy.de), Anfragetext direkt in Email
+- [x] CTA "Noch kein Kursplatz?" mit Email-Button versehen (Email: info@knoot-academy.de), Anfragetext direkt in Email → ONB-031 ✓
 
 ### Interaktivität & Logik
 - [ ] Step 2: Wenn nicht auf "Als erledigt markieren" geklickt → Popup mit Erklärung + Bestätigungsfrage
@@ -29,12 +37,12 @@
 - [ ] Step 3: Wenn Erfahrung angegeben aber später Umentscheidung → keine grundlegenden Erklärungen zeigen, aber Anzeigebutton anbieten
 - [ ] Step 4: Frage "Hast du schon mit Repos in GitHub gearbeitet?" + adaptive Erklärungen
 - [ ] Aufgabe "Lege auf GitHub einen Account an" als Checklisteneintrag darstellen (nicht nur Text)
-- [ ] Fortschrittskomponente: Aktive Schritt-Zahl mit hohem Kontrast (nicht weiß auf hellblau)
+- [x] Fortschrittskomponente: Aktive Schritt-Zahl mit hohem Kontrast (nicht weiß auf hellblau) → ONB-030 ✓
 
 ### Urheberrecht & Datenschutz
-- [ ] "(Private reicht – die Trainerin wird eingeladen)" entfernen
-- [ ] Repo-Erstellung erläutern: Bei public → Sicherstellen, dass keine Kursinhalte (Knoot Academy Copyright) dupliziert werden
-- [ ] Beispiele für Creative Commons/freie Lizenzen aufzählen
+- [x] "(Private reicht – die Trainerin wird eingeladen)" entfernen → ONB-033 ✓
+- [x] Repo-Erstellung erläutern: Bei public → Sicherstellen, dass keine Kursinhalte (Knoot Academy Copyright) dupliziert werden → ONB-033 ✓
+- [x] Beispiele für Creative Commons/freie Lizenzen aufzählen → ONB-033 ✓
 
 ### Content-Hierarchie & Kurserlebnis
 - [ ] "Wie der Kurs funktioniert" Erklärung hinzufügen: Schritte können übersprungen werden, bauen aber stark aufeinander auf → manche Übungen nicht möglich wenn vorherige Schritte nicht absolviert
@@ -229,7 +237,7 @@ Ziel: Eine neu aufgenommene Person kann ohne Hilfe vom Einstieg bis zur aktiven 
 	 	 - apps/onboarding/src/app/app.component.html
 	 	 - apps/onboarding/src/app/components/ (neuer Footer-Component falls nötig)
 
-14. [ ] ONB-038: Video zum Kurs auf Kursseite einbinden
+14. [x] ONB-038: Video zum Kurs auf Kursseite einbinden
 	 - Scope:
 	 	 - YouTube-Video in die Kursstart-Seite integrieren: https://youtu.be/BK__F-ac1YE
 	 	 - Positionierung direkt im Kurskontext (nicht im globalen Hub), mit kurzer Einleitung fuer Einsteiger
@@ -241,18 +249,28 @@ Ziel: Eine neu aufgenommene Person kann ohne Hilfe vom Einstieg bis zur aktiven 
 	 - Dateien:
 	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.html
 	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.scss
-	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.ts
-		 - Neue Sektion (Hero oder nach Zusammenfassung) erklären:
-			 - Schritte CAN übersprungen werden
-			 - Aber bauen aufeinander auf
-			 - Manche Übungen nicht möglich wenn vorherige nicht absolviert
-		 - Schritt-Abhängigkeiten grafisch darstellen
+
+15. [ ] ONB-039: Kursstartseite-Header - Anker-Links und CTA-Button kontextabhaengig
+	 - Scope:
+	 	 - Navbar-Links "Inhalte", "Ablauf", "Fuer wen?" sollen als Anker-Links auf Abschnitte der Kursstartseite fuehren (nicht auf die Hauptseite zurueck)
+	 	 - CTA-Button in Navbar kontextabhaengig beschriften: "Starte mit Modul 1" (noch kein Fortschritt) oder "Kurs fortsetzen" (Fortschritt vorhanden)
 	 - DoD:
-		 - Learner wissen Bescheid über Schritt-Abhängigkeiten vor Start
-		 - Keine überraschung bei "Schritt X nicht verfügbar"
+	 	 - Klick auf "Inhalte" scrollt zu #inhalte, nicht auf localhost:4200/
+	 	 - CTA-Button zeigt korrektes Label je nach Fortschrittsstatus
 	 - Dateien:
-		 - apps/onboarding/src/app/data/onboarding-steps.data.ts
-		 - apps/onboarding/src/app/pages/onboarding-shell/onboarding-shell.component.html
+	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.html
+	 	 - apps/onboarding/src/app/pages/kursstart/kursstart.component.ts
+
+16. [ ] ONB-041: Step 1 - Weiter-Button sperren wenn Voucher nicht validiert
+	 - Scope:
+	 	 - "Weiter"-Button in Schritt 1 deaktivieren, solange Voucher nicht eingegeben/bestaetigt
+	 	 - Tooltip/Hinweis: "Kurs noch nicht aktiv. Erst Einstiegsfragen beantworten und Voucher-Code eingeben."
+	 - DoD:
+	 	 - Weiter-Button ist disabled wenn Voucher nicht validiert
+	 	 - Klick auf gesperrten Button zeigt sinnvolle Rueckmeldung
+	 - Dateien:
+	 	 - apps/onboarding/src/app/pages/step-page/step-page.component.ts
+	 	 - apps/onboarding/src/app/pages/step-page/step-page.component.html
 
 6. [x] ONB-021: Kurs-Repo vs eigenes Repo didaktisch schaerfen
 	 - Scope:
@@ -331,8 +349,10 @@ Ziel: Eine neu aufgenommene Person kann ohne Hilfe vom Einstieg bis zur aktiven 
 9. ONB-035 (Wie der Kurs funktioniert)
 10. ONB-036 (Resume-Banner erweitern) – neu
 11. ONB-037 (Footer) – neu
-12. ONB-038 (Video auf Kursseite einbinden) – neu
-13. ONB-040 (README & Betriebsklarheit)
+12. ONB-038 (Video auf Kursseite einbinden) – ✅ ERLEDIGT
+13. **ONB-039** (Kursstartseite-Header: Anker-Links + CTA-Label)
+14. **ONB-041** (Step 1: Weiter-Button sperren wenn Voucher fehlt)
+15. ONB-040 (README & Betriebsklarheit)
 
 
 ## Go-Live Check (Abnahme)

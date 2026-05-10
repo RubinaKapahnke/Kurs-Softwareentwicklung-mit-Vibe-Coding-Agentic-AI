@@ -8,11 +8,11 @@
         <span class="navbar-title">KnOot Academy</span>
       </a>
       <nav class="navbar-menu">
-        <a href="#inhalte" class="navbar-link">Inhalte</a>
-        <a href="#ablauf" class="navbar-link">Ablauf</a>
-        <a href="#fuer-wen" class="navbar-link">Für wen?</a>
+        <a href="#inhalte" class="navbar-link" (click)="scrollTo($event, 'inhalte')">Inhalte</a>
+        <a href="#ablauf" class="navbar-link" (click)="scrollTo($event, 'ablauf')">Ablauf</a>
+        <a href="#fuer-wen" class="navbar-link" (click)="scrollTo($event, 'fuer-wen')">Für wen?</a>
         @if (selectedCourseIsLive()) {
-          <a mat-stroked-button [routerLink]="resumeLink()" class="navbar-cta">Onboarding</a>
+          <a mat-stroked-button [routerLink]="resumeLink()" class="navbar-cta">{{ navbarCta() }}</a>
         } @else {
           <a mat-stroked-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta">Interesse melden</a>
         }
@@ -78,22 +78,28 @@
   </section>
 
   <!-- ── Kursmodule / Inhalte ──────────────────────────────────── -->
-  <app-course-modules-section
-    [selectedCourseIsLive]="selectedCourseIsLive()"
-    [selectedCourseModules]="selectedCourseModules()"
-  ></app-course-modules-section>
+  <div id="inhalte">
+    <app-course-modules-section
+      [selectedCourseIsLive]="selectedCourseIsLive()"
+      [selectedCourseModules]="selectedCourseModules()"
+    ></app-course-modules-section>
+  </div>
 
-  <!-- ── Onboarding-Ablauf ──────────────────────────────────────── -->
-  <app-course-journey-section
-    [stepCount]="stepCount"
-    [selectedCourseIsLive]="selectedCourseIsLive()"
-    [selectedOnboardingSteps]="selectedOnboardingSteps()"
-  ></app-course-journey-section>
+  <!-- ── Onboarding-Ablauf ──────────────────────────────────── -->
+  <div id="ablauf">
+    <app-course-journey-section
+      [stepCount]="stepCount"
+      [selectedCourseIsLive]="selectedCourseIsLive()"
+      [selectedOnboardingSteps]="selectedOnboardingSteps()"
+    ></app-course-journey-section>
+  </div>
 
-  <!-- ── Für wen ────────────────────────────────────────────────── -->
-  <app-course-audience-section
-    [selectedTargetAudience]="selectedTargetAudience()"
-  ></app-course-audience-section>
+  <!-- ── Für wen ─────────────────────────────────────────────── -->
+  <div id="fuer-wen">
+    <app-course-audience-section
+      [selectedTargetAudience]="selectedTargetAudience()"
+    ></app-course-audience-section>
+  </div>
 
   <!-- ── CTA ───────────────────────────────────────────────────── -->
   <app-course-cta-section

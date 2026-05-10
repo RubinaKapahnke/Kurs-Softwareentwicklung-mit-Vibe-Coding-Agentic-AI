@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
@@ -32,6 +33,7 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     MatDividerModule,
     MatIconModule,
     MatTabsModule,
+    MatTooltipModule,
     MarkdownViewComponent,
     LessonFlowComponent,
     ChoiceCardComponent,
@@ -87,6 +89,10 @@ export class StepPageComponent {
   readonly canGoBack = computed(() => this.step().id > 1);
 
   readonly isVoucherStep = computed(() => this.step().id === 1);
+
+  readonly isNextDisabled = computed(
+    () => this.isVoucherStep() && !this.state.voucherValidated()
+  );
   readonly isAccountChoiceStep = computed(() => this.step().id === 3);
   readonly isOwnRepoStep = computed(() => this.step().id === 4);
   readonly isInviteStep = computed(() => this.step().id === 5);
