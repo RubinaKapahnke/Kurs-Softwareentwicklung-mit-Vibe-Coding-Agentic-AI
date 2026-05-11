@@ -7,6 +7,7 @@ export interface StepManifestEntry {
   title: string | null;
   goal: string | null;
   sections: StepManifestSection[];
+  requiresLessonCompletion?: boolean;
   lessonFlow?: OnboardingLessonFlow | null;
 }
 

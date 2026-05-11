@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -30,7 +29,6 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     CommonModule,
     MatButtonModule,
     MatCardModule,
-    MatCheckboxModule,
     MatDividerModule,
     MatIconModule,
     MatTabsModule,
@@ -68,6 +66,7 @@ export class StepPageComponent {
 
   private readonly resetScrollOnStepChange = effect(() => {
     this.step().id;
+    this.lessonCompleted.set(false);
     queueMicrotask(() => this.scrollPageTop());
   });
   private readonly loadMarkdownTasksOnStepChange = effect(() => {
@@ -99,6 +98,7 @@ export class StepPageComponent {
     return ONBOARDING_STEPS.find((item) => item.id === id) ?? ONBOARDING_STEPS[0];
   });
   readonly stepManifest = signal<StepManifest | null>(null);
+  readonly lessonCompleted = signal(false);
   readonly manifestEntry = computed(() => this.stepManifest()?.[this.step().id] ?? null);
   readonly markdownTasks = signal<string[] | null>(null);
   readonly markdownTaskNotes = signal<OnboardingLessonContentSection[] | null>(null);
@@ -106,6 +106,7 @@ export class StepPageComponent {
   readonly effectiveTaskNotes = computed(() => this.markdownTaskNotes() ?? []);
   readonly effectiveLessonFlow = computed(() => {
     const manifestFlow = this.manifestEntry()?.lessonFlow ?? null;
+    const manifestRequiresLessonCompletion = Boolean(this.manifestEntry()?.requiresLessonCompletion);
     const staticFlow = this.step().lessonFlow ?? null;
 
     if (!manifestFlow) {
@@ -113,14 +114,19 @@ export class StepPageComponent {
     }
 
     if (!staticFlow) {
-      return manifestFlow;
+      return {
+        ...manifestFlow,
+        disableFinishAction: manifestRequiresLessonCompletion ? false : manifestFlow.disableFinishAction,
+      };
     }
 
     return {
       ...manifestFlow,
       continueLabel: manifestFlow.continueLabel ?? staticFlow.continueLabel,
       finishLabel: manifestFlow.finishLabel ?? staticFlow.finishLabel,
-      disableFinishAction: manifestFlow.disableFinishAction ?? staticFlow.disableFinishAction,
+      disableFinishAction: manifestRequiresLessonCompletion
+        ? false
+        : (manifestFlow.disableFinishAction ?? staticFlow.disableFinishAction),
     };
   });
 
@@ -203,9 +209,6 @@ export class StepPageComponent {
     this.isAccountChoiceStep() && this.state.voucherValidated() &&
     this.state.step2Experience() === 'existing' // Nur erste Frage beantwortet, noch nicht spezialisiert
   );
-  readonly showExistingExperiencedOnlyContent = computed(() =>
-    this.isAccountChoiceStep() && this.state.step2Experience() === 'existing-experienced'
-  );
   readonly showStepResources = computed(() =>
     !this.isAccountChoiceStep() || this.showAccountStepContent()
   );
@@ -214,9 +217,12 @@ export class StepPageComponent {
       return false;
     }
 
+    const isAccountStep = this.isAccountChoiceStep();
+    const step2Experience = this.state.step2Experience();
+
     return this.showRepoExperienceQuestion() ||
-      this.state.step2Experience() === 'existing-beginner' ||
-      this.state.step2Experience() === 'existing-experienced' ||
+      (isAccountStep && step2Experience === 'existing-beginner') ||
+      (isAccountStep && step2Experience === 'existing-experienced') ||
       this.isInviteStep() ||
       this.isExerciseStep() ||
       this.isVscodeInstallStep() ||
@@ -232,7 +238,7 @@ export class StepPageComponent {
       return 'Unter der Lektion folgen noch Aufgaben.';
     }
 
-    if (this.showRepoExperienceQuestion() || this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced') {
+    if (this.showRepoExperienceQuestion() || (this.isAccountChoiceStep() && (this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced'))) {
       return 'Unter der Lektion folgt noch deine Auswahl fuer diesen Schritt.';
     }
 
@@ -295,17 +301,24 @@ export class StepPageComponent {
     }
 
     if (!this.isAccountChoiceStep()) {
-      return !this.allSubtasksDone();
+      return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
     }
 
     if (!this.state.voucherValidated()) return true;
     
     const exp = this.state.step2Experience();
     if (exp === null || exp === 'existing') return true; // Nicht fertig bis spezialisiert
-    if (exp === 'existing-beginner' || exp === 'existing-experienced') return !this.step2CanComplete();
-    if (exp === 'new') return !this.allSubtasksDone();
+    if (exp === 'existing-beginner' || exp === 'existing-experienced') {
+      return !this.step2CanComplete() || (this.mustCompleteLesson() && !this.lessonCompleted());
+    }
+    if (exp === 'new') return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
     return true;
   });
+
+  private mustCompleteLesson(): boolean {
+    return Boolean(this.manifestEntry()?.requiresLessonCompletion) &&
+      (!this.isAccountChoiceStep() || this.showAccountStepFullInstructions());
+  }
 
   isSubtaskDone(taskIndex: number): boolean {
     return this.state.isSubtaskDone(this.step().id, taskIndex);
@@ -377,8 +390,8 @@ export class StepPageComponent {
     });
   }
 
-  onVisibilityCheckboxChange(checked: boolean): void {
-    this.state.confirmGithubVisibility(checked);
+  confirmVisibilityHint(): void {
+    this.state.confirmGithubVisibility(true);
   }
 
   switchToNewPath(): void {
@@ -453,6 +466,8 @@ export class StepPageComponent {
   }
 
   onLessonFinished(): void {
+    this.lessonCompleted.set(true);
+
     const lessonBottom = this.lessonFlowSection?.nativeElement.getBoundingClientRect().bottom ?? 0;
 
     if (this.todoSection?.nativeElement) {

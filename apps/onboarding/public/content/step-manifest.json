@@ -12,7 +12,8 @@
         "file": "/content/step-01/aufgaben.md"
       }
     ],
-    "lessonFlow": null
+    "lessonFlow": null,
+    "requiresLessonCompletion": false
   },
   "2": {
     "title": "So laufen Kurs und Module ab",
@@ -85,7 +86,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "3": {
     "title": "GitHub-Account anlegen",
@@ -233,7 +235,8 @@
           "errorMessage": "Nicht ganz. GitHub ist eine Plattform für Code - mit eingebautem Versionsverlauf und Zusammenarbeit."
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": true
   },
   "4": {
     "title": "Eigenes Übungs-Repository anlegen",
@@ -340,7 +343,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "5": {
     "title": "Trainerin einladen",
@@ -386,7 +390,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "6": {
     "title": "Erste Übungen im eigenen Repository",
@@ -433,7 +438,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "7": {
     "title": "Was ist VS Code?",
@@ -510,7 +516,8 @@
           "errorMessage": "Nicht ganz. VS Code ist ein Editor, der weit mehr kann als nur Text anzeigen - Terminal, Extensions und KI-Integration inklusive."
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": true
   },
   "8": {
     "title": "VS Code installieren",
@@ -560,7 +567,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "9": {
     "title": "Was ist Git?",
@@ -658,7 +666,8 @@
           "multiSelect": true
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": true
   },
   "10": {
     "title": "Git installieren",
@@ -716,7 +725,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "11": {
     "title": "Kurs-Repo klonen",
@@ -761,7 +771,8 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   },
   "12": {
     "title": "Kurs-Handhabung verstehen",
@@ -817,6 +828,7 @@
           ]
         }
       ]
-    }
+    },
+    "requiresLessonCompletion": false
   }
 }

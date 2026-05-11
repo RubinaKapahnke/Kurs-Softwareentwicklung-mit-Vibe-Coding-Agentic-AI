@@ -156,6 +156,10 @@ npx ng serve
 	- Freigabe nach Voucher-Validierung
 - `src/app/pages/step-page/step-page.component.spec.ts`
 	- Sichtbarer Folgeinhalte-Hinweis unterhalb Lesson-Flow
+- `src/app/components/lesson-flow/lesson-flow.component.spec.ts`
+	- Quiz-Zustandslogik (4 Statusfaelle) inkl. Label/Icon-Mapping
+	- Umschalten von "Antworten pruefen" zu "Nochmal versuchen"
+	- Feedbackblock mit Ueberschrift und Begruendungstext
 
 ## Typische Fehlerbilder
 

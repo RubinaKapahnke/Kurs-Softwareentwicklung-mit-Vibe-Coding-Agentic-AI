@@ -56,7 +56,7 @@
               label="Ja, ich habe einen Account"
               tone="light"
               [compact]="true"
-              [selected]="state.step2Experience() === 'existing'"
+              [selected]="!!state.step2Experience()?.startsWith('existing')"
               (pressed)="selectExperience('existing')" />
           </div>
 
@@ -71,7 +71,9 @@
     <!-- Lesson Flow (z.B. Schritt 3: GitHub, Schritt 7: Was ist VS Code?, Schritt 9: Was ist Git?) -->
     @if (visibleLessonFlow(); as lessonFlow) {
       <div class="lesson-flow-section" #lessonFlowSection>
-        <app-lesson-flow [lesson]="lessonFlow" (finished)="onLessonFinished()"></app-lesson-flow>
+        <app-lesson-flow
+          [lesson]="lessonFlow"
+          (finished)="onLessonFinished()"></app-lesson-flow>
       </div>
       @if (hasLessonFollowUpContent()) {
         <button type="button" class="lesson-followup-hint" (click)="scrollToFollowUpContent()">
@@ -97,21 +99,21 @@
         <!-- Step 3b: Zweite Frage - wie sicher mit Repos? (nur wenn 'existing' gewählt) -->
         @if (showRepoExperienceQuestion()) {
           <section class="step-section repo-experience-section">
-            <h3>Wie sicher bist du mit GitHub-Repositories und Git-Befehlen?</h3>
-            <p>Das bestimmt, welche Erklärungen du als Anfänger*in brauchst oder ob du erfahren bist.</p>
+            <h3>Wie sicher bist du mit GitHub-Repositories und Git?</h3>
+            <p>So wissen wir, ob du eine kurze oder ausführliche Erklärung brauchst.</p>
 
             <div class="repo-experience-options">
               <app-choice-card
                 icon="school"
-                label="Anfänger*in - ich brauche Erklärungen"
-                description="Ich habe GitHub genutzt, aber nicht mit Repositories/Git."
+                label="Lektion bearbeiten"
+                description="Ich möchte mein Wissen zu Git und Repositories vertiefen."
                 tone="light"
                 [selected]="state.step2Experience() === 'existing-beginner'"
                 (pressed)="selectRepoExperience('beginner')" />
 
               <app-choice-card
                 icon="verified_user"
-                label="Erfahren - ich kenne Repositories und Git"
+                label="Lektion überspringen"
                 description="Ich arbeite regelmäßig mit Git und Repositories."
                 tone="light"
                 [selected]="state.step2Experience() === 'existing-experienced'"
@@ -120,21 +122,11 @@
           </section>
         }
 
-        <!-- Für Anfänger mit Account: Info, dass volle Erklärung kommt -->
-        @if (state.step2Experience() === 'existing-beginner') {
-          <app-callout icon="info" title="Du bekommst eine volle Erklärung" roleName="status">
-            <p class="info-section__text">
-              Wir erklären dir Schritt für Schritt, wie GitHub-Repositories funktionieren und wie du sie im Kurs verwendest. Keine Vorkenntnisse nötig.
-            </p>
-          </app-callout>
-          <mat-divider></mat-divider>
-        }
-
         <!-- Für erfahrene GitHub-Nutzer: Info, dass Erklärung übersprungen wird -->
         @if (state.step2Experience() === 'existing-experienced') {
-          <app-callout icon="info" title="Du kennst dich aus - wir machen es kurz" roleName="status">
+          <app-callout icon="info" title="Kurzfassung für dich" roleName="status">
             <p class="info-section__text">
-              Wir überspringen die ausführliche GitHub/Git-Erklärung. Wichtig ist nur: Du bist mit deinem Account eingeloggt, und du verstehst, dass dein Benutzername im gemeinsamen Kurs-Repository sichtbar sein wird.
+              Wir überspringen die ausführliche Erklärung. Wichtig: Du bist eingeloggt und dein GitHub-Benutzername ist im Kurs-Repository sichtbar.
             </p>
           </app-callout>
           <mat-divider></mat-divider>
@@ -147,28 +139,47 @@
               <span class="security-hint__icon" aria-hidden="true">
                 <mat-icon>priority_high</mat-icon>
               </span>
-              <strong class="security-hint__title">Wichtig: Dein Account ist im Kurs sichtbar</strong>
+              <strong class="security-hint__title">Wichtig: Account im Kurs sichtbar</strong>
             </div>
             <div class="security-hint__content">
               <p class="security-hint__reason">
-                Im geteilten Kurs-Repository können alle anderen Teilnehmenden deinen GitHub-Benutzernamen sehen – z. B. als Autor von Commits oder in Pull Requests. Stelle sicher, dass du das weißt und damit einverstanden bist.
+                Andere Teilnehmende sehen deinen GitHub-Benutzernamen im Kurs-Repository (z. B. bei Commits und Pull Requests). Bitte bestätige, dass das für dich okay ist.
               </p>
-              <mat-checkbox
-                class="security-hint__checkbox"
-                [checked]="state.githubVisibilityConfirmed()"
-                (change)="onVisibilityCheckboxChange($event.checked)">
-                Ich habe verstanden, dass mein GitHub-Account im Kurs für andere sichtbar sein kann.
-              </mat-checkbox>
             </div>
           </section>
 
           <section class="step-section">
             <div class="account-path-actions" aria-label="Account-Pfad wählen">
+              <button
+                mat-flat-button
+                type="button"
+                class="security-hint__confirm-button"
+                [disabled]="state.step2Experience() === 'new'"
+                (click)="confirmVisibilityHint()">
+                OK
+              </button>
+
               <button mat-stroked-button type="button" class="account-path-actions__secondary" (click)="switchToNewPath()">
                 <mat-icon>person_add</mat-icon>
-                Stattdessen neuen Account erstellen
+                Neuen Account erstellen
               </button>
             </div>
+
+            @if (state.githubVisibilityConfirmed()) {
+              <div class="voucher-success security-hint__success-box" role="status" aria-live="polite">
+                <mat-icon aria-hidden="true">check_circle</mat-icon>
+                <div>
+                  <strong>Hinweis bestätigt</strong>
+                  <p>Eigener Account bestätigt.</p>
+                </div>
+              </div>
+            }
+
+            @if (state.step2Experience() === 'new') {
+              <p class="security-hint__reason">
+                GitHub Account für den Kurs anlegen.
+              </p>
+            }
           </section>
         }
 

@@ -70,6 +70,8 @@ export class StepTasksComponent {
     }
 
     let escaped = this.escapeHtml(text);
+    const escapedAsteriskToken = '%%ESCAPED_ASTERISK%%';
+    escaped = escaped.replace(/\\\*/g, escapedAsteriskToken);
 
     const linkPlaceholders: string[] = [];
     escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|www\.[^\s)]+)\)/gi, (_, label: string, url: string) => {
@@ -93,6 +95,8 @@ export class StepTasksComponent {
     for (let i = 0; i < linkPlaceholders.length; i++) {
       escaped = escaped.replace(`%%LINK_${i}%%`, linkPlaceholders[i]);
     }
+
+    escaped = escaped.replace(new RegExp(escapedAsteriskToken, 'g'), '*');
 
     return escaped;
   }

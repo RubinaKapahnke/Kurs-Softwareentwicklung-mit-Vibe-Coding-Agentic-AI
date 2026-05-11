@@ -205,32 +205,14 @@ export class LessonFlowComponent implements OnChanges {
     return '';
   }
 
-  showOptionCorrect(optionId: string): boolean {
-    const slide = this.activeSlide();
-    if (!slide || slide.type !== 'quiz' || !this.quizEvaluated()) {
-      return false;
-    }
-
-    const option = slide.options.find((item) => item.id === optionId);
-    return Boolean(option?.isCorrect);
-  }
-
-  showOptionIncorrect(optionId: string): boolean {
-    const slide = this.activeSlide();
-    if (!slide || slide.type !== 'quiz' || !this.quizEvaluated()) {
-      return false;
-    }
-
-    const option = slide.options.find((item) => item.id === optionId);
-    return Boolean(this.isOptionSelected(optionId) && option && !option.isCorrect);
-  }
-
   linkifyText(text: string): string {
     if (!text) {
       return '';
     }
 
     let escaped = this.escapeHtml(text);
+    const escapedAsteriskToken = '%%ESCAPED_ASTERISK%%';
+    escaped = escaped.replace(/\\\*/g, escapedAsteriskToken);
 
     const linkPlaceholders: string[] = [];
     escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|www\.[^\s)]+)\)/gi, (_, label: string, url: string) => {
@@ -255,6 +237,8 @@ export class LessonFlowComponent implements OnChanges {
     for (let i = 0; i < linkPlaceholders.length; i++) {
       escaped = escaped.replace(`%%LINK_${i}%%`, linkPlaceholders[i]);
     }
+
+    escaped = escaped.replace(new RegExp(escapedAsteriskToken, 'g'), '*');
 
     return escaped;
   }

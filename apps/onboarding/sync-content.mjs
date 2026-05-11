@@ -450,13 +450,34 @@ const SECTION_TYPE_MAP = {
   'uebung.md': 'uebung',
 };
 
-const LERNINHALTE_ROOT = path.resolve(
-  appRoot,
-  '../../course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte'
-);
+const KURSMODULE_ROOT = path.resolve(appRoot, '../../course/kursmodule');
+
+async function resolveLerninhalteRoot() {
+  const entries = await fs.readdir(KURSMODULE_ROOT, { withFileTypes: true });
+  const onboardingCandidates = entries
+    .filter((entry) => entry.isDirectory() && /^01-/i.test(entry.name))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  for (const candidate of onboardingCandidates) {
+    const lerninhaltePath = path.join(KURSMODULE_ROOT, candidate.name, 'lerninhalte');
+    try {
+      const stats = await fs.stat(lerninhaltePath);
+      if (stats.isDirectory()) {
+        return lerninhaltePath;
+      }
+    } catch {
+      // Candidate without lerninhalte directory.
+    }
+  }
+
+  throw new Error(
+    `Onboarding lerninhalte directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/lerninhalte.`
+  );
+}
 
 async function syncLerninhalteManifest() {
-  const dirEntries = await fs.readdir(LERNINHALTE_ROOT, { withFileTypes: true });
+  const lerninhalteRoot = await resolveLerninhalteRoot();
+  const dirEntries = await fs.readdir(lerninhalteRoot, { withFileTypes: true });
   const lektionFolders = dirEntries
     .filter(e => e.isDirectory() && /^lektion-\d{2}-/.test(e.name))
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -465,7 +486,7 @@ async function syncLerninhalteManifest() {
 
   for (const folder of lektionFolders) {
     const stepId = parseInt(folder.name.match(/^lektion-(\d{2})-/)[1], 10);
-    const folderPath = path.join(LERNINHALTE_ROOT, folder.name);
+    const folderPath = path.join(lerninhalteRoot, folder.name);
     const stepSlug = `step-${String(stepId).padStart(2, '0')}`;
     const targetDir = path.join(publicContentRoot, stepSlug);
 
@@ -473,6 +494,7 @@ async function syncLerninhalteManifest() {
     const sections = [];
     let title = null;
     let goal = null;
+    let requiresLessonCompletion = false;
     let lessonFlow = null;
 
     for (const [filename, sectionType] of Object.entries(SECTION_TYPE_MAP)) {
@@ -480,7 +502,6 @@ async function syncLerninhalteManifest() {
 
       const srcPath = path.join(folderPath, filename);
       const dstPath = path.join(targetDir, filename);
-
       assertInside(repoRoot, srcPath, 'Lerninhalte source');
       assertInside(publicContentRoot, dstPath, 'Lerninhalte target');
 
@@ -510,6 +531,7 @@ async function syncLerninhalteManifest() {
         );
         if (parsedLessonFlow.slides.length > 0) {
           lessonFlow = parsedLessonFlow;
+          requiresLessonCompletion = parsedLessonFlow.slides.some((slide) => slide.type === 'quiz');
         }
       }
 
@@ -528,7 +550,7 @@ async function syncLerninhalteManifest() {
     }
 
     if (sections.length > 0) {
-      manifest[stepId] = { title, goal, sections, lessonFlow };
+      manifest[stepId] = { title, goal, sections, lessonFlow, requiresLessonCompletion };
     }
   }
 

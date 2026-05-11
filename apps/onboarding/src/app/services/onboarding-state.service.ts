@@ -205,11 +205,8 @@ export class OnboardingStateService {
     if (wasExperienced) {
       this.setSubtaskDone(ACCOUNT_SETUP_STEP_ID, 0, true);
     }
-    // Für erfahrene User, die zu neuem Account wechseln: GitHub-Sichtbarkeit bleibt bestätigt
-    // da sie bereits verstanden haben, dass ihr Account sichtbar sein wird
-    if (!wasExperienced) {
-      this._githubVisibilityConfirmed.set(false);
-    }
+    // Bei Wechsel auf neuen Account wird die explizite Sichtbarkeitsbestaetigung immer zurueckgesetzt.
+    this._githubVisibilityConfirmed.set(false);
     sessionStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), 'new');
     sessionStorage.removeItem(this.storageKey(KEY_VISIBILITY_SUFFIX));
   }
