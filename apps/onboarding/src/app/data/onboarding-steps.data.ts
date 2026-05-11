@@ -4,6 +4,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 1,
     title: 'Zugang mit Voucher freischalten',
+    moduleTitle: 'Modul 01: Arbeitsumgebung & Versionsverwaltung',
     goal: 'Du gibst deinen Voucher-Code ein und schaltest das Onboarding frei.',
     tasks: [
       'Gib deinen Voucher-Code ein und bestätige ihn.'

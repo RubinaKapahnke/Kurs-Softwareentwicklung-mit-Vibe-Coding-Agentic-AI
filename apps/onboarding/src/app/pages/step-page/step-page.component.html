@@ -1,9 +1,9 @@
 <mat-card class="step-card" appearance="outlined">
   <section class="step-header-banner" aria-label="Schrittüberschrift">
     <p class="step-header-banner__kicker">Schritt {{ step().id }}</p>
-    <h1 class="step-header-banner__title">{{ isAccountChoiceStep() ? step3Title() : step().title }}</h1>
-    @if (isAccountChoiceStep() ? step3Goal() : step().goal) {
-      <p class="step-header-banner__subtitle">{{ isAccountChoiceStep() ? step3Goal() : step().goal }}</p>
+    <h1 class="step-header-banner__title">{{ isAccountChoiceStep() ? step3Title() : effectiveTitle() }}</h1>
+    @if (isAccountChoiceStep() ? step3Goal() : effectiveGoal()) {
+      <p class="step-header-banner__subtitle">{{ isAccountChoiceStep() ? step3Goal() : effectiveGoal() }}</p>
     }
   </section>
 
@@ -447,7 +447,8 @@
     @if (showTodoSection()) {
       <app-step-tasks
         #todoSection
-        [tasks]="step().tasks"
+        [notes]="effectiveTaskNotes()"
+        [tasks]="effectiveTasks()"
         [isAccountChoiceStep]="isAccountChoiceStep()"
         [isInviteStep]="isInviteStep()"
         [showAccountStepFullInstructions]="showAccountStepFullInstructions()"

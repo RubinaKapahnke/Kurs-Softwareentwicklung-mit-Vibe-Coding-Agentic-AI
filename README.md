@@ -93,7 +93,9 @@ course/course-library/04-git/
 │   │   │       ├── github-account.md
 │   │   │       ├── github-repository-erstellen.md
 │   │   │       ├── kurs-handhabung.md
-│   │   │       └── kurs-ueberblick.md
+│   │   │       ├── kurs-ueberblick.md
+│   │   │       ├── tasks-step-04.md
+│   │   │       └── tasks-step-06.md
 │   │   ├── src/
 │   │   │   ├── app/
 │   │   │   │   ├── components/
@@ -188,7 +190,22 @@ course/course-library/04-git/
 │   │   │   ├── 05-vscode-speicherkonflikt-im-kurs.md
 │   │   │   ├── github-repository-erstellen.md
 │   │   │   ├── modulziele.md
-│   │   │   └── README-template-tn-repo.md
+│   │   │   ├── README-template-tn-repo.md
+│   │   │   └── lerninhalte/
+│   │   │       ├── README_LERNINHALTE.md
+│   │   │       ├── anleitung-lerninhalte-zu-steps.md
+│   │   │       ├── lektion-01-zugang-freischalten/
+│   │   │       ├── lektion-02-kurs-und-module/
+│   │   │       ├── lektion-03-github-account/
+│   │   │       ├── lektion-04-eigenes-uebungs-repository/
+│   │   │       ├── lektion-05-trainerin-einladen/
+│   │   │       ├── lektion-06-erste-uebungen/
+│   │   │       ├── lektion-07-was-ist-vs-code/
+│   │   │       ├── lektion-08-vs-code-installieren/
+│   │   │       ├── lektion-09-was-ist-git/
+│   │   │       ├── lektion-10-git-installieren/
+│   │   │       ├── lektion-11-kurs-repo-klonen/
+│   │   │       └── lektion-12-kurs-handhabung-verstehen/
 │   │   ├── 02-produktbeschreibung-inkrementelle-planung/
 │   │   │   └── 00-modulziele.md
 │   │   ├── 03-vibe-coding-prompting-context-engineering/

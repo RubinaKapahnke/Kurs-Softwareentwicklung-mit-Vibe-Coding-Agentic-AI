@@ -86,6 +86,38 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 - Markdown-HTML muss vor der Anzeige sanitiziert werden (z. B. DOMPurify), keine ungefilterte Ausgabe.
 - Auch bei Markdown-Inhalten bleibt die interaktive Schrittlogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
 
+## Manifest-Sync aus Kursmodul-Lektionen
+
+- Lesson-Flow-Inhalte werden aus `course/kursmodule/01-.../lerninhalte/lektion-XX-.../lektion-inhalte.md` synchronisiert.
+- Aufgaben werden optional aus `aufgaben.md` derselben Lektion synchronisiert.
+- `npm run sync-content` in `apps/onboarding` erzeugt/aktualisiert `public/content/step-manifest.json` und die Inhalte unter `public/content/step-XX/`.
+- Bei nicht-Account-Choice-Steps hat manifestbasierter Lesson-Flow Vorrang vor statisch hinterlegtem `lessonFlow` in `onboarding-steps.data.ts`.
+
+## Markdown-Konvention fuer Lesson-Flow
+
+- `##` erzeugt eine neue Lesson-Seite (Slide).
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- `###` erzeugt einen Abschnitt innerhalb der aktuellen Slide.
+- `####` wird als Zwischenüberschrift im Abschnitt gerendert (uppercase).
+- Inline-Markdown ist erlaubt: `*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`.
+
+### Quiz-Pattern in Markdown
+
+- Quiz-Slides werden über `## Quiz: ...` definiert.
+- Pflichtfelder: `Frage:` sowie mindestens zwei Antwortoptionen als `- [ ]` / `- [x]`.
+- Mindestens eine Option muss korrekt sein (`- [x]`).
+- Optional: `Hinweis:`, `Mehrfachauswahl: ja|nein`, `Erfolg:`, `Fehler:`.
+
+### Farbfelder ueber H3-Praefixe
+
+- `### Wichtig:` / `### Hinweis:` -> gelbes Feld
+- `### Achtung:` -> rotes Feld
+- `### Erfolg:` / `### OK:` / `### Gruen:` -> grünes Feld
+- `### Blau:` -> blaues Feld
+- `### Info:` / `### Tipp:` -> eigener Hinweis-Farbton
+
+Das Präfix wird nicht angezeigt; sichtbar bleibt nur der Text nach dem Doppelpunkt.
+
 ## Verbindlicher Component-Contract: Lesson Flow
 
 Die Komponente `app-lesson-flow` gilt als UI- und Verhaltens-Standard fuer Onboarding-Schritte mit Lektionen.

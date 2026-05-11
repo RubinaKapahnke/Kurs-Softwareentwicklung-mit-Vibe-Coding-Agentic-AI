@@ -1,0 +1,822 @@
+{
+  "1": {
+    "title": "Zugang mit Voucher freischalten",
+    "goal": "Du gibst deinen Voucher-Code ein und schaltest das Onboarding frei.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-01/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-01/aufgaben.md"
+      }
+    ],
+    "lessonFlow": null
+  },
+  "2": {
+    "title": "So laufen Kurs und Module ab",
+    "goal": "Du verstehst den Ablauf und weißt, wie es nach dem Onboarding weitergeht.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-02/lektion-inhalte.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "So laufen Kurs und Module ab",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Kapitel 1: Wie der Kurs aufgebaut ist",
+          "sections": [
+            {
+              "heading": "Kursablauf im Überblick",
+              "orderedItems": [
+                "Du wirst Schritt für Schritt durch einzelne Lernbausteine geführt die aufeinander aufbauen.",
+                "Zu den Bausteinen gibt es Übungen, die dir helfen das erlernte Wissen zu verstehen und anzuwenden.",
+                "Wenn du die Grundlagen durchgearbeitet hast, legst du deinen Schwerpunkt fest und kannst anhand dessen entscheiden welche Kapitel du in welcher Tiefe behandeln möchtest.",
+                "Nach den Grundlagen-Übungen entscheidest du dich für dein Kursprojekt und wendest die weiteren Lerninhalte im Projekt an.",
+                "Während des Kurses gibt es regelmäßige Termine für Q&As, Reviews und vertiefende Lerneinheiten. Genaueres dazu erklärt dir dein\\*e Dozent\\*in."
+              ]
+            },
+            {
+              "heading": "So funktioniert dieses Kurs-Tool",
+              "orderedItems": [
+                "Oben siehst du deinen Fortschritt über alle Schritte.",
+                "Jeder Schritt enthält Teilaufgaben, die du einzeln abhaken kannst.",
+                "Sind alle Teilaufgaben fertig, markierst du den Schritt als erledigt.",
+                "Mit Weiter und Zurück wechselst du zwischen den Schritten.",
+                "Offene Punkte kannst du später nachholen."
+              ]
+            },
+            {
+              "heading": "Wichtig für den Ablauf",
+              "paragraphs": [
+                "- Du kannst in den Steps springen.",
+                "- Da sie aufeinander aufbauen, ist es sinnvoll, sie der Reihe nach abzuarbeiten."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: Was das Modul Onboarding ist",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Im Onboarding richtest du deine Arbeitsumgebung ein.",
+                "- Dazu gehört alles, was du für den Kursstart brauchst: dein Zugang, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten.",
+                "- Alle Begriffe und Schritte lernst du nacheinander im Modul."
+              ]
+            },
+            {
+              "heading": "Bestandteile des Moduls Onboarding",
+              "paragraphs": [
+                "- Keine Sorge: Auch wenn du jetzt noch nicht weißt, was sich hinter diesen Begriffen verbirgt, ist nach dem Onboarding vieles klarer. Versprochen."
+              ],
+              "orderedItems": [
+                "GitHub-Account anlegen und erste Übungen im Browser machen.",
+                "VS Code und Git installieren.",
+                "Dein Repository lokal bedienen und Versionierung üben.",
+                "Kurs-Repository klonen und Modul 2 starten."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "3": {
+    "title": "GitHub-Account anlegen",
+    "goal": null,
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-03/lektion-inhalte.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "GitHub-Account anlegen",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Kapitel 1: Was ist GitHub?",
+          "sections": [
+            {
+              "paragraphs": [
+                "GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst."
+              ]
+            },
+            {
+              "heading": "Warum brauchen wir GitHub im Kurs?",
+              "paragraphs": [
+                "GitHub ist kostenlos nutzbar. Du brauchst nur einen Account.",
+                "Testzeile blabla"
+              ],
+              "orderedItems": [
+                "Dein eigenes Übungs-Repository liegt auf GitHub.",
+                "Das gemeinsame Kurs-Repository liegt ebenfalls auf GitHub.",
+                "Die Trainerin sieht deine Commits und kann dir Feedback geben."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Testquiz",
+          "prompt": "Wofür nutzt ihr GitHub im Kurs?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Falsche Antwort 1",
+              "isCorrect": false
+            },
+            {
+              "id": "b",
+              "label": "Falsche Antwort 2",
+              "isCorrect": false
+            },
+            {
+              "id": "c",
+              "label": "Für Code, Versionierung und Zusammenarbeit",
+              "isCorrect": true
+            },
+            {
+              "id": "d",
+              "label": "Nur für Videos",
+              "isCorrect": true
+            }
+          ],
+          "successMessage": "Richtig, genau darum geht es.",
+          "instruction": "Wähle die besten 2 Antworten.",
+          "errorMessage": "Fast, schau dir den Kontext nochmal an.",
+          "multiSelect": true,
+          "notes": [
+            {
+              "heading": "Lies erst den Kontext",
+              "tone": "highlight",
+              "paragraphs": [
+                "Das hilft bei der Auswahl.",
+                "__subheading__Fokus",
+                "Achte auf den Begriff **Versionsverlauf**."
+              ]
+            },
+            {
+              "heading": "Test",
+              "tone": "danger",
+              "paragraphs": [
+                "Test2"
+              ]
+            },
+            {
+              "heading": "Test",
+              "tone": "tip",
+              "paragraphs": [
+                "Test2"
+              ]
+            },
+            {
+              "heading": "test",
+              "paragraphs": [
+                "test 1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: Account erstellen",
+          "sections": [
+            {
+              "orderedItems": [
+                "Öffne github.com.",
+                "Klick auf Sign up.",
+                "Gib E-Mail und Passwort ein.",
+                "Wähle einen Benutzernamen.",
+                "Bestätige deine E-Mail.",
+                "Fertig."
+              ]
+            },
+            {
+              "heading": "Hinweise",
+              "paragraphs": [
+                "- Der GitHub-Benutzername ist sichtbar.",
+                "- Nutze möglichst eine E-Mail-Adresse, die dauerhaft in deinem Besitz bleibt.",
+                "- Link: https://github.com/join"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Kurze Verständnisfrage",
+          "prompt": "Wozu dient GitHub im Kurs hauptsächlich?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Als E-Mail-Dienst für Nachrichten an die Trainerin.",
+              "isCorrect": false
+            },
+            {
+              "id": "b",
+              "label": "Als Plattform zum Speichern und Teilen von Code mit Versionsverlauf.",
+              "isCorrect": true
+            },
+            {
+              "id": "c",
+              "label": "Als Video-Lernplattform für Kursinhalte.",
+              "isCorrect": false
+            }
+          ],
+          "successMessage": "Richtig! GitHub ist deine Plattform für Code und Zusammenarbeit im Kurs.",
+          "errorMessage": "Nicht ganz. GitHub ist eine Plattform für Code - mit eingebautem Versionsverlauf und Zusammenarbeit."
+        }
+      ]
+    }
+  },
+  "4": {
+    "title": "Eigenes Übungs-Repository anlegen",
+    "goal": "Du erstellst dein erstes eigenes Repository auf GitHub.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-04/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-04/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Eigenes Übungs-Repository anlegen",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Kapitel 1: Dein erstes eigenes Repository",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Ein Repository ist dein persönlicher Arbeitsbereich auf GitHub."
+              ]
+            },
+            {
+              "heading": "Warum brauchst du dein eigenes Repository?",
+              "orderedItems": [
+                "Das Kurs-Repository bleibt zentral.",
+                "Dein eigenes Repository ist dein privater Workspace.",
+                "Hier machst du Übungen und dokumentierst Fortschritt.",
+                "Die Trainerin kann Commits sehen und Feedback geben."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: Einloggen und Repository erstellen",
+          "sections": [
+            {
+              "heading": "Schritt 1: Einloggen",
+              "orderedItems": [
+                "github.com öffnen.",
+                "Mit Account anmelden."
+              ]
+            },
+            {
+              "heading": "Schritt 2: Neues Repository",
+              "orderedItems": [
+                "Profil-Icon klicken.",
+                "New repository auswählen.",
+                "Alternativ github.com/new."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 3: Repository ausfüllen",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Repository name: vibe-coding-uebungen oder mein-vibe-coding",
+                "- Description optional",
+                "- Sichtbarkeit: Private",
+                "- Initialize with README aktivieren"
+              ]
+            },
+            {
+              "heading": "Hinweis",
+              "paragraphs": [
+                "- Ohne README wirkt das Repository für Einsteigerinnen und Einsteiger oft leer und unklar."
+              ]
+            },
+            {
+              "heading": "Copyright-Hinweis",
+              "paragraphs": [
+                "- Kursinhalte nicht 1:1 öffentlich kopieren.",
+                "- Eigene Lösungen und eigenen Code kannst du veröffentlichen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 4: Repository erstellen",
+          "sections": [
+            {
+              "orderedItems": [
+                "Auf Create repository klicken.",
+                "Fertig."
+              ]
+            },
+            {
+              "heading": "Danach sichtbar",
+              "orderedItems": [
+                "Repository-Name",
+                "README.md",
+                "Code-Button"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "5": {
+    "title": "Trainerin einladen",
+    "goal": "Du gibst der Trainerin Zugriff auf dein Repository.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-05/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-05/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Trainerin einladen",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Schritt-für-Schritt",
+          "sections": [
+            {
+              "orderedItems": [
+                "Repository öffnen.",
+                "Settings auswählen.",
+                "Links unter Access auf Collaborators gehen.",
+                "Add people klicken.",
+                "RubinaKapahnke eingeben und auswählen.",
+                "Add collaborator bestätigen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Hinweis",
+          "sections": [
+            {
+              "paragraphs": [
+                "Pending invite ist normal, bis die Einladung angenommen wurde."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "6": {
+    "title": "Erste Übungen im eigenen Repository",
+    "goal": "Du machst deine ersten GitHub-Aktionen direkt im Browser.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-06/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-06/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Erste Übungen im eigenen Repository",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Übung 1: Neue Datei anlegen",
+          "sections": [
+            {
+              "orderedItems": [
+                "Add file -> Create new file",
+                "Dateiname: uebung-01.md",
+                "Inhalt eintragen",
+                "Commit changes mit passender Nachricht"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Übung 2: README bearbeiten",
+          "sections": [
+            {
+              "orderedItems": [
+                "README.md öffnen",
+                "Stift-Icon klicken",
+                "Eine Zeile ergänzen",
+                "Commit changes ausführen"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "7": {
+    "title": "Was ist VS Code?",
+    "goal": null,
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-07/lektion-inhalte.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Was ist VS Code?",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Kapitel 1: Ein Editor und noch viel mehr",
+          "sections": [
+            {
+              "paragraphs": [
+                "- VS Code ist ein kostenloses Programm und eine vollständige Entwicklungsumgebung."
+              ]
+            },
+            {
+              "heading": "Was macht VS Code besonders?",
+              "orderedItems": [
+                "Projektdateien in Baumstruktur",
+                "Eingebautes Terminal",
+                "Erweiterungen für KI, Git und mehr",
+                "GitHub Copilot integrierbar"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: Warum im Kurs?",
+          "sections": [
+            {
+              "paragraphs": [
+                "- VS Code ist ein verbreitetes Werkzeug in echten Softwareprojekten.",
+                "- Du arbeitest damit vom ersten Tag an praxisnah."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Schnell-Check",
+          "prompt": "Was ist VS Code?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ein kostenloser Code-Editor mit Terminal, Extensions und KI-Integration",
+              "isCorrect": true
+            },
+            {
+              "id": "b",
+              "label": "Ein Browser zum Anzeigen von Webseiten",
+              "isCorrect": false
+            },
+            {
+              "id": "c",
+              "label": "Ein Programm zum Verwalten von Git-Repositories",
+              "isCorrect": false
+            },
+            {
+              "id": "d",
+              "label": "Ein Compiler, der Code in ausführbare Programme umwandelt",
+              "isCorrect": false
+            }
+          ],
+          "successMessage": "Genau. VS Code ist unser zentrales Arbeitsgerät im Kurs - Editor, Terminal und KI-Assistent in einem.",
+          "instruction": "Wähle die treffendste Aussage aus.",
+          "errorMessage": "Nicht ganz. VS Code ist ein Editor, der weit mehr kann als nur Text anzeigen - Terminal, Extensions und KI-Integration inklusive."
+        }
+      ]
+    }
+  },
+  "8": {
+    "title": "VS Code installieren",
+    "goal": "Du installierst VS Code auf deinem Rechner und öffnest es zum ersten Mal.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-08/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-08/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "VS Code installieren",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Zusätzliche Hinweise aus der aktuellen Kurs-App",
+          "sections": [
+            {
+              "heading": "Windows",
+              "orderedItems": [
+                "Download for Windows",
+                "Installer starten",
+                "Standardwerte übernehmen"
+              ]
+            },
+            {
+              "heading": "macOS",
+              "orderedItems": [
+                "Download for Mac",
+                "zip entpacken",
+                "App in Programme ziehen",
+                "Optional: code-Command in PATH installieren"
+              ]
+            },
+            {
+              "heading": "Linux",
+              "paragraphs": [
+                "- Hinweis: kein offizieller Kurssupport",
+                "- Beispiel: sudo snap install code --classic",
+                "<!-- onboarding:end step-08-walkthrough -->"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "9": {
+    "title": "Was ist Git?",
+    "goal": null,
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-09/lektion-inhalte.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Was ist Git?",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Kapitel 1: Szenario",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Klingt praktisch, skaliert aber schlecht."
+              ],
+              "orderedItems": [
+                "Datei bis Zwischenstand bearbeiten.",
+                "Datei kopieren und versionieren.",
+                "Weiterarbeiten und erneut kopieren.",
+                "Viele Dateiversionen liegen nebeneinander."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: Warum machen Menschen das?",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Genau dafür gibt es bessere Werkzeuge: Git."
+              ],
+              "orderedItems": [
+                "Backup",
+                "Experimentieren",
+                "Zwischenstände festhalten"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 3: Warum Git besser passt",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Git speichert Änderungen strukturiert.",
+                "- Änderungen sind nachvollziehbar.",
+                "- Teamarbeit ist parallel möglich.",
+                "Kurz: Versionsverwaltung wird planbar und sauber."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Schnell-Check",
+          "prompt": "Welche Nachteile hat manuelle Versionierung mit vielen Dateikopien?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Fehler passieren schneller",
+              "isCorrect": true
+            },
+            {
+              "id": "b",
+              "label": "Doppelte Dateien verbrauchen unnötig Speicher",
+              "isCorrect": true
+            },
+            {
+              "id": "c",
+              "label": "Es kostet auf Dauer viel Zeit",
+              "isCorrect": true
+            },
+            {
+              "id": "d",
+              "label": "Bei größeren Projekten wird es schnell unübersichtlich",
+              "isCorrect": true
+            },
+            {
+              "id": "e",
+              "label": "Teamarbeit wird schwieriger",
+              "isCorrect": true
+            }
+          ],
+          "successMessage": "Richtig! Genau diese Punkte löst ein Versionskontrollsystem deutlich besser.",
+          "instruction": "Wähle die besten 5 Antworten.",
+          "errorMessage": "Fast. Prüfe noch einmal alle Aussagen und denke an Teamarbeit und Übersicht.",
+          "multiSelect": true
+        }
+      ]
+    }
+  },
+  "10": {
+    "title": "Git installieren",
+    "goal": "Du installierst Git auf deinem Rechner und prüfst es im Terminal.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-10/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-10/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Git installieren",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Installation",
+          "sections": [
+            {
+              "heading": "Windows",
+              "paragraphs": [
+                "- git-scm.com/downloads/win verwenden",
+                "- Installer mit Standardwerten durchklicken"
+              ]
+            },
+            {
+              "heading": "macOS",
+              "paragraphs": [
+                "- Empfehlung: Homebrew und `brew install git`",
+                "- Alternative: `xcode-select --install`"
+              ]
+            },
+            {
+              "heading": "Linux",
+              "paragraphs": [
+                "- Hinweis: kein offizieller Kurssupport",
+                "- Beispiele: apt-get, dnf, pacman, zypper"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Terminal-Check",
+          "sections": [
+            {
+              "paragraphs": [
+                "- `git --version` ausführen",
+                "- Erwartung: `git version 2.x.x`"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "11": {
+    "title": "Kurs-Repo klonen",
+    "goal": "Du klonst das gemeinsame Kurs-Repository und öffnest es in VS Code.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-11/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-11/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Kurs-Repo klonen",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Vorbedingung",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Einladung per E-Mail oder GitHub-Notifications annehmen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Clone-Ablauf",
+          "sections": [
+            {
+              "orderedItems": [
+                "Kurs-Repo öffnen.",
+                "Code -> HTTPS-URL kopieren.",
+                "In VS Code Terminal öffnen.",
+                "`git clone <URL>` ausführen.",
+                "Ordner in VS Code öffnen."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "12": {
+    "title": "Kurs-Handhabung verstehen",
+    "goal": "Du verstehst, welche Dateien im Kurs-Repository bleiben und was in deinem eigenen Repository entsteht.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-12/lektion-inhalte.md"
+      },
+      {
+        "type": "tasks",
+        "file": "/content/step-12/aufgaben.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "Kurs-Handhabung verstehen",
+      "slides": [
+        {
+          "type": "content",
+          "title": "Merksatz",
+          "sections": [
+            {
+              "paragraphs": [
+                "Kurs-Repo = Orientierung und Fortschritt. Eigenes Repo = Umsetzung und Artefakte."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Schnell-Entscheidung",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Aufgabe lesen: Kurs-Repo",
+                "- Lösung bauen: eigenes Repo",
+                "- Lernstand eintragen: Kurs-Repo"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Warum Lernfortschritt zentral?",
+          "sections": [
+            {
+              "paragraphs": [
+                "- Überblick für Dozentin",
+                "- stabile Dashboard-Datenquelle",
+                "- vergleichbare Rückfragen und nächste Schritte"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,11 @@
 :host {
   display: block;
+  /* Zentrale Quiz-Farbregeln nach finaler Abstimmung */
+  --quiz-state-positive-text: color-mix(in srgb, var(--color-success) 38%, var(--color-text));
+  --quiz-state-positive-feedback: color-mix(in srgb, var(--color-success) 40%, var(--color-text));
+  --quiz-state-negative-text: color-mix(in srgb, var(--color-accent-dark) 88%, white);
+  --quiz-state-positive-icon: color-mix(in srgb, var(--color-success) 72%, black);
+  --quiz-state-negative-icon: var(--color-accent-dark);
 }
 
 .lesson-flow {
@@ -87,18 +93,85 @@
 
 .lesson-flow__instruction {
   font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
 }
 
 .lesson-section {
   display: grid;
   gap: 0.65rem;
-  padding: 0.95rem 1rem;
+  padding: 1rem 1.05rem;
   border-radius: var(--radius-lg);
   background: var(--surface-muted);
 }
 
 .lesson-section--highlight {
   background: var(--surface-warning);
+  border: 1px solid color-mix(in srgb, var(--color-secondary-dark) 26%, var(--color-surface));
+  border-left: 8px solid var(--color-secondary-dark);
+}
+
+.lesson-section--highlight .lesson-section__heading {
+  color: var(--color-secondary-dark);
+}
+
+.lesson-section--highlight .lesson-section__subheading {
+  color: var(--color-secondary-dark);
+}
+
+.lesson-section--danger {
+  background: var(--surface-danger);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-accent);
+}
+
+.lesson-section--danger .lesson-section__heading {
+  color: var(--color-accent-dark);
+}
+
+.lesson-section--danger .lesson-section__subheading {
+  color: var(--color-accent-dark);
+}
+
+.lesson-section--success {
+  background: var(--surface-success);
+  border: 1px solid color-mix(in srgb, var(--color-success) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-success);
+}
+
+.lesson-section--success .lesson-section__heading {
+  color: color-mix(in srgb, var(--color-success) 70%, black);
+}
+
+.lesson-section--success .lesson-section__subheading {
+  color: color-mix(in srgb, var(--color-success) 70%, black);
+}
+
+.lesson-section--info {
+  background: var(--surface-info);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-surface));
+  border-left: 8px solid var(--color-primary);
+}
+
+.lesson-section--info .lesson-section__heading {
+  color: var(--color-primary-dark);
+}
+
+.lesson-section--info .lesson-section__subheading {
+  color: var(--color-primary-dark);
+}
+
+.lesson-section--tip {
+  background: color-mix(in srgb, var(--color-primary) 22%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-primary-dark) 24%, var(--color-surface));
+  border-left: 8px solid var(--color-primary-dark);
+}
+
+.lesson-section--tip .lesson-section__heading {
+  color: var(--color-primary-dark);
+}
+
+.lesson-section--tip .lesson-section__subheading {
+  color: var(--color-primary-dark);
 }
 
 .lesson-section__heading {
@@ -106,6 +179,72 @@
   font-size: var(--font-size-md);
   line-height: var(--line-height-heading);
   color: var(--color-primary-dark);
+}
+
+.lesson-section__callout-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lesson-section--highlight :is(p, .lesson-section__subheading, ol),
+.lesson-section--danger :is(p, .lesson-section__subheading, ol),
+.lesson-section--success :is(p, .lesson-section__subheading, ol),
+.lesson-section--info :is(p, .lesson-section__subheading, ol),
+.lesson-section--tip :is(p, .lesson-section__subheading, ol) {
+  margin-left: calc(1.62rem + 0.45rem);
+}
+
+.lesson-section--highlight :is(p, li),
+.lesson-section--danger :is(p, li),
+.lesson-section--success :is(p, li),
+.lesson-section--info :is(p, li),
+.lesson-section--tip :is(p, li) {
+  color: #2f2f2f;
+}
+
+.lesson-section__icon {
+  width: 1.62rem;
+  height: 1.62rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-dark);
+  flex-shrink: 0;
+}
+
+.lesson-section__icon mat-icon {
+  font-size: 0.88rem;
+  width: 0.88rem;
+  height: 0.88rem;
+}
+
+.lesson-section__icon--highlight {
+  background: var(--color-secondary-dark);
+}
+
+.lesson-section__icon--danger {
+  background: var(--color-accent);
+}
+
+.lesson-section__icon--success {
+  background: var(--color-success);
+}
+
+.lesson-section__icon--info,
+.lesson-section__icon--tip {
+  background: var(--color-primary);
+}
+
+.lesson-section__subheading {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .lesson-section p,
@@ -152,18 +291,110 @@
   transition: background 0.2s, border-color 0.2s;
 }
 
-.lesson-quiz-option--correct {
+.lesson-quiz-option--state-correct-selected {
   border-color: var(--border-success);
   background: var(--surface-success);
+  --mdc-checkbox-selected-icon-color: var(--color-success);
+  --mdc-checkbox-selected-hover-icon-color: var(--color-success);
+  --mdc-checkbox-selected-pressed-icon-color: var(--color-success);
+  --mdc-checkbox-selected-focus-icon-color: var(--color-success);
+  --mdc-checkbox-selected-checkmark-color: var(--color-on-dark);
+  --mdc-radio-selected-icon-color: var(--color-success);
+  --mdc-radio-selected-hover-icon-color: var(--color-success);
+  --mdc-radio-selected-pressed-icon-color: var(--color-success);
+  --mdc-radio-selected-focus-icon-color: var(--color-success);
 }
 
-.lesson-quiz-option--incorrect {
+.lesson-quiz-option--state-correct-selected .lesson-quiz-option__label {
+  color: var(--quiz-state-positive-text);
+}
+
+.lesson-quiz-option--state-correct-unselected {
+  border-color: var(--border-danger);
+  background: transparent;
+}
+
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__label {
+  color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__label {
+  color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-unselected {
+  border-color: var(--border-success);
+  background: transparent;
+}
+
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__label {
+  color: var(--quiz-state-positive-text);
+}
+
+.lesson-quiz-option--state-correct-selected :is(mat-checkbox, mat-radio-button),
+.lesson-quiz-option--state-incorrect-unselected :is(mat-checkbox, mat-radio-button) {
+  color: var(--quiz-state-positive-text);
+}
+
+.lesson-quiz-option--state-incorrect-selected :is(mat-checkbox, mat-radio-button),
+.lesson-quiz-option--state-correct-unselected :is(mat-checkbox, mat-radio-button) {
+  color: var(--quiz-state-negative-text);
+}
+
+:host ::ng-deep .lesson-quiz-option--state-correct-selected .mdc-label,
+:host ::ng-deep .lesson-quiz-option--state-incorrect-unselected .mdc-label {
+  color: var(--quiz-state-positive-text);
+}
+
+:host ::ng-deep .lesson-quiz-option--state-incorrect-selected .mdc-label,
+:host ::ng-deep .lesson-quiz-option--state-correct-unselected .mdc-label {
+  color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-selected {
   border-color: var(--border-danger);
   background: var(--surface-danger);
 }
 
 .lesson-quiz-option__icon {
   flex-shrink: 0;
+}
+
+.lesson-quiz-option__label {
+  color: #2f343b;
+}
+
+.lesson-quiz-option__state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.lesson-quiz-option__state-icon {
+  color: color-mix(in srgb, black 78%, var(--color-text));
+  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.lesson-quiz-option--state-correct-selected .lesson-quiz-option__state-icon,
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__state-icon {
+  color: var(--quiz-state-positive-icon);
+}
+
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__state-icon,
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__state-icon {
+  color: var(--quiz-state-negative-icon);
+}
+
+.lesson-quiz-option__feedback {
+  font-size: 0.78rem;
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  margin-left: auto;
+  white-space: nowrap;
+  opacity: 0.86;
 }
 
 .lesson-quiz-option__icon--correct {
@@ -183,12 +414,35 @@
   margin: 0;
   border-radius: var(--radius-md);
   padding: 0.75rem 0.9rem;
+}
+
+.lesson-flow__quiz-feedback-title {
+  margin: 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-heading);
   font-weight: var(--font-weight-semibold);
+}
+
+.lesson-flow__quiz-feedback-text {
+  margin: 0.3rem 0 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
 }
 
 .lesson-flow__quiz-feedback--success {
   background: var(--surface-success);
-  color: var(--color-primary-dark);
+  color: #2f343b;
+}
+
+.lesson-quiz-option--state-correct-selected .lesson-quiz-option__feedback,
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__feedback {
+  color: var(--quiz-state-positive-feedback);
+}
+
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__feedback,
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__feedback {
+  color: var(--quiz-state-negative-text);
 }
 
 .lesson-flow__quiz-feedback--error {

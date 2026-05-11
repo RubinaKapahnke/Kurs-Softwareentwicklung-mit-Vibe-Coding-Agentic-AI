@@ -1,4 +1,5 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild, computed, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -13,7 +14,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
-import { OnboardingStep } from '../../models/onboarding.models';
+import { OnboardingLessonContentSection, OnboardingStep, StepManifest } from '../../models/onboarding.models';
 import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } from '../../services/onboarding-state.service';
 import { MarkdownViewComponent } from '../../components/markdown-view/markdown-view.component';
 import { LessonFlowComponent } from '../../components/lesson-flow/lesson-flow.component';
@@ -45,7 +46,9 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
   styleUrl: './step-page.component.scss'
 })
 export class StepPageComponent {
+  private readonly subheadingPrefix = '__subheading__';
   private readonly document = inject(DOCUMENT);
+  private readonly http = inject(HttpClient);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly dialog = inject(MatDialog);
@@ -55,10 +58,29 @@ export class StepPageComponent {
   private readonly routeParamMap = toSignal(this.route.paramMap, {
     initialValue: this.route.snapshot.paramMap
   });
+
+  constructor() {
+    this.http.get<StepManifest>('/content/step-manifest.json').subscribe({
+      next: (manifest) => this.stepManifest.set(manifest),
+      error: () => this.stepManifest.set({})
+    });
+  }
+
   private readonly resetScrollOnStepChange = effect(() => {
     this.step().id;
     queueMicrotask(() => this.scrollPageTop());
   });
+  private readonly loadMarkdownTasksOnStepChange = effect(() => {
+    const entry = this.manifestEntry();
+    const currentStep = this.step();
+    const tasksSection = entry?.sections.find(s => s.type === 'tasks');
+    if (tasksSection) {
+      this.loadTasksFromFile(tasksSection.file, currentStep);
+    } else {
+      this.markdownTasks.set(null);
+    }
+  });
+  private markdownTaskRequestToken = 0;
 
   private getCourseId(): string {
     return this.route.parent?.snapshot.paramMap.get('courseId') ?? this.fallbackCourseId;
@@ -76,9 +98,34 @@ export class StepPageComponent {
     const id = Number(this.routeParamMap().get('id'));
     return ONBOARDING_STEPS.find((item) => item.id === id) ?? ONBOARDING_STEPS[0];
   });
+  readonly stepManifest = signal<StepManifest | null>(null);
+  readonly manifestEntry = computed(() => this.stepManifest()?.[this.step().id] ?? null);
+  readonly markdownTasks = signal<string[] | null>(null);
+  readonly markdownTaskNotes = signal<OnboardingLessonContentSection[] | null>(null);
+  readonly effectiveTasks = computed(() => this.markdownTasks() ?? this.step().tasks);
+  readonly effectiveTaskNotes = computed(() => this.markdownTaskNotes() ?? []);
+  readonly effectiveLessonFlow = computed(() => {
+    const manifestFlow = this.manifestEntry()?.lessonFlow ?? null;
+    const staticFlow = this.step().lessonFlow ?? null;
+
+    if (!manifestFlow) {
+      return staticFlow;
+    }
+
+    if (!staticFlow) {
+      return manifestFlow;
+    }
+
+    return {
+      ...manifestFlow,
+      continueLabel: manifestFlow.continueLabel ?? staticFlow.continueLabel,
+      finishLabel: manifestFlow.finishLabel ?? staticFlow.finishLabel,
+      disableFinishAction: manifestFlow.disableFinishAction ?? staticFlow.disableFinishAction,
+    };
+  });
 
   readonly visibleLessonFlow = computed(() => {
-    const lessonFlow = this.step().lessonFlow;
+    const lessonFlow = this.effectiveLessonFlow();
     if (!lessonFlow) {
       return null;
     }
@@ -132,9 +179,9 @@ export class StepPageComponent {
 
   readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
   readonly allSubtasksDone = computed(() =>
-    this.state.areStepSubtasksDone(this.step().id, this.step().tasks.length)
+    this.state.areStepSubtasksDone(this.step().id, this.effectiveTasks().length)
   );
-  readonly githubProfileShareTaskIndex = computed(() => this.step().tasks.length);
+  readonly githubProfileShareTaskIndex = computed(() => this.effectiveTasks().length);
   readonly githubProfileShareDone = computed(() =>
     this.state.isSubtaskDone(this.step().id, this.githubProfileShareTaskIndex())
   );
@@ -196,9 +243,12 @@ export class StepPageComponent {
     return 'Unter der Lektion folgen noch weitere Hinweise.';
   });
 
+  readonly effectiveTitle = computed(() => this.manifestEntry()?.title ?? this.step().title);
+  readonly effectiveGoal = computed(() => this.manifestEntry()?.goal ?? this.step().goal);
+
   // Step 3: Unterschiedliche Inhalte für 'new' vs 'existing-beginner' vs 'existing-experienced'
   readonly step3Title = computed(() => {
-    if (!this.isAccountChoiceStep()) return this.step().title;
+    if (!this.isAccountChoiceStep()) return this.effectiveTitle();
     const exp = this.state.step2Experience();
     if (exp === 'new') return 'GitHub-Account anlegen';
     if (exp === 'existing' || exp === 'existing-beginner') return 'GitHub Repos und Git verstehen';
@@ -207,7 +257,7 @@ export class StepPageComponent {
   });
 
   readonly step3Goal = computed(() => {
-    if (!this.isAccountChoiceStep()) return this.step().goal || '';
+    if (!this.isAccountChoiceStep()) return this.effectiveGoal() || '';
     const exp = this.state.step2Experience();
     if (exp === 'new')
       return 'Du erstellst deinen ersten GitHub-Account und stellst sicher, dass alles funktioniert.';
@@ -222,7 +272,7 @@ export class StepPageComponent {
     if (!this.isAccountChoiceStep() || !this.showAccountStepFullInstructions()) {
       return [];
     }
-    return this.step().tasks;
+    return this.effectiveTasks();
   });
   readonly showTodoSection = computed(() => {
     if (this.isVoucherStep() || !this.showAccountStepContent()) {
@@ -233,7 +283,7 @@ export class StepPageComponent {
       return false;
     }
 
-    const hasStepTasks = this.showAccountStepFullInstructions() && this.step().tasks.length > 0;
+    const hasStepTasks = this.showAccountStepFullInstructions() && this.effectiveTasks().length > 0;
     const hasAccountExtraTask = this.isAccountChoiceStep();
     return hasStepTasks || hasAccountExtraTask;
   });
@@ -416,5 +466,179 @@ export class StepPageComponent {
 
   scrollToFollowUpContent(): void {
     this.onLessonFinished();
+  }
+
+  private loadTasksFromFile(file: string, step: OnboardingStep): void {
+    const requestToken = ++this.markdownTaskRequestToken;
+    this.http.get(file, { responseType: 'text' }).subscribe({
+      next: (markdown) => {
+        if (requestToken !== this.markdownTaskRequestToken) return;
+        const extracted = this.extractTaskContentFromMarkdown(markdown);
+        this.markdownTasks.set(extracted.tasks.length > 0 ? extracted.tasks : step.tasks);
+        this.markdownTaskNotes.set(extracted.notes);
+      },
+      error: () => {
+        if (requestToken !== this.markdownTaskRequestToken) return;
+        this.markdownTasks.set(step.tasks);
+        this.markdownTaskNotes.set([]);
+      }
+    });
+  }
+
+  private sanitizeInlineMarkdown(text: string): string {
+    return text.trim();
+  }
+
+  private headingToTone(headingText: string): OnboardingLessonContentSection['tone'] {
+    const normalized = headingText.trim().toLowerCase();
+    if (normalized.startsWith('erfolg:') || normalized.startsWith('ok:') || normalized.startsWith('gruen:')) {
+      return 'success';
+    }
+    if (normalized.startsWith('info:') || normalized.startsWith('tipp:')) {
+      return 'tip';
+    }
+    if (normalized.startsWith('blau:')) {
+      return 'info';
+    }
+    if (normalized.startsWith('achtung:')) {
+      return 'danger';
+    }
+    if (normalized.startsWith('wichtig:') || normalized.startsWith('hinweis:')) {
+      return 'highlight';
+    }
+    return undefined;
+  }
+
+  private stripTonePrefixFromHeading(headingText: string): string {
+    return headingText.replace(/^(Wichtig|Hinweis|Achtung|Erfolg|OK|Gruen|Info|Tipp|Blau)\s*:\s*/i, '').trim();
+  }
+
+  private parseHeading(line: string): { level: number; text: string } | null {
+    const match = line.match(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
+    if (!match) {
+      return null;
+    }
+    return { level: match[1].length, text: match[2].trim() };
+  }
+
+  private parseTaskNoteSections(lines: string[]): OnboardingLessonContentSection[] {
+    const sections: OnboardingLessonContentSection[] = [];
+    let current: { heading?: string; tone?: OnboardingLessonContentSection['tone']; paragraphs: string[]; orderedItems: string[] } = {
+      heading: undefined,
+      tone: undefined,
+      paragraphs: [],
+      orderedItems: [],
+    };
+
+    const pushCurrent = () => {
+      if (!current.heading && current.paragraphs.length === 0 && current.orderedItems.length === 0) {
+        return;
+      }
+      const next: OnboardingLessonContentSection = {};
+      if (current.heading) next.heading = current.heading;
+      if (current.tone) next.tone = current.tone;
+      if (current.paragraphs.length > 0) next.paragraphs = current.paragraphs;
+      if (current.orderedItems.length > 0) next.orderedItems = current.orderedItems;
+      sections.push(next);
+    };
+
+    for (const rawLine of lines) {
+      const heading = this.parseHeading(rawLine);
+      if (heading) {
+        if (heading.level === 3) {
+          pushCurrent();
+          const headingText = this.sanitizeInlineMarkdown(heading.text);
+          current = {
+            heading: this.stripTonePrefixFromHeading(headingText) || headingText,
+            tone: this.headingToTone(headingText),
+            paragraphs: [],
+            orderedItems: [],
+          };
+        } else if (heading.level === 4) {
+          current.paragraphs.push(`${this.subheadingPrefix}${this.sanitizeInlineMarkdown(heading.text)}`);
+        }
+        continue;
+      }
+
+      const line = rawLine.trim();
+      if (!line) {
+        continue;
+      }
+
+      const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
+      if (orderedMatch) {
+        current.orderedItems.push(this.sanitizeInlineMarkdown(orderedMatch[1]));
+        continue;
+      }
+
+      const bulletMatch = line.match(/^[-*]\s+(.+)$/);
+      if (bulletMatch) {
+        current.paragraphs.push(`- ${this.sanitizeInlineMarkdown(bulletMatch[1])}`);
+        continue;
+      }
+
+      current.paragraphs.push(this.sanitizeInlineMarkdown(line));
+    }
+
+    pushCurrent();
+    return sections;
+  }
+
+  private extractTaskContentFromMarkdown(markdown: string): { tasks: string[]; notes: OnboardingLessonContentSection[] } {
+    const lines = markdown.split(/\r?\n/);
+    const taskSectionLines = this.findTaskSectionLines(lines);
+    const normalizedLines = taskSectionLines.length > 0 ? taskSectionLines : lines;
+
+    const checkboxTasks = normalizedLines
+      .map((line) => line.match(/^\s*[-*]\s+\[(?: |x|X)\]\s+(.+)$/)?.[1]?.trim() ?? null)
+      .filter((value): value is string => Boolean(value));
+
+    if (checkboxTasks.length > 0) {
+      const noteLines = normalizedLines.filter((line) => !/^\s*[-*]\s+\[(?: |x|X)\]\s+(.+)$/i.test(line));
+      return {
+        tasks: checkboxTasks,
+        notes: this.parseTaskNoteSections(noteLines),
+      };
+    }
+
+    const listTasks = normalizedLines
+      .map((line) => {
+        const ordered = line.match(/^\s*\d+\.\s+(.+)$/);
+        if (ordered?.[1]) {
+          return ordered[1].trim();
+        }
+
+        const bullet = line.match(/^\s*[-*]\s+(.+)$/);
+        if (bullet?.[1] && !bullet[1].trim().startsWith('[')) {
+          return bullet[1].trim();
+        }
+
+        return null;
+      })
+      .filter((value): value is string => Boolean(value));
+
+    const noteLines = normalizedLines.filter((line) => !/^\s*\d+\.\s+(.+)$/i.test(line) && !/^\s*[-*]\s+(.+)$/i.test(line));
+    return {
+      tasks: listTasks,
+      notes: this.parseTaskNoteSections(noteLines),
+    };
+  }
+
+  private findTaskSectionLines(lines: string[]): string[] {
+    const startIndex = lines.findIndex((line) => /^\s*#{2,6}\s+Aufgaben\b/i.test(line));
+    if (startIndex === -1) {
+      return [];
+    }
+
+    const sectionLines: string[] = [];
+    for (let index = startIndex + 1; index < lines.length; index++) {
+      const line = lines[index];
+      if (/^\s*#{2,6}\s+/.test(line)) {
+        break;
+      }
+      sectionLines.push(line);
+    }
+
+    return sectionLines;
   }
 }

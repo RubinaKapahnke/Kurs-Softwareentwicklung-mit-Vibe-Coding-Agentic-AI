@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 
 import {
+  OnboardingLessonContentSection,
   OnboardingLessonFlow,
   OnboardingLessonQuizSlide,
   OnboardingLessonSlide
@@ -19,6 +20,7 @@ import {
   styleUrl: './lesson-flow.component.scss'
 })
 export class LessonFlowComponent implements OnChanges {
+  private readonly subheadingPrefix = '__subheading__';
   @Input({ required: true }) lesson!: OnboardingLessonFlow;
   @Output() readonly finished = new EventEmitter<void>();
   @ViewChild('contentContainer') private contentContainer?: ElementRef<HTMLDivElement>;
@@ -91,6 +93,10 @@ export class LessonFlowComponent implements OnChanges {
     this.quizPassed.set(passed);
   }
 
+  restartQuiz(): void {
+    this.resetQuizState();
+  }
+
   canContinue(): boolean {
     if (!this.isQuizSlide()) {
       return true;
@@ -139,6 +145,66 @@ export class LessonFlowComponent implements OnChanges {
     return this.selectedOptionIds().has(optionId);
   }
 
+  isCorrectSelected(optionId: string): boolean {
+    const option = this.getQuizOption(optionId);
+    return this.quizEvaluated() && Boolean(option?.isCorrect) && this.isOptionSelected(optionId);
+  }
+
+  isIncorrectSelected(optionId: string): boolean {
+    const option = this.getQuizOption(optionId);
+    return this.quizEvaluated() && Boolean(option && !option.isCorrect && this.isOptionSelected(optionId));
+  }
+
+  isCorrectUnselected(optionId: string): boolean {
+    const option = this.getQuizOption(optionId);
+    return this.quizEvaluated() && Boolean(option?.isCorrect) && !this.isOptionSelected(optionId);
+  }
+
+  isIncorrectUnselected(optionId: string): boolean {
+    const option = this.getQuizOption(optionId);
+    return this.quizEvaluated() && Boolean(option && !option.isCorrect && !this.isOptionSelected(optionId));
+  }
+
+  evaluatedOptionIcon(optionId: string): string {
+    if (this.isCorrectSelected(optionId)) {
+      return 'check_circle';
+    }
+
+    if (this.isIncorrectSelected(optionId)) {
+      return 'cancel';
+    }
+
+    if (this.isIncorrectUnselected(optionId)) {
+      return 'check_circle_outline';
+    }
+
+    if (this.isCorrectUnselected(optionId)) {
+      return 'highlight_off';
+    }
+
+    return 'radio_button_unchecked';
+  }
+
+  evaluatedOptionFeedback(optionId: string): string {
+    if (this.isCorrectSelected(optionId)) {
+      return 'Richtig gewählt';
+    }
+
+    if (this.isIncorrectSelected(optionId)) {
+      return 'Falsch gewählt';
+    }
+
+    if (this.isCorrectUnselected(optionId)) {
+      return 'Falsch ausgelassen';
+    }
+
+    if (this.isIncorrectUnselected(optionId)) {
+      return 'Richtig ausgelassen';
+    }
+
+    return '';
+  }
+
   showOptionCorrect(optionId: string): boolean {
     const slide = this.activeSlide();
     if (!slide || slide.type !== 'quiz' || !this.quizEvaluated()) {
@@ -164,13 +230,61 @@ export class LessonFlowComponent implements OnChanges {
       return '';
     }
 
-    const escaped = this.escapeHtml(text);
+    let escaped = this.escapeHtml(text);
+
+    const linkPlaceholders: string[] = [];
+    escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|www\.[^\s)]+)\)/gi, (_, label: string, url: string) => {
+      const href = /^(https?:\/\/)/i.test(url) ? url : `https://${url}`;
+      const token = `%%LINK_${linkPlaceholders.length}%%`;
+      linkPlaceholders.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`);
+      return token;
+    });
+
+    escaped = escaped
+      .replace(/\*\*\*([^*]+)\*\*\*/g, '<strong><em>$1</em></strong>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+
     const urlPattern = /\b((?:https?:\/\/)?(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[\w\-./?%&=+#~]*)?)/gi;
 
-    return escaped.replace(urlPattern, (rawUrl: string) => {
+    escaped = escaped.replace(urlPattern, (rawUrl: string) => {
       const href = /^(https?:\/\/)/i.test(rawUrl) ? rawUrl : `https://${rawUrl}`;
       return `<a href="${href}" target="_blank" rel="noopener noreferrer">${rawUrl}</a>`;
     });
+
+    for (let i = 0; i < linkPlaceholders.length; i++) {
+      escaped = escaped.replace(`%%LINK_${i}%%`, linkPlaceholders[i]);
+    }
+
+    return escaped;
+  }
+
+  isSubheadingParagraph(text: string): boolean {
+    return text.startsWith(this.subheadingPrefix);
+  }
+
+  extractSubheadingText(text: string): string {
+    return text.slice(this.subheadingPrefix.length).trim();
+  }
+
+  isToneCallout(section: OnboardingLessonContentSection): boolean {
+    return Boolean(section.tone && section.tone !== 'default');
+  }
+
+  toneIcon(section: OnboardingLessonContentSection): string {
+    switch (section.tone) {
+      case 'danger':
+        return 'priority_high';
+      case 'success':
+        return 'task_alt';
+      case 'tip':
+        return 'lightbulb';
+      case 'info':
+        return 'info';
+      case 'highlight':
+      default:
+        return 'priority_high';
+    }
   }
 
   private isSelectionCorrect(slide: OnboardingLessonQuizSlide): boolean {
@@ -188,6 +302,15 @@ export class LessonFlowComponent implements OnChanges {
     }
 
     return true;
+  }
+
+  private getQuizOption(optionId: string) {
+    const slide = this.activeSlide();
+    if (!slide || slide.type !== 'quiz') {
+      return undefined;
+    }
+
+    return slide.options.find((item) => item.id === optionId);
   }
 
   private escapeHtml(value: string): string {

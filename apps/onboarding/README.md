@@ -77,6 +77,57 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 - Abschluss: src/app/pages/zusammenfassung/
 - Markdown-Texte: public/content/
 
+## Inhalts-Sync Aus Kursmodul-Lektionen
+
+Die redaktionelle Quelle für Lesson-Flow-Inhalte liegt im Kursmodul unter:
+
+- `course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/lektion-XX-.../lektion-inhalte.md`
+- optional: `.../aufgaben.md`
+
+Der Sync erfolgt in `apps/onboarding` mit:
+
+```bash
+npm run sync-content
+```
+
+Ergebnis:
+
+- `public/content/step-manifest.json` wird aktualisiert.
+- Inhalte werden nach `public/content/step-XX/` gespiegelt.
+
+## Markdown-Konvention Fuer Lesson-Flow
+
+- Jede `##`-Überschrift erzeugt eine neue Lesson-Slide.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- `###` erzeugt Abschnitte innerhalb der Slide.
+- `####` erzeugt eine Zwischenüberschrift im Abschnitt.
+
+### Quiz-Pattern
+
+```md
+## Quiz: Kurze Verständnisfrage
+
+Frage: ...
+Hinweis: ...
+Mehrfachauswahl: nein
+
+- [ ] Option A
+- [x] Option B
+
+Erfolg: ...
+Fehler: ...
+```
+
+### Farbfelder Ueber H3-Praefixe
+
+- `### Wichtig:` / `### Hinweis:` -> gelb
+- `### Achtung:` -> rot
+- `### Erfolg:` / `### OK:` / `### Gruen:` -> grün
+- `### Blau:` -> blau
+- `### Info:` / `### Tipp:` -> eigener Hinweis-Farbton
+
+Hinweis: Das Präfix wird nicht angezeigt. Sichtbar bleibt nur der Text nach `:`.
+
 ## Build und lokale Pruefung
 
 Im Ordner apps/onboarding:

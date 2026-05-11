@@ -50,6 +50,17 @@
   align-items: center;
 }
 
+.module-group-label {
+  width: 100%;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary, #666);
+  letter-spacing: 0.02em;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 0.15rem;
+}
+
 .step-pill {
   display: inline-flex;
   align-items: center;

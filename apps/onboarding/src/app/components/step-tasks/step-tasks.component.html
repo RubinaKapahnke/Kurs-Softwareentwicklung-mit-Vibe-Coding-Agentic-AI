@@ -1,5 +1,58 @@
 <section class="step-section">
   <h3>Was ist zu tun?</h3>
+
+  @if (notes().length) {
+    <div class="task-notes">
+      @for (section of notes(); track $index) {
+        <article
+          class="task-note"
+          [class.task-note--highlight]="section.tone === 'highlight'"
+          [class.task-note--danger]="section.tone === 'danger'"
+          [class.task-note--success]="section.tone === 'success'"
+          [class.task-note--info]="section.tone === 'info'"
+          [class.task-note--tip]="section.tone === 'tip'">
+          @if (section.heading) {
+            @if (isToneCallout(section)) {
+              <div class="task-note__callout-head">
+                <span
+                  class="task-note__icon"
+                  [class.task-note__icon--highlight]="section.tone === 'highlight'"
+                  [class.task-note__icon--danger]="section.tone === 'danger'"
+                  [class.task-note__icon--success]="section.tone === 'success'"
+                  [class.task-note__icon--info]="section.tone === 'info'"
+                  [class.task-note__icon--tip]="section.tone === 'tip'"
+                  aria-hidden="true">
+                  <mat-icon>{{ toneIcon(section) }}</mat-icon>
+                </span>
+                <h4 class="task-note__heading" [innerHTML]="linkifyText(section.heading)"></h4>
+              </div>
+            } @else {
+              <h4 class="task-note__heading" [innerHTML]="linkifyText(section.heading)"></h4>
+            }
+          }
+
+          @if (section.paragraphs?.length) {
+            @for (paragraph of section.paragraphs; track paragraph) {
+              @if (isSubheadingParagraph(paragraph)) {
+                <h5 class="task-note__subheading" [innerHTML]="linkifyText(extractSubheadingText(paragraph))"></h5>
+              } @else {
+                <p [innerHTML]="linkifyText(paragraph)"></p>
+              }
+            }
+          }
+
+          @if (section.orderedItems?.length) {
+            <ol>
+              @for (item of section.orderedItems; track item) {
+                <li [innerHTML]="linkifyText(item)"></li>
+              }
+            </ol>
+          }
+        </article>
+      }
+    </div>
+  }
+
   <div class="subtask-list" role="list">
     @if (isAccountChoiceStep()) {
       @if (step2Experience() === 'new') {
@@ -9,7 +62,7 @@
             role="listitem"
             [checked]="isSubtaskDone()(index)"
             (change)="onSubtaskChange(index, $event.checked)">
-            {{ task }}
+            <span [innerHTML]="linkifyText(task)"></span>
           </mat-checkbox>
         }
       } @else if (step2Experience() === 'existing-beginner' || step2Experience() === 'existing-experienced') {
@@ -30,12 +83,7 @@
           role="listitem"
           [checked]="isSubtaskDone()(index)"
           (change)="onSubtaskChange(index, $event.checked)">
-          @if (isInviteStep() && task.includes('RubinaKapahnke')) {
-            Gehe zu Collaborators und sende eine Einladung an
-            <a href="https://github.com/RubinaKapahnke" target="_blank" rel="noopener" class="git-link">RubinaKapahnke</a>.
-          } @else {
-            {{ task }}
-          }
+          <span [innerHTML]="linkifyText(task)"></span>
         </mat-checkbox>
       }
     }
@@ -46,7 +94,7 @@
         role="listitem"
         [checked]="githubProfileShareDone()"
         (change)="onSubtaskChange(githubProfileShareTaskIndex(), $event.checked)">
-        {{ githubProfileShareTask() }}
+        <span [innerHTML]="linkifyText(githubProfileShareTask())"></span>
       </mat-checkbox>
     }
   </div>

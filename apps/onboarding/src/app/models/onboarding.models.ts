@@ -1,3 +1,17 @@
+export interface StepManifestSection {
+  type: 'lesson' | 'tasks' | 'uebung';
+  file: string;
+}
+
+export interface StepManifestEntry {
+  title: string | null;
+  goal: string | null;
+  sections: StepManifestSection[];
+  lessonFlow?: OnboardingLessonFlow | null;
+}
+
+export type StepManifest = Record<number, StepManifestEntry>;
+
 export interface OnboardingHelpItem {
   title: string;
   detail: string;
@@ -12,7 +26,7 @@ export interface OnboardingLessonContentSection {
   heading?: string;
   paragraphs?: string[];
   orderedItems?: string[];
-  tone?: 'default' | 'highlight';
+  tone?: 'default' | 'highlight' | 'danger' | 'success' | 'info' | 'tip';
 }
 
 export interface OnboardingLessonContentSlide {
@@ -32,6 +46,7 @@ export interface OnboardingLessonQuizSlide {
   title: string;
   prompt: string;
   instruction?: string;
+  notes?: OnboardingLessonContentSection[];
   options: OnboardingLessonQuizOption[];
   successMessage: string;
   errorMessage?: string;
@@ -51,6 +66,7 @@ export interface OnboardingLessonFlow {
 export interface OnboardingStep {
   id: number;
   title: string;
+  moduleTitle?: string; // Titel der Kursmodul-Gruppe (nur beim ersten Schritt der Gruppe gesetzt)
   goal: string;
   tasks: string[];
   fallbackHelp: OnboardingHelpItem[];
@@ -58,6 +74,6 @@ export interface OnboardingStep {
   resources?: OnboardingResourceLink[];
   desktopHint?: string[];
   vscodeHint?: string[];
-  markdownSource?: string; // Pfad zur optionalen Markdown-Erklärung
+  markdownSource?: string;
   lessonFlow?: OnboardingLessonFlow;
 }
