@@ -71,7 +71,7 @@
             <li>Eigenes Produkt im gewählten Schwerpunktpfad planen, bauen und ausliefern</li>
           </ul>
           <div class="featured-actions">
-            <a [routerLink]="featuredCourseLink()" class="card-cta">Kursdetails</a>
+            <a [routerLink]="['/kurse', featuredCourse().id]" class="card-cta">Kursdetails</a>
           </div>
         </div>
       </article>
