@@ -64,8 +64,8 @@
 }
 
 .task-note__icon {
-  width: 1.62rem;
-  height: 1.62rem;
+  width: 1.42rem;
+  height: 1.42rem;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -75,9 +75,9 @@
 }
 
 .task-note__icon mat-icon {
-  font-size: 0.88rem;
-  width: 0.88rem;
-  height: 0.88rem;
+  font-size: 0.78rem;
+  width: 0.78rem;
+  height: 0.78rem;
 }
 
 .task-note__icon--highlight {
@@ -144,6 +144,22 @@
   margin-left: calc(1.62rem + 0.45rem);
 }
 
+.task-note--highlight .task-note__heading,
+.task-note--danger .task-note__heading,
+.task-note--success .task-note__heading,
+.task-note--info .task-note__heading,
+.task-note--tip .task-note__heading {
+  font-size: var(--font-size-sm);
+}
+
+.task-note--highlight :is(p, li),
+.task-note--danger :is(p, li),
+.task-note--success :is(p, li),
+.task-note--info :is(p, li),
+.task-note--tip :is(p, li) {
+  font-size: var(--font-size-sm);
+}
+
 .task-note p,
 .task-note li {
   margin: 0;
@@ -159,6 +175,48 @@
 
 .task-note :is(p, li) a:hover {
   color: var(--color-primary-dark);
+}
+
+.task-note :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+.task-note--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+.task-note--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+.task-note--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+.task-note--info :is(p, li) :is(strong, b),
+.task-note--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .task-note :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .task-note--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+:host ::ng-deep .task-note--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+:host ::ng-deep .task-note--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+:host ::ng-deep .task-note--info :is(p, li) :is(strong, b),
+:host ::ng-deep .task-note--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
 }
 
 .task-note ol {

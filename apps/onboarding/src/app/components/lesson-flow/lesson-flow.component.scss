@@ -200,12 +200,21 @@
 .lesson-section--success :is(p, li),
 .lesson-section--info :is(p, li),
 .lesson-section--tip :is(p, li) {
+  font-size: var(--font-size-sm);
   color: #2f2f2f;
 }
 
+.lesson-section--highlight .lesson-section__heading,
+.lesson-section--danger .lesson-section__heading,
+.lesson-section--success .lesson-section__heading,
+.lesson-section--info .lesson-section__heading,
+.lesson-section--tip .lesson-section__heading {
+  font-size: var(--font-size-sm);
+}
+
 .lesson-section__icon {
-  width: 1.62rem;
-  height: 1.62rem;
+  width: 1.42rem;
+  height: 1.42rem;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -215,9 +224,9 @@
 }
 
 .lesson-section__icon mat-icon {
-  font-size: 0.88rem;
-  width: 0.88rem;
-  height: 0.88rem;
+  font-size: 0.78rem;
+  width: 0.78rem;
+  height: 0.78rem;
 }
 
 .lesson-section__icon--highlight {
@@ -261,6 +270,48 @@
 
 .lesson-section :is(p, li) a:hover {
   color: var(--color-primary-dark);
+}
+
+.lesson-section :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+.lesson-section--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+.lesson-section--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+.lesson-section--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+.lesson-section--info :is(p, li) :is(strong, b),
+.lesson-section--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .lesson-section :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .lesson-section--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+:host ::ng-deep .lesson-section--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+:host ::ng-deep .lesson-section--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+:host ::ng-deep .lesson-section--info :is(p, li) :is(strong, b),
+:host ::ng-deep .lesson-section--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
 }
 
 .lesson-section ol {
