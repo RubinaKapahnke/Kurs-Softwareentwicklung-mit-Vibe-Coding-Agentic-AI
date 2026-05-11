@@ -47,6 +47,7 @@
               icon="person_add"
               label="Nein, bisher nicht"
               tone="light"
+              [compact]="true"
               [selected]="state.step2Experience() === 'new'"
               (pressed)="selectExperience('new')" />
 
@@ -54,6 +55,7 @@
               icon="person"
               label="Ja, ich habe einen Account"
               tone="light"
+              [compact]="true"
               [selected]="state.step2Experience() === 'existing'"
               (pressed)="selectExperience('existing')" />
           </div>

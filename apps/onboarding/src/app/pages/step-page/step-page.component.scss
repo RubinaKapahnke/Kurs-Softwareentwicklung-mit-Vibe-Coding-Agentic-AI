@@ -235,14 +235,14 @@
 }
 
 .account-choice {
-  padding: 1rem 1.5rem 0;
-  background: transparent !important;
+  padding: 1.15rem 1.5rem 1.35rem;
+  background: var(--surface-muted);
+  border-top: 1px solid var(--border-subtle);
   margin: 0;
 }
 
 .account-choice .entry-question__kicker {
-  color: var(--color-primary-dark);
-  margin-bottom: 1rem;
+  color: color-mix(in srgb, var(--color-primary) 80%, var(--color-text));
 }
 
 .account-choice .entry-question__heading {
