@@ -184,18 +184,18 @@
           }
         </div>
 
-        <div class="lesson-flow__quiz-actions">
-          <button mat-stroked-button type="button" (click)="quizEvaluated() ? restartQuiz() : checkQuizAnswers()">
-            {{ quizEvaluated() ? 'Nochmal versuchen' : 'Antworten prüfen' }}
-          </button>
-        </div>
-
         @if (quizEvaluated()) {
           <section class="lesson-flow__quiz-feedback" [class.lesson-flow__quiz-feedback--success]="quizPassed()" [class.lesson-flow__quiz-feedback--error]="!quizPassed()">
             <h5 class="lesson-flow__quiz-feedback-title">{{ quizPassed() ? 'Richtig geantwortet' : 'Falsch geantwortet' }}</h5>
             <p class="lesson-flow__quiz-feedback-text" [innerHTML]="linkifyText(quizPassed() ? slide.successMessage : (slide.errorMessage ?? 'Bitte prüfe deine Auswahl erneut.'))"></p>
           </section>
         }
+
+        <div class="lesson-flow__quiz-actions">
+          <button mat-stroked-button type="button" (click)="quizEvaluated() ? restartQuiz() : checkQuizAnswers()">
+            {{ quizEvaluated() ? 'Nochmal versuchen' : 'Antworten prüfen' }}
+          </button>
+        </div>
       </div>
     }
 
@@ -208,14 +208,21 @@
         (click)="goPrev()">
         Zurück
       </button>
-      <button
-        mat-flat-button
-        type="button"
-        class="lesson-flow__continue"
-        [disabled]="!canContinue() || (isLastSlide() && lesson.disableFinishAction)"
-        (click)="continue()">
-        {{ isLastSlide() ? (lesson.disableFinishAction ? 'Lektion abgeschlossen' : (lesson.finishLabel ?? 'Lektion abgeschlossen')) : (lesson.continueLabel ?? 'Weiter') }}
-      </button>
+      @if (shouldShowContinueButton()) {
+        <button
+          mat-flat-button
+          type="button"
+          class="lesson-flow__continue"
+          [disabled]="!canContinue()"
+          (click)="continue()">
+          @if (isLastSlide()) {
+            {{ lesson.finishLabel ?? 'Lektion abgeschlossen' }}
+          } @else {
+            <span class="lesson-flow__continue-label">{{ lesson.continueLabel ?? 'Weiter' }}</span>
+            <span class="lesson-flow__continue-progress" aria-hidden="true">{{ activeIndex() + 1 }}/{{ lesson.slides.length }}</span>
+          }
+        </button>
+      }
     </footer>
   </section>
 }

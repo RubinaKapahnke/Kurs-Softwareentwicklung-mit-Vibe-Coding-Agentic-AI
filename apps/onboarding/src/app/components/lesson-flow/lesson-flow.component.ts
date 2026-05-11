@@ -32,6 +32,7 @@ export class LessonFlowComponent implements OnChanges {
   readonly selectedOptionIds = signal<Set<string>>(new Set());
   readonly quizEvaluated = signal(false);
   readonly quizPassed = signal(false);
+  readonly autoFinished = signal(false);
 
   readonly activeSlide = computed<OnboardingLessonSlide | null>(() => {
     this.lessonVersion();
@@ -59,6 +60,7 @@ export class LessonFlowComponent implements OnChanges {
     this.lessonVersion.update((value) => value + 1);
     this.activeIndex.set(0);
     this.resetQuizState();
+    this.autoFinished.set(false);
     this.resetSlideScroll();
   }
 
@@ -91,6 +93,7 @@ export class LessonFlowComponent implements OnChanges {
     const passed = this.isSelectionCorrect(slide);
     this.quizEvaluated.set(true);
     this.quizPassed.set(passed);
+    this.emitAutoFinishedIfNeeded();
   }
 
   restartQuiz(): void {
@@ -102,7 +105,7 @@ export class LessonFlowComponent implements OnChanges {
       return true;
     }
 
-    return this.quizEvaluated() && this.quizPassed();
+    return this.quizEvaluated();
   }
 
   continue(): void {
@@ -118,6 +121,7 @@ export class LessonFlowComponent implements OnChanges {
     this.activeIndex.update((value) => value + 1);
     this.resetQuizState();
     this.resetSlideScroll();
+    this.emitAutoFinishedIfNeeded();
   }
 
   goPrev(): void {
@@ -139,6 +143,11 @@ export class LessonFlowComponent implements OnChanges {
     this.activeIndex.set(index);
     this.resetQuizState();
     this.resetSlideScroll();
+    this.emitAutoFinishedIfNeeded();
+  }
+
+  shouldShowContinueButton(): boolean {
+    return !this.isLastSlide();
   }
 
   isOptionSelected(optionId: string): boolean {
@@ -317,5 +326,14 @@ export class LessonFlowComponent implements OnChanges {
       this.contentContainer?.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'auto' });
       this.quizContainer?.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     });
+  }
+
+  private emitAutoFinishedIfNeeded(): void {
+    if (this.autoFinished() || !this.isLastSlide() || this.shouldShowContinueButton() || !this.canContinue()) {
+      return;
+    }
+
+    this.autoFinished.set(true);
+    this.finished.emit();
   }
 }
