@@ -4,6 +4,24 @@
 - github stammordner ohne VSCode verknüpfen?
 - Unterschied lokale branches und github
 
+### github.dev
+- VSCode in Web auf github
+- GitHub Copilot und Github Copilot Chat muss in VSCode installiert werden
+- gitignore erklären?
+
+1. Die .dev-Domain ermöglicht den Zugriff auf eine webbasierte Version von Visual Studio Code direkt innerhalb eines GitHub-Repositories.
+2. GitHub Codespaces bietet eine cloudbasierte Entwicklungsumgebung, die es ermöglicht, an einem Repository zu arbeiten, ohne dass eine lokale Installation von Visual Studio Code erforderlich ist.
+3. Erweiterungen wie GitHub Copilot können in Visual Studio Code installiert werden, um das Entwicklungserlebnis zu verbessern und eine Integration mit GitHub zu ermöglichen.
+
+Stable Track: Dies ist die ausgereifte, offiziell veröffentlichte Version von Visual Studio Code. Sie erhält in der Regel einmal im Monat ein großes Update und ist für den zuverlässigen, täglichen Einsatz gedacht.
+
+Insiders Track: Dies ist die Entwickler- bzw. Vorabversion ("Bleeding-Edge"). Sie wird fast täglich aktualisiert und enthält die allerneuesten Funktionen und Fehlerbehebungen direkt aus der Entwicklung, kann dafür aber gelegentlich noch Fehler (Bugs) aufweisen.
+
+## shells / terminals
+bash vs. powershell
+
+
+
 ## Developer Alltag
 - Unterschiede Package, Library, Programm...
 

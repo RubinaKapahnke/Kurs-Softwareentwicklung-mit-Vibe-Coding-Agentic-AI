@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-10-git-installieren/aufgaben.md -->
+<!-- Source: lektion-10-git-installieren/aufgaben.md -->
 
 ## Aufgaben
 

@@ -459,7 +459,15 @@ async function resolveLerninhalteRoot() {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   for (const candidate of onboardingCandidates) {
-    const lerninhaltePath = path.join(KURSMODULE_ROOT, candidate.name, 'lerninhalte');
+    const moduleRootPath = path.join(KURSMODULE_ROOT, candidate.name);
+    const directLessonFolders = await fs.readdir(moduleRootPath, { withFileTypes: true })
+      .then((moduleEntries) => moduleEntries.some((entry) => entry.isDirectory() && /^lektion-\d{2}-/.test(entry.name)));
+
+    if (directLessonFolders) {
+      return moduleRootPath;
+    }
+
+    const lerninhaltePath = path.join(moduleRootPath, 'lerninhalte');
     try {
       const stats = await fs.stat(lerninhaltePath);
       if (stats.isDirectory()) {
@@ -471,7 +479,7 @@ async function resolveLerninhalteRoot() {
   }
 
   throw new Error(
-    `Onboarding lerninhalte directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/lerninhalte.`
+    `Onboarding module directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/ with direct lektion-XX-* folders (or legacy lerninhalte/).`
   );
 }
 
@@ -527,7 +535,7 @@ async function syncLerninhalteManifest() {
         const parsedLessonFlow = parseLessonFlowFromMarkdown(
           content,
           `Lektion ${stepId}`,
-          `lerninhalte/${folder.name}/lektion-inhalte.md`
+          `${folder.name}/lektion-inhalte.md`
         );
         if (parsedLessonFlow.slides.length > 0) {
           lessonFlow = parsedLessonFlow;
@@ -537,7 +545,7 @@ async function syncLerninhalteManifest() {
 
       // Copy file to public/content/step-NN/
       await fs.mkdir(targetDir, { recursive: true });
-      const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: lerninhalte/${folder.name}/${filename} -->\n\n`;
+      const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: ${folder.name}/${filename} -->\n\n`;
       const output = header + content.trim() + '\n';
 
       let current = null;

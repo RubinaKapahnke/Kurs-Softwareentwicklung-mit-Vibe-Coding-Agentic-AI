@@ -4,7 +4,7 @@ Diese Struktur ist die zentrale Quellenablage für Lerninhalte pro Lektion im On
 
 ## Ziel
 
-- Pro Lektion gibt es einen eigenen Ordner.
+- Pro Lektion gibt es einen eigenen Ordner direkt im Modulordner.
 - Inhalte werden hier redaktionell gepflegt.
 - `lektion-inhalte.md` steuert den Lesson-Flow.
 - `aufgaben.md` steuert den Aufgabenblock (falls vorhanden).
@@ -54,5 +54,6 @@ Hinweise:
 
 ## Stand
 
-Die Inhalte in den Lektionen-Ordnern sind die führende redaktionelle Quelle für den Lesson-Flow der Onboarding-App.
+Die Lerninhalte liegen direkt im Kursmodul-Ordner und sind die führende redaktionelle Quelle für den Lesson-Flow der Onboarding-App.
+
 

@@ -14,4 +14,5 @@ export class CourseCTASectionComponent {
   readonly hasProgress = input.required<boolean>();
   readonly resumeLink = input.required<string>();
   readonly resumeLabel = input.required<string>();
+  readonly voucherValidated = input<boolean>(false);
 }

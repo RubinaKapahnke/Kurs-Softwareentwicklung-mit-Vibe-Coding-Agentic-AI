@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-04-eigenes-uebungs-repository/lektion-inhalte.md -->
+<!-- Source: lektion-04-eigenes-uebungs-repository/lektion-inhalte.md -->
 
 # Lektion 04: Eigenes Übungs-Repository anlegen
 

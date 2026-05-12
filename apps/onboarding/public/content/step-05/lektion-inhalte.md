@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-05-trainerin-einladen/lektion-inhalte.md -->
+<!-- Source: lektion-05-trainerin-einladen/lektion-inhalte.md -->
 
 # Lektion 05: Trainerin einladen
 

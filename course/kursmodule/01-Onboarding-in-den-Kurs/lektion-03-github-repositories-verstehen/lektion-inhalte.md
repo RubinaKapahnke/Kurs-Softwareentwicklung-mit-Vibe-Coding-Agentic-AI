@@ -1,6 +1,3 @@
-<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-03-github-account/lektion-inhalte.md -->
-
 # Lektion 03: GitHub-Repositories und Git verstehen
 
 ## Ziel

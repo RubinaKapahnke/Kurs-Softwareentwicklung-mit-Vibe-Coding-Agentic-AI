@@ -8,7 +8,7 @@ const KEY_VISIBILITY_SUFFIX = 'visibility_confirmed';
 const KEY_COMPLETED_SUFFIX = 'completed_steps';
 const KEY_SUBTASKS_SUFFIX = 'completed_subtasks';
 const KEY_VOUCHER_SUFFIX = 'voucher';
-const ACCOUNT_SETUP_STEP_ID = 3;
+const ACCOUNT_SETUP_STEP_ID = 2;
 
 /** MVP: Ein einziger gültiger Code. Wird später durch echte API-Validierung ersetzt. */
 const VALID_VOUCHER_CODE = '90001';

@@ -14,12 +14,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
 import { OnboardingLessonContentSection, OnboardingStep, StepManifest } from '../../models/onboarding.models';
-import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } from '../../services/onboarding-state.service';
+import { OnboardingStateService, Step2ExperienceChoice } from '../../services/onboarding-state.service';
 import { MarkdownViewComponent } from '../../components/markdown-view/markdown-view.component';
 import { LessonFlowComponent } from '../../components/lesson-flow/lesson-flow.component';
 import { ChoiceCardComponent } from '../../components/choice-card/choice-card.component';
 import { CalloutComponent } from '../../components/callout/callout.component';
-import { VoucherGateComponent } from '../../components/voucher-gate/voucher-gate.component';
 import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/step-tasks.component';
 import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialog.component';
 
@@ -37,7 +36,6 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     LessonFlowComponent,
     ChoiceCardComponent,
     CalloutComponent,
-    VoucherGateComponent,
     StepTasksComponent
   ],
   templateUrl: './step-page.component.html',
@@ -145,37 +143,18 @@ export class StepPageComponent {
 
   readonly canGoBack = computed(() => this.step().id > 1);
 
-  readonly isVoucherStep = computed(() => this.step().id === 1);
-
-  readonly isNextDisabled = computed(
-    () => this.isVoucherStep() && !this.state.voucherValidated()
-  );
-  readonly isAccountChoiceStep = computed(() => this.step().id === 3);
-  readonly isOwnRepoStep = computed(() => this.step().id === 4);
-  readonly isInviteStep = computed(() => this.step().id === 5);
-  readonly isExerciseStep = computed(() => this.step().id === 6);
-  readonly isVscodeInstallStep = computed(() => this.step().id === 8);
-  readonly isGitInstallStep = computed(() => this.step().id === 10);
-  readonly isCloneStep = computed(() => this.step().id === 11);
+  readonly isAccountChoiceStep = computed(() => this.step().id === 2);
+  readonly isOwnRepoStep = computed(() => this.step().id === 3);
+  readonly isInviteStep = computed(() => this.step().id === 4);
+  readonly isExerciseStep = computed(() => this.step().id === 5);
+  readonly isVscodeInstallStep = computed(() => this.step().id === 7);
+  readonly isGitInstallStep = computed(() => this.step().id === 9);
+  readonly isCloneStep = computed(() => this.step().id === 10);
   readonly isFinishStep = computed(() => this.step().id === ONBOARDING_STEP_COUNT);
 
   @ViewChild('todoSection', { read: ElementRef }) private todoSection?: ElementRef<HTMLElement>;
   @ViewChild('lessonFlowSection') private lessonFlowSection?: ElementRef<HTMLElement>;
 
-  // Voucher-Gate
-  readonly showVoucherInput = computed(() => {
-    const status = this.state.participationStatus();
-    const hasVoucher = this.state.hasVoucherAnswer();
-    return status === 'active' || (status === 'new' && hasVoucher === true);
-  });
-  readonly showContactInfo = computed(() =>
-    this.state.participationStatus() === 'new' && this.state.hasVoucherAnswer() === false
-  );
-  readonly voucherInput = signal('');
-  readonly voucherError = signal(false);
-  readonly voucherCopied = signal(false);
-  readonly showVoucherSuccess = signal(false);
-  private voucherSuccessTimeout: ReturnType<typeof setTimeout> | null = null;
   readonly githubProfileShareTask = 'Link zum GitHub-Profil an Dozent*in schicken (Teams oder E-Mail).';
 
   /** Schritt gilt als erledigt wenn er explizit markiert wurde */
@@ -281,7 +260,7 @@ export class StepPageComponent {
     return this.effectiveTasks();
   });
   readonly showTodoSection = computed(() => {
-    if (this.isVoucherStep() || !this.showAccountStepContent()) {
+    if (!this.showAccountStepContent()) {
       return false;
     }
 
@@ -294,12 +273,8 @@ export class StepPageComponent {
     return hasStepTasks || hasAccountExtraTask;
   });
 
-  /** "Als erledigt markieren" blockiert bis Voucher validiert UND Auswahl getroffen */
+  /** "Als erledigt markieren" blockiert bis Auswahl getroffen */
   readonly isDoneDisabled = computed(() => {
-    if (this.isVoucherStep()) {
-      return !this.state.voucherValidated();
-    }
-
     if (!this.isAccountChoiceStep()) {
       return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
     }
@@ -341,53 +316,6 @@ export class StepPageComponent {
 
   selectRepoExperience(experience: 'beginner' | 'experienced'): void {
     this.state.setRepoExperience(experience);
-  }
-
-  setParticipationStatus(status: ParticipationStatus): void {
-    this.state.setParticipationStatus(status);
-    this.voucherInput.set('');
-    this.voucherError.set(false);
-  }
-
-  setHasVoucher(val: boolean): void {
-    this.state.setHasVoucherAnswer(val);
-    this.voucherInput.set('');
-    this.voucherError.set(false);
-  }
-
-  updateVoucherInput(value: string): void {
-    this.voucherInput.set(value);
-    this.voucherError.set(false);
-  }
-
-  submitVoucher(): void {
-    const valid = this.state.validateVoucher(this.voucherInput());
-    this.voucherError.set(!valid);
-    if (valid) {
-      this.state.markStepCompleted(this.step().id);
-      this.showTemporaryVoucherSuccess();
-    } else {
-      this.state.unmarkStepCompleted(this.step().id);
-    }
-  }
-
-  private showTemporaryVoucherSuccess(): void {
-    if (this.voucherSuccessTimeout) {
-      clearTimeout(this.voucherSuccessTimeout);
-    }
-    this.showVoucherSuccess.set(true);
-    this.voucherSuccessTimeout = setTimeout(() => {
-      this.showVoucherSuccess.set(false);
-      this.voucherSuccessTimeout = null;
-    }, 3500);
-  }
-
-  copyContactMessage(): void {
-    const msg = `Hallo KnOot Academy Team,\n\nich interessiere mich für die Teilnahme an eurem Kurs "Vibe Coding Basics" und bitte um einen Zugangs-Voucher.\n\nVielen Dank!\n[Dein Name]`;
-    navigator.clipboard.writeText(msg).then(() => {
-      this.voucherCopied.set(true);
-      setTimeout(() => this.voucherCopied.set(false), 2500);
-    });
   }
 
   confirmVisibilityHint(): void {

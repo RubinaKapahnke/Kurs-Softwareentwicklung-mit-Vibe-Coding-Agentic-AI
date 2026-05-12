@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-10-git-installieren/lektion-inhalte.md -->
+<!-- Source: lektion-10-git-installieren/lektion-inhalte.md -->
 
 # Lektion 10: Git installieren
 

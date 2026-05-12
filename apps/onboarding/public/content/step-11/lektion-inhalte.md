@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-11-kurs-repo-klonen/lektion-inhalte.md -->
+<!-- Source: lektion-11-kurs-repo-klonen/lektion-inhalte.md -->
 
 # Lektion 11: Kurs-Repo klonen
 

@@ -57,4 +57,18 @@
 .btn-resume-cta {
   padding-inline: 1rem;
   font-weight: var(--font-weight-semibold);
+
+  &--testzugang {
+    background: #f5c518;
+    color: #111;
+    --mdc-filled-button-container-color: #f5c518;
+    --mdc-filled-button-label-text-color: #111;
+    box-shadow: none;
+
+    &:hover {
+      background: #e6b800;
+      --mdc-filled-button-container-color: #e6b800;
+      box-shadow: none;
+    }
+  }
 }

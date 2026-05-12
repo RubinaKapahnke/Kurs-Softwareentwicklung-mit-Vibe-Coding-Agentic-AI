@@ -4,7 +4,7 @@ Diese Anleitung zeigt dir, wie du eine Lektion so pflegst, dass Inhalte automati
 
 ## Zielbild
 
-- Redaktionsinhalte liegen in `course/kursmodule/.../lerninhalte/lektion-XX-.../`.
+- Redaktionsinhalte liegen direkt in `course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lektion-XX-.../`.
 - Jede Lektion nutzt primär `lektion-inhalte.md`.
 - Optional gibt es `aufgaben.md` für den Aufgabenbereich.
 - `npm run sync-content` in `apps/onboarding` erzeugt daraus `apps/onboarding/public/content/step-manifest.json` und die Ziel-Dateien unter `public/content/step-XX/`.
@@ -13,7 +13,7 @@ Diese Anleitung zeigt dir, wie du eine Lektion so pflegst, dass Inhalte automati
 
 Beispiel:
 
-`course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/lektion-03-github-account/`
+`course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lektion-03-github-account/`
 
 Typische Dateien:
 

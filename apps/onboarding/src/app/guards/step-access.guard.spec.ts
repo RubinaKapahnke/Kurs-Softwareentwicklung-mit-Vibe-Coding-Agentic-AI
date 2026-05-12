@@ -31,11 +31,18 @@ describe('stepAccessGuard', () => {
     expect(router.serializeUrl(result as UrlTree)).toBe('/kurse/vibe-coding-agentic-ai/onboarding/step/1');
   });
 
-  it('redirects protected steps to step 1 when the voucher is missing', () => {
+  it('redirects protected steps to course page when the voucher is missing', () => {
     const router = TestBed.inject(Router);
     const result = runGuard('2');
 
-    expect(router.serializeUrl(result as UrlTree)).toBe('/kurse/vibe-coding-agentic-ai/onboarding/step/1');
+    expect(router.serializeUrl(result as UrlTree)).toBe('/kurse/vibe-coding-agentic-ai');
+  });
+
+  it('also redirects step 1 to course page when the voucher is missing', () => {
+    const router = TestBed.inject(Router);
+    const result = runGuard('1');
+
+    expect(router.serializeUrl(result as UrlTree)).toBe('/kurse/vibe-coding-agentic-ai');
   });
 
   it('allows protected steps after voucher validation', () => {

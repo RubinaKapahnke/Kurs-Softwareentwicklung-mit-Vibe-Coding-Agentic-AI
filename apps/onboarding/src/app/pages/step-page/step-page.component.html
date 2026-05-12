@@ -7,38 +7,11 @@
     }
   </section>
 
-  @if (isVoucherStep()) {
-    <app-voucher-gate
-      [voucherValidated]="state.voucherValidated()"
-      [participationStatus]="state.participationStatus()"
-      [hasVoucherAnswer]="state.hasVoucherAnswer()"
-      [showVoucherInput]="showVoucherInput()"
-      [showContactInfo]="showContactInfo()"
-      [voucherInput]="voucherInput()"
-      [voucherError]="voucherError()"
-      [voucherCopied]="voucherCopied()"
-      (participationStatusSelected)="setParticipationStatus($event)"
-      (hasVoucherSelected)="setHasVoucher($event)"
-      (voucherInputChanged)="updateVoucherInput($event)"
-      (voucherSubmitted)="submitVoucher()"
-      (contactMessageCopied)="copyContactMessage()"></app-voucher-gate>
-  }
-
   @if (isAccountChoiceStep()) {
     <section class="entry-question account-choice">
       <div class="entry-question__inner">
 
         @if (state.voucherValidated()) {
-          @if (showVoucherSuccess() && state.step2Experience() === null) {
-            <div class="voucher-success" role="status" aria-live="polite">
-              <mat-icon>check_circle</mat-icon>
-              <div>
-                <strong>Voucher bestätigt!</strong>
-                <p>Dein Zugang wurde freigeschaltet. Weiter geht's mit dem Setup.</p>
-              </div>
-            </div>
-          }
-
           <p class="entry-question__kicker">Bevor es losgeht</p>
           <h2 class="entry-question__heading">Hast du schon einen GitHub-Account?</h2>
 
@@ -599,7 +572,7 @@
 
     <span class="actions-spacer"></span>
 
-    @if (!isFinishStep() && !isVoucherStep()) {
+    @if (!isFinishStep()) {
       <button
         mat-stroked-button
         type="button"
@@ -613,15 +586,10 @@
     }
 
     @if (step().id < stepCount) {
-      <span
-        [matTooltip]="isNextDisabled() ? 'Gib zuerst deinen Voucher-Code ein, um fortzufahren.' : ''"
-        matTooltipPosition="above">
-        <button mat-flat-button type="button" class="secondary"
-          [disabled]="isNextDisabled()"
-          (click)="goToNextStep()">
-          Weiter
-        </button>
-      </span>
+      <button mat-flat-button type="button" class="secondary"
+        (click)="goToNextStep()">
+        Weiter
+      </button>
     }
 
     @if (isFinishStep()) {

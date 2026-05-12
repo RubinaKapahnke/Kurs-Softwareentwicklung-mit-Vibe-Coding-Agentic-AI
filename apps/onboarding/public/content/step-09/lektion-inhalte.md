@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-09-was-ist-git/lektion-inhalte.md -->
+<!-- Source: lektion-09-was-ist-git/lektion-inhalte.md -->
 
 # Lektion 09: Was ist Git?
 

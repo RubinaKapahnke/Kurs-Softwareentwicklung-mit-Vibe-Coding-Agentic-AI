@@ -44,9 +44,9 @@ Falls ein Kursmodul später stärker ausgearbeitet wird, kann es zusätzliche Da
 
 Für das Modul [01-arbeitsumgebung-dokumentation-versionsverwaltung](./01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md) gibt es eine neue, generische Quellenstruktur für Lerninhalte nach Lektionen:
 
-- [lerninhalte/README_LERNINHALTE.md](./01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/README_LERNINHALTE.md)
-- [lerninhalte/anleitung-lerninhalte-zu-steps.md](./01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/anleitung-lerninhalte-zu-steps.md)
+- [README_LERNINHALTE.md](./01-arbeitsumgebung-dokumentation-versionsverwaltung/README_LERNINHALTE.md)
+- [anleitung-lerninhalte-zu-steps.md](./01-arbeitsumgebung-dokumentation-versionsverwaltung/anleitung-lerninhalte-zu-steps.md)
 
-Dort ist pro Lektion ein eigener Ordner angelegt. Jeder Ordner enthält aktuell den heutigen Inhaltsstand in markerbasierten Abschnitten, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
+Dort ist pro Lektion ein eigener Ordner direkt im Modulordner angelegt. Jeder Ordner enthält aktuell den heutigen Inhaltsstand in markerbasierten Abschnitten, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
 
 Aktueller Stand: Die Onboarding-App nutzt einen manifestbasierten Sync aus diesen Lektionen-Ordnern. Dabei werden insbesondere `lektion-inhalte.md` (Lesson-Flow-Inhalt) und optional `aufgaben.md` (Aufgabenliste) verarbeitet.

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-11-kurs-repo-klonen/aufgaben.md -->
+<!-- Source: lektion-11-kurs-repo-klonen/aufgaben.md -->
 
 ## Aufgaben
 

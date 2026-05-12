@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-12-kurs-handhabung-verstehen/lektion-inhalte.md -->
+<!-- Source: lektion-12-kurs-handhabung-verstehen/lektion-inhalte.md -->
 
 # Lektion 12: Kurs-Handhabung verstehen
 

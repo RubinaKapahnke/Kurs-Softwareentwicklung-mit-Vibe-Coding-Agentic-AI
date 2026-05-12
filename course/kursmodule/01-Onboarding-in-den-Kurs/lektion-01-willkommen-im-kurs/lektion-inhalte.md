@@ -1,4 +1,4 @@
-# Lektion 02: So laufen Kurs und Module ab
+# Lektion 01: Willkommen im Kurs 🎉
 
 ## Ziel
 

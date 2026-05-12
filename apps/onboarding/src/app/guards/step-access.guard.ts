@@ -17,9 +17,9 @@ export const stepAccessGuard: CanActivateFn = (route): boolean | UrlTree => {
     return router.createUrlTree(['/kurse', courseId, 'onboarding', 'step', '1']);
   }
 
-  // Schritt 1 ist der Voucher-Gate. Alle weiteren Schritte erst nach Freischaltung.
-  if (stepId > 1 && !state.voucherValidated()) {
-    return router.createUrlTree(['/kurse', courseId, 'onboarding', 'step', '1']);
+  // Voucher-Freischaltung erfolgt auf der Kursseite. Alle Onboarding-Schritte erst danach.
+  if (!state.voucherValidated()) {
+    return router.createUrlTree(['/kurse', courseId]);
   }
 
   return true;

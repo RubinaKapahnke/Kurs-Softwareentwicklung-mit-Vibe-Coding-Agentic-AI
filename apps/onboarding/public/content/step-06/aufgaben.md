@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-06-erste-uebungen/aufgaben.md -->
+<!-- Source: lektion-06-erste-uebungen/aufgaben.md -->
 
 ## Aufgaben
 

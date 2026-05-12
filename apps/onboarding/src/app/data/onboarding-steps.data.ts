@@ -3,22 +3,6 @@ import { OnboardingStep } from '../models/onboarding.models';
 export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 1,
-    title: 'Zugang mit Voucher freischalten',
-    moduleTitle: 'Modul 01: Arbeitsumgebung & Versionsverwaltung',
-    goal: 'Du gibst deinen Voucher-Code ein und schaltest das Onboarding frei.',
-    tasks: [
-      'Gib deinen Voucher-Code ein und bestätige ihn.'
-    ],
-    fallbackHelp: [
-      {
-        title: 'Voucher-Code funktioniert nicht',
-        detail: 'Prüfe die Eingabe und kontaktiere bei Bedarf die Trainerin für einen gültigen Code.'
-      }
-    ],
-    successCriterion: 'Dein Voucher wurde bestätigt und Schritt 2 ist freigeschaltet.'
-  },
-  {
-    id: 2,
     title: 'So laufen Kurs und Module ab',
     goal: 'Du verstehst den Ablauf und weißt, wie es nach dem Onboarding weitergeht.',
     tasks: [],
@@ -94,7 +78,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     }
   },
   {
-    id: 3,
+    id: 2,
     title: 'GitHub-Account anlegen',
     goal: '',
     tasks: [
@@ -204,7 +188,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     }
   },
   {
-    id: 4,
+    id: 3,
     title: 'Eigenes Übungs-Repository anlegen',
     goal: 'Du erstellst dein erstes eigenes Repository auf GitHub - hier machst du alle Übungen.',
     tasks: [
@@ -346,7 +330,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     }
   },
   {
-    id: 5,
+    id: 4,
     title: 'Trainerin einladen',
     goal: 'Du gibst der Trainerin Zugriff auf dein Repository, damit sie deine Übungen sehen und freigeben kann.',
     tasks: [
@@ -367,7 +351,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     successCriterion: 'Die Einladung wurde gesendet.'
   },
   {
-    id: 6,
+    id: 5,
     title: 'Erste Übungen im eigenen Repository',
     goal: 'Du machst deine ersten GitHub-Aktionen direkt im Browser - ohne lokale Installation.',
     tasks: [
@@ -389,7 +373,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       'Dein Repository enthält mindestens 2 Commits. Die Trainerin kann sie sehen und gibt grünes Licht für Schritt 6.'
   },
   {
-    id: 7,
+    id: 6,
     title: 'Was ist VS Code?',
     goal: 'Du verstehst, was VS Code ist und warum wir es im Kurs einsetzen.',
     tasks: [],
@@ -471,7 +455,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     }
   },
   {
-    id: 8,
+    id: 7,
     title: 'VS Code installieren',
     goal: 'Du installierst VS Code auf deinem Rechner und öffnest es zum ersten Mal.',
     tasks: [
@@ -502,7 +486,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ]
   },
   {
-    id: 9,
+    id: 8,
     title: 'Was ist Git?',
     goal: 'Du verstehst, warum Versionskontrolle wichtig ist und was Git davon löst.',
     tasks: [],
@@ -620,7 +604,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     }
   },
   {
-    id: 10,
+    id: 9,
     title: 'Git installieren',
     goal: 'Du installierst Git auf deinem Rechner und prüfst, dass es im Terminal erkennbar ist.',
     tasks: [
@@ -656,7 +640,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ]
   },
   {
-    id: 11,
+    id: 10,
     title: 'Kurs-Repo klonen',
     goal: 'Du klonst das gemeinsame Kurs-Repository auf deinen Rechner und öffnest es in VS Code.',
     tasks: [
@@ -704,7 +688,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ]
   },
   {
-    id: 12,
+    id: 11,
     title: 'Kurs-Handhabung verstehen',
     goal: 'Du verstehst, welche Dateien im Kurs-Repository bleiben, was in deinem eigenen Repository entsteht und warum der Lernfortschritt zentral gepflegt wird.',
     tasks: [

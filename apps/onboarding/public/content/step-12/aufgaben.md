@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lerninhalte/lektion-12-kurs-handhabung-verstehen/aufgaben.md -->
+<!-- Source: lektion-12-kurs-handhabung-verstehen/aufgaben.md -->
 
 ## Aufgaben
 

@@ -11,15 +11,7 @@
   </div>
 
   <div class="hero-actions">
-    @if (selectedCourseIsLive()) {
-      <a mat-flat-button [routerLink]="resumeLink()" class="btn-primary ui-primary-button-on-dark" [class.btn-primary--shimmer]="!hasProgress()">
-        @if (hasProgress()) {
-          {{ resumeLabel() }}
-        } @else {
-          Kurs jetzt starten
-        }
-      </a>
-    } @else {
+    @if (!selectedCourseIsLive()) {
       <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-primary ui-primary-button-on-dark">
         Interesse melden
       </a>
@@ -35,7 +27,11 @@
         Für kurze Zeit gibt es zusätzliche Test-Plätze.
         Wenn du teilnehmen möchtest, kannst du dir jetzt einen Platz anfragen.
       </p>
-      <a href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="voucher-link">Teilnahme am Beta-Test anfragen</a>
+      @if (!voucherValidated()) {
+        <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-testzugang">
+          Testzugang anfragen
+        </a>
+      }
     </div>
   </div>
   } @else {

@@ -1,80 +1,67 @@
 {
   "1": {
-    "title": "Zugang mit Voucher freischalten",
-    "goal": "Du gibst deinen Voucher-Code ein und schaltest das Onboarding frei.",
+    "title": "Willkommen im Kurs 🎉",
+    "goal": "Du verstehst den Ablauf und weißt, wie es nach dem Onboarding weitergeht.",
     "sections": [
       {
         "type": "lesson",
         "file": "/content/step-01/lektion-inhalte.md"
-      },
-      {
-        "type": "tasks",
-        "file": "/content/step-01/aufgaben.md"
-      }
-    ],
-    "lessonFlow": null,
-    "requiresLessonCompletion": false
-  },
-  "2": {
-    "title": "So laufen Kurs und Module ab",
-    "goal": "Du verstehst den Ablauf des Kurses und weißt, wie es nach dem Onboarding weitergeht.",
-    "sections": [
-      {
-        "type": "lesson",
-        "file": "/content/step-02/lektion-inhalte.md"
       }
     ],
     "lessonFlow": {
-      "title": "So laufen Kurs und Module ab",
+      "title": "Willkommen im Kurs 🎉",
       "slides": [
         {
           "type": "content",
-          "title": "Wie der Kurs aufgebaut ist",
+          "title": "Kapitel 1: Wie der Kurs aufgebaut ist",
           "sections": [
             {
               "heading": "Kursablauf im Überblick",
               "orderedItems": [
-                "Du wirst Schritt für Schritt durch **einzelne Lernbausteine** geführt die aufeinander aufbauen.",
-                "Zu den Bausteinen gibt es **Übungen**, die dir helfen das erlernte Wissen zu verstehen und anzuwenden.",
-                "Wenn du die Grundlagen durchgearbeitet hast, legst du deinen **Schwerpunkt** fest und kannst anhand dessen entscheiden welche Kapitel du in welcher Tiefe behandeln möchtest.",
-                "Nach den Grundlagen-Übungen entscheidest du dich für dein **Kursprojekt** und wendest die weiteren Lerninhalte im Projekt an.",
-                "Während des Kurses gibt es regelmäßige Termine für **Q&As, Reviews und vertiefende Lerneinheiten**. Genaueres dazu erklärt dir dein\\*e Dozent\\*in."
+                "Du wirst Schritt für Schritt durch einzelne Lernbausteine geführt die aufeinander aufbauen.",
+                "Zu den Bausteinen gibt es Übungen, die dir helfen das erlernte Wissen zu verstehen und anzuwenden.",
+                "Wenn du die Grundlagen durchgearbeitet hast, legst du deinen Schwerpunkt fest und kannst anhand dessen entscheiden welche Kapitel du in welcher Tiefe behandeln möchtest.",
+                "Nach den Grundlagen-Übungen entscheidest du dich für dein Kursprojekt und wendest die weiteren Lerninhalte im Projekt an.",
+                "Während des Kurses gibt es regelmäßige Termine für Q&As, Reviews und vertiefende Lerneinheiten. Genaueres dazu erklärt dir dein\\*e Dozent\\*in."
               ]
             },
             {
               "heading": "So funktioniert dieses Kurs-Tool",
               "orderedItems": [
-                "Oben siehst du deinen **Fortschritt** über alle Schritte.",
-                "Jeder Schritt enthält **Teilaufgaben**, die du einzeln **abhaken** kannst.",
-                "Sind alle Teilaufgaben fertig, markierst du den Schritt als **erledigt**.",
-                "Mit **Weiter** und **Zurück** wechselst du zwischen den Schritten.",
-                "Offene Punkte kannst du **später nachholen**."
+                "Oben siehst du deinen Fortschritt über alle Schritte.",
+                "Jeder Schritt enthält Teilaufgaben, die du einzeln abhaken kannst.",
+                "Sind alle Teilaufgaben fertig, markierst du den Schritt als erledigt.",
+                "Mit Weiter und Zurück wechselst du zwischen den Schritten.",
+                "Offene Punkte kannst du später nachholen."
               ]
             },
             {
-              "heading": "Lernbausteine bauen aufeinander auf",
-              "tone": "tip",
+              "heading": "Wichtig für den Ablauf",
               "paragraphs": [
-                "Du kannst in den Steps hin und her springen. Da sie aufeinander aufbauen, ist es meist sinnvoll, sie der **Reihe nach abzuarbeiten**."
+                "- Du kannst in den Steps springen.",
+                "- Da sie aufeinander aufbauen, ist es sinnvoll, sie der Reihe nach abzuarbeiten."
               ]
             }
           ]
         },
         {
           "type": "content",
-          "title": "Onboarding und Arbeitsumgebung einrichten",
+          "title": "Kapitel 2: Was das Modul Onboarding ist",
           "sections": [
             {
-              "heading": "Was dich beim Onboarding erwartet",
               "paragraphs": [
-                "Im Onboarding richtest du deine Arbeitsumgebung ein und lernst GitHub, VSCode und Git bereits grundlegend zu nutzen. Diese Tools wirst du im weiteren Verlauf des Kurses hauptsächlich nutzen. Zur Einrichtung der Arbeitsumgebung gehört alles, was du für den Kursstart brauchst: dein Zugang, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten.",
-                "**Keine Sorge:** Alle Begriffe und Schritte lernst du nacheinander im Modul."
+                "- Im Onboarding richtest du deine Arbeitsumgebung ein.",
+                "- Dazu gehört alles, was du für den Kursstart brauchst: dein Zugang, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten.",
+                "- Alle Begriffe und Schritte lernst du nacheinander im Modul."
               ]
             },
             {
-              "heading": "Schritte des ersten Moduls",
+              "heading": "Bestandteile des Moduls Onboarding",
+              "paragraphs": [
+                "- Keine Sorge: Auch wenn du jetzt noch nicht weißt, was sich hinter diesen Begriffen verbirgt, ist nach dem Onboarding vieles klarer. Versprochen."
+              ],
               "orderedItems": [
-                "GitHub-Account anlegen und erste Übungen im Browser durchführen.",
+                "GitHub-Account anlegen und erste Übungen im Browser machen.",
                 "VS Code und Git installieren.",
                 "Dein Repository lokal bedienen und Versionierung üben.",
                 "Kurs-Repository klonen und Modul 2 starten."
@@ -117,13 +104,13 @@
     },
     "requiresLessonCompletion": true
   },
-  "3": {
+  "2": {
     "title": "GitHub-Account anlegen",
     "goal": null,
     "sections": [
       {
         "type": "lesson",
-        "file": "/content/step-03/lektion-inhalte.md"
+        "file": "/content/step-02/lektion-inhalte.md"
       }
     ],
     "lessonFlow": {
@@ -141,75 +128,12 @@
             {
               "heading": "Warum brauchen wir GitHub im Kurs?",
               "paragraphs": [
-                "GitHub ist kostenlos nutzbar. Du brauchst nur einen Account.",
-                "Testzeile blabla"
+                "GitHub ist kostenlos nutzbar. Du brauchst nur einen Account."
               ],
               "orderedItems": [
                 "Dein eigenes Übungs-Repository liegt auf GitHub.",
                 "Das gemeinsame Kurs-Repository liegt ebenfalls auf GitHub.",
                 "Die Trainerin sieht deine Commits und kann dir Feedback geben."
-              ]
-            }
-          ]
-        },
-        {
-          "type": "quiz",
-          "title": "Testquiz",
-          "prompt": "Wofür nutzt ihr GitHub im Kurs?",
-          "options": [
-            {
-              "id": "a",
-              "label": "Falsche Antwort 1",
-              "isCorrect": false
-            },
-            {
-              "id": "b",
-              "label": "Falsche Antwort 2",
-              "isCorrect": false
-            },
-            {
-              "id": "c",
-              "label": "Für Code, Versionierung und Zusammenarbeit",
-              "isCorrect": true
-            },
-            {
-              "id": "d",
-              "label": "Nur für Videos",
-              "isCorrect": true
-            }
-          ],
-          "successMessage": "Richtig, genau darum geht es.",
-          "instruction": "Wähle die besten 2 Antworten.",
-          "errorMessage": "Fast, schau dir den Kontext nochmal an.",
-          "multiSelect": true,
-          "notes": [
-            {
-              "heading": "Lies erst den Kontext",
-              "tone": "highlight",
-              "paragraphs": [
-                "Das hilft bei der Auswahl.",
-                "__subheading__Fokus",
-                "Achte auf den Begriff **Versionsverlauf**."
-              ]
-            },
-            {
-              "heading": "Test",
-              "tone": "danger",
-              "paragraphs": [
-                "Test2"
-              ]
-            },
-            {
-              "heading": "Test",
-              "tone": "tip",
-              "paragraphs": [
-                "Test2"
-              ]
-            },
-            {
-              "heading": "test",
-              "paragraphs": [
-                "test 1"
               ]
             }
           ]
@@ -265,6 +189,128 @@
       ]
     },
     "requiresLessonCompletion": true
+  },
+  "3": {
+    "title": "GitHub-Repositories und Git verstehen",
+    "goal": "Du verstehst, wie wir GitHub im Kurs nutzen, was Repositories sind und warum Git die Basis für Versionskontrolle ist.",
+    "sections": [
+      {
+        "type": "lesson",
+        "file": "/content/step-03/lektion-inhalte.md"
+      }
+    ],
+    "lessonFlow": {
+      "title": "GitHub-Repositories und Git verstehen",
+      "slides": [
+        {
+          "type": "content",
+          "title": "GitHub im Kurskontext",
+          "sections": [
+            {
+              "paragraphs": [
+                "GitHub ist in diesem Kurs die gemeinsame Plattform fuer Zusammenarbeit an Dateien, nachvollziehbare Aenderungen und den Austausch ueber Aufgaben und Feedback."
+              ]
+            },
+            {
+              "heading": "GitHub und Git: kurz unterschieden",
+              "paragraphs": [
+                "- Git ist das lokale Versionskontrollsystem.",
+                "- GitHub ist die Online-Plattform fuer Repositories und Teamarbeit."
+              ]
+            },
+            {
+              "heading": "So nutzen wir GitHub im Kurs",
+              "orderedItems": [
+                "Das Kurs-Repository enthaelt zentrale Materialien und Uebungen.",
+                "Teilnehmende arbeiten zusaetzlich im eigenen Uebungs-Repository.",
+                "Dozentinnen und Dozenten geben Feedback ueber GitHub."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Repositories verstehen",
+          "sections": [
+            {
+              "paragraphs": [
+                "Ein Repository ist der gemeinsame Ort fuer Dateien und die komplette Versionsgeschichte. Im Kurs arbeiten wir sowohl mit dem Kurs-Repository als auch mit deinem eigenen Uebungs-Repository."
+              ]
+            },
+            {
+              "heading": "Repositories im Kurs",
+              "paragraphs": [
+                "- Kurs-Repository: zentrale Materialien, Module und Uebungen",
+                "- Eigenes Uebungs-Repository: persoenliche Loesungen"
+              ]
+            },
+            {
+              "heading": "Git im Kurskontext",
+              "paragraphs": [
+                "Dieses Dokument verbindet die allgemeinen Grundlagen aus der Course-Library mit dem praktischen Kursablauf.",
+                "Allgemeine Quelle:",
+                "- [Version Control und GitOps: Grundlagen](../../course-library/04-git/04-version-control-und-gitops-grundlagen.md)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Was wir im Modul 01 konkret brauchen",
+          "sections": [
+            {
+              "paragraphs": [
+                "Im ersten Kursmodul ist Version Control kein Nebenthema, sondern Sicherheitsnetz fuer deinen Lernfortschritt.",
+                "Du nutzt Git/GitHub hier vor allem fuer:",
+                "- nachvollziehbare Lernschritte (kleine Commits statt grosser Spruenge)",
+                "- sichere Zusammenarbeit ueber Branches und Pull Requests",
+                "- klare Dokumentation, die andere Menschen und KI lesen koennen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Praktische Leitplanken fuer Einsteiger:innen",
+          "sections": [
+            {
+              "orderedItems": [
+                "Arbeite in kleinen, klar benannten Schritten.",
+                "Pruefe vor jedem Push kurz mit `git status`.",
+                "Nutze Commit-Nachrichten, die den Zweck beschreiben.",
+                "Halte `main` stabil und arbeite fuer Aufgaben in einem Branch."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Was von GitOps hier schon mitgedacht wird",
+          "sections": [
+            {
+              "paragraphs": [
+                "GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du bereits Grundprinzipien, die spaeter wichtig werden:",
+                "- Git als verbindliche Quelle fuer den gewuenschten Stand",
+                "- Aenderungen ueber Review-Prozess statt Direkt-Eingriffe",
+                "- reproduzierbare Aenderungen durch klare Historie"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Naechster Schritt",
+          "sections": [
+            {
+              "paragraphs": [
+                "Im naechsten Schritt legst du dein eigenes Repository an und uebst die ersten Aktionen auf GitHub."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "requiresLessonCompletion": false
   },
   "4": {
     "title": "Eigenes Übungs-Repository anlegen",
