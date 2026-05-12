@@ -53,6 +53,63 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
       :host ::ng-deep .markdown-view h6 {
         margin: 1.1rem 0 0.55rem;
       }
+
+      :host ::ng-deep .markdown-view table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1rem 0;
+        border: 1px solid var(--color-border, #e0e0e0);
+        font-size: 0.95rem;
+      }
+
+      :host ::ng-deep .markdown-view th {
+        background-color: var(--color-surface-secondary, #f5f5f5);
+        padding: 0.75rem;
+        text-align: left;
+        font-weight: 600;
+        border: 1px solid var(--color-border, #e0e0e0);
+      }
+
+      :host ::ng-deep .markdown-view td {
+        padding: 0.75rem;
+        border: 1px solid var(--color-border, #e0e0e0);
+      }
+
+      :host ::ng-deep .markdown-view tbody tr:hover {
+        background-color: var(--color-surface-hover, #fafafa);
+      }
+
+      :host ::ng-deep .markdown-view a {
+        color: var(--color-primary, #0066cc);
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      :host ::ng-deep .markdown-view a:hover {
+        text-decoration: underline;
+      }
+
+      :host ::ng-deep .markdown-view code {
+        background-color: var(--color-surface-secondary, #f5f5f5);
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-family: monospace;
+        font-size: 0.9em;
+      }
+
+      :host ::ng-deep .markdown-view pre {
+        background-color: var(--color-surface-secondary, #f5f5f5);
+        padding: 1rem;
+        border-radius: 4px;
+        overflow-x: auto;
+        margin: 1rem 0;
+      }
+
+      :host ::ng-deep .markdown-view pre code {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+      }
     `,
   ]
 })
@@ -78,22 +135,54 @@ export class MarkdownViewComponent implements OnChanges {
       next: (md) => {
         void (async () => {
           try {
-            const [markedModule, domPurifyModule] = await Promise.all([
-              import('marked'),
+            const [mdItModule, domPurifyModule] = await Promise.all([
+              import('markdown-it'),
               import('dompurify')
             ]);
 
-            const rawHtml = await Promise.resolve(markedModule.marked.parse(md));
-            const safeHtml = domPurifyModule.default.sanitize(rawHtml);
+            // Nutze markdown-it mit GFM-Features
+            const markdownIt = mdItModule.default;
+            const mdi = new markdownIt({
+              html: true,
+              linkify: true,
+              typographer: true,
+              breaks: true
+            });
+
+            // Parse Markdown zu HTML
+            const rawHtml = mdi.render(md);
+
+            // Konfiguriere dompurify mit Tabellen- und Link-Elementen
+            const purifyConfig = {
+              ALLOWED_TAGS: [
+                'p', 'br', 'strong', 'em', 'b', 'i', 'u', 'code', 'pre',
+                'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+                'ul', 'ol', 'li',
+                'blockquote',
+                'a',
+                'table', 'thead', 'tbody', 'tr', 'th', 'td', // Tabellen-Support
+                'img',
+                'hr'
+              ],
+              ALLOWED_ATTR: [
+                'href', 'target', 'rel', // Links
+                'src', 'alt', 'title', // Bilder
+                'colspan', 'rowspan', 'align' // Tabellen
+              ]
+            };
+
+            const safeHtml = domPurifyModule.default.sanitize(rawHtml, purifyConfig);
             this.html = this.sanitizer.bypassSecurityTrustHtml(safeHtml);
             this.loading = false;
-          } catch {
+          } catch (err) {
+            console.error('Fehler beim Rendern von Markdown:', err);
             this.error = true;
             this.loading = false;
           }
         })();
       },
-      error: () => {
+      error: (err) => {
+        console.error('Fehler beim Laden der Markdown-Datei:', err);
         this.error = true;
         this.loading = false;
       }

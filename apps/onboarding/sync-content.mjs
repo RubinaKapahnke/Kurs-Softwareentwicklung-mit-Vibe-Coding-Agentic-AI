@@ -97,8 +97,20 @@ function stripTonePrefixFromHeading(headingText) {
 function parseSlideSections(lines) {
   const sections = [];
   let current = { heading: undefined, tone: undefined, paragraphs: [], orderedItems: [], unorderedItems: [] };
+  let paragraphBuffer = [];
+
+  const flushParagraphBuffer = () => {
+    if (paragraphBuffer.length === 0) {
+      return;
+    }
+
+    // Keep multiline markdown blocks intact so tables and similar block syntax survive manifest sync.
+    current.paragraphs.push(paragraphBuffer.join('\n'));
+    paragraphBuffer = [];
+  };
 
   const pushCurrent = () => {
+    flushParagraphBuffer();
     const next = finalizeLessonSection(current);
     if (!next.heading && !next.paragraphs?.length && !next.orderedItems?.length) {
       return;
@@ -123,6 +135,7 @@ function parseSlideSections(lines) {
           unorderedItems: [],
         };
       } else if (heading.level === 4) {
+        flushParagraphBuffer();
         current.paragraphs.push(`${SUBHEADING_PREFIX}${sanitizeInlineMarkdown(heading.text)}`);
       }
       continue;
@@ -130,22 +143,25 @@ function parseSlideSections(lines) {
 
     const line = rawLine.trim();
     if (!line) {
+      flushParagraphBuffer();
       continue;
     }
 
     const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
     if (orderedMatch) {
+      flushParagraphBuffer();
       current.orderedItems.push(sanitizeInlineMarkdown(orderedMatch[1]));
       continue;
     }
 
     const bulletMatch = line.match(/^[-*]\s+(.+)$/);
     if (bulletMatch) {
+      flushParagraphBuffer();
       current.unorderedItems.push(sanitizeInlineMarkdown(bulletMatch[1]));
       continue;
     }
 
-    current.paragraphs.push(sanitizeInlineMarkdown(line));
+    paragraphBuffer.push(sanitizeInlineMarkdown(line));
   }
 
   pushCurrent();

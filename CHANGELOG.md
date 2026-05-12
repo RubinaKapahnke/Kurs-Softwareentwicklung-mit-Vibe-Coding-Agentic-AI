@@ -9,6 +9,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### 12.05.2026
 - Onboarding-Inhalte für Lektionen 05, 06, 08 und 15 überarbeitet, Git-/Markdown-/VS-Code-Anleitungen ausgebaut und der Onboarding-Flow um eine neue Lektion 16 erweitert.
 - Lektion 11 (Terminal- und Shell-Grundlagen) umfassend ausgebaut mit 9 Kapiteln: Terminal/Shell-Erklärung, CLI vs. GUI, Scripting, Shell-Übersicht (dash, bash, zsh, fish, tcsh, ksh, cmd, PowerShell), Windows/macOS-Strategie, VSCode-Terminal-Integration, Autocomplete-Setup, Shell-Befehl-Referenz (pwd, ls, cd, echo, mkdir, touch, rm, rmdir, mv, cp, cat, find) mit Beispielen und ausführlicher Checkliste + 10 praktische Aufgaben mit Bonusaufgabe.
+- **Markdown-Rendering repariert:** Migriert von `marked` zu `markdown-it` mit nativer GitHub Flavored Markdown (GFM) Unterstützung. `markdown-it` hat built-in Tabellen-Support, Links, Typografie und Zeilenumbrüche. DOMPurify konfiguriert für HTML-Tabellen (`<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`) mit vollständigem CSS-Styling (Borders, Padding, Hover-Effekte).
 - Content-Sync und Build validiert.
 
 ### 09.05.2026

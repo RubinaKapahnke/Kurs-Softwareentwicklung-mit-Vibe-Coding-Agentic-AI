@@ -218,19 +218,19 @@
   gap: 0.45rem;
 }
 
-.lesson-section--highlight :is(p, .lesson-section__subheading, ol, ul),
-.lesson-section--danger :is(p, .lesson-section__subheading, ol, ul),
-.lesson-section--success :is(p, .lesson-section__subheading, ol, ul),
-.lesson-section--info :is(p, .lesson-section__subheading, ol, ul),
-.lesson-section--tip :is(p, .lesson-section__subheading, ol, ul) {
+.lesson-section--highlight :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--danger :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--success :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--info :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--tip :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown) {
   margin-left: calc(1.62rem + 0.45rem);
 }
 
-.lesson-section--highlight :is(p, li),
-.lesson-section--danger :is(p, li),
-.lesson-section--success :is(p, li),
-.lesson-section--info :is(p, li),
-.lesson-section--tip :is(p, li) {
+.lesson-section--highlight :is(p, li, .lesson-section__markdown),
+.lesson-section--danger :is(p, li, .lesson-section__markdown),
+.lesson-section--success :is(p, li, .lesson-section__markdown),
+.lesson-section--info :is(p, li, .lesson-section__markdown),
+.lesson-section--tip :is(p, li, .lesson-section__markdown) {
   font-size: var(--font-size-sm);
   color: #2f2f2f;
 }
@@ -293,6 +293,19 @@
   line-height: var(--line-height-base);
 }
 
+.lesson-section__markdown {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lesson-section__markdown :first-child {
+  margin-top: 0;
+}
+
+.lesson-section__markdown :last-child {
+  margin-bottom: 0;
+}
+
 .lesson-section ul,
 .lesson-section ol {
   margin: 0;
@@ -309,8 +322,59 @@
   text-decoration: underline;
 }
 
+.lesson-section__markdown a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+}
+
 .lesson-section :is(p, li) a:hover {
   color: var(--color-primary-dark);
+}
+
+.lesson-section__markdown a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Rendered markdown tables come from innerHTML and need the deep selector to receive component styles. */
+:host ::ng-deep .lesson-section__markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-strong);
+  background: var(--color-surface);
+}
+
+:host ::ng-deep .lesson-section__markdown th,
+:host ::ng-deep .lesson-section__markdown td {
+  padding: 0.7rem;
+  border: 1px solid var(--border-strong);
+  text-align: left;
+  vertical-align: top;
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+}
+
+:host ::ng-deep .lesson-section__markdown thead th {
+  background: var(--surface-info);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+:host ::ng-deep .lesson-section__markdown tbody tr td {
+  border-top: 1px solid var(--border-strong);
+}
+
+:host ::ng-deep .lesson-section__markdown tbody tr + tr td {
+  border-top: 1px solid var(--border-strong);
+}
+
+.lesson-section__markdown code {
+  font-family: monospace;
+  background: var(--surface-muted);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-sm);
 }
 
 .lesson-section :is(p, li) :is(strong, b) {

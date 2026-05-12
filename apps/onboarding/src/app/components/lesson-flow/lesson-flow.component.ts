@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import MarkdownIt from 'markdown-it';
 
 import {
   OnboardingLessonContentSection,
@@ -13,52 +14,12 @@ import {
 } from '../../models/onboarding.models';
 import { OnboardingStateService } from '../../services/onboarding-state.service';
 
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function linkifyLessonText(text: string): string {
-  if (!text) {
-    return '';
-  }
-
-  let escaped = escapeHtml(text);
-  const escapedAsteriskToken = '%%ESCAPED_ASTERISK%%';
-  escaped = escaped.replace(/\\\*/g, escapedAsteriskToken);
-
-  const linkPlaceholders: string[] = [];
-  escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|www\.[^\s)]+)\)/gi, (_, label: string, url: string) => {
-    const href = /^(https?:\/\/)/i.test(url) ? url : `https://${url}`;
-    const token = `%%LINK_${linkPlaceholders.length}%%`;
-    linkPlaceholders.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`);
-    return token;
-  });
-
-  escaped = escaped
-    .replace(/\*\*\*([^*]+)\*\*\*/g, '<strong><em>$1</em></strong>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([^*]+)\*/g, '<em>$1</em>');
-
-  const urlPattern = /\b((?:https?:\/\/)?(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[\w\-./?%&=+#~]*)?)/gi;
-
-  escaped = escaped.replace(urlPattern, (rawUrl: string) => {
-    const href = /^(https?:\/\/)/i.test(rawUrl) ? rawUrl : `https://${rawUrl}`;
-    return `<a href="${href}" target="_blank" rel="noopener noreferrer">${rawUrl}</a>`;
-  });
-
-  for (let i = 0; i < linkPlaceholders.length; i++) {
-    escaped = escaped.replace(`%%LINK_${i}%%`, linkPlaceholders[i]);
-  }
-
-  escaped = escaped.replace(new RegExp(escapedAsteriskToken, 'g'), '*');
-
-  return escaped;
-}
+const lessonMarkdown = new MarkdownIt({
+  html: false,
+  linkify: true,
+  typographer: true,
+  breaks: true,
+});
 
 @Component({
   selector: 'app-lesson-flow',
@@ -319,7 +280,19 @@ export class LessonFlowComponent implements OnChanges {
   }
 
   linkifyText(text: string): string {
-    return linkifyLessonText(text);
+    if (!text) {
+      return '';
+    }
+
+    return lessonMarkdown.renderInline(text);
+  }
+
+  renderBlockText(text: string): string {
+    if (!text) {
+      return '';
+    }
+
+    return lessonMarkdown.render(text).trim();
   }
 
   isSubheadingParagraph(text: string): boolean {

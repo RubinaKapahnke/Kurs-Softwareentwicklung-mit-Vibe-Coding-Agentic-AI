@@ -32,7 +32,7 @@
           @if (isSubheadingParagraph(paragraph)) {
             <h6 class="lesson-section__subheading" [innerHTML]="linkifyText(extractSubheadingText(paragraph))"></h6>
           } @else {
-            <p [innerHTML]="linkifyText(paragraph)"></p>
+            <div class="lesson-section__markdown" [innerHTML]="renderBlockText(paragraph)"></div>
           }
         }
       }
