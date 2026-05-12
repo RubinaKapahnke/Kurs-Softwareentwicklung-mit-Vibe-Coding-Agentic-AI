@@ -70,6 +70,12 @@ GitHub ist im Basistarif kostenlos. Du brauchst nur einen Account.
 - Wähle einen Benutzernamen, den du auch später im Kurskontext verwenden möchtest.
 - Nutze einen Passwortmanager im Browser oder auf deinem Gerät, damit du dein Passwort sicher speichern kannst.
 
+### Wichtiger Hinweis zur E-Mail-Adresse
+
+Wenn du eine KnOot E-Mail-Adresse hast, denke daran: Diese wird nach den Kursen deaktiviert.
+
+Wenn du dein Repository dauerhaft behalten willst, verwende lieber eine E-Mail-Adresse, die in deinem Besitz bleibt.
+
 ## Quiz: Kurze Verständnisfrage
 
 Frage: Wozu dient GitHub im Kurs hauptsächlich?

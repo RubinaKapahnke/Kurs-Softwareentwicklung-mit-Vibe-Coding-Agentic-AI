@@ -1,7 +1,7 @@
 <mat-card class="step-card" appearance="outlined">
   <section class="step-header-banner" aria-label="Schrittüberschrift">
     <p class="step-header-banner__kicker">Schritt {{ step().id }}</p>
-    <h1 class="step-header-banner__title">{{ isAccountChoiceStep() ? step3Title() : effectiveTitle() }}</h1>
+    <h1 class="step-header-banner__title">{{ stepHeaderTitle() }}</h1>
     @if (isAccountChoiceStep() ? step3Goal() : effectiveGoal()) {
       <p class="step-header-banner__subtitle">{{ isAccountChoiceStep() ? step3Goal() : effectiveGoal() }}</p>
     }

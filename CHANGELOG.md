@@ -6,6 +6,9 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ## Tagesübersicht (grob)
 
+### 12.05.2026
+- Onboarding-Inhalte für Lektionen 05, 06, 08 und 15 überarbeitet, Git-/Markdown-/VS-Code-Anleitungen ausgebaut und der Onboarding-Flow um eine neue Lektion 16 erweitert.
+
 ### 09.05.2026
 - Onboarding-App zum nutzbaren MVP-Flow ausgebaut: Startseite/Kursstart, Schrittlogik, Lesson Flow, Zusammenfassung, Content-Sync und Markdown-Inhalte erweitert.
 - Designsystem und Styles konsolidiert: Tokens, Typografie, Material-Variablen, Button-/Surface-/State-Utilities und keine hardcodierten Komponentenfarben.
@@ -163,6 +166,18 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `tools/test-uebung.ps1 -File "course/uebungen/meilenstein-04-uebung-02.md"`: 21 OK, 0 Fehler.
 - `tools/test-alle-uebungen.ps1`: alle 11 Uebungen bestanden, Coverage-Check konsistent.
 - `tools/test-links.ps1`: alle geprueften Links OK.
+
+## 12.05.2026 (Session 11)
+
+### Onboarding-Lektionen erweitert und neu aufgeteilt
+
+- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-05-git-grundlagen/lektion-inhalte.md`: Git-/GitHub-Abläufe deutlich vertieft (PR, Reviewer, Fork, Clone, Fetch, Remotes, Commit History, Praxisbeispiel).
+- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-06-erste-uebungen-im-browser/lektion-inhalte.md` und `aufgaben.md`: Markdown-Grundlagen und Browser-Übungen erweitert.
+- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-08-vs-code-installieren/lektion-inhalte.md` und `aufgaben.md`: VS-Code-Installation, Extensions, GitHub Copilot und Copilot Chat ergänzt; überflüssige Zusatzseite entfernt.
+- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-15-uebungen-im-gesamt-setting/lektion-inhalte.md`: inhaltlich zu „Übungen im Gesamt-Setting“ umgestellt.
+- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-16-start-in-den-gesamtkurs/lektion-inhalte.md`: neue Abschlusslektion für den Übergang in den Gesamtkurs angelegt.
+- `apps/onboarding/src/app/data/onboarding-steps.data.ts`: statische Step-Liste auf 16 Schritte erweitert.
+- `README.md`: Projektstruktur im Root-README um die Onboarding-Lektionen 13 bis 16 ergänzt.
 
 ## 04.05.2026 (Session 4)
 

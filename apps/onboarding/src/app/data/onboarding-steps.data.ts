@@ -725,6 +725,46 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       'Tippe NEXT_STEPS.md oder README_UEBUNGEN.md und bestätige mit Enter.'
     ],
     markdownSource: '/content/kurs-handhabung.md'
+  },
+  {
+    id: 12,
+    title: 'Git in VS Code via Terminal',
+    goal: 'Du führst die wichtigsten Git-Befehle direkt im VS-Code-Terminal aus.',
+    tasks: [],
+    fallbackHelp: [],
+    successCriterion: ''
+  },
+  {
+    id: 13,
+    title: 'Branches, Commits und Pull Requests',
+    goal: 'Du verstehst den Ablauf von Branch bis Pull Request und kannst ihn im Kurskontext erklären.',
+    tasks: [],
+    fallbackHelp: [],
+    successCriterion: ''
+  },
+  {
+    id: 14,
+    title: 'Kurs-Repository klonen',
+    goal: 'Du klonst das gemeinsame Kurs-Repository und öffnest es lokal in VS Code.',
+    tasks: [],
+    fallbackHelp: [],
+    successCriterion: ''
+  },
+  {
+    id: 15,
+    title: 'Übungen im Gesamt-Setting',
+    goal: 'Du verstehst, wie Übungen im Gesamtkurs zwischen Kurs-Repository, eigenem Repository und Lernfortschritt zusammenspielen.',
+    tasks: [],
+    fallbackHelp: [],
+    successCriterion: ''
+  },
+  {
+    id: 16,
+    title: 'Start in den Gesamtkurs',
+    goal: 'Du weißt, wie du nach dem Onboarding konkret in den Gesamtkurs startest und was dein erster sinnvoller nächster Schritt ist.',
+    tasks: [],
+    fallbackHelp: [],
+    successCriterion: ''
   }
 ] as const;
 

@@ -1,31 +1,36 @@
-﻿# Lektion 12: Kurs-Handhabung verstehen
+﻿# Lektion 12: Git in VS Code via Terminal
 
 ## Ziel
 
-Du verstehst, welche Dateien im Kurs-Repository bleiben und was in deinem eigenen Repository entsteht.
+Du führst die wichtigsten Git-Befehle direkt im VS-Code-Terminal aus.
 
-## Merksatz
+## Basisablauf mit Git
 
-Kurs-Repo = Orientierung und Fortschritt. Eigenes Repo = Umsetzung und Artefakte.
+1. Prüfen, ob du im richtigen Repository bist: `git status`
+2. Geänderte Dateien ansehen: `git status`
+3. Änderungen vormerken: `git add <datei>` oder `git add .`
+4. Commit erstellen: `git commit -m "Kurze klare Nachricht"`
+5. Verlauf ansehen: `git log --oneline`
 
-## Schnell-Entscheidung
+## Commit-Nachrichten, die helfen
 
-- Aufgabe lesen: Kurs-Repo
-- Lösung bauen: eigenes Repo
-- Lernstand eintragen: Kurs-Repo
+- Schreibe kurz und konkret, **was** geändert wurde.
+- Nutze Präsens, z. B. `README ergänzt` oder `Übung 02 gelöst`.
+- Vermeide vage Nachrichten wie `update` oder `fix` ohne Kontext.
 
-## Warum Lernfortschritt zentral?
+## Typische Stolperstellen
 
-- Überblick für Dozentin
-- stabile Dashboard-Datenquelle
-- vergleichbare Rückfragen und nächste Schritte
+- `nothing to commit`: Du hast keine Änderungen vorgemerkt oder gespeichert.
+- Falscher Ordner: `git status` zeigt an, dass kein Git-Repository gefunden wurde.
+- Zu viel auf einmal: Lieber mehrere kleine Commits statt ein großer Sammelcommit.
 
 ## Fallback
 
-- Verwechslung der Repositories: Kurs-Repo für Orientierung, eigenes Repo für Umsetzung.
-- README_UEBUNGEN.md nicht gefunden: Strg+P oder Cmd+P nutzen.
+- Commit klappt nicht: Prüfe `git status` und ob Dateien gespeichert sind.
+- Benutzername/E-Mail fehlen: `git config --global user.name` und `git config --global user.email` setzen.
+- Unsicher bei Änderungen: Mit `git diff` vor dem Commit prüfen.
 
 ## Erfolgskriterium
 
-Du kannst den Unterschied zwischen Kurs-Repository und eigenem Repository erklären.
+Du hast mindestens eine Datei geändert, erfolgreich committed und den Commit im Verlauf gesehen.
 

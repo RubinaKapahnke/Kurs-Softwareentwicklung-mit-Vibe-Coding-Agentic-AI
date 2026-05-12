@@ -204,7 +204,11 @@ course/course-library/04-git/
 │   │   │   ├── lektion-09-was-ist-git/
 │   │   │   ├── lektion-10-git-installieren/
 │   │   │   ├── lektion-11-kurs-repo-klonen/
-│   │   │   └── lektion-12-kurs-handhabung-verstehen/
+│   │   │   ├── lektion-12-kurs-handhabung-verstehen/
+│   │   │   ├── lektion-13-branches-commits-pullrequests/
+│   │   │   ├── lektion-14-kurs-repository-klonen/
+│   │   │   ├── lektion-15-uebungen-im-gesamt-setting/
+│   │   │   └── lektion-16-start-in-den-gesamtkurs/
 │   │   ├── 02-produktbeschreibung-inkrementelle-planung/
 │   │   │   └── 00-modulziele.md
 │   │   ├── 03-vibe-coding-prompting-context-engineering/

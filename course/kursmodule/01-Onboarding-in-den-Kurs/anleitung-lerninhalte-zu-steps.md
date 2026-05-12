@@ -20,7 +20,7 @@ Typische Dateien:
 - `lektion-inhalte.md` (Lesson-Flow)
 - `aufgaben.md` (Aufgabenliste, optional)
 
-## 2. Regeln Fuer `lektion-inhalte.md`
+## 2. Regeln für `lektion-inhalte.md`
 
 1. `# ...` ist der Lektionstitel (wird als Step-Titel genutzt).
 2. Unter `## Ziel` steht die Zielbeschreibung (erste Textzeile wird als Step-Ziel übernommen).
@@ -54,11 +54,11 @@ Regeln:
 2. Mindestens eine korrekte Option mit `- [x]`.
 3. `Mehrfachauswahl` optional (`ja` oder `nein`).
 
-## 4. Farbfelder über `###`-Praefixe
+## 4. Farbfelder über `###`-Präfixe
 
 - `### Wichtig:` oder `### Hinweis:` -> gelb
 - `### Achtung:` -> rot
-- `### Erfolg:` / `### OK:` / `### Gruen:` -> grün
+- `### Erfolg:` / `### OK:` / `### Grün:` -> grün
 - `### Blau:` -> blau
 - `### Info:` / `### Tipp:` -> eigener Hinweis-Farbton
 

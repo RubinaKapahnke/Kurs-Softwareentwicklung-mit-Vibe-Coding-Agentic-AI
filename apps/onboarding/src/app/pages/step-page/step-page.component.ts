@@ -222,11 +222,9 @@ export class StepPageComponent {
 
   readonly effectiveTitle = computed(() => this.manifestEntry()?.title ?? this.step().title);
   readonly effectiveGoal = computed(() => this.manifestEntry()?.goal ?? this.step().goal);
-
-  // Step 3: Unterschiedliche Inhalte für 'new' vs 'existing-beginner' vs 'existing-experienced'
-  readonly step3Title = computed(() => {
-    if (!this.isAccountChoiceStep()) return this.effectiveTitle();
-    return 'GitHub Account'; // Statischer Titel unabhängig von step2Experience
+  readonly stepHeaderTitle = computed(() => {
+    const lessonNumber = String(this.step().id).padStart(2, '0');
+    return `Lektion ${lessonNumber}: ${this.effectiveTitle()}`;
   });
 
   readonly step3Goal = computed(() => {
