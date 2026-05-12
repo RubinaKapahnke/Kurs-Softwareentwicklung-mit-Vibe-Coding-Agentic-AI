@@ -1737,7 +1737,7 @@
   },
   "11": {
     "title": "Terminal- und Shell-Grundlagen",
-    "goal": "Du verstehst die wichtigsten Terminal-Befehle und kannst dich sicher in Ordnern bewegen.",
+    "goal": "Du verstehst, was Terminal und Shell sind, kannst dich sicher im Dateisystem bewegen und kennst die wichtigsten Shell-Befehle für die Arbeit in diesem Kurs. Du weißt, wie du das Terminal in VS Code nutzt und wie Autocomplete dich beim Tippen unterstützt.",
     "sections": [
       {
         "type": "lesson",
@@ -1753,16 +1753,721 @@
       "slides": [
         {
           "type": "content",
-          "title": "Kernbefehle für den Start",
+          "title": "Kapitel 1: Was sind Terminal und Shell?",
           "sections": [
             {
+              "heading": "Terminal: Das Fenster zum Dateisystem",
+              "paragraphs": [
+                "Das **Terminal** (auch genannt: Konsole, Command Line, Befehlszeile) ist ein Text-basiertes Fenster, in das du Befehle schreibst und aus dem du Text-Ergebnisse siehst – statt Symbole anzuklicken wie in einer grafischen Oberfläche."
+              ],
+              "unorderedItems": [
+                "**Terminal = Fenster/Schnittstelle** – das ist die Anwendung, die sich öffnet (z. B. Terminal.app auf macOS, PowerShell-Fenster auf Windows)",
+                "**Shell = das Programm dahinter** – das die Befehle interpretiert und ausführt (z. B. Bash, PowerShell, Zsh)"
+              ]
+            },
+            {
+              "heading": "Shell: Das Betriebssystem-Sprachrohr",
+              "paragraphs": [
+                "Die **Shell** ist das Programm, das:",
+                "Eine Shell ist wie ein Übersetzer zwischen dir (menschliche Befehle) und dem Computer (Maschinen-Befehle)."
+              ],
+              "unorderedItems": [
+                "deine Befehle liest und versteht",
+                "sie an das Betriebssystem weiterleitet",
+                "Fehler oder Ergebnisse anzeigt"
+              ]
+            },
+            {
+              "heading": "Warum beide gemeinsam wichtig sind",
+              "paragraphs": [
+                "Im Alltag sagt man oft \"Terminal\" oder \"Shell\" synonymisch – was technisch nicht ganz korrekt ist, aber pragmatisch verständlich. Für dich bedeutet das:",
+                "---"
+              ],
+              "unorderedItems": [
+                "**Im Kurs:** Du wirst immer in einem Terminal-Fenster arbeiten.",
+                "**Die Shell wechselt je nach Betriebssystem:** Windows → PowerShell oder Bash; macOS → Bash (Standard)",
+                "**Alle Befehle funktionieren in der Shell** – nicht in der Oberfläche mit Mausklicks."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: CLI vs. GUI – Text statt Symbole",
+          "sections": [
+            {
+              "heading": "GUI (Grafische Benutzeroberfläche)",
+              "paragraphs": [
+                "**GUI** = Graphical User Interface"
+              ],
+              "unorderedItems": [
+                "Du klickst auf Symbole, Menüs, Schaltflächen",
+                "Beispiel: VS Code mit Mausklicks, GitHub.com im Browser",
+                "**Vorteil:** Anfängerfreundlich, sichtbar, intuitiv",
+                "**Nachteil:** Langsam für Wiederholte Aufgaben, schwer zu automatisieren"
+              ]
+            },
+            {
+              "heading": "CLI (Kommandozeilen-Schnittstelle)",
+              "paragraphs": [
+                "**CLI** = Command Line Interface"
+              ],
+              "unorderedItems": [
+                "Du schreibst Befehle als Text",
+                "Beispiel: `git commit -m \"Meine Änderung\"` statt zehn Mausklicks",
+                "**Vorteil:** Schnell, präzise, wiederholbar, automatisierbar",
+                "**Nachteil:** Muss man die Befehle kennen, weniger visuelles Feedback"
+              ]
+            },
+            {
+              "heading": "Im Kurs: Warum CLI?",
+              "paragraphs": [
+                "Im Kurs brauchst du die CLI aus mehreren Gründen:",
+                "CLI + GUI ergänzen sich im Kurs – du nutzt den Browser für einfache Übungen (Kapitel 06) und die CLI für komplexere Workflows (ab Kapitel 05, Git).",
+                "---"
+              ],
               "orderedItems": [
-                "Aktuellen Ordner anzeigen: `pwd` (PowerShell: `Get-Location`)",
-                "Inhalt eines Ordners anzeigen: `ls` (PowerShell: `Get-ChildItem`)",
-                "In einen Ordner wechseln: `cd <ordnername>`",
-                "Einen Ordner nach oben wechseln: `cd ..`",
-                "Ordner anlegen: `mkdir <name>`",
-                "Datei anlegen: `New-Item <datei>.md` (PowerShell) oder `touch <datei>.md` (Bash/Zsh)"
+                "**Git funktioniert am schnellsten über die Kommandozeile**",
+                "**Build-Tools** (z. B. `npm run build`) funktionieren nur im Terminal",
+                "**Navigation zum richtigen Projekt-Ordner** ist im Terminal einfacher und sicherer",
+                "**Viele Fehler werden erst im Terminal sichtbar**"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 3: Was ist Scripting?",
+          "sections": [
+            {
+              "heading": "Scripting: Befehle automatisieren",
+              "paragraphs": [
+                "**Scripting** bedeutet, mehrere Befehle in eine Datei zu schreiben, sodass sie nacheinander und automatisch ablaufen – statt jeden Befehl manuell einzutippen."
+              ]
+            },
+            {
+              "heading": "Einfaches Beispiel: Ein einfaches Script",
+              "paragraphs": [
+                "Statt jedes Mal:",
+                "```bash",
+                "cd ~/Projekte/mein-kurs",
+                "git status",
+                "git add .",
+                "git commit -m \"Update\"",
+                "git push",
+                "```",
+                "Schreibst du diese Befehle einmal in eine Datei (z. B. `auto-push.sh` auf macOS/Linux oder `auto-push.ps1` auf Windows) und führst sie mit einem einzigen Befehl aus:",
+                "```bash",
+                "./auto-push.sh",
+                "```"
+              ]
+            },
+            {
+              "heading": "Warum ist das hilfreich?",
+              "unorderedItems": [
+                "**Zeitersparnis:** Wiederholte Workflows werden schneller",
+                "**Fehlerreduktion:** Weniger manuelle Tipp-Fehler",
+                "**Automatisierung:** Scripts können im Hintergrund oder zeitgesteuert laufen",
+                "**In diesem Kurs:** Wir nutzen Scripts später für Test-Routinen und Build-Prozesse (z. B. `npm run sync-content`)"
+              ]
+            },
+            {
+              "heading": "Im Kurs relevant?",
+              "paragraphs": [
+                "Für die ersten Schritte (Lektionen 04–08) brauchst du nicht selbst zu scripten. Aber:",
+                "---"
+              ],
+              "unorderedItems": [
+                "In `package.json` siehst du vordefinierte Scripts (z. B. `\"build\": \"ng build\"`)",
+                "Mit `npm run <script-name>` führst du diese Scripts aus",
+                "Das ist im Grunde, deine erste Script-Erfahrung"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 4: Bekannte Shells im Überblick",
+          "sections": [
+            {
+              "heading": "Unix-ähnliche Shells (macOS, Linux)",
+              "paragraphs": [
+                "| Shell | Typisch auf | Besonderheit | Für Anfänger? |",
+                "|-------|-------------|--------------|--------------|",
+                "| **Bash** | macOS (alt), Linux | Standard seit Jahrzehnten, sehr verbreitet | ✅ Ja, leicht zu lernen |",
+                "| **Zsh** | macOS (neu, seit Big Sur) | Modern, besser als Bash, Autocomplete | ✅ Ja, ähnlich wie Bash |",
+                "| **Dash** | Linux, macOS | Minimalistisch, schnell, als `sh` bekannt | ⚠ Zu Anfang kompliziert |",
+                "| **Fish** | Linux, macOS (optional) | Sehr benutzerfreundlich, Autocomplete-Highlight | ✅ Anfängerfreundlich |",
+                "| **Tcsh** | Veraltet | Alte Unix-Shell, heute selten | ❌ Nicht nötig |",
+                "| **Ksh** | Veraltet | Kommerzielle Shell, heute selten | ❌ Nicht nötig |"
+              ]
+            },
+            {
+              "heading": "Windows Shells",
+              "paragraphs": [
+                "| Shell | Typisch auf | Besonderheit | Für Anfänger? |",
+                "|-------|-------------|--------------|--------------|",
+                "| **PowerShell (7+)** | Windows, modern | Microsoft's modern Sprache, objekt-orientiert | ✅ Ja, mit Umgewöhnung |",
+                "| **Cmd (cmd.exe)** | Windows, alt | Alter Windows-Standard, begrenzt | ⚠ Veraltet, nicht empfohlen |",
+                "| **Bash (WSL/Git Bash)** | Windows (via Emulation) | Unix-Befehle auf Windows, für Lernende hilfreich | ✅ Ja, einfacher |",
+                "---"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 5: Windows und macOS – Welche Shell nutzen wir?",
+          "sections": [
+            {
+              "heading": "Ziel dieses Kapitels",
+              "paragraphs": [
+                "Damit du nicht verwirrt wirst: Wir machen es dir einfach. Hier ist die klare Anweisung für deinen Kurs."
+              ]
+            },
+            {
+              "heading": "Windows: PowerShell ODER Bash (deine Wahl)",
+              "paragraphs": [
+                "Auf Windows hast du zwei Möglichkeiten:",
+                "__subheading__Option A: PowerShell (empfohlen für Windows-Neulinge)",
+                "__subheading__Option B: Bash (empfohlen für Lernende, die später Linux nutzen)",
+                "**Unsere Empfehlung für dich:** Wenn du neu mit Terminal-Befehlen bist, nimm Bash. Die Befehle sind kürzer und du lernst etwas, das auf jedem System funktioniert.",
+                "**Im Kurs:** Wir zeigen dir Befehle für Bash/Zsh. Falls du PowerShell nutzt, sagen wir dir die Alternative."
+              ],
+              "unorderedItems": [
+                "Ist auf Windows vorinstalliert",
+                "Befehle sehen anders aus als auf macOS (z. B. `Get-ChildItem` statt `ls`)",
+                "Funktioniert, aber braucht etwas Umgewöhnung",
+                "Brauchst Git Bash oder Windows Subsystem for Linux (WSL)",
+                "Befehle sind gleich wie auf macOS und Linux",
+                "Einfacher, wenn du diese Lektion später auf anderen Systemen wiederholst"
+              ]
+            },
+            {
+              "heading": "macOS: Bash (Standard)",
+              "paragraphs": [
+                "**Im Kurs:** Bash-Befehle funktionieren auf deinem Mac direkt.",
+                "---"
+              ],
+              "unorderedItems": [
+                "Auf MacOS ist Bash (oder Zsh, eine moderne Version von Bash) vorinstalliert",
+                "Du brauchst nichts extra zu installieren",
+                "Alle Befehle dieser Lektion funktionieren sofort"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 6: Das Terminal in VS Code nutzen",
+          "sections": [
+            {
+              "heading": "Das Terminal öffnen",
+              "paragraphs": [
+                "**Keyboard-Shortcut:**",
+                "**Menü:**",
+                "Nach dem Öffnen siehst du oben im Terminal deinen aktuellen Ordner als Pfad."
+              ],
+              "unorderedItems": [
+                "**Windows/Linux:** `Ctrl+Backtick` (Backtick = `` ` `` neben der 1)",
+                "**macOS:** `Cmd+Backtick`",
+                "Terminal → New Terminal (oben in der Menüleiste)"
+              ]
+            },
+            {
+              "heading": "Terminal-Grundlagen in VS Code",
+              "unorderedItems": [
+                "**Prompt `>`:** Das ist die Eingabezeile – hier tippst du Befehle ein",
+                "**Ausgabe:** Unter dem Befehl siehst du das Ergebnis oder Fehler",
+                "**Mehrere Terminals:** Du kannst mehrere Terminal-Reiter öffnen (+ Button oben rechts)",
+                "**Terminal teilen:** Mit dem \"Split Terminal\"-Symbol kannst du zwei Terminals nebeneinander sehen"
+              ]
+            },
+            {
+              "heading": "Die richtige Working Directory (Ordner)",
+              "paragraphs": [
+                "Wenn du VS Code öffnest, öffnet sich das Terminal im Kurs-Ordner. Das ist wichtig:",
+                "```bash",
+                "~/kurs-verzeichnis $",
+                "```",
+                "Falls nicht, navigiere dahin:",
+                "```bash",
+                "cd /pfad/zum/kurs",
+                "```"
+              ]
+            },
+            {
+              "heading": "Fehlermeldungen im Terminal",
+              "paragraphs": [
+                "Falls du einen Befehl eingibst und eine Fehlermeldung siehst:",
+                "---"
+              ],
+              "unorderedItems": [
+                "**Befehl nicht gefunden:** Überprüfe die Schreibweise",
+                "**Keine Berechtigung (Permission denied):** Der Ordner/die Datei hat Schutz",
+                "**Kein solcher Ordner:** Der Ordnerpfad existiert nicht"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 7: Autocomplete im Terminal",
+          "sections": [
+            {
+              "heading": "Was ist Autocomplete?",
+              "paragraphs": [
+                "Wenn du anfängst, einen Befehl oder einen Ordnernamen zu tippen, kann die Shell dir helfen, ihn zu beenden – du tippst ein paar Buchstaben, drückst Tab, und der Rest wird automatisch ergänzt."
+              ]
+            },
+            {
+              "heading": "Autocomplete aktivieren (Bash/Zsh auf macOS und Linux)",
+              "paragraphs": [
+                "Auf macOS und Linux funktioniert Autocomplete **standardmäßig**:",
+                "Falls Autocomplete nicht funktioniert:"
+              ],
+              "orderedItems": [
+                "Tippe einen Befehl an: `cd Do` (für einen Ordner \"Documents\")",
+                "Drücke **Tab**",
+                "Das Terminal ergänzt zu: `cd Documents`"
+              ],
+              "unorderedItems": [
+                "Prüfe, dass du Bash oder Zsh nutzt (nicht Dash)",
+                "Starte das Terminal neu"
+              ]
+            },
+            {
+              "heading": "Autocomplete auf Windows (PowerShell)",
+              "paragraphs": [
+                "PowerShell hat auch Autocomplete, aber es funktioniert mit **Ctrl+Space** statt Tab:",
+                "```powershell",
+                "cd Do[Ctrl+Space]",
+                "```"
+              ]
+            },
+            {
+              "heading": "Autocomplete in VS Code Terminal",
+              "paragraphs": [
+                "VS Code hat zusätzliche Autocomplete-Features:"
+              ],
+              "unorderedItems": [
+                "**Tab-Taste:** Ergänzt Befehlsnamen und Dateipfade",
+                "**Pfeiltasten (↑/↓):** Navigiert durch die Befehlshistorie (letzte Befehle)",
+                "**Intelligente Vorschläge:** Nach einiger Nutzung lernt VS Code, welche Befehle du häufig nutzt"
+              ]
+            },
+            {
+              "heading": "Tipps für schnelleres Arbeiten",
+              "paragraphs": [
+                "---"
+              ],
+              "unorderedItems": [
+                "**Pfade abkürzen:** `cd ~/k` + Tab → `cd ~/kurs` (oder ähnlich)",
+                "**Befehlshistorie:** Oben-Pfeil (↑), um den letzten Befehl zu holen",
+                "**Doppel-Tab:** Falls mehrere Optionen passen, zeigt doppeltes Tab alle Möglichkeiten"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 8: Shell-Befehle für Datei- und Verzeichnisverwaltung",
+          "sections": [
+            {
+              "heading": "8.1 Den aktuellen Ordner anzeigen: `pwd` und `Get-Location`",
+              "paragraphs": [
+                "**Was tut es:** Zeigt den **absoluten Pfad** deines aktuellen Ordners.",
+                "**Unix/Bash/Zsh:**",
+                "```bash",
+                "pwd",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "Get-Location",
+                "```",
+                "**Übung:** Öffne VS Code Terminal und tippe `pwd` (oder `Get-Location`). Sieh dir deinen Pfad an.",
+                "---"
+              ]
+            },
+            {
+              "heading": "8.2 Inhalte eines Ordners anzeigen: `ls` und `Get-ChildItem`",
+              "paragraphs": [
+                "**Was tut es:** Zeigt alle **Dateien und Ordner** im aktuellen Verzeichnis.",
+                "**Unix/Bash/Zsh:**",
+                "```bash",
+                "ls",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "Get-ChildItem",
+                "#",
+                "```",
+                "**Mit versteckten Dateien (Dateien, die mit `.` anfangen):**",
+                "```bash",
+                "ls -a",
+                "ls -la  # mit Details",
+                "Get-ChildItem -Force",
+                "Get-ChildItem -Force | Format-Table",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "Tippe `ls` (oder `Get-ChildItem`) im Kurs-Ordner",
+                "Du solltest Ordner wie `course/`, `apps/`, `tools/` sehen",
+                "Tippe `ls -la` (oder `Get-ChildItem -Force`) und schaue, ob noch mehr Dateien auftauchen (z. B. `.git/`, `.gitignore`)"
+              ]
+            },
+            {
+              "heading": "8.3 Zwischen Ordnern wechseln: `cd`",
+              "paragraphs": [
+                "**Was tut es:** **Change Directory** – wechselt in einen anderen Ordner.",
+                "**Syntax:**",
+                "```bash",
+                "cd <ordnername>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "cd course",
+                "cd ..",
+                "cd ../..",
+                "cd ~",
+                "cd /Users/deinname/Projekte/kurs",
+                "cd /c/Users/deinname/Projekte/kurs",
+                "cd C:\\Users\\deinname\\Projekte\\kurs",
+                "```",
+                "**Mit Leerzeichen im Ordnernamen:** Nutze Anführungszeichen:",
+                "```bash",
+                "cd \"Mein Ordner\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "Du bist im Kurs-Ordner. Wechsle in `cd course`",
+                "Tippe `pwd`, um zu bestätigen, dass du dort bist",
+                "Wechsle `cd ..` zurück zum Kurs-Ordner",
+                "Wechsle in `cd apps/onboarding` (mit Slash dazwischen)",
+                "Tippe `pwd` zur Bestätigung"
+              ]
+            },
+            {
+              "heading": "8.4 Text auf dem Bildschirm ausgeben: `echo`",
+              "paragraphs": [
+                "**Was tut es:** Gibt Text aus, den du schreibst.",
+                "**Syntax:**",
+                "```bash",
+                "echo \"Dein Text hier\"",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "echo \"Hallo Welt\"",
+                "echo \"Ich bin in $PWD\"",
+                "echo",
+                "```",
+                "**Wofür das nützlich ist:**",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "Tippe `echo \"Ich lerne Terminal-Befehle\"`",
+                "Du solltest die Nachricht sehen",
+                "Tippe `echo $PWD`, um deinen aktuellen Pfad zu sehen"
+              ],
+              "unorderedItems": [
+                "In Scripts: um zu zeigen, was gerade passiert",
+                "Um Umgebungsvariablen zu checken (z. B. `echo $PWD`)"
+              ]
+            },
+            {
+              "heading": "8.5 Einen neuen Ordner anlegen: `mkdir`",
+              "paragraphs": [
+                "**Was tut es:** **Make Directory** – erstellt einen neuen, leeren Ordner.",
+                "**Syntax:**",
+                "```bash",
+                "mkdir <ordnername>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "mkdir mein-projekt",
+                "mkdir ordner1 ordner2 ordner3",
+                "mkdir -p tief/verschachtelter/pfad",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "New-Item -ItemType Directory -Name \"mein-projekt\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "Im Kurs-Ordner: `mkdir test-ordner`",
+                "Tippe `ls` – du solltest `test-ordner` sehen",
+                "Lösche ihn danach: `rmdir test-ordner` (siehe Kapitel 8.7)"
+              ]
+            },
+            {
+              "heading": "8.6 Eine leere Datei anlegen: `touch`",
+              "paragraphs": [
+                "**Was tut es:** Erstellt eine neue, leere Datei mit einem Dateinamen.",
+                "**Syntax:**",
+                "```bash",
+                "touch <dateiname>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "touch README.md",
+                "touch main.py",
+                "touch file1.txt file2.txt file3.txt",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "New-Item -ItemType File -Name \"README.md\"",
+                "New-Item \"README.md\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "Im Kurs-Ordner: `touch test.md`",
+                "Tippe `ls` – du solltest `test.md` sehen",
+                "Lösche sie danach: `rm test.md` (siehe Kapitel 8.8)"
+              ]
+            },
+            {
+              "heading": "8.7 Ein Verzeichnis löschen: `rmdir` und `rm -r`",
+              "paragraphs": [
+                "**Was tut es:** Löscht einen **leeren** Ordner.",
+                "**Syntax:**",
+                "```bash",
+                "rmdir <ordnername>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "rmdir mein-projekt",
+                "rmdir nicht-leerer-ordner",
+                "```",
+                "**Wenn der Ordner nicht leer ist:** Nutze `rm -r` (siehe Kapitel 8.8).",
+                "**PowerShell:**",
+                "```powershell",
+                "Remove-Item -Path \"ordnername\" -Force",
+                "Remove-Item -Path \"ordnername\" -Recurse -Force",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "`mkdir test-ordner`",
+                "`rmdir test-ordner` – sollte funktionieren",
+                "`mkdir nicht-leer && touch nicht-leer/datei.txt` – einen nicht-leeren Ordner erstellen",
+                "Versuche `rmdir nicht-leer` – sieht du die Fehlermeldung?"
+              ]
+            },
+            {
+              "heading": "8.8 Eine Datei löschen: `rm`",
+              "paragraphs": [
+                "**Was tut es:** **Remove** – löscht eine Datei oder einen Ordner mit Inhalt.",
+                "**Syntax:**",
+                "```bash",
+                "rm <dateiname>               # Datei löschen",
+                "rm -r <ordnername>          # Ordner mit Inhalt löschen",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "rm datei.txt",
+                "rm -r mein-ordner",
+                "rm datei1.txt datei2.txt datei3.txt",
+                "rm -rf mein-ordner   # Achtung: -f = Force, keine Bestätigung!",
+                "```",
+                "**⚠ Warnung:** `rm` ist **nicht rückgängig zu machen**. Sei vorsichtig!",
+                "**PowerShell:**",
+                "```powershell",
+                "Remove-Item \"datei.txt\"",
+                "Remove-Item \"ordner\" -Recurse -Force",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "`touch zu-loeschen.txt`",
+                "`rm zu-loeschen.txt`",
+                "`ls` – die Datei sollte weg sein"
+              ]
+            },
+            {
+              "heading": "8.9 Verzeichnis wechseln und auflisten: `ls` und `cd` zusammen",
+              "paragraphs": [
+                "**Praktisches Pattern:** Oftmals nutzt du `ls` und `cd` zusammen.",
+                "**Beispiel-Workflow:**",
+                "```bash",
+                "ls",
+                "cd course",
+                "ls",
+                "cd uebungen",
+                "ls -la",
+                "cd ../..",
+                "pwd",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "Mache diesen Workflow durch",
+                "Navigiere zu `course/kursmodule/`",
+                "Schaue mit `ls`, welche Ordner dort sind",
+                "Wechsle in einen Ordner (z. B. `cd 01-*` und drücke Tab zum Auto-Complete)",
+                "Wechsle zurück zum Kurs-Ordner: `cd ../../..`"
+              ]
+            },
+            {
+              "heading": "8.10 Dateityp verschieben: `mv`",
+              "paragraphs": [
+                "**Was tut es:** **Move** – verschiebt eine Datei oder benennt sie um.",
+                "**Syntax:**",
+                "```bash",
+                "mv <quelle> <ziel>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "mv alt.txt neu.txt",
+                "mv datei.txt ordner/",
+                "mv alter-ordner-name neuer-ordner-name",
+                "mv /pfad/zu/datei.txt /neuer/pfad/datei.txt",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "Move-Item \"alt.txt\" \"neu.txt\"",
+                "Move-Item \"alt.txt\" \"ordner\\\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "`touch alte-datei.md`",
+                "`mv alte-datei.md neue-datei.md`",
+                "`ls` – sollte nur `neue-datei.md` zeigen",
+                "`rm neue-datei.md`"
+              ]
+            },
+            {
+              "heading": "8.11 Datei kopieren: `cp`",
+              "paragraphs": [
+                "**Was tut es:** **Copy** – erstellt eine Kopie einer Datei.",
+                "**Syntax:**",
+                "```bash",
+                "cp <quelle> <ziel>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "cp original.txt kopie.txt",
+                "cp datei.txt ordner/",
+                "cp -r alter-ordner neuer-ordner",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "Copy-Item \"original.txt\" \"kopie.txt\"",
+                "Copy-Item \"original.txt\" \"ordner\\\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "`touch original.txt`",
+                "`cp original.txt kopie.txt`",
+                "`ls` – sollte beide Dateien zeigen",
+                "`rm original.txt kopie.txt`"
+              ]
+            },
+            {
+              "heading": "8.12 Inhalt einer Datei anzeigen: `cat`",
+              "paragraphs": [
+                "**Was tut es:** **Concatenate** – zeigt den **kompletten Inhalt** einer Textdatei auf dem Bildschirm an.",
+                "**Syntax:**",
+                "```bash",
+                "cat <dateiname>",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "cat README.md",
+                "cat file1.txt file2.txt",
+                "cat file1.txt file2.txt > combined.txt",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "Get-Content \"README.md\"",
+                "cat \"README.md\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "`echo \"Hallo Welt\" > test.txt` (erstellt eine Datei mit Inhalt)",
+                "`cat test.txt` – zeigt \"Hallo Welt\"",
+                "`rm test.txt`"
+              ]
+            },
+            {
+              "heading": "8.13 Dateien suchen: `find`",
+              "paragraphs": [
+                "**Was tut es:** **Find** – sucht nach Dateien, die ein bestimmtes Muster erfüllen.",
+                "**Syntax:**",
+                "```bash",
+                "find <pfad> -name \"<muster>\"",
+                "```",
+                "**Beispiele:**",
+                "```bash",
+                "find . -name \"*.md\"",
+                "find . -type d -name \"node_modules\"",
+                "find . -type f -size +1M",
+                "find . -name \"package.json\"",
+                "```",
+                "**PowerShell:**",
+                "```powershell",
+                "Get-ChildItem -Path \".\" -Recurse -Filter \"*.md\"",
+                "Get-ChildItem -Path \".\" -Recurse -Include \"*.md\"",
+                "```",
+                "**Übung:**",
+                "---"
+              ],
+              "orderedItems": [
+                "`find . -name \"*.md\"` – zeigt alle Markdown-Dateien im Kurs",
+                "`find course/ -name \"README*\"` – zeigt alle README-Dateien im course-Ordner",
+                "`find . -type d -name \"kursmodule\"` – sucht den kursmodule-Ordner"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 9: Checkliste und Erfolgskriterium",
+          "sections": [
+            {
+              "heading": "Hast du alles verstanden?",
+              "unorderedItems": [
+                "[ ] Ich kenne den Unterschied zwischen Terminal und Shell",
+                "[ ] Ich kenne die wichtigsten Shells (Bash, Zsh, PowerShell) und weiß, welche ich nutze",
+                "[ ] Ich kann das Terminal in VS Code öffnen (Ctrl+Backtick)",
+                "[ ] Ich kann mit `cd` und `ls` navigieren",
+                "[ ] Ich weiß, wie ich mit `pwd` meinen aktuellen Ordner sehe",
+                "[ ] Ich kann Ordner anlegen (`mkdir`) und löschen (`rmdir`)",
+                "[ ] Ich kann Dateien anlegen (`touch`), kopieren (`cp`), verschieben (`mv`), löschen (`rm`)",
+                "[ ] Ich kann Dateiinhalte mit `cat` anschauen",
+                "[ ] Ich kann mit `find` nach Dateien suchen",
+                "[ ] Ich nutze Tab-Autocomplete, um schneller zu tippen"
+              ]
+            },
+            {
+              "heading": "Erfolgskriterium",
+              "paragraphs": [
+                "Du hast diese Lektion erfolgreich abgeschlossen, wenn du:",
+                "Wenn das alles funktioniert, hast du die Kernbefehle wirklich verstanden!"
+              ],
+              "orderedItems": [
+                "**Das Terminal öffnest** und zur Kurs-Ordner navigierst",
+                "**Mit `ls` die Inhalte siehst** (course/, apps/, tools/, etc.)",
+                "**In `cd course/kursmodule/` wechselst** und dort `ls` nutzt",
+                "**Eine Test-Datei anlegst** (`touch test.md`), dich mit `cat` anschaust und dann löschst (`rm test.md`)",
+                "**Mit `find . -name \"*.md\"` nach Markdown-Dateien suchst** und das Ergebnis verstehst"
               ]
             }
           ]
@@ -1771,11 +2476,195 @@
     },
     "requiresLessonCompletion": false,
     "tasks": [
-      "Auf Einladung der Trainerin warten.",
-      "HTTPS-Clone-URL kopieren.",
-      "`git clone <URL>` ausführen und Ordner öffnen."
+      "Öffne VS Code (falls nicht bereits offen)",
+      "Öffne das Terminal: **Ctrl+Backtick** (Windows/Linux) oder **Cmd+Backtick** (macOS)",
+      "Du solltest einen Prompt (mit `>` oder `$`) sehen",
+      "Tippe `pwd` (Bash/Zsh) oder `Get-Location` (PowerShell) und drücke Enter",
+      "Du solltest einen Pfad sehen, der zu deinem Kurs-Ordner führt",
+      "Im Terminal: Tippe `ls` (Bash/Zsh) oder `Get-ChildItem` (PowerShell)",
+      "Du solltest folgende Ordner/Dateien sehen:",
+      "`course/`",
+      "`apps/`",
+      "`tools/`",
+      "`README.md`",
+      "Eventuell `.git/` (versteckter Ordner)",
+      "Falls du `.git/` nicht siehst, tippe `ls -a` (Bash/Zsh) oder `Get-ChildItem -Force` (PowerShell)",
+      "Im Terminal: `cd course`",
+      "Bestätige mit `pwd` – du solltest einen Pfad sehen, der auf `course` endet",
+      "Tippe `ls` – du solltest Unterordner wie `course-library/`, `kursmodule/`, `uebungen/` sehen",
+      "Wechsle in `cd kursmodule`",
+      "Tippe `ls` – du solltest Ordner wie `01-Onboarding-in-den-Kurs/`, `02-produktbeschreibung-...` sehen",
+      "Gehe zwei Ebenen zurück: `cd ../..`",
+      "Bestätige mit `pwd` – du solltest wieder im Kurs-Ordner sein",
+      "Im Kurs-Ordner: Tippe `cd co` (nur die ersten Buchstaben von \"course\")",
+      "Drücke **Tab** – das Terminal sollte zu `cd course` ergänzen",
+      "Drücke Enter",
+      "Tippe `cd k` (für \"kursmodule\")",
+      "Drücke **Tab** – sollte zu `cd kursmodule` ergänzen",
+      "Drücke Enter",
+      "Tippe `cd 01` (für \"01-Onboarding-...\")",
+      "Drücke **Tab** – sollte ergänzen",
+      "Drücke Enter",
+      "Tippe `ls` und schau die Lektionen-Ordner an",
+      "Navigiere zu `cd ~/Desktop` (oder auf Windows: `cd $HOME\\Desktop`)",
+      "Erstelle einen Test-Ordner: `mkdir terminal-test`",
+      "Wechsle hinein: `cd terminal-test`",
+      "Erstelle drei Test-Dateien:",
+      "`touch note1.md`",
+      "`touch note2.md`",
+      "`touch script.ps1` (oder `script.sh` auf macOS/Linux)",
+      "Zeige alle Dateien: `ls` oder `Get-ChildItem`",
+      "Du solltest die drei Dateien sehen",
+      "Du bist noch in `terminal-test` Ordner",
+      "Kopiere `note1.md` zu `note1-backup.md`: `cp note1.md note1-backup.md`",
+      "Bestätige mit `ls` – du solltest jetzt 4 Dateien sehen (die Original + die Kopie)",
+      "Verschiebe `script.ps1` zu `script-alt.ps1`: `mv script.ps1 script-alt.ps1`",
+      "Bestätige mit `ls` – die alte Datei sollte weg sein, die neue da",
+      "Du bist noch in `terminal-test`",
+      "Schreibe Inhalt in eine Datei (und siehe was `echo` und `>` tun):",
+      "Zeige den Inhalt: `cat note1.md`",
+      "Du solltest den Text sehen: \"Das ist meine erste Notiz\"",
+      "Schreibe mehr Inhalt (mit `>>` wird hinzugefügt statt überschrieben):",
+      "Schau noch einmal: `cat note1.md`",
+      "Du solltest jetzt zwei Zeilen sehen",
+      "Navigiere zurück zum Kurs-Ordner: `cd ../../..` (oder `cd ~` + Kurs-Pfad)",
+      "Suche alle Markdown-Dateien: `find . -name \"*.md\"`",
+      "Du solltest viele Dateien sehen (README.md, verschiedene Lektionen, etc.)",
+      "Suche nur im `course/` Ordner: `find course -name \"*.md\"`",
+      "Suche nur nach Ordnern namens \"01-*\": `find course/kursmodule -type d -name \"01-*\"`",
+      "Du solltest den Onboarding-Ordner sehen",
+      "Navigiere zum Test-Ordner (falls nicht dort): `cd ~/Desktop/terminal-test`",
+      "Lösche einzelne Dateien:",
+      "Bestätige mit `ls` – der Ordner sollte leer sein",
+      "Gehe ein Verzeichnis nach oben: `cd ..`",
+      "Lösche den leeren Ordner: `rmdir terminal-test`",
+      "Bestätige mit `ls` – `terminal-test` sollte weg sein",
+      "**Orientiere dich:**",
+      "`pwd` – wo bist du?",
+      "`ls` – was ist hier?",
+      "**Navigiere zur Übung:**",
+      "`cd course/uebungen`",
+      "`ls` – welche Übungen gibt es?",
+      "**Suche für ein Pattern:**",
+      "`find . -name \"meilenstein-*.md\"`",
+      "Wie viele Übungen gibt es?",
+      "**Schaue eine Datei an:**",
+      "`cat meilenstein-01-uebung-01.md | head -20` (zeigt erste 20 Zeilen)",
+      "Oder einfach: `cat meilenstein-01-uebung-01.md`",
+      "**Gehe zurück zur Root:**",
+      "`cd ../..`",
+      "`pwd` – bestätige, dass du im Kurs-Ordner bist",
+      "Erstelle ein Script:",
+      "Schreib Befehle hinein (mit `echo` und Umleitung `>`):",
+      "Mache das Script ausführbar:",
+      "Führe es aus:",
+      "Du solltest sehen:",
+      "\"Hallo aus meinem Script!\"",
+      "Deinen aktuellen Ordner (pwd)",
+      "Inhalte des Ordners (ls)",
+      "Erstelle ein Script:",
+      "Schreib Befehle rein:",
+      "Führe es aus:",
+      "✅ Terminal öffnen und navigieren",
+      "✅ Ordner und Dateien erstellen",
+      "✅ Dateien kopieren, verschieben, löschen",
+      "✅ Inhalte ansehen und suchen",
+      "✅ Erste Script-Erfahrung"
     ],
-    "taskNotes": []
+    "taskNotes": [
+      {
+        "paragraphs": [
+          "Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffne VS Code Terminal und arbeite die Aufgaben der Reihe nach durch.",
+          "---",
+          "**Was du lernst:** Terminal öffnen und die erste Navigation.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Du siehst den Pfad deines aktuellen Ordners.",
+          "---",
+          "**Was du lernst:** Mit `ls` die Inhalte deines Kurs-Ordners sehen.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Du kannst die Inhalte deines Kurs-Ordners aufzählen.",
+          "---",
+          "**Was du lernst:** Mit `cd` navigieren.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Du kannst mit `cd` navigieren und mit `pwd` deine Position bestätigen.",
+          "---",
+          "**Was du lernst:** Tab-Taste für schnellere Navigation nutzen.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Tab-Autocomplete funktioniert und spart dir Tipparbeit.",
+          "---",
+          "**Was du lernst:** Mit `mkdir`, `touch`, `ls` arbeiten.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Du hast einen Ordner mit drei Dateien erstellt.",
+          "---",
+          "**Was du lernst:** `cp` und `mv` praktizieren.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Du hast Dateien kopiert und umbenannt.",
+          "---",
+          "**Was du lernst:** Mit `cat` Dateien anzuschauen (und `echo` zum Schreiben nutzen).",
+          "**Anleitung:**",
+          "```bash",
+          "echo \"Das ist meine erste Notiz\" > note1.md",
+          "```",
+          "```bash",
+          "echo \"Das ist eine zweite Zeile\" >> note1.md",
+          "```",
+          "**Erfolgskriterium:** Du kannst Dateien schreiben und mit `cat` ansehen.",
+          "---",
+          "**Was du lernst:** `find` zum Suchen nutzen.",
+          "**Anleitung:**",
+          "**Erfolgskriterium:** Du kannst mit `find` nach Dateien und Ordnern suchen.",
+          "---",
+          "**Was du lernst:** Mit `rm` und `rmdir` aufräumen.",
+          "**Anleitung:**",
+          "```bash",
+          "rm note1.md",
+          "rm note1-backup.md",
+          "rm note2.md",
+          "rm script-alt.ps1",
+          "```",
+          "**Erfolgskriterium:** Du hast den Test-Ordner und alle Dateien gelöscht.",
+          "---",
+          "**Was du lernst:** Alle bisherigen Befehle in einem praktischen Szenario.",
+          "**Anleitung:**",
+          "Stelle dir vor: Du hast neue Notizen im Kurs und möchtest diese sichern.",
+          "**Erfolgskriterium:** Du verstehst den kompletten Workflow und kannst selbstständig navigieren.",
+          "---",
+          "**Was du lernst:** Grundlagen von Scripting.",
+          "**Anleitung (für macOS/Linux – Bash/Zsh):**",
+          "```bash",
+          "touch mein-script.sh",
+          "```",
+          "```bash",
+          "echo \"#!/bin/bash\" > mein-script.sh",
+          "echo \"echo 'Hallo aus meinem Script!'\" >> mein-script.sh",
+          "echo \"pwd\" >> mein-script.sh",
+          "echo \"ls -la\" >> mein-script.sh",
+          "```",
+          "```bash",
+          "chmod +x mein-script.sh",
+          "```",
+          "```bash",
+          "./mein-script.sh",
+          "```",
+          "**Für Windows – PowerShell:**",
+          "```powershell",
+          "New-Item \"mein-script.ps1\"",
+          "```",
+          "```powershell",
+          "Add-Content \"mein-script.ps1\" \"Write-Host 'Hallo aus meinem Script!'\"",
+          "Add-Content \"mein-script.ps1\" \"Get-Location\"",
+          "Add-Content \"mein-script.ps1\" \"Get-ChildItem\"",
+          "```",
+          "```powershell",
+          ".\\mein-script.ps1",
+          "```",
+          "**Erfolgskriterium:** Dein Script läuft und zeigt Output.",
+          "---",
+          "Du hast jetzt praktisch gelernt:",
+          "Mit diesen Grundlagen bist du bereit, im Kurs Git-Befehle im Terminal zu nutzen!"
+        ]
+      }
+    ]
   },
   "12": {
     "title": "Git in VS Code via Terminal",
