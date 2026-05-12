@@ -27,6 +27,7 @@ export interface OnboardingLessonContentSection {
   heading?: string;
   paragraphs?: string[];
   orderedItems?: string[];
+  unorderedItems?: string[];
   tone?: 'default' | 'highlight' | 'danger' | 'success' | 'info' | 'tip';
 }
 

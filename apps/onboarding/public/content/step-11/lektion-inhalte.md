@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-11-kurs-repo-klonen/lektion-inhalte.md -->
+<!-- Source: lektion-11-terminal-und-shell-grundlagen/lektion-inhalte.md -->
 
 # Lektion 11: Kurs-Repo klonen
 

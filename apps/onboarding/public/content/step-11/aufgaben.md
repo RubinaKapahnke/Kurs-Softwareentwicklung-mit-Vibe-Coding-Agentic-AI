@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-11-kurs-repo-klonen/aufgaben.md -->
+<!-- Source: lektion-11-terminal-und-shell-grundlagen/aufgaben.md -->
 
 ## Aufgaben
 

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-06-erste-uebungen/lektion-inhalte.md -->
+<!-- Source: lektion-06-erste-uebungen-im-browser/lektion-inhalte.md -->
 
 # Lektion 06: Erste Übungen im eigenen Repository
 

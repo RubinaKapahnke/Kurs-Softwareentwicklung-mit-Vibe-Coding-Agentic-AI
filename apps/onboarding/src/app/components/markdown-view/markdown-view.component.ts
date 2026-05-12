@@ -10,11 +10,53 @@ import DOMPurify from 'dompurify';
   standalone: true,
   imports: [CommonModule, HttpClientModule],
   template: `
-    <div *ngIf="html" [innerHTML]="html"></div>
+    <div *ngIf="html" class="markdown-view" [innerHTML]="html"></div>
     <div *ngIf="!html && loading">Lade Inhalt...</div>
     <div *ngIf="!html && !loading && error" class="error">Markdown konnte nicht geladen werden.</div>
   `,
-  styles: [`.error { color: var(--color-error); margin: 1em 0; }`]
+  styles: [
+    `
+      .error {
+        color: var(--color-error);
+        margin: 1em 0;
+      }
+
+      :host ::ng-deep .markdown-view :is(p, ul, ol, blockquote) {
+        margin: 0 0 0.9rem;
+      }
+
+      :host ::ng-deep .markdown-view :is(ul, ol) {
+        padding-left: 1.35rem;
+      }
+
+      :host ::ng-deep .markdown-view ul,
+      :host ::ng-deep .markdown-view ol {
+        display: block;
+      }
+
+      :host ::ng-deep .markdown-view li {
+        margin: 0 0 0.4rem;
+        line-height: var(--line-height-base);
+      }
+
+      :host ::ng-deep .markdown-view li:last-child {
+        margin-bottom: 0;
+      }
+
+      :host ::ng-deep .markdown-view li > p {
+        margin: 0;
+      }
+
+      :host ::ng-deep .markdown-view h1,
+      :host ::ng-deep .markdown-view h2,
+      :host ::ng-deep .markdown-view h3,
+      :host ::ng-deep .markdown-view h4,
+      :host ::ng-deep .markdown-view h5,
+      :host ::ng-deep .markdown-view h6 {
+        margin: 1.1rem 0 0.55rem;
+      }
+    `,
+  ]
 })
 export class MarkdownViewComponent implements OnChanges {
   @Input() src?: string;

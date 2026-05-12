@@ -198,11 +198,11 @@
   gap: 0.45rem;
 }
 
-.lesson-section--highlight :is(p, .lesson-section__subheading, ol),
-.lesson-section--danger :is(p, .lesson-section__subheading, ol),
-.lesson-section--success :is(p, .lesson-section__subheading, ol),
-.lesson-section--info :is(p, .lesson-section__subheading, ol),
-.lesson-section--tip :is(p, .lesson-section__subheading, ol) {
+.lesson-section--highlight :is(p, .lesson-section__subheading, ol, ul),
+.lesson-section--danger :is(p, .lesson-section__subheading, ol, ul),
+.lesson-section--success :is(p, .lesson-section__subheading, ol, ul),
+.lesson-section--info :is(p, .lesson-section__subheading, ol, ul),
+.lesson-section--tip :is(p, .lesson-section__subheading, ol, ul) {
   margin-left: calc(1.62rem + 0.45rem);
 }
 
@@ -273,6 +273,16 @@
   line-height: var(--line-height-base);
 }
 
+.lesson-section ul,
+.lesson-section ol {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.lesson-section ul {
+  display: block;
+}
+
 .lesson-section :is(p, li) a {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
@@ -326,10 +336,21 @@
 }
 
 .lesson-section ol {
-  margin: 0;
-  padding-left: 1.4rem;
   display: grid;
-  gap: 0.45rem;
+  gap: 0.5rem;
+}
+
+.lesson-section ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lesson-section li {
+  margin-bottom: 0;
+}
+
+.lesson-section li > p {
+  margin: 0;
 }
 
 .lesson-quiz-options {

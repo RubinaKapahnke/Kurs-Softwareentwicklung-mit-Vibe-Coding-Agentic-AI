@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-12-kurs-handhabung-verstehen/aufgaben.md -->
+<!-- Source: lektion-12-git-in-vscode-via-terminal/aufgaben.md -->
 
 ## Aufgaben
 

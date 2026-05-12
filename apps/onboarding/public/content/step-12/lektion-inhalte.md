@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-12-kurs-handhabung-verstehen/lektion-inhalte.md -->
+<!-- Source: lektion-12-git-in-vscode-via-terminal/lektion-inhalte.md -->
 
 # Lektion 12: Kurs-Handhabung verstehen
 

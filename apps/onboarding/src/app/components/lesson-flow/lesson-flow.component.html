@@ -67,6 +67,14 @@
                 }
               </ol>
             }
+
+            @if (section.unorderedItems?.length) {
+              <ul>
+                @for (item of section.unorderedItems; track item) {
+                  <li [innerHTML]="linkifyText(item)"></li>
+                }
+              </ul>
+            }
           </article>
         }
       </div>
@@ -120,6 +128,14 @@
                     <li [innerHTML]="linkifyText(item)"></li>
                   }
                 </ol>
+              }
+
+              @if (section.unorderedItems?.length) {
+                <ul>
+                  @for (item of section.unorderedItems; track item) {
+                    <li [innerHTML]="linkifyText(item)"></li>
+                  }
+                </ul>
               }
             </article>
           }

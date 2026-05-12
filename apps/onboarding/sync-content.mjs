@@ -64,6 +64,9 @@ function finalizeLessonSection(section) {
   if (section.orderedItems.length > 0) {
     next.orderedItems = section.orderedItems;
   }
+  if (section.unorderedItems.length > 0) {
+    next.unorderedItems = section.unorderedItems;
+  }
   return next;
 }
 
@@ -93,7 +96,7 @@ function stripTonePrefixFromHeading(headingText) {
 
 function parseSlideSections(lines) {
   const sections = [];
-  let current = { heading: undefined, tone: undefined, paragraphs: [], orderedItems: [] };
+  let current = { heading: undefined, tone: undefined, paragraphs: [], orderedItems: [], unorderedItems: [] };
 
   const pushCurrent = () => {
     const next = finalizeLessonSection(current);
@@ -117,6 +120,7 @@ function parseSlideSections(lines) {
           tone: headingToTone(headingText),
           paragraphs: [],
           orderedItems: [],
+          unorderedItems: [],
         };
       } else if (heading.level === 4) {
         current.paragraphs.push(`${SUBHEADING_PREFIX}${sanitizeInlineMarkdown(heading.text)}`);
@@ -137,7 +141,7 @@ function parseSlideSections(lines) {
 
     const bulletMatch = line.match(/^[-*]\s+(.+)$/);
     if (bulletMatch) {
-      current.paragraphs.push(`- ${sanitizeInlineMarkdown(bulletMatch[1])}`);
+      current.unorderedItems.push(sanitizeInlineMarkdown(bulletMatch[1]));
       continue;
     }
 
