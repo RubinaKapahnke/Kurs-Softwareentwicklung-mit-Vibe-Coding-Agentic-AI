@@ -1,4 +1,4 @@
-## Aufgaben
+﻿## Aufgaben
 
 1. Git herunterladen und installieren.
 2. In VS Code ein Terminal öffnen.

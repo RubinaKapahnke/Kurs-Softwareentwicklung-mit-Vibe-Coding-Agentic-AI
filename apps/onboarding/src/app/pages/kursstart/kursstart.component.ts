@@ -10,7 +10,6 @@ import { ONBOARDING_STEP_COUNT } from '../../data/onboarding-steps.data';
 import { OnboardingStateService } from '../../services/onboarding-state.service';
 import { CourseHeaderComponent } from '../../components/course-header/course-header.component';
 import { CourseModulesSectionComponent } from '../../components/course-modules-section/course-modules-section.component';
-import { CourseJourneySectionComponent } from '../../components/course-journey-section/course-journey-section.component';
 import { CourseAudienceSectionComponent } from '../../components/course-audience-section/course-audience-section.component';
 import { CourseCTASectionComponent } from '../../components/course-cta-section/course-cta-section.component';
 
@@ -35,7 +34,6 @@ interface CourseCatalogEntry {
     MatIconModule,
     CourseHeaderComponent,
     CourseModulesSectionComponent,
-    CourseJourneySectionComponent,
     CourseAudienceSectionComponent,
     CourseCTASectionComponent
   ],

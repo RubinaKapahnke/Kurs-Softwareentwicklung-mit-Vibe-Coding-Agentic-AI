@@ -1,4 +1,4 @@
-# VS Code: Speicherkonflikt bei geaenderter Datei (Compare/Overwrite)
+﻿# VS Code: Speicherkonflikt bei geaenderter Datei (Compare/Overwrite)
 
 Wenn VS Code meldet, dass eine Datei nicht gespeichert werden kann, liegt oft ein sogenannter Speicherkonflikt vor.
 

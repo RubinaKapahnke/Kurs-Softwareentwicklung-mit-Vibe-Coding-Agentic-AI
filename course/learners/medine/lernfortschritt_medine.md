@@ -1,4 +1,4 @@
-# Lernfortschritt: Medine
+﻿# Lernfortschritt: Medine
 
 ## Aktueller Fokus
 **Was ich gerade lerne:**
@@ -19,7 +19,7 @@
 Die Branchen Struktur in Graph (Darstellung) ist mir noch schwierig zu verstehen.
 - **Nächster Schritt:** Übug 6 / Pull Request & Merge
 
-### 02.05. (Uebung 01 – Terminal und Datei-Anlage)
+### 02.05. (Uebung 01 - Terminal und Datei-Anlage)
 - **Was ich gemacht habe:** Ordner und Dateien im Terminal angelegt, verschiedene Dateierstellungs-Methoden ausprobiert, mit Dom dabei erste Strukturen verstanden
 - **Was gut lief:** Mit Unterstützung erste Struktur verstanden
 - **Wo ich hänge:** Struktur von Ordnern und Erwartungen bis zum Endziel, sowie Branch-Struktur/Graph noch schwierig zu verstehen

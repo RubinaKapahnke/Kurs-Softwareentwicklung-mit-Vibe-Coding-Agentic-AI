@@ -8,14 +8,30 @@ const KEY_VISIBILITY_SUFFIX = 'visibility_confirmed';
 const KEY_COMPLETED_SUFFIX = 'completed_steps';
 const KEY_SUBTASKS_SUFFIX = 'completed_subtasks';
 const KEY_VOUCHER_SUFFIX = 'voucher';
+const KEY_QUIZZES_SUFFIX = 'quizzes';
 const ACCOUNT_SETUP_STEP_ID = 2;
 
 /** MVP: Ein einziger gültiger Code. Wird später durch echte API-Validierung ersetzt. */
 const VALID_VOUCHER_CODE = '90001';
 
+/**
+ * Schritt-2-Pfade:
+ * - null: noch keine Auswahl
+ * - existing: Account vorhanden, aber Lernpfad noch nicht konkretisiert
+ * - existing-beginner: bestehender Account + Lektion bearbeiten
+ * - existing-experienced: bestehender Account + Lektion überspringen
+ * - new: kein Account, normaler Neuanlage-Pfad
+ * - new-skip: Wechsel von existing-experienced auf "Neuen Account erstellen"
+ */
 export type Step2ExperienceChoice = 'new' | 'new-skip' | 'existing' | 'existing-beginner' | 'existing-experienced' | null;
 export type ParticipationStatus = 'active' | 'new' | null;
 export type HasVoucherAnswer = boolean | null;
+
+export interface QuizState {
+  selectedOptionIds: string[];
+  evaluated: boolean;
+  passed: boolean;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +42,7 @@ export class OnboardingStateService {
   private readonly _completedSubtasks = signal<Record<number, Set<number>>>(this.loadCompletedSubtasks());
   private readonly _step2Experience = signal<Step2ExperienceChoice>(this.loadExp());
   private readonly _githubVisibilityConfirmed = signal(this.loadVisibility());
+  private readonly _quizzes = signal<Record<string, QuizState>>(this.loadQuizzes());
 
   // Voucher-Gate (Step 1)
   private readonly _voucherValidated = signal<boolean>(this.loadVoucherValidated());
@@ -212,6 +229,32 @@ export class OnboardingStateService {
     return (this._completedSteps().size / ONBOARDING_STEP_COUNT) * 100;
   }
 
+  getQuizState(lessonKey: string): QuizState | null {
+    const state = this._quizzes()[lessonKey] ?? null;
+    console.log(`[QuizService] getQuizState(${lessonKey}):`, state);
+    return state;
+  }
+
+  saveQuizState(lessonKey: string, state: QuizState): void {
+    console.log(`[QuizService] saveQuizState(${lessonKey}):`, state);
+    this._quizzes.update(quizzes => {
+      const next = { ...quizzes };
+      next[lessonKey] = state;
+      return next;
+    });
+    this.persistQuizzes();
+  }
+
+  clearQuizState(lessonKey: string): void {
+    console.log(`[QuizService] clearQuizState(${lessonKey})`);
+    this._quizzes.update(quizzes => {
+      const next = { ...quizzes };
+      delete next[lessonKey];
+      return next;
+    });
+    this.persistQuizzes();
+  }
+
   private loadCompletedSteps(): Set<number> {
     const stored = localStorage.getItem(this.storageKey(KEY_COMPLETED_SUFFIX));
     if (!stored) return new Set();
@@ -274,6 +317,7 @@ export class OnboardingStateService {
     this._step2Experience.set(this.loadExp());
     this._githubVisibilityConfirmed.set(this.loadVisibility());
     this._voucherValidated.set(this.loadVoucherValidated());
+    this._quizzes.set(this.loadQuizzes());
     this._participationStatus.set(null);
     this._hasVoucherAnswer.set(null);
   }
@@ -300,5 +344,33 @@ export class OnboardingStateService {
     this.persistCompletedSubtasks();
 
     this.unmarkStepCompleted(ACCOUNT_SETUP_STEP_ID);
+  }
+
+  private loadQuizzes(): Record<string, QuizState> {
+    const stored = localStorage.getItem(this.storageKey(KEY_QUIZZES_SUFFIX));
+    console.log(`[Service] loadQuizzes() from ${this.storageKey(KEY_QUIZZES_SUFFIX)}:`, stored);
+    if (!stored) return {};
+
+    try {
+      const parsed = JSON.parse(stored) as Record<string, QuizState>;
+      const result = Object.entries(parsed).reduce<Record<string, QuizState>>((result, [key, state]) => {
+        if (Array.isArray(state.selectedOptionIds) && typeof state.evaluated === 'boolean' && typeof state.passed === 'boolean') {
+          result[key] = state;
+        }
+        return result;
+      }, {});
+      console.log(`[Service] loadQuizzes() parsed:`, result);
+      return result;
+    } catch (e) {
+      console.error(`[Service] loadQuizzes() parse error:`, e);
+      return {};
+    }
+  }
+
+  private persistQuizzes(): void {
+    const key = this.storageKey(KEY_QUIZZES_SUFFIX);
+    const value = JSON.stringify(this._quizzes());
+    console.log(`[Service] persistQuizzes() to ${key}:`, value);
+    localStorage.setItem(key, value);
   }
 }

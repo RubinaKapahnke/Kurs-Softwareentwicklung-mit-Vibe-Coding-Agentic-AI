@@ -1,4 +1,4 @@
-# Markdown: Grundlagen und Einsatz
+﻿# Markdown: Grundlagen und Einsatz
 
 ## Was ist Markdown?
 Markdown ist eine leichtgewichtige Auszeichnungssprache, die entwickelt wurde, um Text einfach und schnell zu formatieren. Sie wurde 2004 von John Gruber und Aaron Swartz entworfen. Das Ziel: Texte sollen so geschrieben werden, dass sie sowohl als Klartext gut lesbar sind als auch leicht in HTML oder andere Formate umgewandelt werden können.
@@ -31,18 +31,18 @@ Markdown wird vor allem verwendet, um Dokumentationen, Readme-Dateien, Blogposts
 - Noch ein Punkt
 ```
 
-Markdown macht das Schreiben und Strukturieren von Texten effizient und angenehm – perfekt für Entwickler:innen und alle, die gerne klar und einfach dokumentieren wollen.
+Markdown macht das Schreiben und Strukturieren von Texten effizient und angenehm - perfekt für Entwickler:innen und alle, die gerne klar und einfach dokumentieren wollen.
 
 
 ## Warum ist Markdown ideal für Vibe Coding?
 
 Gerade im Vibe Coding-Ansatz steht die schnelle, kollaborative und KI-gestützte Entwicklung im Vordergrund. Markdown passt dazu perfekt, weil:
 
-- **Schnelle Notation:** Ideen, Anforderungen und Feedback können direkt im Fluss festgehalten werden – ohne Ablenkung durch komplizierte Formatierungen.
+- **Schnelle Notation:** Ideen, Anforderungen und Feedback können direkt im Fluss festgehalten werden - ohne Ablenkung durch komplizierte Formatierungen.
 - **Kollaboration:** Markdown-Dateien lassen sich leicht versionieren und gemeinsam bearbeiten (z. B. über GitHub), was Teamarbeit und Transparenz fördert.
 - **KI-Unterstützung:** Tools wie GitHub Copilot oder ChatGPT verstehen Markdown und können beim Schreiben, Strukturieren und Umwandeln helfen.
 - **Nahtlose Integration:** Viele Entwicklungsumgebungen (wie VS Code) und Plattformen (wie GitHub) unterstützen Markdown out-of-the-box.
-- **Lesbarkeit:** Auch ohne spezielle Tools bleibt der Inhalt klar und verständlich – ideal für schnelle Iterationen und Feedbackschleifen.
+- **Lesbarkeit:** Auch ohne spezielle Tools bleibt der Inhalt klar und verständlich - ideal für schnelle Iterationen und Feedbackschleifen.
 
 **Fazit:** Markdown ist das perfekte Format, um im Vibe Coding-Stil Ideen, Dokumentationen und Prototypen gemeinsam und effizient zu entwickeln.
 

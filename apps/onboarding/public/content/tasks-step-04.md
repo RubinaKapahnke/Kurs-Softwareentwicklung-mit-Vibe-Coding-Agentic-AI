@@ -1,4 +1,4 @@
-<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: ../../course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/lektion-04-eigenes-uebungs-repository/lektion-inhalte.md -->
 <!-- Heading: Aufgaben -->
 ## Aufgaben

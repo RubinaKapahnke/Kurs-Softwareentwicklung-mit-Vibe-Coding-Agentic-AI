@@ -1,4 +1,4 @@
-# Lektion 01: Ankommen, Arbeitsumgebung einrichten, loslegen
+﻿# Lektion 01: Ankommen, Arbeitsumgebung einrichten, loslegen
 
 ## Ziel
 

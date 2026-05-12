@@ -1,4 +1,4 @@
-## Aufgaben
+﻿## Aufgaben
 
 1. NEXT_STEPS.md lesen.
 2. README_UEBUNGEN.md lesen.

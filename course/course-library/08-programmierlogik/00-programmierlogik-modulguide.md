@@ -1,4 +1,4 @@
-# Modulguide: Programmierlogik
+﻿# Modulguide: Programmierlogik
 
 Dieses Modul hilft dir, KI-generierten Code besser zu verstehen und in kleinen Schritten sicher zu verbessern.
 

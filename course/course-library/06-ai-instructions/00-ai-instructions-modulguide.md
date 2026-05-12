@@ -1,4 +1,4 @@
-# Modulguide: AI Instructions
+﻿# Modulguide: AI Instructions
 
 Dieses Modul erklaert, wie du mit KI-Assistenten im Entwicklungsalltag arbeitest. Im Mittelpunkt stehen gutes Prompting und sauberer Kontext.
 

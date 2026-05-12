@@ -1,4 +1,4 @@
-# Lektion 02: GitHub-Account anlegen
+﻿# Lektion 02: GitHub-Account anlegen
 
 ## Ziel
 
@@ -14,13 +14,43 @@ Du hast einen GitHub-Account erstellt, deine E-Mail bestätigt und kannst den Ac
 
 GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst.
 
+### Was macht GitHub besonders?
+
+GitHub ist nicht nur eine Code-Ablage, sondern heute das weltgrößte Netzwerk für Softwareentwicklung. Dort trifft sich die Community, entstehen Open-Source-Projekte, und viele Firmen nutzen es für ihre gesamte Produktentwicklung. Ein paar Dinge, die GitHub von anderen Plattformen abheben:
+
+- **Riesiges Ökosystem**: Hunderte Millionen Repositories, Open-Source-Projekte und aktive Entwickler:innen weltweit.
+- **GitHub Copilot**: KI-gestützte Code-Unterstützung direkt im Editor (ein zentrales Thema in diesem Kurs).
+- **Alles an einem Ort**: Issues, Pull Requests, Code-Review, Projektboards und Deployments sind alles integriert.
+- **Kostenlos für den Einstieg**: Der kostenlose Plan reicht für diesen Kurs und für die meisten persönlichen Projekte vollständig aus.
+
+### Wo findest du Hilfe und kannst du mehr lernen?
+
+GitHub bietet umfangreiche Unterstützung und Lernmöglichkeiten:
+
+- **Offizielle Dokumentation**: Alles, was du über GitHub wissen musst, steht in den [GitHub Docs](https://docs.github.com/de) (auf Deutsch verfügbar, durchsuchbar und sehr gut strukturiert). Ein zuverlässiger Nachschlageort für den gesamten Kurs.
+- **Support und Community**: Auf [support.github.com](https://support.github.com/) findest du Artikel zu häufigen Problemen, einen direkten Support-Kanal und die GitHub Community, in der du Fragen stellen und Antworten von anderen Nutzer:innen finden kannst.
+- **Lernen und Zertifizierungen**: GitHub bietet eigene Kurse an. Auf [learn.github.com/courses](https://learn.github.com/courses) und [learn.github.com/skills](https://learn.github.com/skills) kannst du gezielt Themen vertiefen und anerkannte GitHub-Zertifizierungen erwerben.
+
 ### Warum brauchen wir GitHub im Kurs?
 
-1. Dein eigenes Übungs-Repository liegt auf GitHub.
-2. Das gemeinsame Kurs-Repository liegt ebenfalls auf GitHub.
-3. Dozent*innen können deine Commits sehen und dir Feedback geben.
+Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. Hier ist, warum du es brauchst:
 
-GitHub ist kostenlos nutzbar. Du brauchst nur einen Account.
+**Dein eigenes Übungs-Repository**
+Du legst auf GitHub dein persönliches Repository an. Dort speicherst du alle deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir.
+
+**Das gemeinsame Kurs-Repository**
+Der Kurs selbst liegt ebenfalls auf GitHub. Alle Aufgaben, Materialien und Updates kommen von dort. Du lernst, wie du Änderungen aus dem Kurs-Repo holst und mit deiner eigenen Arbeit kombinierst, genau wie in echten Projekten.
+
+**Feedback und Zusammenarbeit**
+Dozent:innen können deine Commits sehen und dir direkt am Code Rückmeldung geben. Das ist kein bürokratischer Schritt, sondern echte Praxis: So lernt man, wie Code-Review funktioniert.
+
+**GitHub Copilot**
+Ein zentrales Werkzeug im Kurs ist GitHub Copilot. Es ist direkt in VS Code integriert und setzt einen GitHub-Account voraus. Ohne Account kein Copilot.
+
+**Dein Einstieg in echte Entwicklungspraxis**
+GitHub zu nutzen bedeutet, von Tag 1 so zu arbeiten, wie Entwickler:innen es weltweit tun. Was du hier lernst, gilt genauso im nächsten Praktikum, im Job oder im eigenen Projekt.
+
+GitHub ist im Basistarif kostenlos. Du brauchst nur einen Account.
 
 ## Kapitel 2: Account erstellen
 

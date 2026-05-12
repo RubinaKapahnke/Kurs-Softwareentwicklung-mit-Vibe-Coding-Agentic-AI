@@ -1,4 +1,4 @@
-## Was dich in diesem Kurs erwartet
+﻿## Was dich in diesem Kurs erwartet
 
 **Softwareentwicklung mit Vibe Coding & Agentic AI** vermittelt moderne Softwareentwicklung mit KI-Unterstuetzung: von der Produktidee ueber strukturierte Planung, Prototyping und Implementierung bis zu Deployment, Monitoring und Weiterentwicklung.
 
@@ -18,19 +18,19 @@ Die typische Schleife:
 
 ### Dein eigenes Projekt als roter Faden
 
-Im Laufe des Kurses entwickelst du ein eigenes Projekt in einem eigenen Repository. Das Projekt waechst schrittweise – von der ersten Produktidee bis zum auslieferbaren Inkrement.
+Im Laufe des Kurses entwickelst du ein eigenes Projekt in einem eigenen Repository. Das Projekt waechst schrittweise - von der ersten Produktidee bis zum auslieferbaren Inkrement.
 
 Am Ende hast du etwas entwickelt, das dir gehoert: als Portfolio-Stueck, internes Tool, Prototyp oder Ausgangspunkt fuer eine spaetere Weiterentwicklung.
 
 ### Pfadwahl nach den Grundlagen
 
-Nach den gemeinsamen Grundlagen (Meilensteine 1–3) waehlst du einen Schwerpunktpfad:
+Nach den gemeinsamen Grundlagen (Meilensteine 1-3) waehlst du einen Schwerpunktpfad:
 
 - **Web/App**: HTML, JavaScript, TypeScript und Angular
 - **Datenprodukt**: Python, Pandas und Streamlit
 - **Agentic AI**: Agenten-Workflows, RAG, Modellwahl und AI System Architecture
 
-Die anderen Bereiche bleiben als Orientierung erhalten – du musst nicht jeden Stack produktiv beherrschen.
+Die anderen Bereiche bleiben als Orientierung erhalten - du musst nicht jeden Stack produktiv beherrschen.
 
 ### Wichtige Arbeitsregel ab Meilenstein 1
 

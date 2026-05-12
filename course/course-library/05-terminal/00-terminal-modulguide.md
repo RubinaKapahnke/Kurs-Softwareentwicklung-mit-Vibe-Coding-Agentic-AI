@@ -1,4 +1,4 @@
-# Modulguide: Terminal
+﻿# Modulguide: Terminal
 
 Dieses Modul fuehrt in die Arbeit mit dem Terminal ein und ordnet die wichtigsten Kommandos fuer Navigation und Dateiverwaltung ein.
 

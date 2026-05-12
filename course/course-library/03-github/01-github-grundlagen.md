@@ -1,4 +1,4 @@
-# GitHub: Grundlagen und Einstieg
+﻿# GitHub: Grundlagen und Einstieg
 
 Dieser Artikel erklaert GitHub allgemein und ohne konkreten Projektkontext.
 

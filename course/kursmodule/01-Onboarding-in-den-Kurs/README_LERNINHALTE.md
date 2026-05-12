@@ -1,4 +1,4 @@
-# Lerninhalte Nach Lektionen
+﻿# Lerninhalte Nach Lektionen
 
 Diese Struktur ist die zentrale Quellenablage für Lerninhalte pro Lektion im Onboarding.
 

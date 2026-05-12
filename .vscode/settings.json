@@ -1,0 +1,4 @@
+{
+  "js/ts.tsdk": "apps/onboarding/node_modules/typescript/lib",
+  "js/ts.server.experimental.enableProjectDiagnostics": false
+}

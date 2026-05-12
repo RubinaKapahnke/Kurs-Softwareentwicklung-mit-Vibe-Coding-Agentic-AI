@@ -1,4 +1,4 @@
-# README-Vorlage fuer dein Uebungs-Repository
+﻿# README-Vorlage fuer dein Uebungs-Repository
 
 ```markdown
 # Vibe Coding Kurs - Meine Loesungen

@@ -1,6 +1,6 @@
-# Architecture Foundations: Vom PRD zur Projektstruktur
+﻿# Architecture Foundations: Vom PRD zur Projektstruktur
 
-Diese Datei fuehrt dich durch den praktischen Weg: Du hast ein PRD – jetzt leitest du daraus eine Ordnerstruktur ab, benennst deine Komponenten und formulierst einen Strukturkontext fuer die KI.
+Diese Datei fuehrt dich durch den praktischen Weg: Du hast ein PRD - jetzt leitest du daraus eine Ordnerstruktur ab, benennst deine Komponenten und formulierst einen Strukturkontext fuer die KI.
 
 ---
 
@@ -12,7 +12,7 @@ Oeffne dein PRD (`course/learners/<dein-name>/prd_<dein-name>.md`) und beantwort
 → Alles, was sichtbar auf dem Bildschirm erscheint, ist ein Kandidat fuer eine Komponente.
 
 **Was passiert, wenn jemand mit der App interagiert?**
-→ Klick-Aktionen, Formulare, Filter – das sind oft eigene Komponenten oder Services.
+→ Klick-Aktionen, Formulare, Filter - das sind oft eigene Komponenten oder Services.
 
 **Woher kommen die Daten?**
 → JSON-Datei lokal? API? Benutzereingabe? Das bestimmt, wo du einen Service brauchst.
@@ -63,13 +63,13 @@ Dieser Block ist dein Standard-Kontext fuer Prompts. Du schreibst ihn einmal und
 ```
 Mein Projekt:
 - Stack: Angular + Angular Material + TypeScript
-- Ziel: [1 Satz aus deinem PRD – Vision & Zielsetzung]
+- Ziel: [1 Satz aus deinem PRD - Vision & Zielsetzung]
 - Ordnerstruktur:
   - components/ → wiederverwendbare UI-Bausteine
   - pages/ → Seiten der App
   - services/ → Logik und Datenzugriff
   - assets/data/ → JSON-Datendateien
-- Aktuelle Aufgabe: [Komponentenname] – [Verantwortlichkeit in 1 Satz]
+- Aktuelle Aufgabe: [Komponentenname] - [Verantwortlichkeit in 1 Satz]
 - Datenquelle: [Dateiname oder Service-Name]
 ```
 
@@ -84,11 +84,11 @@ Mein Projekt:
   - pages/ → Seiten der App
   - services/ → Logik und Datenzugriff
   - assets/data/ → JSON-Datendateien
-- Aktuelle Aufgabe: ParticipantCard – zeigt Name, Status und Fortschritt einer Person an
+- Aktuelle Aufgabe: ParticipantCard - zeigt Name, Status und Fortschritt einer Person an
 - Datenquelle: participants.json (wird vom ParticipantService geladen)
 ```
 
-Diesen Block in deiner PRD-Datei unter einem neuen Abschnitt `## Strukturkontext` ablegen – dann kannst du ihn per `#prd_<dein-name>.md` in jeden Prompt einbinden.
+Diesen Block in deiner PRD-Datei unter einem neuen Abschnitt `## Strukturkontext` ablegen - dann kannst du ihn per `#prd_<dein-name>.md` in jeden Prompt einbinden.
 
 ---
 
@@ -98,14 +98,14 @@ Mit dem fertigen Strukturkontext sieht ein Prompt so aus:
 
 > `#prd_meinprojekt.md Erstelle die Komponente ParticipantCard. Sie bekommt Name und Status als Input und zeigt beides mit Angular Material Card an.`
 
-Die KI legt die Datei automatisch im richtigen Ordner an und nutzt den richtigen Stack – weil du ihr den Kontext gegeben hast.
+Die KI legt die Datei automatisch im richtigen Ordner an und nutzt den richtigen Stack - weil du ihr den Kontext gegeben hast.
 
 **Ergebnis pruefen:**
 - Liegt die Datei unter `src/app/components/participant-card/`?
 - Hat sie die Inputs, die du definiert hast?
 - Nutzt sie Angular Material, falls im Stack angegeben?
 
-Falls etwas nicht stimmt: Nicht neu anfangen – im gleichen Chat nachfragen und korrigieren.
+Falls etwas nicht stimmt: Nicht neu anfangen - im gleichen Chat nachfragen und korrigieren.
 
 ---
 

@@ -129,7 +129,7 @@ $prefilled = ([regex]::Matches($abgabeKriterienBlock, '- \[x\]')).Count
 Test-Check `
     -Name "Keine vorbefuellten [x]-Checkboxen in Abgabe/Lernerfolgs-Kriterien ($prefilled gefunden)" `
     -Condition ($prefilled -eq 0) `
-    -Hint "Checkboxen in Abgabe und Lernerfolgs-Kriterien muessen '- [ ]' sein (nicht '- [x]') – Lernende sollen selbst abhaken"
+    -Hint "Checkboxen in Abgabe und Lernerfolgs-Kriterien muessen '- [ ]' sein (nicht '- [x]') - Lernende sollen selbst abhaken"
 
 # --- 8. Keine Zeitangaben ---
 $zeitPattern = '\d+[\s-]+\d*\s*(Minuten|Stunden|min\b)|Zeitbox|empfohlen:\s*\d'
@@ -139,9 +139,9 @@ Test-Check `
     -Hint "Zeitangaben wie 'X Minuten', 'Zeitbox' oder 'Empfohlen: ...' sind verboten"
 
 
-# --- 9. "Wichtig – diese Datei nicht bearbeiten"-Hinweis vorhanden ---
+# --- 9. "Wichtig - diese Datei nicht bearbeiten"-Hinweis vorhanden ---
 Test-Check `
-    -Name '"Wichtig – diese Datei nicht bearbeiten"-Hinweis vorhanden' `
+    -Name '"Wichtig - diese Datei nicht bearbeiten"-Hinweis vorhanden' `
     -Condition ($content -match 'Wichtig.*diese Datei nicht bearbeiten') `
     -Hint 'Nach der Dateiliste in "Vor dem Start" muss ein "Wichtig - diese Datei nicht bearbeiten"-Blockzitat stehen'
 
@@ -167,7 +167,7 @@ Test-Check `
 # --- 11. PR-nicht-gemerged-Tipp vor git checkout -b vorhanden ---
 if ($content -match 'git checkout -b') {
     Test-Check `
-        -Name '"Tipp – falls dein letzter PR nicht gemerged ist"-Block vorhanden' `
+        -Name '"Tipp - falls dein letzter PR nicht gemerged ist"-Block vorhanden' `
         -Condition ($content -match 'Tipp.*letzter PR|letzter PR.*nicht gemerged') `
         -Hint 'Vor dem ersten "git checkout -b" muss ein Blockzitat mit Option A + Option B fuer unvergegten PR stehen'
 }

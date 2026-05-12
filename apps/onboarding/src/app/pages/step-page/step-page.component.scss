@@ -380,8 +380,17 @@
 }
 
 .security-hint__confirm-button {
-  --mdc-filled-button-container-color: var(--color-primary-dark);
-  --mdc-filled-button-label-text-color: var(--color-on-dark);
+  --mdc-filled-button-container-color: #ca4242 !important;
+  --mdc-filled-button-label-text-color: white !important;
+  --mat-filled-button-container-color: #ca4242 !important;
+  --mat-filled-button-label-text-color: white !important;
+  --mat-sys-error: #ca4242 !important;
+  background-color: #ca4242 !important;
+  color: white !important;
+  
+  &:not(:disabled) {
+    background-color: #ca4242 !important;
+  }
 }
 
 .security-hint__success {

@@ -1,4 +1,4 @@
-# Lektion 08: VS Code installieren
+﻿# Lektion 08: VS Code installieren
 
 <!-- onboarding:start step-08-main -->
 ## Ziel

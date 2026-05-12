@@ -1,4 +1,4 @@
-# GitHub-Features im Kurs und eigenes Repository
+﻿# GitHub-Features im Kurs und eigenes Repository
 
 Diese Datei ist kursspezifisch und beschreibt die praktische Anwendung im Kurs.
 

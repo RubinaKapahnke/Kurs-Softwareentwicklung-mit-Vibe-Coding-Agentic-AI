@@ -1,4 +1,4 @@
-# Lektion 06: Erste Übungen im eigenen Repository
+﻿# Lektion 06: Erste Übungen im eigenen Repository
 
 ## Ziel
 

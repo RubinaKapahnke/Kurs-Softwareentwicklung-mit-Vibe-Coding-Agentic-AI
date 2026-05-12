@@ -6,7 +6,7 @@ Du pruefst, wie gut deine Dateien als KI-Kontext funktionieren, verbesserst dein
 
 ---
 
-## Vor dem Start – Checkliste
+## Vor dem Start - Checkliste
 
 - [ ] VS Code ist geoeffnet und du bist im Repo-Ordner (`vibe-coding-0426`)
 - [ ] Copilot Chat ist aktiv (Symbol in der linken Leiste oder `Strg+Shift+I` / `Cmd+Shift+I`)
@@ -17,7 +17,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 - `course/learners/<dein-name>/prd_<dein-name>.md` (dein PRD)
 - `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` (dein Lernjournal)
 
-> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD- und Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+> **Wichtig - diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in deine PRD- und Lernfortschritt-Datei ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
 ---
 
@@ -25,8 +25,8 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 Lies vor dem Start:
 
-- [course-library/06-ai-instructions/02-prd-grundlagen.md](../course-library/06-ai-instructions/02-prd-grundlagen.md) – Abschnitt „Aufbau eines PRD"
-- [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md) – Abschnitt „Die KI weiss nichts von deinem Projekt"
+- [course-library/06-ai-instructions/02-prd-grundlagen.md](../course-library/06-ai-instructions/02-prd-grundlagen.md) - Abschnitt „Aufbau eines PRD"
+- [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md) - Abschnitt „Die KI weiss nichts von deinem Projekt"
 
 ---
 
@@ -36,13 +36,13 @@ Lies vor dem Start:
 
 Oeffne `course/learners/<dein-name>/prd_<dein-name>.md` und pruefe, ob diese fuenf Abschnitte vorhanden und ausgefuellt sind:
 
-1. `## 1. Vision & Zielsetzung` – Ein Satz: Was ist das Ziel der App?
-2. `## 2. Kernfunktionen (Features)` – Was soll die App koennen?
-3. `## 3. Technische Leitplanken` – Welche Technologien werden eingesetzt?
-4. `## 4. User Stories` – Als [Wer] moechte ich [Was], damit [Warum].
-5. `## 5. Definition of Done` – Wann ist ein Feature fertig?
+1. `## 1. Vision & Zielsetzung` - Ein Satz: Was ist das Ziel der App?
+2. `## 2. Kernfunktionen (Features)` - Was soll die App koennen?
+3. `## 3. Technische Leitplanken` - Welche Technologien werden eingesetzt?
+4. `## 4. User Stories` - Als [Wer] moechte ich [Was], damit [Warum].
+5. `## 5. Definition of Done` - Wann ist ein Feature fertig?
 
-Halte direkt in deiner PRD-Datei fest, welche Abschnitte fehlen oder leer sind – als kurze Notiz unter einem neuen Abschnitt `## Kontext-Check`.
+Halte direkt in deiner PRD-Datei fest, welche Abschnitte fehlen oder leer sind - als kurze Notiz unter einem neuen Abschnitt `## Kontext-Check`.
 
 Quelle: [course-library/06-ai-instructions/02-prd-grundlagen.md](../course-library/06-ai-instructions/02-prd-grundlagen.md) (Abschnitt „Aufbau eines PRD")
 
@@ -67,7 +67,7 @@ Schlage mir fehlende Abschnitte vor, die den Standard-Aufbau
 Definition of Done) ergaenzen.
 ```
 
-Uebernimm die Vorschlaege, die zu deinem Projekt passen – und passe sie an. Du musst nichts eins zu eins uebernehmen.
+Uebernimm die Vorschlaege, die zu deinem Projekt passen - und passe sie an. Du musst nichts eins zu eins uebernehmen.
 
 > Falls `#prd_<dein-name>.md` nicht funktioniert: Klicke auf das `#`-Symbol im Chat-Eingabefeld und waehle deine PRD-Datei manuell aus der Liste.
 
@@ -100,7 +100,7 @@ Vergleiche die Antworten. Halte in `lernfortschritt_<dein-name>.md` fest:
 - Welche Aussage aus deinem PRD hat die KI direkt aufgegriffen?
 - Was war trotzdem ungenau oder falsch?
 
-> **Warum ein neuer Chat?** Ein neuer Chat hat keinen Gespraechs-Kontext mehr – so siehst du den reinen Unterschied, den dein PRD macht.
+> **Warum ein neuer Chat?** Ein neuer Chat hat keinen Gespraechs-Kontext mehr - so siehst du den reinen Unterschied, den dein PRD macht.
 
 Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md) (Abschnitt „Die KI weiss nichts von deinem Projekt")
 
@@ -117,9 +117,9 @@ git branch
 
 Dann:
 
-> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
-> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M3-04-<vorname>`. Dein Lernjournal ist sofort aktuell.
-> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+> **Tipp - falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` - dann `git checkout -b UE-M3-04-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt - du musst nichts weiter tun.
 
 ```bash
 git checkout -b UE-M3-04-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
@@ -128,7 +128,7 @@ git commit -m "M3: PRD-Qualitaet verbessert und Kontext-Vergleich dokumentiert f
 git push origin UE-M3-04-<vorname>
 ```
 
-> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen - UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Erstelle danach auf GitHub einen Pull Request von deinem Branch auf `main`.
 
@@ -157,7 +157,7 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
-> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab - nicht hier in der Uebungsdatei.
 
 Bevor du den PR erstellst, pruefe kurz:
 

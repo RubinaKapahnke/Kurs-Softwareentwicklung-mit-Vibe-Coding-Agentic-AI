@@ -1,4 +1,4 @@
-# Anleitung: Lerninhalte Zu Steps Umrechnen
+﻿# Anleitung: Lerninhalte Zu Steps Umrechnen
 
 Diese Anleitung zeigt dir, wie du eine Lektion so pflegst, dass Inhalte automatisch in den Onboarding-Step übernommen werden.
 

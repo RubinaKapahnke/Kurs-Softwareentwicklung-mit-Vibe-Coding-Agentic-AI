@@ -313,7 +313,7 @@ course/course-library/04-git/
 └── README.md
 ```
 
-> **Hinweis für Lernende:** Die Ordner `tools/` und die Datei `AGENTS.md` im Stammverzeichnis sind **nicht Teil des Lernmaterials**. Sie werden von Dozenten und KI-Agenten für den Kursbetrieb genutzt – du musst sie nicht öffnen.
+> **Hinweis für Lernende:** Die Ordner `tools/` und die Datei `AGENTS.md` im Stammverzeichnis sind **nicht Teil des Lernmaterials**. Sie werden von Dozenten und KI-Agenten für den Kursbetrieb genutzt - du musst sie nicht öffnen.
 
 ---
 
@@ -339,7 +339,7 @@ pandoc course/uebungen/meilenstein-02-uebung-01.md -o uebung-m2-01.pdf
 pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md" -o kursmodul-01.pdf
 ```
 
-> **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach – das dauert einmalig etwas länger.
+> **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach - das dauert einmalig etwas länger.
 
 ---
 

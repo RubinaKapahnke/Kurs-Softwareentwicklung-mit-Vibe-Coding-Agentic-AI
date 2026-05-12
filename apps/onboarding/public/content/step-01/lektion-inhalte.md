@@ -5,9 +5,9 @@
 
 ## Ziel
 
-Du verstehst den Ablauf des Kurses und weißt, wie es nach dem Onboarding weitergeht.
+Du verstehst den Ablauf des Kurses und kannst das zu Grunde liegende Toolset bedienen.
 
-## Willkommen im Kurs
+## Willkommen im Kurs 🎉
 
 
 ### Schön, dass du da bist 

@@ -1,4 +1,4 @@
-# Warum ein Code-Monster entstehen kann
+﻿# Warum ein Code-Monster entstehen kann
 
 Diese Notiz erklaert an einem echten Kursbeispiel, wie aus vielen kleinen, sinnvollen Aenderungen eine zu grosse Datei entstehen kann.
 

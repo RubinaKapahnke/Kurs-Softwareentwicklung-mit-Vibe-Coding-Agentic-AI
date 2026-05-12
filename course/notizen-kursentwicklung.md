@@ -17,6 +17,27 @@ Stable Track: Dies ist die ausgereifte, offiziell veröffentlichte Version von V
 
 Insiders Track: Dies ist die Entwickler- bzw. Vorabversion ("Bleeding-Edge"). Sie wird fast täglich aktualisiert und enthält die allerneuesten Funktionen und Fehlerbehebungen direkt aus der Entwicklung, kann dafür aber gelegentlich noch Fehler (Bugs) aufweisen.
 
+### key terms
+. GitHub CodeSpaces: A development environment in the cloud provided by GitHub, allowing developers to run code and development tools remotely in the browser or connect locally through Visual Studio Code.
+
+2. Dev Container: A configuration file (dev-container.json) that specifies the runtime environment for a Code Space, including the operating system, installed packages, and development tools.
+
+3. Dockerfile: A file used to build a Docker container image, which defines the base operating system and any additional software or dependencies required for the development environment.
+
+4. Linting: The process of statically analyzing source code to detect programming errors, bugs, stylistic errors, and suspicious constructs.
+
+5. Flake8: A Python library that combines the functionality of the PyFlakes, pycodestyle and Mccabe libraries to provide a code linting tool.
+
+6. Python Black: A Python code formatter that automatically reformats Python code to conform to a consistent style.
+
+7. Auto-Save: A feature that automatically saves changes made within a Code Space, ensuring data persistence without the need for manual saving.
+
+8. CodeSpace Timeout: The default 30-minute inactivity period after which a Code Space will be automatically stopped, but data is preserved.
+
+9. CodeSpace Deletion: The default 30-day period after which a Code Space will be automatically deleted if not actively used.
+
+10. Remote Connection: The ability to connect to a Code Space running in the cloud using Visual Studio Code on a local machine, allowing for a seamless development experience.
+
 ## shells / terminals
 bash vs. powershell
 

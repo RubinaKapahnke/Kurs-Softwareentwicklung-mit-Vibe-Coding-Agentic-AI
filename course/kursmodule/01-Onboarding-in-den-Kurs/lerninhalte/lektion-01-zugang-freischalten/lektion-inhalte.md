@@ -1,4 +1,4 @@
-# Lektion 01: Willkommen im Kurs 🎉
+﻿# Lektion 01: Willkommen im Kurs 🎉
 
 ## Ziel
 

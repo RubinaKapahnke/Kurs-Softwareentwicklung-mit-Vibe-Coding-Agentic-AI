@@ -1,4 +1,4 @@
-# VS Code Speicherkonflikt im Kurs: NEXT_STEPS.md kann nicht gespeichert werden
+﻿# VS Code Speicherkonflikt im Kurs: NEXT_STEPS.md kann nicht gespeichert werden
 
 Diese Notiz ist kursspezifisch fuer den typischen Fall, dass `NEXT_STEPS.md` waehrend deiner Bearbeitung im Hintergrund geaendert wurde.
 

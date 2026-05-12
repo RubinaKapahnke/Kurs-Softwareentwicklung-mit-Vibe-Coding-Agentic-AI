@@ -1,12 +1,12 @@
-# Architecture Foundations: Grundlagen
+﻿# Architecture Foundations: Grundlagen
 
-Beim Vibe Coding baust du Software mit KI-Unterstuetzung. Das funktioniert gut – aber nur, wenn du und die KI das gleiche Bild vom Projekt haben. Dieses Modul erklaert, wie du dieses gemeinsame Bild aufbaust.
+Beim Vibe Coding baust du Software mit KI-Unterstuetzung. Das funktioniert gut - aber nur, wenn du und die KI das gleiche Bild vom Projekt haben. Dieses Modul erklaert, wie du dieses gemeinsame Bild aufbaust.
 
 ---
 
 ## Warum braucht ein Projekt Struktur?
 
-Stell dir vor, du bittest jemanden, dir ein Zimmer einzurichten – ohne zu sagen, wie viele Personen darin schlafen, ob es ein Buero oder ein Wohnzimmer ist, und was du aufbewahren willst.
+Stell dir vor, du bittest jemanden, dir ein Zimmer einzurichten - ohne zu sagen, wie viele Personen darin schlafen, ob es ein Buero oder ein Wohnzimmer ist, und was du aufbewahren willst.
 
 Ohne Struktur passiert genau das in deinem Projekt:
 
@@ -15,7 +15,7 @@ Ohne Struktur passiert genau das in deinem Projekt:
 > → KI erfindet: Wie sehen die Karten aus? Woher kommen die Daten? Was passiert beim Klick?
 
 **Mit Strukturvorgabe:**
-> "Hier ist mein PRD und die Ordnerstruktur meines Projekts. Baue mir eine Teilnehmer-Uebersicht als Listenansicht – die Daten kommen aus `participants.json`."
+> "Hier ist mein PRD und die Ordnerstruktur meines Projekts. Baue mir eine Teilnehmer-Uebersicht als Listenansicht - die Daten kommen aus `participants.json`."
 > → KI baut genau das, was in deinen Kontext passt.
 
 Struktur ist also kein Selbstzweck. Sie ist das **Vokabular**, mit dem du der KI erklaerst, was existiert und was entsteht.
@@ -26,19 +26,19 @@ Struktur ist also kein Selbstzweck. Sie ist das **Vokabular**, mit dem du der KI
 
 Eine **Komponente** ist ein abgegrenzter Teil deiner App, der eine klar definierte Aufgabe hat.
 
-Einfache Faustregel: Wenn du eine Sache auf dem Bildschirm siehst, die eigenstaendig funktioniert und wiederverwendet werden koennte – das ist wahrscheinlich eine Komponente.
+Einfache Faustregel: Wenn du eine Sache auf dem Bildschirm siehst, die eigenstaendig funktioniert und wiederverwendet werden koennte - das ist wahrscheinlich eine Komponente.
 
 **Beispiele aus einem Kurs-Dashboard:**
 
 | Komponente | Aufgabe | Eigenstaendig? |
 | :--- | :--- | :--- |
-| `ParticipantCard` | Zeigt Name, Status und Fortschritt einer Person | Ja – kann mehrfach verwendet werden |
-| `ProgressBar` | Zeigt Fortschritt in Prozent visuell an | Ja – koennte auch woanders stehen |
-| `DashboardPage` | Koordiniert alle Karten, laedt Daten | Nein – ist der Rahmen |
+| `ParticipantCard` | Zeigt Name, Status und Fortschritt einer Person | Ja - kann mehrfach verwendet werden |
+| `ProgressBar` | Zeigt Fortschritt in Prozent visuell an | Ja - koennte auch woanders stehen |
+| `DashboardPage` | Koordiniert alle Karten, laedt Daten | Nein - ist der Rahmen |
 
 **Warum hilft dir das beim Prompting?**
 
-Wenn du der KI sagst: „Erstelle die Komponente `ParticipantCard` – sie bekommt Name und Status als Input und zeigt beides an", weiss die KI genau, was zu tun ist. Ohne Komponentenname und Verantwortlichkeit erfindet sie beides selbst.
+Wenn du der KI sagst: „Erstelle die Komponente `ParticipantCard` - sie bekommt Name und Status als Input und zeigt beides an", weiss die KI genau, was zu tun ist. Ohne Komponentenname und Verantwortlichkeit erfindet sie beides selbst.
 
 ---
 
@@ -63,10 +63,10 @@ src/
 
 **Was du der KI damit erklaerst:**
 - „In `components/` liegen wiederverwendbare Bausteine."
-- „In `pages/` liegen die Seiten – eine pro Route."
+- „In `pages/` liegen die Seiten - eine pro Route."
 - „In `services/` liegt alles, was Daten laed oder verarbeitet."
 
-Wenn du der KI diese Struktur einmal zeigst, legt sie neue Dateien automatisch an die richtige Stelle – statt alles in einen Ordner zu werfen.
+Wenn du der KI diese Struktur einmal zeigst, legt sie neue Dateien automatisch an die richtige Stelle - statt alles in einen Ordner zu werfen.
 
 ---
 
@@ -86,7 +86,7 @@ DashboardPage
 ParticipantCard  →  zeigt auf dem Bildschirm an
 ```
 
-Das klingt abstrakt – wird aber beim Prompting sofort konkret:
+Das klingt abstrakt - wird aber beim Prompting sofort konkret:
 
 > "Der `ParticipantService` laedt die Daten aus `participants.json`. Die `DashboardPage` ruft den Service auf und uebergibt jeden Teilnehmer als Input an `ParticipantCard`."
 
@@ -109,7 +109,7 @@ Mein Projekt:
 - Datenquelle: [Dateiname oder Service]
 ```
 
-Diesen Block kannst du in einer Datei speichern – z. B. in deinem PRD oder in einer eigenen `context.md` – und bei neuen Aufgaben als Kontext im Chat einfuegen.
+Diesen Block kannst du in einer Datei speichern - z. B. in deinem PRD oder in einer eigenen `context.md` - und bei neuen Aufgaben als Kontext im Chat einfuegen.
 
 **Wichtig:** Du musst nicht den ganzen Code erklaeren. Es reicht, die **relevanten Teile** zu benennen, die fuer die aktuelle Aufgabe eine Rolle spielen.
 

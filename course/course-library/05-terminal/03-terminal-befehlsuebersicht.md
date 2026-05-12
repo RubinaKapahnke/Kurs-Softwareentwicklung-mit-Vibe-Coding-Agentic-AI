@@ -1,8 +1,8 @@
-# Terminal-Befehlsuebersicht
+﻿# Terminal-Befehlsuebersicht
 
 Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen willst, warum ein Befehl noetig ist, lies vorher [Terminal: Grundlagen und Einstieg](./01-terminal-grundlagen.md).
 
-> **Gilt fuer alle Tabellen:** Git-Befehle sind auf allen Betriebssystemen identisch – nur Terminal-Befehle unterscheiden sich. Details: [Terminal-Typen](./02-terminal-typen.md) und [Git-Befehlsuebersicht](../04-git/03-git-befehlsuebersicht.md).
+> **Gilt fuer alle Tabellen:** Git-Befehle sind auf allen Betriebssystemen identisch - nur Terminal-Befehle unterscheiden sich. Details: [Terminal-Typen](./02-terminal-typen.md) und [Git-Befehlsuebersicht](../04-git/03-git-befehlsuebersicht.md).
 
 ---
 
@@ -20,24 +20,24 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | Wofuer? | Windows (PowerShell) | macOS/Linux (zsh/bash) | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- | :--- |
 | Neuen Ordner erstellen | `mkdir <Name>` | `mkdir <Name>` | `mkdir course/learners/alex` legt einen neuen Lernordner fuer Alex an | Der Ordner wird sofort angelegt. |
-| Leere Datei erstellen | `New-Item <Datei>` | `touch <Datei>` | `New-Item lernfortschritt_alex.md` (Windows) bzw. `touch lernfortschritt_alex.md` (macOS) | Nicht `echo > datei.md` nutzen – schreibt ungewollten Text in die Datei. |
+| Leere Datei erstellen | `New-Item <Datei>` | `touch <Datei>` | `New-Item lernfortschritt_alex.md` (Windows) bzw. `touch lernfortschritt_alex.md` (macOS) | Nicht `echo > datei.md` nutzen - schreibt ungewollten Text in die Datei. |
 | Datei kopieren | `copy <Quelle> <Ziel>` | `cp <Quelle> <Ziel>` | `copy lernfortschritt_mein-name.md lernfortschritt_mein-name_backup.md` sichert die Datei | Nutze relative Pfade, wenn Quelle und Ziel im selben Ordner liegen. |
 | Datei verschieben oder umbenennen | `move <Alt> <Neu>` | `mv <Alt> <Neu>` | `move notizen.md lernjournal.md` benennt die Datei um | Funktioniert auch fuer ganze Ordner. |
-| Datei loeschen | `del <Datei>` | `rm <Datei>` | `del lernfortschritt_mein-name_backup.md` loescht die Sicherungskopie | **Achtung:** Geloeschte Dateien sind sofort weg – kein Papierkorb! |
+| Datei loeschen | `del <Datei>` | `rm <Datei>` | `del lernfortschritt_mein-name_backup.md` loescht die Sicherungskopie | **Achtung:** Geloeschte Dateien sind sofort weg - kein Papierkorb! |
 | Leeren Ordner loeschen | `rmdir <Ordner>` | `rmdir <Ordner>` | `rmdir course/learners/alex` entfernt den Ordner wieder | Der Ordner muss voellig leer sein. |
 
 ## Mit VS Code arbeiten
 
 | Wofuer? | Windows (PowerShell) | macOS/Linux (zsh/bash) | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- | :--- |
-| Aktuellen Ordner in VS Code oeffnen | `code .` | `code .` | Du bist im Repo-Ordner und tippst `code .` – VS Code oeffnet das gesamte Projekt | Der Punkt `.` bedeutet "diesen Ordner". |
+| Aktuellen Ordner in VS Code oeffnen | `code .` | `code .` | Du bist im Repo-Ordner und tippst `code .` - VS Code oeffnet das gesamte Projekt | Der Punkt `.` bedeutet "diesen Ordner". |
 | Einzelne Datei in VS Code oeffnen | `code <Datei>` | `code <Datei>` | `code lernfortschritt_mein-name.md` oeffnet direkt die eigene Lernfortschritt-Datei | Die Datei muss im aktuellen Ordner liegen oder du gibst den vollen Pfad an. |
 
 ## Praktische Tipps
 
 | Wofuer? | Windows (PowerShell) | macOS/Linux (zsh/bash) | Beispiel | Achtung |
 | :--- | :--- | :--- | :--- | :--- |
-| Terminal-Anzeige leeren | `cls` | `clear` | Nach vielen Befehlen wird es unuebersichtlich – `cls` oder `clear` raeumen auf | Der Befehlsverlauf (↑-Taste) bleibt erhalten. |
+| Terminal-Anzeige leeren | `cls` | `clear` | Nach vielen Befehlen wird es unuebersichtlich - `cls` oder `clear` raeumen auf | Der Befehlsverlauf (↑-Taste) bleibt erhalten. |
 | Vorherige Befehle aufrufen | ↑ Pfeiltaste | ↑ Pfeiltaste | Du hast gerade `git status` getippt und willst es nochmal: einmal ↑ druecken | Mehrfach ↑ druecken geht weiter in den Verlauf zurueck. |
 | Auto-Vervollstaendigung | `Tab` | `Tab` | `cd course/lea` + `Tab` → vervollstaendigt zu `cd course/learners/` | Sehr hilfreich, um Tippfehler bei langen Pfaden zu vermeiden. |
 

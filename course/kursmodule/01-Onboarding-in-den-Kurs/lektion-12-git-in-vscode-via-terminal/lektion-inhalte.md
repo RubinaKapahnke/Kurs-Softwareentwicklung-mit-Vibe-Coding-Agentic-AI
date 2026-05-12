@@ -1,4 +1,4 @@
-# Lektion 12: Kurs-Handhabung verstehen
+﻿# Lektion 12: Kurs-Handhabung verstehen
 
 ## Ziel
 

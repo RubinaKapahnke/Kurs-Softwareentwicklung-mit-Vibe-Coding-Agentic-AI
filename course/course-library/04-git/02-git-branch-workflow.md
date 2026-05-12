@@ -1,6 +1,6 @@
-# Git Branch-Workflow: Von der Idee bis zum Aufraeumen
+﻿# Git Branch-Workflow: Von der Idee bis zum Aufraeumen
 
-Dieses Dokument erklaert den vollstaendigen Ablauf eines Branches – vom Erstellen bis zum Loeschen nach dem Merge. Fuer die Befehle im Ueberblick: [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md).
+Dieses Dokument erklaert den vollstaendigen Ablauf eines Branches - vom Erstellen bis zum Loeschen nach dem Merge. Fuer die Befehle im Ueberblick: [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md).
 
 ---
 
@@ -49,7 +49,7 @@ git push origin UE-MX-YY-<vorname>
 
 ## Schritt 3: Pull Request auf GitHub erstellen
 
-Auf GitHub erscheint ein gelber Banner – klicke auf "Compare & pull request". Waehle `main` als Basis-Branch und deinen Branch als Quell-Branch.
+Auf GitHub erscheint ein gelber Banner - klicke auf "Compare & pull request". Waehle `main` als Basis-Branch und deinen Branch als Quell-Branch.
 
 Nach dem Review wird dein Branch in `main` gemerged.
 
@@ -61,7 +61,7 @@ Nach dem Merge ist der Branch nicht mehr noetig. Er kann geloescht werden.
 
 ### Remote-Branch loeschen (auf GitHub)
 
-Beim Merge-Button auf GitHub gibt es eine Checkbox **"Delete branch after merging"** – wenn du die aktivierst, wird der Remote-Branch automatisch geloescht.
+Beim Merge-Button auf GitHub gibt es eine Checkbox **"Delete branch after merging"** - wenn du die aktivierst, wird der Remote-Branch automatisch geloescht.
 
 Alternativ per Terminal:
 
@@ -85,7 +85,7 @@ git branch -d UE-MX-YY-<vorname>
 ```
 
 > **Warum `-d` und nicht `-D`?**
-> `-d` loescht nur, wenn der Branch bereits gemerged ist. Das schuetzt davor, aus Versehen noch ungemergten Code zu verlieren. `-D` erzwingt das Loeschen ohne Pruefung – nur nutzen, wenn du sicher bist.
+> `-d` loescht nur, wenn der Branch bereits gemerged ist. Das schuetzt davor, aus Versehen noch ungemergten Code zu verlieren. `-D` erzwingt das Loeschen ohne Pruefung - nur nutzen, wenn du sicher bist.
 
 ---
 

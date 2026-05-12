@@ -1,9 +1,9 @@
-# Versionsverwaltung und GitOps: Einordnung
+﻿# Versionsverwaltung und GitOps: Einordnung
 
 Dieses Dokument erklaert zwei Konzepte, die aufeinander aufbauen:
 
-1. **Versionsverwaltung** – wie Softwareteams sicher mit gemeinsamen Codebases arbeiten
-2. **GitOps** – wie dieselbe Git-Logik auf den laufenden Betrieb ausgeweitet wird
+1. **Versionsverwaltung** - wie Softwareteams sicher mit gemeinsamen Codebases arbeiten
+2. **GitOps** - wie dieselbe Git-Logik auf den laufenden Betrieb ausgeweitet wird
 
 ---
 
@@ -12,7 +12,7 @@ Dieses Dokument erklaert zwei Konzepte, die aufeinander aufbauen:
 Stell dir vor, drei Personen arbeiten gleichzeitig an derselben Datei. Eine speichert
 ihre Version lokal, eine zweite schickt eine angepasste Kopie per E-Mail, eine dritte
 macht „schnell noch einen Fix" direkt auf dem Server. Zwei Stunden spaeter gibt es
-vier verschiedene Staende – und niemand weiss, welcher der richtige ist.
+vier verschiedene Staende - und niemand weiss, welcher der richtige ist.
 
 Dieses Szenario passiert ueberall dort, wo kein gemeinsames Versionssystem genutzt
 wird. Bei Code ist es besonders kritisch, weil eine einzige fehlerhafte Zeile ganze
@@ -26,7 +26,7 @@ nachvollziehbar.
 
 ## Wie Git Aenderungen speichert
 
-Git merkt sich nicht einfach Dateizustaende – es speichert **Aenderungen als
+Git merkt sich nicht einfach Dateizustaende - es speichert **Aenderungen als
 Schnappschuesse** (Commits). Jeder Commit enthaelt:
 
 - den Differenztext (was genau hat sich veraendert)
@@ -35,7 +35,7 @@ Schnappschuesse** (Commits). Jeder Commit enthaelt:
 - eine eindeutige ID (Hash), die spaeter fuer Ruecksprunge genutzt werden kann
 
 Das Ergebnis ist eine lueckenlose Entwicklungsgeschichte. Wenn etwas auf einmal nicht
-mehr funktioniert, laesst sich der letzte funktionsfaehige Zustand wiederherstellen –
+mehr funktioniert, laesst sich der letzte funktionsfaehige Zustand wiederherstellen -
 ohne Datenverlust, ohne Raterei.
 
 ---
@@ -51,7 +51,7 @@ Typisches Muster:
 - Erst nach Pruefung und Freigabe kommt der neue Stand in `main` zurueck
 
 Das bedeutet: Experimente koennen gefahrlos ausprobiert werden. Falls etwas
-schiefgeht, wird der Branch einfach verworfen – der Hauptzweig bleibt unberuehrt.
+schiefgeht, wird der Branch einfach verworfen - der Hauptzweig bleibt unberuehrt.
 
 ---
 
@@ -77,7 +77,7 @@ Der Unterschied in der Praxis:
 
 Bei GitOps ist das Repository die einzige verbindliche Quelle fuer den
 Systemzustand. Konfiguration, Infrastruktur und Deployment-Einstellungen liegen als
-Dateien im Repo. Wer etwas aendern will, erstellt einen Pull Request – genau so wie
+Dateien im Repo. Wer etwas aendern will, erstellt einen Pull Request - genau so wie
 bei Code.
 
 Das bringt zwei praktische Vorteile:
@@ -90,7 +90,7 @@ Das bringt zwei praktische Vorteile:
 
 ## Einordnung im Kurs
 
-In den ersten Meilensteinen arbeiten wir mit klassischem Git – Commits, Branches,
+In den ersten Meilensteinen arbeiten wir mit klassischem Git - Commits, Branches,
 Pull Requests. GitOps wird spaeter relevant, wenn es um Deployment und
 Infrastruktur geht (Modul 13).
 

@@ -26,7 +26,7 @@ $mdFiles = Get-ChildItem -Path $searchRoot -Recurse -Filter "*.md" | Where-Objec
 $totalBroken = 0
 $totalChecked = 0
 
-# Regex: Markdown-Links [text](pfad) – nur relative Pfade (kein http/https, kein #-only)
+# Regex: Markdown-Links [text](pfad) - nur relative Pfade (kein http/https, kein #-only)
 $linkPattern = '\[([^\]]*)\]\((?!https?://)(?!#)([^)#\s]+)[^)]*\)'
 
 foreach ($file in $mdFiles) {

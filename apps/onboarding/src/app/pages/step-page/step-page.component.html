@@ -46,6 +46,7 @@
       <div class="lesson-flow-section" #lessonFlowSection>
         <app-lesson-flow
           [lesson]="lessonFlow"
+          [lessonKey]="'step-' + step().id"
           (finished)="onLessonFinished()"></app-lesson-flow>
       </div>
       @if (hasLessonFollowUpContent()) {
@@ -129,7 +130,7 @@
                 class="security-hint__confirm-button"
                 [disabled]="state.step2Experience() === 'new'"
                 (click)="confirmVisibilityHint()">
-                OK
+                Ich habe verstanden
               </button>
 
               <button mat-stroked-button type="button" class="account-path-actions__secondary" (click)="switchToNewPath()">

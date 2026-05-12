@@ -1,4 +1,4 @@
-# Lektion 07: Was ist VS Code?
+﻿# Lektion 07: Was ist VS Code?
 
 ## Kapitel 1: Ein Editor und noch viel mehr
 

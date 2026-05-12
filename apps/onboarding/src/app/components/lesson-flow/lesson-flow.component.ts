@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild, computed, signal } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild, computed, effect, signal, inject, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,6 +11,7 @@ import {
   OnboardingLessonQuizSlide,
   OnboardingLessonSlide
 } from '../../models/onboarding.models';
+import { OnboardingStateService } from '../../services/onboarding-state.service';
 
 function escapeHtml(value: string): string {
   return value
@@ -68,7 +69,9 @@ function linkifyLessonText(text: string): string {
 })
 export class LessonFlowComponent implements OnChanges {
   private readonly subheadingPrefix = '__subheading__';
+  private readonly stateService = inject(OnboardingStateService);
   @Input({ required: true }) lesson!: OnboardingLessonFlow;
+  @Input() lessonKey: string = ''; // z.B. 'step-1' oder 'step-2'
   @Output() readonly finished = new EventEmitter<void>();
   @ViewChild('contentContainer') private contentContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('quizContainer') private quizContainer?: ElementRef<HTMLDivElement>;
@@ -80,6 +83,7 @@ export class LessonFlowComponent implements OnChanges {
   readonly quizEvaluated = signal(false);
   readonly quizPassed = signal(false);
   readonly autoFinished = signal(false);
+  private currentLessonKey: string = ''; // Track current lesson to avoid re-loading
 
   readonly activeSlide = computed<OnboardingLessonSlide | null>(() => {
     this.lessonVersion();
@@ -99,16 +103,64 @@ export class LessonFlowComponent implements OnChanges {
   });
   readonly isFirstSlide = computed(() => this.activeIndex() === 0);
 
+  constructor() {
+    // Auto-save quiz state whenever it changes
+    effect(() => {
+      const lessonKey = this.lessonKey;
+      const slideIndex = this.activeIndex();
+      if (!lessonKey) return; // Don't save if no key
+      
+      // Dependency tracking: quiz signals
+      const _selected = this.selectedOptionIds();
+      const _evaluated = this.quizEvaluated();
+      const _passed = this.quizPassed();
+
+      const slideKey = this.getSlideKey(lessonKey, slideIndex);
+      console.log(`[Quiz Effect] slideKey=${slideKey}, selected=${_selected.size}, evaluated=${_evaluated}, passed=${_passed}`);
+
+      // Save whenever state changes and quiz is evaluated
+      if (_evaluated && _selected.size > 0) {
+        console.log(`[Quiz Save] Saving quiz state for ${slideKey}`);
+        this.stateService.saveQuizState(slideKey, {
+          selectedOptionIds: [..._selected],
+          evaluated: _evaluated,
+          passed: _passed
+        });
+      }
+    });
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
-    if (!changes['lesson']) {
-      return;
+    const lessonKeyChanged = changes['lessonKey'];
+    const lessonChanged = changes['lesson'];
+
+    // Only load/reset quiz when lessonKey changes, NOT when lesson content changes
+    if (lessonKeyChanged) {
+      const newKey = this.lessonKey;
+      console.log(`[LessonFlow] lessonKey changed from ${this.currentLessonKey} to ${newKey}`);
+      
+      // Only load if key actually changed
+      if (newKey !== this.currentLessonKey) {
+        this.currentLessonKey = newKey;
+        
+        if (newKey) {
+          // Load state for current slide
+          this.loadQuizStateForCurrentSlide();
+        } else {
+          this.resetQuizState();
+        }
+      }
     }
 
-    this.lessonVersion.update((value) => value + 1);
-    this.activeIndex.set(0);
-    this.resetQuizState();
-    this.autoFinished.set(false);
-    this.resetSlideScroll();
+    // Update lesson structure when lesson changes, but DON'T reset quiz
+    if (lessonChanged) {
+      console.log(`[LessonFlow] lesson changed`);
+      this.lessonVersion.update((value) => value + 1);
+      this.activeIndex.set(0);
+      this.autoFinished.set(false);
+      this.resetSlideScroll();
+      // Important: Do NOT reset quiz state here!
+    }
   }
 
   onOptionToggle(optionId: string, checked: boolean): void {
@@ -145,6 +197,11 @@ export class LessonFlowComponent implements OnChanges {
 
   restartQuiz(): void {
     this.resetQuizState();
+    // Lösche Quiz-State aus dem Service
+    const slideKey = this.getSlideKey(this.lessonKey, this.activeIndex());
+    if (slideKey) {
+      this.stateService.clearQuizState(slideKey);
+    }
   }
 
   canContinue(): boolean {
@@ -166,7 +223,7 @@ export class LessonFlowComponent implements OnChanges {
     }
 
     this.activeIndex.update((value) => value + 1);
-    this.resetQuizState();
+    this.loadQuizStateForCurrentSlide();
     this.resetSlideScroll();
     this.emitAutoFinishedIfNeeded();
   }
@@ -177,7 +234,7 @@ export class LessonFlowComponent implements OnChanges {
     }
 
     this.activeIndex.update((value) => value - 1);
-    this.resetQuizState();
+    this.loadQuizStateForCurrentSlide();
     this.resetSlideScroll();
   }
 
@@ -188,7 +245,7 @@ export class LessonFlowComponent implements OnChanges {
     }
 
     this.activeIndex.set(index);
-    this.resetQuizState();
+    this.loadQuizStateForCurrentSlide();
     this.resetSlideScroll();
     this.emitAutoFinishedIfNeeded();
   }
@@ -317,6 +374,27 @@ export class LessonFlowComponent implements OnChanges {
     }
 
     return slide.options.find((item) => item.id === optionId);
+  }
+
+  private getSlideKey(lessonKey: string, slideIndex: number): string {
+    return `${lessonKey}-slide-${slideIndex}`;
+  }
+
+  private loadQuizStateForCurrentSlide(): void {
+    const slideKey = this.getSlideKey(this.lessonKey, this.activeIndex());
+    console.log(`[LessonFlow] Loading quiz state for slide: ${slideKey}`);
+    
+    const savedState = this.stateService.getQuizState(slideKey);
+    console.log(`[LessonFlow] Loaded state for ${slideKey}:`, savedState);
+    
+    if (savedState) {
+      console.log(`[LessonFlow] Restoring quiz state...`);
+      this.selectedOptionIds.set(new Set(savedState.selectedOptionIds));
+      this.quizEvaluated.set(savedState.evaluated);
+      this.quizPassed.set(savedState.passed);
+    } else {
+      this.resetQuizState();
+    }
   }
 
   private resetQuizState(): void {

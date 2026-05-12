@@ -60,15 +60,15 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
         - Profilbild und Anzeigename
         - Bio und Standort (optional)
     - Kontotypen (optional, zur Orientierung)
-        - Organisationskonten – für Teams und Unternehmen
-        - Unternehmenskonten – für große Organisationen
+        - Organisationskonten - für Teams und Unternehmen
+        - Unternehmenskonten - für große Organisationen
         - Benutzerverwaltung in Organisationen
 * Aufgabe: GitHub-Konto anlegen, Profil vervollständigen, Dozent\*in als Collaborator einladen
 * GitHub Features für diesen Kurs
-    - Repositories – wo Dateien und Verlauf gespeichert werden
-    - Branches – parallele Arbeitsstände
-    - Pull Requests – Änderungen vorschlagen und besprechen
-    - Issues – Aufgaben und Rückmeldungen festhalten
+    - Repositories - wo Dateien und Verlauf gespeichert werden
+    - Branches - parallele Arbeitsstände
+    - Pull Requests - Änderungen vorschlagen und besprechen
+    - Issues - Aufgaben und Rückmeldungen festhalten
     - Actions (Erwähnung, kein Tiefgang im Einstieg)
 * Repositories verstehen und nutzen
     - Was sind Repositories und wofür verwendet man sie?
@@ -86,7 +86,7 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
         - Collaborators einladen
         - Leserechte vs. Schreibrechte
     - Aus einer Vorlage erstellen (Template Repositories)
-    - Repository klonen – Verbindung zwischen GitHub und lokalem Rechner
+    - Repository klonen - Verbindung zwischen GitHub und lokalem Rechner
     - Weitere Verwaltungsoptionen (umbenennen, löschen, übertragen)
 * Übung: Eigenes Repo anlegen, Dozent\*in einladen 
 * Dateien direkt auf GitHub bearbeiten
@@ -132,10 +132,10 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
     - Warum nicht direkt auf GitHub arbeiten? Was VS Code zusätzlich bietet
     - VS Code vs. andere Editoren (kurze Einordnung)
 * Orientierung im Interface
-    - Explorer (Dateibaum links) – Dateien und Ordner des Projekts
-    - Editor-Bereich (Mitte) – Dateien öffnen, bearbeiten, Tabs
-    - Integriertes Terminal (unten) – Git-Befehle direkt im Editor ausführen
-    - Statusleiste (unten) – aktueller Branch, Fehlermeldungen, Git-Status
+    - Explorer (Dateibaum links) - Dateien und Ordner des Projekts
+    - Editor-Bereich (Mitte) - Dateien öffnen, bearbeiten, Tabs
+    - Integriertes Terminal (unten) - Git-Befehle direkt im Editor ausführen
+    - Statusleiste (unten) - aktueller Branch, Fehlermeldungen, Git-Status
     - Befehlspalette öffnen und nutzen
         - Windows/Linux: `Ctrl+Shift+P`
         - Mac: `Cmd+Shift+P`
@@ -144,7 +144,7 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
         - Windows/Linux: `Ctrl+P`
         - Mac: `Cmd+P`
 * Das Repository lokal öffnen
-    - Was bedeutet „lokal"? – der Unterschied zwischen GitHub (remote) und eigenem Rechner (lokal)
+    - Was bedeutet „lokal"? - der Unterschied zwischen GitHub (remote) und eigenem Rechner (lokal)
     - `git clone <URL>` im Terminal ausführen
         - HTTPS-URL aus GitHub kopieren
         - Zielordner auf dem Rechner wählen
@@ -153,8 +153,8 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
         - Über Terminal: `code .`
     * Übung: Kurs-Repository klonen und in VS Code öffnen
 * Wichtige Erweiterungen für den Kurs
-    - GitHub Copilot – KI-Autovervollständigung im Editor
-    - GitHub Copilot Chat – Konversations-KI direkt in VS Code
+    - GitHub Copilot - KI-Autovervollständigung im Editor
+    - GitHub Copilot Chat - Konversations-KI direkt in VS Code
         - Chat öffnen (Copilot-Icon in der Seitenleiste)
         - Eine erste Frage stellen
         - Dateien als Kontext hinzufügen mit `#`
@@ -189,14 +189,14 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
 * Dokumentation im Repository-Kontext
     - README-Dateien (Root, Unterordner)
     - Wann schreibt man was in welche Datei?
-    * Übung: Praxisartefakt – eigene Projektbeschreibung oder Produktbeschreibung anlegen und versioniert speichern
+    * Übung: Praxisartefakt - eigene Projektbeschreibung oder Produktbeschreibung anlegen und versioniert speichern
 
 ---
 
 ## Versionsverwaltung mit Git
 
 ### Was ist Git?
-* Git vs. GitHub – der Unterschied
+* Git vs. GitHub - der Unterschied
     - Git: lokales Versionskontrollsystem
     - GitHub: Plattform zum Teilen und Zusammenarbeiten
 * Die drei Bereiche in Git
@@ -208,8 +208,8 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
 
 ### Änderungen erfassen und speichern
 * Status und Überblick behalten
-    - `git status` – was hat sich verändert?
-    - `git log --oneline` – was wurde zuletzt committed?
+    - `git status` - was hat sich verändert?
+    - `git log --oneline` - was wurde zuletzt committed?
 * Änderungen stagen und committen
     - `git add <datei>` / `git add .`
     - `git commit -m "Kurze, klare Commit-Nachricht"`
@@ -224,8 +224,8 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
     - Typischer Branch-Workflow im Kurs
 * Branches erstellen und wechseln
     - `git checkout -b <branchname>`
-    - `git branch` – welche Branches gibt es?
-    - `git checkout <branchname>` – Branch wechseln
+    - `git branch` - welche Branches gibt es?
+    - `git checkout <branchname>` - Branch wechseln
 * Änderungen zusammenführen
     - Pull Request auf GitHub öffnen
     - Review und Merge
@@ -237,4 +237,4 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
     - `git pull origin main`
 * Häufige Situationen
     - Was tun, wenn `git pull` Konflikte meldet?
-    - `.gitignore` – welche Dateien soll Git ignorieren?
+    - `.gitignore` - welche Dateien soll Git ignorieren?

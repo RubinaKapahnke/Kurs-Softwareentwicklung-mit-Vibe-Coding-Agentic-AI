@@ -1,7 +1,7 @@
 {
   "1": {
     "title": "Ankommen, Arbeitsumgebung einrichten, loslegen",
-    "goal": "Du verstehst den Ablauf des Kurses und weißt, wie es nach dem Onboarding weitergeht.",
+    "goal": "Du verstehst den Ablauf des Kurses und kannst das zu Grunde liegende Toolset bedienen.",
     "sections": [
       {
         "type": "lesson",
@@ -13,7 +13,7 @@
       "slides": [
         {
           "type": "content",
-          "title": "Willkommen im Kurs",
+          "title": "Willkommen im Kurs 🎉",
           "sections": [
             {
               "heading": "Schön, dass du da bist",
@@ -160,7 +160,7 @@
   },
   "2": {
     "title": "GitHub-Account anlegen",
-    "goal": null,
+    "goal": "Du hast einen GitHub-Account erstellt, deine E-Mail bestätigt und kannst den Account im Kurs nutzen.",
     "sections": [
       {
         "type": "lesson",
@@ -180,14 +180,43 @@
               ]
             },
             {
+              "heading": "Was macht GitHub besonders?",
+              "paragraphs": [
+                "GitHub ist nicht nur eine Code-Ablage, sondern heute das weltgrößte Netzwerk für Softwareentwicklung. Dort trifft sich die Community, entstehen Open-Source-Projekte, und viele Firmen nutzen es für ihre gesamte Produktentwicklung. Ein paar Dinge, die GitHub von anderen Plattformen abheben:"
+              ],
+              "unorderedItems": [
+                "**Riesiges Ökosystem**: Hunderte Millionen Repositories, Open-Source-Projekte und aktive Entwickler:innen weltweit.",
+                "**GitHub Copilot**: KI-gestützte Code-Unterstützung direkt im Editor (ein zentrales Thema in diesem Kurs).",
+                "**Alles an einem Ort**: Issues, Pull Requests, Code-Review, Projektboards und Deployments sind alles integriert.",
+                "**Kostenlos für den Einstieg**: Der kostenlose Plan reicht für diesen Kurs und für die meisten persönlichen Projekte vollständig aus."
+              ]
+            },
+            {
+              "heading": "Wo findest du Hilfe und kannst du mehr lernen?",
+              "paragraphs": [
+                "GitHub bietet umfangreiche Unterstützung und Lernmöglichkeiten:"
+              ],
+              "unorderedItems": [
+                "**Offizielle Dokumentation**: Alles, was du über GitHub wissen musst, steht in den [GitHub Docs](https://docs.github.com/de) (auf Deutsch verfügbar, durchsuchbar und sehr gut strukturiert). Ein zuverlässiger Nachschlageort für den gesamten Kurs.",
+                "**Support und Community**: Auf [support.github.com](https://support.github.com/) findest du Artikel zu häufigen Problemen, einen direkten Support-Kanal und die GitHub Community, in der du Fragen stellen und Antworten von anderen Nutzer:innen finden kannst.",
+                "**Lernen und Zertifizierungen**: GitHub bietet eigene Kurse an. Auf [learn.github.com/courses](https://learn.github.com/courses) und [learn.github.com/skills](https://learn.github.com/skills) kannst du gezielt Themen vertiefen und anerkannte GitHub-Zertifizierungen erwerben."
+              ]
+            },
+            {
               "heading": "Warum brauchen wir GitHub im Kurs?",
               "paragraphs": [
-                "GitHub ist kostenlos nutzbar. Du brauchst nur einen Account."
-              ],
-              "orderedItems": [
-                "Dein eigenes Übungs-Repository liegt auf GitHub.",
-                "Das gemeinsame Kurs-Repository liegt ebenfalls auf GitHub.",
-                "Die Trainerin sieht deine Commits und kann dir Feedback geben."
+                "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. Hier ist, warum du es brauchst:",
+                "**Dein eigenes Übungs-Repository**",
+                "Du legst auf GitHub dein persönliches Repository an. Dort speicherst du alle deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir.",
+                "**Das gemeinsame Kurs-Repository**",
+                "Der Kurs selbst liegt ebenfalls auf GitHub. Alle Aufgaben, Materialien und Updates kommen von dort. Du lernst, wie du Änderungen aus dem Kurs-Repo holst und mit deiner eigenen Arbeit kombinierst, genau wie in echten Projekten.",
+                "**Feedback und Zusammenarbeit**",
+                "Dozent:innen können deine Commits sehen und dir direkt am Code Rückmeldung geben. Das ist kein bürokratischer Schritt, sondern echte Praxis: So lernt man, wie Code-Review funktioniert.",
+                "**GitHub Copilot**",
+                "Ein zentrales Werkzeug im Kurs ist GitHub Copilot. Es ist direkt in VS Code integriert und setzt einen GitHub-Account voraus. Ohne Account kein Copilot.",
+                "**Dein Einstieg in echte Entwicklungspraxis**",
+                "GitHub zu nutzen bedeutet, von Tag 1 so zu arbeiten, wie Entwickler:innen es weltweit tun. Was du hier lernst, gilt genauso im nächsten Praktikum, im Job oder im eigenen Projekt.",
+                "GitHub ist im Basistarif kostenlos. Du brauchst nur einen Account."
               ]
             }
           ]
@@ -198,12 +227,14 @@
           "sections": [
             {
               "orderedItems": [
-                "Öffne github.com.",
-                "Klick auf Sign up.",
-                "Gib E-Mail und Passwort ein.",
-                "Wähle einen Benutzernamen.",
-                "Bestätige deine E-Mail.",
-                "Fertig."
+                "Öffne https://github.com.",
+                "Klicke auf Sign up.",
+                "Falls Sign up nicht sichtbar ist: Öffne direkt https://github.com/join.",
+                "Gib E-Mail, Passwort und Benutzernamen ein.",
+                "Schließe die angezeigten Verifizierungs-Schritte ab.",
+                "Öffne dein E-Mail-Postfach und bestätige deine E-Mail-Adresse.",
+                "Falls keine E-Mail ankommt: Prüfe den Spam-Ordner und fordere die E-Mail erneut an.",
+                "Nach der Bestätigung ist dein Account einsatzbereit."
               ]
             },
             {
@@ -211,7 +242,8 @@
               "unorderedItems": [
                 "Der GitHub-Benutzername ist sichtbar.",
                 "Nutze möglichst eine E-Mail-Adresse, die dauerhaft in deinem Besitz bleibt.",
-                "Link: https://github.com/join"
+                "Wähle einen Benutzernamen, den du auch später im Kurskontext verwenden möchtest.",
+                "Nutze einen Passwortmanager im Browser oder auf deinem Gerät, damit du dein Passwort sicher speichern kannst."
               ]
             }
           ]
@@ -223,7 +255,7 @@
           "options": [
             {
               "id": "a",
-              "label": "Als E-Mail-Dienst für Nachrichten an die Trainerin.",
+              "label": "Als E-Mail-Dienst für Nachrichten an Dozent*innen.",
               "isCorrect": false
             },
             {
@@ -235,10 +267,15 @@
               "id": "c",
               "label": "Als Video-Lernplattform für Kursinhalte.",
               "isCorrect": false
+            },
+            {
+              "id": "d",
+              "label": "Als lokales Programm auf deinem Rechner, das nur offline funktioniert.",
+              "isCorrect": false
             }
           ],
           "successMessage": "Richtig! GitHub ist deine Plattform für Code und Zusammenarbeit im Kurs.",
-          "errorMessage": "Nicht ganz. GitHub ist eine Plattform für Code - mit eingebautem Versionsverlauf und Zusammenarbeit."
+          "errorMessage": "Nicht ganz. Merke: GitHub ist die Plattform im Web, Git ist das Werkzeug für Versionskontrolle."
         }
       ]
     },
@@ -465,7 +502,12 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Lege auf GitHub ein neues Repository an.",
+      "Wähle einen passenden Namen, stelle auf Private und aktiviere die README."
+    ],
+    "taskNotes": []
   },
   "5": {
     "title": "Trainerin einladen",
@@ -512,7 +554,13 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Settings im Repository öffnen.",
+      "Zu Collaborators gehen.",
+      "Einladung an RubinaKapahnke senden."
+    ],
+    "taskNotes": []
   },
   "6": {
     "title": "Erste Übungen im eigenen Repository",
@@ -560,7 +608,13 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Datei uebung-01.md anlegen und committen.",
+      "README.md bearbeiten und ergänzen.",
+      "Prüfen, dass beide Commits sichtbar sind."
+    ],
+    "taskNotes": []
   },
   "7": {
     "title": "Was ist VS Code?",
@@ -674,7 +728,13 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "VS Code herunterladen.",
+      "Installer ausführen.",
+      "VS Code starten."
+    ],
+    "taskNotes": []
   },
   "9": {
     "title": "Was ist Git?",
@@ -822,7 +882,13 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Git herunterladen und installieren.",
+      "In VS Code ein Terminal öffnen.",
+      "`git --version` ausführen."
+    ],
+    "taskNotes": []
   },
   "11": {
     "title": "Kurs-Repo klonen",
@@ -857,7 +923,13 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Auf Einladung der Trainerin warten.",
+      "HTTPS-Clone-URL kopieren.",
+      "`git clone <URL>` ausführen und Ordner öffnen."
+    ],
+    "taskNotes": []
   },
   "12": {
     "title": "Kurs-Handhabung verstehen",
@@ -888,6 +960,13 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "NEXT_STEPS.md lesen.",
+      "README_UEBUNGEN.md lesen.",
+      "Grundregel prüfen: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.",
+      "Lernfortschrittsdatei bleibt zentral im Kurs-Repository."
+    ],
+    "taskNotes": []
   }
 }

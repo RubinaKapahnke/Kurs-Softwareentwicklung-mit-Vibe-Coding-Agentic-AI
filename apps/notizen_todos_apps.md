@@ -1,4 +1,4 @@
-# Onboarding App – Aufgaben & Planung
+﻿# Onboarding App - Aufgaben & Planung
 
 ## Architektur
 
@@ -66,22 +66,22 @@
 - [ ] Abschluss verlinkt klar auf NEXT_STEPS.md und course/uebungen/README_UEBUNGEN.md.
 - [ ] Build und Tests laufen für apps/onboarding stabil.
 
-## Archiv – Erledigte Aufgaben
+## Archiv - Erledigte Aufgaben
 
-### Phase 0 – Abnahmebasis
+### Phase 0 - Abnahmebasis
 - [x] ONB-001: PRD in technische Abnahmekriterien übersetzen
 
-### Phase 1 – Kritische Funktionalität
+### Phase 1 - Kritische Funktionalität
 - [x] ONB-010: Schritt-2-Persistenz und Restore korrigieren
 - [x] ONB-011: Schritt-2-Flow gegen PRD härten
 - [x] ONB-012: Rückkehrmodus und freie Schrittauswahl final validieren
 
-### Phase 2 – Inhaltliche Fertigstellung
+### Phase 2 - Inhaltliche Fertigstellung
 - [x] ONB-020: Brücke in den Kursfluss verbindlich machen
 - [x] ONB-021: Kurs-Repository vs. eigenes Repository didaktisch schärfen
 - [x] ONB-022: Startseite auf PRD-Kernaktionen fokussieren
 
-### Phase 3 – UX/Polish & Inhaltsverbesserung
+### Phase 3 - UX/Polish & Inhaltsverbesserung
 - [x] ONB-030: Kontrast überall erhöhen (Blau auf Blau, aktive Step-Zahlen, Fortschrittskomponente)
 - [x] ONB-031: Copy & Content nach Review überarbeiten (Umlaute, Repository, Bindestriche, GitHub-Docs, Email-CTA)
 - [x] ONB-033: Datenschutz & Urheberrechts-Hinweise korrigieren (Private-Hinweis, CC-Beispiele)

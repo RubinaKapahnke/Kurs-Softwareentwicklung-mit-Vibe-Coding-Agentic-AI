@@ -226,11 +226,7 @@ export class StepPageComponent {
   // Step 3: Unterschiedliche Inhalte für 'new' vs 'existing-beginner' vs 'existing-experienced'
   readonly step3Title = computed(() => {
     if (!this.isAccountChoiceStep()) return this.effectiveTitle();
-    const exp = this.state.step2Experience();
-    if (exp === 'new') return 'GitHub-Account anlegen';
-    if (exp === 'existing' || exp === 'existing-beginner') return 'GitHub Repos und Git verstehen';
-    if (exp === 'existing-experienced') return 'GitHub-Account verifizieren';
-    return this.step().title;
+    return 'GitHub Account'; // Statischer Titel unabhängig von step2Experience
   });
 
   readonly step3Goal = computed(() => {
@@ -278,11 +274,16 @@ export class StepPageComponent {
     if (exp === 'existing-beginner' || exp === 'existing-experienced') {
       return !this.step2CanComplete() || (this.mustCompleteLesson() && !this.lessonCompleted());
     }
-    if (exp === 'new') return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
+    if (exp === 'new' || exp === 'new-skip') {
+      return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
+    }
     return true;
   });
 
   private mustCompleteLesson(): boolean {
+    const exp = this.state.step2Experience();
+    // Für 'new-skip' Pfade ist die Lektion nicht erforderlich (Nutzer springt über)
+    if (exp === 'new-skip') return false;
     return Boolean(this.manifestEntry()?.requiresLessonCompletion) &&
       (!this.isAccountChoiceStep() || this.showAccountStepFullInstructions());
   }
@@ -308,6 +309,8 @@ export class StepPageComponent {
 
   selectRepoExperience(experience: 'beginner' | 'experienced'): void {
     this.state.setRepoExperience(experience);
+    // Bestätige Visibility für beide Pfade (beginner und experienced) automatisch
+    this.state.confirmGithubVisibility(true);
   }
 
   confirmVisibilityHint(): void {

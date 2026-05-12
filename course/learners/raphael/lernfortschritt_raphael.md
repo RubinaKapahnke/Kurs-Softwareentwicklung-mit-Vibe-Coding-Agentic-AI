@@ -54,7 +54,7 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 **Lernerfolgs-Kriterien**
 
 ---
-### 02.05. (Uebung 02 – Terminal-Befehle und Modul-Navigation)
+### 02.05. (Uebung 02 - Terminal-Befehle und Modul-Navigation)
 **Was habe ich heute gemacht?**
 - Terminal-Befehle wiederholt (`move`, `rmdir`) 
 - Modul-Zuordnungen für typische Situationen recherchiert
@@ -83,8 +83,8 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [x] PR auf GitHub ist erstellt
 
 **Lernerfolgs-Kriterien UE-M2-02:**
-- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
-- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle sassen aus dem Gedaechtnis.
+- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht - ohne einen Befehl zu kopieren.
+- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht - die Befehle sassen aus dem Gedaechtnis.
 - [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
 - [x] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
 - [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.

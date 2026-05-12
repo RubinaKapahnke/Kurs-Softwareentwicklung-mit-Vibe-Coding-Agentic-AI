@@ -1,4 +1,4 @@
-# Modulguide: VS Code
+﻿# Modulguide: VS Code
 
 Dieses Modul erklaert die Rolle von VS Code im Kurs und gibt dir einen kompakten Einstieg in die wichtigsten Funktionen des Editors.
 

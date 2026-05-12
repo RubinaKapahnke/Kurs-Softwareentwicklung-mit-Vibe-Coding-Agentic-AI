@@ -1,4 +1,4 @@
-# Ein GitHub-Repository erstellen
+﻿# Ein GitHub-Repository erstellen
 
 Ein Repository ist dein persönlicher Arbeitsbereich auf GitHub. Dort speicherst du alle deine Lösungen zu Kursübungen mit vollständigem Änderungsverlauf.
 
@@ -56,7 +56,7 @@ Die README.md kannst du anklicken und mit dem Stift-Icon bearbeiten - das machst
 Stelle sicher, dass du eingeloggt bist. Das + ist in der GitHub-Toolbar oben rechts.
 
 **Problem: Der Repository-Name ist bereits vergeben**  
-Kein Problem – füge einfach eine Zahl hinzu: `vibe-coding-uebungen-2025`
+Kein Problem - füge einfach eine Zahl hinzu: `vibe-coding-uebungen-2025`
 
 **Problem: Ich sehe keinen „Create repository"-Button**  
 Versuche es direkt unter [github.com/new](https://github.com/new).
@@ -67,4 +67,4 @@ Versuche es direkt unter [github.com/new](https://github.com/new).
 
 Jetzt hast du dein Repository. Im nächsten Schritt:
 1. Du lädst die Trainerin als Collaborator ein.
-2. Du machst deine ersten zwei Übungen direkt im Browser – ohne noch etwas installieren zu müssen.
+2. Du machst deine ersten zwei Übungen direkt im Browser - ohne noch etwas installieren zu müssen.

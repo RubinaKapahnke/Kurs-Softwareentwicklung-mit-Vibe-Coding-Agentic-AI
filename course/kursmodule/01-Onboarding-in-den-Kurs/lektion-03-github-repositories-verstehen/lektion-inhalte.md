@@ -1,4 +1,4 @@
-# Lektion 03: GitHub-Repositories und Git verstehen
+﻿# Lektion 03: GitHub-Repositories und Git verstehen
 
 ## Ziel
 

@@ -1,4 +1,4 @@
-# Programmierlogik: KI-Code lesen und verbessern
+﻿# Programmierlogik: KI-Code lesen und verbessern
 
 Diese Datei ist die praktische Fortsetzung zu den Grundlagen. Ziel ist nicht, sofort perfekten Code zu schreiben, sondern KI-Code systematisch zu verstehen und gezielt zu verbessern.
 
