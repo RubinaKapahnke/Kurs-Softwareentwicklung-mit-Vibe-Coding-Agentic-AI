@@ -9,6 +9,8 @@ export interface StepManifestEntry {
   sections: StepManifestSection[];
   requiresLessonCompletion?: boolean;
   lessonFlow?: OnboardingLessonFlow | null;
+  tasks?: string[] | null;
+  taskNotes?: OnboardingLessonContentSection[] | null;
 }
 
 export type StepManifest = Record<number, StepManifestEntry>;

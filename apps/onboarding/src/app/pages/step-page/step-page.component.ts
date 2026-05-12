@@ -42,7 +42,6 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
   styleUrl: './step-page.component.scss'
 })
 export class StepPageComponent {
-  private readonly subheadingPrefix = '__subheading__';
   private readonly document = inject(DOCUMENT);
   private readonly http = inject(HttpClient);
   private readonly route = inject(ActivatedRoute);
@@ -67,17 +66,6 @@ export class StepPageComponent {
     this.lessonCompleted.set(false);
     queueMicrotask(() => this.scrollPageTop());
   });
-  private readonly loadMarkdownTasksOnStepChange = effect(() => {
-    const entry = this.manifestEntry();
-    const currentStep = this.step();
-    const tasksSection = entry?.sections.find(s => s.type === 'tasks');
-    if (tasksSection) {
-      this.loadTasksFromFile(tasksSection.file, currentStep);
-    } else {
-      this.markdownTasks.set(null);
-    }
-  });
-  private markdownTaskRequestToken = 0;
 
   private getCourseId(): string {
     return this.route.parent?.snapshot.paramMap.get('courseId') ?? this.fallbackCourseId;
@@ -98,10 +86,8 @@ export class StepPageComponent {
   readonly stepManifest = signal<StepManifest | null>(null);
   readonly lessonCompleted = signal(false);
   readonly manifestEntry = computed(() => this.stepManifest()?.[this.step().id] ?? null);
-  readonly markdownTasks = signal<string[] | null>(null);
-  readonly markdownTaskNotes = signal<OnboardingLessonContentSection[] | null>(null);
-  readonly effectiveTasks = computed(() => this.markdownTasks() ?? this.step().tasks);
-  readonly effectiveTaskNotes = computed(() => this.markdownTaskNotes() ?? []);
+  readonly effectiveTasks = computed(() => this.manifestEntry()?.tasks ?? this.step().tasks);
+  readonly effectiveTaskNotes = computed(() => (this.manifestEntry()?.taskNotes ?? []) as OnboardingLessonContentSection[]);
   readonly effectiveLessonFlow = computed(() => {
     const manifestFlow = this.manifestEntry()?.lessonFlow ?? null;
     const manifestRequiresLessonCompletion = Boolean(this.manifestEntry()?.requiresLessonCompletion);
@@ -135,6 +121,11 @@ export class StepPageComponent {
     }
 
     if (this.isAccountChoiceStep() && !this.showAccountStepFullInstructions()) {
+      return null;
+    }
+
+    // Erfahrene User, die auf den Neu-Pfad gewechselt haben: Lektion überspringen
+    if (this.isAccountChoiceStep() && this.state.step2Experience() === 'new-skip') {
       return null;
     }
 
@@ -178,6 +169,7 @@ export class StepPageComponent {
   readonly showAccountStepFullInstructions = computed(() =>
     !this.isAccountChoiceStep() || (
       this.state.step2Experience() === 'new' ||
+      this.state.step2Experience() === 'new-skip' ||
       this.state.step2Experience() === 'existing-beginner'
     )
   );
@@ -409,179 +401,5 @@ export class StepPageComponent {
 
   scrollToFollowUpContent(): void {
     this.onLessonFinished();
-  }
-
-  private loadTasksFromFile(file: string, step: OnboardingStep): void {
-    const requestToken = ++this.markdownTaskRequestToken;
-    this.http.get(file, { responseType: 'text' }).subscribe({
-      next: (markdown) => {
-        if (requestToken !== this.markdownTaskRequestToken) return;
-        const extracted = this.extractTaskContentFromMarkdown(markdown);
-        this.markdownTasks.set(extracted.tasks.length > 0 ? extracted.tasks : step.tasks);
-        this.markdownTaskNotes.set(extracted.notes);
-      },
-      error: () => {
-        if (requestToken !== this.markdownTaskRequestToken) return;
-        this.markdownTasks.set(step.tasks);
-        this.markdownTaskNotes.set([]);
-      }
-    });
-  }
-
-  private sanitizeInlineMarkdown(text: string): string {
-    return text.trim();
-  }
-
-  private headingToTone(headingText: string): OnboardingLessonContentSection['tone'] {
-    const normalized = headingText.trim().toLowerCase();
-    if (normalized.startsWith('erfolg:') || normalized.startsWith('ok:') || normalized.startsWith('gruen:')) {
-      return 'success';
-    }
-    if (normalized.startsWith('info:') || normalized.startsWith('tipp:')) {
-      return 'tip';
-    }
-    if (normalized.startsWith('blau:')) {
-      return 'info';
-    }
-    if (normalized.startsWith('achtung:')) {
-      return 'danger';
-    }
-    if (normalized.startsWith('wichtig:') || normalized.startsWith('hinweis:')) {
-      return 'highlight';
-    }
-    return undefined;
-  }
-
-  private stripTonePrefixFromHeading(headingText: string): string {
-    return headingText.replace(/^(Wichtig|Hinweis|Achtung|Erfolg|OK|Gruen|Info|Tipp|Blau)\s*:\s*/i, '').trim();
-  }
-
-  private parseHeading(line: string): { level: number; text: string } | null {
-    const match = line.match(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
-    if (!match) {
-      return null;
-    }
-    return { level: match[1].length, text: match[2].trim() };
-  }
-
-  private parseTaskNoteSections(lines: string[]): OnboardingLessonContentSection[] {
-    const sections: OnboardingLessonContentSection[] = [];
-    let current: { heading?: string; tone?: OnboardingLessonContentSection['tone']; paragraphs: string[]; orderedItems: string[] } = {
-      heading: undefined,
-      tone: undefined,
-      paragraphs: [],
-      orderedItems: [],
-    };
-
-    const pushCurrent = () => {
-      if (!current.heading && current.paragraphs.length === 0 && current.orderedItems.length === 0) {
-        return;
-      }
-      const next: OnboardingLessonContentSection = {};
-      if (current.heading) next.heading = current.heading;
-      if (current.tone) next.tone = current.tone;
-      if (current.paragraphs.length > 0) next.paragraphs = current.paragraphs;
-      if (current.orderedItems.length > 0) next.orderedItems = current.orderedItems;
-      sections.push(next);
-    };
-
-    for (const rawLine of lines) {
-      const heading = this.parseHeading(rawLine);
-      if (heading) {
-        if (heading.level === 3) {
-          pushCurrent();
-          const headingText = this.sanitizeInlineMarkdown(heading.text);
-          current = {
-            heading: this.stripTonePrefixFromHeading(headingText) || headingText,
-            tone: this.headingToTone(headingText),
-            paragraphs: [],
-            orderedItems: [],
-          };
-        } else if (heading.level === 4) {
-          current.paragraphs.push(`${this.subheadingPrefix}${this.sanitizeInlineMarkdown(heading.text)}`);
-        }
-        continue;
-      }
-
-      const line = rawLine.trim();
-      if (!line) {
-        continue;
-      }
-
-      const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
-      if (orderedMatch) {
-        current.orderedItems.push(this.sanitizeInlineMarkdown(orderedMatch[1]));
-        continue;
-      }
-
-      const bulletMatch = line.match(/^[-*]\s+(.+)$/);
-      if (bulletMatch) {
-        current.paragraphs.push(`- ${this.sanitizeInlineMarkdown(bulletMatch[1])}`);
-        continue;
-      }
-
-      current.paragraphs.push(this.sanitizeInlineMarkdown(line));
-    }
-
-    pushCurrent();
-    return sections;
-  }
-
-  private extractTaskContentFromMarkdown(markdown: string): { tasks: string[]; notes: OnboardingLessonContentSection[] } {
-    const lines = markdown.split(/\r?\n/);
-    const taskSectionLines = this.findTaskSectionLines(lines);
-    const normalizedLines = taskSectionLines.length > 0 ? taskSectionLines : lines;
-
-    const checkboxTasks = normalizedLines
-      .map((line) => line.match(/^\s*[-*]\s+\[(?: |x|X)\]\s+(.+)$/)?.[1]?.trim() ?? null)
-      .filter((value): value is string => Boolean(value));
-
-    if (checkboxTasks.length > 0) {
-      const noteLines = normalizedLines.filter((line) => !/^\s*[-*]\s+\[(?: |x|X)\]\s+(.+)$/i.test(line));
-      return {
-        tasks: checkboxTasks,
-        notes: this.parseTaskNoteSections(noteLines),
-      };
-    }
-
-    const listTasks = normalizedLines
-      .map((line) => {
-        const ordered = line.match(/^\s*\d+\.\s+(.+)$/);
-        if (ordered?.[1]) {
-          return ordered[1].trim();
-        }
-
-        const bullet = line.match(/^\s*[-*]\s+(.+)$/);
-        if (bullet?.[1] && !bullet[1].trim().startsWith('[')) {
-          return bullet[1].trim();
-        }
-
-        return null;
-      })
-      .filter((value): value is string => Boolean(value));
-
-    const noteLines = normalizedLines.filter((line) => !/^\s*\d+\.\s+(.+)$/i.test(line) && !/^\s*[-*]\s+(.+)$/i.test(line));
-    return {
-      tasks: listTasks,
-      notes: this.parseTaskNoteSections(noteLines),
-    };
-  }
-
-  private findTaskSectionLines(lines: string[]): string[] {
-    const startIndex = lines.findIndex((line) => /^\s*#{2,6}\s+Aufgaben\b/i.test(line));
-    if (startIndex === -1) {
-      return [];
-    }
-
-    const sectionLines: string[] = [];
-    for (let index = startIndex + 1; index < lines.length; index++) {
-      const line = lines[index];
-      if (/^\s*#{2,6}\s+/.test(line)) {
-        break;
-      }
-      sectionLines.push(line);
-    }
-
-    return sectionLines;
   }
 }

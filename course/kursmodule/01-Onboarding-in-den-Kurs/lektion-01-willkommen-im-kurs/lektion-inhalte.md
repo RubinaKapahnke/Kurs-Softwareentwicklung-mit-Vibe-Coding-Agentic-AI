@@ -1,10 +1,10 @@
-# Lektion 01: Willkommen im Kurs 🎉
+# Lektion 01: Ankommen, Arbeitsumgebung einrichten, loslegen
 
 ## Ziel
 
-Du verstehst den Ablauf des Kurses und weißt, wie es nach dem Onboarding weitergeht.
+Du verstehst den Ablauf des Kurses und kannst das zu Grunde liegende Toolset bedienen.
 
-## Willkommen im Kurs
+## Willkommen im Kurs 🎉
 
 
 ### Schön, dass du da bist 
@@ -25,12 +25,12 @@ Dieser Kurs ist für Menschen gedacht, die praxisnah lernen möchten, wie modern
 
 ### Worauf du dich auch einstellen musst
 
-- Regelmäßige Mitarbeit ist wichtig: Der Kurs lebt davon, dass du die Übungen wirklich umsetzt.
-- Eigenständiges Ausprobieren gehört dazu, auch wenn sich etwas anfangs ungewohnt anfühlt.
-- Das Konzept funktioniert nur, wenn du bei Fragen selbst recherchierst und die bereitgestellten Unterlagen aktiv zum Nachlesen nutzt.
-- Genau diese Eigeninitiative ist eine wichtige Grundlage, um in diesem schnelllebigen Feld langfristig erfolgreich zu werden und zu bleiben.
-- Wenn du lernst, dir selbst zu helfen, kannst du mit den heutigen Technologien sehr schnell funktionierende Software umsetzen und auf den Markt bringen.
-- Rückfragen, Feedback und kleine Korrekturschleifen sind normal und ausdrücklich gewünscht.
+- **Regelmäßige Mitarbeit ist wichtig:** Der Kurs lebt davon, dass du die Übungen wirklich umsetzt.
+- **Eigenständiges Ausprobieren** gehört dazu, auch wenn sich etwas anfangs ungewohnt anfühlt.
+- Das **Konzept funktioniert** nur, wenn du bei Fragen selbst **recherchierst** und die bereitgestellten **Unterlagen** aktiv zum Nachlesen nutzt.
+- Genau diese **Eigeninitiative ist eine wichtige Grundlage**, um in diesem schnelllebigen Feld **langfristig erfolgreich** zu werden und zu bleiben.
+- Wenn du lernst, **dir selbst zu helfen**, kannst du mit den heutigen Technologien sehr **schnell funktionierende Software umsetzen** und auf den Markt bringen.
+- Rückfragen, Feedback und kleine Korrekturschleifen sind **normal und ausdrücklich gewünscht**.
 
 Wir lassen dabei niemanden hilflos zurück. Du bekommst Unterstützung, Orientierung und Feedback, aber der entscheidende Lernfortschritt entsteht durch deine eigene aktive Mitarbeit.
 

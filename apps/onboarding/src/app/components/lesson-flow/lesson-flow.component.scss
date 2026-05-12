@@ -33,11 +33,31 @@
   color: var(--color-primary-dark);
 }
 
+.lesson-flow__header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.55rem;
+}
+
 .lesson-flow__step-dots {
   display: flex;
   gap: 6px;
-  margin-top: 0.55rem;
   align-items: center;
+}
+
+.lesson-flow__slide-counter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 .lesson-flow__step-dot {
@@ -577,20 +597,3 @@
   gap: 0.7rem;
 }
 
-.lesson-flow__continue-label {
-  line-height: 1;
-}
-
-.lesson-flow__continue-progress {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0.45rem;
-  min-width: 2.35rem;
-  padding: 0.1rem 0.5rem;
-  border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--color-surface) 24%, transparent);
-  color: var(--color-on-dark);
-  font-size: 0.82em;
-  line-height: 1;
-}

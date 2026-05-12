@@ -96,8 +96,16 @@
                     <span class="voucher-success-badge__title">Zugang aktiv</span>
                     <p class="voucher-success-badge__text">
                       Dein Zugang ist freigeschaltet. Starte jetzt mit dem Kurs oder setze deinen letzten Stand fort.
+                    </p>                  @if (hasProgress()) {
+                    <p class="voucher-success-badge__progress">
+                      <mat-icon aria-hidden="true">bookmark</mat-icon>
+                      @if (isCompleted()) {
+                        Alle {{ stepCount }} Schritte abgeschlossen.
+                      } @else {
+                        Zuletzt bei Schritt {{ resumeStep() }} von {{ stepCount }} ({{ completedCount() }} erledigt).
+                      }
                     </p>
-                  }
+                  }                  }
                 </div>
               </div>
               <div class="voucher-panel__actions">
@@ -129,15 +137,6 @@
       [selectedCourseIsLive]="selectedCourseIsLive()"
       [selectedCourseModules]="selectedCourseModules()"
     ></app-course-modules-section>
-  </div>
-
-  <!-- ── Onboarding-Ablauf ──────────────────────────────────── -->
-  <div id="ablauf">
-    <app-course-journey-section
-      [stepCount]="stepCount"
-      [selectedCourseIsLive]="selectedCourseIsLive()"
-      [selectedOnboardingSteps]="selectedOnboardingSteps()"
-    ></app-course-journey-section>
   </div>
 
   <!-- ── Für wen ─────────────────────────────────────────────── -->

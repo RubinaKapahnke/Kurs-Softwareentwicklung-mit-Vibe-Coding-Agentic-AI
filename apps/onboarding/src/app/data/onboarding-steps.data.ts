@@ -82,7 +82,9 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     title: 'GitHub-Account anlegen',
     goal: '',
     tasks: [
-      'Lege auf GitHub einen Account an.'
+      'GitHub-Account auf github.com erstellen',
+      'Sicheres Passwort setzen',
+      'Zwei-Faktor-Authentifizierung (2FA) aktivieren',
     ],
     fallbackHelp: [],
     successCriterion: '',

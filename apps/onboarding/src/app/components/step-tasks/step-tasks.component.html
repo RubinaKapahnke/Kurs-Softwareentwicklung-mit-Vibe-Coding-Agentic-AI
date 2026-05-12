@@ -48,6 +48,14 @@
               }
             </ol>
           }
+
+          @if (section.unorderedItems?.length) {
+            <ul>
+              @for (item of section.unorderedItems; track item) {
+                <li [innerHTML]="linkifyText(item)"></li>
+              }
+            </ul>
+          }
         </article>
       }
     </div>
@@ -55,7 +63,7 @@
 
   <div class="subtask-list" role="list">
     @if (isAccountChoiceStep()) {
-      @if (step2Experience() === 'new') {
+      @if (step2Experience() === 'new' || step2Experience() === 'new-skip') {
         @for (task of tasks(); track task; let index = $index) {
           <mat-checkbox
             class="subtask-item"
@@ -71,7 +79,7 @@
           role="listitem"
           [checked]="isSubtaskDone()(0)"
           (change)="onSubtaskChange(0, $event.checked)">
-          Stelle sicher, dass du Zugriff auf deinen Account hast und ein sicheres Passwort verwendest.
+          Stelle sicher, dass du Zugriff auf deinen Account hast, ein sicheres Passwort verwendest und 2FA eingerichtet ist.
         </mat-checkbox>
       }
     }

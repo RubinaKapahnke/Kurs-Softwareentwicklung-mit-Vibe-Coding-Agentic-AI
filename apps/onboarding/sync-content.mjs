@@ -152,6 +152,47 @@ function parseSlideSections(lines) {
   return sections;
 }
 
+function findTaskSectionLines(lines) {
+  const startIndex = lines.findIndex((line) => /^\s*#{2,6}\s+Aufgaben\b/i.test(line));
+  if (startIndex === -1) return [];
+  const sectionLines = [];
+  for (let i = startIndex + 1; i < lines.length; i++) {
+    if (/^\s*#{2,6}\s+/.test(lines[i])) break;
+    sectionLines.push(lines[i]);
+  }
+  return sectionLines;
+}
+
+function extractTasksFromMarkdown(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const taskSectionLines = findTaskSectionLines(lines);
+  const normalizedLines = taskSectionLines.length > 0 ? taskSectionLines : lines;
+
+  const checkboxTasks = normalizedLines
+    .map((line) => line.match(/^\s*[-*]\s+\[(?: |x|X)\]\s+(.+)$/)?.[1]?.trim() ?? null)
+    .filter(Boolean);
+
+  if (checkboxTasks.length > 0) {
+    const noteLines = normalizedLines.filter((line) => !/^\s*[-*]\s+\[(?: |x|X)\]\s+(.+)$/i.test(line));
+    return { tasks: checkboxTasks, taskNotes: parseSlideSections(noteLines) };
+  }
+
+  const listTasks = normalizedLines
+    .map((line) => {
+      const ordered = line.match(/^\s*\d+\.\s+(.+)$/);
+      if (ordered?.[1]) return ordered[1].trim();
+      const bullet = line.match(/^\s*[-*]\s+(.+)$/);
+      if (bullet?.[1] && !bullet[1].trim().startsWith('[')) return bullet[1].trim();
+      return null;
+    })
+    .filter(Boolean);
+
+  const noteLines = normalizedLines.filter(
+    (line) => !/^\s*\d+\.\s+(.+)$/i.test(line) && !/^\s*[-*]\s+(.+)$/i.test(line)
+  );
+  return { tasks: listTasks, taskNotes: parseSlideSections(noteLines) };
+}
+
 function parseQuizSlideFromMarkdown(blockTitle, contentLines, sourceLabel) {
   const title = sanitizeInlineMarkdown(blockTitle.replace(/^quiz\s*[:\-]?\s*/i, '').trim()) || 'Quiz';
   let prompt = '';
@@ -508,6 +549,8 @@ async function syncLerninhalteManifest() {
     let goal = null;
     let requiresLessonCompletion = false;
     let lessonFlow = null;
+    let manifestTasks = null;
+    let manifestTaskNotes = null;
 
     for (const [filename, sectionType] of Object.entries(SECTION_TYPE_MAP)) {
       if (!filesInFolder.includes(filename)) continue;
@@ -547,6 +590,15 @@ async function syncLerninhalteManifest() {
         }
       }
 
+      // Pre-parse tasks from aufgaben.md for manifest embedding
+      if (sectionType === 'tasks') {
+        const extracted = extractTasksFromMarkdown(content);
+        if (extracted.tasks.length > 0) {
+          manifestTasks = extracted.tasks;
+          manifestTaskNotes = extracted.taskNotes;
+        }
+      }
+
       // Copy file to public/content/step-NN/
       await fs.mkdir(targetDir, { recursive: true });
       const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: ${folder.name}/${filename} -->\n\n`;
@@ -562,7 +614,12 @@ async function syncLerninhalteManifest() {
     }
 
     if (sections.length > 0) {
-      manifest[stepId] = { title, goal, sections, lessonFlow, requiresLessonCompletion };
+      const entry = { title, goal, sections, lessonFlow, requiresLessonCompletion };
+      if (manifestTasks !== null) {
+        entry.tasks = manifestTasks;
+        entry.taskNotes = manifestTaskNotes;
+      }
+      manifest[stepId] = entry;
     }
   }
 

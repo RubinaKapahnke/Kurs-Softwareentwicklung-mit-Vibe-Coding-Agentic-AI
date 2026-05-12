@@ -1,17 +1,12 @@
 import { Routes } from '@angular/router';
 
 import { stepAccessGuard } from './guards/step-access.guard';
-import { KursstartComponent } from './pages/kursstart/kursstart.component';
-import { OnboardingShellComponent } from './pages/onboarding-shell/onboarding-shell.component';
-import { StartseiteComponent } from './pages/startseite/startseite.component';
-import { StepPageComponent } from './pages/step-page/step-page.component';
-import { ZusammenfassungComponent } from './pages/zusammenfassung/zusammenfassung.component';
 
 export const routes: Routes = [
 	{
 		path: '',
 		pathMatch: 'full',
-		component: StartseiteComponent
+		loadComponent: () => import('./pages/startseite/startseite.component').then((m) => m.StartseiteComponent)
 	},
 	{
 		path: 'kursstart',
@@ -20,11 +15,11 @@ export const routes: Routes = [
 	},
 	{
 		path: 'kurse/:courseId',
-		component: KursstartComponent
+		loadComponent: () => import('./pages/kursstart/kursstart.component').then((m) => m.KursstartComponent)
 	},
 	{
 		path: 'kurse/:courseId/onboarding',
-		component: OnboardingShellComponent,
+		loadComponent: () => import('./pages/onboarding-shell/onboarding-shell.component').then((m) => m.OnboardingShellComponent),
 		children: [
 			{
 				path: '',
@@ -33,12 +28,12 @@ export const routes: Routes = [
 			},
 			{
 				path: 'step/:id',
-				component: StepPageComponent,
+				loadComponent: () => import('./pages/step-page/step-page.component').then((m) => m.StepPageComponent),
 				canActivate: [stepAccessGuard]
 			},
 			{
 				path: 'zusammenfassung',
-				component: ZusammenfassungComponent
+				loadComponent: () => import('./pages/zusammenfassung/zusammenfassung.component').then((m) => m.ZusammenfassungComponent)
 			}
 		]
 	},

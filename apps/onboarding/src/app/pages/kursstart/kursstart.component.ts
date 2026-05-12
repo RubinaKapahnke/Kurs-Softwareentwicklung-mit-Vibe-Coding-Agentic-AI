@@ -95,6 +95,7 @@ export class KursstartComponent {
   );
   readonly selectedCourseIsLive = computed(() => this.selectedCourse().status === 'live');
 
+  readonly completedCount = computed(() => this.state.getCompletedCount());
   readonly hasProgress = computed(() => this.state.getCompletedCount() > 0);
   readonly isCompleted = computed(() => this.state.getCompletedCount() >= ONBOARDING_STEP_COUNT);
   readonly resumeStep = computed(() => this.state.getFirstIncompleteStepId() ?? ONBOARDING_STEP_COUNT);
@@ -103,7 +104,7 @@ export class KursstartComponent {
     : `/kurse/${this.selectedCourse().id}/onboarding/step/${this.resumeStep()}`);
   readonly resumeLabel = computed(() =>
     this.isCompleted() ? 'Zur Zusammenfassung'
-    : this.hasProgress() ? 'Modul 1 fortsetzen'
+    : this.voucherValidated() ? 'Kurs fortsetzen'
     : 'Kurs starten'
   );
 

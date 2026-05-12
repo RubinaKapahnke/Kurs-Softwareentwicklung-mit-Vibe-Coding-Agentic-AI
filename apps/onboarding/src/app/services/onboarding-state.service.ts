@@ -13,7 +13,7 @@ const ACCOUNT_SETUP_STEP_ID = 2;
 /** MVP: Ein einziger gültiger Code. Wird später durch echte API-Validierung ersetzt. */
 const VALID_VOUCHER_CODE = '90001';
 
-export type Step2ExperienceChoice = 'new' | 'existing' | 'existing-beginner' | 'existing-experienced' | null;
+export type Step2ExperienceChoice = 'new' | 'new-skip' | 'existing' | 'existing-beginner' | 'existing-experienced' | null;
 export type ParticipationStatus = 'active' | 'new' | null;
 export type HasVoucherAnswer = boolean | null;
 
@@ -143,7 +143,7 @@ export class OnboardingStateService {
   validateVoucher(code: string): boolean {
     if (code.trim() === VALID_VOUCHER_CODE) {
       this._voucherValidated.set(true);
-      sessionStorage.setItem(this.storageKey(KEY_VOUCHER_SUFFIX), 'ok');
+      localStorage.setItem(this.storageKey(KEY_VOUCHER_SUFFIX), 'ok');
       return true;
     }
     return false;
@@ -159,14 +159,14 @@ export class OnboardingStateService {
     // The visibility confirmation is only valid for specialized existing-account paths.
     if (choice === null || choice === 'new' || choice === 'existing') {
       this._githubVisibilityConfirmed.set(false);
-      sessionStorage.removeItem(this.storageKey(KEY_VISIBILITY_SUFFIX));
+      localStorage.removeItem(this.storageKey(KEY_VISIBILITY_SUFFIX));
     }
 
     this._step2Experience.set(choice);
     if (choice !== null) {
-      sessionStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), choice);
+      localStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), choice);
     } else {
-      sessionStorage.removeItem(this.storageKey(KEY_EXP_SUFFIX));
+      localStorage.removeItem(this.storageKey(KEY_EXP_SUFFIX));
     }
   }
 
@@ -179,12 +179,12 @@ export class OnboardingStateService {
     }
 
     this._step2Experience.set(choice);
-    sessionStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), choice);
+    localStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), choice);
   }
 
   confirmGithubVisibility(confirmed: boolean): void {
     this._githubVisibilityConfirmed.set(confirmed);
-    sessionStorage.setItem(this.storageKey(KEY_VISIBILITY_SUFFIX), confirmed ? '1' : '0');
+    localStorage.setItem(this.storageKey(KEY_VISIBILITY_SUFFIX), confirmed ? '1' : '0');
   }
 
   canCompleteStep2(): boolean {
@@ -199,16 +199,13 @@ export class OnboardingStateService {
   resetStep2ToNewPath(): void {
     const wasExperienced = this._step2Experience() === 'existing-experienced';
     this.resetAccountSetupProgress();
-    this._step2Experience.set('new');
-    // Für erfahrene User, die zu neuem Account wechseln: Subtasks sind direkt erledigt
-    // weil sie nicht die Anfänger-Tasks durchlaufen brauchen
-    if (wasExperienced) {
-      this.setSubtaskDone(ACCOUNT_SETUP_STEP_ID, 0, true);
-    }
+    // Erfahrene User, die zu neuem Account wechseln, überspringen den Lesson-Flow
+    const newChoice: Step2ExperienceChoice = wasExperienced ? 'new-skip' : 'new';
+    this._step2Experience.set(newChoice);
     // Bei Wechsel auf neuen Account wird die explizite Sichtbarkeitsbestaetigung immer zurueckgesetzt.
     this._githubVisibilityConfirmed.set(false);
-    sessionStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), 'new');
-    sessionStorage.removeItem(this.storageKey(KEY_VISIBILITY_SUFFIX));
+    localStorage.setItem(this.storageKey(KEY_EXP_SUFFIX), newChoice);
+    localStorage.removeItem(this.storageKey(KEY_VISIBILITY_SUFFIX));
   }
 
   getProgressPercent(): number {
@@ -216,17 +213,17 @@ export class OnboardingStateService {
   }
 
   private loadCompletedSteps(): Set<number> {
-    const stored = sessionStorage.getItem(this.storageKey(KEY_COMPLETED_SUFFIX));
+    const stored = localStorage.getItem(this.storageKey(KEY_COMPLETED_SUFFIX));
     if (!stored) return new Set();
     return new Set(stored.split(',').map(Number).filter(n => Number.isInteger(n) && n >= 1 && n <= ONBOARDING_STEP_COUNT));
   }
 
   private persistCompletedSteps(): void {
-    sessionStorage.setItem(this.storageKey(KEY_COMPLETED_SUFFIX), [...this._completedSteps()].join(','));
+    localStorage.setItem(this.storageKey(KEY_COMPLETED_SUFFIX), [...this._completedSteps()].join(','));
   }
 
   private loadCompletedSubtasks(): Record<number, Set<number>> {
-    const stored = sessionStorage.getItem(this.storageKey(KEY_SUBTASKS_SUFFIX));
+    const stored = localStorage.getItem(this.storageKey(KEY_SUBTASKS_SUFFIX));
     if (!stored) return {};
 
     try {
@@ -249,12 +246,13 @@ export class OnboardingStateService {
       (result, [stepId, indexes]) => ({ ...result, [stepId]: [...indexes].sort((a, b) => a - b) }),
       {}
     );
-    sessionStorage.setItem(this.storageKey(KEY_SUBTASKS_SUFFIX), JSON.stringify(serializable));
+    localStorage.setItem(this.storageKey(KEY_SUBTASKS_SUFFIX), JSON.stringify(serializable));
   }
 
   private loadExp(): Step2ExperienceChoice {
-    const stored = sessionStorage.getItem(this.storageKey(KEY_EXP_SUFFIX));
+    const stored = localStorage.getItem(this.storageKey(KEY_EXP_SUFFIX));
     return stored === 'new' ||
+      stored === 'new-skip' ||
       stored === 'existing' ||
       stored === 'existing-beginner' ||
       stored === 'existing-experienced'
@@ -263,11 +261,11 @@ export class OnboardingStateService {
   }
 
   private loadVisibility(): boolean {
-    return sessionStorage.getItem(this.storageKey(KEY_VISIBILITY_SUFFIX)) === '1';
+    return localStorage.getItem(this.storageKey(KEY_VISIBILITY_SUFFIX)) === '1';
   }
 
   private loadVoucherValidated(): boolean {
-    return sessionStorage.getItem(this.storageKey(KEY_VOUCHER_SUFFIX)) === 'ok';
+    return localStorage.getItem(this.storageKey(KEY_VOUCHER_SUFFIX)) === 'ok';
   }
 
   private reloadCourseScopedState(): void {

@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { marked } from 'marked';
-import DOMPurify from 'dompurify';
 
 @Component({
   selector: 'app-markdown-view',
@@ -78,16 +76,22 @@ export class MarkdownViewComponent implements OnChanges {
     this.html = null;
     this.http.get(src, { responseType: 'text' }).subscribe({
       next: (md) => {
-        void Promise.resolve(marked.parse(md))
-          .then((rawHtml) => {
-            const safeHtml = DOMPurify.sanitize(rawHtml);
+        void (async () => {
+          try {
+            const [markedModule, domPurifyModule] = await Promise.all([
+              import('marked'),
+              import('dompurify')
+            ]);
+
+            const rawHtml = await Promise.resolve(markedModule.marked.parse(md));
+            const safeHtml = domPurifyModule.default.sanitize(rawHtml);
             this.html = this.sanitizer.bypassSecurityTrustHtml(safeHtml);
             this.loading = false;
-          })
-          .catch(() => {
+          } catch {
             this.error = true;
             this.loading = false;
-          });
+          }
+        })();
       },
       error: () => {
         this.error = true;
