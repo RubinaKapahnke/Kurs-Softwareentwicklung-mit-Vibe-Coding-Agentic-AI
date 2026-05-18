@@ -1,23 +1,23 @@
 ﻿# Uebung Meilenstein 3: Erfolgreich prompten
 
 ## Ziel
-Du lernst, wie du Prompts strukturiert aufbaust, iterativ verbesserst und dabei bewusst Kontext gibst – statt einfach drauf loszutippen und auf das Beste zu hoffen.
+Du lernst, wie du Prompts strukturiert aufbaust, iterativ verbesserst und dabei bewusst Kontext gibst - statt einfach drauf loszutippen und auf das Beste zu hoffen.
 
 ---
 
-## Vor dem Start – Checkliste
+## Vor dem Start - Checkliste
 
 - [ ] VS Code ist geoeffnet und du siehst den Repo-Ordner im Explorer (linke Leiste)
-- [ ] GitHub Copilot Chat ist aktiv – erkennbar am Chat-Symbol in der linken Leiste
+- [ ] GitHub Copilot Chat ist aktiv - erkennbar am Chat-Symbol in der linken Leiste
 - [ ] Du hast deine persoenliche Lernfortschrittsdatei gefunden: `course/learners/<dein-name>/lernfortschritt_<dein-name>.md`
 
 In dieser Uebung arbeitest du mit diesen Dateien:
-- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` – dort traegst du Beobachtungen ein
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` - dort traegst du Beobachtungen ein
 - Copilot Chat (kein Tab, sondern das Chat-Fenster links/rechts)
 
-> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+> **Wichtig - diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in `lernfortschritt_<dein-name>.md` ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
-> **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** In dieser Uebung geht es um persoenliche Beobachtungen waehrend du promptest – kein Ergebnis zum Abgeben, sondern ein Denktagebuch. Diese Eintraege gehoeren in deinen Lernstand, nicht in eine Aufgabenloesung.
+> **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** In dieser Uebung geht es um persoenliche Beobachtungen waehrend du promptest - kein Ergebnis zum Abgeben, sondern ein Denktagebuch. Diese Eintraege gehoeren in deinen Lernstand, nicht in eine Aufgabenloesung.
 
 ---
 
@@ -25,7 +25,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 Lies zuerst: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
-Behalte die Datei offen – du wirst waehrend der Aufgaben immer wieder darauf zurueckschauen.
+Behalte die Datei offen - du wirst waehrend der Aufgaben immer wieder darauf zurueckschauen.
 
 ---
 
@@ -48,7 +48,7 @@ Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Die vi
 
 ### 2. Eigenen Zero-Shot-Prompt schreiben und testen
 
-Schreibe einen **Zero-Shot-Prompt** – also einen Prompt ohne Beispiele und ohne Kontext-Baustein. Waehle eine der folgenden Aufgaben:
+Schreibe einen **Zero-Shot-Prompt** - also einen Prompt ohne Beispiele und ohne Kontext-Baustein. Waehle eine der folgenden Aufgaben:
 
 - "Erklaere mir, was ein Branch in Git ist."
 - "Was ist der Unterschied zwischen `git add` und `git commit`?"
@@ -57,7 +57,7 @@ Schreibe einen **Zero-Shot-Prompt** – also einen Prompt ohne Beispiele und ohn
 **So oeffnest du Copilot Chat:**
 
 1. Klicke auf das Chat-Symbol in der linken VS Code Leiste (Sprechblase)
-2. Ein Chat-Fenster oeffnet sich – dort kannst du tippen
+2. Ein Chat-Fenster oeffnet sich - dort kannst du tippen
 3. Tippe deinen Prompt und druecke `Enter`
 
 > Falls das Chat-Symbol nicht erscheint: `Strg+Shift+P` → `GitHub Copilot Chat: Focus on Chat View` eintippen → `Enter`
@@ -87,7 +87,7 @@ Notiere in deiner Lernfortschrittsdatei unter `## Prompting-Beobachtungen`:
 - Was hat sich veraendert?
 - Welcher Baustein hat den groessten Unterschied gemacht?
 
-> **Warum im gleichen Chat?** Die KI kennt den vorherigen Austausch noch – das ist selbst schon Kontext. Wenn du das bewusst nutzt, hast du den naechsten Schritt des Prompting-Dialogs verstanden.
+> **Warum im gleichen Chat?** Die KI kennt den vorherigen Austausch noch - das ist selbst schon Kontext. Wenn du das bewusst nutzt, hast du den naechsten Schritt des Prompting-Dialogs verstanden.
 
 Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Die KI weiss nichts von deinem Projekt](../course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
@@ -99,7 +99,7 @@ Die erste Antwort der KI ist selten perfekt. Uebe jetzt das **iterative Nachfrag
 
 Lies die letzte Antwort der KI kritisch: Was ist unklar? Was fehlt? Was koennte praeziser sein?
 
-Schreibe eine **Nachfrage im gleichen Chat** – also keine neue Frage von vorne, sondern ein konkretes "Das hat mir noch gefehlt: ..." oder "Kannst du das Beispiel einfacher machen?".
+Schreibe eine **Nachfrage im gleichen Chat** - also keine neue Frage von vorne, sondern ein konkretes "Das hat mir noch gefehlt: ..." oder "Kannst du das Beispiel einfacher machen?".
 
 Mache das mindestens **zwei Mal** (zwei Nachfragen).
 
@@ -129,9 +129,9 @@ git branch
 
 Dann:
 
-> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
-> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M3-02-<vorname>`. Dein Lernjournal ist sofort aktuell.
-> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+> **Tipp - falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` - dann `git checkout -b UE-M3-02-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt - du musst nichts weiter tun.
 
 ```
 git checkout -b UE-M3-02-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
@@ -140,7 +140,7 @@ git commit -m "M3 Uebung 02: Prompting-Beobachtungen eingetragen"
 git push origin UE-M3-02-<vorname>
 ```
 
-> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen - UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04-git/03-git-befehlsuebersicht.md)
 
@@ -165,11 +165,11 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
-> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab - nicht hier in der Uebungsdatei.
 
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Abschnitt `## Prompting-Beobachtungen` ist in deiner Lernfortschrittsdatei eingetragen
-- [ ] Mindestens vier Eintraege vorhanden (Aufgabe 1–4)
+- [ ] Mindestens vier Eintraege vorhanden (Aufgabe 1-4)
 - [ ] PR auf GitHub ist erstellt
 
 ---

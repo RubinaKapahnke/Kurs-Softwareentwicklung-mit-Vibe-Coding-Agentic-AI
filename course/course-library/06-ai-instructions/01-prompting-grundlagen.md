@@ -1,4 +1,4 @@
-# Prompting: Grundlagen
+﻿# Prompting: Grundlagen
 
 Beim "Vibe Coding" tippst du weniger Code selbst ab, sondern steuerst die KI durch praezise Anweisungen und den richtigen Kontext. Gutes Prompting ist deshalb eine der wichtigsten Faehigkeiten.
 
@@ -15,7 +15,7 @@ Jeder gute Prompt hat bis zu vier Teile:
 | **Kontext** | Was muss sie wissen? | "Hier ist mein bestehendes Interface: ..." |
 | **Format** | Wie soll die Antwort aussehen? | "Antworte nur mit Code, keine Erklaerung." |
 
-Nicht jeder Prompt braucht alle vier – aber je mehr du angibst, desto gezielter die Antwort.
+Nicht jeder Prompt braucht alle vier - aber je mehr du angibst, desto gezielter die Antwort.
 
 ---
 
@@ -30,7 +30,7 @@ Nicht jeder Prompt braucht alle vier – aber je mehr du angibst, desto gezielte
 
 Die KI hat keinen magischen Zugriff auf dein Repo, deine Dateien oder deine Absichten. Sie verarbeitet nur das, was du ihr im Chat gibst. Wenn du nichts erklaerst, erfindet sie Annahmen.
 
-**Praktische Konsequenz:** Fange wichtige Prompts immer mit dem relevanten Kontext an – z. B. eine Datei referenzieren, ein Problem beschreiben, oder den Stand deines Projekts erwaehnen.
+**Praktische Konsequenz:** Fange wichtige Prompts immer mit dem relevanten Kontext an - z. B. eine Datei referenzieren, ein Problem beschreiben, oder den Stand deines Projekts erwaehnen.
 
 ---
 

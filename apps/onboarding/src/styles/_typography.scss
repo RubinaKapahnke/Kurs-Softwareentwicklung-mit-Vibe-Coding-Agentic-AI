@@ -5,6 +5,33 @@ body {
   line-height: var(--line-height-base);
 }
 
+ul,
+ol {
+  margin: 0 0 0.95rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0 0 0.4rem;
+  line-height: var(--line-height-base);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+li > p {
+  margin: 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
 h1,
 h2,
 h3,

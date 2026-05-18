@@ -1,6 +1,6 @@
 ﻿# tools/
 
-Dieser Ordner enthält Skripte für den **Kursbetrieb** – sie werden von Dozenten und KI-Agenten genutzt, um Dateien automatisch auf Vollständigkeit und Konsistenz zu prüfen.
+Dieser Ordner enthält Skripte für den **Kursbetrieb** - sie werden von Dozenten und KI-Agenten genutzt, um Dateien automatisch auf Vollständigkeit und Konsistenz zu prüfen.
 
 **Als Lernende/r musst du hier nichts tun.** Dein Arbeitsbereich ist:
 

@@ -1,18 +1,77 @@
 @if (activeSlide(); as slide) {
+  <ng-template #sectionRenderer let-section>
+    <article
+      class="lesson-section"
+      [class.lesson-section--highlight]="section.tone === 'highlight'"
+      [class.lesson-section--danger]="section.tone === 'danger'"
+      [class.lesson-section--success]="section.tone === 'success'"
+      [class.lesson-section--info]="section.tone === 'info'"
+      [class.lesson-section--tip]="section.tone === 'tip'">
+      @if (section.heading) {
+        @if (isToneCallout(section)) {
+          <div class="lesson-section__callout-head">
+            <span
+              class="lesson-section__icon"
+              [class.lesson-section__icon--highlight]="section.tone === 'highlight'"
+              [class.lesson-section__icon--danger]="section.tone === 'danger'"
+              [class.lesson-section__icon--success]="section.tone === 'success'"
+              [class.lesson-section__icon--info]="section.tone === 'info'"
+              [class.lesson-section__icon--tip]="section.tone === 'tip'"
+              aria-hidden="true">
+              <mat-icon>{{ toneIcon(section) }}</mat-icon>
+            </span>
+            <h5 class="lesson-section__heading" [innerHTML]="linkifyText(section.heading)"></h5>
+          </div>
+        } @else {
+          <h5 class="lesson-section__heading" [innerHTML]="linkifyText(section.heading)"></h5>
+        }
+      }
+
+      @if (section.paragraphs?.length) {
+        @for (paragraph of section.paragraphs; track paragraph) {
+          @if (isSubheadingParagraph(paragraph)) {
+            <h6 class="lesson-section__subheading" [innerHTML]="linkifyText(extractSubheadingText(paragraph))"></h6>
+          } @else {
+            <div class="lesson-section__markdown" [innerHTML]="renderBlockText(paragraph)"></div>
+          }
+        }
+      }
+
+      @if (section.orderedItems?.length) {
+        <ol>
+          @for (item of section.orderedItems; track item) {
+            <li [innerHTML]="linkifyText(item)"></li>
+          }
+        </ol>
+      }
+
+      @if (section.unorderedItems?.length) {
+        <ul>
+          @for (item of section.unorderedItems; track item) {
+            <li [innerHTML]="linkifyText(item)"></li>
+          }
+        </ul>
+      }
+    </article>
+  </ng-template>
+
   <section class="lesson-flow">
     <header class="lesson-flow__header">
       <h3 class="lesson-flow__title">{{ lesson.title }}</h3>
-      <div class="lesson-flow__step-dots" aria-label="Lektionsfortschritt">
-        @for (slide of lesson.slides; track $index; let i = $index) {
-          <button
-            type="button"
-            class="lesson-flow__step-dot"
-            [class.lesson-flow__step-dot--active]="i === activeIndex()"
-            [attr.aria-current]="i === activeIndex() ? 'step' : null"
-            [attr.aria-label]="'Teil ' + (i + 1) + ' von ' + lesson.slides.length"
-            (click)="goToSlide(i)"
-          ></button>
-        }
+      <div class="lesson-flow__header-bottom">
+        <div class="lesson-flow__step-dots" aria-label="Lektionsfortschritt">
+          @for (slide of lesson.slides; track $index; let i = $index) {
+            <button
+              type="button"
+              class="lesson-flow__step-dot"
+              [class.lesson-flow__step-dot--active]="i === activeIndex()"
+              [attr.aria-current]="i === activeIndex() ? 'step' : null"
+              [attr.aria-label]="'Teil ' + (i + 1) + ' von ' + lesson.slides.length"
+              (click)="goToSlide(i)"
+            ></button>
+          }
+        </div>
+        <span class="lesson-flow__slide-counter" aria-hidden="true">{{ activeIndex() + 1 }}/{{ lesson.slides.length }}</span>
       </div>
     </header>
 
@@ -23,25 +82,9 @@
         }
 
         @for (section of slide.sections; track $index) {
-          <article class="lesson-section" [class.lesson-section--highlight]="section.tone === 'highlight'">
-            @if (section.heading) {
-              <h5 class="lesson-section__heading">{{ section.heading }}</h5>
-            }
-
-            @if (section.paragraphs?.length) {
-              @for (paragraph of section.paragraphs; track paragraph) {
-                <p [innerHTML]="linkifyText(paragraph)"></p>
-              }
-            }
-
-            @if (section.orderedItems?.length) {
-              <ol>
-                @for (item of section.orderedItems; track item) {
-                  <li [innerHTML]="linkifyText(item)"></li>
-                }
-              </ol>
-            }
-          </article>
+          <ng-container
+            [ngTemplateOutlet]="sectionRenderer"
+            [ngTemplateOutletContext]="{ $implicit: section }"></ng-container>
         }
       </div>
     }
@@ -49,67 +92,85 @@
     @if (slide.type === 'quiz') {
       <div #quizContainer class="lesson-flow__quiz">
         <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
-        <p class="lesson-flow__prompt">{{ slide.prompt }}</p>
+        @if (slide.notes?.length) {
+          @for (section of slide.notes; track $index) {
+            <ng-container
+              [ngTemplateOutlet]="sectionRenderer"
+              [ngTemplateOutletContext]="{ $implicit: section }"></ng-container>
+          }
+        }
+
+        <p class="lesson-flow__prompt" [innerHTML]="linkifyText(slide.prompt)"></p>
         @if (slide.instruction) {
-          <p class="lesson-flow__instruction">{{ slide.instruction }}</p>
+          <p class="lesson-flow__instruction" [innerHTML]="linkifyText(slide.instruction)"></p>
         }
 
         <div class="lesson-quiz-options">
-          @if (slide.multiSelect) {
+          @if (quizEvaluated()) {
             @for (option of slide.options; track option.id) {
               <div
                 class="lesson-quiz-option"
-                [class.lesson-quiz-option--correct]="showOptionCorrect(option.id)"
-                [class.lesson-quiz-option--incorrect]="showOptionIncorrect(option.id)">
-                <mat-checkbox
-                  [checked]="isOptionSelected(option.id)"
-                  [disabled]="quizEvaluated() && quizPassed()"
-                  (change)="onOptionToggle(option.id, $event.checked)">
-                  {{ option.label }}
-                </mat-checkbox>
-                @if (showOptionCorrect(option.id)) {
-                  <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--correct">check_circle</mat-icon>
-                }
-                @if (showOptionIncorrect(option.id)) {
-                  <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--incorrect">cancel</mat-icon>
-                }
+                [class.lesson-quiz-option--state-correct-selected]="isCorrectSelected(option.id)"
+                [class.lesson-quiz-option--state-incorrect-selected]="isIncorrectSelected(option.id)"
+                [class.lesson-quiz-option--state-correct-unselected]="isCorrectUnselected(option.id)"
+                [class.lesson-quiz-option--state-incorrect-unselected]="isIncorrectUnselected(option.id)">
+                <div class="lesson-quiz-option__state">
+                  <mat-icon class="lesson-quiz-option__state-icon">{{ evaluatedOptionIcon(option.id) }}</mat-icon>
+                  <span class="lesson-quiz-option__label" [innerHTML]="linkifyText(option.label)"></span>
+                </div>
+                <span class="lesson-quiz-option__feedback">{{ evaluatedOptionFeedback(option.id) }}</span>
               </div>
             }
           } @else {
-            <mat-radio-group class="lesson-quiz-radio-group">
+            @if (slide.multiSelect) {
               @for (option of slide.options; track option.id) {
                 <div
                   class="lesson-quiz-option"
-                  [class.lesson-quiz-option--correct]="showOptionCorrect(option.id)"
-                  [class.lesson-quiz-option--incorrect]="showOptionIncorrect(option.id)">
-                  <mat-radio-button
-                    [value]="option.id"
+                  [class.lesson-quiz-option--state-correct-selected]="isCorrectSelected(option.id)"
+                  [class.lesson-quiz-option--state-incorrect-selected]="isIncorrectSelected(option.id)"
+                  [class.lesson-quiz-option--state-correct-unselected]="isCorrectUnselected(option.id)"
+                  [class.lesson-quiz-option--state-incorrect-unselected]="isIncorrectUnselected(option.id)">
+                  <mat-checkbox
                     [checked]="isOptionSelected(option.id)"
-                    [disabled]="quizEvaluated() && quizPassed()"
-                    (change)="onRadioChange(option.id)">
-                    {{ option.label }}
-                  </mat-radio-button>
-                  @if (showOptionCorrect(option.id)) {
-                    <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--correct">check_circle</mat-icon>
-                  }
-                  @if (showOptionIncorrect(option.id)) {
-                    <mat-icon class="lesson-quiz-option__icon lesson-quiz-option__icon--incorrect">cancel</mat-icon>
-                  }
+                    (change)="onOptionToggle(option.id, $event.checked)">
+                    <span class="lesson-quiz-option__label" [innerHTML]="linkifyText(option.label)"></span>
+                  </mat-checkbox>
                 </div>
               }
-            </mat-radio-group>
+            } @else {
+              <mat-radio-group class="lesson-quiz-radio-group">
+                @for (option of slide.options; track option.id) {
+                  <div
+                    class="lesson-quiz-option"
+                    [class.lesson-quiz-option--state-correct-selected]="isCorrectSelected(option.id)"
+                    [class.lesson-quiz-option--state-incorrect-selected]="isIncorrectSelected(option.id)"
+                    [class.lesson-quiz-option--state-correct-unselected]="isCorrectUnselected(option.id)"
+                    [class.lesson-quiz-option--state-incorrect-unselected]="isIncorrectUnselected(option.id)">
+                    <mat-radio-button
+                      [value]="option.id"
+                      [checked]="isOptionSelected(option.id)"
+                      (change)="onRadioChange(option.id)">
+                      <span class="lesson-quiz-option__label" [innerHTML]="linkifyText(option.label)"></span>
+                    </mat-radio-button>
+                  </div>
+                }
+              </mat-radio-group>
+            }
           }
         </div>
 
-        <div class="lesson-flow__quiz-actions">
-          <button mat-stroked-button type="button" (click)="checkQuizAnswers()">Antworten prüfen</button>
-        </div>
-
         @if (quizEvaluated()) {
-          <p class="lesson-flow__quiz-feedback" [class.lesson-flow__quiz-feedback--success]="quizPassed()" [class.lesson-flow__quiz-feedback--error]="!quizPassed()">
-            {{ quizPassed() ? slide.successMessage : (slide.errorMessage ?? 'Bitte prüfe deine Auswahl erneut.') }}
-          </p>
+          <section class="lesson-flow__quiz-feedback" [class.lesson-flow__quiz-feedback--success]="quizPassed()" [class.lesson-flow__quiz-feedback--error]="!quizPassed()">
+            <h5 class="lesson-flow__quiz-feedback-title">{{ quizPassed() ? 'Richtig geantwortet' : 'Falsch geantwortet' }}</h5>
+            <p class="lesson-flow__quiz-feedback-text" [innerHTML]="linkifyText(quizPassed() ? slide.successMessage : (slide.errorMessage ?? 'Bitte prüfe deine Auswahl erneut.'))"></p>
+          </section>
         }
+
+        <div class="lesson-flow__quiz-actions">
+          <button mat-stroked-button type="button" (click)="quizEvaluated() ? restartQuiz() : checkQuizAnswers()">
+            {{ quizEvaluated() ? 'Nochmal versuchen' : 'Antworten prüfen' }}
+          </button>
+        </div>
       </div>
     }
 
@@ -122,14 +183,20 @@
         (click)="goPrev()">
         Zurück
       </button>
-      <button
-        mat-flat-button
-        type="button"
-        class="lesson-flow__continue"
-        [disabled]="!canContinue() || (isLastSlide() && lesson.disableFinishAction)"
-        (click)="continue()">
-        {{ isLastSlide() ? (lesson.disableFinishAction ? 'Lektion abgeschlossen' : (lesson.finishLabel ?? 'Lektion abgeschlossen')) : (lesson.continueLabel ?? 'Weiter') }}
-      </button>
+      @if (shouldShowContinueButton()) {
+        <button
+          mat-flat-button
+          type="button"
+          class="lesson-flow__continue"
+          [disabled]="!canContinue()"
+          (click)="continue()">
+          @if (isLastSlide()) {
+            {{ lesson.finishLabel ?? 'Lektion abgeschlossen' }}
+          } @else {
+            {{ lesson.continueLabel ?? 'Weiter' }}
+          }
+        </button>
+      }
     </footer>
   </section>
 }

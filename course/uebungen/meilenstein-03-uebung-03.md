@@ -5,20 +5,20 @@ Du verstehst, wie Prompt-Dateien die KI gezielt steuern, legst eine eigene Promp
 
 ---
 
-## Vor dem Start – Checkliste
+## Vor dem Start - Checkliste
 
 - [ ] VS Code ist geoeffnet und du siehst den Repo-Ordner im Explorer (linke Leiste)
-- [ ] GitHub Copilot Chat ist aktiv – erkennbar am Chat-Symbol in der linken Leiste
+- [ ] GitHub Copilot Chat ist aktiv - erkennbar am Chat-Symbol in der linken Leiste
 - [ ] Du hast Uebung 02 abgeschlossen (du kennst die vier Prompt-Bausteine)
 
 In dieser Uebung arbeitest du mit diesen Dateien:
-- `.github/prompts/learners-prd-assistent.prompt.md` – lesen als Vorbild
-- `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` – **neu anlegen** (deine persoenliche Datei)
-- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` – Beobachtungen eintragen
+- `.github/prompts/learners-prd-assistent.prompt.md` - lesen als Vorbild
+- `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` - **neu anlegen** (deine persoenliche Datei)
+- `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` - Beobachtungen eintragen
 
-> **Wichtig – diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+> **Wichtig - diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
-> **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** Das abzugebende Ergebnis dieser Uebung ist die Prompt-Datei selbst – sie landet im Repo. Die Beobachtungen im Lernjournal sind dein persoenlicher Reflexionsraum und gehoeren in deinen Lernstand.
+> **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** Das abzugebende Ergebnis dieser Uebung ist die Prompt-Datei selbst - sie landet im Repo. Die Beobachtungen im Lernjournal sind dein persoenlicher Reflexionsraum und gehoeren in deinen Lernstand.
 
 ---
 
@@ -54,11 +54,11 @@ Quelle: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md → A
 
 Lege eine neue Datei an: `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md`
 
-> **Warum der eigene Name im Dateinamen?** Alle Kursteilnehmenden legen diese Datei an und mergen spaeter ihre Branches auf `main`. Wenn alle dieselbe Datei anlegen, entsteht ein Merge-Konflikt. Mit dem eigenen Namen im Dateinamen legt jeder eine *andere* Datei an – kein Konflikt.
+> **Warum der eigene Name im Dateinamen?** Alle Kursteilnehmenden legen diese Datei an und mergen spaeter ihre Branches auf `main`. Wenn alle dieselbe Datei anlegen, entsteht ein Merge-Konflikt. Mit dem eigenen Namen im Dateinamen legt jeder eine *andere* Datei an - kein Konflikt.
 
 > **Hinweis zum Ordner:** Navigiere im Explorer ganz nach oben zu `.github/prompts/`. Rechtsklick auf den Ordner → "Neue Datei" → Dateiname eingeben. Oder: `Strg+P` → Ordnerpfad eintippen.
 
-Deine Datei soll einen **"Erklaer-Assistenten"** beschreiben – eine KI, die dir Fachbegriffe aus dem Vibe Coding immer auf die gleiche, einfache Art erklaert.
+Deine Datei soll einen **"Erklaer-Assistenten"** beschreiben - eine KI, die dir Fachbegriffe aus dem Vibe Coding immer auf die gleiche, einfache Art erklaert.
 
 Nutze dieses Grundgeruest und fuelle die Luecken mit eigenen Angaben:
 
@@ -80,7 +80,7 @@ Halte dich immer an diese Struktur. Erfinde keine weiteren Abschnitte.
 Antworte auf Deutsch.
 ```
 
-> **Warum dieses Muster?** Eine feste Ausgabestruktur ist ein Format-Baustein. Damit kannst du spater viele Begriffe abfragen und immer vergleichbare Antworten bekommen – statt jedes Mal unterschiedlicher Laenge und Tiefe.
+> **Warum dieses Muster?** Eine feste Ausgabestruktur ist ein Format-Baustein. Damit kannst du spater viele Begriffe abfragen und immer vergleichbare Antworten bekommen - statt jedes Mal unterschiedlicher Laenge und Tiefe.
 
 Quelle: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md → Aufbau einer Prompt-Datei](../course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
@@ -94,7 +94,7 @@ Teste jetzt deine neue Prompt-Datei.
 
 1. Copilot Chat oeffnen (Chat-Symbol in der linken Leiste)
 2. Im Chat-Eingabefeld `/` eintippen
-3. Eine Liste erscheint – suche nach "Erklaer-Assistent" (deine Datei sollte erscheinen)
+3. Eine Liste erscheint - suche nach "Erklaer-Assistent" (deine Datei sollte erscheinen)
 4. Auswählen und `Enter` druecken
 5. Tippe dann: `branch`
 
@@ -116,7 +116,7 @@ Starte jetzt einen **neuen Chat** (ohne Prompt-Datei) und stelle dieselbe Frage:
 Vergleiche die beiden Antworten und notiere in deiner Lernfortschrittsdatei:
 - Was war anders?
 - Hat die freie Antwort das gleiche Muster eingehalten?
-- Wann waere die Prompt-Datei nuetzlicher – wann reicht freies Prompting?
+- Wann waere die Prompt-Datei nuetzlicher - wann reicht freies Prompting?
 
 **So startest du einen neuen Chat:**
 
@@ -143,9 +143,9 @@ git branch
 
 Dann:
 
-> **Tipp – falls dein letzter PR noch nicht gemerged ist:**
-> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` – dann `git checkout -b UE-M3-03-<vorname>`. Dein Lernjournal ist sofort aktuell.
-> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt – du musst nichts weiter tun.
+> **Tipp - falls dein letzter PR noch nicht gemerged ist:**
+> - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` - dann `git checkout -b UE-M3-03-<vorname>`. Dein Lernjournal ist sofort aktuell.
+> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt - du musst nichts weiter tun.
 
 ```
 git checkout -b UE-M3-03-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
@@ -154,7 +154,7 @@ git commit -m "M3 Uebung 03: Eigene Prompt-Datei und Beobachtungen"
 git push origin UE-M3-03-<vorname>
 ```
 
-> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen – UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen - UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
 
 Erstelle anschliessend auf GitHub einen PR von deinem Branch auf `main`.
 
@@ -183,7 +183,7 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 
 ## Abgabe
 
-> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab – nicht hier in der Uebungsdatei.
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab - nicht hier in der Uebungsdatei.
 
 Bevor du den PR erstellst, pruefe kurz:
 - [ ] Die Datei `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` existiert und hat gueltiges Frontmatter

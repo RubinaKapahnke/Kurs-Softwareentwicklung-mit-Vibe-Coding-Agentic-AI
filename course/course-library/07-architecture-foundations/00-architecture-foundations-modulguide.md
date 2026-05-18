@@ -1,11 +1,11 @@
-# Modulguide: Architecture Foundations
+﻿# Modulguide: Architecture Foundations
 
-Dieses Modul erklaert, wie du ein Softwareprojekt strukturiert aufbaust – damit die KI weiss, was sie bauen soll, und du weisst, was entsteht.
+Dieses Modul erklaert, wie du ein Softwareprojekt strukturiert aufbaust - damit die KI weiss, was sie bauen soll, und du weisst, was entsteht.
 
 ## Inhalt
 
 1. [01-architecture-foundations-grundlagen.md](./01-architecture-foundations-grundlagen.md)
-2. [02-architecture-foundations-praxis.md](./02-architecture-foundations-praxis.md) – Vom PRD zur Projektstruktur (Praxis-Walkthrough) – Projektstruktur, Komponenten-Denken, Datenfluss
+2. [02-architecture-foundations-praxis.md](./02-architecture-foundations-praxis.md) - Vom PRD zur Projektstruktur (Praxis-Walkthrough) - Projektstruktur, Komponenten-Denken, Datenfluss
 
 ## Selbstcheck
 
@@ -18,7 +18,7 @@ Nutze die Checklisten als Selbstcheck fuer das Architecture-Foundations-Modul.
 
 ### Should have
 - [ ] Ich kann den Datenfluss in meiner App in einfachen Worten beschreiben.
-- [ ] Ich erkenne, wann eine Aufgabe ein Strukturthema ist – nicht nur ein Coding-Thema.
+- [ ] Ich erkenne, wann eine Aufgabe ein Strukturthema ist - nicht nur ein Coding-Thema.
 - [ ] Ich kann benennen, welche Teile meines Projekts zusammengehoeren.
 
 ### Nice to have

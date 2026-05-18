@@ -184,6 +184,27 @@
   }
 }
 
+.btn-testzugang {
+  justify-self: end;
+  margin-top: 0.35rem;
+  padding-inline: 1.1rem;
+  min-height: 38px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  background: #f5c518;
+  color: #111;
+  --mdc-filled-button-container-color: #f5c518;
+  --mdc-filled-button-label-text-color: #111;
+  box-shadow: none;
+
+  &:hover {
+    background: #e6b800;
+    --mdc-filled-button-container-color: #e6b800;
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 640px) {
   :host {
     padding: 1rem;

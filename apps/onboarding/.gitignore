@@ -33,7 +33,9 @@ yarn-error.log
 .sass-cache/
 /connect.lock
 /coverage
+/exports/
 /libpeerconnection.log
+/screenshots/
 testem.log
 /typings
 __screenshots__/

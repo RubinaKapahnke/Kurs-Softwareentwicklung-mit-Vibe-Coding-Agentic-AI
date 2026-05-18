@@ -1,4 +1,4 @@
-# Git: Grundlagen und Einstieg
+﻿# Git: Grundlagen und Einstieg
 
 Dieses Dokument erklaert die Grundidee von Git und den typischen Arbeitsablauf im Kurs. Fuer einzelne Befehle zum schnellen Nachschlagen ist die [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md) gedacht.
 

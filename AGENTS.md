@@ -9,7 +9,7 @@ Whenever files or folders are added, renamed, or removed in the repo:
 
 ### README-Datei Benennungskonvention
 - Unterordner-READMEs heißen **immer** `README_<ORDNERNAME>.md` (z.B. `README_UEBUNGEN.md`, `README_TOOLS.md`).
-- **Nie** `README.md` in Unterordnern verwenden – das ist ausschließlich der Name der Root-Datei.
+- **Nie** `README.md` in Unterordnern verwenden - das ist ausschließlich der Name der Root-Datei.
 - Diese Konvention gilt für alle neuen Dateien, die eine Unterordner-Übersicht oder Einführung bieten.
 
 ### Agent-Datei Benennungskonvention
@@ -96,7 +96,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
 - Keep `README.md`, `NEXT_STEPS.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
-- For onboarding explanatory content, use `apps/onboarding/public/content/` Markdown files referenced via `markdownSource`; keep interactive step logic in Angular components.
+- For onboarding explanatory content, maintain lesson sources under `course/kursmodule/01-.../lerninhalte/lektion-XX-.../` (`lektion-inhalte.md`, optional `aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components.
 - Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
@@ -218,9 +218,9 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 - **MUSS ERST:** Sicherstellen, dass alle benötigten Konzepte in `01-*-grundlagen.md` erklärt sind
 - Falls nicht: Modul vorher ergänzen!
 
-**Schritt 2–5: Template, Verlinkung und Konsistenz-Check**
+**Schritt 2-5: Template, Verlinkung und Konsistenz-Check**
 
-→ Vollständiges Template und Schritte 2–5: [.github/instructions/uebungen-standard.instructions.md](.github/instructions/uebungen-standard.instructions.md)
+→ Vollständiges Template und Schritte 2-5: [.github/instructions/uebungen-standard.instructions.md](.github/instructions/uebungen-standard.instructions.md)
 
 
 ---

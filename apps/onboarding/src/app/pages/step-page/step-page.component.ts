@@ -1,10 +1,10 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild, computed, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,13 +13,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
-import { OnboardingStep } from '../../models/onboarding.models';
-import { OnboardingStateService, Step2ExperienceChoice, ParticipationStatus } from '../../services/onboarding-state.service';
+import { OnboardingLessonContentSection, OnboardingStep, StepManifest } from '../../models/onboarding.models';
+import { OnboardingStateService, Step2ExperienceChoice } from '../../services/onboarding-state.service';
 import { MarkdownViewComponent } from '../../components/markdown-view/markdown-view.component';
 import { LessonFlowComponent } from '../../components/lesson-flow/lesson-flow.component';
 import { ChoiceCardComponent } from '../../components/choice-card/choice-card.component';
 import { CalloutComponent } from '../../components/callout/callout.component';
-import { VoucherGateComponent } from '../../components/voucher-gate/voucher-gate.component';
 import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/step-tasks.component';
 import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialog.component';
 
@@ -29,7 +28,6 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     CommonModule,
     MatButtonModule,
     MatCardModule,
-    MatCheckboxModule,
     MatDividerModule,
     MatIconModule,
     MatTabsModule,
@@ -38,7 +36,6 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     LessonFlowComponent,
     ChoiceCardComponent,
     CalloutComponent,
-    VoucherGateComponent,
     StepTasksComponent
   ],
   templateUrl: './step-page.component.html',
@@ -46,6 +43,7 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
 })
 export class StepPageComponent {
   private readonly document = inject(DOCUMENT);
+  private readonly http = inject(HttpClient);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly dialog = inject(MatDialog);
@@ -55,8 +53,17 @@ export class StepPageComponent {
   private readonly routeParamMap = toSignal(this.route.paramMap, {
     initialValue: this.route.snapshot.paramMap
   });
+
+  constructor() {
+    this.http.get<StepManifest>('/content/step-manifest.json').subscribe({
+      next: (manifest) => this.stepManifest.set(manifest),
+      error: () => this.stepManifest.set({})
+    });
+  }
+
   private readonly resetScrollOnStepChange = effect(() => {
     this.step().id;
+    this.lessonCompleted.set(false);
     queueMicrotask(() => this.scrollPageTop());
   });
 
@@ -76,9 +83,39 @@ export class StepPageComponent {
     const id = Number(this.routeParamMap().get('id'));
     return ONBOARDING_STEPS.find((item) => item.id === id) ?? ONBOARDING_STEPS[0];
   });
+  readonly stepManifest = signal<StepManifest | null>(null);
+  readonly lessonCompleted = signal(false);
+  readonly manifestEntry = computed(() => this.stepManifest()?.[this.step().id] ?? null);
+  readonly effectiveTasks = computed(() => this.manifestEntry()?.tasks ?? this.step().tasks);
+  readonly effectiveTaskNotes = computed(() => (this.manifestEntry()?.taskNotes ?? []) as OnboardingLessonContentSection[]);
+  readonly effectiveLessonFlow = computed(() => {
+    const manifestFlow = this.manifestEntry()?.lessonFlow ?? null;
+    const manifestRequiresLessonCompletion = Boolean(this.manifestEntry()?.requiresLessonCompletion);
+    const staticFlow = this.step().lessonFlow ?? null;
+
+    if (!manifestFlow) {
+      return staticFlow;
+    }
+
+    if (!staticFlow) {
+      return {
+        ...manifestFlow,
+        disableFinishAction: manifestRequiresLessonCompletion ? false : manifestFlow.disableFinishAction,
+      };
+    }
+
+    return {
+      ...manifestFlow,
+      continueLabel: manifestFlow.continueLabel ?? staticFlow.continueLabel,
+      finishLabel: manifestFlow.finishLabel ?? staticFlow.finishLabel,
+      disableFinishAction: manifestRequiresLessonCompletion
+        ? false
+        : (manifestFlow.disableFinishAction ?? staticFlow.disableFinishAction),
+    };
+  });
 
   readonly visibleLessonFlow = computed(() => {
-    const lessonFlow = this.step().lessonFlow;
+    const lessonFlow = this.effectiveLessonFlow();
     if (!lessonFlow) {
       return null;
     }
@@ -87,42 +124,28 @@ export class StepPageComponent {
       return null;
     }
 
+    // Erfahrene User, die auf den Neu-Pfad gewechselt haben: Lektion überspringen
+    if (this.isAccountChoiceStep() && this.state.step2Experience() === 'new-skip') {
+      return null;
+    }
+
     return lessonFlow;
   });
 
   readonly canGoBack = computed(() => this.step().id > 1);
 
-  readonly isVoucherStep = computed(() => this.step().id === 1);
-
-  readonly isNextDisabled = computed(
-    () => this.isVoucherStep() && !this.state.voucherValidated()
-  );
-  readonly isAccountChoiceStep = computed(() => this.step().id === 3);
-  readonly isOwnRepoStep = computed(() => this.step().id === 4);
-  readonly isInviteStep = computed(() => this.step().id === 5);
-  readonly isExerciseStep = computed(() => this.step().id === 6);
-  readonly isVscodeInstallStep = computed(() => this.step().id === 8);
-  readonly isGitInstallStep = computed(() => this.step().id === 10);
-  readonly isCloneStep = computed(() => this.step().id === 11);
+  readonly isAccountChoiceStep = computed(() => this.step().id === 2);
+  readonly isOwnRepoStep = computed(() => this.step().id === 3);
+  readonly isInviteStep = computed(() => this.step().id === 4);
+  readonly isExerciseStep = computed(() => this.step().id === 5);
+  readonly isVscodeInstallStep = computed(() => this.step().id === 7);
+  readonly isGitInstallStep = computed(() => this.step().id === 9);
+  readonly isCloneStep = computed(() => this.step().id === 10);
   readonly isFinishStep = computed(() => this.step().id === ONBOARDING_STEP_COUNT);
 
   @ViewChild('todoSection', { read: ElementRef }) private todoSection?: ElementRef<HTMLElement>;
   @ViewChild('lessonFlowSection') private lessonFlowSection?: ElementRef<HTMLElement>;
 
-  // Voucher-Gate
-  readonly showVoucherInput = computed(() => {
-    const status = this.state.participationStatus();
-    const hasVoucher = this.state.hasVoucherAnswer();
-    return status === 'active' || (status === 'new' && hasVoucher === true);
-  });
-  readonly showContactInfo = computed(() =>
-    this.state.participationStatus() === 'new' && this.state.hasVoucherAnswer() === false
-  );
-  readonly voucherInput = signal('');
-  readonly voucherError = signal(false);
-  readonly voucherCopied = signal(false);
-  readonly showVoucherSuccess = signal(false);
-  private voucherSuccessTimeout: ReturnType<typeof setTimeout> | null = null;
   readonly githubProfileShareTask = 'Link zum GitHub-Profil an Dozent*in schicken (Teams oder E-Mail).';
 
   /** Schritt gilt als erledigt wenn er explizit markiert wurde */
@@ -132,9 +155,9 @@ export class StepPageComponent {
 
   readonly step2CanComplete = computed(() => this.state.canCompleteStep2());
   readonly allSubtasksDone = computed(() =>
-    this.state.areStepSubtasksDone(this.step().id, this.step().tasks.length)
+    this.state.areStepSubtasksDone(this.step().id, this.effectiveTasks().length)
   );
-  readonly githubProfileShareTaskIndex = computed(() => this.step().tasks.length);
+  readonly githubProfileShareTaskIndex = computed(() => this.effectiveTasks().length);
   readonly githubProfileShareDone = computed(() =>
     this.state.isSubtaskDone(this.step().id, this.githubProfileShareTaskIndex())
   );
@@ -146,6 +169,7 @@ export class StepPageComponent {
   readonly showAccountStepFullInstructions = computed(() =>
     !this.isAccountChoiceStep() || (
       this.state.step2Experience() === 'new' ||
+      this.state.step2Experience() === 'new-skip' ||
       this.state.step2Experience() === 'existing-beginner'
     )
   );
@@ -156,9 +180,6 @@ export class StepPageComponent {
     this.isAccountChoiceStep() && this.state.voucherValidated() &&
     this.state.step2Experience() === 'existing' // Nur erste Frage beantwortet, noch nicht spezialisiert
   );
-  readonly showExistingExperiencedOnlyContent = computed(() =>
-    this.isAccountChoiceStep() && this.state.step2Experience() === 'existing-experienced'
-  );
   readonly showStepResources = computed(() =>
     !this.isAccountChoiceStep() || this.showAccountStepContent()
   );
@@ -167,9 +188,12 @@ export class StepPageComponent {
       return false;
     }
 
+    const isAccountStep = this.isAccountChoiceStep();
+    const step2Experience = this.state.step2Experience();
+
     return this.showRepoExperienceQuestion() ||
-      this.state.step2Experience() === 'existing-beginner' ||
-      this.state.step2Experience() === 'existing-experienced' ||
+      (isAccountStep && step2Experience === 'existing-beginner') ||
+      (isAccountStep && step2Experience === 'existing-experienced') ||
       this.isInviteStep() ||
       this.isExerciseStep() ||
       this.isVscodeInstallStep() ||
@@ -185,7 +209,7 @@ export class StepPageComponent {
       return 'Unter der Lektion folgen noch Aufgaben.';
     }
 
-    if (this.showRepoExperienceQuestion() || this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced') {
+    if (this.showRepoExperienceQuestion() || (this.isAccountChoiceStep() && (this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced'))) {
       return 'Unter der Lektion folgt noch deine Auswahl fuer diesen Schritt.';
     }
 
@@ -196,18 +220,15 @@ export class StepPageComponent {
     return 'Unter der Lektion folgen noch weitere Hinweise.';
   });
 
-  // Step 3: Unterschiedliche Inhalte für 'new' vs 'existing-beginner' vs 'existing-experienced'
-  readonly step3Title = computed(() => {
-    if (!this.isAccountChoiceStep()) return this.step().title;
-    const exp = this.state.step2Experience();
-    if (exp === 'new') return 'GitHub-Account anlegen';
-    if (exp === 'existing' || exp === 'existing-beginner') return 'GitHub Repos und Git verstehen';
-    if (exp === 'existing-experienced') return 'GitHub-Account verifizieren';
-    return this.step().title;
+  readonly effectiveTitle = computed(() => this.manifestEntry()?.title ?? this.step().title);
+  readonly effectiveGoal = computed(() => this.manifestEntry()?.goal ?? this.step().goal);
+  readonly stepHeaderTitle = computed(() => {
+    const lessonNumber = String(this.step().id).padStart(2, '0');
+    return `Lektion ${lessonNumber}: ${this.effectiveTitle()}`;
   });
 
   readonly step3Goal = computed(() => {
-    if (!this.isAccountChoiceStep()) return this.step().goal || '';
+    if (!this.isAccountChoiceStep()) return this.effectiveGoal() || '';
     const exp = this.state.step2Experience();
     if (exp === 'new')
       return 'Du erstellst deinen ersten GitHub-Account und stellst sicher, dass alles funktioniert.';
@@ -222,10 +243,10 @@ export class StepPageComponent {
     if (!this.isAccountChoiceStep() || !this.showAccountStepFullInstructions()) {
       return [];
     }
-    return this.step().tasks;
+    return this.effectiveTasks();
   });
   readonly showTodoSection = computed(() => {
-    if (this.isVoucherStep() || !this.showAccountStepContent()) {
+    if (!this.showAccountStepContent()) {
       return false;
     }
 
@@ -233,29 +254,37 @@ export class StepPageComponent {
       return false;
     }
 
-    const hasStepTasks = this.showAccountStepFullInstructions() && this.step().tasks.length > 0;
+    const hasStepTasks = this.showAccountStepFullInstructions() && this.effectiveTasks().length > 0;
     const hasAccountExtraTask = this.isAccountChoiceStep();
     return hasStepTasks || hasAccountExtraTask;
   });
 
-  /** "Als erledigt markieren" blockiert bis Voucher validiert UND Auswahl getroffen */
+  /** "Als erledigt markieren" blockiert bis Auswahl getroffen */
   readonly isDoneDisabled = computed(() => {
-    if (this.isVoucherStep()) {
-      return !this.state.voucherValidated();
-    }
-
     if (!this.isAccountChoiceStep()) {
-      return !this.allSubtasksDone();
+      return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
     }
 
     if (!this.state.voucherValidated()) return true;
     
     const exp = this.state.step2Experience();
     if (exp === null || exp === 'existing') return true; // Nicht fertig bis spezialisiert
-    if (exp === 'existing-beginner' || exp === 'existing-experienced') return !this.step2CanComplete();
-    if (exp === 'new') return !this.allSubtasksDone();
+    if (exp === 'existing-beginner' || exp === 'existing-experienced') {
+      return !this.step2CanComplete() || (this.mustCompleteLesson() && !this.lessonCompleted());
+    }
+    if (exp === 'new' || exp === 'new-skip') {
+      return !this.allSubtasksDone() || (this.mustCompleteLesson() && !this.lessonCompleted());
+    }
     return true;
   });
+
+  private mustCompleteLesson(): boolean {
+    const exp = this.state.step2Experience();
+    // Für 'new-skip' Pfade ist die Lektion nicht erforderlich (Nutzer springt über)
+    if (exp === 'new-skip') return false;
+    return Boolean(this.manifestEntry()?.requiresLessonCompletion) &&
+      (!this.isAccountChoiceStep() || this.showAccountStepFullInstructions());
+  }
 
   isSubtaskDone(taskIndex: number): boolean {
     return this.state.isSubtaskDone(this.step().id, taskIndex);
@@ -278,57 +307,12 @@ export class StepPageComponent {
 
   selectRepoExperience(experience: 'beginner' | 'experienced'): void {
     this.state.setRepoExperience(experience);
+    // Bestätige Visibility für beide Pfade (beginner und experienced) automatisch
+    this.state.confirmGithubVisibility(true);
   }
 
-  setParticipationStatus(status: ParticipationStatus): void {
-    this.state.setParticipationStatus(status);
-    this.voucherInput.set('');
-    this.voucherError.set(false);
-  }
-
-  setHasVoucher(val: boolean): void {
-    this.state.setHasVoucherAnswer(val);
-    this.voucherInput.set('');
-    this.voucherError.set(false);
-  }
-
-  updateVoucherInput(value: string): void {
-    this.voucherInput.set(value);
-    this.voucherError.set(false);
-  }
-
-  submitVoucher(): void {
-    const valid = this.state.validateVoucher(this.voucherInput());
-    this.voucherError.set(!valid);
-    if (valid) {
-      this.state.markStepCompleted(this.step().id);
-      this.showTemporaryVoucherSuccess();
-    } else {
-      this.state.unmarkStepCompleted(this.step().id);
-    }
-  }
-
-  private showTemporaryVoucherSuccess(): void {
-    if (this.voucherSuccessTimeout) {
-      clearTimeout(this.voucherSuccessTimeout);
-    }
-    this.showVoucherSuccess.set(true);
-    this.voucherSuccessTimeout = setTimeout(() => {
-      this.showVoucherSuccess.set(false);
-      this.voucherSuccessTimeout = null;
-    }, 3500);
-  }
-
-  copyContactMessage(): void {
-    const msg = `Hallo KnOot Academy Team,\n\nich interessiere mich für die Teilnahme an eurem Kurs "Vibe Coding Basics" und bitte um einen Zugangs-Voucher.\n\nVielen Dank!\n[Dein Name]`;
-    navigator.clipboard.writeText(msg).then(() => {
-      this.voucherCopied.set(true);
-      setTimeout(() => this.voucherCopied.set(false), 2500);
-    });
-  }
-
-  onVisibilityCheckboxChange(checked: boolean): void {
-    this.state.confirmGithubVisibility(checked);
+  confirmVisibilityHint(): void {
+    this.state.confirmGithubVisibility(true);
   }
 
   switchToNewPath(): void {
@@ -403,6 +387,8 @@ export class StepPageComponent {
   }
 
   onLessonFinished(): void {
+    this.lessonCompleted.set(true);
+
     const lessonBottom = this.lessonFlowSection?.nativeElement.getBoundingClientRect().bottom ?? 0;
 
     if (this.todoSection?.nativeElement) {

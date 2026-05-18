@@ -1,15 +1,15 @@
-# VS Code: GitHub Copilot Chat
+﻿# VS Code: GitHub Copilot Chat
 
-GitHub Copilot Chat ist direkt in VS Code eingebaut und dein wichtigstes Werkzeug fuer Vibe Coding. Dieses Dokument erklaert, wie du den Chat bedienst – nicht wofuer du ihn nutzt (das steht in den Prompting-Modulen), sondern wie er funktioniert.
+GitHub Copilot Chat ist direkt in VS Code eingebaut und dein wichtigstes Werkzeug fuer Vibe Coding. Dieses Dokument erklaert, wie du den Chat bedienst - nicht wofuer du ihn nutzt (das steht in den Prompting-Modulen), sondern wie er funktioniert.
 
 ---
 
 ## Copilot Chat oeffnen
 
-**Methode 1 – Symbol in der Leiste:**
+**Methode 1 - Symbol in der Leiste:**
 Klick auf das Chat-Symbol (Sprechblase) in der linken VS Code Leiste.
 
-**Methode 2 – Befehlspalette:**
+**Methode 2 - Befehlspalette:**
 `Strg+Shift+P` (Windows) / `Cmd+Shift+P` (Mac) → `GitHub Copilot Chat: Focus on Chat View` → `Enter`
 
 > Falls Copilot Chat gar nicht erscheint: Pruefe, ob die Erweiterung „GitHub Copilot Chat" in VS Code installiert ist. Linke Leiste → Extensions-Symbol → nach „Copilot Chat" suchen.
@@ -44,7 +44,7 @@ Beispiel:
 Du kannst mehrere `#`-Referenzen im gleichen Prompt kombinieren:
 > `#prd_meinprojekt.md #participants.json Erstelle einen Service, der die Daten aus der JSON-Datei laedt.`
 
-> **Warum das wichtig ist:** Ohne `#`-Kontext erfindet die KI Annahmen. Mit `#` arbeitest du praezise – das ist der Kern des Context-Engineering.
+> **Warum das wichtig ist:** Ohne `#`-Kontext erfindet die KI Annahmen. Mit `#` arbeitest du praezise - das ist der Kern des Context-Engineering.
 
 ---
 
@@ -73,7 +73,7 @@ Prompt-Dateien und eingebaute Shortcuts rufst du mit `/` auf.
 
 ## Neuen Chat starten
 
-Jeder Chat hat Gedaechtnis – die KI kennt den bisherigen Verlauf. Manchmal willst du das zuruecksetzen.
+Jeder Chat hat Gedaechtnis - die KI kennt den bisherigen Verlauf. Manchmal willst du das zuruecksetzen.
 
 **Neuen Chat oeffnen:**
 - Oben im Chat-Fenster: Klick auf das `+`-Symbol

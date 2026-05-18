@@ -1,5 +1,11 @@
 :host {
   display: block;
+  /* Zentrale Quiz-Farbregeln nach finaler Abstimmung */
+  --quiz-state-positive-text: color-mix(in srgb, var(--color-success) 38%, var(--color-text));
+  --quiz-state-positive-feedback: color-mix(in srgb, var(--color-success) 40%, var(--color-text));
+  --quiz-state-negative-text: color-mix(in srgb, var(--color-accent-dark) 88%, white);
+  --quiz-state-positive-icon: color-mix(in srgb, var(--color-success) 72%, black);
+  --quiz-state-negative-icon: var(--color-accent-dark);
 }
 
 .lesson-flow {
@@ -27,11 +33,31 @@
   color: var(--color-primary-dark);
 }
 
+.lesson-flow__header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.55rem;
+}
+
 .lesson-flow__step-dots {
   display: flex;
   gap: 6px;
-  margin-top: 0.55rem;
   align-items: center;
+}
+
+.lesson-flow__slide-counter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 .lesson-flow__step-dot {
@@ -85,20 +111,98 @@
   margin: 0;
 }
 
+.lesson-flow__prompt {
+  padding: 0.62rem 0.78rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-info);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-surface));
+}
+
 .lesson-flow__instruction {
   font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 .lesson-section {
   display: grid;
   gap: 0.65rem;
-  padding: 0.95rem 1rem;
+  padding: 1rem 1.05rem;
   border-radius: var(--radius-lg);
   background: var(--surface-muted);
 }
 
 .lesson-section--highlight {
   background: var(--surface-warning);
+  border: 1px solid color-mix(in srgb, var(--color-secondary-dark) 26%, var(--color-surface));
+  border-left: 8px solid var(--color-secondary-dark);
+}
+
+.lesson-section--highlight .lesson-section__heading {
+  color: var(--color-secondary-dark);
+}
+
+.lesson-section--highlight .lesson-section__subheading {
+  color: var(--color-secondary-dark);
+}
+
+.lesson-section--danger {
+  background: var(--surface-danger);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-accent);
+}
+
+.lesson-section--danger .lesson-section__heading {
+  color: var(--color-accent-dark);
+}
+
+.lesson-section--danger .lesson-section__subheading {
+  color: var(--color-accent-dark);
+}
+
+.lesson-section--success {
+  background: var(--surface-success);
+  border: 1px solid color-mix(in srgb, var(--color-success) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-success);
+}
+
+.lesson-section--success .lesson-section__heading {
+  color: color-mix(in srgb, var(--color-success) 70%, black);
+}
+
+.lesson-section--success .lesson-section__subheading {
+  color: color-mix(in srgb, var(--color-success) 70%, black);
+}
+
+.lesson-section--info {
+  background: var(--surface-info);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-surface));
+  border-left: 8px solid var(--color-primary);
+}
+
+.lesson-section--info .lesson-section__heading {
+  color: var(--color-primary-dark);
+}
+
+.lesson-section--info .lesson-section__subheading {
+  color: var(--color-primary-dark);
+}
+
+.lesson-section--tip {
+  background: color-mix(in srgb, var(--color-primary) 22%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-primary-dark) 24%, var(--color-surface));
+  border-left: 8px solid var(--color-primary-dark);
+}
+
+.lesson-section--tip .lesson-section__heading {
+  color: var(--color-primary-dark);
+}
+
+.lesson-section--tip .lesson-section__subheading {
+  color: var(--color-primary-dark);
 }
 
 .lesson-section__heading {
@@ -108,13 +212,117 @@
   color: var(--color-primary-dark);
 }
 
+.lesson-section__callout-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lesson-section--highlight :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--danger :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--success :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--info :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown),
+.lesson-section--tip :is(p, .lesson-section__subheading, ol, ul, .lesson-section__markdown) {
+  margin-left: calc(1.62rem + 0.45rem);
+}
+
+.lesson-section--highlight :is(p, li, .lesson-section__markdown),
+.lesson-section--danger :is(p, li, .lesson-section__markdown),
+.lesson-section--success :is(p, li, .lesson-section__markdown),
+.lesson-section--info :is(p, li, .lesson-section__markdown),
+.lesson-section--tip :is(p, li, .lesson-section__markdown) {
+  font-size: var(--font-size-sm);
+  color: #2f2f2f;
+}
+
+.lesson-section--highlight .lesson-section__heading,
+.lesson-section--danger .lesson-section__heading,
+.lesson-section--success .lesson-section__heading,
+.lesson-section--info .lesson-section__heading,
+.lesson-section--tip .lesson-section__heading {
+  font-size: var(--font-size-sm);
+}
+
+.lesson-section__icon {
+  width: 1.42rem;
+  height: 1.42rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-dark);
+  flex-shrink: 0;
+}
+
+.lesson-section__icon mat-icon {
+  font-size: 0.78rem;
+  width: 0.78rem;
+  height: 0.78rem;
+}
+
+.lesson-section__icon--highlight {
+  background: var(--color-secondary-dark);
+}
+
+.lesson-section__icon--danger {
+  background: var(--color-accent);
+}
+
+.lesson-section__icon--success {
+  background: var(--color-success);
+}
+
+.lesson-section__icon--info,
+.lesson-section__icon--tip {
+  background: var(--color-primary);
+}
+
+.lesson-section__subheading {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .lesson-section p,
 .lesson-section li {
   margin: 0;
   line-height: var(--line-height-base);
 }
 
+.lesson-section__markdown {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lesson-section__markdown :first-child {
+  margin-top: 0;
+}
+
+.lesson-section__markdown :last-child {
+  margin-bottom: 0;
+}
+
+.lesson-section ul,
+.lesson-section ol {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.lesson-section ul {
+  display: block;
+}
+
 .lesson-section :is(p, li) a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+}
+
+.lesson-section__markdown a {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
   text-decoration: underline;
@@ -124,11 +332,118 @@
   color: var(--color-primary-dark);
 }
 
+.lesson-section__markdown a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Rendered markdown tables come from innerHTML and need the deep selector to receive component styles. */
+:host ::ng-deep .lesson-section__markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-strong);
+  background: var(--color-surface);
+}
+
+:host ::ng-deep .lesson-section__markdown th,
+:host ::ng-deep .lesson-section__markdown td {
+  padding: 0.7rem;
+  border: 1px solid var(--border-strong);
+  text-align: left;
+  vertical-align: top;
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+}
+
+:host ::ng-deep .lesson-section__markdown thead th {
+  background: var(--surface-info);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+:host ::ng-deep .lesson-section__markdown tbody tr td {
+  border-top: 1px solid var(--border-strong);
+}
+
+:host ::ng-deep .lesson-section__markdown tbody tr + tr td {
+  border-top: 1px solid var(--border-strong);
+}
+
+:host ::ng-deep .lesson-section__markdown img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--color-surface);
+}
+
+.lesson-section__markdown code {
+  font-family: monospace;
+  background: var(--surface-muted);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-sm);
+}
+
+.lesson-section :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+.lesson-section--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+.lesson-section--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+.lesson-section--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+.lesson-section--info :is(p, li) :is(strong, b),
+.lesson-section--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .lesson-section :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .lesson-section--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+:host ::ng-deep .lesson-section--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+:host ::ng-deep .lesson-section--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+:host ::ng-deep .lesson-section--info :is(p, li) :is(strong, b),
+:host ::ng-deep .lesson-section--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
 .lesson-section ol {
-  margin: 0;
-  padding-left: 1.4rem;
   display: grid;
-  gap: 0.45rem;
+  gap: 0.5rem;
+}
+
+.lesson-section ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lesson-section li {
+  margin-bottom: 0;
+}
+
+.lesson-section li > p {
+  margin: 0;
 }
 
 .lesson-quiz-options {
@@ -152,18 +467,117 @@
   transition: background 0.2s, border-color 0.2s;
 }
 
-.lesson-quiz-option--correct {
+.lesson-quiz-option--state-correct-selected {
   border-color: var(--border-success);
   background: var(--surface-success);
+  --mdc-checkbox-selected-icon-color: var(--color-success);
+  --mdc-checkbox-selected-hover-icon-color: var(--color-success);
+  --mdc-checkbox-selected-pressed-icon-color: var(--color-success);
+  --mdc-checkbox-selected-focus-icon-color: var(--color-success);
+  --mdc-checkbox-selected-checkmark-color: var(--color-on-dark);
+  --mdc-radio-selected-icon-color: var(--color-success);
+  --mdc-radio-selected-hover-icon-color: var(--color-success);
+  --mdc-radio-selected-pressed-icon-color: var(--color-success);
+  --mdc-radio-selected-focus-icon-color: var(--color-success);
 }
 
-.lesson-quiz-option--incorrect {
+.lesson-quiz-option--state-correct-selected .lesson-quiz-option__label {
+  color: var(--quiz-state-positive-text);
+}
+
+.lesson-quiz-option--state-correct-unselected {
+  border-color: var(--border-danger);
+  background: transparent;
+}
+
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__label {
+  color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__label {
+  color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-unselected {
+  border-color: var(--border-success);
+  background: transparent;
+}
+
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__label {
+  color: var(--quiz-state-positive-text);
+}
+
+.lesson-quiz-option--state-correct-selected :is(mat-checkbox, mat-radio-button),
+.lesson-quiz-option--state-incorrect-unselected :is(mat-checkbox, mat-radio-button) {
+  color: var(--quiz-state-positive-text);
+}
+
+.lesson-quiz-option--state-incorrect-selected :is(mat-checkbox, mat-radio-button),
+.lesson-quiz-option--state-correct-unselected :is(mat-checkbox, mat-radio-button) {
+  color: var(--quiz-state-negative-text);
+}
+
+:host ::ng-deep .lesson-quiz-option--state-correct-selected .mdc-label,
+:host ::ng-deep .lesson-quiz-option--state-incorrect-unselected .mdc-label {
+  color: var(--quiz-state-positive-text);
+}
+
+:host ::ng-deep .lesson-quiz-option--state-incorrect-selected .mdc-label,
+:host ::ng-deep .lesson-quiz-option--state-correct-unselected .mdc-label {
+  color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-selected {
   border-color: var(--border-danger);
   background: var(--surface-danger);
 }
 
 .lesson-quiz-option__icon {
   flex-shrink: 0;
+}
+
+.lesson-quiz-option__label {
+  color: #2f343b;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+:host ::ng-deep .lesson-quiz-option .mdc-label {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.lesson-quiz-option__state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.lesson-quiz-option__state-icon {
+  color: color-mix(in srgb, black 78%, var(--color-text));
+  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.lesson-quiz-option--state-correct-selected .lesson-quiz-option__state-icon,
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__state-icon {
+  color: var(--quiz-state-positive-icon);
+}
+
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__state-icon,
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__state-icon {
+  color: var(--quiz-state-negative-icon);
+}
+
+.lesson-quiz-option__feedback {
+  font-size: 0.68rem;
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  margin-left: auto;
+  white-space: nowrap;
+  opacity: 0.86;
 }
 
 .lesson-quiz-option__icon--correct {
@@ -181,18 +595,47 @@
 
 .lesson-flow__quiz-feedback {
   margin: 0;
-  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  border-radius: var(--radius-lg);
   padding: 0.75rem 0.9rem;
+}
+
+.lesson-flow__quiz-feedback-title {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-size: 0.84rem;
   font-weight: var(--font-weight-semibold);
+}
+
+.lesson-flow__quiz-feedback-text {
+  margin: 0.3rem 0 0;
+  font-size: var(--font-size-md);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  font-weight: var(--font-weight-regular);
 }
 
 .lesson-flow__quiz-feedback--success {
   background: var(--surface-success);
-  color: var(--color-primary-dark);
+  border: 1px solid color-mix(in srgb, var(--color-success) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-success);
+  color: #2f343b;
+}
+
+.lesson-quiz-option--state-correct-selected .lesson-quiz-option__feedback,
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__feedback {
+  color: var(--quiz-state-positive-feedback);
+}
+
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__feedback,
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__feedback {
+  color: var(--quiz-state-negative-text);
 }
 
 .lesson-flow__quiz-feedback--error {
   background: var(--surface-danger);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-accent);
   color: var(--color-accent-dark);
 }
 
@@ -221,4 +664,9 @@
   margin-left: auto;
   border-radius: var(--radius-pill);
   font-weight: var(--font-weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
 }
+

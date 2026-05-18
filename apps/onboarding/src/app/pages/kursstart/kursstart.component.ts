@@ -1,15 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { Component, computed, effect, inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { map } from 'rxjs';
 
 import { ONBOARDING_STEP_COUNT } from '../../data/onboarding-steps.data';
 import { OnboardingStateService } from '../../services/onboarding-state.service';
 import { CourseHeaderComponent } from '../../components/course-header/course-header.component';
 import { CourseModulesSectionComponent } from '../../components/course-modules-section/course-modules-section.component';
-import { CourseJourneySectionComponent } from '../../components/course-journey-section/course-journey-section.component';
 import { CourseAudienceSectionComponent } from '../../components/course-audience-section/course-audience-section.component';
 import { CourseCTASectionComponent } from '../../components/course-cta-section/course-cta-section.component';
 
@@ -31,9 +31,9 @@ interface CourseCatalogEntry {
     CommonModule,
     RouterLink,
     MatButtonModule,
+    MatIconModule,
     CourseHeaderComponent,
     CourseModulesSectionComponent,
-    CourseJourneySectionComponent,
     CourseAudienceSectionComponent,
     CourseCTASectionComponent
   ],
@@ -43,7 +43,10 @@ interface CourseCatalogEntry {
 export class KursstartComponent {
   private readonly state = inject(OnboardingStateService);
   private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
   readonly stepCount = ONBOARDING_STEP_COUNT;
+  private readonly doc = inject(DOCUMENT);
+  private readonly destroyRef = inject(DestroyRef);
 
   private readonly vibeCourseId = 'vibe-coding-agentic-ai';
   private readonly currentCourseId = toSignal(
@@ -90,13 +93,115 @@ export class KursstartComponent {
   );
   readonly selectedCourseIsLive = computed(() => this.selectedCourse().status === 'live');
 
+  readonly completedCount = computed(() => this.state.getCompletedCount());
   readonly hasProgress = computed(() => this.state.getCompletedCount() > 0);
   readonly isCompleted = computed(() => this.state.getCompletedCount() >= ONBOARDING_STEP_COUNT);
   readonly resumeStep = computed(() => this.state.getFirstIncompleteStepId() ?? ONBOARDING_STEP_COUNT);
   readonly resumeLink = computed(() => this.isCompleted()
     ? `/kurse/${this.selectedCourse().id}/onboarding/zusammenfassung`
     : `/kurse/${this.selectedCourse().id}/onboarding/step/${this.resumeStep()}`);
-  readonly resumeLabel = computed(() => this.isCompleted() ? 'Zur Zusammenfassung' : `Bei Schritt ${this.resumeStep()} weitermachen`);
+  readonly resumeLabel = computed(() =>
+    this.isCompleted() ? 'Zur Zusammenfassung'
+    : this.voucherValidated() ? 'Kurs fortsetzen'
+    : 'Kurs starten'
+  );
+
+  // Voucher-Gate
+  readonly voucherValidated = computed(() => this.state.voucherValidated());
+  readonly voucherInput = signal('');
+  readonly voucherError = signal(false);
+  readonly voucherJustValidated = signal(false);
+  readonly voucherCtaEnabled = signal(this.state.voucherValidated());
+  private voucherUnlockTimer: ReturnType<typeof setTimeout> | null = null;
+
+  constructor() {
+    this.destroyRef.onDestroy(() => this.clearVoucherUnlockTimer());
+  }
+
+  onVoucherInput(val: string): void {
+    this.voucherInput.set(val);
+    this.voucherError.set(false);
+  }
+
+  submitVoucher(event?: Event): void {
+    event?.preventDefault();
+    event?.stopPropagation();
+
+    const valid = this.state.validateVoucher(this.voucherInput());
+    this.voucherError.set(!valid);
+    if (valid) {
+      this.voucherJustValidated.set(true);
+      this.voucherCtaEnabled.set(false);
+      this.launchConfetti();
+      this.clearVoucherUnlockTimer();
+      this.voucherUnlockTimer = setTimeout(() => {
+        this.voucherCtaEnabled.set(true);
+      }, 1100);
+    }
+  }
+
+  private clearVoucherUnlockTimer(): void {
+    if (this.voucherUnlockTimer !== null) {
+      clearTimeout(this.voucherUnlockTimer);
+      this.voucherUnlockTimer = null;
+    }
+  }
+
+  private launchConfetti(): void {
+    const canvas = this.doc.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+    this.doc.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      canvas.remove();
+      return;
+    }
+
+    canvas.width = this.doc.defaultView?.innerWidth ?? 1200;
+    canvas.height = this.doc.defaultView?.innerHeight ?? 800;
+    const colors = ['#f5c518', '#4caf50', '#2196f3', '#e91e63', '#ff9800', '#9c27b0'];
+    const particles = Array.from({ length: 140 }, () => ({
+      x: Math.random() * canvas.width,
+      y: -10 - Math.random() * 60,
+      w: 7 + Math.random() * 9,
+      h: 4 + Math.random() * 5,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rotation: Math.random() * Math.PI * 2,
+      speed: 2.5 + Math.random() * 4,
+      drift: (Math.random() - 0.5) * 2.5,
+      wobble: 6 + Math.random() * 10,
+      wobbleSpeed: 0.04 + Math.random() * 0.09,
+      wobbleAngle: Math.random() * Math.PI * 2,
+    }));
+
+    let frame = 0;
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let active = false;
+      for (const p of particles) {
+        p.y += p.speed;
+        p.x += p.drift;
+        p.wobbleAngle += p.wobbleSpeed;
+        p.rotation += 0.06;
+        if (p.y < canvas.height + 20) active = true;
+        ctx.save();
+        ctx.translate(p.x + Math.sin(p.wobbleAngle) * p.wobble, p.y);
+        ctx.rotate(p.rotation);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = Math.max(0, 1 - (p.y / canvas.height) * 0.5);
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+      frame++;
+      if (active && frame < 280) {
+        requestAnimationFrame(animate);
+      } else {
+        canvas.remove();
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }
 
   private readonly vibeCourseModules: { icon: string; title: string; topics: string[] }[] = [
     {

@@ -1,4 +1,4 @@
-# Modulguide: Git
+﻿# Modulguide: Git
 
 Dieses Modul erklaert die Grundlagen von Git und ordnet die wichtigsten Arbeitsablaeufe ein.
 

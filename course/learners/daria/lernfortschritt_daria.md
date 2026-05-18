@@ -1,4 +1,4 @@
-# Lernfortschritt: Daria
+﻿# Lernfortschritt: Daria
 
 ## Aktueller Fokus
 **Was ich gerade lerne:**
@@ -38,7 +38,7 @@ Uebung 2 selbstständig lösen
 - [x] Mein Lernjournal enthaelt einen echten Eintrag von mir.
 - [x] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
 
-### 02.05. (Uebung 02 – Modul-Navigation)
+### 02.05. (Uebung 02 - Modul-Navigation)
 - **Was ich gemacht habe:** Modul-Navigation geübt und für drei Situationen die passenden Quellen gefunden
 - **Was gut lief:** Ich konnte die richtigen Module und Dateien identifizieren
 - **Wo ich hänge:** 
@@ -57,8 +57,8 @@ Uebung 2 selbstständig lösen
 - [x] PR auf GitHub ist erstellt
 
 **Lernerfolgs-Kriterien UE-M2-02:**
-- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht – ohne einen Befehl zu kopieren.
-- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht – die Befehle sassen aus dem Gedaechtnis.
+- [x] Ich habe Ordner und Dateien im Terminal erstellt, umbenannt und geloescht - ohne einen Befehl zu kopieren.
+- [x] Ich habe einen Branch erstellt und Aenderungen committed und gepusht - die Befehle sassen aus dem Gedaechtnis.
 - [x] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
 - [x] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
 - [x] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.

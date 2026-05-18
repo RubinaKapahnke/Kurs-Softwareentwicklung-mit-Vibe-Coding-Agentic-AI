@@ -1,4 +1,4 @@
-# Kursmodul 10: Daten, Reporting & RAG-Grundlagen
+﻿# Kursmodul 10: Daten, Reporting & RAG-Grundlagen
 
 ## Kurzbeschreibung
 

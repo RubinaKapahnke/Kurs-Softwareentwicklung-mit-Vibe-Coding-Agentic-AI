@@ -1,6 +1,6 @@
-# PRD: Grundlagen
+﻿# PRD: Grundlagen
 
-Ein **PRD (Product Requirements Document)** ist ein Dokument, das beschreibt, was eine Software tun soll – bevor irgendein Code geschrieben wird.
+Ein **PRD (Product Requirements Document)** ist ein Dokument, das beschreibt, was eine Software tun soll - bevor irgendein Code geschrieben wird.
 
 ---
 
@@ -11,7 +11,7 @@ Ein PRD beantwortet drei grundlegende Fragen:
 - Wer nutzt sie und fuer was?
 - Wann ist ein Feature fertig?
 
-Ohne diese Klarheit arbeitet die KI ins Leere – oder erfindet Annahmen, die nicht zu deinem Projekt passen.
+Ohne diese Klarheit arbeitet die KI ins Leere - oder erfindet Annahmen, die nicht zu deinem Projekt passen.
 
 ---
 
@@ -50,7 +50,7 @@ Ein einfaches PRD hat fuenf Abschnitte:
 - [Was muss stimmen, damit ein Feature als fertig gilt?]
 ```
 
-Die wichtigsten Abschnitte fuer den Einstieg sind **1, 4 und 5** – sie geben der KI Vision, Nutzerkontext und Erfolgskriterien.
+Die wichtigsten Abschnitte fuer den Einstieg sind **1, 4 und 5** - sie geben der KI Vision, Nutzerkontext und Erfolgskriterien.
 
 ---
 

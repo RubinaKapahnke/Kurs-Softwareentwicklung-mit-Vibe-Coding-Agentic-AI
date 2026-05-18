@@ -1,6 +1,6 @@
-# Terminal-Typen: Welches Terminal nutze ich wann?
+﻿# Terminal-Typen: Welches Terminal nutze ich wann?
 
-Das Terminal ist kein einzelnes Programm – es gibt viele verschiedene. Welches du nutzt, haengt von deinem Betriebssystem ab und davon, ob du direkt am System oder innerhalb von VS Code arbeitest.
+Das Terminal ist kein einzelnes Programm - es gibt viele verschiedene. Welches du nutzt, haengt von deinem Betriebssystem ab und davon, ob du direkt am System oder innerhalb von VS Code arbeitest.
 
 ---
 
@@ -57,7 +57,7 @@ Die Shell bestimmt, welche Befehle funktionieren. Das fuehrt zu den haeufigsten 
 | Terminal leeren | `cls` | `clear` |
 | Aktuellen Pfad zeigen | `pwd` (PowerShell) oder `cd` | `pwd` |
 
-> **Gut zu wissen:** Git-Befehle (`git add`, `git commit`, ...) funktionieren auf allen Systemen identisch – egal welche Shell du nutzt. Nur die "normalen" Terminal-Befehle unterscheiden sich.
+> **Gut zu wissen:** Git-Befehle (`git add`, `git commit`, ...) funktionieren auf allen Systemen identisch - egal welche Shell du nutzt. Nur die "normalen" Terminal-Befehle unterscheiden sich.
 
 ---
 
@@ -89,7 +89,7 @@ VS Code hat ein eigenes Terminal-Fenster eingebaut. Du oeffnest es mit:
 | Praktisch fuer | direktes Arbeiten im Projekt | systemweite Aufgaben |
 | Shell | dieselbe wie dein System (konfigurierbar) | dieselbe wie dein System |
 
-**Empfehlung:** Im Kurs nutzen wir fast immer das **integrierte Terminal in VS Code** – es startet automatisch im richtigen Ordner und spart den Wechsel zwischen Fenstern.
+**Empfehlung:** Im Kurs nutzen wir fast immer das **integrierte Terminal in VS Code** - es startet automatisch im richtigen Ordner und spart den Wechsel zwischen Fenstern.
 
 ---
 
@@ -97,7 +97,7 @@ VS Code hat ein eigenes Terminal-Fenster eingebaut. Du oeffnest es mit:
 
 VS Code erlaubt es, mehrere Terminal-Tabs zu oeffnen und verschiedene Shells zu nutzen. Du kannst rechts im Terminal-Panel auf das **+**-Symbol klicken und dann eine Shell auswaehlen.
 
-Auf Windows siehst du dort zum Beispiel: PowerShell, Command Prompt, Git Bash – je nachdem was installiert ist.
+Auf Windows siehst du dort zum Beispiel: PowerShell, Command Prompt, Git Bash - je nachdem was installiert ist.
 
 ---
 

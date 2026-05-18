@@ -1,4 +1,4 @@
-# VS Code: Grundlagen und Einstieg
+﻿# VS Code: Grundlagen und Einstieg
 
 ## Was ist Visual Studio Code?
 Visual Studio Code (kurz: VS Code) ist ein kostenloser, plattformübergreifender Code-Editor von Microsoft. Er ist besonders beliebt bei Entwickler:innen, weil er leichtgewichtig, schnell und sehr anpassbar ist.
@@ -27,4 +27,4 @@ VS Code wird für das Schreiben, Testen und Debuggen von Code in vielen Programm
 ---
 
 **Tipp:**
-Mit der Tastenkombination `Strg + Shift + P` (Windows) oder `Cmd + Shift + P` (Mac) öffnest du die Befehlspalette – das zentrale Steuerzentrum von VS Code.
+Mit der Tastenkombination `Strg + Shift + P` (Windows) oder `Cmd + Shift + P` (Mac) öffnest du die Befehlspalette - das zentrale Steuerzentrum von VS Code.

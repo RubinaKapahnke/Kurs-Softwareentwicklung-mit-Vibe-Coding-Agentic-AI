@@ -1,4 +1,4 @@
-# Kurs-Tool: Modul Onboarding
+﻿# Kurs-Tool: Modul Onboarding
 
 Diese Datei ist die Arbeitsgrundlage fuer Pflege, Erweiterung und Abnahme der Onboarding-App.
 
@@ -77,6 +77,62 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 - Abschluss: src/app/pages/zusammenfassung/
 - Markdown-Texte: public/content/
 
+## Inhalts-Sync Aus Kursmodul-Lektionen
+
+Die redaktionelle Quelle für Lesson-Flow-Inhalte liegt im Kursmodul unter:
+
+- `course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/lektion-XX-.../lektion-inhalte.md`
+- optional: `.../aufgaben.md`
+
+Der Sync erfolgt in `apps/onboarding` mit:
+
+```bash
+npm run sync-content
+```
+
+Ergebnis:
+
+- `public/content/step-manifest.json` wird aktualisiert.
+- Inhalte werden nach `public/content/step-XX/` gespiegelt.
+
+## Markdown-Konvention Fuer Lesson-Flow
+
+- Jede `##`-Überschrift erzeugt eine neue Lesson-Slide.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- `###` erzeugt Abschnitte innerhalb der Slide.
+- `####` erzeugt eine Zwischenüberschrift im Abschnitt.
+- Bilder können direkt im Markdown eingebunden werden: `![Beschreibung](/assets/lessons/step-02-github-login.png)`.
+  - Verwende absolute Pfade mit `/assets/lessons/`.
+  - Bilder liegen unter `public/assets/lessons/`.
+  - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
+  - Siehe [public/assets/lessons/README.md](public/assets/lessons/README.md) für Bildmaße und Anforderungen.
+
+### Quiz-Pattern
+
+```md
+## Quiz: Kurze Verständnisfrage
+
+Frage: ...
+Hinweis: ...
+Mehrfachauswahl: nein
+
+- [ ] Option A
+- [x] Option B
+
+Erfolg: ...
+Fehler: ...
+```
+
+### Farbfelder Ueber H3-Praefixe
+
+- `### Wichtig:` / `### Hinweis:` -> gelb
+- `### Achtung:` -> rot
+- `### Erfolg:` / `### OK:` / `### Gruen:` -> grün
+- `### Blau:` -> blau
+- `### Info:` / `### Tipp:` -> eigener Hinweis-Farbton
+
+Hinweis: Das Präfix wird nicht angezeigt. Sichtbar bleibt nur der Text nach `:`.
+
 ## Build und lokale Pruefung
 
 Im Ordner apps/onboarding:
@@ -105,6 +161,10 @@ npx ng serve
 	- Freigabe nach Voucher-Validierung
 - `src/app/pages/step-page/step-page.component.spec.ts`
 	- Sichtbarer Folgeinhalte-Hinweis unterhalb Lesson-Flow
+- `src/app/components/lesson-flow/lesson-flow.component.spec.ts`
+	- Quiz-Zustandslogik (4 Statusfaelle) inkl. Label/Icon-Mapping
+	- Umschalten von "Antworten pruefen" zu "Nochmal versuchen"
+	- Feedbackblock mit Ueberschrift und Begruendungstext
 
 ## Typische Fehlerbilder
 

@@ -5,13 +5,13 @@
       <h2>@if (selectedCourseIsLive()) { Starte jetzt mit dem Setup. } @else { Kursstart folgt nach Freischaltung. }</h2>
     </div>
     <div class="cta-actions">
-      @if (selectedCourseIsLive()) {
+      @if (selectedCourseIsLive() && voucherValidated()) {
         <a mat-flat-button [routerLink]="resumeLink()" class="btn-resume-cta ui-primary-button-on-dark">
-          @if (hasProgress()) {
-            {{ resumeLabel() }}
-          } @else {
-            Onboarding starten
-          }
+          {{ resumeLabel() }}
+        </a>
+      } @else if (selectedCourseIsLive()) {
+        <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-resume-cta btn-resume-cta--testzugang">
+          Testzugang anfragen
         </a>
       } @else {
         <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="btn-resume-cta ui-primary-button-on-dark">

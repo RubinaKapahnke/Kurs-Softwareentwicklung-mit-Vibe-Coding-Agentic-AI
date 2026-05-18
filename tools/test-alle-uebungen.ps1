@@ -1,4 +1,4 @@
-# test-alle-uebungen.ps1
+﻿# test-alle-uebungen.ps1
 # Laeuft ueber alle Uebungsdateien in course/uebungen/ und prueft jede gegen den Standard.
 #
 # Aufruf (vom Repo-Root):

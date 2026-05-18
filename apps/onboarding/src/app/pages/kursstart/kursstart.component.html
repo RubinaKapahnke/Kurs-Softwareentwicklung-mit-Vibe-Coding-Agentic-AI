@@ -12,7 +12,7 @@
         <a href="#ablauf" class="navbar-link" (click)="scrollTo($event, 'ablauf')">Ablauf</a>
         <a href="#fuer-wen" class="navbar-link" (click)="scrollTo($event, 'fuer-wen')">Für wen?</a>
         @if (selectedCourseIsLive()) {
-          <a mat-flat-button [routerLink]="resumeLink()" class="navbar-cta ui-primary-button-light">{{ navbarCta() }}</a>
+          <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta ui-primary-button-light">Kontakt aufnehmen</a>
         } @else {
           <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta ui-primary-button-light">Interesse melden</a>
         }
@@ -31,9 +31,10 @@
         [isCompleted]="isCompleted()"
         [resumeLink]="resumeLink()"
         [resumeLabel]="resumeLabel()"
+        [voucherValidated]="voucherValidated()"
       ></app-course-header>
 
-      <div class="hero-right-column">
+      <div class="hero-right-column" [class.hero-right-column--voucher-input]="!voucherValidated()">
         <!-- Kompetenzen im rechten Fokus-Panel -->
         <div class="course-video-section">
           <h2 class="video-title">Relevante Kernkompetenzen</h2>
@@ -47,12 +48,83 @@
             <li>Ergebnisse testen, reviewen, debuggen und verantwortungsvoll freigeben</li>
             <li>Agenten orchestrieren und erstes Multiagentensystem gestalten</li>
           </ul>
+
+          <a href="#inhalte" class="video-next-link" (click)="scrollTo($event, 'inhalte')">
+            Alle Kursinhalte entdecken
+            <span class="video-next-link__arrow" aria-hidden="true">v</span>
+          </a>
         </div>
 
-        <a href="#inhalte" class="video-next-link" (click)="scrollTo($event, 'inhalte')">
-          Alle Kursinhalte entdecken
-          <span class="video-next-link__arrow" aria-hidden="true">v</span>
-        </a>
+        @if (selectedCourseIsLive()) {
+          @if (!voucherValidated()) {
+            <div class="voucher-panel">
+              <p class="voucher-panel__label">
+                <mat-icon aria-hidden="true">vpn_key</mat-icon>
+                Voucher-Code eingeben, um den Kurs freizuschalten
+              </p>
+              <div class="voucher-panel__row">
+                <input
+                  class="voucher-panel__input"
+                  type="text"
+                  placeholder="Voucher-Code"
+                  autocomplete="off"
+                  [value]="voucherInput()"
+                  (input)="onVoucherInput($any($event.target).value)"
+                  (keydown.enter)="submitVoucher($event)">
+                <button mat-flat-button type="button" (click)="submitVoucher($event)">
+                  Freischalten
+                </button>
+              </div>
+              @if (voucherError()) {
+                <p class="voucher-panel__error" role="alert">
+                  <mat-icon aria-hidden="true">error_outline</mat-icon>
+                  Code ungültig – bitte prüfe die Eingabe.
+                </p>
+              }
+            </div>
+          } @else {
+            <div class="voucher-panel voucher-panel--success" [class.voucher-panel--just-unlocked]="voucherJustValidated()">
+              <div class="voucher-success-badge">
+                <mat-icon aria-hidden="true">celebration</mat-icon>
+                <div class="voucher-success-badge__copy">
+                  @if (voucherJustValidated()) {
+                    <span class="voucher-success-badge__title">Kurs freigeschaltet</span>
+                    <p class="voucher-success-badge__text">
+                      Dein Voucher wurde erfolgreich geprüft. Du kannst jetzt direkt mit dem Kurs starten und später jederzeit an derselben Stelle fortsetzen.
+                    </p>
+                  } @else {
+                    <span class="voucher-success-badge__title">Zugang aktiv</span>
+                    <p class="voucher-success-badge__text">
+                      Dein Zugang ist freigeschaltet. Starte jetzt mit dem Kurs oder setze deinen letzten Stand fort.
+                    </p>                  @if (hasProgress()) {
+                    <p class="voucher-success-badge__progress">
+                      <mat-icon aria-hidden="true">bookmark</mat-icon>
+                      @if (isCompleted()) {
+                        Alle {{ stepCount }} Schritte abgeschlossen.
+                      } @else {
+                        Zuletzt bei Schritt {{ resumeStep() }} von {{ stepCount }} ({{ completedCount() }} erledigt).
+                      }
+                    </p>
+                  }                  }
+                </div>
+              </div>
+              <div class="voucher-panel__actions">
+                @if (voucherCtaEnabled()) {
+                  <a
+                    mat-flat-button
+                    [routerLink]="resumeLink()"
+                    class="voucher-panel__cta ui-primary-button-on-dark"
+                    [class.voucher-panel__cta--shimmer]="!hasProgress()"
+                  >
+                    {{ resumeLabel() }}
+                  </a>
+                } @else {
+                  <p class="voucher-panel__hint">Freischaltung erfolgreich. Einen Moment ...</p>
+                }
+              </div>
+            </div>
+          }
+        }
 
       </div>
 
@@ -65,15 +137,6 @@
       [selectedCourseIsLive]="selectedCourseIsLive()"
       [selectedCourseModules]="selectedCourseModules()"
     ></app-course-modules-section>
-  </div>
-
-  <!-- ── Onboarding-Ablauf ──────────────────────────────────── -->
-  <div id="ablauf">
-    <app-course-journey-section
-      [stepCount]="stepCount"
-      [selectedCourseIsLive]="selectedCourseIsLive()"
-      [selectedOnboardingSteps]="selectedOnboardingSteps()"
-    ></app-course-journey-section>
   </div>
 
   <!-- ── Für wen ─────────────────────────────────────────────── -->
@@ -89,6 +152,7 @@
     [hasProgress]="hasProgress()"
     [resumeLink]="resumeLink()"
     [resumeLabel]="resumeLabel()"
+    [voucherValidated]="voucherValidated()"
   ></app-course-cta-section>
 
 </div>

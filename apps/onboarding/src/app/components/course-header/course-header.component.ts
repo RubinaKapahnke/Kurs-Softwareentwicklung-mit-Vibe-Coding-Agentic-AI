@@ -23,4 +23,5 @@ export class CourseHeaderComponent {
   readonly isCompleted = input.required<boolean>();
   readonly resumeLink = input.required<string>();
   readonly resumeLabel = input.required<string>();
+  readonly voucherValidated = input<boolean>(false);
 }

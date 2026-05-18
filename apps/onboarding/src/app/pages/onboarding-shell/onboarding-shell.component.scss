@@ -50,6 +50,17 @@
   align-items: center;
 }
 
+.module-group-label {
+  width: 100%;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary, #666);
+  letter-spacing: 0.02em;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 0.15rem;
+}
+
 .step-pill {
   display: inline-flex;
   align-items: center;
@@ -61,15 +72,21 @@
   font-weight: var(--font-weight-bold);
   line-height: 1;
   border: 2px solid var(--color-primary);
+  background-color: var(--color-surface);
+  color: var(--color-primary);
   text-decoration: none;
   transition: background 0.15s, box-shadow 0.15s;
-  --mdc-fab-small-container-color: var(--surface-info);
+  --mdc-fab-container-color: var(--color-surface);
+  --mdc-fab-small-container-color: var(--color-surface);
+  --mat-fab-foreground-color: var(--color-primary);
   --mat-fab-small-foreground-color: var(--color-primary);
   --mdc-fab-small-container-shape: var(--radius-pill);
 
   &:hover {
     border-color: var(--border-strong);
     box-shadow: var(--shadow-sm);
+    background-color: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
+    --mdc-fab-container-color: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
     --mdc-fab-small-container-color: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
   }
 
@@ -96,7 +113,9 @@
     cursor: default;
     pointer-events: none;
     color: var(--color-on-dark);
+    --mdc-fab-container-color: var(--color-primary-dark);
     --mdc-fab-small-container-color: var(--color-primary-dark);
+    --mat-fab-foreground-color: var(--color-on-dark);
     --mat-fab-small-foreground-color: var(--color-on-dark);
     --mat-fab-small-state-layer-color: var(--color-on-dark);
     // Sicherstellen dass Zahl weiß auf dunklem Hintergrund erscheint

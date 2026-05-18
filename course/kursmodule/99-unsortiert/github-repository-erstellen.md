@@ -1,4 +1,4 @@
-# Ein GitHub-Repository erstellen
+﻿# Ein GitHub-Repository erstellen
 
 Diese Anleitung zeigt dir Schritt für Schritt, wie du dein erstes persönliches Repository für die Kursübungen anlegst.
 
@@ -35,7 +35,7 @@ Jetzt siehst du ein Formular. Fülle es so aus:
 | Feld | Eingabe | Erklärung |
 |------|---------|-----------|
 | **Repository name** | `vibe-coding-uebungen` | Gib deinem Repo einen Namen. Du kannst ihn jederzeit ändern. Tipp: Wähle einen Namen, der deinen Kurs wiedergibt. |
-| **Description** (optional) | `Meine Übungslösungen für den Vibe Coding Kurs` | Kurze Beschreibung – nicht zwingend, aber hilfreich. |
+| **Description** (optional) | `Meine Übungslösungen für den Vibe Coding Kurs` | Kurze Beschreibung - nicht zwingend, aber hilfreich. |
 | **Public / Private** | **Private** | Wähle „Private", damit nur du und eingeladene Personen (z. B. die Trainerin) das Repo sehen. |
 | **Initialize with README** | ☑ Häkchen setzen | Das erstellt automatisch eine README.md-Datei. Das ist wichtig! |
 

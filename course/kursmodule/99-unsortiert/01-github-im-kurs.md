@@ -1,4 +1,4 @@
-# GitHub im Kurskontext
+﻿# GitHub im Kurskontext
 
 Diese Datei beschreibt, wie GitHub in diesem Kurs eingesetzt wird.
 

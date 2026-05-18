@@ -260,7 +260,7 @@ Wenn du neu einsteigst:
 ---
 
 ## 🏗️ Meilenstein 4: Projekt starten
-**Ziel:** Das eigene App-Projekt strukturiert aufbauen und mit KI-Unterstuetzung die erste Funktion umsetzen – mit bewusstem Kontext statt blindem Generieren.
+**Ziel:** Das eigene App-Projekt strukturiert aufbauen und mit KI-Unterstuetzung die erste Funktion umsetzen - mit bewusstem Kontext statt blindem Generieren.
 
 **Modul-Einstiege:**
 - [course/course-library/07-architecture-foundations/00-architecture-foundations-modulguide.md](course/course-library/07-architecture-foundations/00-architecture-foundations-modulguide.md)
@@ -284,7 +284,7 @@ Wenn du neu einsteigst:
 
 ### Should have
 - [ ] Den Datenfluss der eigenen App in einem Prompt beschreiben koennen.
-- [ ] Erkennen, wann eine neue Aufgabe ein Strukturthema ist – und die KI entsprechend einweisen.
+- [ ] Erkennen, wann eine neue Aufgabe ein Strukturthema ist - und die KI entsprechend einweisen.
 
 ### Nice to have
 - [ ] Architekturentscheidungen kurz begruenden koennen (z. B. warum etwas in einen eigenen Ordner kommt).

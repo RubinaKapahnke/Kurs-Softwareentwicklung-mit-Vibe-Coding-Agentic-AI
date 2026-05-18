@@ -39,3 +39,14 @@ Falls ein Kursmodul später stärker ausgearbeitet wird, kann es zusätzliche Da
 | [12-teamarbeit-datenschutz-urheberrecht-governance](./12-teamarbeit-datenschutz-urheberrecht-governance/00-modulziele.md) | Teamarbeit, Datenschutz, Urheberrecht, Governance |
 | [13-deployment-monitoring-release-management](./13-deployment-monitoring-release-management/00-modulziele.md) | Deployment, Monitoring, Semantic Versioning, Release Management |
 | [14-abschlussprojekt-portfolio](./14-abschlussprojekt-portfolio/00-modulziele.md) | Eigenes Projekt, Portfolio, Abschlussinkrement |
+
+## Lerninhalte Nach Lektionen (Modul 01)
+
+Für das Modul [01-arbeitsumgebung-dokumentation-versionsverwaltung](./01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md) gibt es eine neue, generische Quellenstruktur für Lerninhalte nach Lektionen:
+
+- [README_LERNINHALTE.md](./01-arbeitsumgebung-dokumentation-versionsverwaltung/README_LERNINHALTE.md)
+- [anleitung-lerninhalte-zu-steps.md](./01-arbeitsumgebung-dokumentation-versionsverwaltung/anleitung-lerninhalte-zu-steps.md)
+
+Dort ist pro Lektion ein eigener Ordner direkt im Modulordner angelegt. Jeder Ordner enthält aktuell den heutigen Inhaltsstand in markerbasierten Abschnitten, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
+
+Aktueller Stand: Die Onboarding-App nutzt einen manifestbasierten Sync aus diesen Lektionen-Ordnern. Dabei werden insbesondere `lektion-inhalte.md` (Lesson-Flow-Inhalt) und optional `aufgaben.md` (Aufgabenliste) verarbeitet.

@@ -85,15 +85,24 @@ course/course-library/04-git/
 │   ├── notizen_todos_apps.md
 │   ├── README_APPS.md
 │   ├── onboarding/
+│   │   ├── export-pdf.mjs
+│   │   ├── export-pdf.ps1
+│   │   ├── export-screenshot.js
 │   │   ├── content-sync.config.mjs
 │   │   ├── prd_onboarding.md
 │   │   ├── README.md
 │   │   ├── public/
+│   │   │   ├── assets/
+│   │   │   │   └── lessons/
+│   │   │   │       ├── README.md
+│   │   │   │       └── step-05-git-drei-saeulen.png
 │   │   │   └── content/
 │   │   │       ├── github-account.md
 │   │   │       ├── github-repository-erstellen.md
 │   │   │       ├── kurs-handhabung.md
-│   │   │       └── kurs-ueberblick.md
+│   │   │       ├── kurs-ueberblick.md
+│   │   │       ├── tasks-step-04.md
+│   │   │       └── tasks-step-06.md
 │   │   ├── src/
 │   │   │   ├── app/
 │   │   │   │   ├── components/
@@ -188,7 +197,25 @@ course/course-library/04-git/
 │   │   │   ├── 05-vscode-speicherkonflikt-im-kurs.md
 │   │   │   ├── github-repository-erstellen.md
 │   │   │   ├── modulziele.md
-│   │   │   └── README-template-tn-repo.md
+│   │   │   ├── README-template-tn-repo.md
+│   │   │   ├── README_LERNINHALTE.md
+│   │   │   ├── anleitung-lerninhalte-zu-steps.md
+│   │   │   ├── lektion-01-willkommen-im-kurs/
+│   │   │   ├── lektion-02-kurs-und-module/
+│   │   │   ├── lektion-03-github-account/
+│   │   │   ├── lektion-04-eigenes-uebungs-repository/
+│   │   │   ├── lektion-05-trainerin-einladen/
+│   │   │   ├── lektion-06-erste-uebungen/
+│   │   │   ├── lektion-07-was-ist-vs-code/
+│   │   │   ├── lektion-08-vs-code-installieren/
+│   │   │   ├── lektion-09-was-ist-git/
+│   │   │   ├── lektion-10-git-installieren/
+│   │   │   ├── lektion-11-kurs-repo-klonen/
+│   │   │   ├── lektion-12-kurs-handhabung-verstehen/
+│   │   │   ├── lektion-13-branches-commits-pullrequests/
+│   │   │   ├── lektion-14-kurs-repository-klonen/
+│   │   │   ├── lektion-15-uebungen-im-gesamt-setting/
+│   │   │   └── lektion-16-start-in-den-gesamtkurs/
 │   │   ├── 02-produktbeschreibung-inkrementelle-planung/
 │   │   │   └── 00-modulziele.md
 │   │   ├── 03-vibe-coding-prompting-context-engineering/
@@ -297,7 +324,7 @@ course/course-library/04-git/
 └── README.md
 ```
 
-> **Hinweis für Lernende:** Die Ordner `tools/` und die Datei `AGENTS.md` im Stammverzeichnis sind **nicht Teil des Lernmaterials**. Sie werden von Dozenten und KI-Agenten für den Kursbetrieb genutzt – du musst sie nicht öffnen.
+> **Hinweis für Lernende:** Die Ordner `tools/` und die Datei `AGENTS.md` im Stammverzeichnis sind **nicht Teil des Lernmaterials**. Sie werden von Dozenten und KI-Agenten für den Kursbetrieb genutzt - du musst sie nicht öffnen.
 
 ---
 
@@ -323,7 +350,7 @@ pandoc course/uebungen/meilenstein-02-uebung-01.md -o uebung-m2-01.pdf
 pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md" -o kursmodul-01.pdf
 ```
 
-> **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach – das dauert einmalig etwas länger.
+> **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach - das dauert einmalig etwas länger.
 
 ---
 

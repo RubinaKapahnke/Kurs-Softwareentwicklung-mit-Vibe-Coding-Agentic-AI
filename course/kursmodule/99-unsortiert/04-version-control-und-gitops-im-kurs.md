@@ -1,4 +1,4 @@
-# Version Control und GitOps im Kurskontext
+﻿# Version Control und GitOps im Kurskontext
 
 Dieses Dokument verbindet die allgemeinen Grundlagen aus der Course-Library mit dem praktischen Kursablauf.
 

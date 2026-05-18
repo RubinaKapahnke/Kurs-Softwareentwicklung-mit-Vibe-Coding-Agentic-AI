@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD): Kurs-Tool (Modul Onboarding)
+﻿# Product Requirements Document (PRD): Kurs-Tool (Modul Onboarding)
 
 **Projekt:** KnOot Academy Kurs-Tool
 **Status:** Requirement Baseline v1
@@ -133,6 +133,34 @@ Akzeptanzkriterien:
 - Schritt 2 als Entscheidungsstelle (Vorerfahrung)
 - Rücksprung/Umstellung auf Standardpfad jederzeit möglich
 - Abschluss mit Brücke + optionalem Skip
+
+### Schritt-2-Pfade (verbindliche Zustandslogik)
+
+Die technische Quelle für diese Logik liegt in
+`src/app/services/onboarding-state.service.ts` und `src/app/pages/step-page/step-page.component.ts`.
+
+| Interaktion in Schritt 2 | `step2Experience` | Bedeutung | Darf "Als erledigt markieren" aktivieren? |
+|:---|:---|:---|:---|
+| Noch nichts gewählt | `null` | Kein Pfad gewählt | Nein |
+| "Ja, ich habe einen Account" (erste Auswahl) | `existing` | Zwischenstatus, bevor Lernpfad gewählt wird | Nein |
+| "Lektion bearbeiten" | `existing-beginner` | Bestehender Account, aber Inhalte werden durchgearbeitet | Ja, nach Sichtbarkeits-Bestätigung |
+| "Lektion überspringen" | `existing-experienced` | Bestehender Account, Inhalte werden übersprungen | Ja, nach Sichtbarkeits-Bestätigung |
+| "Nein, bisher nicht" | `new` | Neuer Account, normaler Lernpfad | Ja, wenn Aufgaben/Lektion erfüllt sind |
+| Von `existing-experienced` auf "Neuen Account erstellen" | `new-skip` | Wechselpfad vom erfahrenen Account-Pfad auf neuen Account | Ja, wie `new` (Lektion nicht erzwungen) |
+
+#### Kritischer Wechselpfad (Bug-prävention)
+
+Folgender Ablauf muss immer freigeschaltet bleiben:
+
+1. "Ja, ich habe einen Account"
+2. "Lektion überspringen"
+3. "Neuen Account erstellen"
+
+Erwartetes Ergebnis:
+
+- Status wird auf `new-skip` gesetzt.
+- "Als erledigt markieren" darf dadurch nicht blockiert werden.
+- Die Sichtbarkeits-Bestätigung darf in diesem Wechselpfad kein Blocker sein.
 
 ---
 

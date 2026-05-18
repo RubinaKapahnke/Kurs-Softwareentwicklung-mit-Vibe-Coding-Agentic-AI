@@ -13,6 +13,219 @@
   line-height: var(--line-height-heading);
 }
 
+.task-notes {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.task-note {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem 1.05rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface-muted);
+}
+
+.task-note--highlight {
+  background: var(--surface-warning);
+  border: 1px solid color-mix(in srgb, var(--color-secondary-dark) 26%, var(--color-surface));
+  border-left: 8px solid var(--color-secondary-dark);
+}
+
+.task-note--danger {
+  background: var(--surface-danger);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-accent);
+}
+
+.task-note--success {
+  background: var(--surface-success);
+  border: 1px solid color-mix(in srgb, var(--color-success) 28%, var(--color-surface));
+  border-left: 8px solid var(--color-success);
+}
+
+.task-note--info {
+  background: var(--surface-info);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-surface));
+  border-left: 8px solid var(--color-primary);
+}
+
+.task-note--tip {
+  background: color-mix(in srgb, var(--color-primary) 22%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-primary-dark) 24%, var(--color-surface));
+  border-left: 8px solid var(--color-primary-dark);
+}
+
+.task-note__callout-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.task-note__icon {
+  width: 1.42rem;
+  height: 1.42rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-dark);
+  flex-shrink: 0;
+}
+
+.task-note__icon mat-icon {
+  font-size: 0.78rem;
+  width: 0.78rem;
+  height: 0.78rem;
+}
+
+.task-note__icon--highlight {
+  background: var(--color-secondary-dark);
+}
+
+.task-note__icon--danger {
+  background: var(--color-accent);
+}
+
+.task-note__icon--success {
+  background: var(--color-success);
+}
+
+.task-note__icon--info,
+.task-note__icon--tip {
+  background: var(--color-primary);
+}
+
+.task-note__heading {
+  margin: 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary-dark);
+}
+
+.task-note__subheading {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.task-note--highlight .task-note__heading,
+.task-note--highlight .task-note__subheading {
+  color: var(--color-secondary-dark);
+}
+
+.task-note--danger .task-note__heading,
+.task-note--danger .task-note__subheading {
+  color: var(--color-accent-dark);
+}
+
+.task-note--success .task-note__heading,
+.task-note--success .task-note__subheading {
+  color: color-mix(in srgb, var(--color-success) 70%, black);
+}
+
+.task-note--info .task-note__heading,
+.task-note--info .task-note__subheading,
+.task-note--tip .task-note__heading,
+.task-note--tip .task-note__subheading {
+  color: var(--color-primary-dark);
+}
+
+.task-note--highlight :is(p, .task-note__subheading, ol),
+.task-note--danger :is(p, .task-note__subheading, ol),
+.task-note--success :is(p, .task-note__subheading, ol),
+.task-note--info :is(p, .task-note__subheading, ol),
+.task-note--tip :is(p, .task-note__subheading, ol) {
+  margin-left: calc(1.62rem + 0.45rem);
+}
+
+.task-note--highlight .task-note__heading,
+.task-note--danger .task-note__heading,
+.task-note--success .task-note__heading,
+.task-note--info .task-note__heading,
+.task-note--tip .task-note__heading {
+  font-size: var(--font-size-sm);
+}
+
+.task-note--highlight :is(p, li),
+.task-note--danger :is(p, li),
+.task-note--success :is(p, li),
+.task-note--info :is(p, li),
+.task-note--tip :is(p, li) {
+  font-size: var(--font-size-sm);
+}
+
+.task-note p,
+.task-note li {
+  margin: 0;
+  line-height: var(--line-height-base);
+  color: color-mix(in srgb, black 92%, var(--color-text));
+}
+
+.task-note :is(p, li) a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+}
+
+.task-note :is(p, li) a:hover {
+  color: var(--color-primary-dark);
+}
+
+.task-note :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+.task-note--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+.task-note--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+.task-note--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+.task-note--info :is(p, li) :is(strong, b),
+.task-note--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .task-note :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+:host ::ng-deep .task-note--highlight :is(p, li) :is(strong, b) {
+  color: var(--color-secondary-dark) !important;
+}
+
+:host ::ng-deep .task-note--danger :is(p, li) :is(strong, b) {
+  color: var(--color-accent-dark) !important;
+}
+
+:host ::ng-deep .task-note--success :is(p, li) :is(strong, b) {
+  color: color-mix(in srgb, var(--color-success) 70%, black) !important;
+}
+
+:host ::ng-deep .task-note--info :is(p, li) :is(strong, b),
+:host ::ng-deep .task-note--tip :is(p, li) :is(strong, b) {
+  color: var(--color-primary-dark) !important;
+}
+
+.task-note ol {
+  margin: 0;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
 .subtask-list {
   display: grid;
   gap: 0.65rem;

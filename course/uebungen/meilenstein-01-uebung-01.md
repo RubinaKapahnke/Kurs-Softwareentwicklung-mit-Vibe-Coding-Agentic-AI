@@ -1,20 +1,20 @@
-# Übung Meilenstein 1: GitHub-Konto anlegen und Profil vervollständigen
+﻿# Übung Meilenstein 1: GitHub-Konto anlegen und Profil vervollständigen
 
 ## Ziel
 
-Du erstellst einen **GitHub-Account**, vervollständigst dein Profil mit aussagekräftigen Informationen und lädst deine Trainerin oder deinen Trainer als **Collaborator** ein – damit ihr zusammenarbeiten könnt.
+Du erstellst einen **GitHub-Account**, vervollständigst dein Profil mit aussagekräftigen Informationen und lädst deine Trainerin oder deinen Trainer als **Collaborator** ein - damit ihr zusammenarbeiten könnt.
 
 ---
 
-## Vor dem Start – Checkliste
+## Vor dem Start - Checkliste
 
 - [ ] Du hast einen Webbrowser geöffnet (Chrome, Firefox, Safari oder Edge)
 - [ ] Du hast eine E-Mail-Adresse zur Hand (wird für die Registrierung gebraucht)
 - [ ] Du kennst bereits die Trainerin oder den Trainer und ihren/seinen GitHub-Username
 
 In dieser Übung arbeitest du:
-- **Nur im Browser** – keine lokale Installation nötig
-- **Auf github.com** – du erstellst dort einen Account und passt dein Profil an
+- **Nur im Browser** - keine lokale Installation nötig
+- **Auf github.com** - du erstellst dort einen Account und passt dein Profil an
 - **Später:** Du brauchst den GitHub-Username deiner Trainerin/deines Trainers
 
 > **Wichtig - diese Datei nicht bearbeiten:** Diese Uebungsbeschreibung ist nur eine Anleitung. Du arbeitest direkt auf github.com - es gibt hier keine Datei zum Bearbeiten. Deine Aktivitaet (Account-Erstellung, Profil-Aenderungen) wird spaeter durch deinen GitHub-Account sichtbar.
@@ -42,13 +42,13 @@ Quelle: [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/0
    - Suche die E-Mail von `notifications@github.com`
    - Klicke auf den Bestätigungslink in der E-Mail
 5. Akzeptiere die Bedingungen und schließe die Registrierung ab
-6. **Mache einen Screenshot:** Dein GitHub-Profil-Dashboard (du bist jetzt angemeldet) – speichere ihn lokal
+6. **Mache einen Screenshot:** Dein GitHub-Profil-Dashboard (du bist jetzt angemeldet) - speichere ihn lokal
 
 **Falls du bereits einen Account hast:**
 
 1. Öffne [github.com/login](https://github.com/login)
 2. Melde dich mit deinen Anmeldedaten an
-3. Du siehst dein Dashboard – alles OK!
+3. Du siehst dein Dashboard - alles OK!
 
 ---
 
@@ -60,7 +60,7 @@ Quelle: [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/0
    - Klicke oben rechts auf dein **Profilbild** oder auf das **Hamburger-Menü** (☰)
    - Wähle **"Your profile"** oder nutze direkt die URL `github.com/<dein-username>`
 
-2. **Profil bearbeiten – Klicke auf "Edit profile"** (oder das Stift-Symbol):
+2. **Profil bearbeiten - Klicke auf "Edit profile"** (oder das Stift-Symbol):
    - **Name:** Trage deinen vollständigen Namen ein (z.B. "Anna Müller")
    - **Bio:** Schreibe eine kurze Bio (z.B. "Teilnehmerin im Vibe Coding Kurs 2026")
    - **Location:** Deine Stadt/Region (optional, z.B. "Berlin")
@@ -86,7 +86,7 @@ Quelle: [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/0
 
 2. **Settings öffnen:**
    - Klicke oben auf **"Settings"** (Zahnrad-Symbol)
-   - Falls du Settings nicht siehst: Scrolle nach oben – Settings ist ganz rechts neben Code, Issues, Pull Requests
+   - Falls du Settings nicht siehst: Scrolle nach oben - Settings ist ganz rechts neben Code, Issues, Pull Requests
 
 3. **Collaborator einladen:**
    - Klicke im linken Menü auf **"Collaborators"** oder **"Manage access"**
@@ -144,4 +144,4 @@ Quelle: [course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/0
 
 ---
 
-**⏭️ Nächste Übung:** [Meilenstein 1, Übung 2 – Erstes Repo erkunden und erstellen](./meilenstein-01-uebung-02.md)
+**⏭️ Nächste Übung:** [Meilenstein 1, Übung 2 - Erstes Repo erkunden und erstellen](./meilenstein-01-uebung-02.md)

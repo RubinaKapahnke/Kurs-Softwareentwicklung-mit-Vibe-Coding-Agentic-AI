@@ -1,4 +1,4 @@
-## So funktioniert der Kurs im Alltag
+﻿## So funktioniert der Kurs im Alltag
 
 Damit du spaeter nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
 

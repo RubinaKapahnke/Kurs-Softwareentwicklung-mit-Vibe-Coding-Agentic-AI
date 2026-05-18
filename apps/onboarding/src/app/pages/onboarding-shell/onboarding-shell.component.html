@@ -14,19 +14,22 @@
     <mat-progress-bar mode="determinate" [value]="progressPercent()"></mat-progress-bar>
 
     <nav class="step-nav" aria-label="Schrittnavigation">
-      @for (stepId of allSteps; track stepId) {
+      @for (step of allSteps; track step.id) {
+        @if (step.moduleTitle) {
+          <span class="module-group-label">{{ step.moduleTitle }}</span>
+        }
         <a
           mat-mini-fab
           class="step-pill"
           routerLinkActive="step-pill--active"
-          [class.step-pill--done]="isStepDone(stepId)"
-          [routerLink]="getStepLink(stepId)"
-          [attr.aria-label]="(isStepDone(stepId) ? 'Schritt ' + stepId + ' (erledigt)' : 'Zu Schritt ' + stepId)"
-          [attr.aria-current]="isCurrentStep(stepId) ? 'step' : null">
-          @if (isStepDone(stepId) && !isCurrentStep(stepId)) {
+          [class.step-pill--done]="isStepDone(step.id)"
+          [routerLink]="getStepLink(step.id)"
+          [attr.aria-label]="(isStepDone(step.id) ? 'Schritt ' + step.id + ' (erledigt)' : 'Zu Schritt ' + step.id)"
+          [attr.aria-current]="isCurrentStep(step.id) ? 'step' : null">
+          @if (isStepDone(step.id) && !isCurrentStep(step.id)) {
             <mat-icon class="step-check">check</mat-icon>
           } @else {
-            {{ stepId }}
+            {{ step.id }}
           }
         </a>
       }

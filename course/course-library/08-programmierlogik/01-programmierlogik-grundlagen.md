@@ -1,4 +1,4 @@
-# Programmierlogik: Grundlagen
+﻿# Programmierlogik: Grundlagen
 
 Programmierlogik bedeutet: Du verstehst, was der Code tut, warum er es tut und an welcher Stelle etwas schiefgehen kann.
 

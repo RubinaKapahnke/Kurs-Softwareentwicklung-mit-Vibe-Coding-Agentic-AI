@@ -69,7 +69,7 @@ foreach ($file in $lernFiles) {
     Test-Check `
         -Name "Kein verbotener 'Naechster kleiner Schritt'-Abschnitt" `
         -Condition ($content -notmatch '(?m)^## .*(N.chster|naechster) kleiner Schritt') `
-        -Hint "'## Naechster kleiner Schritt' ist verboten – naechster Schritt gehoert in den letzten Journaleintrag"
+        -Hint "'## Naechster kleiner Schritt' ist verboten - naechster Schritt gehoert in den letzten Journaleintrag"
 
     # --- Lernjournal hat mindestens einen Eintrag (### DD.MM.) ---
     $journalEntries = ([regex]::Matches($content, '### \d{2}\.\d{2}\.?')).Count

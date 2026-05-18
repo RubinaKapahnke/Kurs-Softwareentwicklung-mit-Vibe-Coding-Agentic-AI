@@ -1,4 +1,4 @@
-# Übung Meilenstein 1: Erstes Repository erkunden und erstellen
+﻿# Übung Meilenstein 1: Erstes Repository erkunden und erstellen
 
 ## Ziel
 
@@ -6,16 +6,16 @@ Du **erkundest das zentrale Kurs-Repo** auf GitHub, verstehst seine Struktur, un
 
 ---
 
-## Vor dem Start – Checkliste
+## Vor dem Start - Checkliste
 
 - [ ] Du hast einen GitHub-Account erstellt und dich angemeldet
 - [ ] Du hast einen Webbrowser geöffnet
 - [ ] Du kennst die URL des Kurs-Repos oder den Link `github.com/vibe-coding-0426`
 
 In dieser Übung arbeitest du:
-- **Nur im Browser** – keine lokale Installation nötig
-- **Auf dem Kurs-Repo** – du schaust dir nur die Struktur an (keine Änderungen!)
-- **Auf deinem persönlichen Repo** – du erstellst ein neues Repository
+- **Nur im Browser** - keine lokale Installation nötig
+- **Auf dem Kurs-Repo** - du schaust dir nur die Struktur an (keine Änderungen!)
+- **Auf deinem persönlichen Repo** - du erstellst ein neues Repository
 
 > **Wichtig - diese Datei nicht bearbeiten:** Die Aufgabe ist reine Browser-Navigation. Du machst Beobachtungen auf dem Kurs-Repo (ohne es zu aendern) und erstellst dann dein eigenes Repo.
 
@@ -32,30 +32,30 @@ Quelle: [course/course-library/03-github/01-github-grundlagen.md](../course-libr
 1. Öffne im Browser: [github.com/vibe-coding-0426](https://github.com/vibe-coding-0426)
 2. Du siehst die **Startseite des Kurs-Repos**
 
-**Schritt 2: Struktur erkunden – Klicke auf die Ordner und Dateien:**
+**Schritt 2: Struktur erkunden - Klicke auf die Ordner und Dateien:**
 
 1. **Lies die README.md** (oben auf der Seite sichtbar)
    - Notiz: Wofür ist dieses Repo? (Kurzbeschreibung in 1 Satz)
 
 2. **Erkunde die Ordnerstruktur:** Klicke auf verschiedene Ordner:
-   - `course/` – Was ist hier drin? (Klick → Beschreibung lesen)
-   - `course/course-library/` – Welche Module sehen Sie?
-   - `course/uebungen/` – Welche Übungen sind schon vorhanden?
-   - `.github/` – Was könnte hier sein? (versteckter Ordner – optional)
+   - `course/` - Was ist hier drin? (Klick → Beschreibung lesen)
+   - `course/course-library/` - Welche Module sehen Sie?
+   - `course/uebungen/` - Welche Übungen sind schon vorhanden?
+   - `.github/` - Was könnte hier sein? (versteckter Ordner - optional)
    - Navigations-Tipp: Strg+P drücken und `.github` eingeben, falls du den Ordner nicht sofort siehst.
 
 3. **Finde und öffne diese wichtigen Dateien:**
-   - `NEXT_STEPS.md` – Das ist die **zentrale Roadmap**
+   - `NEXT_STEPS.md` - Das ist die **zentrale Roadmap**
      - Lese die Überschrift "🗺️ Next Steps: Zentrale Meilensteine"
      - Notiz: Welche Meilensteine gibt es insgesamt?
-   - `KURSBESCHREIBUNG.md` – Das erklärt den gesamten Kurs
-   - `README.md` – Die Willkommen-Datei
+   - `KURSBESCHREIBUNG.md` - Das erklärt den gesamten Kurs
+   - `README.md` - Die Willkommen-Datei
 
 4. **Screenshots machen:**
    - Screenshot 1: Die Startseite des Kurs-Repos (mit Ordnerstruktur)
    - Screenshot 2: Die Übersicht von `NEXT_STEPS.md`
 
-**Schritt 3: Observation – Beantworte folgende Fragen (schreib dir die Antworten auf oder merke sie dir):**
+**Schritt 3: Observation - Beantworte folgende Fragen (schreib dir die Antworten auf oder merke sie dir):**
 
 - Was ist der Unterschied zwischen dem **Kurs-Repo** und deinem **persönlichen Übungs-Repo**, das du gleich erstellst?
 - Wo findest du die Übungsaufgaben? (`course/uebungen/`)
@@ -88,7 +88,7 @@ Fülle das Formular aus mit **DIESEN Einstellungen:**
 | **.gitignore** | Optional ignorieren | (nicht nötig für den Anfang) |
 | **License** | Optional ignorieren | (nicht nötig für den Kurs) |
 
-**Wichtig:** Stelle sicher, dass dein Repo **PRIVATE** ist – das bedeutet, nur du und deine Trainerin können es sehen!
+**Wichtig:** Stelle sicher, dass dein Repo **PRIVATE** ist - das bedeutet, nur du und deine Trainerin können es sehen!
 
 **Schritt 3: Repository erstellen**
 
@@ -120,7 +120,7 @@ Die automatisch erstellte `README.md` ist sehr kurz. Mach sie aussagekräftiger:
 Ersetze den Text mit einer aussagekräftigen Beschreibung. **Minimal-Beispiel:**
 
 ```markdown
-# Vibe Coding Kurs – Meine Lösungen
+# Vibe Coding Kurs - Meine Lösungen
 
 Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Kurs 2026**.
 
@@ -167,7 +167,7 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 ## Wiederholung aus frueheren Meilensteinen
 
 - **Keine Vorbedingungen** - Das ist der Kurs-Einstieg.
-- **Vorige Übung:** [Meilenstein 1, Übung 1 – GitHub-Konto anlegen](./meilenstein-01-uebung-01.md)
+- **Vorige Übung:** [Meilenstein 1, Übung 1 - GitHub-Konto anlegen](./meilenstein-01-uebung-01.md)
 
 ---
 
@@ -198,13 +198,13 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 - [ ] Ich weiß, dass `NEXT_STEPS.md` meine zentrale Roadmap ist
 - [ ] Ich habe ein persönliches Übungs-Repo erstellt
 - [ ] Mein Repo ist korrekt auf **Private** eingestellt
-- [ ] Ich habe einen Commit gemacht (README angepasst) – das ist mein erstes Versionierungs-Erlebnis
+- [ ] Ich habe einen Commit gemacht (README angepasst) - das ist mein erstes Versionierungs-Erlebnis
 - [ ] Ich verstehe den Unterschied: Kurs-Repo (zentral für alle) vs. mein Übungs-Repo (meine Lösungen)
 - [ ] Ich bin bereit, meine erste Aufgabe im Kurs anzufangen
 
 ---
 
-**✅ Glückwunsch – du bist jetzt im Kurs registriert!**
+**✅ Glückwunsch - du bist jetzt im Kurs registriert!**
 
 Deine nächsten Schritte:
 1. **Trainerin einladen** (falls noch nicht geschehen) → [Meilenstein 1, Übung 1](./meilenstein-01-uebung-01.md)

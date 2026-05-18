@@ -39,7 +39,7 @@ export class OnboardingShellComponent {
   readonly completedCount = computed(() => this.state.getCompletedCount());
 
   /** Liste aller Schritte fuer die Navigation */
-  readonly allSteps = ONBOARDING_STEPS.map((step) => step.id);
+  readonly allSteps = ONBOARDING_STEPS;
   readonly summaryLink = computed(() => ['/kurse', this.currentCourseId(), 'onboarding', 'zusammenfassung']);
 
   private readonly syncCourseContext = effect(() => {

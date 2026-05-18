@@ -1,4 +1,4 @@
-# Modulguide: Markdown
+﻿# Modulguide: Markdown
 
 Dieses Modul erklaert die Grundlagen von Markdown und zeigt dir, wie du Inhalte sauber strukturierst und formatierst.
 

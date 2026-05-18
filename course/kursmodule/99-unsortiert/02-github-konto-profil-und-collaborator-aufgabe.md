@@ -1,4 +1,4 @@
-# Aufgabe: GitHub-Konto, Profil und Collaborator
+﻿# Aufgabe: GitHub-Konto, Profil und Collaborator
 
 Diese Anleitung ist kursspezifisch und wird nur im Kursmodul verwendet.
 
