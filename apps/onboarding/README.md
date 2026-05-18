@@ -101,6 +101,11 @@ Ergebnis:
 - Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
 - `###` erzeugt Abschnitte innerhalb der Slide.
 - `####` erzeugt eine Zwischenüberschrift im Abschnitt.
+- Bilder können direkt im Markdown eingebunden werden: `![Beschreibung](/assets/lessons/step-02-github-login.png)`.
+  - Verwende absolute Pfade mit `/assets/lessons/`.
+  - Bilder liegen unter `public/assets/lessons/`.
+  - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
+  - Siehe [public/assets/lessons/README.md](public/assets/lessons/README.md) für Bildmaße und Anforderungen.
 
 ### Quiz-Pattern
 

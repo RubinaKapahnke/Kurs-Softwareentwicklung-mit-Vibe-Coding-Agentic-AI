@@ -370,6 +370,15 @@
   border-top: 1px solid var(--border-strong);
 }
 
+:host ::ng-deep .lesson-section__markdown img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--color-surface);
+}
+
 .lesson-section__markdown code {
   font-family: monospace;
   background: var(--surface-muted);

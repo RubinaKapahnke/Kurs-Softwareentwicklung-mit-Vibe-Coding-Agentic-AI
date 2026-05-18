@@ -85,10 +85,17 @@ course/course-library/04-git/
 │   ├── notizen_todos_apps.md
 │   ├── README_APPS.md
 │   ├── onboarding/
+│   │   ├── export-pdf.mjs
+│   │   ├── export-pdf.ps1
+│   │   ├── export-screenshot.js
 │   │   ├── content-sync.config.mjs
 │   │   ├── prd_onboarding.md
 │   │   ├── README.md
 │   │   ├── public/
+│   │   │   ├── assets/
+│   │   │   │   └── lessons/
+│   │   │   │       ├── README.md
+│   │   │   │       └── step-05-git-drei-saeulen.png
 │   │   │   └── content/
 │   │   │       ├── github-account.md
 │   │   │       ├── github-repository-erstellen.md

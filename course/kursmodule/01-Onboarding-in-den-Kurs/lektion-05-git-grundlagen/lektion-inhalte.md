@@ -54,6 +54,8 @@ Mit Git hast du:
 
 - Lokal arbeiten -> committen -> pushen -> auf GitHub sichtbar.
 
+![So liest du eine Commit-Historie: Lokal, Commit-Historie und GitHub (remote)](/assets/lessons/step-05-git-drei-saeulen.png)
+
 ## Kapitel 4: Was sind Branches?
 
 Ein Branch ist ein Arbeitszweig. Du kannst darin Änderungen sicher vorbereiten, ohne den Hauptzweig (`main`) direkt zu verändern.

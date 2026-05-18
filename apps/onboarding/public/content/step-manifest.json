@@ -849,6 +849,9 @@
             },
             {
               "heading": "Merksatz",
+              "paragraphs": [
+                "![So liest du eine Commit-Historie: Lokal, Commit-Historie und GitHub (remote)](/assets/lessons/step-05-git-drei-saeulen.png)"
+              ],
               "unorderedItems": [
                 "Lokal arbeiten -> committen -> pushen -> auf GitHub sichtbar."
               ]

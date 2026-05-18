@@ -89,6 +89,16 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         text-decoration: underline;
       }
 
+      :host ::ng-deep .markdown-view img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        border-radius: var(--radius-md, 12px);
+        border: 1px solid var(--color-border, #e0e0e0);
+        background: var(--color-surface, #ffffff);
+      }
+
       :host ::ng-deep .markdown-view code {
         background-color: var(--color-surface-secondary, #f5f5f5);
         padding: 0.2rem 0.4rem;

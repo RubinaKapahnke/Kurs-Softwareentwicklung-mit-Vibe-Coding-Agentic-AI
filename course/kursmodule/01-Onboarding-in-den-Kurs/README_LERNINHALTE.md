@@ -17,6 +17,11 @@ Diese Struktur ist die zentrale Quellenablage für Lerninhalte pro Lektion im On
 3. `###` erzeugt einen Abschnitt innerhalb der aktuellen Seite.
 4. `####` wird als Zwischenüberschrift im Abschnitt dargestellt.
 5. Inline-Markdown wird unterstützt (`*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`).
+6. Bilder können direkt im Markdown stehen: `![Beschreibung](/assets/lessons/step-XX-beispiel.png)`.
+   - Verwende **absolute Pfade** mit `/assets/lessons/`.
+   - Bilder liegen zentral unter `apps/onboarding/public/assets/lessons/`.
+   - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
+   - Siehe [apps/onboarding/public/assets/lessons/README.md](../../../apps/onboarding/public/assets/lessons/README.md) für Bildmaße und Format-Anforderungen.
 
 ## Farb-Praefixe Für `###`
 
