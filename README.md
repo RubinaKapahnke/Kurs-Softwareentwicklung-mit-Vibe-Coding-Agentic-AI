@@ -82,7 +82,6 @@ course/course-library/04-git/
 /vibe-coding-0426
 ├── KURSBESCHREIBUNG.md
 ├── apps/
-│   ├── notizen_todos_apps.md
 │   ├── README_APPS.md
 │   ├── onboarding/
 │   │   ├── export-pdf.mjs
@@ -167,7 +166,6 @@ course/course-library/04-git/
 │           ├── learner-progress-parser.service.ts
 │           └── snapshot.service.ts
 ├── course/
-│   ├── notizen-kursentwicklung.md
 │   ├── learners/
 │   │   ├── daria/
 │   │   │   ├── prd_daria.md

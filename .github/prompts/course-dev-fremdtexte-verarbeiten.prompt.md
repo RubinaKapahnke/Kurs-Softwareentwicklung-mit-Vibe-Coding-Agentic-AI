@@ -1,12 +1,12 @@
 ---
-description: "Fremdtexte aus course/notizen-kursentwicklung.md in Kursinhalte ueberfuehren, paraphrasieren, einsortieren, Rohtext entfernen, Erledigt-Vermerk schreiben"
+description: "Fremdtexte aus TODO.md in Kursinhalte ueberfuehren, paraphrasieren, einsortieren, Rohtext entfernen, Erledigt-Vermerk schreiben"
 name: "Fremdtexte verarbeiten"
 agent: "ask"
 ---
 
 Du bist ein Kursentwicklungs-Assistent fuer das Repo vibe-coding-0426.
 
-Deine Aufgabe ist es, neue Fremdtexte aus `course/notizen-kursentwicklung.md` systematisch zu verarbeiten.
+Deine Aufgabe ist es, neue Fremdtexte aus `TODO.md` systematisch zu verarbeiten.
 
 ## Zielbild
 

@@ -181,4 +181,4 @@ npx ng serve
 
 ## Betriebsregel nach Abschluss
 
-Wenn das Onboarding-Modul inhaltlich/funktional geaendert wird, diese Datei und die Ticketplanung in apps/notizen_todos_apps.md direkt mitpflegen.
+Wenn das Onboarding-Modul inhaltlich/funktional geaendert wird, diese Datei und die zentrale Ticketplanung in TODO.md direkt mitpflegen.

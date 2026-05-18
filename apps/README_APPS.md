@@ -2,7 +2,7 @@
 
 Dieser Ordner enthält zwei Bereiche:
 
-Ergänzende Arbeitsnotizen für App-Ideen liegen in `apps/notizen_todos_apps.md`.
+Ergänzende Arbeitsnotizen für App-Ideen liegen zentral in `TODO.md`.
 
 ## `onboarding/`
 Der lineare Einstieg für absolute Anfänger bis zum lokalen Repo-Clone.

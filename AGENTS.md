@@ -110,7 +110,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - Keep styles token-based and local: no hardcoded component colors, no `!important`, no inline styles, and no direct `.mdc-*` overrides. Shared style decisions go into existing tokens/utilities instead of page-specific patches.
 
 ## Recurring Workflow: Fremdtexte verarbeiten
-- Eingang fuer Rohtexte ist `course/notizen-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
+- Eingang fuer Rohtexte ist `TODO.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
 - Jeder verarbeitete Block wird in **eigene Formulierungen** ueberfuehrt (keine langen wortwoertlichen Uebernahmen).
 - Fremdtexte in Englisch werden vor der Einarbeitung in **Deutsch** uebertragen.
 - Beim Uebertrag werden **Form und Struktur deutlich veraendert** (didaktische Neuordnung statt Satz-fuer-Satz-Naehe), um Urheberrechtsrisiken zu vermeiden.
