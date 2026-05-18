@@ -285,3 +285,4 @@ Die Commit History ist die nachvollziehbare Chronik deines Projekts: Wer hat wan
 
 Du kannst Branch, Commit, Commit History, Pull, Push, Fetch, Clone, Fork, Remote, Pull Request, Reviewer und Merge in einfachen Worten erklären und den typischen Ablauf benennen.
 
+#TODO: fetch erklären, origin vs. lokal, stash, revert, rebase vs. merge (ff, merge strategies), trunk-based development (cerry-pick)
