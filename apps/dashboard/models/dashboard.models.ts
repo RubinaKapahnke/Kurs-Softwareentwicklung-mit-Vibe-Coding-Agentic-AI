@@ -10,7 +10,7 @@ export interface LearnerProgress {
   individualLearningWishes: string[];
 }
 
-// Datenquelle: NEXT_STEPS.md
+// Datenquelle: COURSE_MILESTONES.md
 export interface MilestoneStatus {
   milestoneId: string;
   milestoneTitle: string;
