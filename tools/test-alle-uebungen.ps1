@@ -1,4 +1,4 @@
-﻿# test-alle-uebungen.ps1
+# test-alle-uebungen.ps1
 # Laeuft ueber alle Uebungsdateien in course/uebungen/ und prueft jede gegen den Standard.
 #
 # Aufruf (vom Repo-Root):
@@ -39,13 +39,13 @@ Write-Host ""
 
 # --- Meilenstein-Coverage-Check ---
 Write-Host ("=" * 70)
-Write-Host "  Meilenstein-Coverage-Check (NEXT_STEPS.md <-> course/uebungen/)" -ForegroundColor Cyan
+Write-Host "  Meilenstein-Coverage-Check (COURSE_MILESTONES.md <-> course/uebungen/)" -ForegroundColor Cyan
 Write-Host ("=" * 70)
 
-$nextStepsPath = "$repoRoot\NEXT_STEPS.md"
+$nextStepsPath = "$repoRoot\COURSE_MILESTONES.md"
 $nextStepsContent = Get-Content $nextStepsPath -Raw -Encoding UTF8
 
-# Alle referenzierten Uebungspfade aus NEXT_STEPS.md extrahieren
+# Alle referenzierten Uebungspfade aus COURSE_MILESTONES.md extrahieren
 $uebungMatches = [regex]::Matches($nextStepsContent, '\*\*Uebung:\*\*\s*\[.*?\]\((course/uebungen/[^)]+)\)')
 $referencedAbsPaths = @()
 $coverageFailed = 0
@@ -56,7 +56,7 @@ foreach ($match in $uebungMatches) {
     $referencedAbsPaths += $absPath
 
     if (-not (Test-Path $absPath)) {
-        Write-Host "  [FEHLER] Tote Referenz in NEXT_STEPS.md: $relPath" -ForegroundColor Red
+        Write-Host "  [FEHLER] Tote Referenz in COURSE_MILESTONES.md: $relPath" -ForegroundColor Red
         Write-Host "           -> Datei existiert nicht auf Disk" -ForegroundColor Yellow
         $coverageFailed++
     } else {
@@ -64,17 +64,17 @@ foreach ($match in $uebungMatches) {
     }
 }
 
-# Uebungsdateien, die nicht in NEXT_STEPS.md verlinkt sind
+# Uebungsdateien, die nicht in COURSE_MILESTONES.md verlinkt sind
 foreach ($file in $uebungen) {
     $fileAbs = [System.IO.Path]::GetFullPath($file.FullName)
     if ($referencedAbsPaths -notcontains $fileAbs) {
-        Write-Host "  [WARN] Uebungsdatei existiert, aber fehlt in NEXT_STEPS.md: $($file.Name)" -ForegroundColor Yellow
+        Write-Host "  [WARN] Uebungsdatei existiert, aber fehlt in COURSE_MILESTONES.md: $($file.Name)" -ForegroundColor Yellow
         $coverageFailed++
     }
 }
 
 if ($uebungMatches.Count -eq 0) {
-    Write-Host "  [WARN] Keine '> **Uebung:**'-Eintraege in NEXT_STEPS.md gefunden." -ForegroundColor Yellow
+    Write-Host "  [WARN] Keine '> **Uebung:**'-Eintraege in COURSE_MILESTONES.md gefunden." -ForegroundColor Yellow
 }
 
 Write-Host ("-" * 70)
