@@ -9,7 +9,7 @@
 
 ## Lernjournal
 
-### DD.MM.JJ (Uebung XX - Titel)
+### DD.MM. (Uebung XX – Titel)
 **Was habe ich heute gemacht?**
 ...
 
