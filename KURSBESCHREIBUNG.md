@@ -1,4 +1,4 @@
-﻿# Softwareentwicklung mit Vibe Coding & Agentic AI
+# Softwareentwicklung mit Vibe Coding & Agentic AI
 
 Dieser Kurs vermittelt moderne Softwareentwicklung mit KI-Unterstützung: von der Produktidee über strukturierte Planung, Prototyping und Implementierung bis zu Deployment, Monitoring und Weiterentwicklung. Ziel ist ein wartbares, auslieferbares Produkt, dessen Struktur, Logik und Risiken die Teilnehmenden verstehen.
 
@@ -355,7 +355,7 @@ So bleibt der Kurs nicht abstrakt. Jede Lerneinheit erzeugt ein Ergebnis, das sp
 
 Die bestehende Repo-Struktur bildet bereits die ersten Grundlagen ab:
 
-- [NEXT_STEPS.md](NEXT_STEPS.md) bleibt die zentrale Roadmap für aktuelle Meilensteine.
+- [COURSE_MILESTONES.md](COURSE_MILESTONES.md) bleibt die zentrale Roadmap für aktuelle Meilensteine.
 - [course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md) bildet die eigenständigen Kursbausteine ab.
 - [course/course-library](course/course-library) enthält die Lernmodule.
 - [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) führt zu den zentralen Übungen.

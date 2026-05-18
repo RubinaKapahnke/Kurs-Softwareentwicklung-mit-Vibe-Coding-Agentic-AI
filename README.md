@@ -1,4 +1,4 @@
-﻿# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
+# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
 
 Willkommen zum Kurs **Softwareentwicklung mit Vibe Coding & Agentic AI**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
 
@@ -35,12 +35,12 @@ Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten
 
 ## 🧭 Arbeitsweise im Repo
 
-**Zentrale Koordination:** [NEXT_STEPS.md](NEXT_STEPS.md) definiert den aktuellen Kursfortschritt. [course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md) beschreibt die eigenständigen Kursbausteine.
+**Zentrale Koordination:** [COURSE_MILESTONES.md](COURSE_MILESTONES.md) definiert den aktuellen Kursfortschritt. [course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md) beschreibt die eigenständigen Kursbausteine.
 
 **Architektur der Verknüpfung:**
 1. Kursbeschreibung ([KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md)) → Beschreibt Gesamtbild, Pfade und Kurslogik
 2. Kursmodule ([course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md)) → Beschreiben eigenständige Kursbausteine mit Rollenbezug und Praxisartefakt
-3. Meilensteine in [NEXT_STEPS.md](NEXT_STEPS.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
+3. Meilensteine in [COURSE_MILESTONES.md](COURSE_MILESTONES.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
 4. Modul-Inhalte ([course/course-library](course/course-library)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
 5. Übungen ([course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
 6. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
@@ -55,7 +55,7 @@ Jedes Modul folgt derselben Struktur. Beispiel: `course/course-library/04-git/`
 
 ```
 course/course-library/04-git/
-├── 00-git-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
+├── 00-git-versionierung-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
 ├── 01-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
 └── 03-git-befehlsuebersicht.md   ← Nachschlag: Befehle in Tabellen (nur Git, Terminal)
 ```
@@ -167,7 +167,8 @@ course/course-library/04-git/
 │           ├── learner-progress-parser.service.ts
 │           └── snapshot.service.ts
 ├── course/
-│   ├── notizen-kursentwicklung.md
+│   ├── COURSE_MILESTONES.md
+│   ├── fremdtexte-kursentwicklung.md
 │   ├── learners/
 │   │   ├── daria/
 │   │   │   ├── prd_daria.md
@@ -181,6 +182,10 @@ course/course-library/04-git/
 │   │   ├── raphael/
 │   │   │   ├── prd_raphael.md
 │   │   │   └── lernfortschritt_raphael.md
+│   │   ├── 00_vorlage/
+│   │   │   ├── prd_vorlage.md
+│   │   │   ├── lernfortschritt_vorlage.md
+│   │   │   └── lernbegleitnotizen_vorlage.md
 │   │   └── sebastian/
 │   │       ├── cmd_guide.md
 │   │       ├── git_guide.md
@@ -246,39 +251,39 @@ course/course-library/04-git/
 │   │       └── 00-modulziele.md
 │   ├── course-library/
 │   │   ├── 01-markdown/
-│   │   │   ├── 00-markdown-modulguide.md
+│   │   │   ├── 00-markdown-dokumentation-modulguide.md
 │   │   │   ├── 01-markdown-grundlagen.md
 │   │   │   └── 02-formatierung_md-files.md
 │   │   ├── 02-vscode/
-│   │   │   ├── 00-vscode-modulguide.md
+│   │   │   ├── 00-vscode-arbeitsumgebung-modulguide.md
 │   │   │   ├── 01-vscode-grundlagen.md
 │   │   │   ├── 02-vscode-copilot.md
 │   │   │   └── 03-vscode-speicherkonflikt-compare-overwrite.md
 │   │   ├── 03-github/
-│   │   │   ├── 00-github-modulguide.md
+│   │   │   ├── 00-github-zusammenarbeit-modulguide.md
 │   │   │   └── 01-github-grundlagen.md
 │   │   ├── 04-git/
-│   │   │   ├── 00-git-modulguide.md
+│   │   │   ├── 00-git-versionierung-modulguide.md
 │   │   │   ├── 01-git-grundlagen.md
 │   │   │   ├── 02-git-branch-workflow.md
 │   │   │   ├── 03-git-befehlsuebersicht.md
 │   │   │   ├── 04-version-control-und-gitops-grundlagen.md
 │   │   │   └── git-befehle-cheat-sheet.md
 │   │   ├── 05-terminal/
-│   │   │   ├── 00-terminal-modulguide.md
+│   │   │   ├── 00-terminal-kommandozeile-modulguide.md
 │   │   │   ├── 01-terminal-grundlagen.md
 │   │   │   └── 03-terminal-befehlsuebersicht.md
 │   │   ├── 06-ai-instructions/
-│   │   │   ├── 00-ai-instructions-modulguide.md
+│   │   │   ├── 00-ai-instructions-prompting-context-modulguide.md
 │   │   │   ├── 01-prompting-grundlagen.md
 │   │   │   ├── 02-prd-grundlagen.md
 │   │   │   └── 03-prompt-dateien-grundlagen.md
 │   │   ├── 07-architecture-foundations/
-│   │       ├── 00-architecture-foundations-modulguide.md
+│   │       ├── 00-architecture-foundations-projektstruktur-modulguide.md
 │   │       ├── 01-architecture-foundations-grundlagen.md
 │   │       └── 02-architecture-foundations-praxis.md
 │   │   └── 08-programmierlogik/
-│   │       ├── 00-programmierlogik-modulguide.md
+│   │       ├── 00-programmierlogik-code-verstehen-modulguide.md
 │   │       ├── 01-programmierlogik-grundlagen.md
 │   │       └── 02-programmierlogik-code-lesen.md
 │   └── uebungen/
@@ -320,7 +325,7 @@ course/course-library/04-git/
 │   ├── test-links.ps1
 │   └── test-uebung.ps1
 ├── AGENTS.md
-├── NEXT_STEPS.md
+├── COURSE_MILESTONES.md
 └── README.md
 ```
 
@@ -356,7 +361,7 @@ pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00
 
 ## ✅ Nächster Einstiegspunkt
 Wenn du neu in eine Session einsteigst:
-1. [NEXT_STEPS.md](NEXT_STEPS.md) öffnen
+1. [COURSE_MILESTONES.md](COURSE_MILESTONES.md) öffnen
 2. eigenen Lernfortschritt im persönlichen Ordner aktualisieren
 3. aktuelle Übung in [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) bearbeiten
 4. Änderungen committen, pushen und PR erstellen

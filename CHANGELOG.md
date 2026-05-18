@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
@@ -23,7 +23,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ### 08.05.2026
 - Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/kursmodule/` mit 14 Kursmodulen.
-- Root-Dokumentation synchronisiert (`README.md`, `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md`, `apps/README_APPS.md`).
+- Root-Dokumentation synchronisiert (`README.md`, `COURSE_MILESTONES.md`, `course/uebungen/README_UEBUNGEN.md`, `apps/README_APPS.md`).
 - Onboarding-App um Markdown-Content-Workflow erweitert (`public/content`, `markdownSource`, Renderer-Komponente mit Sanitizing).
 - Agent-/Instruction-Set für Konsistenz und Onboarding-Markdown-Flow erweitert (`AGENTS.md`, Onboarding-Instruction, Onboarding-Web-Architect, Repo-Consistency-Checker).
 - Validierung erfolgreich: Onboarding-Build grün, 313 Linkchecks OK, alle 8 Uebungen bestanden.
@@ -69,7 +69,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `course/course-library/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
 - `course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
 - `apps/dashboard/models/dashboard.models.ts`: Interface-Kommentare auf korrekte Pfade (`course/learners/`, `course/uebungen/`) aktualisiert
-- `README.md`: `course/notizen-kursentwicklung.md` in Projektstruktur ergaenzt
+- `README.md`: `course/fremdtexte-kursentwicklung.md` in Projektstruktur ergaenzt
 
 **Ergebnis:** 313 Links OK, 8 Uebungen OK, 5 Lernfortschritt-Dateien OK (unveraendert)
 
@@ -115,7 +115,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - GitHub-Inhalte fuer Kursmodul 01 ausgebaut und sauber zwischen `course/kursmodule/` (kursbezogen) und `course/course-library/` (allgemein) getrennt.
 - Neue Inhalte zu Version Control / GitOps ergaenzt (allgemein + kursspezifische Einordnung).
 - Neue Inhalte zu VS-Code-Speicherkonflikten (`Compare`/`Overwrite`, `Revert Block`, Fallback bei wiederholtem Save-Fehler) in Library und Kursmodul ergaenzt.
-- `NEXT_STEPS.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
+- `COURSE_MILESTONES.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
 - Uebungsbereich erweitert/angepasst (inkl. Meilenstein-01-Uebungen und Standardkonformitaet ohne vorausabgehakte Checklisten).
 
 ## 09.05.2026 (Session 9b)
@@ -152,12 +152,12 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### Programmierlogik-Modul und Meilenstein-4-Folgeuebung
 
 **Neues Lernmodul in der Course Library:**
-- `course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md`: Modul-Einstieg mit Must/Should/Nice-Selbstcheck.
+- `course/course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md`: Modul-Einstieg mit Must/Should/Nice-Selbstcheck.
 - `course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md`: Variablen, Funktionen, Bedingungen, Datenfluss und typische Logikfehler in KI-Code.
 - `course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md`: Schrittweise Methode zum Lesen, Rueckfragen und risikoarmen Verbessern von KI-Code.
 
 **Meilenstein-4-Integration:**
-- `NEXT_STEPS.md`: Modul 08 als Einstieg/Vertiefung in Meilenstein 4 aufgenommen und Umsetzungsblock "Programmierlogik im KI-Code verstehen" ergaenzt.
+- `COURSE_MILESTONES.md`: Modul 08 als Einstieg/Vertiefung in Meilenstein 4 aufgenommen und Umsetzungsblock "Programmierlogik im KI-Code verstehen" ergaenzt.
 - `course/uebungen/meilenstein-04-uebung-02.md`: Neue Folgeuebung "KI-Code lesen und gezielt verbessern" erstellt.
 - `course/uebungen/README_UEBUNGEN.md`: Uebersicht um Meilenstein-04-Uebung-02 erweitert.
 
@@ -239,7 +239,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `docs/uebungen/` → `course/uebungen/` verschoben
 - `docs/GLOSSARY.md` gelöscht (war nie gepflegt)
 - Alle relativen Links in 8 Übungsdateien angepasst (`../../modules/` → `../modules/`)
-- `NEXT_STEPS.md`, `README.md`, `AGENTS.md`, `README_UEBUNGEN.md`, `README_APPS.md` auf neue Pfade aktualisiert
+- `COURSE_MILESTONES.md`, `README.md`, `AGENTS.md`, `README_UEBUNGEN.md`, `README_APPS.md` auf neue Pfade aktualisiert
 - Alle 5 Agent-Dateien in `.github/agents/` auf neue Pfade aktualisiert
 - `tools/test-alle-uebungen.ps1` + `tools/test-uebung.ps1` auf neue Pfade angepasst
 - Alle 8 Übungen bestehen weiterhin (0 Fehler)
@@ -329,7 +329,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-### NEXT_STEPS.md - Veraltete Tasks entfernt
+### COURSE_MILESTONES.md - Veraltete Tasks entfernt
 
 - 3 Tasks unter Meilenstein 2, Übung 01 entfernt: „Unterordner `lernstand_vorname` anlegen", „Datei `meilensteine_<vorname>.md` anlegen", „Bisherige und kommende Aufgaben in der Datei pflegen"
 
@@ -386,7 +386,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Neu: `modules/04-git/02-git-branch-workflow.md`** - Vollständiger Branch-Lebenszyklus (erstellen → PR → aufräumen), Remote/lokale Branch-Löschung, `git fetch --prune`, Aufräum-Checkliste
 
-**`00-git-modulguide.md`:** Branch-Workflow-Link + Should-have ergänzt
+**`00-git-versionierung-modulguide.md`:** Branch-Workflow-Link + Should-have ergänzt
 
 ---
 
@@ -417,7 +417,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### Modul 07-architecture-foundations - Neu
 
 **Neu: `modules/07-architecture-foundations/`**
-- `00-architecture-foundations-modulguide.md`: Modulguide mit inline Selbstcheck (Must/Should/Nice)
+- `00-architecture-foundations-projektstruktur-modulguide.md`: Modulguide mit inline Selbstcheck (Must/Should/Nice)
 - `01-architecture-foundations-grundlagen.md`: Konzepte (Was ist Architektur, Schichten, Verantwortlichkeiten)
 - `02-architecture-foundations-praxis.md`: Praxisbeispiele aus dem Dashboard-Kontext
 
@@ -427,7 +427,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Neu: `modules/02-vscode/02-vscode-copilot.md`** - Copilot-Grundlagen, Slash-Commands, Chat vs. Inline-Completion
 
-**`modules/02-vscode/00-vscode-modulguide.md`:** `02-vscode-copilot.md` in Inhaltsliste und Selbstcheck ergänzt
+**`modules/02-vscode/00-vscode-arbeitsumgebung-modulguide.md`:** `02-vscode-copilot.md` in Inhaltsliste und Selbstcheck ergänzt
 
 ---
 
@@ -443,7 +443,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-### NEXT_STEPS.md - Meilenstein 4
+### COURSE_MILESTONES.md - Meilenstein 4
 
 - Meilenstein 4 (Architektur-Grundlagen) mit Modul-Einstiegen, Lernzielen (Must/Should/Nice) und Übungslinks ergänzt
 - `modules/04-git/01-git-grundlagen.md` umbenannt (war `02-git-grundlagen.md`), Verweise aktualisiert

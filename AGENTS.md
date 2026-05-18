@@ -1,4 +1,4 @@
-﻿# AGENTS
+# AGENTS
 
 ## README Sync Standard
 
@@ -41,7 +41,7 @@ The learning structure follows this hierarchy:
   - Each course module has a `00-modulziele.md`
   - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
   - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
-3. **NEXT_STEPS.md** (zentral) → Defines current learning milestones and group progress
+3. **COURSE_MILESTONES.md** (zentral) → Defines current learning milestones and group progress
 4. **course/course-library/** (zentral) → Explain concepts and commands as the learning material collection
    - `00-modulguide.md` → Navigation, overview, and **inline Selbstcheck** (Must/Should/Nice checklists)
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
@@ -61,19 +61,19 @@ The learning structure follows this hierarchy:
 
 **Key principle:** No redundant explanations. Each element has one clear role. Exercises directly link to module sources—learners click the link, understand the concept, and complete the task.
 
-### NEXT_STEPS.md
-- `NEXT_STEPS.md` is the central roadmap and should stay central.
+### COURSE_MILESTONES.md
+- `COURSE_MILESTONES.md` is the central roadmap and should stay central.
 - Individual learning progress is managed only in the personal files under `course/learners/`.
 - Do not introduce wording that assumes fixed weekly pacing in learner progress files.
 - The participant circle is closed. Do not add public open-enrollment onboarding or wording for unknown external participants.
-- Onboarding content in `apps/onboarding/` is for already accepted course participants and should hand off clearly into `NEXT_STEPS.md`.
+- Onboarding content in `apps/onboarding/` is for already accepted course participants and should hand off clearly into `COURSE_MILESTONES.md`.
 
 ### Exercise Workflow
 - Central exercises live in `course/uebungen/`.
 - Participants do not create exercises; they solve centrally defined exercises.
 - Solution artefacts live standardmaessig in the participant's own repo unless an exercise explicitly requires changes in this course repo.
 - `course/learners/` remains the canonical place for learning-progress reporting and dashboard-compatible overview data.
-- When changing an exercise, keep it aligned with the corresponding milestone in `NEXT_STEPS.md`.
+- When changing an exercise, keep it aligned with the corresponding milestone in `COURSE_MILESTONES.md`.
 
 ## Source Standard For Exercises
 - Every exercise task point should reference a concrete source in `course/course-library/` oder `course/kursmodule/`.
@@ -95,7 +95,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
-- Keep `README.md`, `NEXT_STEPS.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
+- Keep `README.md`, `COURSE_MILESTONES.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
 - For onboarding explanatory content, maintain lesson sources under `course/kursmodule/01-.../lerninhalte/lektion-XX-.../` (`lektion-inhalte.md`, optional `aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components.
 - Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
@@ -110,7 +110,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - Keep styles token-based and local: no hardcoded component colors, no `!important`, no inline styles, and no direct `.mdc-*` overrides. Shared style decisions go into existing tokens/utilities instead of page-specific patches.
 
 ## Recurring Workflow: Fremdtexte verarbeiten
-- Eingang fuer Rohtexte ist `course/notizen-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
+- Eingang fuer Rohtexte ist `course/fremdtexte-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
 - Jeder verarbeitete Block wird in **eigene Formulierungen** ueberfuehrt (keine langen wortwoertlichen Uebernahmen).
 - Fremdtexte in Englisch werden vor der Einarbeitung in **Deutsch** uebertragen.
 - Beim Uebertrag werden **Form und Struktur deutlich veraendert** (didaktische Neuordnung statt Satz-fuer-Satz-Naehe), um Urheberrechtsrisiken zu vermeiden.
@@ -197,7 +197,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 | `command` | Beschreibung | `command example` | Hinweis |
 ```
 
-**Schritt 3: Zu NEXT_STEPS.md verlinken**
+**Schritt 3: Zu COURSE_MILESTONES.md verlinken**
 - Neuen Meilenstein hinzufügen ODER
 - Existierenden Meilenstein ergänzen
 - Modul-Einstieg: `[course/course-library/XX-name/00-modulguide.md](course/course-library/XX-name/00-modulguide.md)`
@@ -227,7 +227,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 
 ### ✅ Neuer Meilenstein hinzufügen
 
-**Schritt 1: In NEXT_STEPS.md erstellen**
+**Schritt 1: In COURSE_MILESTONES.md erstellen**
 ```markdown
 ## 🎯 Meilenstein N: [Titel]
 **Ziel:** [Kurzbeschreibung]
