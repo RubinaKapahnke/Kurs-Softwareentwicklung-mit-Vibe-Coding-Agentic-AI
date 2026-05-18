@@ -1,4 +1,4 @@
-﻿# README-Vorlage fuer dein Uebungs-Repository
+# README-Vorlage fuer dein Uebungs-Repository
 
 ```markdown
 # Vibe Coding Kurs - Meine Loesungen
@@ -26,5 +26,5 @@ Dieses Repository enthaelt meine Aufgaben und Loesungen aus dem Kurs.
 ## Wichtige Links
 
 - Kurs-Repository: [vibe-coding-0426](https://github.com/vibe-coding-0426)
-- Meilensteine: [NEXT_STEPS.md](https://github.com/vibe-coding-0426/NEXT_STEPS.md)
+- Meilensteine: [COURSE_MILESTONES.md](https://github.com/vibe-coding-0426/COURSE_MILESTONES.md)
 ```

@@ -1,4 +1,4 @@
-﻿# Übung Meilenstein 1: Erstes Repository erkunden und erstellen
+# Übung Meilenstein 1: Erstes Repository erkunden und erstellen
 
 ## Ziel
 
@@ -45,7 +45,7 @@ Quelle: [course/course-library/03-github/01-github-grundlagen.md](../course-libr
    - Navigations-Tipp: Strg+P drücken und `.github` eingeben, falls du den Ordner nicht sofort siehst.
 
 3. **Finde und öffne diese wichtigen Dateien:**
-   - `NEXT_STEPS.md` - Das ist die **zentrale Roadmap**
+   - `COURSE_MILESTONES.md` - Das ist die **zentrale Roadmap**
      - Lese die Überschrift "🗺️ Next Steps: Zentrale Meilensteine"
      - Notiz: Welche Meilensteine gibt es insgesamt?
    - `KURSBESCHREIBUNG.md` - Das erklärt den gesamten Kurs
@@ -53,14 +53,14 @@ Quelle: [course/course-library/03-github/01-github-grundlagen.md](../course-libr
 
 4. **Screenshots machen:**
    - Screenshot 1: Die Startseite des Kurs-Repos (mit Ordnerstruktur)
-   - Screenshot 2: Die Übersicht von `NEXT_STEPS.md`
+   - Screenshot 2: Die Übersicht von `COURSE_MILESTONES.md`
 
 **Schritt 3: Observation - Beantworte folgende Fragen (schreib dir die Antworten auf oder merke sie dir):**
 
 - Was ist der Unterschied zwischen dem **Kurs-Repo** und deinem **persönlichen Übungs-Repo**, das du gleich erstellst?
 - Wo findest du die Übungsaufgaben? (`course/uebungen/`)
 - Wo findest du die Lernmaterial-Module? (`course/course-library/`)
-- Was ist `NEXT_STEPS.md`? (Ist das deine Aufgabenliste oder eine Kursbeschreibung für alle?)
+- Was ist `COURSE_MILESTONES.md`? (Ist das deine Aufgabenliste oder eine Kursbeschreibung für alle?)
 
 ---
 
@@ -182,7 +182,7 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 - [ ] Ich kenne die URL meines Repos (z.B. `github.com/dein-username/vibe-coding-uebungen`)
 - [ ] Screenshots vorhanden:
   - [ ] Screenshot: Startseite des Kurs-Repos
-  - [ ] Screenshot: NEXT_STEPS.md des Kurs-Repos
+  - [ ] Screenshot: COURSE_MILESTONES.md des Kurs-Repos
   - [ ] Screenshot: Mein neu erstelltes Übungs-Repo
   - [ ] Screenshot: Meine aktualisierte README.md
 
@@ -195,7 +195,7 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 - [ ] Ich kann auf dem Kurs-Repo navigieren und die Ordnerstruktur verstehen
 - [ ] Ich weiß, wo die Übungsaufgaben sind (`course/uebungen/`)
 - [ ] Ich weiß, wo die Lernmaterial-Module sind (`course/course-library/`)
-- [ ] Ich weiß, dass `NEXT_STEPS.md` meine zentrale Roadmap ist
+- [ ] Ich weiß, dass `COURSE_MILESTONES.md` meine zentrale Roadmap ist
 - [ ] Ich habe ein persönliches Übungs-Repo erstellt
 - [ ] Mein Repo ist korrekt auf **Private** eingestellt
 - [ ] Ich habe einen Commit gemacht (README angepasst) - das ist mein erstes Versionierungs-Erlebnis
@@ -208,5 +208,5 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 
 Deine nächsten Schritte:
 1. **Trainerin einladen** (falls noch nicht geschehen) → [Meilenstein 1, Übung 1](./meilenstein-01-uebung-01.md)
-2. **Git und Terminal lernen** → [Meilenstein 2](../course-library/02-vscode/00-vscode-modulguide.md)
-3. **Erste echte Aufgabe bearbeiten** → [NEXT_STEPS.md → Meilenstein 2](../../NEXT_STEPS.md#-meilenstein-2-setup--umgebung)
+2. **Git und Terminal lernen** → [Meilenstein 2](../course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
+3. **Erste echte Aufgabe bearbeiten** → [COURSE_MILESTONES.md → Meilenstein 2](../../COURSE_MILESTONES.md#-meilenstein-2-setup--umgebung)

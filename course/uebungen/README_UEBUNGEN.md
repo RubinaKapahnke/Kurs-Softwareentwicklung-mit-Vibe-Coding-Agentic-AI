@@ -1,8 +1,8 @@
-﻿# Uebungen pro Meilenstein
+# Uebungen pro Meilenstein
 
 In diesem Ordner liegen zentral vorgegebene Uebungsaufgaben fuer alle Lernenden.
 
-Wie Übungen mit Modulen und NEXT_STEPS verknüpft sind, erklärt [NEXT_STEPS.md → Architektur](../../NEXT_STEPS.md).
+Wie Übungen mit Modulen und NEXT_STEPS verknüpft sind, erklärt [COURSE_MILESTONES.md → Architektur](../../COURSE_MILESTONES.md).
 
 Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](../kursmodule/README_KURSMODULE.md). Wichtig: Uebungen referenzieren als Quelle je nach Inhalt entweder `course/course-library` (allgemein) oder `course/kursmodule` (kursspezifisch).
 
@@ -26,7 +26,7 @@ Die Kursbaustein-Ebene findest du in [course/kursmodule/README_KURSMODULE.md](..
 - meilenstein-XX-uebung-YY.md
 
 ## Vorgehen fuer Lernende
-1. **Meilenstein öffnen:** [NEXT_STEPS.md](../../NEXT_STEPS.md) → Relevant Meilenstein suchen
+1. **Meilenstein öffnen:** [COURSE_MILESTONES.md](../../COURSE_MILESTONES.md) → Relevant Meilenstein suchen
 2. **Module erkunden:** Modul-Einstiege von dort → Für jedes Modul `00-modulguide.md` öffnen → Von dort zu Grundlagen/Befehlsuebersicht und Selbstcheck navigieren
 3. **Aufgabe lesen:** [course/uebungen](.) → Aktuelle Übung öffnen
 4. **Mit Quellen arbeiten:** Für jede Aufgabe: Quelle (Link zu Modul) klicken → Modul lesen → Aufgabe lösen

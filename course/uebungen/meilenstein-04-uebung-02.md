@@ -1,4 +1,4 @@
-﻿# Uebung Meilenstein 4: KI-Code lesen und gezielt verbessern
+# Uebung Meilenstein 4: KI-Code lesen und gezielt verbessern
 
 ## Ziel
 
@@ -153,7 +153,7 @@ Quelle: [course-library/04-git/03-git-befehlsuebersicht.md](../course-library/04
 
 ## Modulabdeckung (Check)
 
-- [ ] course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md: Einstieg und Selbstcheck fuer Code-Verstehen
+- [ ] course/course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md: Einstieg und Selbstcheck fuer Code-Verstehen
 - [ ] course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md: Variablen, Funktionen, Bedingungen, Datenfluss
 - [ ] course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md: Schrittfolge zum Lesen und Verbessern von KI-Code
 - [ ] course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md: Kontext aus PRD und strukturierte Weiterarbeit

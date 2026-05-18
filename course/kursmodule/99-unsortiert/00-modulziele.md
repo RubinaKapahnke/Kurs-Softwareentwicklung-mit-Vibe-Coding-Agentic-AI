@@ -1,4 +1,4 @@
-﻿# Kursmodul 01: Arbeitsumgebung, Dokumentation & Versionsverwaltung
+# Kursmodul 01: Arbeitsumgebung, Dokumentation & Versionsverwaltung
 
 ## Kurzbeschreibung
 
@@ -22,10 +22,10 @@ Relevant für Einsteiger\*innen, Product Owner, Projektmanager\*innen, Fachberei
 
 ## Quellen aus der Lernmaterial-Sammlung
 
-- [Markdown Modulguide](../../course-library/01-markdown/00-markdown-modulguide.md)
-- [VS Code Modulguide](../../course-library/02-vscode/00-vscode-modulguide.md)
-- [GitHub Modulguide](../../course-library/03-github/00-github-modulguide.md)
-- [Git Modulguide](../../course-library/04-git/00-git-modulguide.md)
+- [Markdown Modulguide](../../course-library/01-markdown/00-markdown-dokumentation-modulguide.md)
+- [VS Code Modulguide](../../course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
+- [GitHub Modulguide](../../course-library/03-github/00-github-zusammenarbeit-modulguide.md)
+- [Git Modulguide](../../course-library/04-git/00-git-versionierung-modulguide.md)
 
 ## Kursspezifische GitHub-Dateien in diesem Kursmodul
 
@@ -62,10 +62,10 @@ Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Ei
 
 ## Verknuepfte allgemeine Grundlagen (course-library)
 
-- [Markdown Modulguide](../../course-library/01-markdown/00-markdown-modulguide.md)
-- [VS Code Modulguide](../../course-library/02-vscode/00-vscode-modulguide.md)
+- [Markdown Modulguide](../../course-library/01-markdown/00-markdown-dokumentation-modulguide.md)
+- [VS Code Modulguide](../../course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
 - [GitHub Grundlagen](../../course-library/03-github/01-github-grundlagen.md)
-- [Git Modulguide](../../course-library/04-git/00-git-modulguide.md)
+- [Git Modulguide](../../course-library/04-git/00-git-versionierung-modulguide.md)
 
 ## Reihenfolge fuer Einsteiger:innen
 

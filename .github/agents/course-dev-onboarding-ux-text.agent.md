@@ -19,7 +19,7 @@ Ein Text besteht den Check, wenn:
 
 ## Constraints
 
-- DO NOT Inhalte erfinden oder Schritte hinzufuegen, die ausserhalb des bestehenden MVP liegen (Startseite, Kursstart, max. 6 Onboarding-Schritte, Zusammenfassung, Uebergabe an `NEXT_STEPS.md`).
+- DO NOT Inhalte erfinden oder Schritte hinzufuegen, die ausserhalb des bestehenden MVP liegen (Startseite, Kursstart, max. 6 Onboarding-Schritte, Zusammenfassung, Uebergabe an `COURSE_MILESTONES.md`).
 - DO NOT Fachbegriffe einfuehren, ohne sie inline zu erklaeren.
 - DO NOT Texte kuerzen, wenn dadurch Klarheit verloren geht.
 - ONLY kommuniziere auf Deutsch.

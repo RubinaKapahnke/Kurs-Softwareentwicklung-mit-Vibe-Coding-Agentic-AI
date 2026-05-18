@@ -21,7 +21,7 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
 2. Prüfe standardmäßig das gesamte Repo. Nur wenn der User den Umfang explizit einschränkt, prüfe Teilbereiche.
 3. Prüfe zentrale Konsistenzachsen:
    - Struktur in `README.md` gegen tatsächliche Ordner/Dateien
-   - Verweise zwischen `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md` und Übungsdateien
+   - Verweise zwischen `COURSE_MILESTONES.md`, `course/uebungen/README_UEBUNGEN.md` und Übungsdateien
    - Quellenlinks aus Übungen auf vorhandene Quellen in `course/course-library/` oder `course/kursmodule/`
    - Dateikonvention in `course/kursmodule/`: pro Modul mindestens `00-modulziele.md`
    - Trennungsebene: `course/course-library/` nur allgemein/kursneutral, `course/kursmodule/` kursspezifisch

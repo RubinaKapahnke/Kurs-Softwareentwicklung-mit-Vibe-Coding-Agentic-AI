@@ -665,7 +665,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     successCriterion:
-      'Der Kurs-Ordner ist in VS Code geöffnet. Du siehst NEXT_STEPS.md in der Dateiliste.',
+      'Der Kurs-Ordner ist in VS Code geöffnet. Du siehst COURSE_MILESTONES.md in der Dateiliste.',
     desktopHint: [
       'Klonen und Öffnen des Kurs-Repositories ist ein Desktop-Schritt.',
       'Wenn du gerade mobil liest, nutze diesen Schritt später an deinem Rechner weiter.'
@@ -676,8 +676,8 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         href: 'https://github.com/RubinaKapahnke/vibe-coding-0426'
       },
       {
-        label: 'NEXT_STEPS.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
+        label: 'COURSE_MILESTONES.md',
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/COURSE_MILESTONES.md'
       },
       {
         label: 'InterGit – Interaktives Git-Visualisierungstool',
@@ -686,7 +686,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     vscodeHint: [
       'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe NEXT_STEPS.md und bestätige mit Enter.'
+      'Tippe COURSE_MILESTONES.md und bestätige mit Enter.'
     ]
   },
   {
@@ -694,7 +694,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     title: 'Kurs-Handhabung verstehen',
     goal: 'Du verstehst, welche Dateien im Kurs-Repository bleiben, was in deinem eigenen Repository entsteht und warum der Lernfortschritt zentral gepflegt wird.',
     tasks: [
-      'Öffne im Kurs-Repository die Datei NEXT_STEPS.md und lies Meilenstein 1.',
+      'Öffne im Kurs-Repository die Datei COURSE_MILESTONES.md und lies Meilenstein 1.',
       'Öffne im Kurs-Repository die Datei course/uebungen/README_UEBUNGEN.md und lies den Übungsablauf.',
       'Prüfe für dich die Grundregel: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.',
       'Prüfe für dich die Grundregel: lernfortschritt_<name>.md bleibt zentral im Kurs-Repository für Überblick und Dashboard.'
@@ -712,8 +712,8 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     successCriterion: 'Du kannst erklären, was im Kurs-Repository bleibt, was in deinem eigenen Repository liegt und warum die Lernfortschrittsdatei zentral gepflegt wird.',
     resources: [
       {
-        label: 'NEXT_STEPS.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
+        label: 'COURSE_MILESTONES.md',
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/COURSE_MILESTONES.md'
       },
       {
         label: 'README_UEBUNGEN.md',
@@ -722,7 +722,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     vscodeHint: [
       'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe NEXT_STEPS.md oder README_UEBUNGEN.md und bestätige mit Enter.'
+      'Tippe COURSE_MILESTONES.md oder README_UEBUNGEN.md und bestätige mit Enter.'
     ],
     markdownSource: '/content/kurs-handhabung.md'
   },

@@ -1,17 +1,17 @@
-﻿# Kurs-Tool: Modul Onboarding
+# Kurs-Tool: Modul Onboarding
 
 Diese Datei ist die Arbeitsgrundlage fuer Pflege, Erweiterung und Abnahme der Onboarding-App.
 
 ## Zielbild
 
-Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwissen bis zur aktiven Mitarbeit im Kurs-Repo gefuehrt werden und danach sicher mit NEXT_STEPS.md weiterarbeiten koennen.
+Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwissen bis zur aktiven Mitarbeit im Kurs-Repo gefuehrt werden und danach sicher mit COURSE_MILESTONES.md weiterarbeiten koennen.
 
 ## Produkt-Scope (MVP)
 
 - Hoechstens 6 lineare Kernschritte bis zum lokalen Clone sind als Fuehrungslogik klar erkennbar.
 - Der aktuelle Stand nutzt mehr Detailschritte, muss aber fuer Lernende weiterhin wie ein klarer, sicherer Flow wirken.
 - Pro Schritt ist ein Erfolgskriterium sichtbar.
-- Nach dem Onboarding ist NEXT_STEPS.md der fachliche Einstieg in den Kursfluss.
+- Nach dem Onboarding ist COURSE_MILESTONES.md der fachliche Einstieg in den Kursfluss.
 
 ## ONB-001: Abnahme-Checkliste (PRD zu DoD)
 
@@ -36,7 +36,7 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 
 ### D. Bruecke in den Kursfluss
 
-- [ ] Der Abschluss fuehrt klar zu NEXT_STEPS.md und README_UEBUNGEN.md.
+- [ ] Der Abschluss fuehrt klar zu COURSE_MILESTONES.md und README_UEBUNGEN.md.
 - [ ] GitHub-Links und VS-Code-Alternative sind als gleichwertige Wege sichtbar.
 - [ ] Lernende koennen nach dem Abschluss den Unterschied erklaeren: Kurs-Repo fuer Orientierung/Fortschritt, eigenes Repo fuer Umsetzung.
 
@@ -50,7 +50,7 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 
 1. Neue Person ohne Account
 - [ ] Start bei Schritt 1, Voucher validieren, neuer Account-Pfad, bis Abschluss.
-- [ ] Abschlusslinks in NEXT_STEPS.md und README_UEBUNGEN.md geprueft.
+- [ ] Abschlusslinks in COURSE_MILESTONES.md und README_UEBUNGEN.md geprueft.
 
 2. Person mit bestehendem Account, wenig Repo-Erfahrung
 - [ ] Existing-Beginner-Pfad durchlaufen.

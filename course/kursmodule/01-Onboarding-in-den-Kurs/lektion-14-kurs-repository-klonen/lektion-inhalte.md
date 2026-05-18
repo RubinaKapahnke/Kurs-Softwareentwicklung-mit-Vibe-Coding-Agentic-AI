@@ -20,7 +20,7 @@ Du klonst das gemeinsame Kurs-Repository und öffnest es lokal in VS Code.
 
 ## Nach dem Clone prüfen
 
-- Datei `NEXT_STEPS.md` ist sichtbar.
+- Datei `COURSE_MILESTONES.md` ist sichtbar.
 - Ordner `course/` ist vorhanden.
 - `git status` zeigt ein sauberes Repository.
 

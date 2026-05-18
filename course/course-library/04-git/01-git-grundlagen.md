@@ -1,4 +1,4 @@
-﻿# Git: Grundlagen und Einstieg
+# Git: Grundlagen und Einstieg
 
 Dieses Dokument erklaert die Grundidee von Git und den typischen Arbeitsablauf im Kurs. Fuer einzelne Befehle zum schnellen Nachschlagen ist die [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md) gedacht.
 
@@ -60,5 +60,5 @@ Eher vorsichtig solltest du mit Befehlen umgehen, die Historie ueberschreiben. W
 ## Wie du dieses Modul nutzen solltest
 - Starte hier in den Grundlagen, wenn du das Denken hinter Git verstehen willst.
 - Nutze danach die [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md), wenn du einen konkreten Befehl brauchst.
-- Verwende den [Selbstcheck im Git-Modulguide](./00-git-modulguide.md), um deinen Stand einzuordnen.
+- Verwende den [Selbstcheck im Git-Modulguide](./00-git-versionierung-modulguide.md), um deinen Stand einzuordnen.
 - Lies [Version Control und GitOps: Grundlagen](./04-version-control-und-gitops-grundlagen.md), wenn du die naechste Ebene zwischen Entwicklungs- und Betriebsworkflow verstehen willst.

@@ -1,4 +1,4 @@
-﻿# Terminal-Befehlsuebersicht
+# Terminal-Befehlsuebersicht
 
 Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen willst, warum ein Befehl noetig ist, lies vorher [Terminal: Grundlagen und Einstieg](./01-terminal-grundlagen.md).
 
@@ -13,7 +13,7 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | Aktuellen Pfad anzeigen | `pwd` | `pwd` | Du tippst `pwd` und siehst z.B. `D:\DEV\GitHub Repos\Kurse\vibe-coding-0426` | Hilfreich, wenn du nicht mehr weisst, in welchem Ordner du gerade bist. |
 | In anderen Ordner wechseln | `cd <Ordnername>` | `cd <Ordnername>` | `cd course/learners/mein-name` navigiert in den eigenen Lernordner; `cd ..` geht eine Ebene hoch | `.` ist der aktuelle Ordner, `..` ist der Elternordner. |
 | Ins Home-Verzeichnis wechseln | `cd ~` | `cd ~` | Du bist irgendwo tief im Repo und willst schnell raus: `cd ~` bringt dich ins Home-Verzeichnis | Guter Reset-Punkt, wenn du dich verirrt hast. |
-| Ordnerinhalt anzeigen | `dir` | `ls` | `dir` im Repo-Ordner zeigt alle Dateien wie `README.md`, `NEXT_STEPS.md` | `ls -la` (macOS) zeigt auch versteckte Dateien wie `.github/`. |
+| Ordnerinhalt anzeigen | `dir` | `ls` | `dir` im Repo-Ordner zeigt alle Dateien wie `README.md`, `COURSE_MILESTONES.md` | `ls -la` (macOS) zeigt auch versteckte Dateien wie `.github/`. |
 
 ## Dateien und Ordner verwalten
 

@@ -13,11 +13,11 @@ Nach dem Onboarding startest du nicht „irgendwo", sondern immer über die zent
 
 Dein Haupt-Einstiegspunkt ist:
 
-- `NEXT_STEPS.md`
+- `COURSE_MILESTONES.md`
 
 ## Dein erster Ablauf nach dem Onboarding
 
-1. Öffne `NEXT_STEPS.md` im Kurs-Repository.
+1. Öffne `COURSE_MILESTONES.md` im Kurs-Repository.
 2. Prüfe den aktuell relevanten Meilenstein.
 3. Öffne die dort verlinkte Übung.
 4. Lies die Quellen der Übung.
@@ -33,13 +33,13 @@ Dein Haupt-Einstiegspunkt ist:
 
 ## Wenn du unsicher bist
 
-- Erst `NEXT_STEPS.md` öffnen, nicht raten.
+- Erst `COURSE_MILESTONES.md` öffnen, nicht raten.
 - Erst die Übungsbeschreibung lesen, nicht direkt losschreiben.
 - Erst den Repository-Kontext prüfen, bevor du Dateien bearbeitest.
 
 ## Fallback
 
-- Kein klarer Einstieg sichtbar: In `NEXT_STEPS.md` mit Meilenstein 1 oder dem aktuell freigegebenen Meilenstein beginnen.
+- Kein klarer Einstieg sichtbar: In `COURSE_MILESTONES.md` mit Meilenstein 1 oder dem aktuell freigegebenen Meilenstein beginnen.
 - Übung gefunden, aber Kontext unklar: Erst die Modulquelle öffnen.
 - Unsicher, welches Repo offen ist: Ordnername und `git remote -v` prüfen.
 

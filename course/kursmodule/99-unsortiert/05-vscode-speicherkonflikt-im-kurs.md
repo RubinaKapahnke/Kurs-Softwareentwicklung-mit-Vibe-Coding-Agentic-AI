@@ -1,16 +1,16 @@
-﻿# VS Code Speicherkonflikt im Kurs: NEXT_STEPS.md kann nicht gespeichert werden
+# VS Code Speicherkonflikt im Kurs: COURSE_MILESTONES.md kann nicht gespeichert werden
 
-Diese Notiz ist kursspezifisch fuer den typischen Fall, dass `NEXT_STEPS.md` waehrend deiner Bearbeitung im Hintergrund geaendert wurde.
+Diese Notiz ist kursspezifisch fuer den typischen Fall, dass `COURSE_MILESTONES.md` waehrend deiner Bearbeitung im Hintergrund geaendert wurde.
 
 ## Typische Fehlermeldung
 
-- "Failed to save 'NEXT_STEPS.md': The content of the file is newer."
+- "Failed to save 'COURSE_MILESTONES.md': The content of the file is newer."
 
 ## Warum passiert das im Kurskontext?
 
 Hauefige Ursachen im Kurs-Repo:
 - Du hast kurz vorher `git pull` ausgefuehrt.
-- Du hast den Branch gewechselt und `NEXT_STEPS.md` ist dort anders.
+- Du hast den Branch gewechselt und `COURSE_MILESTONES.md` ist dort anders.
 - Ein Agent/Script oder ein anderer geoeffneter Editor hat die Datei gespeichert.
 
 ## Konkretes Vorgehen im Kurs
@@ -22,7 +22,7 @@ Hauefige Ursachen im Kurs-Repo:
 
 ```bash
 git status
-git diff NEXT_STEPS.md
+git diff COURSE_MILESTONES.md
 ```
 
 5. Erst danach normal committen.
@@ -34,18 +34,18 @@ git diff NEXT_STEPS.md
 
 Stattdessen:
 1. Diff nur lesen/vergleichen.
-2. Zur normalen Datei-Ansicht von `NEXT_STEPS.md` wechseln.
+2. Zur normalen Datei-Ansicht von `COURSE_MILESTONES.md` wechseln.
 3. Dort speichern.
 
 Falls du Revert Block aus Versehen geklickt hast:
 - sofort `Strg+Z`, dann speichern.
 
-## Potenzielle Fehlerbehandlung: Wenn `NEXT_STEPS.md` weiterhin nicht speicherbar ist
+## Potenzielle Fehlerbehandlung: Wenn `COURSE_MILESTONES.md` weiterhin nicht speicherbar ist
 
-1. Im offenen `NEXT_STEPS.md`-Tab alles markieren und kopieren.
+1. Im offenen `COURSE_MILESTONES.md`-Tab alles markieren und kopieren.
 2. Neue Datei anlegen, einfuegen und als Backup speichern (z. B. `NEXT_STEPS_backup_local.md`).
-3. Problem-Tab von `NEXT_STEPS.md` schliessen.
-4. `NEXT_STEPS.md` frisch aus dem Explorer oeffnen.
+3. Problem-Tab von `COURSE_MILESTONES.md` schliessen.
+4. `COURSE_MILESTONES.md` frisch aus dem Explorer oeffnen.
 5. Inhalt aus der Backup-Datei uebernehmen.
 6. Speichern.
 

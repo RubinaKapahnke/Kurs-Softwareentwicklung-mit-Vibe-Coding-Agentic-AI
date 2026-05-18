@@ -13,13 +13,13 @@ Im Kurs arbeitest du nicht nur in einer Datei oder an einem Ort.
 
 Stattdessen gibt es ein Zusammenspiel aus mehreren Teilen:
 
-- Kurs-Repository: Aufgaben, Lernmaterial, `NEXT_STEPS.md` und Lernfortschritt
+- Kurs-Repository: Aufgaben, Lernmaterial, `COURSE_MILESTONES.md` und Lernfortschritt
 - Eigenes Repository: deine Umsetzung, Experimente, Lösungen und Artefakte
 - GitHub: Sichtbarkeit, Commits, Pull Requests und Zusammenarbeit
 
 ## So läuft eine Übung im Gesamt-Setting ab
 
-1. Du öffnest `NEXT_STEPS.md` im Kurs-Repository.
+1. Du öffnest `COURSE_MILESTONES.md` im Kurs-Repository.
 2. Du prüfst, welcher Meilenstein gerade für dich relevant ist.
 3. Du öffnest die passende Übung unter `course/uebungen/`.
 4. Du liest die verlinkten Quellen in `course/course-library/` oder `course/kursmodule/`.
@@ -41,7 +41,7 @@ Stattdessen gibt es ein Zusammenspiel aus mehreren Teilen:
 
 ## Fallback
 
-- Unklar, wie eine Übung startet: Erst `NEXT_STEPS.md`, dann `course/uebungen/` öffnen.
+- Unklar, wie eine Übung startet: Erst `COURSE_MILESTONES.md`, dann `course/uebungen/` öffnen.
 - Datei nicht gefunden: In VS Code mit `Strg+P` / `Cmd+P` nach Dateinamen suchen.
 - Unsicher beim Repository-Kontext: `git remote -v` und Ordnerpfad prüfen.
 

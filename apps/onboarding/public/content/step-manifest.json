@@ -2530,7 +2530,7 @@
     },
     "requiresLessonCompletion": false,
     "tasks": [
-      "NEXT_STEPS.md lesen.",
+      "COURSE_MILESTONES.md lesen.",
       "README_UEBUNGEN.md lesen.",
       "Grundregel prüfen: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.",
       "Lernfortschrittsdatei bleibt zentral im Kurs-Repository."
@@ -2623,7 +2623,7 @@
                 "Stattdessen gibt es ein Zusammenspiel aus mehreren Teilen:"
               ],
               "unorderedItems": [
-                "Kurs-Repository: Aufgaben, Lernmaterial, `NEXT_STEPS.md` und Lernfortschritt",
+                "Kurs-Repository: Aufgaben, Lernmaterial, `COURSE_MILESTONES.md` und Lernfortschritt",
                 "Eigenes Repository: deine Umsetzung, Experimente, Lösungen und Artefakte",
                 "GitHub: Sichtbarkeit, Commits, Pull Requests und Zusammenarbeit"
               ]
@@ -2636,7 +2636,7 @@
           "sections": [
             {
               "orderedItems": [
-                "Du öffnest `NEXT_STEPS.md` im Kurs-Repository.",
+                "Du öffnest `COURSE_MILESTONES.md` im Kurs-Repository.",
                 "Du prüfst, welcher Meilenstein gerade für dich relevant ist.",
                 "Du öffnest die passende Übung unter `course/uebungen/`.",
                 "Du liest die verlinkten Quellen in `course/course-library/` oder `course/kursmodule/`.",
@@ -2685,7 +2685,7 @@
                 "Dein Haupt-Einstiegspunkt ist:"
               ],
               "unorderedItems": [
-                "`NEXT_STEPS.md`"
+                "`COURSE_MILESTONES.md`"
               ]
             }
           ]
@@ -2696,7 +2696,7 @@
           "sections": [
             {
               "orderedItems": [
-                "Öffne `NEXT_STEPS.md` im Kurs-Repository.",
+                "Öffne `COURSE_MILESTONES.md` im Kurs-Repository.",
                 "Prüfe den aktuell relevanten Meilenstein.",
                 "Öffne die dort verlinkte Übung.",
                 "Lies die Quellen der Übung.",

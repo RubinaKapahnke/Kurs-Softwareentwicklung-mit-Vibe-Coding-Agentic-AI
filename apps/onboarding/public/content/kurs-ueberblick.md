@@ -1,4 +1,4 @@
-﻿## Was dich in diesem Kurs erwartet
+## Was dich in diesem Kurs erwartet
 
 **Softwareentwicklung mit Vibe Coding & Agentic AI** vermittelt moderne Softwareentwicklung mit KI-Unterstuetzung: von der Produktidee ueber strukturierte Planung, Prototyping und Implementierung bis zu Deployment, Monitoring und Weiterentwicklung.
 
@@ -41,7 +41,7 @@ Damit du sauber im Kursfluss bleibst, gilt immer:
 
 ### Deine ersten Schritte nach dem Onboarding
 
-1. Oeffne im Kurs-Repo die Datei `NEXT_STEPS.md`.
+1. Oeffne im Kurs-Repo die Datei `COURSE_MILESTONES.md`.
 2. Oeffne danach `course/uebungen/README_UEBUNGEN.md`.
 3. Waehle die passende Uebung aus.
 4. Setze die Loesung in deinem eigenen Repo um.

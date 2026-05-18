@@ -1,4 +1,4 @@
-﻿# Modulguide: GitHub
+# Modulguide: GitHub
 
 Dieses Modul erklaert die Rolle von GitHub im gemeinsamen Arbeiten an Projekten. Es verbindet die Git-Grundlagen mit Zusammenarbeit, Pull Requests und Projektorganisation auf der Plattform.
 
@@ -34,5 +34,5 @@ Nutze die Checklisten als Selbstcheck fuer das GitHub-Modul.
 ## Wenn du etwas nachholen willst
 
 - Fuer allgemeine Grundlagen: [GitHub: Grundlagen und Einstieg](./01-github-grundlagen.md)
-- Fuer Git-Verbindung: [Git Modulguide](../04-git/00-git-modulguide.md)
+- Fuer Git-Verbindung: [Git Modulguide](../04-git/00-git-versionierung-modulguide.md)
 - Fuer kursspezifische Praxis: [Kursmodul 01](../../kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md)

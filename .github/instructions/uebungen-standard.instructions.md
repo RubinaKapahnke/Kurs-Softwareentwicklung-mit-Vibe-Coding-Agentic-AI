@@ -1,4 +1,4 @@
-﻿---
+---
 applyTo: "course/uebungen/**"
 ---
 
@@ -92,7 +92,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 - [ ] **Keine redundanten Lernziele?** Selbstcheck-Checklisten nur im `## Selbstcheck`-Abschnitt des Modulguide, nirgendwo sonst
 - [ ] **Alle Links funktionieren?** (Relative Pfade prüfen) → `.\tools\test-links.ps1` ausführen
 - [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
-- [ ] **NEXT_STEPS.md ↔ course/uebungen/README_UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
+- [ ] **COURSE_MILESTONES.md ↔ course/uebungen/README_UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
 - [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
 - [ ] **CHANGELOG.md aktuell?** Enthält er einen Eintrag für alle strukturellen Änderungen der aktuellen Session?
 - [ ] **CHANGELOG Tagesübersicht gepflegt?** Pro Datum genau ein grober Tagesblock unter `## Tagesübersicht (grob)`
@@ -119,7 +119,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
    - `course/course-library/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
    - `course/course-library/08-test/01-test-grundlagen.md`
 
-**2. In NEXT_STEPS.md neuen Meilenstein hinzufügen:**
+**2. In COURSE_MILESTONES.md neuen Meilenstein hinzufügen:**
    - "Meilenstein 4: Testing"
    - Modul-Einstiege + Vertiefung + Lernziele
 

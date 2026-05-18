@@ -1,4 +1,4 @@
-﻿---
+---
 description: "Use when: developing course curriculum, adding a new milestone, planning new modules, extending modules beyond basics, creating new learning units, neue Lerneinheit, neues Modul anlegen, Meilenstein planen, Curriculum weiterentwickeln, Lernpfad ausbauen, didaktik, neue module"
 name: "Curriculum Developer (course-dev)"
 tools: [read, search, edit, todo, execute]
@@ -21,7 +21,7 @@ Du bist ein Kursentwickler für das vibe-coding-0426-Repo. Deine Aufgabe ist es,
 
 ### Phase 1: Ist-Stand analysieren
 
-1. Lies `NEXT_STEPS.md` vollständig – welche Meilensteine existieren, was ist abgedeckt, was fehlt?
+1. Lies `COURSE_MILESTONES.md` vollständig – welche Meilensteine existieren, was ist abgedeckt, was fehlt?
 2. Lies `AGENTS.md` – Modul-Konventionen, Dateistruktur, Benennungsregeln.
 3. Scanne `course/course-library/`-Ordner: Welche allgemeinen Module existieren, welche Dateien hat jedes Modul?
 4. Scanne `course/kursmodule/`-Ordner: Welche kursbezogenen Dateien gibt es je Modul (`00-modulziele.md` + ggf. Zusatzdateien)?
@@ -63,7 +63,7 @@ Erstelle einen priorisierten Plan mit konkreten Dateinamen und Begründungen:
 
 Nach Freigabe:
 1. Neue Modul-Dateien nach Convention anlegen (siehe AGENTS.md → "Neue Modul-Dateien")
-2. `NEXT_STEPS.md` aktualisieren: neues Modul verlinken, Meilenstein ergänzen
+2. `COURSE_MILESTONES.md` aktualisieren: neues Modul verlinken, Meilenstein ergänzen
 3. `README.md` Projektstruktur synchronisieren (AGENTS.md README-Sync-Regel)
 4. Abschließend `.\tools\test-alle-uebungen.ps1` ausführen – sicherstellen, dass nichts gebrochen ist
 

@@ -6,7 +6,7 @@ applyTo: "apps/onboarding/**"
 
 ## Ziel des Bereichs
 
-Diese App fuehrt bereits aufgenommene Kursteilnehmende ohne Vorwissen in einem linearen Ablauf vom Einstieg ueber das Onboarding bis zum lokalen Clone des Kurs-Repos und zum Startpunkt in `NEXT_STEPS.md`.
+Diese App fuehrt bereits aufgenommene Kursteilnehmende ohne Vorwissen in einem linearen Ablauf vom Einstieg ueber das Onboarding bis zum lokalen Clone des Kurs-Repos und zum Startpunkt in `COURSE_MILESTONES.md`.
 
 ## Stack (verbindlich)
 
@@ -76,7 +76,7 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 - Bei neuen Dateien/Foldern README-Projektstruktur synchron halten.
 - Onboarding-App darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
-- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Onboarding ist `NEXT_STEPS.md` der fachliche Startpunkt.
+- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Onboarding ist `COURSE_MILESTONES.md` der fachliche Startpunkt.
 
 ## Markdown-Content (Onboarding)
 

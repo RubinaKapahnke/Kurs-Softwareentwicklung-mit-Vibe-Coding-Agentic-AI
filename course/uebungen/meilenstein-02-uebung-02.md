@@ -1,4 +1,4 @@
-﻿# Uebung Meilenstein 2: Terminal-Alltag und Git-Befehle selbststaendig anwenden
+# Uebung Meilenstein 2: Terminal-Alltag und Git-Befehle selbststaendig anwenden
 
 ## Ziel
 Du fuehrst typische Terminal- und Git-Aktionen in deinem persoenlichen Ordner durch - ohne Befehle zu kopieren. Ausserdem uebst du, fuer eine gegebene Aufgabe das passende Modul eigenstaendig zu finden.
@@ -139,13 +139,13 @@ Schreibe in `uebung-02-notizen.md` deine Antworten zu diesen drei Situationen. N
 | Ich verstehe nicht, warum man Branches braucht | ? | ? |
 
 > **Einstiegspunkte zum Suchen:**
-> - Terminal: [course-library/05-terminal/00-terminal-modulguide.md](../course-library/05-terminal/00-terminal-modulguide.md)
-> - GitHub: [course-library/03-github/00-github-modulguide.md](../course-library/03-github/00-github-modulguide.md)
-> - Git: [course-library/04-git/00-git-modulguide.md](../course-library/04-git/00-git-modulguide.md)
+> - Terminal: [course-library/05-terminal/00-terminal-kommandozeile-modulguide.md](../course-library/05-terminal/00-terminal-kommandozeile-modulguide.md)
+> - GitHub: [course-library/03-github/00-github-zusammenarbeit-modulguide.md](../course-library/03-github/00-github-zusammenarbeit-modulguide.md)
+> - Git: [course-library/04-git/00-git-versionierung-modulguide.md](../course-library/04-git/00-git-versionierung-modulguide.md)
 
 > **Kein Googeln noetig:** Alle Antworten findest du in den Modulen im Repo. Das Ziel ist, die Navigation zu ueben.
 
-Quelle: [course-library/04-git/00-git-modulguide.md](../course-library/04-git/00-git-modulguide.md)
+Quelle: [course-library/04-git/00-git-versionierung-modulguide.md](../course-library/04-git/00-git-versionierung-modulguide.md)
 
 ---
 
@@ -210,7 +210,7 @@ Quelle: [course-library/03-github/01-github-grundlagen.md](../course-library/03-
 - ✓ course/course-library/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
 - ✓ course/course-library/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
 - ✓ course/course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
-- ✓ course/course-library/04-git/00-git-modulguide.md + course/course-library/05-terminal/00-terminal-modulguide.md + course/course-library/03-github/00-github-modulguide.md: Modul-Navigation ueben
+- ✓ course/course-library/04-git/00-git-versionierung-modulguide.md + course/course-library/05-terminal/00-terminal-kommandozeile-modulguide.md + course/course-library/03-github/00-github-zusammenarbeit-modulguide.md: Modul-Navigation ueben
 
 ---
 
