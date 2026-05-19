@@ -156,7 +156,38 @@ Du sollst in deinem Übungs-Repository die README erweitern und eine kurze Selbs
 
 Ergebnis: Die Änderung ist in `main`, nachvollziehbar dokumentiert und reviewt.
 
-## Kapitel 11: Praxisbeispiel mit Befehlen
+## Kapitel 11: Beispielverlauf
+
+### Ausgangszustand 
+Es existiert ein `main` Branch, in welchem initial eine `README.md` existiert.
+
+### Info: README in Github
+Das muss nicht so sein. Ein Repository kann auch völlig leer initialisiert sein. In Github gibt es allerdings eine Funktion, die das Erstellen einer initialen `README.md` automatisch übernimmt. Enthält ein Repository eine `README.md` auf oberster Ebene, wird diese automatisch formatiert angezeigt und bietet daher den perfekten Platz zur Beschreibung des Projekts.
+
+### Schritt 1
+Du erstellst von `main` (blau; unten) einen neuen Branch `feature/introduction` (orange) und bearbeitest in einer Reihe von Commits die Einleitung (anlegen, erweitern, Schreibfehler korrigieren).
+
+Ungefähr zeitgleich erstellt eine weitere Person einen weiteren Branch `feature/how-to` (blau; oben), wiederum von `main`, und bearbeitet den entsprechenden Abschnitt stückweise in Commits.
+
+![git Visualisierung, Schritt 1](/assets/lessons/step-05-git-example-1-1.png)
+
+### Schritt 2
+Du bist fertig. Du wechselst zum `main` Branch und mergst deinen Branch `feature/introduction`.
+
+![git Visualisierung, Schritt 2](/assets/lessons/step-05-git-example-1-2.png)
+
+### Info: Fast-Forward-Merge
+Die ursprüngliche `README.md` von `main` war leer. Deswegen ist *keine* Entscheidung notwendig, *wie* die kombinierte Datei aus `main` und `feature/introduction` am Ende aussehen soll. Deswegen war ein sogenannter *Fast-Forward-Merge* möglich. Deine Commits wurden direkt in `main` übernommen.
+
+### Schritt 3
+Die andere Person ist fertig. Auch sie wechselt zu `main` und mergt ihren Branch `feature/how-to`.
+
+![git Visualisierung, Schritt 3](/assets/lessons/step-05-git-example-1-3.png)
+
+### Info: No-Fast-Forward-Merge
+Jetzt war `README.md` nicht mehr leer, sondern enthielt schon die Einleitung. git erkennt das und erstellt deswegen einen *Merge Commit* (*No-Fast-Forward-Merge*). In diesem Commit kann der Nutzer festlegen, *wie* die kombinierte Datei am Ende genau aussehen soll. Beide Textabschnitte sind in der Datei enthalten und können angeordnet und kombiniert werden.
+
+## Kapitel 12: Praxisbeispiel mit Befehlen
 
 ### Ausgangslage
 
@@ -182,7 +213,7 @@ Ergebnis: Die Änderung ist in `main`, nachvollziehbar dokumentiert und reviewt.
 3. Review möglich
 4. Kein Chaos auf `main`
 
-## Kapitel 12: Empfehlung zum Üben
+## Kapitel 13: Empfehlung zum Üben
 
 Wenn du Git interaktiv üben und besser verstehen willst, nutze Inter-Git:
 
@@ -194,7 +225,7 @@ Warum hilfreich:
 2. Du bekommst ein besseres Gefühl für Branches, Commits und Merges.
 3. Es eignet sich gut als Ergänzung zu den Kursübungen.
 
-## Kapitel 13: Managing Remotes
+## Kapitel 14: Managing Remotes
 
 Ein Remote ist die Verbindung von deinem lokalen Repository zu einem Online-Repository (zum Beispiel auf GitHub).
 
@@ -209,7 +240,7 @@ Ein Remote ist die Verbindung von deinem lokalen Repository zu einem Online-Repo
 
 Wenn `git push` nicht funktioniert, prüfe zuerst mit `git remote -v`, ob `origin` korrekt gesetzt ist.
 
-## Kapitel 14: Pushing und Pulling
+## Kapitel 15: Pushing und Pulling
 
 ### `git push`
 
@@ -232,7 +263,7 @@ Merksatz:
 - `push` = lokal nach remote
 - `pull` = remote nach lokal
 
-## Kapitel 15: Was ist Fetch?
+## Kapitel 16: Was ist Fetch?
 
 `git fetch` holt neue Informationen vom Remote, ändert aber deinen aktuellen Arbeitsstand nicht automatisch.
 
@@ -253,7 +284,7 @@ Merksatz:
 2. Änderungen ansehen (zum Beispiel im Git-Graph oder mit Diff)
 3. Danach bewusst `git merge` oder `git pull`
 
-## Kapitel 16: Commit History verstehen
+## Kapitel 17: Commit History verstehen
 
 Die Commit History ist die nachvollziehbare Chronik deines Projekts: Wer hat wann was geändert und warum?
 
@@ -287,3 +318,5 @@ Die Commit History ist die nachvollziehbare Chronik deines Projekts: Wer hat wan
 ## Erfolgskriterium
 
 Du kannst Branch, Commit, Commit History, Pull, Push, Fetch, Clone, Fork, Remote, Pull Request, Reviewer und Merge in einfachen Worten erklären und den typischen Ablauf benennen.
+
+#TODO: fetch erklären, origin vs. lokal, stash, revert, rebase vs. merge (ff, merge strategies), trunk-based development (cerry-pick)
