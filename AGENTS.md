@@ -4,7 +4,7 @@
 
 Whenever files or folders are added, renamed, or removed in the repo:
 - Update the project structure tree in `README.md` to reflect the change.
-- This applies especially to: new modules, new `.github/` subfolders, new learner files, new `course/uebungen/` files.
+- This applies especially to: new modules, new `.github/` subfolders, new learner files, new `course/02-course-exercises/` files.
 - Do not let the README structure fall out of sync with the actual repo.
 
 ### README-Datei Benennungskonvention
@@ -33,27 +33,27 @@ This repository is a shared learning workspace for a closed group in the course 
 
 ## Core Workflow
 
-### Central Architecture: Course Description → Course Modules → NEXT_STEPS → Materials → Exercises
+### Central Architecture: Course Description → Course Modules → COURSE_MILESTONES → Materials → Exercises
 The learning structure follows this hierarchy:
 
 1. **KURSBESCHREIBUNG.md** (zentral) → Defines the overall course vision, paths, module logic, and milestone meaning
-2. **course/kursmodule/** (zentral) → Represents standalone course modules / bookable learning blocks
+2. **course/01-course-modules/** (zentral) → Represents standalone course modules / bookable learning blocks
   - Each course module has a `00-modulziele.md`
   - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
   - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
-3. **COURSE_MILESTONES.md** (zentral) → Defines current learning milestones and group progress
-4. **course/course-library/** (zentral) → Explain concepts and commands as the learning material collection
+3. **course/00-course-guides/COURSE_MILESTONES.md** (zentral) → Defines current learning milestones and group progress
+4. **course/03-course-library/** (zentral) → Explain concepts and commands as the learning material collection
    - `00-modulguide.md` → Navigation, overview, and **inline Selbstcheck** (Must/Should/Nice checklists)
    - `01-*-grundlagen.md` → Concepts ("Why?", "How?")
    - `02/03-*-befehlsuebersicht.md` → Quick reference for commands (Terminal, Git only)
-5. **course/uebungen/** (zentral) → Exercises with direct module source links
+5. **course/02-course-exercises/** (zentral) → Exercises with direct module source links
 6. **course/learners/** (personenbezogen, aber zentral im Kurs-Repo) → Individual learning progress per person and canonical reporting source
 
 **Important distinction:**
-- `course/kursmodule/` = course offer/curriculum layer (what standalone learning block is this?)
-- `course/course-library/` = learning material/source layer (where is the explanation learners read?)
-- `course/course-library/` enthaelt nur allgemeine, erklaerende Inhalte ohne direkten Kursbezug.
-- Konkrete kursinterne Ablaeufe, Aufgabenanleitungen, Rollen/Dozent:innen-Hinweise und Templates fuer den Kurs liegen in `course/kursmodule/`.
+- `course/01-course-modules/` = course offer/curriculum layer (what standalone learning block is this?)
+- `course/03-course-library/` = learning material/source layer (where is the explanation learners read?)
+- `course/03-course-library/` enthaelt nur allgemeine, erklaerende Inhalte ohne direkten Kursbezug.
+- Konkrete kursinterne Ablaeufe, Aufgabenanleitungen, Rollen/Dozent:innen-Hinweise und Templates fuer den Kurs liegen in `course/01-course-modules/`.
 
 ### Lernfortschritt-Datei Struktur (`lernfortschritt_<name>.md`)
 
@@ -62,26 +62,26 @@ The learning structure follows this hierarchy:
 **Key principle:** No redundant explanations. Each element has one clear role. Exercises directly link to module sources—learners click the link, understand the concept, and complete the task.
 
 ### COURSE_MILESTONES.md
-- `COURSE_MILESTONES.md` is the central roadmap and should stay central.
+- `course/00-course-guides/COURSE_MILESTONES.md` is the central roadmap and should stay central.
 - Individual learning progress is managed only in the personal files under `course/learners/`.
 - Do not introduce wording that assumes fixed weekly pacing in learner progress files.
 - The participant circle is closed. Do not add public open-enrollment onboarding or wording for unknown external participants.
-- Onboarding content in `apps/onboarding/` is for already accepted course participants and should hand off clearly into `COURSE_MILESTONES.md`.
+- Onboarding content in `apps/onboarding/` is for already accepted course participants and should hand off clearly into `course/00-course-guides/COURSE_MILESTONES.md`.
 
 ### Exercise Workflow
-- Central exercises live in `course/uebungen/`.
+- Central exercises live in `course/02-course-exercises/`.
 - Participants do not create exercises; they solve centrally defined exercises.
 - Solution artefacts live standardmaessig in the participant's own repo unless an exercise explicitly requires changes in this course repo.
 - `course/learners/` remains the canonical place for learning-progress reporting and dashboard-compatible overview data.
-- When changing an exercise, keep it aligned with the corresponding milestone in `COURSE_MILESTONES.md`.
+- When changing an exercise, keep it aligned with the corresponding milestone in `course/00-course-guides/COURSE_MILESTONES.md`.
 
 ## Source Standard For Exercises
-- Every exercise task point should reference a concrete source in `course/course-library/` oder `course/kursmodule/`.
+- Every exercise task point should reference a concrete source in `course/03-course-library/` oder `course/01-course-modules/`.
 - Sources should be clickable markdown links when the document format supports it.
 - Each exercise should include a short section named `Modulabdeckung (Check)`.
 - Each exercise must include a section named `Wiederholung aus frueheren Meilensteinen` between `Modulabdeckung (Check)` and `Lernerfolgs-Kriterien`. This section lists skills from previous milestones that are needed to complete the exercise, with links to the relevant module files.
 - Each exercise must include a section named `Lernerfolgs-Kriterien` at the end, after `Modulabdeckung (Check)`. This section contains 3-6 checkboxes that let learners verify whether the exercise achieved its intended outcome. Criteria must be observable and self-assessable (e.g. "Ich habe X erlebt", "Ich kann Y benennen"), not just task completion.
-- If an exercise step has no matching source explanation, improve coverage in `course/course-library/` (allgemein) oder `course/kursmodule/` (kursspezifisch) before relying on that exercise.
+- If an exercise step has no matching source explanation, improve coverage in `course/03-course-library/` (allgemein) oder `course/01-course-modules/` (kursspezifisch) before relying on that exercise.
 - **Why this standard?** The module source is not just a reference—it's the primary path to understanding. Learners click the source link to understand *why* the task matters, then complete it.
 
 ## Beginner-Friendliness Standard For Exercises
@@ -95,12 +95,12 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
-- Keep `README.md`, `COURSE_MILESTONES.md`, and `course/uebungen/README_UEBUNGEN.md` consistent when workflow rules change.
-- For onboarding explanatory content, maintain lesson sources under `course/kursmodule/01-.../lerninhalte/lektion-XX-.../` (`lektion-inhalte.md`, optional `aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components.
+- Keep `README.md`, `course/00-course-guides/COURSE_MILESTONES.md`, and `course/02-course-exercises/README_UEBUNGEN.md` consistent when workflow rules change.
+- For onboarding explanatory content, maintain lesson sources under `course/01-course-modules/01-.../lerninhalte/lektion-XX-.../` (`lektion-inhalte.md`, optional `aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components.
 - Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
-- Checkbox-Regel: In `course/uebungen/` und Guide-Dateien (`*guide*.md`, inklusive `00-*-modulguide.md`) bleiben Checklisten standardmaessig offen (`[ ]`). Abgehakt (`[x]`) ist nur in `course/learners/**/lernfortschritt_*.md` erlaubt.
+- Checkbox-Regel: In `course/02-course-exercises/` und Guide-Dateien (`*guide*.md`, inklusive `00-*-modulguide.md`) bleiben Checklisten standardmaessig offen (`[ ]`). Abgehakt (`[x]`) ist nur in `course/learners/**/lernfortschritt_*.md` erlaubt.
 
 ## App Architecture Guardrails
 - In `apps/**`, avoid code monsters: page components orchestrate routing, state and layout; reusable UI or fachliche Teilbereiche belong in smaller components or services.
@@ -110,11 +110,11 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - Keep styles token-based and local: no hardcoded component colors, no `!important`, no inline styles, and no direct `.mdc-*` overrides. Shared style decisions go into existing tokens/utilities instead of page-specific patches.
 
 ## Recurring Workflow: Fremdtexte verarbeiten
-- Eingang fuer Rohtexte ist `course/fremdtexte-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
+- Eingang fuer Rohtexte ist `course/99-course-development/fremdtexte-kursentwicklung.md` im Abschnitt `# Fremdtexte zur Verarbeitung in den Kursen`.
 - Jeder verarbeitete Block wird in **eigene Formulierungen** ueberfuehrt (keine langen wortwoertlichen Uebernahmen).
 - Fremdtexte in Englisch werden vor der Einarbeitung in **Deutsch** uebertragen.
 - Beim Uebertrag werden **Form und Struktur deutlich veraendert** (didaktische Neuordnung statt Satz-fuer-Satz-Naehe), um Urheberrechtsrisiken zu vermeiden.
-- Allgemeine Inhalte gehen in `course/course-library/`, kursspezifische Anwendung in `course/kursmodule/`.
+- Allgemeine Inhalte gehen in `course/03-course-library/`, kursspezifische Anwendung in `course/01-course-modules/`.
 - Nach Verarbeitung wird der Rohtext-Block im Fremdtexte-Abschnitt entfernt.
 - Danach wird unter `# Erledigte Themen` ein Log-Eintrag mit Datum, Quelle, Kurz-Summary und Ziel-Dateien angelegt.
 - Fuer die wiederkehrende Ausfuehrung den Prompt `course-dev-fremdtexte-verarbeiten.prompt.md` nutzen.
@@ -124,7 +124,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - If coverage is missing, update the module or choose a more accurate source.
 
 ## Module Structure (Conventions)
-Kursmodul-Datei in `course/kursmodule/<nr>-<name>/`:
+Kursmodul-Datei in `course/01-course-modules/<nr>-<name>/`:
 - `00-modulziele.md` → Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis
 
 Each module follows this pattern:
@@ -147,7 +147,7 @@ Each module follows this pattern:
 
 **Schritt 1: Modul-Ordner erstellen**
 ```
-course/course-library/XX-<modulname>/
+course/03-course-library/XX-<modulname>/
 ├── 00-<modulname>-modulguide.md
 ├── 01-<modulname>-grundlagen.md
 └── 03-<modulname>-befehlsuebersicht.md  (nur bei Terminal/Git)
@@ -197,10 +197,10 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 | `command` | Beschreibung | `command example` | Hinweis |
 ```
 
-**Schritt 3: Zu COURSE_MILESTONES.md verlinken**
+**Schritt 3: Zu course/00-course-guides/COURSE_MILESTONES.md verlinken**
 - Neuen Meilenstein hinzufügen ODER
 - Existierenden Meilenstein ergänzen
-- Modul-Einstieg: `[course/course-library/XX-name/00-modulguide.md](course/course-library/XX-name/00-modulguide.md)`
+- Modul-Einstieg: `[course/03-course-library/XX-name/00-modulguide.md](course/03-course-library/XX-name/00-modulguide.md)`
 - Vertiefung: Einzelne Dateien wie `01-grundlagen.md`, `03-befehlsuebersicht.md`
 
 **Schritt 4: README.md aktualisieren**
@@ -227,17 +227,17 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 
 ### ✅ Neuer Meilenstein hinzufügen
 
-**Schritt 1: In COURSE_MILESTONES.md erstellen**
+**Schritt 1: In course/00-course-guides/COURSE_MILESTONES.md erstellen**
 ```markdown
 ## 🎯 Meilenstein N: [Titel]
 **Ziel:** [Kurzbeschreibung]
 
 **Modul-Einstiege:**
-- [course/course-library/XX-modul/00-modulguide.md](course/course-library/XX-modul/00-modulguide.md)
+- [course/03-course-library/XX-modul/00-modulguide.md](course/03-course-library/XX-modul/00-modulguide.md)
 
 **Vertiefung:**
-- [course/course-library/XX-modul/01-grundlagen.md](course/course-library/XX-modul/01-grundlagen.md)
-- [course/course-library/YY-modul/03-befehlsuebersicht.md](course/course-library/YY-modul/03-befehlsuebersicht.md)
+- [course/03-course-library/XX-modul/01-grundlagen.md](course/03-course-library/XX-modul/01-grundlagen.md)
+- [course/03-course-library/YY-modul/03-befehlsuebersicht.md](course/03-course-library/YY-modul/03-befehlsuebersicht.md)
 
 **Lernziele:** (Falls noch nicht über Module abgedeckt)
 
@@ -253,8 +253,8 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 **Aktueller Umsetzungsstand:**
 
 - [ ] **[Aufgabengruppe 1]**
-  > **Übung:** [course/uebungen/meilenstein-N-uebung-01.md](course/uebungen/meilenstein-N-uebung-01.md)
-  > **Quellen:** [course/course-library/...], [course/course-library/...]
+  > **Übung:** [course/02-course-exercises/meilenstein-N-uebung-01.md](course/02-course-exercises/meilenstein-N-uebung-01.md)
+  > **Quellen:** [course/03-course-library/...], [course/03-course-library/...]
   - [ ] [Untertask 1]
   - [ ] [Untertask 2]
 ```
@@ -262,7 +262,7 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 **Schritt 2: Übungen für Meilenstein erstellen**
 - Nach der "Neue Übung"-Checkliste oben
 
-**Schritt 3: README.md, course/uebungen/README_UEBUNGEN.md aktualisieren**
+**Schritt 3: README.md, course/02-course-exercises/README_UEBUNGEN.md aktualisieren**
 - Falls nötig Struktur-Erklärungen anpassen
 
 ---

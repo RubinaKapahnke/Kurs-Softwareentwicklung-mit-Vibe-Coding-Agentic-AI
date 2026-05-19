@@ -41,7 +41,7 @@ Arbeite in genau dieser Reihenfolge:
 - Mindestens enthalten:
   - Linearer Flow mit hoechstens 6 Schritten
   - Pro Schritt ein Erfolgskriterium
-  - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `COURSE_MILESTONES.md` ohne Vorwissen
+  - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `course/00-course-guides/COURSE_MILESTONES.md` ohne Vorwissen
   - Keine neue monolithische Page/Komponente und keine unnoetige Komponenten-Vermehrung
 
 7. **Naechster Umsetzungsschritt**

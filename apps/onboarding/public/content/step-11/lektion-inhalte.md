@@ -586,7 +586,7 @@ pwd
 
 **Übung:**
 1. Mache diesen Workflow durch
-2. Navigiere zu `course/kursmodule/`
+2. Navigiere zu `course/01-course-modules/`
 3. Schaue mit `ls`, welche Ordner dort sind
 4. Wechsle in einen Ordner (z. B. `cd 01-*` und drücke Tab zum Auto-Complete)
 5. Wechsle zurück zum Kurs-Ordner: `cd ../../..`
@@ -764,7 +764,7 @@ Du hast diese Lektion erfolgreich abgeschlossen, wenn du:
 
 1. **Das Terminal öffnest** und zur Kurs-Ordner navigierst
 2. **Mit `ls` die Inhalte siehst** (course/, apps/, tools/, etc.)
-3. **In `cd course/kursmodule/` wechselst** und dort `ls` nutzt
+3. **In `cd course/01-course-modules/` wechselst** und dort `ls` nutzt
 4. **Eine Test-Datei anlegst** (`touch test.md`), dich mit `cat` anschaust und dann löschst (`rm test.md`)
 5. **Mit `find . -name "*.md"` nach Markdown-Dateien suchst** und das Ergebnis verstehst
 

@@ -50,8 +50,8 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 
 1. Im Terminal: `cd course`
 2. Bestätige mit `pwd` – du solltest einen Pfad sehen, der auf `course` endet
-3. Tippe `ls` – du solltest Unterordner wie `course-library/`, `kursmodule/`, `uebungen/` sehen
-4. Wechsle in `cd kursmodule`
+3. Tippe `ls` – du solltest Unterordner wie `00-course-guides/`, `01-course-modules/`, `02-course-exercises/`, `03-course-library/`, `99-course-development/` und `learners/` sehen
+4. Wechsle in `cd 01-course-modules`
 5. Tippe `ls` – du solltest Ordner wie `01-Onboarding-in-den-Kurs/`, `02-produktbeschreibung-...` sehen
 6. Gehe zwei Ebenen zurück: `cd ../..`
 7. Bestätige mit `pwd` – du solltest wieder im Kurs-Ordner sein
@@ -69,8 +69,8 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 1. Im Kurs-Ordner: Tippe `cd co` (nur die ersten Buchstaben von "course")
 2. Drücke **Tab** – das Terminal sollte zu `cd course` ergänzen
 3. Drücke Enter
-4. Tippe `cd k` (für "kursmodule")
-5. Drücke **Tab** – sollte zu `cd kursmodule` ergänzen
+4. Tippe `cd 01-` (für "01-course-modules")
+5. Drücke **Tab** – sollte zu `cd 01-course-modules` ergänzen
 6. Drücke Enter
 7. Tippe `cd 01` (für "01-Onboarding-...")
 8. Drücke **Tab** – sollte ergänzen
@@ -151,7 +151,7 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 2. Suche alle Markdown-Dateien: `find . -name "*.md"`
 3. Du solltest viele Dateien sehen (README.md, verschiedene Lektionen, etc.)
 4. Suche nur im `course/` Ordner: `find course -name "*.md"`
-5. Suche nur nach Ordnern namens "01-*": `find course/kursmodule -type d -name "01-*"`
+5. Suche nur nach Ordnern namens "01-*": `find course/01-course-modules -type d -name "01-*"`
 6. Du solltest den Onboarding-Ordner sehen
 
 **Erfolgskriterium:** Du kannst mit `find` nach Dateien und Ordnern suchen.
@@ -194,7 +194,7 @@ Stelle dir vor: Du hast neue Notizen im Kurs und möchtest diese sichern.
    - `ls` – was ist hier?
 
 2. **Navigiere zur Übung:**
-   - `cd course/uebungen`
+   - `cd course/02-course-exercises`
    - `ls` – welche Übungen gibt es?
 
 3. **Suche für ein Pattern:**

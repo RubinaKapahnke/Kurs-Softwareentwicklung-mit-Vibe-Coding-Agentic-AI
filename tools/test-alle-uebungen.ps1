@@ -1,5 +1,5 @@
 # test-alle-uebungen.ps1
-# Laeuft ueber alle Uebungsdateien in course/uebungen/ und prueft jede gegen den Standard.
+# Laeuft ueber alle Uebungsdateien in course/02-course-exercises/ und prueft jede gegen den Standard.
 #
 # Aufruf (vom Repo-Root):
 #   .\tools\test-alle-uebungen.ps1
@@ -9,11 +9,11 @@
 $ErrorActionPreference = "Stop"
 
 $repoRoot  = Split-Path -Parent $PSScriptRoot
-$uebungen  = Get-ChildItem -Path "$repoRoot\course\uebungen" -Filter "meilenstein-*.md" | Sort-Object Name
+$uebungen  = Get-ChildItem -Path "$repoRoot\course\02-course-exercises" -Filter "meilenstein-*.md" | Sort-Object Name
 $testScript = "$PSScriptRoot\test-uebung.ps1"
 
 if ($uebungen.Count -eq 0) {
-    Write-Host "Keine Uebungsdateien gefunden in course/uebungen/." -ForegroundColor Yellow
+    Write-Host "Keine Uebungsdateien gefunden in course/02-course-exercises/." -ForegroundColor Yellow
     exit 0
 }
 
@@ -39,20 +39,25 @@ Write-Host ""
 
 # --- Meilenstein-Coverage-Check ---
 Write-Host ("=" * 70)
-Write-Host "  Meilenstein-Coverage-Check (COURSE_MILESTONES.md <-> course/uebungen/)" -ForegroundColor Cyan
+Write-Host "  Meilenstein-Coverage-Check (course/00-course-guides/COURSE_MILESTONES.md <-> course/02-course-exercises/)" -ForegroundColor Cyan
 Write-Host ("=" * 70)
 
-$nextStepsPath = "$repoRoot\COURSE_MILESTONES.md"
+$nextStepsPath = "$repoRoot\course\00-course-guides\COURSE_MILESTONES.md"
 $nextStepsContent = Get-Content $nextStepsPath -Raw -Encoding UTF8
+$nextStepsDir = Split-Path -Parent $nextStepsPath
 
 # Alle referenzierten Uebungspfade aus COURSE_MILESTONES.md extrahieren
-$uebungMatches = [regex]::Matches($nextStepsContent, '\*\*Uebung:\*\*\s*\[.*?\]\((course/uebungen/[^)]+)\)')
+$uebungMatches = [regex]::Matches($nextStepsContent, '\*\*Uebung:\*\*\s*\[.*?\]\(([^)]+02-course-exercises/[^)]+)\)')
 $referencedAbsPaths = @()
 $coverageFailed = 0
 
 foreach ($match in $uebungMatches) {
     $relPath  = $match.Groups[1].Value
-    $absPath  = [System.IO.Path]::GetFullPath((Join-Path $repoRoot ($relPath -replace '/', '\')))
+    if ($relPath -like "../*") {
+        $absPath = [System.IO.Path]::GetFullPath((Join-Path $nextStepsDir ($relPath -replace '/', '\')))
+    } else {
+        $absPath = [System.IO.Path]::GetFullPath((Join-Path $repoRoot ($relPath -replace '/', '\')))
+    }
     $referencedAbsPaths += $absPath
 
     if (-not (Test-Path $absPath)) {

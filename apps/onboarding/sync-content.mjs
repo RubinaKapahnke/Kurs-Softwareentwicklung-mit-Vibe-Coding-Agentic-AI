@@ -511,7 +511,7 @@ const SECTION_TYPE_MAP = {
   'uebung.md': 'uebung',
 };
 
-const KURSMODULE_ROOT = path.resolve(appRoot, '../../course/kursmodule');
+const KURSMODULE_ROOT = path.resolve(appRoot, '../../course/01-course-modules');
 
 async function resolveLerninhalteRoot() {
   const entries = await fs.readdir(KURSMODULE_ROOT, { withFileTypes: true });

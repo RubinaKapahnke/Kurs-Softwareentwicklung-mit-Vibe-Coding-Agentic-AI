@@ -19,10 +19,10 @@ Stattdessen gibt es ein Zusammenspiel aus mehreren Teilen:
 
 ## So läuft eine Übung im Gesamt-Setting ab
 
-1. Du öffnest `COURSE_MILESTONES.md` im Kurs-Repository.
+1. Du öffnest `course/00-course-guides/COURSE_MILESTONES.md` im Kurs-Repository.
 2. Du prüfst, welcher Meilenstein gerade für dich relevant ist.
-3. Du öffnest die passende Übung unter `course/uebungen/`.
-4. Du liest die verlinkten Quellen in `course/course-library/` oder `course/kursmodule/`.
+3. Du öffnest die passende Übung unter `course/02-course-exercises/`.
+4. Du liest die verlinkten Quellen in `course/03-course-library/` oder `course/01-course-modules/`.
 5. Du setzt die Aufgabe in deinem eigenen Repository um.
 6. Du dokumentierst deinen Fortschritt wieder zentral in deiner Lernfortschrittsdatei.
 
@@ -41,7 +41,7 @@ Stattdessen gibt es ein Zusammenspiel aus mehreren Teilen:
 
 ## Fallback
 
-- Unklar, wie eine Übung startet: Erst `COURSE_MILESTONES.md`, dann `course/uebungen/` öffnen.
+- Unklar, wie eine Übung startet: Erst `course/00-course-guides/COURSE_MILESTONES.md`, dann `course/02-course-exercises/` öffnen.
 - Datei nicht gefunden: In VS Code mit `Strg+P` / `Cmd+P` nach Dateinamen suchen.
 - Unsicher beim Repository-Kontext: `git remote -v` und Ordnerpfad prüfen.
 

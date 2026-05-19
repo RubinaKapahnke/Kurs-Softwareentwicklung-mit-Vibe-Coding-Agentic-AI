@@ -51,7 +51,7 @@ Referenziere Bilder mit relativem Pfad in der Lektion:
 
 ## Beispiel
 
-**In:** `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-02-github-account/lektion-inhalte.md`
+**In:** `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-02-github-account/lektion-inhalte.md`
 
 ```markdown
 ## GitHub im Browser öffnen

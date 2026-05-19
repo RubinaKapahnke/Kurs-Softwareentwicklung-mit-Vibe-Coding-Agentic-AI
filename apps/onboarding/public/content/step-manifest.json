@@ -443,7 +443,7 @@
                 "Allgemeine Quelle:"
               ],
               "unorderedItems": [
-                "[Version Control und GitOps: Grundlagen](../../course-library/04-git/04-version-control-und-gitops-grundlagen.md)"
+                "[Version Control und GitOps: Grundlagen](../../../03-course-library/04-git/04-version-control-und-gitops-grundlagen.md)"
               ]
             }
           ]
@@ -1250,8 +1250,8 @@
                 "Worauf du beim Lesen achten solltest:"
               ],
               "orderedItems": [
-                "[course/course-library/01-markdown/01-markdown-grundlagen.md](../../course-library/01-markdown/01-markdown-grundlagen.md)",
-                "[course/course-library/01-markdown/02-formatierung_md-files.md](../../course-library/01-markdown/02-formatierung_md-files.md)"
+                "[course/03-course-library/01-markdown/01-markdown-grundlagen.md](../../../03-course-library/01-markdown/01-markdown-grundlagen.md)",
+                "[course/03-course-library/01-markdown/02-formatierung_md-files.md](../../../03-course-library/01-markdown/02-formatierung_md-files.md)"
               ],
               "unorderedItems": [
                 "Wie Überschriften mit `#` funktionieren",
@@ -2207,7 +2207,7 @@
               ],
               "orderedItems": [
                 "Mache diesen Workflow durch",
-                "Navigiere zu `course/kursmodule/`",
+                "Navigiere zu `course/01-course-modules/`",
                 "Schaue mit `ls`, welche Ordner dort sind",
                 "Wechsle in einen Ordner (z. B. `cd 01-*` und drücke Tab zum Auto-Complete)",
                 "Wechsle zurück zum Kurs-Ordner: `cd ../../..`"
@@ -2323,7 +2323,7 @@
               "orderedItems": [
                 "**Das Terminal öffnest** und zur Kurs-Ordner navigierst",
                 "**Mit `ls` die Inhalte siehst** (course/, apps/, tools/, etc.)",
-                "**In `cd course/kursmodule/` wechselst** und dort `ls` nutzt",
+                "**In `cd course/01-course-modules/` wechselst** und dort `ls` nutzt",
                 "**Eine Test-Datei anlegst** (`touch test.md`), dich mit `cat` anschaust und dann löschst (`rm test.md`)",
                 "**Mit `find . -name \"*.md\"` nach Markdown-Dateien suchst** und das Ergebnis verstehst"
               ]
@@ -2349,16 +2349,16 @@
       "Falls du `.git/` nicht siehst, tippe `ls -a` (Bash/Zsh) oder `Get-ChildItem -Force` (PowerShell)",
       "Im Terminal: `cd course`",
       "Bestätige mit `pwd` – du solltest einen Pfad sehen, der auf `course` endet",
-      "Tippe `ls` – du solltest Unterordner wie `course-library/`, `kursmodule/`, `uebungen/` sehen",
-      "Wechsle in `cd kursmodule`",
+      "Tippe `ls` – du solltest Unterordner wie `00-course-guides/`, `01-course-modules/`, `02-course-exercises/`, `03-course-library/`, `99-course-development/` und `learners/` sehen",
+      "Wechsle in `cd 01-course-modules`",
       "Tippe `ls` – du solltest Ordner wie `01-Onboarding-in-den-Kurs/`, `02-produktbeschreibung-...` sehen",
       "Gehe zwei Ebenen zurück: `cd ../..`",
       "Bestätige mit `pwd` – du solltest wieder im Kurs-Ordner sein",
       "Im Kurs-Ordner: Tippe `cd co` (nur die ersten Buchstaben von \"course\")",
       "Drücke **Tab** – das Terminal sollte zu `cd course` ergänzen",
       "Drücke Enter",
-      "Tippe `cd k` (für \"kursmodule\")",
-      "Drücke **Tab** – sollte zu `cd kursmodule` ergänzen",
+      "Tippe `cd 01-` (für \"01-course-modules\")",
+      "Drücke **Tab** – sollte zu `cd 01-course-modules` ergänzen",
       "Drücke Enter",
       "Tippe `cd 01` (für \"01-Onboarding-...\")",
       "Drücke **Tab** – sollte ergänzen",
@@ -2389,7 +2389,7 @@
       "Suche alle Markdown-Dateien: `find . -name \"*.md\"`",
       "Du solltest viele Dateien sehen (README.md, verschiedene Lektionen, etc.)",
       "Suche nur im `course/` Ordner: `find course -name \"*.md\"`",
-      "Suche nur nach Ordnern namens \"01-*\": `find course/kursmodule -type d -name \"01-*\"`",
+      "Suche nur nach Ordnern namens \"01-*\": `find course/01-course-modules -type d -name \"01-*\"`",
       "Du solltest den Onboarding-Ordner sehen",
       "Navigiere zum Test-Ordner (falls nicht dort): `cd ~/Desktop/terminal-test`",
       "Lösche einzelne Dateien:",
@@ -2401,7 +2401,7 @@
       "`pwd` – wo bist du?",
       "`ls` – was ist hier?",
       "**Navigiere zur Übung:**",
-      "`cd course/uebungen`",
+      "`cd course/02-course-exercises`",
       "`ls` – welche Übungen gibt es?",
       "**Suche für ein Pattern:**",
       "`find . -name \"meilenstein-*.md\"`",
@@ -2636,10 +2636,10 @@
           "sections": [
             {
               "orderedItems": [
-                "Du öffnest `COURSE_MILESTONES.md` im Kurs-Repository.",
+                "Du öffnest `course/00-course-guides/COURSE_MILESTONES.md` im Kurs-Repository.",
                 "Du prüfst, welcher Meilenstein gerade für dich relevant ist.",
-                "Du öffnest die passende Übung unter `course/uebungen/`.",
-                "Du liest die verlinkten Quellen in `course/course-library/` oder `course/kursmodule/`.",
+                "Du öffnest die passende Übung unter `course/02-course-exercises/`.",
+                "Du liest die verlinkten Quellen in `course/03-course-library/` oder `course/01-course-modules/`.",
                 "Du setzt die Aufgabe in deinem eigenen Repository um.",
                 "Du dokumentierst deinen Fortschritt wieder zentral in deiner Lernfortschrittsdatei."
               ]
@@ -2696,7 +2696,7 @@
           "sections": [
             {
               "orderedItems": [
-                "Öffne `COURSE_MILESTONES.md` im Kurs-Repository.",
+                "Öffne `course/00-course-guides/COURSE_MILESTONES.md` im Kurs-Repository.",
                 "Prüfe den aktuell relevanten Meilenstein.",
                 "Öffne die dort verlinkte Übung.",
                 "Lies die Quellen der Übung.",

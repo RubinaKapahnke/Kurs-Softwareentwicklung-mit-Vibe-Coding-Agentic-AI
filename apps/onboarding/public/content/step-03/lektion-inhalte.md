@@ -109,7 +109,7 @@ Dieses Dokument verbindet die allgemeinen Grundlagen aus der Course-Library mit 
 
 Allgemeine Quelle:
 
-- [Version Control und GitOps: Grundlagen](../../course-library/04-git/04-version-control-und-gitops-grundlagen.md)
+- [Version Control und GitOps: Grundlagen](../../../03-course-library/04-git/04-version-control-und-gitops-grundlagen.md)
 
 ## Was wir im Modul 01 konkret brauchen
 

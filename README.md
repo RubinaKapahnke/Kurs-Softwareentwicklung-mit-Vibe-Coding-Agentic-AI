@@ -35,14 +35,14 @@ Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten
 
 ## 🧭 Arbeitsweise im Repo
 
-**Zentrale Koordination:** [COURSE_MILESTONES.md](COURSE_MILESTONES.md) definiert den aktuellen Kursfortschritt. [course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md) beschreibt die eigenständigen Kursbausteine.
+**Zentrale Koordination:** [course/00-course-guides/COURSE_MILESTONES.md](course/00-course-guides/COURSE_MILESTONES.md) definiert den aktuellen Kursfortschritt. [course/01-course-modules/README_KURSMODULE.md](course/01-course-modules/README_KURSMODULE.md) beschreibt die eigenständigen Kursbausteine.
 
 **Architektur der Verknüpfung:**
 1. Kursbeschreibung ([KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md)) → Beschreibt Gesamtbild, Pfade und Kurslogik
-2. Kursmodule ([course/kursmodule/README_KURSMODULE.md](course/kursmodule/README_KURSMODULE.md)) → Beschreiben eigenständige Kursbausteine mit Rollenbezug und Praxisartefakt
-3. Meilensteine in [COURSE_MILESTONES.md](COURSE_MILESTONES.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
-4. Modul-Inhalte ([course/course-library](course/course-library)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
-5. Übungen ([course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
+2. Kursmodule ([course/01-course-modules/README_KURSMODULE.md](course/01-course-modules/README_KURSMODULE.md)) → Beschreiben eigenständige Kursbausteine mit Rollenbezug und Praxisartefakt
+3. Meilensteine in [course/00-course-guides/COURSE_MILESTONES.md](course/00-course-guides/COURSE_MILESTONES.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
+4. Modul-Inhalte ([course/03-course-library](course/03-course-library)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
+5. Übungen ([course/02-course-exercises/README_UEBUNGEN.md](course/02-course-exercises/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
 6. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
 
 **Wichtig:** Jede Aufgabe in den Übungen hat direkte Quellenlinks zu den Modul-Dateien. Während du die Übung machst, klickst du direkt auf die Modul-Quelle.
@@ -51,10 +51,10 @@ Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten
 
 ## � Aufbau der Module
 
-Jedes Modul folgt derselben Struktur. Beispiel: `course/course-library/04-git/`
+Jedes Modul folgt derselben Struktur. Beispiel: `course/03-course-library/04-git/`
 
 ```
-course/course-library/04-git/
+course/03-course-library/04-git/
 ├── 00-git-versionierung-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
 ├── 01-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
 └── 03-git-befehlsuebersicht.md   ← Nachschlag: Befehle in Tabellen (nur Git, Terminal)
@@ -101,8 +101,8 @@ course/course-library/04-git/
 │   │   │       ├── github-repository-erstellen.md
 │   │   │       ├── kurs-handhabung.md
 │   │   │       ├── kurs-ueberblick.md
-│   │   │       ├── tasks-step-04.md
-│   │   │       └── tasks-step-06.md
+│   │   │       ├── step-01/ ... step-16/
+│   │   │       └── step-manifest.json
 │   │   ├── src/
 │   │   │   ├── app/
 │   │   │   │   ├── components/
@@ -167,60 +167,37 @@ course/course-library/04-git/
 │           ├── learner-progress-parser.service.ts
 │           └── snapshot.service.ts
 ├── course/
-│   ├── COURSE_MILESTONES.md
-│   ├── fremdtexte-kursentwicklung.md
-│   ├── learners/
-│   │   ├── daria/
-│   │   │   ├── prd_daria.md
-│   │   │   └── lernfortschritt_daria.md
-│   │   ├── dom/
-│   │   │   ├── prd_dom.md
-│   │   │   └── lernfortschritt_dom.md
-│   │   ├── medine/
-│   │   │   ├── prd_medine.md
-│   │   │   └── lernfortschritt_medine.md
-│   │   ├── raphael/
-│   │   │   ├── prd_raphael.md
-│   │   │   └── lernfortschritt_raphael.md
-│   │   ├── 00_vorlage/
-│   │   │   ├── prd_vorlage.md
-│   │   │   ├── lernfortschritt_vorlage.md
-│   │   │   └── lernbegleitnotizen_vorlage.md
-│   │   └── sebastian/
-│   │       ├── cmd_guide.md
-│   │       ├── git_guide.md
-│   │       ├── prd_sebastian.md
-│   │       └── lernfortschritt_sebastian.md
-│   ├── kursmodule/
+│   ├── 00-course-guides/
+│   │   └── COURSE_MILESTONES.md
+│   ├── 01-course-modules/
 │   │   ├── README_KURSMODULE.md
-│   │   ├── 01-arbeitsumgebung-dokumentation-versionsverwaltung/
+│   │   ├── 01-Onboarding-in-den-Kurs/
 │   │   │   ├── 00-modulziele.md
 │   │   │   ├── 01-github-im-kurs.md
 │   │   │   ├── 02-github-konto-profil-und-collaborator-aufgabe.md
 │   │   │   ├── 03-github-features-repositories-und-readme-vorlage.md
 │   │   │   ├── 04-version-control-und-gitops-im-kurs.md
 │   │   │   ├── 05-vscode-speicherkonflikt-im-kurs.md
-│   │   │   ├── github-repository-erstellen.md
-│   │   │   ├── modulziele.md
 │   │   │   ├── README-template-tn-repo.md
 │   │   │   ├── README_LERNINHALTE.md
 │   │   │   ├── anleitung-lerninhalte-zu-steps.md
 │   │   │   ├── lektion-01-willkommen-im-kurs/
-│   │   │   ├── lektion-02-kurs-und-module/
-│   │   │   ├── lektion-03-github-account/
+│   │   │   ├── lektion-02-github-account/
+│   │   │   ├── lektion-03-github-repositories-verstehen/
 │   │   │   ├── lektion-04-eigenes-uebungs-repository/
-│   │   │   ├── lektion-05-trainerin-einladen/
-│   │   │   ├── lektion-06-erste-uebungen/
+│   │   │   ├── lektion-05-git-grundlagen/
+│   │   │   ├── lektion-06-erste-uebungen-im-browser/
 │   │   │   ├── lektion-07-was-ist-vs-code/
 │   │   │   ├── lektion-08-vs-code-installieren/
-│   │   │   ├── lektion-09-was-ist-git/
+│   │   │   ├── lektion-09-github-copilot-extension/
 │   │   │   ├── lektion-10-git-installieren/
-│   │   │   ├── lektion-11-kurs-repo-klonen/
-│   │   │   ├── lektion-12-kurs-handhabung-verstehen/
+│   │   │   ├── lektion-11-terminal-und-shell-grundlagen/
+│   │   │   ├── lektion-12-git-in-vscode-via-terminal/
 │   │   │   ├── lektion-13-branches-commits-pullrequests/
 │   │   │   ├── lektion-14-kurs-repository-klonen/
 │   │   │   ├── lektion-15-uebungen-im-gesamt-setting/
-│   │   │   └── lektion-16-start-in-den-gesamtkurs/
+│   │   │   ├── lektion-16-start-in-den-gesamtkurs/
+│   │   │   └── lerninhalte/
 │   │   ├── 02-produktbeschreibung-inkrementelle-planung/
 │   │   │   └── 00-modulziele.md
 │   │   ├── 03-vibe-coding-prompting-context-engineering/
@@ -247,9 +224,19 @@ course/course-library/04-git/
 │   │   │   └── 00-modulziele.md
 │   │   ├── 13-deployment-monitoring-release-management/
 │   │   │   └── 00-modulziele.md
-│   │   └── 14-abschlussprojekt-portfolio/
-│   │       └── 00-modulziele.md
-│   ├── course-library/
+│   │   ├── 14-abschlussprojekt-portfolio/
+│   │   │   └── 00-modulziele.md
+│   │   └── 99-unsortiert/
+│   │       ├── github-repository-erstellen.md
+│   │       └── modulziele.md
+│   ├── 02-course-exercises/
+│   │   ├── meilenstein-01-uebung-01.md
+│   │   ├── meilenstein-01-uebung-02.md
+│   │   ├── meilenstein-02-uebung-*.md  (3 Übungen)
+│   │   ├── meilenstein-03-uebung-*.md  (4 Übungen)
+│   │   ├── meilenstein-04-uebung-*.md  (2 Übungen)
+│   │   └── README_UEBUNGEN.md
+│   ├── 03-course-library/
 │   │   ├── 01-markdown/
 │   │   │   ├── 00-markdown-dokumentation-modulguide.md
 │   │   │   ├── 01-markdown-grundlagen.md
@@ -286,13 +273,30 @@ course/course-library/04-git/
 │   │       ├── 00-programmierlogik-code-verstehen-modulguide.md
 │   │       ├── 01-programmierlogik-grundlagen.md
 │   │       └── 02-programmierlogik-code-lesen.md
-│   └── uebungen/
-│       ├── meilenstein-01-uebung-01.md
-│       ├── meilenstein-01-uebung-02.md
-│       ├── meilenstein-02-uebung-*.md  (3 Übungen)
-│       ├── meilenstein-03-uebung-*.md  (4 Übungen)
-│       ├── meilenstein-04-uebung-*.md  (1 Übung)
-│       └── README_UEBUNGEN.md
+│   ├── 99-course-development/
+│   │   └── fremdtexte-kursentwicklung.md
+│   └── learners/
+│       ├── daria/
+│       │   ├── prd_daria.md
+│       │   └── lernfortschritt_daria.md
+│       ├── dom/
+│       │   ├── prd_dom.md
+│       │   └── lernfortschritt_dom.md
+│       ├── medine/
+│       │   ├── prd_medine.md
+│       │   └── lernfortschritt_medine.md
+│       ├── raphael/
+│       │   ├── prd_raphael.md
+│       │   └── lernfortschritt_raphael.md
+│       ├── 00_vorlage/
+│       │   ├── prd_vorlage.md
+│       │   ├── lernfortschritt_vorlage.md
+│       │   └── lernbegleitnotizen_vorlage.md
+│       └── sebastian/
+│           ├── cmd_guide.md
+│           ├── git_guide.md
+│           ├── prd_sebastian.md
+│           └── lernfortschritt_sebastian.md
 ├── .github/
 │   ├── agents/
 │   │   ├── course-dev-curriculum.agent.md
@@ -325,7 +329,6 @@ course/course-library/04-git/
 │   ├── test-links.ps1
 │   └── test-uebung.ps1
 ├── AGENTS.md
-├── COURSE_MILESTONES.md
 └── README.md
 ```
 
@@ -351,8 +354,8 @@ Nach der Installation das Terminal neu starten.
 pandoc <pfad-zur-datei.md> -o <ausgabe.pdf>
 
 # Beispiele:
-pandoc course/uebungen/meilenstein-02-uebung-01.md -o uebung-m2-01.pdf
-pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00-modulziele.md" -o kursmodul-01.pdf
+pandoc course/02-course-exercises/meilenstein-02-uebung-01.md -o uebung-m2-01.pdf
+pandoc "course/01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md" -o kursmodul-01.pdf
 ```
 
 > **Hinweis:** Beim ersten PDF-Export lädt MiKTeX fehlende LaTeX-Pakete automatisch nach - das dauert einmalig etwas länger.
@@ -361,9 +364,9 @@ pandoc "course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/00
 
 ## ✅ Nächster Einstiegspunkt
 Wenn du neu in eine Session einsteigst:
-1. [COURSE_MILESTONES.md](COURSE_MILESTONES.md) öffnen
+1. [course/00-course-guides/COURSE_MILESTONES.md](course/00-course-guides/COURSE_MILESTONES.md) öffnen
 2. eigenen Lernfortschritt im persönlichen Ordner aktualisieren
-3. aktuelle Übung in [course/uebungen/README_UEBUNGEN.md](course/uebungen/README_UEBUNGEN.md) bearbeiten
+3. aktuelle Übung in [course/02-course-exercises/README_UEBUNGEN.md](course/02-course-exercises/README_UEBUNGEN.md) bearbeiten
 4. Änderungen committen, pushen und PR erstellen
 
 

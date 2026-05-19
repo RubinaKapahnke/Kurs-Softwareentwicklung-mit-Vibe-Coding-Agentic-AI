@@ -1,11 +1,11 @@
-﻿# test-links.ps1
+# test-links.ps1
 # Prueft alle relativen Markdown-Links in Uebungsdateien und Modul-Dateien auf Existenz.
 #
 # Aufruf (vom Repo-Root):
 #   .\tools\test-links.ps1
 #
 # Optionale Parameter:
-#   -Path "course/uebungen"   Nur Links in einem Unterordner pruefen
+#   -Path "course/02-course-exercises"   Nur Links in einem Unterordner pruefen
 #
 # Rueckgabewert: Exit-Code 0 = alle Links OK, 1 = mindestens ein toter Link
 
@@ -22,7 +22,12 @@ if ($Path) {
     $searchRoot = $repoRoot
 }
 
-$mdFiles = Get-ChildItem -Path $searchRoot -Recurse -Filter "*.md" | Where-Object { $_.FullName -notmatch "\\node_modules\\" } | Sort-Object FullName
+$mdFiles = Get-ChildItem -Path $searchRoot -Recurse -Filter "*.md" | Where-Object {
+    $_.FullName -notmatch "\\node_modules\\" -and
+    $_.FullName -notmatch "\\\.angular\\" -and
+    $_.FullName -notmatch "\\apps\\onboarding\\dist\\" -and
+    $_.FullName -notmatch "\\apps\\onboarding\\public\\content\\"
+} | Sort-Object FullName
 $totalBroken = 0
 $totalChecked = 0
 
@@ -37,7 +42,7 @@ foreach ($file in $mdFiles) {
     foreach ($match in $linkMatches) {
         $linkTarget = $match.Groups[2].Value
         # Platzhalter-Links ueberspringen (Template-Muster wie XX-, <name>, UE-MX-)
-        if ($linkTarget -match '<[^>]+>|XX-|YY-|UE-M[X\d]|meilenstein-[XN]-|meilenstein-N|modulname|modul-grundlagen|\bN-uebung\b|^\.\./\.\./docs/|^URL$') {
+        if ($linkTarget -match '<[^>]+>|XX-|YY-|UE-M[X\d]|meilenstein-[XN]-|meilenstein-N|modulname|modul-grundlagen|\bN-uebung\b|^\.\./\.\./docs/|^URL$|^/assets/') {
             continue
         }
         # Relativer Pfad relativ zur Datei aufloesen

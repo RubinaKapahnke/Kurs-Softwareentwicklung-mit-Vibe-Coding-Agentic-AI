@@ -17,7 +17,7 @@ Dein Haupt-Einstiegspunkt ist:
 
 ## Dein erster Ablauf nach dem Onboarding
 
-1. Öffne `COURSE_MILESTONES.md` im Kurs-Repository.
+1. Öffne `course/00-course-guides/COURSE_MILESTONES.md` im Kurs-Repository.
 2. Prüfe den aktuell relevanten Meilenstein.
 3. Öffne die dort verlinkte Übung.
 4. Lies die Quellen der Übung.
@@ -33,7 +33,7 @@ Dein Haupt-Einstiegspunkt ist:
 
 ## Wenn du unsicher bist
 
-- Erst `COURSE_MILESTONES.md` öffnen, nicht raten.
+- Erst `course/00-course-guides/COURSE_MILESTONES.md` öffnen, nicht raten.
 - Erst die Übungsbeschreibung lesen, nicht direkt losschreiben.
 - Erst den Repository-Kontext prüfen, bevor du Dateien bearbeitest.
 

@@ -1,9 +1,9 @@
-﻿name: Test Uebungen
+name: Test Uebungen
 
 on:
   pull_request:
     paths:
-      - "course/uebungen/**.md"
+      - "course/02-course-exercises/**.md"
       - "tools/test-uebung.ps1"
       - "tools/test-alle-uebungen.ps1"
 

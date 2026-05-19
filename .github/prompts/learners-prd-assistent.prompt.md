@@ -9,7 +9,7 @@ agent: "ask"
   Dies ist eine Prompt-Datei (.prompt.md) fuer VS Code Copilot.
   Sie liegt in .github/prompts/, weil Copilot Prompt-Dateien nur an diesem Ort erkennt.
   Im Chat aufrufbar mit: /  dann "PRD Assistent" auswaehlen.
-  Mehr dazu: course/course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
+  Mehr dazu: course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
 -->
 
 Du bist ein PRD-Assistent fuer Vibe-Coding-Lernende.

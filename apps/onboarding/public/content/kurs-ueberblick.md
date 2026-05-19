@@ -42,7 +42,7 @@ Damit du sauber im Kursfluss bleibst, gilt immer:
 ### Deine ersten Schritte nach dem Onboarding
 
 1. Oeffne im Kurs-Repo die Datei `COURSE_MILESTONES.md`.
-2. Oeffne danach `course/uebungen/README_UEBUNGEN.md`.
+2. Oeffne danach `course/02-course-exercises/README_UEBUNGEN.md`.
 3. Waehle die passende Uebung aus.
 4. Setze die Loesung in deinem eigenen Repo um.
 5. Trage den Stand in `course/learners/<name>/lernfortschritt_<name>.md` ein.

@@ -1,4 +1,4 @@
-﻿# Lernbegleitnotizen: <Name>
+# Lernbegleitnotizen: <Name>
 
 Diese Datei sammelt alles, was nicht in das Lernjournal gehoert:
 - offene Rueckfragen,
@@ -6,25 +6,20 @@ Diese Datei sammelt alles, was nicht in das Lernjournal gehoert:
 - Feedback zum Kurs,
 - Lernwuensche fuer kommende Sessions.
 
-## Offene Rueckfragen
+## Rückfragen
+⚠️ **WICHTIG:** Diese Tabelle ist für **deine** Verwaltung gedacht. Die Dozent*innen schauen in der Regel nicht in diese Datei. Feedback zum Kurs   
 
-### DD.MM.
-- Frage:
-- Kontext:
-- Gewuenschte Unterstuetzung:
+| Datum | Thema | Rückfrage an | Status | Frage | Antwort |
+|:----|:----|:----|:----|:----|:----|
+|01.01.2026| Markdown | Mich selbst | ✅ | Wie erstellt man Tabellen? |  |
+
+
 
 ## Notizen aus Sessions
 
 ### DD.MM.
 - ...
 
-## Feedback zum Kurs
-
-### Das hilft mir
-- ...
-
-### Das sollte anders werden
-- ...
 
 ## Lernwuensche
 - [ ] ...

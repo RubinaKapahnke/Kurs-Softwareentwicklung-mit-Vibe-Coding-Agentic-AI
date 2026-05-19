@@ -1,5 +1,5 @@
 ---
-applyTo: "course/uebungen/**"
+applyTo: "course/02-course-exercises/**"
 ---
 
 # Übungsstandard: Konsistenz-Checkliste & Workflow-Beispiel
@@ -7,7 +7,7 @@ applyTo: "course/uebungen/**"
 ## 📄 Übungs-Template
 
 ```
-course/uebungen/meilenstein-XX-uebung-YY.md
+course/02-course-exercises/meilenstein-XX-uebung-YY.md
 ```
 
     # Übung Meilenstein XX: [Titel]
@@ -34,7 +34,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
     ## Aufgaben
     
    ### 1. [Aufgabe 1]
-   Quelle: [course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md) oder [course/kursmodule/XX-modul/YY-datei.md](../../course/kursmodule/XX-modul/YY-datei.md)
+   Quelle: [course/03-course-library/XX-modul/01-grundlagen.md](../../course/03-course-library/XX-modul/01-grundlagen.md) oder [course/01-course-modules/XX-modul/YY-datei.md](../../course/01-course-modules/XX-modul/YY-datei.md)
     
     ### 2. [Aufgabe mit Git]
     Prüfe zuerst deinen aktuellen Status:
@@ -54,12 +54,12 @@ course/uebungen/meilenstein-XX-uebung-YY.md
     ---
     
    ## Modulabdeckung (Check)
-   - ✓ course/course-library/XX-modul/01-grundlagen.md oder course/kursmodule/XX-modul/YY-datei.md: [Konzept erklärt]
+   - ✓ course/03-course-library/XX-modul/01-grundlagen.md oder course/01-course-modules/XX-modul/YY-datei.md: [Konzept erklärt]
     
     ---
     
     ## Wiederholung aus frueheren Meilensteinen
-   - **[Fähigkeit]** ([course/course-library/XX-modul/01-grundlagen.md](../../course/course-library/XX-modul/01-grundlagen.md)) oder ([course/kursmodule/XX-modul/YY-datei.md](../../course/kursmodule/XX-modul/YY-datei.md))
+   - **[Fähigkeit]** ([course/03-course-library/XX-modul/01-grundlagen.md](../../course/03-course-library/XX-modul/01-grundlagen.md)) oder ([course/01-course-modules/XX-modul/YY-datei.md](../../course/01-course-modules/XX-modul/YY-datei.md))
     
     ---
     
@@ -84,7 +84,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 > ```powershell
 > .\tools\test-alle-uebungen.ps1
 > ```
-> Einzelne Datei: `.\tools\test-uebung.ps1 -File "course/uebungen/meilenstein-XX-uebung-YY.md"`
+> Einzelne Datei: `.\tools\test-uebung.ps1 -File "course/02-course-exercises/meilenstein-XX-uebung-YY.md"`
 > Exit-Code 0 = alles OK, 1 = mindestens ein Fehler.
 
 - [ ] **Alle Quellen existieren?** grep_search nach Links in Übungen
@@ -92,7 +92,7 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 - [ ] **Keine redundanten Lernziele?** Selbstcheck-Checklisten nur im `## Selbstcheck`-Abschnitt des Modulguide, nirgendwo sonst
 - [ ] **Alle Links funktionieren?** (Relative Pfade prüfen) → `.\tools\test-links.ps1` ausführen
 - [ ] **Modulabdeckung in Übungen dokumentiert?** (Check-Abschnitt vorhanden)
-- [ ] **COURSE_MILESTONES.md ↔ course/uebungen/README_UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
+- [ ] **course/00-course-guides/COURSE_MILESTONES.md ↔ course/02-course-exercises/README_UEBUNGEN.md synchron?** (Gleiche Meilenstein-Nummern)
 - [ ] **README.md Modul-Struktur-Beispiel noch aktuell?** (Falls neue Konvention)
 - [ ] **CHANGELOG.md aktuell?** Enthält er einen Eintrag für alle strukturellen Änderungen der aktuellen Session?
 - [ ] **CHANGELOG Tagesübersicht gepflegt?** Pro Datum genau ein grober Tagesblock unter `## Tagesübersicht (grob)`
@@ -116,15 +116,15 @@ course/uebungen/meilenstein-XX-uebung-YY.md
 ## 📝 Beispiel: Kompletter Workflow für neues Modul
 
 **1. Neues Modul "Test" erstellen:**
-   - `course/course-library/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
-   - `course/course-library/08-test/01-test-grundlagen.md`
+   - `course/03-course-library/08-test/00-test-modulguide.md` (mit inline Selbstcheck)
+   - `course/03-course-library/08-test/01-test-grundlagen.md`
 
-**2. In COURSE_MILESTONES.md neuen Meilenstein hinzufügen:**
+**2. In course/00-course-guides/COURSE_MILESTONES.md neuen Meilenstein hinzufügen:**
    - "Meilenstein 4: Testing"
    - Modul-Einstiege + Vertiefung + Lernziele
 
 **3. Neue Übung erstellen:**
-   - `course/uebungen/meilenstein-04-uebung-01.md`
+   - `course/02-course-exercises/meilenstein-04-uebung-01.md`
    - Mit Quellenlinks zu Test-Modul
 
 **4. Konsistenz-Check:**

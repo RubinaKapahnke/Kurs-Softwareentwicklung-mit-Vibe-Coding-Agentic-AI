@@ -23,7 +23,7 @@ Du klonst das gemeinsame Kurs-Repository und öffnest es lokal in VS Code.
 
 ## Nach dem Clone prüfen
 
-- Datei `COURSE_MILESTONES.md` ist sichtbar.
+- Datei `course/00-course-guides/COURSE_MILESTONES.md` ist über Strg+P auffindbar.
 - Ordner `course/` ist vorhanden.
 - `git status` zeigt ein sauberes Repository.
 

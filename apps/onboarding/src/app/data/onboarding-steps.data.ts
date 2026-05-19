@@ -665,7 +665,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     successCriterion:
-      'Der Kurs-Ordner ist in VS Code geöffnet. Du siehst COURSE_MILESTONES.md in der Dateiliste.',
+      'Der Kurs-Ordner ist in VS Code geöffnet. Du findest course/00-course-guides/COURSE_MILESTONES.md über die Schnellsuche.',
     desktopHint: [
       'Klonen und Öffnen des Kurs-Repositories ist ein Desktop-Schritt.',
       'Wenn du gerade mobil liest, nutze diesen Schritt später an deinem Rechner weiter.'
@@ -677,7 +677,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       },
       {
         label: 'COURSE_MILESTONES.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/COURSE_MILESTONES.md'
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/00-course-guides/COURSE_MILESTONES.md'
       },
       {
         label: 'InterGit – Interaktives Git-Visualisierungstool',
@@ -686,7 +686,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     vscodeHint: [
       'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe COURSE_MILESTONES.md und bestätige mit Enter.'
+      'Tippe course/00-course-guides/COURSE_MILESTONES.md und bestätige mit Enter.'
     ]
   },
   {
@@ -694,15 +694,15 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     title: 'Kurs-Handhabung verstehen',
     goal: 'Du verstehst, welche Dateien im Kurs-Repository bleiben, was in deinem eigenen Repository entsteht und warum der Lernfortschritt zentral gepflegt wird.',
     tasks: [
-      'Öffne im Kurs-Repository die Datei COURSE_MILESTONES.md und lies Meilenstein 1.',
-      'Öffne im Kurs-Repository die Datei course/uebungen/README_UEBUNGEN.md und lies den Übungsablauf.',
+      'Öffne im Kurs-Repository die Datei course/00-course-guides/COURSE_MILESTONES.md und lies Meilenstein 1.',
+      'Öffne im Kurs-Repository die Datei course/02-course-exercises/README_UEBUNGEN.md und lies den Übungsablauf.',
       'Prüfe für dich die Grundregel: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.',
       'Prüfe für dich die Grundregel: lernfortschritt_<name>.md bleibt zentral im Kurs-Repository für Überblick und Dashboard.'
     ],
     fallbackHelp: [
       {
         title: 'Ich verwechsle eigenes Repository und Kurs-Repository',
-        detail: 'Merke dir: NEXT_STEPS, course/uebungen und course/learners gehören ins Kurs-Repository. Deine Lösungsdateien und Projektartefakte gehören standardmäßig in dein eigenes Repository.'
+        detail: 'Merke dir: COURSE_MILESTONES, course/02-course-exercises und course/learners gehören ins Kurs-Repository. Deine Lösungsdateien und Projektartefakte gehören standardmäßig in dein eigenes Repository.'
       },
       {
         title: 'Ich finde README_UEBUNGEN.md nicht',
@@ -713,16 +713,16 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     resources: [
       {
         label: 'COURSE_MILESTONES.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/COURSE_MILESTONES.md'
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/00-course-guides/COURSE_MILESTONES.md'
       },
       {
         label: 'README_UEBUNGEN.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/uebungen/README_UEBUNGEN.md'
+        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/02-course-exercises/README_UEBUNGEN.md'
       }
     ],
     vscodeHint: [
       'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe COURSE_MILESTONES.md oder README_UEBUNGEN.md und bestätige mit Enter.'
+      'Tippe course/00-course-guides/COURSE_MILESTONES.md oder README_UEBUNGEN.md und bestätige mit Enter.'
     ],
     markdownSource: '/content/kurs-handhabung.md'
   },

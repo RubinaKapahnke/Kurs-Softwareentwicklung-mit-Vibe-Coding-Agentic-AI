@@ -14,8 +14,8 @@ Der **Progress-Hub** ist die zentrale Web-App fuer den Kurs, um Lernfortschritt,
 ## 2. Datenquellen im Repo
 
 - Lernfortschrittsdateien: [course/learners/daria/lernfortschritt_daria.md](../../course/learners/daria/lernfortschritt_daria.md), [course/learners/dom/lernfortschritt_dom.md](../../course/learners/dom/lernfortschritt_dom.md), [course/learners/medine/lernfortschritt_medine.md](../../course/learners/medine/lernfortschritt_medine.md), [course/learners/raphael/lernfortschritt_raphael.md](../../course/learners/raphael/lernfortschritt_raphael.md), [course/learners/sebastian/lernfortschritt_sebastian.md](../../course/learners/sebastian/lernfortschritt_sebastian.md)
-- Meilensteine und Lernziele (Must/Should/Nice): [COURSE_MILESTONES.md](../../COURSE_MILESTONES.md)
-- Uebungen pro Meilenstein: [course/uebungen/README_UEBUNGEN.md](../../course/uebungen/README_UEBUNGEN.md) sowie Dateien unter [course/uebungen](../../course/uebungen)
+- Meilensteine und Lernziele (Must/Should/Nice): [COURSE_MILESTONES.md](../../course/00-course-guides/COURSE_MILESTONES.md)
+- Uebungen pro Meilenstein: [course/02-course-exercises/README_UEBUNGEN.md](../../course/02-course-exercises/README_UEBUNGEN.md) sowie Dateien unter [course/02-course-exercises](../../course/02-course-exercises)
 - Git-Zusammenarbeit: GitHub-Daten (Commits, Branches, PRs, Reviews, Kommentare)
 - Eigene Felder durch Kursentwickler (z. B. Notizen, ungeklaerte Rueckfragen)
 
@@ -127,7 +127,7 @@ export interface LearnerProgress {
 	individualLearningWishes: string[];
 }
 
-// Quelle: COURSE_MILESTONES.md
+// Quelle: course/00-course-guides/COURSE_MILESTONES.md
 export interface MilestoneStatus {
 	milestoneId: string;
 	milestoneTitle: string;
@@ -140,7 +140,7 @@ export interface MilestoneStatus {
 	exerciseStatus: ExerciseStatus[];
 }
 
-// Quelle: course/uebungen/meilenstein-*-uebung-*.md
+// Quelle: course/02-course-exercises/meilenstein-*-uebung-*.md
 export interface ExerciseStatus {
 	exerciseId: string;
 	exerciseTitle: string;

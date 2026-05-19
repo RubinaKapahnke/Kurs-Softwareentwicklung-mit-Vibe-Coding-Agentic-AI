@@ -7,8 +7,8 @@ Damit du spaeter nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
 Im Kurs-Repo findest du die gemeinsame Lernlogik:
 
 - `COURSE_MILESTONES.md` zeigt dir den aktuellen Meilenstein.
-- `course/uebungen/` enthaelt die zentralen Uebungsaufgaben.
-- `course/course-library/` erklaert die Inhalte und Befehle.
+- `course/02-course-exercises/` enthaelt die zentralen Uebungsaufgaben.
+- `course/03-course-library/` erklaert die Inhalte und Befehle.
 - `course/learners/` enthaelt die zentralen Lernfortschrittsdateien.
 
 ### 2. Dein eigenes Repo ist dein Arbeitsraum
