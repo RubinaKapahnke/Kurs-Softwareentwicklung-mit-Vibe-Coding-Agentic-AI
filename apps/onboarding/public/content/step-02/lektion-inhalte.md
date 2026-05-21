@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: 02-github-account/lektion-inhalte.md -->
+<!-- Source: 02-github-erste-schritte.md -->
 
 # Lektion 02: GitHub-Erste Schritte
 

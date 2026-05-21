@@ -1,44 +1,29 @@
 # 🗺️ Course Milestones: Zentrale Meilensteine
 
-Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**.
+Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**. Es führt dich als roten Faden durch den gesamten Kurs. 
 
-## Kurskontext
+## Willkommen im Kurs-Repository
 
 Herzlich Willkommen im Repository des Kurses.
 In dieser Datei bekommst du einen Überblick über alle Meilensteine die im Kurs erreicht werden können. 
 
-Meilenstein 1 hast du schon fast abgeschlossen. Es fehlen dir noch wenige Schritte deine Arbeitsumgebung auch hier einzurichten. Wenn du diese absolviert hast, gehts ans Eingemachte 🐧🤖
+**Meilenstein 1** hast du schon fast abgeschlossen. Es fehlen dir noch wenige Schritte deine Arbeitsumgebung auch hier einzurichten. Wenn du diese absolviert hast, gehts ans Eingemachte 🐧🤖
 
-- Kursrahmen und Zielbild: [KURSBESCHREIBUNG.md](../../KURSBESCHREIBUNG.md)
-- Eigenstaendige Kursbausteine: [course/01-course-modules/README_KURSMODULE.md](../01-course-modules/README_KURSMODULE.md)
-- Lernmaterial-Sammlung: [course/03-course-library](../03-course-library)
+## So startest du mit dem Kurs hier im Repository
 
-Wenn du neu einsteigst:
-1. Starte mit **Meilenstein 1: Onboarding & Kursstart** in diesem Dokument.
-2. Lese [README.md](../../README.md) fuer die **Arbeitsweise und Repo-Struktur**.
-3. Lese [course/02-course-exercises/README_UEBUNGEN.md](../02-course-exercises/README_UEBUNGEN.md) fuer **deinen Workflow** ab Meilenstein 2.
+Dieses Dokument dient als zentrale Übersicht. Zu jedem Meilenstein findest du [Kursmodule](../01-course-modules/) und [Übungen](../02-course-exercises/).  
+Jeder Meilenstein hat seinen eigenen Modul-Ordner. Die Module sind nummeriert.
+Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilensteins. Der nächste Schritt wird sein, dich mit dem Kurs-Repository vertraut zu machen und deinen Lernbereich einzurichten. 
 
 ---
 
-## 🧭 Meilenstein 1: Onboarding & Kursstart
+## 🧭 Meilenstein 1: Onboarding in den Kurs
 **Ziel:** Den Kurseinstieg sauber abschliessen, die Arbeitsumgebung vorbereiten und den fachlichen Startpunkt in diesem Repo sicher finden.
 
-**Modul-Einstiege:**
-- [course/03-course-library/03-github/00-github-zusammenarbeit-modulguide.md](../03-course-library/03-github/00-github-zusammenarbeit-modulguide.md)
-- [course/03-course-library/04-git/00-git-versionierung-modulguide.md](../03-course-library/04-git/00-git-versionierung-modulguide.md)
-- [course/03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md](../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md)
-- [course/03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md](../03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
+### Module
 
-**Vertiefung:**
-- [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md)
-- [course/01-course-modules/01-Onboarding-in-den-Kurs/01-github-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/01-github-im-kurs.md)
-- [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md)
-- [course/01-course-modules/01-Onboarding-in-den-Kurs/03-github-features-repositories-und-readme-vorlage.md](../01-course-modules/01-Onboarding-in-den-Kurs/03-github-features-repositories-und-readme-vorlage.md)
-- [course/01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md](../01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md)
-- [course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md)
-- [course/03-course-library/05-terminal/01-terminal-grundlagen.md](../03-course-library/05-terminal/01-terminal-grundlagen.md)
-- [course/03-course-library/02-vscode/01-vscode-grundlagen.md](../03-course-library/02-vscode/01-vscode-grundlagen.md)
-- [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md)
+- [x] 01 [Willkommen im Kurs](../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)
+- [x] 02 [Github - Erste Schritte](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)
 
 **Lernziele:**
 

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: 04-eigenes-uebungs-repository/aufgaben.md -->
+<!-- Source: 04-aufgaben.md -->
 
 ## Aufgaben
 

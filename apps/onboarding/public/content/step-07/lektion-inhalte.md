@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-07-was-ist-vs-code/lektion-inhalte.md -->
+<!-- Source: 07-einstieg-vscode.md -->
 
 # Lektion 07: Was ist VS Code?
 

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-08-vs-code-installieren/lektion-inhalte.md -->
+<!-- Source: 08-vscode-lokal-einrichten.md -->
 
 # Lektion 08: VS Code installieren
 
