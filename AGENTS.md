@@ -96,7 +96,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 ## Documentation Rules
 - Prefer clickable markdown links for workspace files in documentation.
 - Keep `README.md`, `course/00-course-guides/COURSE_MILESTONES.md`, and `course/02-course-exercises/README_UEBUNGEN.md` consistent when workflow rules change.
-- For onboarding explanatory content, maintain lesson sources under `course/01-course-modules/01-.../lerninhalte/lektion-XX-.../` (`lektion-inhalte.md`, optional `aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components.
+- For onboarding explanatory content, maintain lesson sources under `course/01-course-modules/01-.../` as flat files (`XX-thema.md`, optional `XX-aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components. Legacy folders `XX-.../lektion-inhalte.md` and `lektion-XX-.../lektion-inhalte.md` are still accepted by the sync script.
 - Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-01-willkommen-im-kurs/lektion-inhalte.md -->
+<!-- Source: 01-willkommen-im-kurs.md -->
 
 # Lektion 01: Ankommen, Arbeitsumgebung einrichten, loslegen
 

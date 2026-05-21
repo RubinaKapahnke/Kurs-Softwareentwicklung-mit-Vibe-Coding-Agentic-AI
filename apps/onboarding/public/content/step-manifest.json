@@ -159,8 +159,8 @@
     "requiresLessonCompletion": true
   },
   "2": {
-    "title": "GitHub-Account anlegen",
-    "goal": "Du hast einen GitHub-Account erstellt, deine E-Mail bestätigt und kannst den Account im Kurs nutzen.",
+    "title": "GitHub-Erste Schritte",
+    "goal": "Du hast einen GitHub-Account erstellt und lernst das Tool zunächst im Browser kennen.",
     "sections": [
       {
         "type": "lesson",
@@ -168,7 +168,7 @@
       }
     ],
     "lessonFlow": {
-      "title": "GitHub-Account anlegen",
+      "title": "GitHub-Erste Schritte",
       "slides": [
         {
           "type": "content",
@@ -180,15 +180,9 @@
               ]
             },
             {
-              "heading": "Was macht GitHub besonders?",
+              "heading": "Warum GitHub?",
               "paragraphs": [
-                "GitHub ist nicht nur eine Code-Ablage, sondern heute das weltgrößte Netzwerk für Softwareentwicklung. Dort trifft sich die Community, entstehen Open-Source-Projekte, und viele Firmen nutzen es für ihre gesamte Produktentwicklung. Ein paar Dinge, die GitHub von anderen Plattformen abheben:"
-              ],
-              "unorderedItems": [
-                "**Riesiges Ökosystem**: Hunderte Millionen Repositories, Open-Source-Projekte und aktive Entwickler:innen weltweit.",
-                "**GitHub Copilot**: KI-gestützte Code-Unterstützung direkt im Editor (ein zentrales Thema in diesem Kurs).",
-                "**Alles an einem Ort**: Issues, Pull Requests, Code-Review, Projektboards und Deployments sind alles integriert.",
-                "**Kostenlos für den Einstieg**: Der kostenlose Plan reicht für diesen Kurs und für die meisten persönlichen Projekte vollständig aus."
+                "Wir bereiten uns darauf vor mit KI Code zu produzieren. Und auch wenn du noch so gut promptest, wird die KI dich missverstehen und deinen Code zerstören.\nDafür nutzen wir Git als Versionskontrolle. Git ermöglicht Stände zu versionieren damit man jederzeit auf alte Stände wieder zurück kann. Im Grunde wie wenn du in einem Computerspiel an mehreren Stellen speicherst, um ggf. auch wieder weiter zurück zu können. Github setzt auf Git auf und macht zum einen Repositories übersichtlicher aber auch das Kollaborative Arbeiten an Code einfacher."
               ]
             },
             {

@@ -1,30 +1,20 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-02-github-account/lektion-inhalte.md -->
+<!-- Source: 02-github-account/lektion-inhalte.md -->
 
-# Lektion 02: GitHub-Account anlegen
+# Lektion 02: GitHub-Erste Schritte
 
 ## Ziel
 
-Du hast einen GitHub-Account erstellt, deine E-Mail bestätigt und kannst den Account im Kurs nutzen.
-
-## Vor dem Start
-
-- [ ] Du hast Zugriff auf dein E-Mail-Postfach.
-- [ ] Du nutzt einen aktuellen Browser (z. B. Edge, Chrome oder Firefox).
-- [ ] Du hast den Kurschat griffbereit, falls etwas nicht funktioniert.
+Du hast einen GitHub-Account erstellt und lernst das Tool zunächst im Browser kennen.
 
 ## Kapitel 1: Was ist GitHub?
 
 GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst.
 
-### Was macht GitHub besonders?
+### Warum GitHub?
 
-GitHub ist nicht nur eine Code-Ablage, sondern heute das weltgrößte Netzwerk für Softwareentwicklung. Dort trifft sich die Community, entstehen Open-Source-Projekte, und viele Firmen nutzen es für ihre gesamte Produktentwicklung. Ein paar Dinge, die GitHub von anderen Plattformen abheben:
-
-- **Riesiges Ökosystem**: Hunderte Millionen Repositories, Open-Source-Projekte und aktive Entwickler:innen weltweit.
-- **GitHub Copilot**: KI-gestützte Code-Unterstützung direkt im Editor (ein zentrales Thema in diesem Kurs).
-- **Alles an einem Ort**: Issues, Pull Requests, Code-Review, Projektboards und Deployments sind alles integriert.
-- **Kostenlos für den Einstieg**: Der kostenlose Plan reicht für diesen Kurs und für die meisten persönlichen Projekte vollständig aus.
+Wir bereiten uns darauf vor mit KI Code zu produzieren. Und auch wenn du noch so gut promptest, wird die KI dich missverstehen und deinen Code zerstören.
+Dafür nutzen wir Git als Versionskontrolle. Git ermöglicht Stände zu versionieren damit man jederzeit auf alte Stände wieder zurück kann. Im Grunde wie wenn du in einem Computerspiel an mehreren Stellen speicherst, um ggf. auch wieder weiter zurück zu können. Github setzt auf Git auf und macht zum einen Repositories übersichtlicher aber auch das Kollaborative Arbeiten an Code einfacher. 
 
 ### Wo findest du Hilfe und kannst du mehr lernen?
 

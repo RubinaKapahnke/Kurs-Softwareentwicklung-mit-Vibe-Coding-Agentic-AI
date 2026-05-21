@@ -4,23 +4,31 @@ Diese Anleitung zeigt dir, wie du eine Lektion so pflegst, dass Inhalte automati
 
 ## Zielbild
 
-- Redaktionsinhalte liegen direkt in `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-XX-.../`.
-- Jede Lektion nutzt primär `lektion-inhalte.md`.
-- Optional gibt es `aufgaben.md` für den Aufgabenbereich.
+- Redaktionsinhalte liegen direkt in `course/01-course-modules/01-Onboarding-in-den-Kurs/`.
+- Jede Lektion nutzt primär eine flache Datei im Schema `XX-thema.md`.
+- Optional gibt es `XX-aufgaben.md` für den Aufgabenbereich.
 - `npm run sync-content` in `apps/onboarding` erzeugt daraus `apps/onboarding/public/content/step-manifest.json` und die Ziel-Dateien unter `public/content/step-XX/`.
 
 ## 1. Dateistruktur pro Lektion
 
 Beispiel:
 
-`course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-03-github-account/`
+```text
+course/01-course-modules/01-Onboarding-in-den-Kurs/
+├── 01-willkommen-im-kurs.md
+├── 01-aufgaben.md                  (optional)
+├── 02-github-account.md
+└── 02-aufgaben.md                  (optional)
+```
+
+Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt. Für neue oder überarbeitete Lektionen nutzen wir aber das flache `XX-thema.md`-Schema.
 
 Typische Dateien:
 
-- `lektion-inhalte.md` (Lesson-Flow)
-- `aufgaben.md` (Aufgabenliste, optional)
+- `XX-thema.md` (Lesson-Flow)
+- `XX-aufgaben.md` (Aufgabenliste, optional)
 
-## 2. Regeln für `lektion-inhalte.md`
+## 2. Regeln für Lektionsdateien
 
 1. `# ...` ist der Lektionstitel (wird als Step-Titel genutzt).
 2. Unter `## Ziel` steht die Zielbeschreibung (erste Textzeile wird als Step-Ziel übernommen).
@@ -79,7 +87,7 @@ Innerhalb der Abschnitte werden unterstützt:
 
 ## 6. Workflow
 
-1. Inhalte in `lektion-inhalte.md` und ggf. `aufgaben.md` ändern.
+1. Inhalte in `XX-thema.md` und ggf. `XX-aufgaben.md` ändern.
 2. In `apps/onboarding` wechseln.
 3. `npm run sync-content` ausführen.
 4. Optional `npm run build` ausführen.

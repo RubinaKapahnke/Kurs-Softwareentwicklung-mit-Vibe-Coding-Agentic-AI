@@ -88,8 +88,9 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 ## Manifest-Sync aus Kursmodul-Lektionen
 
-- Lesson-Flow-Inhalte werden aus `course/01-course-modules/01-.../lerninhalte/lektion-XX-.../lektion-inhalte.md` synchronisiert.
-- Aufgaben werden optional aus `aufgaben.md` derselben Lektion synchronisiert.
+- Lesson-Flow-Inhalte werden aus `course/01-course-modules/01-.../XX-thema.md` synchronisiert.
+- Aufgaben werden optional aus `XX-aufgaben.md` derselben Lektion synchronisiert.
+- Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt.
 - `npm run sync-content` in `apps/onboarding` erzeugt/aktualisiert `public/content/step-manifest.json` und die Inhalte unter `public/content/step-XX/`.
 - Bei nicht-Account-Choice-Steps hat manifestbasierter Lesson-Flow Vorrang vor statisch hinterlegtem `lessonFlow` in `onboarding-steps.data.ts`.
 

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-03-github-repositories-verstehen/lektion-inhalte.md -->
+<!-- Source: 03-github-repositories-verstehen/lektion-inhalte.md -->
 
 # Lektion 03: GitHub-Repositories und Git verstehen
 

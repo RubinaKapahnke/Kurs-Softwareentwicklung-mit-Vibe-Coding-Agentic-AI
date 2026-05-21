@@ -81,8 +81,9 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 
 Die redaktionelle Quelle für Lesson-Flow-Inhalte liegt im Kursmodul unter:
 
-- `course/01-course-modules/01-Onboarding-in-den-Kurs/lerninhalte/lektion-XX-.../lektion-inhalte.md`
-- optional: `.../aufgaben.md`
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/XX-thema.md`
+- optional: `course/01-course-modules/01-Onboarding-in-den-Kurs/XX-aufgaben.md`
+- Alternativ werden ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` weiterhin erkannt.
 
 Der Sync erfolgt in `apps/onboarding` mit:
 

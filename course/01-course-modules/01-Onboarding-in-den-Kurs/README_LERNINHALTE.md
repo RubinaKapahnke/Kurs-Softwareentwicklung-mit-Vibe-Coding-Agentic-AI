@@ -4,13 +4,29 @@ Diese Struktur ist die zentrale Quellenablage für Lerninhalte pro Lektion im On
 
 ## Ziel
 
-- Pro Lektion gibt es einen eigenen Ordner direkt im Modulordner.
+- Pro Lektion gibt es eine eigene Markdown-Datei direkt im Modulordner.
 - Inhalte werden hier redaktionell gepflegt.
-- `lektion-inhalte.md` steuert den Lesson-Flow.
-- `aufgaben.md` steuert den Aufgabenblock (falls vorhanden).
+- `XX-thema.md` steuert den Lesson-Flow.
+- `XX-aufgaben.md` steuert den Aufgabenblock (falls vorhanden).
 - Die App übernimmt Inhalte über `npm run sync-content` in `apps/onboarding`.
 
-## Format-Regeln Für `lektion-inhalte.md`
+## Dateikonvention
+
+Beispiel:
+
+```text
+01-Onboarding-in-den-Kurs/
+├── 01-willkommen-im-kurs.md
+├── 01-aufgaben.md                  (optional)
+├── 02-github-account.md
+└── 02-aufgaben.md                  (optional)
+```
+
+Wichtig: Eine flache Lektionsdatei wird nur als Onboarding-Step erkannt, wenn die erste Überschrift mit `# Lektion NN:` beginnt. So werden andere Moduldateien wie `01-github-im-kurs.md` nicht versehentlich synchronisiert.
+
+Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt.
+
+## Format-Regeln Für Lektionsdateien
 
 1. Jede `##`-Überschrift erzeugt eine neue Lesson-Flow-Seite.
 2. Ausnahmen (werden nicht als eigene Seite gerendert): `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.

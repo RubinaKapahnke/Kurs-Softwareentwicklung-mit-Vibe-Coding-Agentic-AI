@@ -512,6 +512,73 @@ const SECTION_TYPE_MAP = {
 };
 
 const KURSMODULE_ROOT = path.resolve(appRoot, '../../course/01-course-modules');
+const LESSON_FOLDER_PATTERN = /^(?:lektion-)?(\d{2})-/;
+const FLAT_STEP_FILE_PATTERN = /^(\d{2})-(.+)\.md$/i;
+
+function getLessonFolderStepId(folderName) {
+  const match = folderName.match(LESSON_FOLDER_PATTERN);
+  return match ? Number(match[1]) : null;
+}
+
+function isLessonFolderName(folderName) {
+  return getLessonFolderStepId(folderName) !== null;
+}
+
+function getFlatStepFileInfo(fileName) {
+  const match = fileName.match(FLAT_STEP_FILE_PATTERN);
+  if (!match) return null;
+
+  const stepId = Number(match[1]);
+  const slug = match[2].toLowerCase();
+  if (slug === 'aufgaben') {
+    return { stepId, sectionType: 'tasks', outputFilename: 'aufgaben.md' };
+  }
+  if (slug === 'uebung') {
+    return { stepId, sectionType: 'uebung', outputFilename: 'uebung.md' };
+  }
+
+  return { stepId, sectionType: 'lesson', outputFilename: 'lektion-inhalte.md' };
+}
+
+function isFlatLessonContent(markdown, stepId) {
+  const h1 = markdown.split(/\r?\n/).find((line) => /^\s*#\s+/.test(line));
+  if (!h1) return false;
+
+  const match = h1.match(/^\s*#\s+Lektion\s+(\d+)\s*:/i);
+  return match ? Number(match[1]) === stepId : false;
+}
+
+async function collectFlatStepEntries(rootPath, dirEntries) {
+  const groupedFiles = new Map();
+
+  for (const entry of dirEntries) {
+    if (!entry.isFile()) continue;
+
+    const info = getFlatStepFileInfo(entry.name);
+    if (!info) continue;
+
+    const srcPath = path.join(rootPath, entry.name);
+    if (info.sectionType === 'lesson') {
+      const content = await fs.readFile(srcPath, 'utf8');
+      if (!isFlatLessonContent(content, info.stepId)) continue;
+    }
+
+    const group = groupedFiles.get(info.stepId) ?? [];
+    group.push({
+      sectionType: info.sectionType,
+      outputFilename: info.outputFilename,
+      sourceLabel: entry.name,
+      srcPath,
+    });
+    groupedFiles.set(info.stepId, group);
+  }
+
+  return Array.from(groupedFiles.entries()).map(([stepId, files]) => ({
+    stepId,
+    sourceLabel: files.find((file) => file.sectionType === 'lesson')?.sourceLabel ?? files[0].sourceLabel,
+    files,
+  }));
+}
 
 async function resolveLerninhalteRoot() {
   const entries = await fs.readdir(KURSMODULE_ROOT, { withFileTypes: true });
@@ -522,7 +589,14 @@ async function resolveLerninhalteRoot() {
   for (const candidate of onboardingCandidates) {
     const moduleRootPath = path.join(KURSMODULE_ROOT, candidate.name);
     const directLessonFolders = await fs.readdir(moduleRootPath, { withFileTypes: true })
-      .then((moduleEntries) => moduleEntries.some((entry) => entry.isDirectory() && /^lektion-\d{2}-/.test(entry.name)));
+      .then(async (moduleEntries) => {
+        if (moduleEntries.some((entry) => entry.isDirectory() && isLessonFolderName(entry.name))) {
+          return true;
+        }
+
+        const flatEntries = await collectFlatStepEntries(moduleRootPath, moduleEntries);
+        return flatEntries.length > 0;
+      });
 
     if (directLessonFolders) {
       return moduleRootPath;
@@ -540,26 +614,65 @@ async function resolveLerninhalteRoot() {
   }
 
   throw new Error(
-    `Onboarding module directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/ with direct lektion-XX-* folders (or legacy lerninhalte/).`
+    `Onboarding module directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/ with direct XX-* or lektion-XX-* folders (or legacy lerninhalte/).`
   );
 }
 
 async function syncLerninhalteManifest() {
   const lerninhalteRoot = await resolveLerninhalteRoot();
   const dirEntries = await fs.readdir(lerninhalteRoot, { withFileTypes: true });
-  const lektionFolders = dirEntries
-    .filter(e => e.isDirectory() && /^lektion-\d{2}-/.test(e.name))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  const folderStepEntries = dirEntries
+    .filter(e => e.isDirectory() && isLessonFolderName(e.name))
+    .map((folder) => {
+      const stepId = getLessonFolderStepId(folder.name);
+      const folderPath = path.join(lerninhalteRoot, folder.name);
+      return {
+        stepId,
+        sourceLabel: folder.name,
+        folderPath,
+        files: null,
+      };
+    });
+
+  const flatStepEntries = await collectFlatStepEntries(lerninhalteRoot, dirEntries);
+  const stepEntries = [...folderStepEntries, ...flatStepEntries]
+    .filter((entry) => entry.stepId !== null)
+    .sort((a, b) => a.stepId - b.stepId || a.sourceLabel.localeCompare(b.sourceLabel));
 
   const manifest = {};
+  const seenStepIds = new Map();
 
-  for (const folder of lektionFolders) {
-    const stepId = parseInt(folder.name.match(/^lektion-(\d{2})-/)[1], 10);
-    const folderPath = path.join(lerninhalteRoot, folder.name);
+  for (const stepEntry of stepEntries) {
+    const stepId = stepEntry.stepId;
+
+    const previousFolder = seenStepIds.get(stepId);
+    if (previousFolder) {
+      throw new Error(
+        `Duplicate onboarding lesson step ${stepId}: ${previousFolder} and ${stepEntry.sourceLabel}`
+      );
+    }
+    seenStepIds.set(stepId, stepEntry.sourceLabel);
+
     const stepSlug = `step-${String(stepId).padStart(2, '0')}`;
     const targetDir = path.join(publicContentRoot, stepSlug);
 
-    const filesInFolder = await fs.readdir(folderPath);
+    const filesToSync = stepEntry.files ?? await Promise.all(
+      Object.entries(SECTION_TYPE_MAP).map(async ([filename, sectionType]) => {
+        const srcPath = path.join(stepEntry.folderPath, filename);
+        try {
+          await fs.access(srcPath);
+          return {
+            sectionType,
+            outputFilename: filename,
+            sourceLabel: `${stepEntry.sourceLabel}/${filename}`,
+            srcPath,
+          };
+        } catch {
+          return null;
+        }
+      })
+    ).then((files) => files.filter(Boolean));
+
     const sections = [];
     let title = null;
     let goal = null;
@@ -568,11 +681,9 @@ async function syncLerninhalteManifest() {
     let manifestTasks = null;
     let manifestTaskNotes = null;
 
-    for (const [filename, sectionType] of Object.entries(SECTION_TYPE_MAP)) {
-      if (!filesInFolder.includes(filename)) continue;
-
-      const srcPath = path.join(folderPath, filename);
-      const dstPath = path.join(targetDir, filename);
+    for (const fileToSync of filesToSync) {
+      const { outputFilename, sectionType, sourceLabel, srcPath } = fileToSync;
+      const dstPath = path.join(targetDir, outputFilename);
       assertInside(repoRoot, srcPath, 'Lerninhalte source');
       assertInside(publicContentRoot, dstPath, 'Lerninhalte target');
 
@@ -598,7 +709,7 @@ async function syncLerninhalteManifest() {
         const parsedLessonFlow = parseLessonFlowFromMarkdown(
           content,
           `Lektion ${stepId}`,
-          `${folder.name}/lektion-inhalte.md`
+          sourceLabel
         );
         if (parsedLessonFlow.slides.length > 0) {
           lessonFlow = parsedLessonFlow;
@@ -617,7 +728,7 @@ async function syncLerninhalteManifest() {
 
       // Copy file to public/content/step-NN/
       await fs.mkdir(targetDir, { recursive: true });
-      const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: ${folder.name}/${filename} -->\n\n`;
+      const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: ${sourceLabel} -->\n\n`;
       const output = header + content.trim() + '\n';
 
       let current = null;
@@ -626,7 +737,7 @@ async function syncLerninhalteManifest() {
         await fs.writeFile(dstPath, output, 'utf8');
       }
 
-      sections.push({ type: sectionType, file: `/content/${stepSlug}/${filename}` });
+      sections.push({ type: sectionType, file: `/content/${stepSlug}/${outputFilename}` });
     }
 
     if (sections.length > 0) {

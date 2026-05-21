@@ -3,6 +3,12 @@
 Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**.
 
 ## Kurskontext
+
+Herzlich Willkommen im Repository des Kurses.
+In dieser Datei bekommst du einen Überblick über alle Meilensteine die im Kurs erreicht werden können. 
+
+Meilenstein 1 hast du schon fast abgeschlossen. Es fehlen dir noch wenige Schritte deine Arbeitsumgebung auch hier einzurichten. Wenn du diese absolviert hast, gehts ans Eingemachte 🐧🤖
+
 - Kursrahmen und Zielbild: [KURSBESCHREIBUNG.md](../../KURSBESCHREIBUNG.md)
 - Eigenstaendige Kursbausteine: [course/01-course-modules/README_KURSMODULE.md](../01-course-modules/README_KURSMODULE.md)
 - Lernmaterial-Sammlung: [course/03-course-library](../03-course-library)

@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-05-git-grundlagen/lektion-inhalte.md -->
+<!-- Source: 05-git-grundlagen/lektion-inhalte.md -->
 
 # Lektion 05: Git-Grundlagen
 
