@@ -11,6 +11,7 @@ export interface StepManifestEntry {
   lessonFlow?: OnboardingLessonFlow | null;
   tasks?: string[] | null;
   taskNotes?: OnboardingLessonContentSection[] | null;
+  resources?: OnboardingResourceLink[] | null;
 }
 
 export type StepManifest = Record<number, StepManifestEntry>;
@@ -27,11 +28,18 @@ export interface OnboardingResourceLink {
 
 export interface OnboardingLessonContentSection {
   heading?: string;
+  blocks?: OnboardingLessonContentBlock[];
   paragraphs?: string[];
   orderedItems?: string[];
   unorderedItems?: string[];
   tone?: 'default' | 'highlight' | 'danger' | 'success' | 'info' | 'tip';
 }
+
+export type OnboardingLessonContentBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'subheading'; text: string }
+  | { type: 'ordered-list'; items: string[] }
+  | { type: 'unordered-list'; items: string[] };
 
 export interface OnboardingLessonContentSlide {
   type: 'content';

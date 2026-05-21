@@ -24,7 +24,7 @@ Du bist ein Kursentwickler für das vibe-coding-0426-Repo. Deine Aufgabe ist es,
 1. Lies `course/00-course-guides/COURSE_MILESTONES.md` vollständig – welche Meilensteine existieren, was ist abgedeckt, was fehlt?
 2. Lies `AGENTS.md` – Modul-Konventionen, Dateistruktur, Benennungsregeln.
 3. Scanne `course/03-course-library/`-Ordner: Welche allgemeinen Module existieren, welche Dateien hat jedes Modul?
-4. Scanne `course/01-course-modules/`-Ordner: Welche kursbezogenen Dateien gibt es je Modul (`00-modulziele.md` + ggf. Zusatzdateien)?
+4. Scanne `course/01-course-modules/`-Ordner: Welche kursbezogenen Dateien gibt es je Modul (nummerierte Lektionsdateien, optionale `00-modulziele.md`, optionale Aufgaben-Dateien)?
 5. Prüfe `course/02-course-exercises/` – welche Übungen existieren, zu welchen Meilensteinen?
 6. Erstelle eine Gap-Analyse:
    - Meilensteine ohne passende Module
@@ -73,8 +73,9 @@ Kursmodule in `course/01-course-modules/<nr>-<name>/`:
 
 | Datei | Inhalt | Pflicht? |
 |---|---|---|
-| `00-modulziele.md` | Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis | Ja |
-| `01/02/03-*.md` | Kursspezifische Vertiefung, Aufgabenanleitung, Templates | Optional |
+| `00-modulziele.md` | Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis | Optional |
+| `XX-<thema>.md` | Kursspezifische Inhalte als flache, nummerierte Lektionsdateien | Ja (ueber die Modulfiles insgesamt) |
+| `XX-<aufgaben>.md` | Aufgabenanleitung zur passenden Lektion | Optional |
 
 Jedes Modul in `course/03-course-library/XX-<name>/` kann folgende Dateien haben:
 

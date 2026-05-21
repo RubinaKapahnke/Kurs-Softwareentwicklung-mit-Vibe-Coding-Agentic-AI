@@ -99,7 +99,7 @@ Ergebnis:
 ## Markdown-Konvention Fuer Lesson-Flow
 
 - Jede `##`-Überschrift erzeugt eine neue Lesson-Slide.
-- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`.
 - `###` erzeugt Abschnitte innerhalb der Slide.
 - `####` erzeugt eine Zwischenüberschrift im Abschnitt.
 - Bilder können direkt im Markdown eingebunden werden: `![Beschreibung](/assets/lessons/step-02-github-login.png)`.
@@ -107,6 +107,12 @@ Ergebnis:
   - Bilder liegen unter `public/assets/lessons/`.
   - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
   - Siehe [public/assets/lessons/README.md](public/assets/lessons/README.md) für Bildmaße und Anforderungen.
+
+### Struktur-Sektionen ohne Slide
+
+- `## Was ist zu tun`: Wird als Aufgabenquelle für den Schritt übernommen (falls vorhanden).
+- `## Hilfreiche Links`: Wird als Ressourcenliste für den Schritt übernommen (falls vorhanden).
+- Beide Sektionen sind Autoren-Struktur und werden nicht als eigene Lesson-Slides gerendert.
 
 ### Quiz-Pattern
 

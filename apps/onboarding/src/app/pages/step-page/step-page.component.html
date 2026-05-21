@@ -465,12 +465,12 @@
       </div>
     }
 
-    @if (step().resources?.length && showStepResources()) {
+    @if (showStepResources()) {
       <mat-divider></mat-divider>
       <section class="step-section">
         <h3>Hilfreiche Links</h3>
         <ul class="resource-link-list">
-          @for (resource of step().resources; track resource.href) {
+          @for (resource of effectiveResources(); track resource.href) {
             <li>
             <a class="resource-link" [href]="resource.href" target="_blank" rel="noopener noreferrer">
               {{ resource.label }}
@@ -544,9 +544,9 @@
           <li>Öffne den Ordner: <code class="code-inline">code vibe-coding-0426</code> – oder über <strong>Datei → Ordner öffnen</strong>.</li>
         </ol>
 
-        @if (step().resources?.length) {
+        @if (effectiveResources().length) {
           <div class="link-group" style="margin-top: 1rem;">
-            @for (resource of step().resources; track resource.href) {
+            @for (resource of effectiveResources(); track resource.href) {
               <a mat-stroked-button [href]="resource.href" target="_blank" rel="noopener noreferrer">
                 {{ resource.label }}
               </a>

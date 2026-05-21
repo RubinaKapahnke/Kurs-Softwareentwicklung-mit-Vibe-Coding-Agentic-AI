@@ -92,3 +92,14 @@ So lernst du früh, dass GitHub nicht nur Dateien speichert, sondern auch die Ve
 ## Erfolgskriterium
 
 Du hast mindestens 2 Commits im Repository sichtbar und kannst einfache Markdown-Formatierungen direkt auf GitHub anwenden.
+
+## Was ist zu tun
+
+1. Erstelle oder bearbeite eine Markdown-Datei im Repository.
+2. Nutze Überschriften, Listen, Links und Codeblöcke mindestens einmal.
+3. Prüfe die Darstellung im Vorschau-Modus.
+
+## Hilfreiche Links
+
+- [Markdown-Syntax (GitHub Docs)](https://docs.github.com/de/get-started/writing-on-github)
+- [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)

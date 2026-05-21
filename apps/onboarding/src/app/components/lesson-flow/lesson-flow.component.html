@@ -1,5 +1,5 @@
 @if (activeSlide(); as slide) {
-  <ng-template #sectionRenderer let-section>
+  <ng-template #sectionRenderer let-section let-sectionIndex="sectionIndex">
     <article
       class="lesson-section"
       [class.lesson-section--highlight]="section.tone === 'highlight'"
@@ -27,30 +27,77 @@
         }
       }
 
-      @if (section.paragraphs?.length) {
-        @for (paragraph of section.paragraphs; track paragraph) {
-          @if (isSubheadingParagraph(paragraph)) {
-            <h6 class="lesson-section__subheading" [innerHTML]="linkifyText(extractSubheadingText(paragraph))"></h6>
-          } @else {
-            <div class="lesson-section__markdown" [innerHTML]="renderBlockText(paragraph)"></div>
+      @if (section.blocks?.length) {
+        @for (block of section.blocks; track $index; let blockIndex = $index) {
+          @switch (block.type) {
+            @case ('subheading') {
+              <h6 class="lesson-section__subheading" [innerHTML]="linkifyText(block.text)"></h6>
+            }
+            @case ('paragraph') {
+              <div class="lesson-section__markdown" [innerHTML]="renderBlockText(block.text)"></div>
+            }
+            @case ('ordered-list') {
+              <ol>
+                @for (item of block.items; track item) {
+                  <li [innerHTML]="linkifyText(item)"></li>
+                }
+              </ol>
+            }
+            @case ('unordered-list') {
+              <ul>
+                @for (item of block.items; track item; let itemIndex = $index) {
+                  @if (isChecklistItem(item)) {
+                    <li class="lesson-section__check-item">
+                      <mat-checkbox
+                        [checked]="checklistItemChecked(item, checklistItemKey(sectionIndex ?? 0, blockIndex, itemIndex, item))"
+                        (change)="onChecklistItemToggle(checklistItemKey(sectionIndex ?? 0, blockIndex, itemIndex, item), $event.checked)">
+                        <span [innerHTML]="linkifyText(checklistItemLabel(item))"></span>
+                      </mat-checkbox>
+                    </li>
+                  } @else {
+                    <li [innerHTML]="linkifyText(item)"></li>
+                  }
+                }
+              </ul>
+            }
           }
         }
-      }
-
-      @if (section.orderedItems?.length) {
-        <ol>
-          @for (item of section.orderedItems; track item) {
-            <li [innerHTML]="linkifyText(item)"></li>
+      } @else {
+        @if (section.paragraphs?.length) {
+          @for (paragraph of section.paragraphs; track paragraph) {
+            @if (isSubheadingParagraph(paragraph)) {
+              <h6 class="lesson-section__subheading" [innerHTML]="linkifyText(extractSubheadingText(paragraph))"></h6>
+            } @else {
+              <div class="lesson-section__markdown" [innerHTML]="renderBlockText(paragraph)"></div>
+            }
           }
-        </ol>
-      }
+        }
 
-      @if (section.unorderedItems?.length) {
-        <ul>
-          @for (item of section.unorderedItems; track item) {
-            <li [innerHTML]="linkifyText(item)"></li>
-          }
-        </ul>
+        @if (section.orderedItems?.length) {
+          <ol>
+            @for (item of section.orderedItems; track item) {
+              <li [innerHTML]="linkifyText(item)"></li>
+            }
+          </ol>
+        }
+
+        @if (section.unorderedItems?.length) {
+          <ul>
+            @for (item of section.unorderedItems; track item; let itemIndex = $index) {
+              @if (isChecklistItem(item)) {
+                <li class="lesson-section__check-item">
+                  <mat-checkbox
+                    [checked]="checklistItemChecked(item, checklistItemKey(sectionIndex ?? 0, 0, itemIndex, item))"
+                    (change)="onChecklistItemToggle(checklistItemKey(sectionIndex ?? 0, 0, itemIndex, item), $event.checked)">
+                    <span [innerHTML]="linkifyText(checklistItemLabel(item))"></span>
+                  </mat-checkbox>
+                </li>
+              } @else {
+                <li [innerHTML]="linkifyText(item)"></li>
+              }
+            }
+          </ul>
+        }
       }
     </article>
   </ng-template>
@@ -76,7 +123,7 @@
     </header>
 
     @if (slide.type === 'content') {
-      <div #contentContainer class="lesson-flow__content">
+      <div #contentContainer class="lesson-flow__content" (scroll)="onContainerScroll()">
         @if (slide.title) {
           <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
         }
@@ -84,19 +131,19 @@
         @for (section of slide.sections; track $index) {
           <ng-container
             [ngTemplateOutlet]="sectionRenderer"
-            [ngTemplateOutletContext]="{ $implicit: section }"></ng-container>
+            [ngTemplateOutletContext]="{ $implicit: section, sectionIndex: $index }"></ng-container>
         }
       </div>
     }
 
     @if (slide.type === 'quiz') {
-      <div #quizContainer class="lesson-flow__quiz">
+      <div #quizContainer class="lesson-flow__quiz" (scroll)="onContainerScroll()">
         <h4 class="lesson-flow__slide-title">{{ slide.title }}</h4>
         @if (slide.notes?.length) {
           @for (section of slide.notes; track $index) {
             <ng-container
               [ngTemplateOutlet]="sectionRenderer"
-              [ngTemplateOutletContext]="{ $implicit: section }"></ng-container>
+              [ngTemplateOutletContext]="{ $implicit: section, sectionIndex: $index }"></ng-container>
           }
         }
 
@@ -175,6 +222,13 @@
     }
 
     <footer class="lesson-flow__actions">
+      @if (showScrollHint()) {
+        <div class="lesson-flow__scroll-hint" role="status" aria-live="polite">
+          <mat-icon aria-hidden="true">south</mat-icon>
+          <span>Bitte bis zum Ende scrollen, um fortzufahren.</span>
+        </div>
+      }
+
       <button
         mat-stroked-button
         type="button"
@@ -191,9 +245,9 @@
           [disabled]="!canContinue()"
           (click)="continue()">
           @if (isLastSlide()) {
-            {{ lesson.finishLabel ?? 'Lektion abgeschlossen' }}
+            Zu den Aufgaben
           } @else {
-            {{ lesson.continueLabel ?? 'Weiter' }}
+            Nächstes Kapitel
           }
         </button>
       }

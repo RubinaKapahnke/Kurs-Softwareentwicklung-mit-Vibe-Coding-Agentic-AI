@@ -30,7 +30,9 @@ const lessonMarkdown = new MarkdownIt({
 })
 export class LessonFlowComponent implements OnChanges {
   private readonly subheadingPrefix = '__subheading__';
+  private readonly checklistItemPattern = /^\[( |x|X)\]\s+(.+)$/;
   private readonly stateService = inject(OnboardingStateService);
+  private readonly scrollBottomThreshold = 4;
   @Input({ required: true }) lesson!: OnboardingLessonFlow;
   @Input() lessonKey: string = ''; // z.B. 'step-1' oder 'step-2'
   @Output() readonly finished = new EventEmitter<void>();
@@ -44,6 +46,9 @@ export class LessonFlowComponent implements OnChanges {
   readonly quizEvaluated = signal(false);
   readonly quizPassed = signal(false);
   readonly autoFinished = signal(false);
+  readonly requiresScrollToContinue = signal(false);
+  readonly reachedScrollEnd = signal(true);
+  readonly lessonChecklistState = signal<Record<string, boolean>>({});
   private currentLessonKey: string = ''; // Track current lesson to avoid re-loading
 
   readonly activeSlide = computed<OnboardingLessonSlide | null>(() => {
@@ -63,6 +68,7 @@ export class LessonFlowComponent implements OnChanges {
     return total > 0 && this.activeIndex() >= total - 1;
   });
   readonly isFirstSlide = computed(() => this.activeIndex() === 0);
+  readonly showScrollHint = computed(() => this.requiresScrollToContinue() && !this.reachedScrollEnd());
 
   constructor() {
     // Auto-save quiz state whenever it changes
@@ -119,9 +125,40 @@ export class LessonFlowComponent implements OnChanges {
       this.lessonVersion.update((value) => value + 1);
       this.activeIndex.set(0);
       this.autoFinished.set(false);
+      this.lessonChecklistState.set({});
       this.resetSlideScroll();
       // Important: Do NOT reset quiz state here!
     }
+  }
+
+  isChecklistItem(item: string): boolean {
+    return this.checklistItemPattern.test(item.trim());
+  }
+
+  checklistItemLabel(item: string): string {
+    const match = item.trim().match(this.checklistItemPattern);
+    return match?.[2]?.trim() ?? item;
+  }
+
+  checklistItemChecked(item: string, itemKey: string): boolean {
+    const state = this.lessonChecklistState()[itemKey];
+    if (typeof state === 'boolean') {
+      return state;
+    }
+
+    const match = item.trim().match(this.checklistItemPattern);
+    return Boolean(match && match[1].toLowerCase() === 'x');
+  }
+
+  checklistItemKey(sectionIndex: number, blockIndex: number, itemIndex: number, item: string): string {
+    return `${this.activeIndex()}-${sectionIndex}-${blockIndex}-${itemIndex}-${item}`;
+  }
+
+  onChecklistItemToggle(itemKey: string, checked: boolean): void {
+    this.lessonChecklistState.update((current) => ({
+      ...current,
+      [itemKey]: checked,
+    }));
   }
 
   onOptionToggle(optionId: string, checked: boolean): void {
@@ -166,6 +203,10 @@ export class LessonFlowComponent implements OnChanges {
   }
 
   canContinue(): boolean {
+    if (this.requiresScrollToContinue() && !this.reachedScrollEnd()) {
+      return false;
+    }
+
     if (!this.isQuizSlide()) {
       return true;
     }
@@ -186,6 +227,7 @@ export class LessonFlowComponent implements OnChanges {
     this.activeIndex.update((value) => value + 1);
     this.loadQuizStateForCurrentSlide();
     this.resetSlideScroll();
+    this.evaluateActiveContainerScrollState();
     this.emitAutoFinishedIfNeeded();
   }
 
@@ -197,6 +239,7 @@ export class LessonFlowComponent implements OnChanges {
     this.activeIndex.update((value) => value - 1);
     this.loadQuizStateForCurrentSlide();
     this.resetSlideScroll();
+    this.evaluateActiveContainerScrollState();
   }
 
   goToSlide(index: number): void {
@@ -208,11 +251,16 @@ export class LessonFlowComponent implements OnChanges {
     this.activeIndex.set(index);
     this.loadQuizStateForCurrentSlide();
     this.resetSlideScroll();
+    this.evaluateActiveContainerScrollState();
     this.emitAutoFinishedIfNeeded();
   }
 
+  onContainerScroll(): void {
+    this.updateScrollStateFromActiveContainer();
+  }
+
   shouldShowContinueButton(): boolean {
-    return !this.isLastSlide();
+    return true;
   }
 
   isOptionSelected(optionId: string): boolean {
@@ -377,10 +425,41 @@ export class LessonFlowComponent implements OnChanges {
   }
 
   private resetSlideScroll(): void {
+    this.requiresScrollToContinue.set(false);
+    this.reachedScrollEnd.set(true);
+
     requestAnimationFrame(() => {
       this.contentContainer?.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'auto' });
       this.quizContainer?.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      this.evaluateActiveContainerScrollState();
     });
+  }
+
+  private evaluateActiveContainerScrollState(): void {
+    requestAnimationFrame(() => this.updateScrollStateFromActiveContainer());
+  }
+
+  private updateScrollStateFromActiveContainer(): void {
+    const container = this.isQuizSlide()
+      ? this.quizContainer?.nativeElement
+      : this.contentContainer?.nativeElement;
+
+    if (!container) {
+      this.requiresScrollToContinue.set(false);
+      this.reachedScrollEnd.set(true);
+      return;
+    }
+
+    const needsScroll = container.scrollHeight - container.clientHeight > this.scrollBottomThreshold;
+    this.requiresScrollToContinue.set(needsScroll);
+
+    if (!needsScroll) {
+      this.reachedScrollEnd.set(true);
+      return;
+    }
+
+    const atBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - this.scrollBottomThreshold;
+    this.reachedScrollEnd.set(atBottom);
   }
 
   private emitAutoFinishedIfNeeded(): void {

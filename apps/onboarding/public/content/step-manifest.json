@@ -1,7 +1,7 @@
 {
   "1": {
     "title": "Ankommen, Arbeitsumgebung einrichten, loslegen",
-    "goal": "Du verstehst den Ablauf des Kurses und kannst das zu Grunde liegende Toolset bedienen.",
+    "goal": "Du verstehst den Ablauf des Kurses und kannst die wichtigsten Werkzeuge für den Kurs bedienen.",
     "sections": [
       {
         "type": "lesson",
@@ -17,12 +17,33 @@
           "sections": [
             {
               "heading": "Schön, dass du da bist",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Dieser Kurs ist für Menschen gedacht, die praxisnah lernen möchten, wie moderne Softwareentwicklung mit KI-Unterstützung im echten Projektalltag funktioniert."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Willkommen!](/content/Assets/m01-l01-willkommen2.png)"
+                }
+              ],
               "paragraphs": [
-                "Dieser Kurs ist für Menschen gedacht, die praxisnah lernen möchten, wie moderne Softwareentwicklung mit KI-Unterstützung im echten Projektalltag funktioniert."
+                "Dieser Kurs ist für Menschen gedacht, die praxisnah lernen möchten, wie moderne Softwareentwicklung mit KI-Unterstützung im echten Projektalltag funktioniert.",
+                "![Willkommen!](/content/Assets/m01-l01-willkommen2.png)"
               ]
             },
             {
               "heading": "Was dieser Kurs anders macht als viele andere",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Du arbeitest von Anfang an an realen Arbeitsabläufen statt nur an isolierten Theorieaufgaben.",
+                    "Du lernst nicht nur Tools kennen, sondern auch, wie man mit klaren Prompts, Feedback und Iterationen zu belastbaren Ergebnissen kommt.",
+                    "Fehler sind hier kein Scheitern, sondern Teil des Lernwegs: Debugging, Nachbessern und sauberes Dokumentieren gehören fest dazu."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Du arbeitest von Anfang an an realen Arbeitsabläufen statt nur an isolierten Theorieaufgaben.",
                 "Du lernst nicht nur Tools kennen, sondern auch, wie man mit klaren Prompts, Feedback und Iterationen zu belastbaren Ergebnissen kommt.",
@@ -31,32 +52,67 @@
             },
             {
               "heading": "Worauf du dich einstellen darfst",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Du wirst Schritt für Schritt geführt und bekommst klare Aufgaben mit konkreten Kriterien zur Überprüfung deines Erfolges.",
+                    "Du musst nicht alles sofort verstehen: Begriffe und Konzepte werden im Verlauf wiederholt und vertieft.",
+                    "Du bist nicht allein: Bei Blockern helfen Dozierende, Q&A-Formate und die anderen Teilnehmenden."
+                  ]
+                }
+              ],
               "unorderedItems": [
-                "Du wirst Schritt für Schritt geführt und bekommst klare Aufgaben mit konkreten Ergebnissen.",
+                "Du wirst Schritt für Schritt geführt und bekommst klare Aufgaben mit konkreten Kriterien zur Überprüfung deines Erfolges.",
                 "Du musst nicht alles sofort verstehen: Begriffe und Konzepte werden im Verlauf wiederholt und vertieft.",
-                "Du bist nicht allein: Bei Blockern helfen Dozent*innen, Q&A-Formate und die Gruppe."
+                "Du bist nicht allein: Bei Blockern helfen Dozierende, Q&A-Formate und die anderen Teilnehmenden."
               ]
             },
             {
-              "heading": "Worauf du dich auch einstellen musst",
-              "paragraphs": [
-                "Wir lassen dabei niemanden hilflos zurück. Du bekommst Unterstützung, Orientierung und Feedback, aber der entscheidende Lernfortschritt entsteht durch deine eigene aktive Mitarbeit.",
-                "Dieses Kurs-Tool selbst wurde mit Vibe Coding entwickelt. Gleichzeitig gilt: Um über fehleranfällige Prototypen hinauszukommen, musst du dich mit den Konzepten der Softwareentwicklung auseinandersetzen, zum Beispiel mit Struktur, Tests, Debugging und Wartbarkeit."
+              "heading": "Worauf du dich auch einstellen MUSST",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "**Eigenständiges Ausprobieren** gehört dazu, auch wenn sich etwas anfangs ungewohnt anfühlt.",
+                    "Das **Konzept funktioniert** nur, wenn du bei Fragen selbst **recherchierst** und die bereitgestellten **Unterlagen** aktiv zum Nachlesen nutzt.",
+                    "Genau diese **Eigeninitiative ist eine wichtige Grundlage**, um in diesem schnelllebigen Feld **langfristig erfolgreich** zu werden und zu bleiben.",
+                    "Wenn du lernst, **dir selbst zu helfen**, kannst du mit den heutigen Technologien sehr **schnell funktionierende Software umsetzen** und auf den Markt bringen.",
+                    "Das soll dich **nicht hemmen Fragen zu stellen**, aber auf die Zeit nach dem Kurs vorbereiten, wenn du auf dich gestellt bist."
+                  ]
+                }
               ],
               "unorderedItems": [
-                "**Regelmäßige Mitarbeit ist wichtig:** Der Kurs lebt davon, dass du die Übungen wirklich umsetzt.",
                 "**Eigenständiges Ausprobieren** gehört dazu, auch wenn sich etwas anfangs ungewohnt anfühlt.",
                 "Das **Konzept funktioniert** nur, wenn du bei Fragen selbst **recherchierst** und die bereitgestellten **Unterlagen** aktiv zum Nachlesen nutzt.",
                 "Genau diese **Eigeninitiative ist eine wichtige Grundlage**, um in diesem schnelllebigen Feld **langfristig erfolgreich** zu werden und zu bleiben.",
                 "Wenn du lernst, **dir selbst zu helfen**, kannst du mit den heutigen Technologien sehr **schnell funktionierende Software umsetzen** und auf den Markt bringen.",
-                "Rückfragen, Feedback und kleine Korrekturschleifen sind **normal und ausdrücklich gewünscht**."
+                "Das soll dich **nicht hemmen Fragen zu stellen**, aber auf die Zeit nach dem Kurs vorbereiten, wenn du auf dich gestellt bist."
               ]
             },
             {
-              "heading": "Viel Spaß bei deinem Kurs!",
-              "tone": "success",
+              "heading": "Keine Sorge!",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Wir lassen dabei niemanden hilflos zurück. Du bekommst Unterstützung, Orientierung und Feedback, aber der entscheidende Lernfortschritt entsteht durch ***deine eigene aktive Mitarbeit!***"
+                }
+              ],
               "paragraphs": [
-                "Wir würnschen dir viel Spaß und Erfolg. 🤖🚀"
+                "Wir lassen dabei niemanden hilflos zurück. Du bekommst Unterstützung, Orientierung und Feedback, aber der entscheidende Lernfortschritt entsteht durch ***deine eigene aktive Mitarbeit!***"
+              ]
+            },
+            {
+              "heading": "Drücke auf \"Nächstes Kapitel\"!",
+              "tone": "highlight",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Drücke auf Nächstes Kapitel um zu erfahren, wie das Kurstool Funktioniert."
+                }
+              ],
+              "paragraphs": [
+                "Drücke auf Nächstes Kapitel um zu erfahren, wie das Kurstool Funktioniert."
               ]
             }
           ]
@@ -67,58 +123,174 @@
           "sections": [
             {
               "heading": "Kursablauf im Überblick",
-              "orderedItems": [
-                "Du wirst Schritt für Schritt durch **einzelne Lernbausteine** geführt die aufeinander aufbauen.",
-                "Zu den Bausteinen gibt es **Übungen**, die dir helfen das erlernte Wissen zu verstehen und anzuwenden.",
-                "Wenn du die Grundlagen durchgearbeitet hast, legst du deinen **Schwerpunkt** fest und kannst anhand dessen entscheiden welche Kapitel du in welcher Tiefe behandeln möchtest.",
-                "Nach den Grundlagen-Übungen entscheidest du dich für dein **Kursprojekt** und wendest die weiteren Lerninhalte im Projekt an.",
-                "Während des Kurses gibt es regelmäßige Termine für **Q&As, Reviews und vertiefende Lerneinheiten**. Genaueres dazu erklärt dir dein\\*e Dozent\\*in."
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "**Aufbau:**\nDer Kurs ist in Module, Lektionen und Lernbausteine aufteteilt. Jedes Modul verfolgt ein Ziel und schließt mit der erreichung eines Meilensteins ab."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Übungen:**\nZu den Lernbausteinen gibt es **Quizzes und Übungen**, die dir helfen, das Gelernte zu festigen und anzuwenden. Zu den Übungen zählen auch größere Aufgaben, die alleine oder in der Gruppe erarbeitet werden können."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Projekt:**\nIm Laufe des Kurses entscheidest du dich für dein **Kursprojekt** und wendest die weiteren Lerninhalte in deinem Projekt an."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Hilfe:**\nWährend des Kurses gibt es regelmäßige Termine für **Q&As, Reviews und vertiefende Lerneinheiten**. Genaueres dazu erklären dir die Dozierenden."
+                }
+              ],
+              "paragraphs": [
+                "**Aufbau:**\nDer Kurs ist in Module, Lektionen und Lernbausteine aufteteilt. Jedes Modul verfolgt ein Ziel und schließt mit der erreichung eines Meilensteins ab.",
+                "**Übungen:**\nZu den Lernbausteinen gibt es **Quizzes und Übungen**, die dir helfen, das Gelernte zu festigen und anzuwenden. Zu den Übungen zählen auch größere Aufgaben, die alleine oder in der Gruppe erarbeitet werden können.",
+                "**Projekt:**\nIm Laufe des Kurses entscheidest du dich für dein **Kursprojekt** und wendest die weiteren Lerninhalte in deinem Projekt an.",
+                "**Hilfe:**\nWährend des Kurses gibt es regelmäßige Termine für **Q&As, Reviews und vertiefende Lerneinheiten**. Genaueres dazu erklären dir die Dozierenden."
               ]
             },
             {
               "heading": "So funktioniert dieses Kurs-Tool",
-              "orderedItems": [
-                "Oben siehst du deinen **Fortschritt** über alle Schritte.",
-                "Jeder Schritt enthält **Teilaufgaben**, die du einzeln **abhaken** kannst.",
-                "Sind alle Teilaufgaben fertig, markierst du den Schritt als **erledigt**.",
-                "Mit **Weiter** und **Zurück** wechselst du zwischen den Schritten.",
-                "Offene Punkte kannst du **später nachholen**."
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Oben siehst du deinen **Fortschritt** über alle Schritte.\n![Fortschritt](/content/Assets/m01-l01-fortschritt.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Jeder Schritt enthält **Teilaufgaben**, die du einzeln **abhaken** kannst.\n![Erledigt](/content/Assets/m01-l01-aufgaben.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Sind alle Teilaufgaben fertig, markierst du den Schritt als **erledigt**.\n![Erledigt](/content/Assets/m01-l01-aufgaben-erledigt.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Fertige Lektionen werden im Fortschrittsbalken als abgehakt markiert.\n![Erledigt](/content/Assets/m01-l01-fortschritt-lektion-erledigt.png)"
+                }
+              ],
+              "paragraphs": [
+                "Oben siehst du deinen **Fortschritt** über alle Schritte.\n![Fortschritt](/content/Assets/m01-l01-fortschritt.png)",
+                "Jeder Schritt enthält **Teilaufgaben**, die du einzeln **abhaken** kannst.\n![Erledigt](/content/Assets/m01-l01-aufgaben.png)",
+                "Sind alle Teilaufgaben fertig, markierst du den Schritt als **erledigt**.\n![Erledigt](/content/Assets/m01-l01-aufgaben-erledigt.png)",
+                "Fertige Lektionen werden im Fortschrittsbalken als abgehakt markiert.\n![Erledigt](/content/Assets/m01-l01-fortschritt-lektion-erledigt.png)"
+              ]
+            },
+            {
+              "heading": "App absichtlich schmal gehalten!",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Wahrscheinlich ist dir bereits aufgefallen, dass die App nur einen Teil des Browsers füllt. Das ist Absicht und ermöglicht es dir bequem zwei Fenster nebeneinander zu nutzen. Z.B. für Notizen oder dein Repository."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**So zum Beispiel:**"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Apps nebeneinander](/content/Assets/m01-l01-apps%20nebeneinander%201.png)"
+                }
+              ],
+              "paragraphs": [
+                "Wahrscheinlich ist dir bereits aufgefallen, dass die App nur einen Teil des Browsers füllt. Das ist Absicht und ermöglicht es dir bequem zwei Fenster nebeneinander zu nutzen. Z.B. für Notizen oder dein Repository.",
+                "**So zum Beispiel:**",
+                "![Apps nebeneinander](/content/Assets/m01-l01-apps%20nebeneinander%201.png)"
               ]
             },
             {
               "heading": "Lernbausteine bauen aufeinander auf",
-              "tone": "tip",
+              "tone": "highlight",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Du kannst zwischen den Schritten hin und her springen. Da sie aufeinander aufbauen, ist es meist sinnvoll, sie der **Reihe nach abzuarbeiten**."
+                }
+              ],
               "paragraphs": [
-                "Du kannst in den Steps hin und her springen. Da sie aufeinander aufbauen, ist es meist sinnvoll, sie der **Reihe nach abzuarbeiten**."
+                "Du kannst zwischen den Schritten hin und her springen. Da sie aufeinander aufbauen, ist es meist sinnvoll, sie der **Reihe nach abzuarbeiten**."
               ]
             }
           ]
         },
         {
+          "type": "quiz",
+          "title": "Quiz",
+          "prompt": "Welche Aussagen treffen zu?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ich werde in diesem Kurs besonders erfolgreich sein, wenn ich ein hohes Maß an Eigeninitiative zeige und mir angewöhne bei aufkommenden Problemen erst einmal selbst eine Lösung zu suchen.",
+              "isCorrect": true
+            },
+            {
+              "id": "b",
+              "label": "Wenn ich nicht weiter weiß, kann ich Hilfe bei den Dozierenden und anderen Teilnehmenden erfragen. Auch außerhalb der Q&A-Sessions.",
+              "isCorrect": true
+            },
+            {
+              "id": "c",
+              "label": "Zu den Lektionen gibt es Übungen, die mir helfen mein Wissen zu vertiefen.",
+              "isCorrect": true
+            },
+            {
+              "id": "d",
+              "label": "Wenn ich möchte, kann ich Aufgaben auch gemeinsam mit anderen Teilnehmenden erledigen.",
+              "isCorrect": true
+            },
+            {
+              "id": "e",
+              "label": "Es wird von mir erwartet, dass ich möglichst keine Rückfragen stelle.",
+              "isCorrect": false
+            }
+          ],
+          "successMessage": "Richtig. Du hast verstanden, worauf es im Kurs ankommt: Eigeninitiative, aktive Mitarbeit, gegenseitige Unterstützung und praxisnahe Übungen. Rückfragen sind ausdrücklich erlaubt und erwünscht.",
+          "instruction": "Wähle die besten 4 Antworten.",
+          "errorMessage": "Noch nicht ganz richtig. Achte darauf: Die letzte Aussage ist falsch, denn im Kurs sollst du Fragen stellen. Korrekt sind die Aussagen zu Eigeninitiative, Unterstützung durch Dozierende/Teilnehmende und den Übungen.",
+          "multiSelect": true
+        },
+        {
           "type": "content",
-          "title": "Onboarding und Arbeitsumgebung einrichten",
+          "title": "Erstes Modul: Onboarding",
           "sections": [
             {
               "heading": "Was dich beim Onboarding erwartet",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Im Onboarding lernst du GitHub kennen, erstellst dein erstes **Übungs-Repository** und richtest deine **Arbeitsumgebung** für den Kurs ein. Zur Einrichtung gehören dein **Zugang**, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten. Dafür installierst du Git und VS Code und nutzt dort das gemeinsame Kurs-Repository."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Keine Sorge:** Alle Begriffe und Schritte lernst du nacheinander im Modul."
+                }
+              ],
               "paragraphs": [
-                "Im Onboarding richtest du deine **Arbeitsumgebung** ein und lernst **GitHub**, **VSCode und Git** bereits grundlegend zu nutzen. Diese Tools wirst du im weiteren Verlauf des Kurses hauptsächlich nutzen. Zur Einrichtung der Arbeitsumgebung gehört alles, was du für den Kursstart brauchst: dein Zugang, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten.",
+                "Im Onboarding lernst du GitHub kennen, erstellst dein erstes **Übungs-Repository** und richtest deine **Arbeitsumgebung** für den Kurs ein. Zur Einrichtung gehören dein **Zugang**, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten. Dafür installierst du Git und VS Code und nutzt dort das gemeinsame Kurs-Repository.",
                 "**Keine Sorge:** Alle Begriffe und Schritte lernst du nacheinander im Modul."
               ]
             },
             {
               "heading": "Schritte des ersten Moduls",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**GitHub**-Account und Übungs-Repository anlegen.",
+                    "Erste Übungen im Browser durchführen und Git Grundlagen verstehen.",
+                    "**VS Code** und **Git** installieren.",
+                    "VS Code einrichten, **Extensions** installieren.",
+                    "Dein **Repository lokal** bedienen und Versionierung üben.",
+                    "Kurs-Repository **klonen** und **Modul 2 starten**."
+                  ]
+                }
+              ],
               "orderedItems": [
-                "**GitHub**-Account anlegen und erste Übungen im Browser durchführen.",
+                "**GitHub**-Account und Übungs-Repository anlegen.",
+                "Erste Übungen im Browser durchführen und Git Grundlagen verstehen.",
                 "**VS Code** und **Git** installieren.",
-                "VS Code einrichten, **Extensions** installieren",
+                "VS Code einrichten, **Extensions** installieren.",
                 "Dein **Repository lokal** bedienen und Versionierung üben.",
                 "Kurs-Repository **klonen** und **Modul 2 starten**."
-              ]
-            },
-            {
-              "heading": "Zertifikat nach dem Modul",
-              "paragraphs": [
-                "Nach diesem Modul kannst du bereits das erste anerkannte GitHub-Zertifikat anstreben: [GitHub Foundations (GHF)](https://learn.github.com/certification/GHF)."
               ]
             }
           ]
@@ -145,7 +317,7 @@
             },
             {
               "id": "d",
-              "label": "Wenn ich nicht weiterkomme, kann ich bei den Dozent\\*innen und anderen Teilnehmenden um Hilfe bitten.",
+              "label": "Wenn ich nicht weiterkomme, kann ich bei den Dozierenden und anderen Teilnehmenden um Hilfe bitten.",
               "isCorrect": true
             }
           ],
@@ -153,14 +325,170 @@
           "instruction": "Wähle die besten 2 Antworten.",
           "errorMessage": "Nein, das wird nicht passieren! Auch wenn dich die vielen neuen Begriffe zunächst etwas überfordern sollten, mach dir keine Sorgen! Der Kurs ist für Menschen gedacht, die noch keinerlei Vorkenntnisse mitbringen. Und sollten alle Anleitungen und Erklärungen nicht ausreichen, sind wir für dich da. Es gibt tägliche Q&A Sessions und du kannst im Chat um Hilfe bitten.",
           "multiSelect": true
+        },
+        {
+          "type": "content",
+          "title": "Tipps für deinen Lernerfolg",
+          "sections": [
+            {
+              "heading": "Setze dir klare Lernziele",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Überlege dir zu Beginn, was du im Kurs erreichen möchtest. Formuliere 2 bis 3 persönliche Lernziele."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beispiele:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "GitHub, Git und VS Code im Kursalltag sicher nutzen und meine Arbeit sauber versionieren.",
+                    "Mit KI-Unterstützung ein eigenes, nachvollziehbar dokumentiertes Projekt von der Idee bis zum lauffähigen Prototyp umsetzen.",
+                    "Probleme strukturiert debuggen, gezielt recherchieren und meine nächsten Schritte klar begründen können."
+                  ]
+                }
+              ],
+              "paragraphs": [
+                "Überlege dir zu Beginn, was du im Kurs erreichen möchtest. Formuliere 2 bis 3 persönliche Lernziele.",
+                "Beispiele:"
+              ],
+              "unorderedItems": [
+                "GitHub, Git und VS Code im Kursalltag sicher nutzen und meine Arbeit sauber versionieren.",
+                "Mit KI-Unterstützung ein eigenes, nachvollziehbar dokumentiertes Projekt von der Idee bis zum lauffähigen Prototyp umsetzen.",
+                "Probleme strukturiert debuggen, gezielt recherchieren und meine nächsten Schritte klar begründen können."
+              ]
+            },
+            {
+              "heading": "Schließe einen Vertrag mit dir selbst",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Notiere dir, wie du im Kurs arbeiten möchtest. Das hilft dir, dranzubleiben, wenn es schwierig wird."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beispiel:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Ich arbeite aktiv mit, probiere Aufgaben ernsthaft aus und gebe bei Problemen nicht sofort auf. Wenn ich nicht weiterkomme, recherchiere ich zuerst selbst, nutze die Unterlagen und stelle danach gezielte Fragen."
+                }
+              ],
+              "paragraphs": [
+                "Notiere dir, wie du im Kurs arbeiten möchtest. Das hilft dir, dranzubleiben, wenn es schwierig wird.",
+                "Beispiel:",
+                "Ich arbeite aktiv mit, probiere Aufgaben ernsthaft aus und gebe bei Problemen nicht sofort auf. Wenn ich nicht weiterkomme, recherchiere ich zuerst selbst, nutze die Unterlagen und stelle danach gezielte Fragen."
+              ]
+            },
+            {
+              "heading": "Recherchiere gezielt",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Recherche hilft dir, Probleme besser zu verstehen und selbstständiger zu lösen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Achte darauf:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Fehlermeldungen genau lesen",
+                    "wichtige Begriffe kopieren",
+                    "zuerst Kursunterlagen prüfen",
+                    "gezielt online suchen",
+                    "Suchanfragen kurz und konkret formulieren",
+                    "mehrere Quellen vergleichen",
+                    "Lösungen verstehen, nicht blind übernehmen",
+                    "Ergebnisse dokumentieren"
+                  ]
+                }
+              ],
+              "paragraphs": [
+                "Recherche hilft dir, Probleme besser zu verstehen und selbstständiger zu lösen.",
+                "Achte darauf:"
+              ],
+              "unorderedItems": [
+                "Fehlermeldungen genau lesen",
+                "wichtige Begriffe kopieren",
+                "zuerst Kursunterlagen prüfen",
+                "gezielt online suchen",
+                "Suchanfragen kurz und konkret formulieren",
+                "mehrere Quellen vergleichen",
+                "Lösungen verstehen, nicht blind übernehmen",
+                "Ergebnisse dokumentieren"
+              ]
+            },
+            {
+              "heading": "Stelle gute Fragen",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Fragen sind erwünscht. Besonders hilfreich ist, wenn du kurz beschreibst:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Was wolltest du erreichen?",
+                    "Was hast du versucht?",
+                    "Wo kommst du nicht weiter?",
+                    "Welche Fehlermeldung bekommst du?"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "So bekommst du schneller passende Unterstützung und stärkst deine Problemlösekompetenz."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Dokumentiere deine Fragen wärend du lernst so, dass du sie in den Q&A-Sessions auch selbst gut wieder nachvollziehen kannst."
+                }
+              ],
+              "paragraphs": [
+                "Fragen sind erwünscht. Besonders hilfreich ist, wenn du kurz beschreibst:",
+                "So bekommst du schneller passende Unterstützung und stärkst deine Problemlösekompetenz.",
+                "Dokumentiere deine Fragen wärend du lernst so, dass du sie in den Q&A-Sessions auch selbst gut wieder nachvollziehen kannst."
+              ],
+              "unorderedItems": [
+                "Was wolltest du erreichen?",
+                "Was hast du versucht?",
+                "Wo kommst du nicht weiter?",
+                "Welche Fehlermeldung bekommst du?"
+              ]
+            }
+          ]
         }
       ]
     },
-    "requiresLessonCompletion": true
+    "requiresLessonCompletion": true,
+    "tasks": [
+      "Lies die Lektion vollständig, um den Ablauf des Kurses zu verstehen.",
+      "Formuliere deine Lernziele und deinen Vertrag mir dir selbst.",
+      "Halte offene Fragen fest und kläre sie im Q&A oder mit der Gruppe.",
+      "Hake alle erledigten Aufgaben ab und markiere die Lektion als erledigt."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "Youtube - Lernen lernen: 13 Tipps aus der Gehirnforschung",
+        "href": "https://www.youtube.com/watch?v=_CgmMnBjnz0"
+      },
+      {
+        "label": "The Learning Scientists: 6 Strategies for Effective Learning",
+        "href": "https://www.learningscientists.org/blog/2017/4/20-1"
+      },
+      {
+        "label": "OECD: Future of Education and Skills 2030",
+        "href": "https://www.oecd.org/en/about/projects/future-of-education-and-skills-2030.html"
+      }
+    ]
   },
   "2": {
     "title": "GitHub-Erste Schritte",
-    "goal": "Du hast einen GitHub-Account erstellt und lernst das Tool zunächst im Browser kennen.",
+    "goal": "Du verstehst, wofür GitHub genutzt wird, und hast dein eigenes Übungs-Repository erfolgreich erstellt.",
     "sections": [
       {
         "type": "lesson",
@@ -175,37 +503,134 @@
           "title": "Kapitel 1: Was ist GitHub?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Du kannst dir GitHub wie einen zentralen Ort vorstellen, an dem Projekte nicht nur abgelegt, sondern auch sauber organisiert werden. Statt Dateien einfach hin und her zu schicken, arbeitest du in einem Repository mit klarer Historie. Jeder wichtige Stand deiner Arbeit kann nachvollzogen werden."
+                }
+              ],
               "paragraphs": [
-                "GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst."
+                "GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst.",
+                "Du kannst dir GitHub wie einen zentralen Ort vorstellen, an dem Projekte nicht nur abgelegt, sondern auch sauber organisiert werden. Statt Dateien einfach hin und her zu schicken, arbeitest du in einem Repository mit klarer Historie. Jeder wichtige Stand deiner Arbeit kann nachvollzogen werden."
               ]
             },
             {
-              "heading": "Warum GitHub?",
+              "heading": "Was ist Git?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "GitHub basiert auf Git. Git ist das technische Werkzeug für Versionskontrolle, GitHub ist die Plattform darum herum: mit Weboberfläche, Kollaboration und Überblick über Änderungen."
+                }
+              ],
               "paragraphs": [
-                "Wir bereiten uns darauf vor mit KI Code zu produzieren. Und auch wenn du noch so gut promptest, wird die KI dich missverstehen und deinen Code zerstören.\nDafür nutzen wir Git als Versionskontrolle. Git ermöglicht Stände zu versionieren damit man jederzeit auf alte Stände wieder zurück kann. Im Grunde wie wenn du in einem Computerspiel an mehreren Stellen speicherst, um ggf. auch wieder weiter zurück zu können. Github setzt auf Git auf und macht zum einen Repositories übersichtlicher aber auch das Kollaborative Arbeiten an Code einfacher."
+                "GitHub basiert auf Git. Git ist das technische Werkzeug für Versionskontrolle, GitHub ist die Plattform darum herum: mit Weboberfläche, Kollaboration und Überblick über Änderungen."
               ]
             },
             {
-              "heading": "Wo findest du Hilfe und kannst du mehr lernen?",
+              "heading": "Was ist ein Repository?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Repository ist ein Projektordner auf GitHub. Dort liegen Dateien, Änderungen und der Versionsverlauf deiner Arbeit."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Du kannst es dir wie einen zentralen Arbeitsordner vorstellen, in dem jeder Stand nachvollziehbar bleibt."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Wichtig: Ein Repository speichert nicht nur den aktuellen Inhalt deiner Dateien, sondern auch die Historie. Dadurch kannst du Änderungen vergleichen, Fehler leichter rückgängig machen und deinen Lernfortschritt dokumentieren."
+                }
+              ],
               "paragraphs": [
-                "GitHub bietet umfangreiche Unterstützung und Lernmöglichkeiten:"
+                "Ein Repository ist ein Projektordner auf GitHub. Dort liegen Dateien, Änderungen und der Versionsverlauf deiner Arbeit.",
+                "Du kannst es dir wie einen zentralen Arbeitsordner vorstellen, in dem jeder Stand nachvollziehbar bleibt.",
+                "Wichtig: Ein Repository speichert nicht nur den aktuellen Inhalt deiner Dateien, sondern auch die Historie. Dadurch kannst du Änderungen vergleichen, Fehler leichter rückgängig machen und deinen Lernfortschritt dokumentieren."
+              ]
+            },
+            {
+              "heading": "Wie nutzen wir GitHub im Kurs?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Im Kurs nutzt du GitHub, um:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "deine Übungsaufgaben und Lösungen strukturiert zu speichern,",
+                    "Änderungen Schritt für Schritt festzuhalten,",
+                    "Feedback auf deine Arbeit zu erhalten,",
+                    "und später gemeinsam mit anderen an Projekten zu arbeiten."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Kurz gesagt: GitHub hilft dir, nachvollziehbar, teamfähig und professionell zu arbeiten, auch wenn du gerade erst startest."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So werden wir es verwenden:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Dein eigenes Übungs-Repository**\nDu legst auf GitHub dein persönliches Repository an. Dort speicherst du deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Das gemeinsame Kurs-Repository**\nDer Kurs selbst liegt ebenfalls auf GitHub. Alle Aufgaben, Materialien und Updates kommen von dort. Du lernst, wie du Änderungen aus dem Kurs-Repo holst und mit deiner eigenen Arbeit kombinierst, genau wie in echten Projekten."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Feedback und Zusammenarbeit**\nDozierende können deine Commits sehen und dir direkt am Code Rückmeldung geben. So erhältst du nicht nur wertvolles Feedback, sondern lernst auch echte Praxis kennen. Denn genau so funktionieren auch Code-Reviews."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**GitHub Copilot**\nEin zentrales Werkzeug im Kurs ist GitHub Copilot. Es ist direkt in VS Code integriert und setzt einen GitHub-Account voraus. Ohne GitHub-Account kannst du GitHub Copilot im Kurs nicht nutzen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Dein Einstieg in echte Entwicklungspraxis**\nGitHub zu nutzen bedeutet, von Tag 1 so zu arbeiten, wie Entwickler:innen es weltweit tun. Was du hier lernst, gilt genauso im nächsten Praktikum, im Job oder im eigenen Projekt."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "GitHub ist im Basistarif kostenlos. Du brauchst nur einen Account."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Im Kurs nutzt du zwei Repositories mit unterschiedlichen Rollen:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "**Dein eigenes Übungs-Repository**: Hier arbeitest du an Aufgaben, Notizen und Lösungen.",
+                    "**Das Kurs-Repository**: Von hier holst du Materialien, Übungen und Updates."
+                  ]
+                }
+              ],
+              "paragraphs": [
+                "Im Kurs nutzt du GitHub, um:",
+                "Kurz gesagt: GitHub hilft dir, nachvollziehbar, teamfähig und professionell zu arbeiten, auch wenn du gerade erst startest.",
+                "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So werden wir es verwenden:",
+                "**Dein eigenes Übungs-Repository**\nDu legst auf GitHub dein persönliches Repository an. Dort speicherst du deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir.",
+                "**Das gemeinsame Kurs-Repository**\nDer Kurs selbst liegt ebenfalls auf GitHub. Alle Aufgaben, Materialien und Updates kommen von dort. Du lernst, wie du Änderungen aus dem Kurs-Repo holst und mit deiner eigenen Arbeit kombinierst, genau wie in echten Projekten.",
+                "**Feedback und Zusammenarbeit**\nDozierende können deine Commits sehen und dir direkt am Code Rückmeldung geben. So erhältst du nicht nur wertvolles Feedback, sondern lernst auch echte Praxis kennen. Denn genau so funktionieren auch Code-Reviews.",
+                "**GitHub Copilot**\nEin zentrales Werkzeug im Kurs ist GitHub Copilot. Es ist direkt in VS Code integriert und setzt einen GitHub-Account voraus. Ohne GitHub-Account kannst du GitHub Copilot im Kurs nicht nutzen.",
+                "**Dein Einstieg in echte Entwicklungspraxis**\nGitHub zu nutzen bedeutet, von Tag 1 so zu arbeiten, wie Entwickler:innen es weltweit tun. Was du hier lernst, gilt genauso im nächsten Praktikum, im Job oder im eigenen Projekt.",
+                "GitHub ist im Basistarif kostenlos. Du brauchst nur einen Account.",
+                "Im Kurs nutzt du zwei Repositories mit unterschiedlichen Rollen:"
               ],
               "unorderedItems": [
-                "**Offizielle Dokumentation**: Alles, was du über GitHub wissen musst, steht in den [GitHub Docs](https://docs.github.com/de) (auf Deutsch verfügbar, durchsuchbar und sehr gut strukturiert). Ein zuverlässiger Nachschlageort für den gesamten Kurs.",
-                "**Support und Community**: Auf [support.github.com](https://support.github.com/) findest du Artikel zu häufigen Problemen, einen direkten Support-Kanal und die GitHub Community, in der du Fragen stellen und Antworten von anderen Nutzer:innen finden kannst.",
-                "**Lernen und Zertifizierungen**: GitHub bietet eigene Kurse an. Auf [learn.github.com/courses](https://learn.github.com/courses) und [learn.github.com/skills](https://learn.github.com/skills) kannst du gezielt Themen vertiefen und anerkannte GitHub-Zertifizierungen erwerben."
-              ]
-            },
-            {
-              "heading": "Warum brauchen wir GitHub im Kurs?",
-              "paragraphs": [
-                "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. Hier ist, warum du es brauchst:",
-                "**Dein eigenes Übungs-Repository**\nDu legst auf GitHub dein persönliches Repository an. Dort speicherst du alle deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir.",
-                "**Das gemeinsame Kurs-Repository**\nDer Kurs selbst liegt ebenfalls auf GitHub. Alle Aufgaben, Materialien und Updates kommen von dort. Du lernst, wie du Änderungen aus dem Kurs-Repo holst und mit deiner eigenen Arbeit kombinierst, genau wie in echten Projekten.",
-                "**Feedback und Zusammenarbeit**\nDozent:innen können deine Commits sehen und dir direkt am Code Rückmeldung geben. Das ist kein bürokratischer Schritt, sondern echte Praxis: So lernt man, wie Code-Review funktioniert.",
-                "**GitHub Copilot**\nEin zentrales Werkzeug im Kurs ist GitHub Copilot. Es ist direkt in VS Code integriert und setzt einen GitHub-Account voraus. Ohne Account kein Copilot.",
-                "**Dein Einstieg in echte Entwicklungspraxis**\nGitHub zu nutzen bedeutet, von Tag 1 so zu arbeiten, wie Entwickler:innen es weltweit tun. Was du hier lernst, gilt genauso im nächsten Praktikum, im Job oder im eigenen Projekt.",
-                "GitHub ist im Basistarif kostenlos. Du brauchst nur einen Account."
+                "deine Übungsaufgaben und Lösungen strukturiert zu speichern,",
+                "Änderungen Schritt für Schritt festzuhalten,",
+                "Feedback auf deine Arbeit zu erhalten,",
+                "und später gemeinsam mit anderen an Projekten zu arbeiten.",
+                "**Dein eigenes Übungs-Repository**: Hier arbeitest du an Aufgaben, Notizen und Lösungen.",
+                "**Das Kurs-Repository**: Von hier holst du Materialien, Übungen und Updates."
               ]
             }
           ]
@@ -215,31 +640,228 @@
           "title": "Kapitel 2: Account erstellen",
           "sections": [
             {
+              "heading": "Schritt-für-Schritt: GitHub-Account anlegen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne die Seite https://github.com.",
+                    "Klicke oben rechts auf **Sign up**.",
+                    "Falls **Sign up** nicht sichtbar ist: Öffne direkt https://github.com/join."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![GitHub-Startseite mit markiertem Button Sign up](/content/Assets/m01-l02-gh-01-sign-up-startseite.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Ab hier hast du zwei Varianten zur Registrierung. Wähle genau eine:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Variante A: Registrierung per E-Mail**"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Trage deine E-Mail-Adresse ein.",
+                    "Erstelle ein sicheres Passwort.",
+                    "Wähle einen Benutzernamen.",
+                    "Folge den angezeigten Schritten."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![GitHub-Registrierungsformular mit Email, Password und Username](/content/Assets/m01-l02-gh-02-sign-up-formular_email.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "**Variante B: Registrierung per SSO, also Anmeldung über Google, Apple oder einen anderen Anbieter**"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Wähle auf der Registrierungsseite die SSO-Option deines Anbieters.",
+                    "Melde dich beim gewählten Anbieter an und bestätige die Freigabe für GitHub.",
+                    "Ergänze fehlende Angaben wie Benutzernamen, falls GitHub danach fragt."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![GitHub-Registrierungsformular mit Email, Password und Username](/content/Assets/m01-l02-gh-02-sign-up-formular_sso.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Hinweis: Für Accounts, die du nach dem Kurs weiter nutzt, sind beide Varianten möglich. E-Mail und SSO unterscheiden sich vor allem in deiner persönlichen Präferenz und der gewünschten Login-Methode."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![GitHub nach erfolgreichem Login mit sichtbarem Avatar](/content/Assets/m01-l02-gh-04-login-erfolgreich-avatar.png)"
+                }
+              ],
+              "paragraphs": [
+                "![GitHub-Startseite mit markiertem Button Sign up](/content/Assets/m01-l02-gh-01-sign-up-startseite.png)",
+                "Ab hier hast du zwei Varianten zur Registrierung. Wähle genau eine:",
+                "**Variante A: Registrierung per E-Mail**",
+                "![GitHub-Registrierungsformular mit Email, Password und Username](/content/Assets/m01-l02-gh-02-sign-up-formular_email.png)",
+                "**Variante B: Registrierung per SSO, also Anmeldung über Google, Apple oder einen anderen Anbieter**",
+                "![GitHub-Registrierungsformular mit Email, Password und Username](/content/Assets/m01-l02-gh-02-sign-up-formular_sso.png)",
+                "Hinweis: Für Accounts, die du nach dem Kurs weiter nutzt, sind beide Varianten möglich. E-Mail und SSO unterscheiden sich vor allem in deiner persönlichen Präferenz und der gewünschten Login-Methode.",
+                "![GitHub nach erfolgreichem Login mit sichtbarem Avatar](/content/Assets/m01-l02-gh-04-login-erfolgreich-avatar.png)"
+              ],
               "orderedItems": [
-                "Öffne https://github.com.",
-                "Klicke auf Sign up.",
-                "Falls Sign up nicht sichtbar ist: Öffne direkt https://github.com/join.",
-                "Gib E-Mail, Passwort und Benutzernamen ein.",
-                "Schließe die angezeigten Verifizierungs-Schritte ab.",
-                "Öffne dein E-Mail-Postfach und bestätige deine E-Mail-Adresse.",
-                "Falls keine E-Mail ankommt: Prüfe den Spam-Ordner und fordere die E-Mail erneut an.",
-                "Nach der Bestätigung ist dein Account einsatzbereit."
+                "Öffne die Seite https://github.com.",
+                "Klicke oben rechts auf **Sign up**.",
+                "Falls **Sign up** nicht sichtbar ist: Öffne direkt https://github.com/join.",
+                "Trage deine E-Mail-Adresse ein.",
+                "Erstelle ein sicheres Passwort.",
+                "Wähle einen Benutzernamen.",
+                "Folge den angezeigten Schritten.",
+                "Wähle auf der Registrierungsseite die SSO-Option deines Anbieters.",
+                "Melde dich beim gewählten Anbieter an und bestätige die Freigabe für GitHub.",
+                "Ergänze fehlende Angaben wie Benutzernamen, falls GitHub danach fragt."
+              ]
+            },
+            {
+              "heading": "Falls etwas nicht funktioniert",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Keine Bestätigungs-E-Mail angekommen:"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Prüfe den Spam-Ordner und fordere die E-Mail erneut an."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Benutzername ist schon vergeben:"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Wähle eine Variante mit Zusatz (z. B. Zahl oder Bindestrich)."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Verifizierung klappt nicht:"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Aktualisiere die Seite und starte den Verifizierungsschritt neu."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Sign-up-Seite lädt nicht:"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Öffne ein privates Browserfenster oder nutze einen anderen Browser."
+                }
+              ],
+              "paragraphs": [
+                "Prüfe den Spam-Ordner und fordere die E-Mail erneut an.",
+                "Wähle eine Variante mit Zusatz (z. B. Zahl oder Bindestrich).",
+                "Aktualisiere die Seite und starte den Verifizierungsschritt neu.",
+                "Öffne ein privates Browserfenster oder nutze einen anderen Browser."
+              ],
+              "orderedItems": [
+                "Keine Bestätigungs-E-Mail angekommen:",
+                "Benutzername ist schon vergeben:",
+                "Verifizierung klappt nicht:",
+                "Sign-up-Seite lädt nicht:"
+              ]
+            },
+            {
+              "heading": "Mini-Check nach der Registrierung",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "[ ] Ich kann mich mit meinem GitHub-Account einloggen.",
+                    "[ ] Ich sehe mein Profilsymbol oben rechts.",
+                    "[ ] Ich habe Zugriff auf mein Profil unter https://github.com/\"mein-benutzername\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Profil URL](/content/Assets/m01-l02-gh-05-profil-url.png)"
+                }
+              ],
+              "paragraphs": [
+                "![Profil URL](/content/Assets/m01-l02-gh-05-profil-url.png)"
+              ],
+              "unorderedItems": [
+                "[ ] Ich kann mich mit meinem GitHub-Account einloggen.",
+                "[ ] Ich sehe mein Profilsymbol oben rechts.",
+                "[ ] Ich habe Zugriff auf mein Profil unter https://github.com/\"mein-benutzername\"."
               ]
             },
             {
               "heading": "Hinweise",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Der GitHub-Benutzername ist sichtbar.",
+                    "Wenn du den Account nach dem Kurs weiter nutzen möchtest, verwende am besten einen eigenen, dauerhaft verfügbaren Account statt des temporären Account von KnOot.",
+                    "Wähle einen Benutzernamen, den du auch später im Kurskontext verwenden möchtest.",
+                    "Nutze einen Passwortmanager im Browser oder auf deinem Gerät, damit du dein Passwort sicher speichern kannst.",
+                    "Hilfe beim Einrichten deines Profils: [GitHub Docs - Dein Profil einrichten](https://docs.github.com/de/get-started/start-your-journey/setting-up-your-profile)"
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Der GitHub-Benutzername ist sichtbar.",
-                "Nutze möglichst eine E-Mail-Adresse, die dauerhaft in deinem Besitz bleibt.",
+                "Wenn du den Account nach dem Kurs weiter nutzen möchtest, verwende am besten einen eigenen, dauerhaft verfügbaren Account statt des temporären Account von KnOot.",
                 "Wähle einen Benutzernamen, den du auch später im Kurskontext verwenden möchtest.",
-                "Nutze einen Passwortmanager im Browser oder auf deinem Gerät, damit du dein Passwort sicher speichern kannst."
+                "Nutze einen Passwortmanager im Browser oder auf deinem Gerät, damit du dein Passwort sicher speichern kannst.",
+                "Hilfe beim Einrichten deines Profils: [GitHub Docs - Dein Profil einrichten](https://docs.github.com/de/get-started/start-your-journey/setting-up-your-profile)"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 3: GitHub als Lern- und Nachschlagequelle",
+          "sections": [
             {
-              "heading": "Wichtiger Hinweis zur E-Mail-Adresse",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "GitHub bietet umfangreiche Unterstützung und Lernmöglichkeiten:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "**Offizielle Dokumentation**: Alles, was du über GitHub wissen musst, steht in den [GitHub Docs](https://docs.github.com/de) (auf Deutsch verfügbar, durchsuchbar und sehr gut strukturiert). Ein zuverlässiger Nachschlageort für den gesamten Kurs.",
+                    "**Support und Community**: Auf [support.github.com](https://support.github.com/) findest du Artikel zu häufigen Problemen, einen direkten Support-Kanal und die GitHub Community, in der du Fragen stellen und Antworten von anderen Nutzer:innen finden kannst.",
+                    "**Lernen und Zertifizierungen**: GitHub bietet eigene Kurse an. Auf [learn.github.com/courses](https://learn.github.com/courses) und [learn.github.com/skills](https://learn.github.com/skills) kannst du gezielt Themen vertiefen und anerkannte GitHub-Zertifizierungen erwerben.",
+                    "**Video-Playlist für den Einstieg**: YouTube-Playlist [GitHub for Beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f)."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![GitHub-Ressourcen](/content/Assets/m01-l02-gh-01-gh-helps.png)"
+                }
+              ],
               "paragraphs": [
-                "Wenn du eine KnOot E-Mail-Adresse hast, denke daran: Diese wird nach den Kursen deaktiviert.",
-                "Wenn du dein Repository dauerhaft behalten willst, verwende lieber eine E-Mail-Adresse, die in deinem Besitz bleibt."
+                "GitHub bietet umfangreiche Unterstützung und Lernmöglichkeiten:",
+                "![GitHub-Ressourcen](/content/Assets/m01-l02-gh-01-gh-helps.png)"
+              ],
+              "unorderedItems": [
+                "**Offizielle Dokumentation**: Alles, was du über GitHub wissen musst, steht in den [GitHub Docs](https://docs.github.com/de) (auf Deutsch verfügbar, durchsuchbar und sehr gut strukturiert). Ein zuverlässiger Nachschlageort für den gesamten Kurs.",
+                "**Support und Community**: Auf [support.github.com](https://support.github.com/) findest du Artikel zu häufigen Problemen, einen direkten Support-Kanal und die GitHub Community, in der du Fragen stellen und Antworten von anderen Nutzer:innen finden kannst.",
+                "**Lernen und Zertifizierungen**: GitHub bietet eigene Kurse an. Auf [learn.github.com/courses](https://learn.github.com/courses) und [learn.github.com/skills](https://learn.github.com/skills) kannst du gezielt Themen vertiefen und anerkannte GitHub-Zertifizierungen erwerben.",
+                "**Video-Playlist für den Einstieg**: YouTube-Playlist [GitHub for Beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f)."
               ]
             }
           ]
@@ -272,10 +894,349 @@
           ],
           "successMessage": "Richtig! GitHub ist deine Plattform für Code und Zusammenarbeit im Kurs.",
           "errorMessage": "Nicht ganz. Merke: GitHub ist die Plattform im Web, Git ist das Werkzeug für Versionskontrolle."
+        },
+        {
+          "type": "quiz",
+          "title": "Git und GitHub unterscheiden",
+          "prompt": "Was ist der Unterschied zwischen Git und GitHub?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Git ist ein Werkzeug für Versionskontrolle, GitHub ist eine Plattform im Web.",
+              "isCorrect": true
+            },
+            {
+              "id": "b",
+              "label": "GitHub ist ein lokales Programm und Git ist eine Website.",
+              "isCorrect": false
+            },
+            {
+              "id": "c",
+              "label": "Git und GitHub sind dasselbe.",
+              "isCorrect": false
+            },
+            {
+              "id": "d",
+              "label": "GitHub wird nur für Videos und Nachrichten verwendet.",
+              "isCorrect": false
+            }
+          ],
+          "successMessage": "Richtig! Git speichert Versionen deiner Arbeit. GitHub macht diese Arbeit im Web sichtbar, teilbar und leichter nutzbar.",
+          "errorMessage": "Nicht ganz. Merke: Git ist das Werkzeug für Versionskontrolle. GitHub ist die Plattform im Web."
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 4: Übungs-Repository anlegen",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Jetzt legst du dein eigenes Übungs-Repository an. Dieses Repository ist dein persönlicher Arbeitsbereich für den Kurs. Dort kannst du später Aufgaben, Notizen, Code und Lösungen speichern."
+                }
+              ],
+              "paragraphs": [
+                "Jetzt legst du dein eigenes Übungs-Repository an. Dieses Repository ist dein persönlicher Arbeitsbereich für den Kurs. Dort kannst du später Aufgaben, Notizen, Code und Lösungen speichern."
+              ]
+            },
+            {
+              "heading": "Schritt-für-Schritt: Neues Repository erstellen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Wähle **New repository** aus."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Repository anlegen](/content/Assets/m01-l03-gh-06-repository-anlegen.png)"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "***Achtung:*** Verwende besser keine Umlaute.\nGitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Repository anlegen](/content/Assets/m01-l03-gh-07-repository-benennen.png)"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Ergänze optional eine kurze Beschreibung."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beispiel:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "```text\nMein Übungs-Repository für den Kurs.\n```"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Wähle bei Sichtbarkeit **Private** aus."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Aktiviere **Add a README file**."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Lasse **.gitignore** und **License** zunächst unverändert.",
+                    "Klicke auf **Create repository**."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l02-gh-06-create-repository.png)"
+                }
+              ],
+              "paragraphs": [
+                "![Repository anlegen](/content/Assets/m01-l03-gh-06-repository-anlegen.png)",
+                "***Achtung:*** Verwende besser keine Umlaute.\nGitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche.",
+                "![Repository anlegen](/content/Assets/m01-l03-gh-07-repository-benennen.png)",
+                "Beispiel:",
+                "```text\nMein Übungs-Repository für den Kurs.\n```",
+                "So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll.",
+                "Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist.",
+                "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l02-gh-06-create-repository.png)"
+              ],
+              "orderedItems": [
+                "Wähle **New repository** aus.",
+                "Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname.",
+                "Ergänze optional eine kurze Beschreibung.",
+                "Wähle bei Sichtbarkeit **Private** aus.",
+                "Aktiviere **Add a README file**.",
+                "Lasse **.gitignore** und **License** zunächst unverändert.",
+                "Klicke auf **Create repository**."
+              ]
+            },
+            {
+              "heading": "Nach dem Erstellen",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Nach dem Klick auf **Create repository** öffnet GitHub dein neues Repository."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Du erkennst, dass es funktioniert hat, wenn:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "der Repository-Name oben sichtbar ist,",
+                    "eine Datei namens `README.md` angezeigt wird,",
+                    "die URL ungefähr so aussieht:"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "```text\nhttps://github.com/<dein-benutzername>/kurs-uebungen\n```"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Fertiges Repository mit README](/content/Assets/m01-l02-gh-07-repository-fertig.png)"
+                }
+              ],
+              "paragraphs": [
+                "Nach dem Klick auf **Create repository** öffnet GitHub dein neues Repository.",
+                "Du erkennst, dass es funktioniert hat, wenn:",
+                "```text\nhttps://github.com/<dein-benutzername>/kurs-uebungen\n```",
+                "![Fertiges Repository mit README](/content/Assets/m01-l02-gh-07-repository-fertig.png)"
+              ],
+              "unorderedItems": [
+                "der Repository-Name oben sichtbar ist,",
+                "eine Datei namens `README.md` angezeigt wird,",
+                "die URL ungefähr so aussieht:"
+              ]
+            },
+            {
+              "heading": "Was bedeutet README?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine README-Datei ist eine kurze Start- oder Infoseite für ein Repository. Sie erklärt, worum es in dem Projekt geht."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Für den Anfang reicht ein einfacher Text wie:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "```markdown"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Dieses Repository enthält meine Übungen, Notizen und Lösungen aus dem Kurs.\n```"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Du musst die README jetzt noch nicht bearbeiten. Wichtig ist erst einmal, dass dein Repository erfolgreich angelegt wurde."
+                }
+              ],
+              "paragraphs": [
+                "Eine README-Datei ist eine kurze Start- oder Infoseite für ein Repository. Sie erklärt, worum es in dem Projekt geht.",
+                "Für den Anfang reicht ein einfacher Text wie:",
+                "```markdown",
+                "Dieses Repository enthält meine Übungen, Notizen und Lösungen aus dem Kurs.\n```",
+                "Du musst die README jetzt noch nicht bearbeiten. Wichtig ist erst einmal, dass dein Repository erfolgreich angelegt wurde."
+              ]
+            },
+            {
+              "heading": "Falls etwas nicht funktioniert",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**Der Repository-Name ist schon vergeben:**"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Wähle einen etwas eindeutigeren Namen, zum Beispiel `kurs-uebungen-deinname`."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**Der Button Create repository ist nicht aktiv:**"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Prüfe, ob du einen gültigen Repository-Namen eingetragen hast."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**Du findest New repository nicht:**"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Öffne direkt diese Seite: https://github.com/new"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**Du bist im falschen Account:**"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Prüfe oben rechts dein Profilbild und melde dich gegebenenfalls mit dem richtigen Account an."
+                }
+              ],
+              "paragraphs": [
+                "Wähle einen etwas eindeutigeren Namen, zum Beispiel `kurs-uebungen-deinname`.",
+                "Prüfe, ob du einen gültigen Repository-Namen eingetragen hast.",
+                "Öffne direkt diese Seite: https://github.com/new",
+                "Prüfe oben rechts dein Profilbild und melde dich gegebenenfalls mit dem richtigen Account an."
+              ],
+              "orderedItems": [
+                "**Der Repository-Name ist schon vergeben:**",
+                "**Der Button Create repository ist nicht aktiv:**",
+                "**Du findest New repository nicht:**",
+                "**Du bist im falschen Account:**"
+              ]
+            },
+            {
+              "heading": "Mini-Check nach dem Anlegen",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "[ ] Ich habe ein neues Repository erstellt.",
+                    "[ ] Mein Repository heißt sinnvoll, zum Beispiel `kurs-uebungen`.",
+                    "[ ] Mein Repository ist auf **Private** gestellt.",
+                    "[ ] Eine `README.md` wurde angelegt.",
+                    "[ ] Ich kann die Repository-URL öffnen."
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "[ ] Ich habe ein neues Repository erstellt.",
+                "[ ] Mein Repository heißt sinnvoll, zum Beispiel `kurs-uebungen`.",
+                "[ ] Mein Repository ist auf **Private** gestellt.",
+                "[ ] Eine `README.md` wurde angelegt.",
+                "[ ] Ich kann die Repository-URL öffnen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Kurze Verständnisfrage",
+          "prompt": "Wofür nutzt du dein eigenes Übungs-Repository im Kurs?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Um private E-Mails zu speichern.",
+              "isCorrect": false
+            },
+            {
+              "id": "b",
+              "label": "Um Übungen, Notizen, Code und Lösungen im Kurs zu speichern.",
+              "isCorrect": true
+            },
+            {
+              "id": "c",
+              "label": "Um GitHub-Videos anzuschauen.",
+              "isCorrect": false
+            },
+            {
+              "id": "d",
+              "label": "Um mein Passwort zu verwalten.",
+              "isCorrect": false
+            }
+          ],
+          "successMessage": "Richtig! Dein Übungs-Repository ist dein persönlicher Arbeitsbereich für den Kurs.",
+          "errorMessage": "Nicht ganz. Dein Übungs-Repository ist der Ort, an dem du deine Übungen, Notizen, Code und Lösungen speicherst."
         }
       ]
     },
-    "requiresLessonCompletion": true
+    "requiresLessonCompletion": true,
+    "tasks": [
+      "Wähle eine Registrierungsvariante (E-Mail oder SSO) und erstelle deinen GitHub-Account.",
+      "Melde dich in GitHub an und prüfe, ob dein Profilbild/Avatar sichtbar ist.",
+      "Öffne dein Profil unter https://github.com/<mein-benutzername> und prüfe die URL."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "GitHub Docs (Deutsch)",
+        "href": "https://docs.github.com/de"
+      },
+      {
+        "label": "Profil einrichten",
+        "href": "https://docs.github.com/de/get-started/start-your-journey/setting-up-your-profile"
+      },
+      {
+        "label": "GitHub for Beginners (Playlist)",
+        "href": "https://www.youtube.com/watch?v=r8jQ9hVA2qs&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f"
+      }
+    ]
   },
   "3": {
     "title": "GitHub-Repositories und Git verstehen",
@@ -294,12 +1255,27 @@
           "title": "GitHub im Kurskontext",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "GitHub ist in diesem Kurs die gemeinsame Plattform für Zusammenarbeit an Dateien, nachvollziehbare Änderungen und den Austausch über Aufgaben und Feedback."
+                }
+              ],
               "paragraphs": [
                 "GitHub ist in diesem Kurs die gemeinsame Plattform für Zusammenarbeit an Dateien, nachvollziehbare Änderungen und den Austausch über Aufgaben und Feedback."
               ]
             },
             {
               "heading": "GitHub und Git: kurz unterschieden",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Git ist das lokale Versionskontrollsystem.",
+                    "GitHub ist die Online-Plattform für Repositories und Teamarbeit."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Git ist das lokale Versionskontrollsystem.",
                 "GitHub ist die Online-Plattform für Repositories und Teamarbeit."
@@ -312,18 +1288,42 @@
           "title": "Was ist ein Version Control System?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Version Control System ist ein Werkzeug, das Änderungen an Dateien speichert und nachvollziehbar macht."
+                }
+              ],
               "paragraphs": [
                 "Ein Version Control System ist ein Werkzeug, das Änderungen an Dateien speichert und nachvollziehbar macht."
               ]
             },
             {
               "heading": "Einfach erklärt",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Stell dir vor, du arbeitest an einem Dokument und willst später sehen, was sich geändert hat. Ein Version Control System merkt sich diese Zwischenstände für dich. So kannst du alte Stände wiederfinden, Fehler leichter zurücknehmen und Schritt für Schritt arbeiten."
+                }
+              ],
               "paragraphs": [
                 "Stell dir vor, du arbeitest an einem Dokument und willst später sehen, was sich geändert hat. Ein Version Control System merkt sich diese Zwischenstände für dich. So kannst du alte Stände wiederfinden, Fehler leichter zurücknehmen und Schritt für Schritt arbeiten."
               ]
             },
             {
               "heading": "Wofuer ist ein Version Control System gedacht?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du speicherst Änderungen nicht nur im aktuellen Stand, sondern mit Verlauf.",
+                    "Du kannst frühere Versionen wieder ansehen oder wiederherstellen.",
+                    "Du erkennst, wer was wann geändert hat.",
+                    "Du arbeitest sicher an neuen Ideen, ohne den Hauptstand zu verlieren.",
+                    "Im Team wird Zusammenarbeit kontrollierbar und nachvollziehbar."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Du speicherst Änderungen nicht nur im aktuellen Stand, sondern mit Verlauf.",
                 "Du kannst frühere Versionen wieder ansehen oder wiederherstellen.",
@@ -334,6 +1334,17 @@
             },
             {
               "heading": "Warum ist das im Kurs wichtig?",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Du kannst kleine Lernschritte sauber festhalten.",
+                    "Du kannst Fehler rückgängig machen, ohne alles neu zu beginnen.",
+                    "Dozentinnen und Dozenten können deinen Fortschritt besser nachvollziehen.",
+                    "Git ist das Version Control System, mit dem wir hier praktisch arbeiten."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Du kannst kleine Lernschritte sauber festhalten.",
                 "Du kannst Fehler rückgängig machen, ohne alles neu zu beginnen.",
@@ -343,6 +1354,16 @@
             },
             {
               "heading": "So nutzen wir GitHub im Kurs",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Das Kurs-Repository enthält zentrale Materialien und Übungen.",
+                    "Teilnehmende arbeiten zusätzlich im eigenen Übungs-Repository.",
+                    "Dozentinnen und Dozenten geben Feedback über GitHub."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Das Kurs-Repository enthält zentrale Materialien und Übungen.",
                 "Teilnehmende arbeiten zusätzlich im eigenen Übungs-Repository.",
@@ -356,12 +1377,27 @@
           "title": "Repositories verstehen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Repository ist der gemeinsame Ort für Dateien und die komplette Versionsgeschichte. Im Kurs arbeiten wir sowohl mit dem Kurs-Repository als auch mit deinem eigenen Übungs-Repository."
+                }
+              ],
               "paragraphs": [
                 "Ein Repository ist der gemeinsame Ort für Dateien und die komplette Versionsgeschichte. Im Kurs arbeiten wir sowohl mit dem Kurs-Repository als auch mit deinem eigenen Übungs-Repository."
               ]
             },
             {
               "heading": "Repositories im Kurs",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Kurs-Repository: zentrale Materialien, Module und Übungen",
+                    "Eigenes Übungs-Repository: persönliche Lösungen"
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Kurs-Repository: zentrale Materialien, Module und Übungen",
                 "Eigenes Übungs-Repository: persönliche Lösungen"
@@ -375,12 +1411,29 @@
           "sections": [
             {
               "heading": "Was ist eine README?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine README ist die Startdatei eines Repositories. Sie erklärt kurz, worum es in diesem Repository geht, was man dort findet und wie man anfangen kann."
+                }
+              ],
               "paragraphs": [
                 "Eine README ist die Startdatei eines Repositories. Sie erklärt kurz, worum es in diesem Repository geht, was man dort findet und wie man anfangen kann."
               ]
             },
             {
               "heading": "Wofuer ist eine README gedacht?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Sie begrüßt neue Menschen, die das Repository zum ersten Mal sehen.",
+                    "Sie erklärt den Inhalt in einfacher Sprache.",
+                    "Sie zeigt den naechsten sinnvollen Schritt.",
+                    "Sie macht das Repository nicht leer oder unklar."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Sie begrüßt neue Menschen, die das Repository zum ersten Mal sehen.",
                 "Sie erklärt den Inhalt in einfacher Sprache.",
@@ -390,12 +1443,28 @@
             },
             {
               "heading": "Was sind Markdown-Dateien?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Markdown-Dateien sind Textdateien mit der Endung `.md`. Darin kannst du Überschriften, Listen, Hervorhebungen und Links schreiben, ohne eine komplizierte Formatierung zu brauchen."
+                }
+              ],
               "paragraphs": [
                 "Markdown-Dateien sind Textdateien mit der Endung `.md`. Darin kannst du Überschriften, Listen, Hervorhebungen und Links schreiben, ohne eine komplizierte Formatierung zu brauchen."
               ]
             },
             {
               "heading": "Warum nutzen wir Markdown im Kurs?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Markdown ist leicht zu lesen und leicht zu schreiben.",
+                    "GitHub zeigt Markdown automatisch schön formatiert an.",
+                    "Wir können damit Anleitungen, Erklärungen und Aufgaben klar strukturieren."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Markdown ist leicht zu lesen und leicht zu schreiben.",
                 "GitHub zeigt Markdown automatisch schön formatiert an.",
@@ -404,6 +1473,15 @@
             },
             {
               "heading": "Merksatz",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "README = Einstieg und Orientierung im Repository.",
+                    "Markdown = die einfache Schreibweise für solche Dokumente."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "README = Einstieg und Orientierung im Repository.",
                 "Markdown = die einfache Schreibweise für solche Dokumente."
@@ -416,6 +1494,16 @@
           "title": "Wichtige Begriffe vor dem Start",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Bevor du mit Repositories beginnst, solltest du diese Begriffe kennen:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "| Begriff | Definition |\n|:---|:---|\n| Branch | Eine Parallelversion deines Codes, die im Repository enthalten ist, aber keine Auswirkungen auf den primären oder Main-Branch hat. |\n| Klon | So lädst du eine vollständige Kopie der Daten eines Repositories aus GitHub.com herunter, einschließlich aller Versionen der einzelnen Dateien und Ordner. |\n| Fork | Ein neues Repository, das denselben Code und dieselben Sichtbarkeitseinstellungen verwendet wie das ursprüngliche „Upstream“-Repository. |\n| Merge | Änderungen von einem Branch auf einen anderen übertragen. |\n| Pull Request | Eine Anforderung, die Änderungen eines Branches in einen anderen Branch zusammenzuführen. |\n| Remote-Repository | Ein Repository, das auf GitHub gespeichert ist, nicht auf deinem Computer. |\n| Upstream | Das ursprüngliche Repository oder der ursprüngliche Branch, von dem geklont oder geforkt wurde. |"
+                }
+              ],
               "paragraphs": [
                 "Bevor du mit Repositories beginnst, solltest du diese Begriffe kennen:",
                 "| Begriff | Definition |\n|:---|:---|\n| Branch | Eine Parallelversion deines Codes, die im Repository enthalten ist, aber keine Auswirkungen auf den primären oder Main-Branch hat. |\n| Klon | So lädst du eine vollständige Kopie der Daten eines Repositories aus GitHub.com herunter, einschließlich aller Versionen der einzelnen Dateien und Ordner. |\n| Fork | Ein neues Repository, das denselben Code und dieselben Sichtbarkeitseinstellungen verwendet wie das ursprüngliche „Upstream“-Repository. |\n| Merge | Änderungen von einem Branch auf einen anderen übertragen. |\n| Pull Request | Eine Anforderung, die Änderungen eines Branches in einen anderen Branch zusammenzuführen. |\n| Remote-Repository | Ein Repository, das auf GitHub gespeichert ist, nicht auf deinem Computer. |\n| Upstream | Das ursprüngliche Repository oder der ursprüngliche Branch, von dem geklont oder geforkt wurde. |"
@@ -423,6 +1511,17 @@
             },
             {
               "heading": "Merksatz",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Lokal arbeitest du auf deinem Rechner.",
+                    "Remote liegt das Repository auf GitHub.",
+                    "Branches helfen dir, Änderungen sicher vorzubereiten.",
+                    "Pull Requests machen Änderungen prüfbar und besprechbar."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Lokal arbeitest du auf deinem Rechner.",
                 "Remote liegt das Repository auf GitHub.",
@@ -432,6 +1531,22 @@
             },
             {
               "heading": "Git im Kurskontext",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Dieses Dokument verbindet die allgemeinen Grundlagen aus der Course-Library mit dem praktischen Kursablauf."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Allgemeine Quelle:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "[Version Control und GitOps: Grundlagen](../../../03-course-library/04-git/04-version-control-und-gitops-grundlagen.md)"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "Dieses Dokument verbindet die allgemeinen Grundlagen aus der Course-Library mit dem praktischen Kursablauf.",
                 "Allgemeine Quelle:"
@@ -447,6 +1562,24 @@
           "title": "Was wir im Modul 01 konkret brauchen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Im ersten Kursmodul ist Version Control kein Nebenthema, sondern Sicherheitsnetz für deinen Lernfortschritt."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Du nutzt Git/GitHub hier vor allem für:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "nachvollziehbare Lernschritte (kleine Commits statt großer Sprünge)",
+                    "sichere Zusammenarbeit über Branches und Pull Requests",
+                    "klare Dokumentation, die andere Menschen und KI lesen können"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "Im ersten Kursmodul ist Version Control kein Nebenthema, sondern Sicherheitsnetz für deinen Lernfortschritt.",
                 "Du nutzt Git/GitHub hier vor allem für:"
@@ -464,6 +1597,17 @@
           "title": "Praktische Leitplanken für Einsteiger:innen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Arbeite in kleinen, klar benannten Schritten.",
+                    "Prüfe vor jedem Push kurz mit `git status`.",
+                    "Nutze Commit-Nachrichten, die den Zweck beschreiben.",
+                    "Halte `main` stabil und arbeite für Aufgaben in einem Branch."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Arbeite in kleinen, klar benannten Schritten.",
                 "Prüfe vor jedem Push kurz mit `git status`.",
@@ -478,6 +1622,20 @@
           "title": "Was von GitOps hier schon mitgedacht wird",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du bereits Grundprinzipien, die später wichtig werden:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Git als verbindliche Quelle für den gewünschten Stand",
+                    "Änderungen über Review-Prozess statt Direkt-Eingriffe",
+                    "reproduzierbare Änderungen durch klare Historie"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du bereits Grundprinzipien, die später wichtig werden:"
               ],
@@ -494,6 +1652,12 @@
           "title": "Naechster Schritt",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Im naechsten Schritt legst du dein eigenes Repository an und uebst die ersten Aktionen auf GitHub."
+                }
+              ],
               "paragraphs": [
                 "Im naechsten Schritt legst du dein eigenes Repository an und uebst die ersten Aktionen auf GitHub."
               ]
@@ -502,7 +1666,23 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Öffne ein Repository in GitHub und erkunde die wichtigsten Bereiche (Code, Issues, Pull Requests).",
+      "Prüfe, wie sich Dateien, Commits und Branches im Browser darstellen.",
+      "Vergleiche eigenes Übungs-Repository und Kurs-Repository in ihrer Rolle."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "Repositories auf GitHub erstellen",
+        "href": "https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-new-repository"
+      },
+      {
+        "label": "GitHub Glossar",
+        "href": "https://docs.github.com/de/get-started/learning-about-github/github-glossary"
+      }
+    ]
   },
   "4": {
     "title": "Eigenes Übungs-Repository anlegen",
@@ -525,18 +1705,42 @@
           "title": "Kapitel 1: Was ist dein eigenes Repository?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Repository ist dein persönlicher Arbeitsbereich auf GitHub."
+                }
+              ],
               "paragraphs": [
                 "Ein Repository ist dein persönlicher Arbeitsbereich auf GitHub."
               ]
             },
             {
               "heading": "Einfach erklärt",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Repository ist ein digitaler Projektordner im Internet. Dort liegen deine Dateien, deine Änderungen und der komplette Verlauf deiner Arbeit."
+                }
+              ],
               "paragraphs": [
                 "Ein Repository ist ein digitaler Projektordner im Internet. Dort liegen deine Dateien, deine Änderungen und der komplette Verlauf deiner Arbeit."
               ]
             },
             {
               "heading": "Wofür ist ein Repository gedacht?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du speicherst dort Code, Texte und andere Projektdateien.",
+                    "Du kannst nachvollziehen, was du wann geändert hast.",
+                    "Du kannst mit anderen zusammenarbeiten, ohne Dateien per E-Mail hin- und herzuschicken.",
+                    "Du hast einen sicheren Ort für deinen aktuellen Stand und ältere Zwischenstände.",
+                    "Im Kurs ist es der Ort, an dem du deine Übungen und Lösungen sammelst."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Du speicherst dort Code, Texte und andere Projektdateien.",
                 "Du kannst nachvollziehen, was du wann geändert hast.",
@@ -547,6 +1751,18 @@
             },
             {
               "heading": "Warum brauchst du dein eigenes Repository?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Das Kurs-Repository bleibt zentral.",
+                    "Dein eigenes Repository ist dein privater Workspace.",
+                    "Hier machst du Übungen und dokumentierst Fortschritt.",
+                    "Die Trainerin kann Commits sehen und Feedback geben.",
+                    "Du kannst später deine Arbeit sauber von den Kursinhalten trennen."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Das Kurs-Repository bleibt zentral.",
                 "Dein eigenes Repository ist dein privater Workspace.",
@@ -557,6 +1773,15 @@
             },
             {
               "heading": "Merksatz",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Kurs-Repository = Orientierung, Aufgaben und Lernmaterial.",
+                    "Eigenes Repository = deine Lösungen, Experimente und Commits."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Kurs-Repository = Orientierung, Aufgaben und Lernmaterial.",
                 "Eigenes Repository = deine Lösungen, Experimente und Commits."
@@ -570,6 +1795,16 @@
           "sections": [
             {
               "heading": "Was du bereitlegen solltest",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Deinen GitHub-Account.",
+                    "Einen Repository-Namen, der noch frei ist.",
+                    "Eine kurze Beschreibung, falls du sie eintragen möchtest."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Deinen GitHub-Account.",
                 "Einen Repository-Namen, der noch frei ist.",
@@ -578,6 +1813,16 @@
             },
             {
               "heading": "Woran du erkennst, dass du bereit bist",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Du bist bei GitHub eingeloggt.",
+                    "Du weißt, wie dein Repository heißen soll.",
+                    "Du hast verstanden, dass das Repository private Übungen enthalten soll."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Du bist bei GitHub eingeloggt.",
                 "Du weißt, wie dein Repository heißen soll.",
@@ -592,6 +1837,16 @@
           "sections": [
             {
               "heading": "Schritt 1: Einloggen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "github.com öffnen.",
+                    "Mit Account anmelden.",
+                    "Falls du schon eingeloggt bist, prüfe oben rechts dein Profil-Icon."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "github.com öffnen.",
                 "Mit Account anmelden.",
@@ -600,6 +1855,18 @@
             },
             {
               "heading": "Schritt 2: Neues Repository",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Profil-Icon klicken.",
+                    "New repository auswählen.",
+                    "Alternativ github.com/new.",
+                    "Falls der Menüpunkt nicht sichtbar ist, öffne die direkte URL.",
+                    "Wenn du die GitHub-Hilfe brauchst: [Quickstart für Repositories](https://docs.github.com/de/repositories/creating-and-managing-repositories/quickstart-for-repositories)"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Profil-Icon klicken.",
                 "New repository auswählen.",
@@ -616,6 +1883,17 @@
           "sections": [
             {
               "heading": "Die wichtigsten Felder",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Repository name: `vibe-coding-uebungen` oder `mein-vibe-coding`",
+                    "Description: optional, aber hilfreich für die Orientierung",
+                    "Sichtbarkeit: `Private`",
+                    "Initialize with README: aktivieren"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Repository name: `vibe-coding-uebungen` oder `mein-vibe-coding`",
                 "Description: optional, aber hilfreich für die Orientierung",
@@ -625,6 +1903,16 @@
             },
             {
               "heading": "Warum diese Felder wichtig sind",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Der Name hilft dir, dein Repository später wiederzufinden.",
+                    "`Private` schützt deine Übungen vor öffentlichem Zugriff.",
+                    "Die README sorgt dafür, dass das Repository nicht leer wirkt."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Der Name hilft dir, dein Repository später wiederzufinden.",
                 "`Private` schützt deine Übungen vor öffentlichem Zugriff.",
@@ -633,12 +1921,29 @@
             },
             {
               "heading": "Hinweis",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Ohne README wirkt das Repository für Einsteigerinnen und Einsteiger oft leer und unklar."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Ohne README wirkt das Repository für Einsteigerinnen und Einsteiger oft leer und unklar."
               ]
             },
             {
               "heading": "Copyright-Hinweis",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Kursinhalte nicht 1:1 öffentlich kopieren.",
+                    "Eigene Lösungen und eigenen Code kannst du veröffentlichen."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Kursinhalte nicht 1:1 öffentlich kopieren.",
                 "Eigene Lösungen und eigenen Code kannst du veröffentlichen."
@@ -646,6 +1951,16 @@
             },
             {
               "heading": "Typische Stolperstellen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Name ist schon vergeben: hänge eine Zahl oder ein Kürzel an.",
+                    "README ist nicht aktiv: Haken setzen, bevor du erstellst.",
+                    "Sichtbarkeit falsch: Vor dem Erstellen noch einmal auf `Private` prüfen."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Name ist schon vergeben: hänge eine Zahl oder ein Kürzel an.",
                 "README ist nicht aktiv: Haken setzen, bevor du erstellst.",
@@ -659,12 +1974,28 @@
           "title": "Kapitel 5: README online mit GitHub.dev ausfüllen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "GitHub.dev ist eine schlanke Online-Editor-Ansicht für GitHub-Repositories. Du kannst damit Dateien direkt im Browser bearbeiten, ohne dein Repository lokal zu öffnen."
+                }
+              ],
               "paragraphs": [
                 "GitHub.dev ist eine schlanke Online-Editor-Ansicht für GitHub-Repositories. Du kannst damit Dateien direkt im Browser bearbeiten, ohne dein Repository lokal zu öffnen."
               ]
             },
             {
               "heading": "Wofür ist GitHub.dev gedacht?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du willst schnell eine README oder eine andere Textdatei ändern.",
+                    "Du möchtest direkt im Browser arbeiten.",
+                    "Du brauchst nur eine einfache Bearbeitung und keinen kompletten lokalen Entwicklungsaufbau."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Du willst schnell eine README oder eine andere Textdatei ändern.",
                 "Du möchtest direkt im Browser arbeiten.",
@@ -673,6 +2004,17 @@
             },
             {
               "heading": "So kommst du hin",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne dein Repository auf GitHub.",
+                    "Drücke den Punkt `.` auf der Tastatur.",
+                    "Oder rufe direkt `https://github.dev/<dein-benutzername>/<dein-repository>` auf.",
+                    "Danach öffnet sich eine browserbasierte Editor-Ansicht."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffne dein Repository auf GitHub.",
                 "Drücke den Punkt `.` auf der Tastatur.",
@@ -682,6 +2024,16 @@
             },
             {
               "heading": "Was du dort mit der README machen kannst",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Die `README.md` anklicken.",
+                    "Den Text direkt im Editor ergänzen.",
+                    "Speichern und den Commit für die Änderung ausführen."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Die `README.md` anklicken.",
                 "Den Text direkt im Editor ergänzen.",
@@ -690,6 +2042,20 @@
             },
             {
               "heading": "Kurz erklärt: Branch, Commit und Merge",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "**Branch**: Ein eigener Arbeitszweig für Änderungen, damit der Hauptstand stabil bleibt.",
+                    "**Commit**: Ein gespeicherter Zwischenstand deiner Änderung mit Nachricht.",
+                    "**Merge**: Das Zusammenführen von Änderungen aus einem Branch in einen anderen."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Wenn du in GitHub.dev speicherst, wirst du oft gefragt, ob direkt in `main` oder in einem neuen Branch gearbeitet werden soll. Für den Kursstart ist beides ok, später arbeiten wir sauber mit Branches und Pull Requests."
+                }
+              ],
               "paragraphs": [
                 "Wenn du in GitHub.dev speicherst, wirst du oft gefragt, ob direkt in `main` oder in einem neuen Branch gearbeitet werden soll. Für den Kursstart ist beides ok, später arbeiten wir sauber mit Branches und Pull Requests."
               ],
@@ -701,12 +2067,27 @@
             },
             {
               "heading": "Wichtig",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Auf Branch, Commit und Merge gehen wir in den nächsten Lektionen noch genauer ein."
+                }
+              ],
               "paragraphs": [
                 "Auf Branch, Commit und Merge gehen wir in den nächsten Lektionen noch genauer ein."
               ]
             },
             {
               "heading": "Hinweis",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "GitHub.dev ist praktisch für Textdateien und schnelle Anpassungen.",
+                    "Für komplexere Arbeiten mit Terminal, Tests oder mehreren Dateien ist VS Code lokal besser geeignet."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "GitHub.dev ist praktisch für Textdateien und schnelle Anpassungen.",
                 "Für komplexere Arbeiten mit Terminal, Tests oder mehreren Dateien ist VS Code lokal besser geeignet."
@@ -719,6 +2100,16 @@
           "title": "Kapitel 6: Repository erstellen und prüfen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Auf Create repository klicken.",
+                    "Fertig.",
+                    "Warte kurz, bis GitHub das Repository angelegt hat."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Auf Create repository klicken.",
                 "Fertig.",
@@ -727,6 +2118,17 @@
             },
             {
               "heading": "Danach sichtbar",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Repository-Name",
+                    "README.md",
+                    "Code-Button",
+                    "Die Startseite deines neuen Repositories"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Repository-Name",
                 "README.md",
@@ -736,6 +2138,16 @@
             },
             {
               "heading": "Mini-Kontrolle",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffnet sich dein Repository ohne Fehlermeldung?",
+                    "Siehst du eine README.md?",
+                    "Steht oben der richtige Repository-Name?"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffnet sich dein Repository ohne Fehlermeldung?",
                 "Siehst du eine README.md?",
@@ -751,7 +2163,17 @@
       "Lege auf GitHub ein neues Repository an.",
       "Wähle einen passenden Namen, stelle auf Private und aktiviere die README."
     ],
-    "taskNotes": []
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "Neues Repository erstellen",
+        "href": "https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-new-repository"
+      },
+      {
+        "label": "README-Dateien zu Repositories hinzufügen",
+        "href": "https://docs.github.com/de/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+      }
+    ]
   },
   "5": {
     "title": "Git-Grundlagen",
@@ -770,12 +2192,29 @@
           "title": "Kapitel 1: Was ist ein VCS und welche gibt es?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Version Control System (VCS) verwaltet Änderungen an Dateien über die Zeit. Du kannst damit Stände vergleichen, zurückspringen und im Team sauber zusammenarbeiten."
+                }
+              ],
               "paragraphs": [
                 "Ein Version Control System (VCS) verwaltet Änderungen an Dateien über die Zeit. Du kannst damit Stände vergleichen, zurückspringen und im Team sauber zusammenarbeiten."
               ]
             },
             {
               "heading": "Bekannte VCS-Beispiele",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Git (heute Standard in den meisten Teams)",
+                    "Subversion (SVN)",
+                    "Mercurial",
+                    "Perforce (häufig in größeren Enterprise-Setups)"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Git (heute Standard in den meisten Teams)",
                 "Subversion (SVN)",
@@ -785,6 +2224,16 @@
             },
             {
               "heading": "Zentral vs. verteilt",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Zentrale Systeme (z. B. SVN): ein zentraler Server ist der Hauptstand.",
+                    "Verteilte Systeme (z. B. Git): jede lokale Kopie hat eine vollständige Historie.",
+                    "Für den Lern- und Projektalltag ist das verteilte Modell meist flexibler."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Zentrale Systeme (z. B. SVN): ein zentraler Server ist der Hauptstand.",
                 "Verteilte Systeme (z. B. Git): jede lokale Kopie hat eine vollständige Historie.",
@@ -798,6 +2247,18 @@
           "title": "Kapitel 2: Warum wir im Kurs Git verwenden",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Git ist der De-facto-Standard in moderner Softwareentwicklung.",
+                    "Git passt direkt zu GitHub und unserem Kursablauf.",
+                    "Du lernst Branches, Commits und Pull Requests in einem realen Setup.",
+                    "Änderungen bleiben nachvollziehbar und reviewbar.",
+                    "Das Wissen ist über den Kurs hinaus direkt nutzbar."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Git ist der De-facto-Standard in moderner Softwareentwicklung.",
                 "Git passt direkt zu GitHub und unserem Kursablauf.",
@@ -808,6 +2269,20 @@
             },
             {
               "heading": "Kurzvergleich: Warum nicht nur ZIP-Dateien?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Mit ZIP-Backups verlierst du schnell den Überblick.\nMit Git hast du:"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "klare Historie",
+                    "Vergleichbarkeit von Änderungen",
+                    "Teamfähigkeit über Branches und Reviews"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "Mit ZIP-Backups verlierst du schnell den Überblick.\nMit Git hast du:"
               ],
@@ -825,6 +2300,15 @@
           "sections": [
             {
               "heading": "Lokal (auf deinem Rechner)",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Dort bearbeitest du Dateien direkt in VS Code.",
+                    "Änderungen sind erst einmal nur bei dir sichtbar."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Dort bearbeitest du Dateien direkt in VS Code.",
                 "Änderungen sind erst einmal nur bei dir sichtbar."
@@ -832,6 +2316,15 @@
             },
             {
               "heading": "GitHub-Repo (remote)",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Das ist die Online-Version deines Repositories auf GitHub.",
+                    "Dort sehen andere Teammitglieder deine Änderungen, sobald du sie hochlädst."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Das ist die Online-Version deines Repositories auf GitHub.",
                 "Dort sehen andere Teammitglieder deine Änderungen, sobald du sie hochlädst."
@@ -839,6 +2332,18 @@
             },
             {
               "heading": "Merksatz",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Lokal arbeiten -> committen -> pushen -> auf GitHub sichtbar."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![So liest du eine Commit-Historie: Lokal, Commit-Historie und GitHub (remote)](/assets/lessons/step-05-git-drei-saeulen.png)"
+                }
+              ],
               "paragraphs": [
                 "![So liest du eine Commit-Historie: Lokal, Commit-Historie und GitHub (remote)](/assets/lessons/step-05-git-drei-saeulen.png)"
               ],
@@ -853,12 +2358,28 @@
           "title": "Kapitel 4: Was sind Branches?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Branch ist ein Arbeitszweig. Du kannst darin Änderungen sicher vorbereiten, ohne den Hauptzweig (`main`) direkt zu verändern."
+                }
+              ],
               "paragraphs": [
                 "Ein Branch ist ein Arbeitszweig. Du kannst darin Änderungen sicher vorbereiten, ohne den Hauptzweig (`main`) direkt zu verändern."
               ]
             },
             {
               "heading": "Warum Branches wichtig sind",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`main` bleibt stabil.",
+                    "Features und Korrekturen sind getrennt nachvollziehbar.",
+                    "Änderungen können geprüft werden, bevor sie übernommen werden."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`main` bleibt stabil.",
                 "Features und Korrekturen sind getrennt nachvollziehbar.",
@@ -873,18 +2394,42 @@
           "sections": [
             {
               "heading": "Was ist ein Commit?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Commit ist ein gespeicherter Zwischenstand deiner Arbeit inklusive Commit-Nachricht."
+                }
+              ],
               "paragraphs": [
                 "Ein Commit ist ein gespeicherter Zwischenstand deiner Arbeit inklusive Commit-Nachricht."
               ]
             },
             {
               "heading": "Was ist `git pull`?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "`git pull` holt Änderungen vom GitHub-Repo in dein lokales Repo."
+                }
+              ],
               "paragraphs": [
                 "`git pull` holt Änderungen vom GitHub-Repo in dein lokales Repo."
               ]
             },
             {
               "heading": "Typischer Ablauf im Alltag",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git pull` (erst aktualisieren)",
+                    "Datei ändern",
+                    "`git add ...`",
+                    "`git commit -m \"...\"`",
+                    "`git push`"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git pull` (erst aktualisieren)",
                 "Datei ändern",
@@ -901,18 +2446,39 @@
           "sections": [
             {
               "heading": "Was ist Cloning?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Beim Klonen (`git clone <url>`) lädst du ein bestehendes Repository auf deinen Rechner."
+                }
+              ],
               "paragraphs": [
                 "Beim Klonen (`git clone <url>`) lädst du ein bestehendes Repository auf deinen Rechner."
               ]
             },
             {
               "heading": "Was ist Forking?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Fork ist eine eigene Kopie eines fremden GitHub-Repositories in deinem GitHub-Account."
+                }
+              ],
               "paragraphs": [
                 "Ein Fork ist eine eigene Kopie eines fremden GitHub-Repositories in deinem GitHub-Account."
               ]
             },
             {
               "heading": "Wann was?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**Clone**: Wenn du mit einem Repo arbeiten willst, zu dem du Zugriff hast.",
+                    "**Fork**: Wenn du ein externes Repo übernehmen möchtest, ohne das Original direkt zu verändern."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "**Clone**: Wenn du mit einem Repo arbeiten willst, zu dem du Zugriff hast.",
                 "**Fork**: Wenn du ein externes Repo übernehmen möchtest, ohne das Original direkt zu verändern."
@@ -925,12 +2491,28 @@
           "title": "Kapitel 7: Was ist ein Pull Request?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Pull Request (PR) ist eine Anfrage, Änderungen aus einem Branch in einen anderen Branch zu übernehmen."
+                }
+              ],
               "paragraphs": [
                 "Ein Pull Request (PR) ist eine Anfrage, Änderungen aus einem Branch in einen anderen Branch zu übernehmen."
               ]
             },
             {
               "heading": "Wofür PRs da sind",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Änderungen transparent machen",
+                    "Review ermöglichen",
+                    "Qualität vor dem Merge sichern"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Änderungen transparent machen",
                 "Review ermöglichen",
@@ -945,6 +2527,18 @@
           "sections": [
             {
               "heading": "Pull Request anlegen (GitHub)",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Branch auf GitHub pushen.",
+                    "Auf „Compare & pull request\" klicken.",
+                    "Titel und Beschreibung eintragen.",
+                    "Zielbranch prüfen (meist `main`).",
+                    "Pull Request erstellen."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Branch auf GitHub pushen.",
                 "Auf „Compare & pull request\" klicken.",
@@ -955,6 +2549,20 @@
             },
             {
               "heading": "Reviewer einstellen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Im PR rechts den Bereich „Reviewers\" öffnen.",
+                    "Gewünschte Person auswählen.",
+                    "Review-Anfrage absenden."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Hinweis: Auf Reviewer, Pull Requests und Review-Prozesse gehen wir im Kurs später noch genauer ein."
+                }
+              ],
               "paragraphs": [
                 "Hinweis: Auf Reviewer, Pull Requests und Review-Prozesse gehen wir im Kurs später noch genauer ein."
               ],
@@ -971,12 +2579,27 @@
           "title": "Kapitel 9: Was sind Merges?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Merge bedeutet: Änderungen aus einem Branch werden in einen Zielbranch übernommen."
+                }
+              ],
               "paragraphs": [
                 "Merge bedeutet: Änderungen aus einem Branch werden in einen Zielbranch übernommen."
               ]
             },
             {
               "heading": "Nach dem Merge",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Die Änderungen sind im Zielbranch enthalten.",
+                    "Der Arbeitsbranch kann meist gelöscht werden."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Die Änderungen sind im Zielbranch enthalten.",
                 "Der Arbeitsbranch kann meist gelöscht werden."
@@ -989,12 +2612,37 @@
           "title": "Kapitel 10: Szenario aus dem Kursalltag",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Du sollst in deinem Übungs-Repository die README erweitern und eine kurze Selbstvorstellung ergänzen."
+                }
+              ],
               "paragraphs": [
                 "Du sollst in deinem Übungs-Repository die README erweitern und eine kurze Selbstvorstellung ergänzen."
               ]
             },
             {
               "heading": "So läuft es sauber ab",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du startest lokal im aktuellen Stand (`git pull`).",
+                    "Du erstellst einen Branch, z. B. `feature/readme-vorstellung`.",
+                    "Du bearbeitest die `README.md`.",
+                    "Du speicherst die Änderung mit Commit.",
+                    "Du pushst den Branch nach GitHub.",
+                    "Du öffnest einen Pull Request nach `main`.",
+                    "Du setzt eine Person als Reviewer.",
+                    "Nach Review wird gemerged."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Ergebnis: Die Änderung ist in `main`, nachvollziehbar dokumentiert und reviewt."
+                }
+              ],
               "paragraphs": [
                 "Ergebnis: Die Änderung ist in `main`, nachvollziehbar dokumentiert und reviewt."
               ],
@@ -1017,6 +2665,15 @@
           "sections": [
             {
               "heading": "Ausgangslage",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Lokales Repo ist geöffnet.",
+                    "Du willst nur die README ändern."
+                  ]
+                }
+              ],
               "unorderedItems": [
                 "Lokales Repo ist geöffnet.",
                 "Du willst nur die README ändern."
@@ -1024,6 +2681,22 @@
             },
             {
               "heading": "Beispielablauf",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git pull`",
+                    "`git checkout -b feature/readme-update`",
+                    "`README.md` bearbeiten und speichern",
+                    "`git add README.md`",
+                    "`git commit -m \"README um Vorstellung ergänzt\"`",
+                    "`git push -u origin feature/readme-update`",
+                    "Auf GitHub Pull Request erstellen",
+                    "Reviewer hinzufügen",
+                    "Nach Freigabe mergen"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git pull`",
                 "`git checkout -b feature/readme-update`",
@@ -1038,6 +2711,17 @@
             },
             {
               "heading": "Warum dieses Vorgehen gut ist",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Kleine, klare Änderung",
+                    "Saubere Historie",
+                    "Review möglich",
+                    "Kein Chaos auf `main`"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Kleine, klare Änderung",
                 "Saubere Historie",
@@ -1052,6 +2736,30 @@
           "title": "Kapitel 12: Empfehlung zum Üben",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Wenn du Git interaktiv üben und besser verstehen willst, nutze Inter-Git:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "https://inter-git.com/lessons/introduction"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Warum hilfreich:"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Die Abläufe werden Schritt für Schritt visuell erklärt.",
+                    "Du bekommst ein besseres Gefühl für Branches, Commits und Merges.",
+                    "Es eignet sich gut als Ergänzung zu den Kursübungen."
+                  ]
+                }
+              ],
               "paragraphs": [
                 "Wenn du Git interaktiv üben und besser verstehen willst, nutze Inter-Git:",
                 "Warum hilfreich:"
@@ -1072,12 +2780,29 @@
           "title": "Kapitel 13: Managing Remotes",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Remote ist die Verbindung von deinem lokalen Repository zu einem Online-Repository (zum Beispiel auf GitHub)."
+                }
+              ],
               "paragraphs": [
                 "Ein Remote ist die Verbindung von deinem lokalen Repository zu einem Online-Repository (zum Beispiel auf GitHub)."
               ]
             },
             {
               "heading": "Wichtige Befehle",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git remote -v` zeigt dir alle Remotes und URLs.",
+                    "`git remote add origin <url>` fügt ein Remote hinzu.",
+                    "`git remote set-url origin <url>` ändert die URL eines Remotes.",
+                    "`git remote remove origin` entfernt ein Remote."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git remote -v` zeigt dir alle Remotes und URLs.",
                 "`git remote add origin <url>` fügt ein Remote hinzu.",
@@ -1087,6 +2812,12 @@
             },
             {
               "heading": "Typischer Check",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Wenn `git push` nicht funktioniert, prüfe zuerst mit `git remote -v`, ob `origin` korrekt gesetzt ist."
+                }
+              ],
               "paragraphs": [
                 "Wenn `git push` nicht funktioniert, prüfe zuerst mit `git remote -v`, ob `origin` korrekt gesetzt ist."
               ]
@@ -1099,6 +2830,32 @@
           "sections": [
             {
               "heading": "`git push`",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "`git push` überträgt deine lokalen Commits auf GitHub."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Typischer erster Push für einen neuen Branch:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "`git push -u origin feature/readme-update`"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Danach reicht meistens:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "`git push`"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "`git push` überträgt deine lokalen Commits auf GitHub.",
                 "Typischer erster Push für einen neuen Branch:",
@@ -1111,6 +2868,23 @@
             },
             {
               "heading": "`git pull`",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "`git pull` holt neue Änderungen vom Remote und führt sie direkt in deinen aktuellen Branch zusammen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Merksatz:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "`push` = lokal nach remote",
+                    "`pull` = remote nach lokal"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "`git pull` holt neue Änderungen vom Remote und führt sie direkt in deinen aktuellen Branch zusammen.",
                 "Merksatz:"
@@ -1127,12 +2901,27 @@
           "title": "Kapitel 15: Was ist Fetch?",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "`git fetch` holt neue Informationen vom Remote, ändert aber deinen aktuellen Arbeitsstand nicht automatisch."
+                }
+              ],
               "paragraphs": [
                 "`git fetch` holt neue Informationen vom Remote, ändert aber deinen aktuellen Arbeitsstand nicht automatisch."
               ]
             },
             {
               "heading": "Unterschied zu `git pull`",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git fetch`: nur herunterladen, noch nicht mergen.",
+                    "`git pull`: herunterladen und direkt mergen."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git fetch`: nur herunterladen, noch nicht mergen.",
                 "`git pull`: herunterladen und direkt mergen."
@@ -1140,6 +2929,16 @@
             },
             {
               "heading": "Wann `fetch` sinnvoll ist",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du willst erst prüfen, was neu ist.",
+                    "Du willst bewusst entscheiden, wann gemerged wird.",
+                    "Du willst Konflikte kontrollierter behandeln."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Du willst erst prüfen, was neu ist.",
                 "Du willst bewusst entscheiden, wann gemerged wird.",
@@ -1148,6 +2947,16 @@
             },
             {
               "heading": "Praktischer Ablauf",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git fetch`",
+                    "Änderungen ansehen (zum Beispiel im Git-Graph oder mit Diff)",
+                    "Danach bewusst `git merge` oder `git pull`"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git fetch`",
                 "Änderungen ansehen (zum Beispiel im Git-Graph oder mit Diff)",
@@ -1161,12 +2970,29 @@
           "title": "Kapitel 16: Commit History verstehen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Die Commit History ist die nachvollziehbare Chronik deines Projekts: Wer hat wann was geändert und warum?"
+                }
+              ],
               "paragraphs": [
                 "Die Commit History ist die nachvollziehbare Chronik deines Projekts: Wer hat wann was geändert und warum?"
               ]
             },
             {
               "heading": "Wichtige Befehle",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git log` zeigt die vollständige Historie mit Commit-ID, Autor, Datum und Nachricht.",
+                    "`git log --oneline` zeigt eine kompakte Kurzansicht pro Commit.",
+                    "`git log --oneline --graph --all` zeigt zusätzlich die Branch-Struktur als Verlaufsgrafik.",
+                    "`git show <commit-id>` zeigt die Details eines bestimmten Commits."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git log` zeigt die vollständige Historie mit Commit-ID, Autor, Datum und Nachricht.",
                 "`git log --oneline` zeigt eine kompakte Kurzansicht pro Commit.",
@@ -1176,6 +3002,16 @@
             },
             {
               "heading": "Wofür das im Kurs hilft",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du siehst, ob deine Änderungen wirklich committed wurden.",
+                    "Du kannst Änderungen für Review und Rückfragen klar belegen.",
+                    "Du findest den letzten stabilen Stand schneller wieder."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Du siehst, ob deine Änderungen wirklich committed wurden.",
                 "Du kannst Änderungen für Review und Rückfragen klar belegen.",
@@ -1184,6 +3020,16 @@
             },
             {
               "heading": "Mini-Check vor Pull Request",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git status`",
+                    "`git log --oneline -n 5`",
+                    "Commit-Nachrichten prüfen: Sind sie klar und verständlich?"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`git status`",
                 "`git log --oneline -n 5`",
@@ -1194,7 +3040,23 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Arbeite die Git-Grundbegriffe und den Grundworkflow (add/commit/push) durch.",
+      "Führe die zentralen Befehle mindestens einmal im eigenen Repository aus.",
+      "Prüfe nach jedem Schritt den Status mit git status."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "GitHub: Git einrichten",
+        "href": "https://docs.github.com/de/get-started/git-basics/set-up-git"
+      },
+      {
+        "label": "GitHub: Git-Befehle im Überblick",
+        "href": "https://docs.github.com/de/get-started/using-git/about-git"
+      }
+    ]
   },
   "6": {
     "title": "Markdown Grundlagen",
@@ -1213,6 +3075,16 @@
           "title": "Kapitel 1: Warum Markdown hier direkt wichtig ist",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Auf GitHub werden besonders häufig Markdown-Dateien bearbeitet, zum Beispiel `README.md`, Notizen oder kleine Dokumentationen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Markdown ist für den Kurs wichtig, weil du damit Inhalte schnell lesbar strukturieren kannst, ohne ein kompliziertes Textprogramm zu brauchen."
+                }
+              ],
               "paragraphs": [
                 "Auf GitHub werden besonders häufig Markdown-Dateien bearbeitet, zum Beispiel `README.md`, Notizen oder kleine Dokumentationen.",
                 "Markdown ist für den Kurs wichtig, weil du damit Inhalte schnell lesbar strukturieren kannst, ohne ein kompliziertes Textprogramm zu brauchen."
@@ -1225,6 +3097,32 @@
           "title": "Kapitel 2: Diese Markdown-Grundlagen solltest du kurz öffnen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Bevor du startest, schau in diese beiden Dateien:"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "[course/03-course-library/01-markdown/01-markdown-grundlagen.md](../../../03-course-library/01-markdown/01-markdown-grundlagen.md)",
+                    "[course/03-course-library/01-markdown/02-formatierung_md-files.md](../../../03-course-library/01-markdown/02-formatierung_md-files.md)"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Worauf du beim Lesen achten solltest:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Wie Überschriften mit `#` funktionieren",
+                    "Wie Listen erstellt werden",
+                    "Wie Links geschrieben werden",
+                    "Wie du Text fett markierst"
+                  ]
+                }
+              ],
               "paragraphs": [
                 "Bevor du startest, schau in diese beiden Dateien:",
                 "Worauf du beim Lesen achten solltest:"
@@ -1247,6 +3145,21 @@
           "title": "Kapitel 3: Übung 1 - Neue Markdown-Datei anlegen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Add file -> Create new file",
+                    "Dateiname: `uebung-01.md`",
+                    "Trage einen Titel mit `#` ein",
+                    "Ergänze einen kurzen Satz mit **fett** markiertem Wort",
+                    "Ergänze eine kurze Liste mit 2 bis 3 Punkten",
+                    "Füge einen einfachen Link ein, zum Beispiel zu deinem GitHub-Profil",
+                    "Nutze den Reiter **Preview**, um die Darstellung zu prüfen",
+                    "Commit changes mit passender Nachricht"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Add file -> Create new file",
                 "Dateiname: `uebung-01.md`",
@@ -1260,6 +3173,27 @@
             },
             {
               "heading": "Mini-Beispiel für `uebung-01.md`",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "```md"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Ich übe heute **Markdown** direkt auf GitHub."
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Punkt 1",
+                    "Punkt 2"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "[Mein GitHub-Profil](https://github.com/dein-username)\n```"
+                }
+              ],
               "paragraphs": [
                 "```md",
                 "Ich übe heute **Markdown** direkt auf GitHub.",
@@ -1277,6 +3211,19 @@
           "title": "Kapitel 4: Übung 2 - README bearbeiten",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`README.md` öffnen",
+                    "Stift-Icon klicken",
+                    "Eine kurze Vorstellung ergänzen",
+                    "Füge mindestens eine Überschrift, eine Liste und einen Link ein",
+                    "Vorschau prüfen",
+                    "Commit changes ausführen"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "`README.md` öffnen",
                 "Stift-Icon klicken",
@@ -1293,6 +3240,29 @@
           "title": "Kapitel 5: Commit-Historie im Browser prüfen",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Nach deinen Änderungen solltest du direkt im Browser prüfen, ob deine Commits sichtbar sind."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "So gehst du vor:"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne dein Repository auf GitHub",
+                    "Klicke auf die Commit-Anzahl oder auf den Verlauf der Datei",
+                    "Öffne den neuesten Commit",
+                    "Prüfe, welche Zeilen hinzugefügt oder geändert wurden"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "So lernst du früh, dass GitHub nicht nur Dateien speichert, sondern auch die Veränderungshistorie sichtbar macht."
+                }
+              ],
               "paragraphs": [
                 "Nach deinen Änderungen solltest du direkt im Browser prüfen, ob deine Commits sichtbar sind.",
                 "So gehst du vor:",
@@ -1312,6 +3282,19 @@
           "title": "Kapitel 6: Typischer Mini-Ablauf im Browser",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Datei öffnen oder neu anlegen",
+                    "Inhalt in Markdown schreiben",
+                    "Preview prüfen",
+                    "Commit-Nachricht eintragen",
+                    "Commit ausführen",
+                    "Historie kontrollieren"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Datei öffnen oder neu anlegen",
                 "Inhalt in Markdown schreiben",
@@ -1325,7 +3308,23 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Erstelle oder bearbeite eine Markdown-Datei im Repository.",
+      "Nutze Überschriften, Listen, Links und Codeblöcke mindestens einmal.",
+      "Prüfe die Darstellung im Vorschau-Modus."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "Markdown-Syntax (GitHub Docs)",
+        "href": "https://docs.github.com/de/get-started/writing-on-github"
+      },
+      {
+        "label": "Basic writing and formatting syntax",
+        "href": "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"
+      }
+    ]
   },
   "7": {
     "title": "Was ist VS Code?",
@@ -1344,12 +3343,57 @@
           "title": "Kapitel 1: Ein Editor und noch viel mehr",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "VS Code ist ein kostenloses Programm und eine vollständige Entwicklungsumgebung."
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "VS Code ist ein kostenloses Programm und eine vollständige Entwicklungsumgebung."
+              ]
+            },
+            {
               "heading": "Was macht VS Code besonders?",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Projektdateien in Baumstruktur",
+                    "Eingebautes Terminal",
+                    "Erweiterungen für KI, Git und mehr",
+                    "GitHub Copilot integrierbar"
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Projektdateien in Baumstruktur",
                 "Eingebautes Terminal",
                 "Erweiterungen für KI, Git und mehr",
                 "GitHub Copilot integrierbar"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 2: Warum im Kurs?",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "VS Code ist ein verbreitetes Werkzeug in echten Softwareprojekten.",
+                    "Du arbeitest damit vom ersten Tag an praxisnah."
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "VS Code ist ein verbreitetes Werkzeug in echten Softwareprojekten.",
+                "Du arbeitest damit vom ersten Tag an praxisnah."
               ]
             }
           ]
@@ -1386,7 +3430,23 @@
         }
       ]
     },
-    "requiresLessonCompletion": true
+    "requiresLessonCompletion": true,
+    "tasks": [
+      "Öffne VS Code und mache dich mit Oberfläche und Navigation vertraut.",
+      "Öffne dein Übungs-Repository lokal im Editor.",
+      "Prüfe, dass du Dateien bearbeiten und speichern kannst."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "VS Code Dokumentation",
+        "href": "https://code.visualstudio.com/docs"
+      },
+      {
+        "label": "VS Code User Interface",
+        "href": "https://code.visualstudio.com/docs/getstarted/userinterface"
+      }
+    ]
   },
   "8": {
     "title": "VS Code installieren",
@@ -1406,6 +3466,18 @@
           "sections": [
             {
               "heading": "Windows",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne https://code.visualstudio.com/",
+                    "Klicke auf **Download for Windows**.",
+                    "Starte die heruntergeladene Datei.",
+                    "Übernimm die Standardoptionen im Installer.",
+                    "Öffne VS Code nach der Installation."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffne https://code.visualstudio.com/",
                 "Klicke auf **Download for Windows**.",
@@ -1416,6 +3488,18 @@
             },
             {
               "heading": "macOS",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne https://code.visualstudio.com/",
+                    "Klicke auf **Download for Mac**.",
+                    "Entpacke die ZIP-Datei.",
+                    "Ziehe VS Code in den Ordner **Programme**.",
+                    "Öffne VS Code."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffne https://code.visualstudio.com/",
                 "Klicke auf **Download for Mac**.",
@@ -1426,6 +3510,17 @@
             },
             {
               "heading": "Linux",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne https://code.visualstudio.com/",
+                    "Wähle dein Linux-Paket oder nutze eine passende Paketquelle.",
+                    "Installiere VS Code.",
+                    "Öffne VS Code."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffne https://code.visualstudio.com/",
                 "Wähle dein Linux-Paket oder nutze eine passende Paketquelle.",
@@ -1440,6 +3535,18 @@
           "title": "Kapitel 2: Extensions in VS Code installieren",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne VS Code.",
+                    "Klicke links in der Seitenleiste auf das **Extensions-Symbol**.",
+                    "Falls du das Symbol nicht siehst: Öffne die Command Palette mit `Strg+Shift+P` und suche nach `Extensions: Install Extensions`.",
+                    "Im Suchfeld kannst du nach Erweiterungen suchen.",
+                    "Klicke bei der gewünschten Extension auf **Install**."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffne VS Code.",
                 "Klicke links in der Seitenleiste auf das **Extensions-Symbol**.",
@@ -1455,6 +3562,18 @@
           "title": "Kapitel 3: GitHub Copilot installieren",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne den **Extensions**-Bereich.",
+                    "Suche nach `GitHub Copilot`.",
+                    "Achte darauf, dass der Herausgeber **GitHub** ist.",
+                    "Klicke auf **Install**.",
+                    "Falls du aufgefordert wirst, dich anzumelden: Folge dem GitHub-Login-Fenster und melde dich mit deinem GitHub-Account an."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Öffne den **Extensions**-Bereich.",
                 "Suche nach `GitHub Copilot`.",
@@ -1470,6 +3589,19 @@
           "title": "Kapitel 4: GitHub Copilot Chat installieren",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Bleibe im **Extensions**-Bereich.",
+                    "Suche nach `GitHub Copilot Chat`.",
+                    "Achte wieder auf den Herausgeber **GitHub**.",
+                    "Klicke auf **Install**.",
+                    "Nach der Installation prüfe, ob der Chat-Bereich sichtbar ist.",
+                    "Falls der Chat nicht sichtbar ist: Öffne die Command Palette mit `Strg+Shift+P` und suche nach `Chat: Focus on Chat View`."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "Bleibe im **Extensions**-Bereich.",
                 "Suche nach `GitHub Copilot Chat`.",
@@ -1486,6 +3618,16 @@
           "title": "Kapitel 5: Kurzer Check nach der Installation",
           "sections": [
             {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "VS Code startet ohne Fehlermeldung.",
+                    "Im Extensions-Bereich sind **GitHub Copilot** und **GitHub Copilot Chat** installiert.",
+                    "Du bist mit deinem GitHub-Account angemeldet."
+                  ]
+                }
+              ],
               "orderedItems": [
                 "VS Code startet ohne Fehlermeldung.",
                 "Im Extensions-Bereich sind **GitHub Copilot** und **GitHub Copilot Chat** installiert.",
@@ -1496,6 +3638,22 @@
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": false,
+    "tasks": [
+      "Installiere VS Code lokal auf deinem Rechner.",
+      "Richte die wichtigsten Einstellungen und Erweiterungen für den Kurs ein.",
+      "Prüfe, dass Terminal und Git in VS Code funktionieren."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "VS Code Setup",
+        "href": "https://code.visualstudio.com/docs/setup/setup-overview"
+      },
+      {
+        "label": "VS Code Extensions",
+        "href": "https://code.visualstudio.com/docs/editor/extension-marketplace"
+      }
+    ]
   }
 }

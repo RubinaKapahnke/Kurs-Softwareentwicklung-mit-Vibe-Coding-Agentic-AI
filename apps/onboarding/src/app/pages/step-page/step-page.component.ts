@@ -88,6 +88,7 @@ export class StepPageComponent {
   readonly manifestEntry = computed(() => this.stepManifest()?.[this.step().id] ?? null);
   readonly effectiveTasks = computed(() => this.manifestEntry()?.tasks ?? this.step().tasks);
   readonly effectiveTaskNotes = computed(() => (this.manifestEntry()?.taskNotes ?? []) as OnboardingLessonContentSection[]);
+  readonly effectiveResources = computed(() => this.manifestEntry()?.resources ?? this.step().resources ?? []);
   readonly effectiveLessonFlow = computed(() => {
     const manifestFlow = this.manifestEntry()?.lessonFlow ?? null;
     const manifestRequiresLessonCompletion = Boolean(this.manifestEntry()?.requiresLessonCompletion);
@@ -181,7 +182,7 @@ export class StepPageComponent {
     this.state.step2Experience() === 'existing' // Nur erste Frage beantwortet, noch nicht spezialisiert
   );
   readonly showStepResources = computed(() =>
-    !this.isAccountChoiceStep() || this.showAccountStepContent()
+    (!this.isAccountChoiceStep() || this.showAccountStepContent()) && this.effectiveResources().length > 0
   );
   readonly hasLessonFollowUpContent = computed(() => {
     if (!this.visibleLessonFlow()) {
@@ -201,7 +202,7 @@ export class StepPageComponent {
       this.isCloneStep() ||
       this.showTodoSection() ||
       this.showAccountSecurityHint() ||
-      (this.step().resources?.length ?? 0) > 0 && this.showStepResources() ||
+      this.showStepResources() ||
       (this.step().vscodeHint?.length ?? 0) > 0 && !this.isCloneStep();
   });
   readonly lessonFollowUpLabel = computed(() => {

@@ -316,6 +316,15 @@
   display: block;
 }
 
+.lesson-section__check-item {
+  list-style: none;
+  margin-left: -1.35rem;
+}
+
+.lesson-section__check-item mat-checkbox {
+  display: block;
+}
+
 .lesson-section :is(p, li) a {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
@@ -644,11 +653,28 @@
   margin-top: auto;
   padding: 0.75rem 1.25rem 1.1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
   border-top: 1px solid var(--border-subtle);
   background: var(--color-surface);
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.lesson-flow__scroll-hint {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-primary-dark);
+  padding: 0.2rem 0.1rem;
+}
+
+.lesson-flow__scroll-hint mat-icon {
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .lesson-flow__back {

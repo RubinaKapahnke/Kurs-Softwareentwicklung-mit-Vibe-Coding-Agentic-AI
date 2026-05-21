@@ -139,3 +139,14 @@ GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du 
 ## Naechster Schritt
 
 Im naechsten Schritt legst du dein eigenes Repository an und uebst die ersten Aktionen auf GitHub.
+
+## Was ist zu tun
+
+1. Öffne ein Repository in GitHub und erkunde die wichtigsten Bereiche (Code, Issues, Pull Requests).
+2. Prüfe, wie sich Dateien, Commits und Branches im Browser darstellen.
+3. Vergleiche eigenes Übungs-Repository und Kurs-Repository in ihrer Rolle.
+
+## Hilfreiche Links
+
+- [Repositories auf GitHub erstellen](https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-new-repository)
+- [GitHub Glossar](https://docs.github.com/de/get-started/learning-about-github/github-glossary)

@@ -16,6 +16,7 @@
 - VS Code ist ein verbreitetes Werkzeug in echten Softwareprojekten.
 - Du arbeitest damit vom ersten Tag an praxisnah.
 
+
 ## Quiz: Schnell-Check
 
 Frage: Was ist VS Code?
@@ -28,4 +29,19 @@ Hinweis: Wähle die treffendste Aussage aus.
 
 Erfolg: Genau. VS Code ist unser zentrales Arbeitsgerät im Kurs - Editor, Terminal und KI-Assistent in einem.
 Fehler: Nicht ganz. VS Code ist ein Editor, der weit mehr kann als nur Text anzeigen - Terminal, Extensions und KI-Integration inklusive.
+
+
+
+
+## Was ist zu tun
+
+1. Öffne VS Code und mache dich mit Oberfläche und Navigation vertraut.
+2. Öffne dein Übungs-Repository lokal im Editor.
+3. Prüfe, dass du Dateien bearbeiten und speichern kannst.
+
+
+## Hilfreiche Links
+
+- [VS Code Dokumentation](https://code.visualstudio.com/docs)
+- [VS Code User Interface](https://code.visualstudio.com/docs/getstarted/userinterface)
 

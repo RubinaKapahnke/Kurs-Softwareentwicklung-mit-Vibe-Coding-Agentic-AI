@@ -38,7 +38,8 @@ The learning structure follows this hierarchy:
 
 1. **KURSBESCHREIBUNG.md** (zentral) → Defines the overall course vision, paths, module logic, and milestone meaning
 2. **course/01-course-modules/** (zentral) → Represents standalone course modules / bookable learning blocks
-  - Each course module has a `00-modulziele.md`
+  - Course modules use numbered lesson files directly in the module folder (flat structure).
+  - `00-modulziele.md` can exist, but is no longer mandatory for every module.
   - Course modules describe skill outcome, practical artifact, role relevance, sources, and completion evidence
   - Course modules can be used as standalone workshops, compact trainings, or parts of other courses
 3. **course/00-course-guides/COURSE_MILESTONES.md** (zentral) → Defines current learning milestones and group progress
@@ -97,6 +98,11 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 - Prefer clickable markdown links for workspace files in documentation.
 - Keep `README.md`, `course/00-course-guides/COURSE_MILESTONES.md`, and `course/02-course-exercises/README_UEBUNGEN.md` consistent when workflow rules change.
 - For onboarding explanatory content, maintain lesson sources under `course/01-course-modules/01-.../` as flat files (`XX-thema.md`, optional `XX-aufgaben.md`) and sync to `apps/onboarding/public/content/` via `npm run sync-content`; keep interactive step logic in Angular components. Legacy folders `XX-.../lektion-inhalte.md` and `lektion-XX-.../lektion-inhalte.md` are still accepted by the sync script.
+- In Onboarding-Lektionsdateien koennen optional die Sektionen `## Was ist zu tun` (Aufgabenquelle) und `## Hilfreiche Links` (Ressourcenquelle) verwendet werden; beide werden im Sync ohne eigene Lesson-Slide verarbeitet.
+- Screenshot-Konvention fuer Kursmodul-Lektionen:
+  - Zentrale Ablage unter `course/01-course-modules/Assets/`.
+  - Dateinamen mit eindeutigem Prefix nach Modul/Lektion, z. B. `m01-l02-...png`.
+  - Interne Screenshot-Hinweise in Lektionen als HTML-Kommentare (`<!-- ... -->`) halten, damit Teilnehmende nur den Lerninhalt sehen.
 - Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
@@ -125,7 +131,9 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
 
 ## Module Structure (Conventions)
 Kursmodul-Datei in `course/01-course-modules/<nr>-<name>/`:
-- `00-modulziele.md` → Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis
+- `00-modulziele.md` → optional: Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis
+- `XX-<thema>.md` → bevorzugter Standard fuer Lerninhalte direkt im Modulordner (flat structure)
+- `XX-<aufgaben>.md` → optionaler Aufgabenblock zur Lektion
 
 Each module follows this pattern:
 - `00-<modulname>-modulguide.md` → Intro + Inhalt (links) + **inline Selbstcheck** (Must/Should/Nice + "Wenn du nachholen willst")

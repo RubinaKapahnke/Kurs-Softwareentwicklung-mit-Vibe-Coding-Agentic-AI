@@ -97,10 +97,16 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 ## Markdown-Konvention fuer Lesson-Flow
 
 - `##` erzeugt eine neue Lesson-Seite (Slide).
-- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`.
 - `###` erzeugt einen Abschnitt innerhalb der aktuellen Slide.
 - `####` wird als Zwischenüberschrift im Abschnitt gerendert (uppercase).
 - Inline-Markdown ist erlaubt: `*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`.
+
+### Struktur-Sektionen ohne Slide
+
+- `## Was ist zu tun` wird als Aufgabenliste fuer den Schritt interpretiert (vergleichbar mit Aufgaben aus `XX-aufgaben.md`).
+- `## Hilfreiche Links` wird als Ressourcenliste fuer den Schritt interpretiert.
+- Beide Sektionen sind fuer Autoren gedacht und erscheinen nicht als eigene Lesson-Slides im Lesson-Flow.
 
 ### Quiz-Pattern in Markdown
 

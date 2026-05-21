@@ -23,7 +23,7 @@ Du bist ein Spezialist für Konsistenz- und Vollständigkeitsprüfungen im vibe-
    - Struktur in `README.md` gegen tatsächliche Ordner/Dateien
    - Verweise zwischen `course/00-course-guides/COURSE_MILESTONES.md`, `course/02-course-exercises/README_UEBUNGEN.md` und Übungsdateien
    - Quellenlinks aus Übungen auf vorhandene Quellen in `course/03-course-library/` oder `course/01-course-modules/`
-   - Dateikonvention in `course/01-course-modules/`: pro Modul mindestens `00-modulziele.md`
+   - Dateikonvention in `course/01-course-modules/`: flache, nummerierte Lektionsdateien pro Modul; `00-modulziele.md` optional
    - Trennungsebene: `course/03-course-library/` nur allgemein/kursneutral, `course/01-course-modules/` kursspezifisch
    - Onboarding-Markdown-Konvention: Inhalte unter `apps/onboarding/public/content/`, Referenz über `markdownSource`, sichere Ausgabe (sanitizing)
    - Benennungskonventionen für Agenten und Prompts in `.github/`
