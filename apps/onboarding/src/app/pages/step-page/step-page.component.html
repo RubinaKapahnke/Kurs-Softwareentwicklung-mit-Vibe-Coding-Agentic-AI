@@ -429,6 +429,15 @@
       <mat-divider></mat-divider>
     }
 
+    @if (showLessonExercises()) {
+      <section #exerciseSection>
+        <app-lesson-exercises
+          [stepId]="step().id"
+          [exercises]="effectiveExercises()"></app-lesson-exercises>
+      </section>
+      <mat-divider></mat-divider>
+    }
+
     @if (showTodoSection()) {
       <app-step-tasks
         #todoSection

@@ -296,12 +296,8 @@ export class LessonFlowComponent implements OnChanges {
       return 'cancel';
     }
 
-    if (this.isIncorrectUnselected(optionId)) {
-      return 'check_circle_outline';
-    }
-
     if (this.isCorrectUnselected(optionId)) {
-      return 'highlight_off';
+      return 'check_circle_outline';
     }
 
     return 'radio_button_unchecked';
@@ -317,11 +313,7 @@ export class LessonFlowComponent implements OnChanges {
     }
 
     if (this.isCorrectUnselected(optionId)) {
-      return 'Falsch ausgelassen';
-    }
-
-    if (this.isIncorrectUnselected(optionId)) {
-      return 'Richtig ausgelassen';
+      return 'Richtige Antwort';
     }
 
     return '';

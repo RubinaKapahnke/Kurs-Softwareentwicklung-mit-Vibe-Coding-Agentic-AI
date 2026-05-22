@@ -360,7 +360,7 @@ function parseLessonFlowFromMarkdown(markdown, fallbackTitle, sourceLabel) {
     }
   }
 
-  const ignoredH2 = new Set(['ziel', 'aufgaben', 'fallback', 'erfolgskriterium', 'was ist zu tun', 'hilfreiche links']);
+  const ignoredH2 = new Set(['ziel', 'aufgaben', 'fallback', 'erfolgskriterium', 'was ist zu tun', 'hilfreiche links', 'übungen zur lektion', 'uebungen zur lektion']);
   const slides = [];
 
   for (let i = 0; i < h2Blocks.length; i++) {
@@ -488,6 +488,96 @@ function extractResourcesFromHilfreicheLinks(markdown) {
   }
 
   return resources.length > 0 ? resources : null;
+}
+
+function extractExercisesFromUebungen(markdown) {
+  const sectionLines = findHeadingSectionLines(markdown, ['Übungen zur Lektion', 'Uebungen zur Lektion']);
+  if (!sectionLines || sectionLines.every((line) => !line.trim())) {
+    return null;
+  }
+
+  const exercises = [];
+  let current = null;
+  let mode = null;
+
+  const pushCurrent = () => {
+    if (!current) {
+      return;
+    }
+
+    if (current.title || current.goal || current.steps.length > 0 || current.checks.length > 0) {
+      exercises.push(current);
+    }
+  };
+
+  for (const rawLine of sectionLines) {
+    const heading = parseHeading(rawLine);
+    if (heading?.level === 3) {
+      pushCurrent();
+      current = {
+        title: sanitizeInlineMarkdown(heading.text),
+        goal: undefined,
+        steps: [],
+        checks: [],
+      };
+      mode = null;
+      continue;
+    }
+
+    if (!current) {
+      continue;
+    }
+
+    const line = rawLine.trim();
+    if (!line) {
+      continue;
+    }
+
+    const goalMatch = line.match(/^Ziel:\s*(.+)$/i);
+    if (goalMatch) {
+      current.goal = sanitizeInlineMarkdown(goalMatch[1]);
+      mode = null;
+      continue;
+    }
+
+    if (/^Aufgabe:\s*$/i.test(line)) {
+      mode = 'steps';
+      continue;
+    }
+
+    if (/^Mini-Check:\s*$/i.test(line)) {
+      mode = 'checks';
+      continue;
+    }
+
+    const checkboxMatch = line.match(/^[-*]\s+\[(?: |x|X)\]\s+(.+)$/);
+    if (checkboxMatch) {
+      current.checks.push(sanitizeInlineMarkdown(checkboxMatch[1]));
+      continue;
+    }
+
+    const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
+    if (orderedMatch) {
+      if (mode === 'checks') {
+        current.checks.push(sanitizeInlineMarkdown(orderedMatch[1]));
+      } else {
+        current.steps.push(sanitizeInlineMarkdown(orderedMatch[1]));
+      }
+      continue;
+    }
+
+    const bulletMatch = line.match(/^[-*]\s+(.+)$/);
+    if (bulletMatch) {
+      if (mode === 'checks') {
+        current.checks.push(sanitizeInlineMarkdown(bulletMatch[1]));
+      } else {
+        current.steps.push(sanitizeInlineMarkdown(bulletMatch[1]));
+      }
+    }
+  }
+
+  pushCurrent();
+  return exercises.length > 0 ? exercises : null;
 }
 
 function extractSectionByHeading(markdown, fromHeading, sourcePath) {
@@ -827,6 +917,7 @@ async function syncLerninhalteManifest() {
     let goal = null;
     let requiresLessonCompletion = false;
     let lessonFlow = null;
+    let manifestExercises = null;
     let manifestTasks = null;
     let manifestTaskNotes = null;
     let manifestResources = null;
@@ -877,6 +968,11 @@ async function syncLerninhalteManifest() {
         if (hilfreicheLinks && manifestResources === null) {
           manifestResources = hilfreicheLinks;
         }
+
+        const lessonExercises = extractExercisesFromUebungen(content);
+        if (lessonExercises && manifestExercises === null) {
+          manifestExercises = lessonExercises;
+        }
       }
 
       // Pre-parse tasks from aufgaben.md for manifest embedding
@@ -907,6 +1003,9 @@ async function syncLerninhalteManifest() {
       if (manifestTasks !== null) {
         entry.tasks = manifestTasks;
         entry.taskNotes = manifestTaskNotes;
+      }
+      if (manifestExercises !== null) {
+        entry.exercises = manifestExercises;
       }
       if (manifestResources !== null) {
         entry.resources = manifestResources;

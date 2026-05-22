@@ -99,20 +99,21 @@ Ergebnis:
 ## Markdown-Konvention Fuer Lesson-Flow
 
 - Jede `##`-Überschrift erzeugt eine neue Lesson-Slide.
-- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`, `## Übungen zur Lektion`.
 - `###` erzeugt Abschnitte innerhalb der Slide.
 - `####` erzeugt eine Zwischenüberschrift im Abschnitt.
-- Bilder können direkt im Markdown eingebunden werden: `![Beschreibung](/assets/lessons/step-02-github-login.png)`.
-  - Verwende absolute Pfade mit `/assets/lessons/`.
-  - Bilder liegen unter `public/assets/lessons/`.
-  - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
-  - Siehe [public/assets/lessons/README.md](public/assets/lessons/README.md) für Bildmaße und Anforderungen.
+- Inline-Markdown ist erlaubt: `*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`.
+- Bilder können direkt im Markdown eingebunden werden, z. B. `![Beschreibung](../Assets/m01-l02-gh-01-sign-up-startseite.png)`.
+	- Diese relativen Pfade werden beim Sync auf `/content/Assets/...` normalisiert.
+	- Quelle für Bilder: `course/01-course-modules/Assets/`.
+	- Der Sync spiegelt die Bilder nach `apps/onboarding/public/content/Assets/`.
 
 ### Struktur-Sektionen ohne Slide
 
 - `## Was ist zu tun`: Wird als Aufgabenquelle für den Schritt übernommen (falls vorhanden).
 - `## Hilfreiche Links`: Wird als Ressourcenliste für den Schritt übernommen (falls vorhanden).
-- Beide Sektionen sind Autoren-Struktur und werden nicht als eigene Lesson-Slides gerendert.
+- `## Übungen zur Lektion`: Wird als eigene Übungs-Komponente unterhalb des Lesson-Flows dargestellt. Übungsschritte sind abhakbar, pro Übung kann `erledigt` oder `nicht geschafft` markiert werden.
+- Diese Sektionen erscheinen nicht als eigene Slides im Lesson-Flow.
 
 ### Quiz-Pattern
 

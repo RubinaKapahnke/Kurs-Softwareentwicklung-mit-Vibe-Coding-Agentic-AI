@@ -4,7 +4,9 @@
 
 Du verstehst, wofür GitHub genutzt wird, und hast dein eigenes Übungs-Repository erfolgreich erstellt.
 
-## Kapitel 1: Was ist GitHub?
+## Kapitel 1: Git, GitHub, Repository
+
+### Was ist GitHub
 
 GitHub ist eine Plattform im Web, auf der du Code speichern, versionieren und teilen kannst.
 
@@ -13,6 +15,25 @@ Du kannst dir GitHub wie einen zentralen Ort vorstellen, an dem Projekte nicht n
 ### Was ist Git?
 
 GitHub basiert auf Git. Git ist das technische Werkzeug für Versionskontrolle, GitHub ist die Plattform darum herum: mit Weboberfläche, Kollaboration und Überblick über Änderungen.
+
+### Git ist nicht GitHub: So hängen beide zusammen
+
+Git und GitHub werden oft zusammen genannt, sind aber nicht dasselbe:
+
+- Git ist das Versionskontrollsystem. Es speichert Änderungen an Dateien als nachvollziehbare Historie.
+- GitHub ist die Online-Plattform, auf der Git-Repositories liegen und gemeinsam genutzt werden.
+
+So bauen sie aufeinander auf:
+
+1. Du arbeitest an Dateien und erzeugst mit Git lokale Versionsstände.
+2. Diese Stände überträgst du in ein Repository auf GitHub.
+3. Auf GitHub kannst du den Verlauf ansehen, Feedback erhalten und mit anderen zusammenarbeiten.
+
+Kurzformel: Git ist das Werkzeug, GitHub ist der gemeinsame Ort im Web.
+
+Hinweis: In dieser Lektion reicht das Grundverständnis. Git selbst behandeln wir später im Kurs noch deutlich tiefer mit praktischen Befehlen und typischen Workflows.
+
+![Git vs. Github](../Assets/m01l02_git-vs-github.png)
 
 ### Was ist ein Repository?
 
@@ -33,8 +54,7 @@ Im Kurs nutzt du GitHub, um:
 
 Kurz gesagt: GitHub hilft dir, nachvollziehbar, teamfähig und professionell zu arbeiten, auch wenn du gerade erst startest.
 
-
-Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So werden wir es verwenden:
+Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So nutzen wir es konkret:
 
 **Dein eigenes Übungs-Repository**
 Du legst auf GitHub dein persönliches Repository an. Dort speicherst du deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir.
@@ -107,7 +127,7 @@ Hinweis: Für Accounts, die du nach dem Kurs weiter nutzt, sind beide Varianten 
 
 - [ ] Ich kann mich mit meinem GitHub-Account einloggen.
 - [ ] Ich sehe mein Profilsymbol oben rechts.
-- [ ] Ich habe Zugriff auf mein Profil unter https://github.com/"mein-benutzername".
+- [ ] Ich habe Zugriff auf mein Profil unter https://github.com/<mein-benutzername>.
 
 ![Profil URL](../Assets/m01-l02-gh-05-profil-url.png)
 
@@ -167,36 +187,34 @@ Jetzt legst du dein eigenes Übungs-Repository an. Dieses Repository ist dein pe
 
 ![Repository anlegen](../Assets/m01-l03-gh-06-repository-anlegen.png)
 
-4. Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname.  
+2. Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname.
 
-### Hinweis: Verwende besser keine Umlaute. 
+### Hinweis: Verwende beim Namen besser keine Umlaute. 
 GitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche.
+
+### Beschreibung hinzufügen
 
 ![Repository anlegen](../Assets/m01-l03-gh-07-repository-benennen.png)
 
-5. Ergänze optional eine kurze Beschreibung.
+3. Ergänze optional eine kurze Beschreibung.
 
 Beispiel:
-
 ![Repository anlegen](../Assets/m01-l03-gh-08-repository-beschreibung.png)
 
-6. Wähle bei Sichtbarkeit **Private** aus.
-
-So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll.
+4. Wähle bei Sichtbarkeit **Private** aus. So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll.
 
 ![Repository anlegen](../Assets/m01-l03-gh-09create-repository-visibility.png)
 
 
-7. Aktiviere **Add a README file**.
+5. Aktiviere **Add a README file**. Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist.
 
-Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist.
+6. Lasse **.gitignore** und **License** zunächst unverändert.
 
-8. Lasse **.gitignore** und **License** zunächst unverändert.
-9. Klicke auf **Create repository**.
-
-![Repository erstellen mit Name, Private und README](../Assets/m01-l03-gh-10create-repository-files.png)
+7. Klicke auf **Create repository**.
 
 ![Repository erstellen mit Name, Private und README](../Assets/m01-l03-gh-10create-repository-create.png)
+
+![Repository erstellen mit Name, Private und README](../Assets/m01-l03-gh-10create-repository-files.png)
 
 ### Nach dem Erstellen
 
@@ -207,6 +225,10 @@ Du erkennst, dass es funktioniert hat, wenn:
 - der Repository-Name oben sichtbar ist,
 - eine Datei namens `README.md` angezeigt wird,
 - die URL ungefähr so aussieht:
+
+```text
+https://github.com/<dein-benutzername>/uebungs-repository-vorname-nachname
+```
 
 ![Repository erstellen mit Name, Private und README](../Assets/m01-l03-gh-11-new-repository.png)
 
@@ -260,11 +282,121 @@ Erfolg: Richtig! Dein Übungs-Repository ist dein persönlicher Arbeitsbereich f
 
 Fehler: Nicht ganz. Dein Übungs-Repository ist der Ort, an dem du deine Übungen, Notizen, Code und Lösungen speicherst.
 
+## Kurz erklärt: Was ist ein Commit?
+
+Ein Commit ist ein gespeicherter Zwischenstand deiner Änderungen mit einer kurzen Beschreibung.
+
+Wenn du in GitHub auf **Commit changes** klickst, wird genau dieser Stand in der Historie deines Repositorys festgehalten. So kannst du später nachvollziehen, was du wann geändert hast.
+
+Hinweis: In dieser Lektion reicht dieses Grundverständnis. Commit-Strategien und gute Commit-Nachrichten behandeln wir später im Kurs noch ausführlich.
+
+## Übungen zur Lektion
+
+### Übung 1: README als Startseite bearbeiten
+
+Ziel: Dein Übungs-Repository soll direkt verständlich sein.
+
+Aufgabe:
+
+
+![Übung 1: README im Bearbeitungsmodus](../Assets/m01-l02-uebung-01-readme-bearbeiten.png)
+
+1. Öffne die Datei `README.md` in deinem Übungs-Repository.
+2. Ergänze eine Überschrift und 2 bis 4 Sätze, was du in diesem Repository sammelst.
+3. Füge eine kleine Liste hinzu, zum Beispiel mit `Notizen`, `Übungen`, `Lösungen`.
+4. Klicke auf **Commit changes**, damit deine Bearbeitung gespeichert wird.
+
+So füllst du das Fenster **Commit changes** aus:
+
+1. Trage bei Titel eine kurze Nachricht ein, zum Beispiel: `README ergänzt`.
+2. Optional: Ergänze im Beschreibungsfeld 1 Satz, was genau du ergänzt hast.
+3. Lasse die Änderung auf dem aktuellen Branch (Standardauswahl).
+4. Klicke auf **Commit changes**.
+
+![Übung 1: README mit Commit changes speichern](../Assets/m01-l02-uebung-01-readme-commit-changes.png)
+
+Mini-Check:
+
+- [ ] Meine README erklärt in einfachen Worten den Zweck meines Übungs-Repositorys.
+- [ ] Die README enthält mindestens eine Überschrift und eine Liste.
+- [ ] Ich habe meine Änderungen mit **Commit changes** gespeichert.
+
+### Übung 2: Zweite Datei mit Glossar anlegen
+
+Ziel: Wichtige Begriffe aus der Lektion aktiv festhalten.
+
+Wichtig: Lege die Datei mit der Endung `.md` an, also genau als `glossar.md`. Nur so wird sie als Markdown-Datei erkannt und in GitHub korrekt formatiert angezeigt.
+
+Aufgabe:
+
+<!-- Screenshot-Hinweis Übung 2
+Datei: m01-l02-uebung-02-glossar-datei-anlegen.png
+Zu sehen: Dateiliste im Übungs-Repository mit neu angelegter Datei glossar.md; Datei geöffnet mit mindestens 5 Begriffen und kurzen Erklärungen in eigenen Worten.
+-->
+
+![Übung 2: Glossar-Datei mit .md-Endung anlegen](../Assets/m01-l02-uebung-02-glossar-datei-anlegen.png)
+
+1. Lege eine neue Datei `glossar.md` in deinem Übungs-Repository an.
+2. Schreibe mindestens 5 Begriffe aus dieser Lektion hinein, zum Beispiel: `Git`, `GitHub`, `Repository`, `README`, `Commit`.
+3. Formuliere zu jedem Begriff eine kurze Erklärung in deinen eigenen Worten.
+
+Mini-Check:
+
+- [ ] Meine Glossar-Datei heißt genau `glossar.md`.
+- [ ] Mein Glossar enthält mindestens 5 Begriffe mit eigenen Erklärungen.
+- [ ] Ich kann den Unterschied zwischen `Git`, `GitHub` und `Repository` erklären.
+
+### Übung 3: Rückfragen sammeln
+
+Ziel: Offene Punkte früh sichtbar machen, statt sie mitzuschleppen.
+
+Aufgabe:
+
+
+![Übung 3: Rückfragen-Datei anlegen und ausfüllen](../Assets/m01-l02-uebung-03-rueckfragen-datei.png)
+
+1. Lege eine Datei `rueckfragen.md` in deinem Übungs-Repository an.
+2. Schreibe mindestens 3 Rückfragen auf, die du nach Lektion 2 noch hast.
+3. Markiere jede Frage mit einem Status, z. B. `offen` oder `geklärt`.
+
+Mini-Check:
+
+- [ ] Ich habe mindestens 3 konkrete Rückfragen notiert.
+- [ ] Ich kann meine offenen Fragen im Kursgespräch gezielt ansprechen.
+
+### Übung 4: Dozent*in zum Repository einladen
+
+Ziel: Deine Dozentin oder dein Dozent kann dein Übungs-Repository sehen und dir Feedback geben.
+
+Aufgabe:
+
+<!-- Screenshot-Hinweis Übung 4
+Datei: m01-l02-uebung-04-collaborator-einladen.png
+Zu sehen: Repository-Einstellungen unter Settings > Collaborators and teams mit geöffnetem Dialog Add people; GitHub-Benutzername der Dozentin oder des Dozenten eingetragen und Einladung bereit zum Senden oder als ausstehend sichtbar.
+-->
+
+1. Öffne dein Übungs-Repository auf GitHub.
+2. Gehe zu `Settings` > `Collaborators and teams`.
+3. Klicke auf `Add people` und trage den GitHub-Benutzernamen deiner Dozentin oder deines Dozenten ein.
+4. Sende die Einladung und prüfe, ob der Status als Einladung angezeigt wird.
+
+Mini-Check:
+
+- [ ] Ich finde die Einstellung für Collaborators in meinem Repository.
+- [ ] Ich habe eine Einladung an meine Dozentin oder meinen Dozenten gesendet.
+- [ ] Ich weiß, warum diese Einladung für Feedback im Kurs wichtig ist.
+
 ## Was ist zu tun
 
 1. Wähle eine Registrierungsvariante (E-Mail oder SSO) und erstelle deinen GitHub-Account.
 2. Melde dich in GitHub an und prüfe, ob dein Profilbild/Avatar sichtbar ist.
 3. Öffne dein Profil unter https://github.com/<mein-benutzername> und prüfe die URL.
+4. Lege ein privates Übungs-Repository mit README an.
+5. Prüfe, ob Repository-Name, Sichtbarkeit und URL korrekt sind.
+6. Bearbeite Übung 1 und überarbeite deine README.
+7. Bearbeite Übung 2 und lege dein Glossar an.
+8. Bearbeite Übung 3 und notiere deine Rückfragen.
+9. Bearbeite Übung 4 und lade deine Dozentin oder deinen Dozenten ein.
 
 
 ## Hilfreiche Links

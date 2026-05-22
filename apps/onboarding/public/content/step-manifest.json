@@ -500,9 +500,10 @@
       "slides": [
         {
           "type": "content",
-          "title": "Kapitel 1: Was ist GitHub?",
+          "title": "Kapitel 1: Git, GitHub, Repository",
           "sections": [
             {
+              "heading": "Was ist GitHub",
               "blocks": [
                 {
                   "type": "paragraph",
@@ -528,6 +529,62 @@
               ],
               "paragraphs": [
                 "GitHub basiert auf Git. Git ist das technische Werkzeug für Versionskontrolle, GitHub ist die Plattform darum herum: mit Weboberfläche, Kollaboration und Überblick über Änderungen."
+              ]
+            },
+            {
+              "heading": "Git ist nicht GitHub: So hängen beide zusammen",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Git und GitHub werden oft zusammen genannt, sind aber nicht dasselbe:"
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Git ist das Versionskontrollsystem. Es speichert Änderungen an Dateien als nachvollziehbare Historie.",
+                    "GitHub ist die Online-Plattform, auf der Git-Repositories liegen und gemeinsam genutzt werden."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "So bauen sie aufeinander auf:"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Du arbeitest an Dateien und erzeugst mit Git lokale Versionsstände.",
+                    "Diese Stände überträgst du in ein Repository auf GitHub.",
+                    "Auf GitHub kannst du den Verlauf ansehen, Feedback erhalten und mit anderen zusammenarbeiten."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Kurzformel: Git ist das Werkzeug, GitHub ist der gemeinsame Ort im Web."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Hinweis: In dieser Lektion reicht das Grundverständnis. Git selbst behandeln wir später im Kurs noch deutlich tiefer mit praktischen Befehlen und typischen Workflows."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Git vs. Github](/content/Assets/m01l02_git-vs-github.png)"
+                }
+              ],
+              "paragraphs": [
+                "Git und GitHub werden oft zusammen genannt, sind aber nicht dasselbe:",
+                "So bauen sie aufeinander auf:",
+                "Kurzformel: Git ist das Werkzeug, GitHub ist der gemeinsame Ort im Web.",
+                "Hinweis: In dieser Lektion reicht das Grundverständnis. Git selbst behandeln wir später im Kurs noch deutlich tiefer mit praktischen Befehlen und typischen Workflows.",
+                "![Git vs. Github](/content/Assets/m01l02_git-vs-github.png)"
+              ],
+              "orderedItems": [
+                "Du arbeitest an Dateien und erzeugst mit Git lokale Versionsstände.",
+                "Diese Stände überträgst du in ein Repository auf GitHub.",
+                "Auf GitHub kannst du den Verlauf ansehen, Feedback erhalten und mit anderen zusammenarbeiten."
+              ],
+              "unorderedItems": [
+                "Git ist das Versionskontrollsystem. Es speichert Änderungen an Dateien als nachvollziehbare Historie.",
+                "GitHub ist die Online-Plattform, auf der Git-Repositories liegen und gemeinsam genutzt werden."
               ]
             },
             {
@@ -574,7 +631,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "text": "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So werden wir es verwenden:"
+                  "text": "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So nutzen wir es konkret:"
                 },
                 {
                   "type": "paragraph",
@@ -615,7 +672,7 @@
               "paragraphs": [
                 "Im Kurs nutzt du GitHub, um:",
                 "Kurz gesagt: GitHub hilft dir, nachvollziehbar, teamfähig und professionell zu arbeiten, auch wenn du gerade erst startest.",
-                "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So werden wir es verwenden:",
+                "Im Kurs dreht sich vieles darum, wie echte Softwareentwicklung heute aussieht. Und dazu gehört GitHub von Anfang an. So nutzen wir es konkret:",
                 "**Dein eigenes Übungs-Repository**\nDu legst auf GitHub dein persönliches Repository an. Dort speicherst du deine Übungen, Lösungen und Notizen. Niemand sonst kann dort schreiben, es gehört dir.",
                 "**Das gemeinsame Kurs-Repository**\nDer Kurs selbst liegt ebenfalls auf GitHub. Alle Aufgaben, Materialien und Updates kommen von dort. Du lernst, wie du Änderungen aus dem Kurs-Repo holst und mit deiner eigenen Arbeit kombinierst, genau wie in echten Projekten.",
                 "**Feedback und Zusammenarbeit**\nDozierende können deine Commits sehen und dir direkt am Code Rückmeldung geben. So erhältst du nicht nur wertvolles Feedback, sondern lernst auch echte Praxis kennen. Denn genau so funktionieren auch Code-Reviews.",
@@ -788,7 +845,7 @@
                   "items": [
                     "[ ] Ich kann mich mit meinem GitHub-Account einloggen.",
                     "[ ] Ich sehe mein Profilsymbol oben rechts.",
-                    "[ ] Ich habe Zugriff auf mein Profil unter https://github.com/\"mein-benutzername\"."
+                    "[ ] Ich habe Zugriff auf mein Profil unter https://github.com/<mein-benutzername>."
                   ]
                 },
                 {
@@ -802,7 +859,7 @@
               "unorderedItems": [
                 "[ ] Ich kann mich mit meinem GitHub-Account einloggen.",
                 "[ ] Ich sehe mein Profilsymbol oben rechts.",
-                "[ ] Ich habe Zugriff auf mein Profil unter https://github.com/\"mein-benutzername\"."
+                "[ ] Ich habe Zugriff auf mein Profil unter https://github.com/<mein-benutzername>."
               ]
             },
             {
@@ -957,11 +1014,32 @@
                   "items": [
                     "Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname."
                   ]
-                },
+                }
+              ],
+              "paragraphs": [
+                "![Repository anlegen](/content/Assets/m01-l03-gh-06-repository-anlegen.png)"
+              ],
+              "orderedItems": [
+                "Wähle **New repository** aus.",
+                "Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname."
+              ]
+            },
+            {
+              "heading": "Verwende beim Namen besser keine Umlaute.",
+              "tone": "highlight",
+              "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "***Achtung:*** Verwende besser keine Umlaute.\nGitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche."
-                },
+                  "text": "GitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche."
+                }
+              ],
+              "paragraphs": [
+                "GitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche."
+              ]
+            },
+            {
+              "heading": "Beschreibung hinzufügen",
+              "blocks": [
                 {
                   "type": "paragraph",
                   "text": "![Repository anlegen](/content/Assets/m01-l03-gh-07-repository-benennen.png)"
@@ -974,60 +1052,46 @@
                 },
                 {
                   "type": "paragraph",
-                  "text": "Beispiel:"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "```text\nMein Übungs-Repository für den Kurs.\n```"
+                  "text": "Beispiel:\n![Repository anlegen](/content/Assets/m01-l03-gh-08-repository-beschreibung.png)"
                 },
                 {
                   "type": "ordered-list",
                   "items": [
-                    "Wähle bei Sichtbarkeit **Private** aus."
+                    "Wähle bei Sichtbarkeit **Private** aus. So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "text": "So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll."
+                  "text": "![Repository anlegen](/content/Assets/m01-l03-gh-09create-repository-visibility.png)"
                 },
                 {
                   "type": "ordered-list",
                   "items": [
-                    "Aktiviere **Add a README file**."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist."
-                },
-                {
-                  "type": "ordered-list",
-                  "items": [
+                    "Aktiviere **Add a README file**. Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist.",
                     "Lasse **.gitignore** und **License** zunächst unverändert.",
                     "Klicke auf **Create repository**."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "text": "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l02-gh-06-create-repository.png)"
+                  "text": "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l03-gh-10create-repository-create.png)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l03-gh-10create-repository-files.png)"
                 }
               ],
               "paragraphs": [
-                "![Repository anlegen](/content/Assets/m01-l03-gh-06-repository-anlegen.png)",
-                "***Achtung:*** Verwende besser keine Umlaute.\nGitHub unterstützt Umlaute zwar oft, aber in URLs, Terminal-Befehlen, Skripten und bei der Zusammenarbeit mit verschiedenen Tools können Sonderzeichen zu Fehlern oder Verwirrung führen. Nutze deshalb lieber `ae`, `oe`, `ue` und Bindestriche.",
                 "![Repository anlegen](/content/Assets/m01-l03-gh-07-repository-benennen.png)",
-                "Beispiel:",
-                "```text\nMein Übungs-Repository für den Kurs.\n```",
-                "So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll.",
-                "Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist.",
-                "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l02-gh-06-create-repository.png)"
+                "Beispiel:\n![Repository anlegen](/content/Assets/m01-l03-gh-08-repository-beschreibung.png)",
+                "![Repository anlegen](/content/Assets/m01-l03-gh-09create-repository-visibility.png)",
+                "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l03-gh-10create-repository-create.png)",
+                "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l03-gh-10create-repository-files.png)"
               ],
               "orderedItems": [
-                "Wähle **New repository** aus.",
-                "Trage bei **Repository name** einen Namen für dein Repository ein. Beispiel: uebungs-repository-vorname-nachname.",
                 "Ergänze optional eine kurze Beschreibung.",
-                "Wähle bei Sichtbarkeit **Private** aus.",
-                "Aktiviere **Add a README file**.",
+                "Wähle bei Sichtbarkeit **Private** aus. So ist dein Repository nicht öffentlich sichtbar. Später kann gezielt festgelegt werden, wer Zugriff erhalten soll.",
+                "Aktiviere **Add a README file**. Die README-Datei ist die Startseite deines Repositorys. Dort kannst du später kurz beschreiben, wofür dein Repository gedacht ist.",
                 "Lasse **.gitignore** und **License** zunächst unverändert.",
                 "Klicke auf **Create repository**."
               ]
@@ -1053,18 +1117,18 @@
                 },
                 {
                   "type": "paragraph",
-                  "text": "```text\nhttps://github.com/<dein-benutzername>/kurs-uebungen\n```"
+                  "text": "```text\nhttps://github.com/<dein-benutzername>/uebungs-repository-vorname-nachname\n```"
                 },
                 {
                   "type": "paragraph",
-                  "text": "![Fertiges Repository mit README](/content/Assets/m01-l02-gh-07-repository-fertig.png)"
+                  "text": "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l03-gh-11-new-repository.png)"
                 }
               ],
               "paragraphs": [
                 "Nach dem Klick auf **Create repository** öffnet GitHub dein neues Repository.",
                 "Du erkennst, dass es funktioniert hat, wenn:",
-                "```text\nhttps://github.com/<dein-benutzername>/kurs-uebungen\n```",
-                "![Fertiges Repository mit README](/content/Assets/m01-l02-gh-07-repository-fertig.png)"
+                "```text\nhttps://github.com/<dein-benutzername>/uebungs-repository-vorname-nachname\n```",
+                "![Repository erstellen mit Name, Private und README](/content/Assets/m01-l03-gh-11-new-repository.png)"
               ],
               "unorderedItems": [
                 "der Repository-Name oben sichtbar ist,",
@@ -1213,6 +1277,33 @@
           ],
           "successMessage": "Richtig! Dein Übungs-Repository ist dein persönlicher Arbeitsbereich für den Kurs.",
           "errorMessage": "Nicht ganz. Dein Übungs-Repository ist der Ort, an dem du deine Übungen, Notizen, Code und Lösungen speicherst."
+        },
+        {
+          "type": "content",
+          "title": "Kurz erklärt: Was ist ein Commit?",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Commit ist ein gespeicherter Zwischenstand deiner Änderungen mit einer kurzen Beschreibung."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Wenn du in GitHub auf **Commit changes** klickst, wird genau dieser Stand in der Historie deines Repositorys festgehalten. So kannst du später nachvollziehen, was du wann geändert hast."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Hinweis: In dieser Lektion reicht dieses Grundverständnis. Commit-Strategien und gute Commit-Nachrichten behandeln wir später im Kurs noch ausführlich."
+                }
+              ],
+              "paragraphs": [
+                "Ein Commit ist ein gespeicherter Zwischenstand deiner Änderungen mit einer kurzen Beschreibung.",
+                "Wenn du in GitHub auf **Commit changes** klickst, wird genau dieser Stand in der Historie deines Repositorys festgehalten. So kannst du später nachvollziehen, was du wann geändert hast.",
+                "Hinweis: In dieser Lektion reicht dieses Grundverständnis. Commit-Strategien und gute Commit-Nachrichten behandeln wir später im Kurs noch ausführlich."
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1220,9 +1311,78 @@
     "tasks": [
       "Wähle eine Registrierungsvariante (E-Mail oder SSO) und erstelle deinen GitHub-Account.",
       "Melde dich in GitHub an und prüfe, ob dein Profilbild/Avatar sichtbar ist.",
-      "Öffne dein Profil unter https://github.com/<mein-benutzername> und prüfe die URL."
+      "Öffne dein Profil unter https://github.com/<mein-benutzername> und prüfe die URL.",
+      "Lege ein privates Übungs-Repository mit README an.",
+      "Prüfe, ob Repository-Name, Sichtbarkeit und URL korrekt sind.",
+      "Bearbeite Übung 1 und überarbeite deine README.",
+      "Bearbeite Übung 2 und lege dein Glossar an.",
+      "Bearbeite Übung 3 und notiere deine Rückfragen.",
+      "Bearbeite Übung 4 und lade deine Dozentin oder deinen Dozenten ein."
     ],
     "taskNotes": [],
+    "exercises": [
+      {
+        "title": "Übung 1: README als Startseite bearbeiten",
+        "goal": "Dein Übungs-Repository soll direkt verständlich sein.",
+        "steps": [
+          "Öffne die Datei `README.md` in deinem Übungs-Repository.",
+          "Ergänze eine Überschrift und 2 bis 4 Sätze, was du in diesem Repository sammelst.",
+          "Füge eine kleine Liste hinzu, zum Beispiel mit `Notizen`, `Übungen`, `Lösungen`.",
+          "Klicke auf **Commit changes**, damit deine Bearbeitung gespeichert wird.",
+          "Trage bei Titel eine kurze Nachricht ein, zum Beispiel: `README ergänzt`.",
+          "Optional: Ergänze im Beschreibungsfeld 1 Satz, was genau du ergänzt hast.",
+          "Lasse die Änderung auf dem aktuellen Branch (Standardauswahl).",
+          "Klicke auf **Commit changes**."
+        ],
+        "checks": [
+          "Meine README erklärt in einfachen Worten den Zweck meines Übungs-Repositorys.",
+          "Die README enthält mindestens eine Überschrift und eine Liste.",
+          "Ich habe meine Änderungen mit **Commit changes** gespeichert."
+        ]
+      },
+      {
+        "title": "Übung 2: Zweite Datei mit Glossar anlegen",
+        "goal": "Wichtige Begriffe aus der Lektion aktiv festhalten.",
+        "steps": [
+          "Lege eine neue Datei `glossar.md` in deinem Übungs-Repository an.",
+          "Schreibe mindestens 5 Begriffe aus dieser Lektion hinein, zum Beispiel: `Git`, `GitHub`, `Repository`, `README`, `Commit`.",
+          "Formuliere zu jedem Begriff eine kurze Erklärung in deinen eigenen Worten."
+        ],
+        "checks": [
+          "Meine Glossar-Datei heißt genau `glossar.md`.",
+          "Mein Glossar enthält mindestens 5 Begriffe mit eigenen Erklärungen.",
+          "Ich kann den Unterschied zwischen `Git`, `GitHub` und `Repository` erklären."
+        ]
+      },
+      {
+        "title": "Übung 3: Rückfragen sammeln",
+        "goal": "Offene Punkte früh sichtbar machen, statt sie mitzuschleppen.",
+        "steps": [
+          "Lege eine Datei `rueckfragen.md` in deinem Übungs-Repository an.",
+          "Schreibe mindestens 3 Rückfragen auf, die du nach Lektion 2 noch hast.",
+          "Markiere jede Frage mit einem Status, z. B. `offen` oder `geklärt`."
+        ],
+        "checks": [
+          "Ich habe mindestens 3 konkrete Rückfragen notiert.",
+          "Ich kann meine offenen Fragen im Kursgespräch gezielt ansprechen."
+        ]
+      },
+      {
+        "title": "Übung 4: Dozent*in zum Repository einladen",
+        "goal": "Deine Dozentin oder dein Dozent kann dein Übungs-Repository sehen und dir Feedback geben.",
+        "steps": [
+          "Öffne dein Übungs-Repository auf GitHub.",
+          "Gehe zu `Settings` > `Collaborators and teams`.",
+          "Klicke auf `Add people` und trage den GitHub-Benutzernamen deiner Dozentin oder deines Dozenten ein.",
+          "Sende die Einladung und prüfe, ob der Status als Einladung angezeigt wird."
+        ],
+        "checks": [
+          "Ich finde die Einstellung für Collaborators in meinem Repository.",
+          "Ich habe eine Einladung an meine Dozentin oder meinen Dozenten gesendet.",
+          "Ich weiß, warum diese Einladung für Feedback im Kurs wichtig ist."
+        ]
+      }
+    ],
     "resources": [
       {
         "label": "GitHub Docs (Deutsch)",

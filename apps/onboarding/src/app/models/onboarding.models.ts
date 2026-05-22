@@ -9,6 +9,7 @@ export interface StepManifestEntry {
   sections: StepManifestSection[];
   requiresLessonCompletion?: boolean;
   lessonFlow?: OnboardingLessonFlow | null;
+  exercises?: OnboardingLessonExercise[] | null;
   tasks?: string[] | null;
   taskNotes?: OnboardingLessonContentSection[] | null;
   resources?: OnboardingResourceLink[] | null;
@@ -24,6 +25,15 @@ export interface OnboardingHelpItem {
 export interface OnboardingResourceLink {
   label: string;
   href: string;
+}
+
+export type OnboardingExerciseStatus = 'completed' | 'failed' | null;
+
+export interface OnboardingLessonExercise {
+  title: string;
+  goal?: string;
+  steps: string[];
+  checks: string[];
 }
 
 export interface OnboardingLessonContentSection {

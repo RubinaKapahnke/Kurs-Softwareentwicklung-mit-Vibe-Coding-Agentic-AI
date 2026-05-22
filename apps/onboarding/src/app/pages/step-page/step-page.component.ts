@@ -13,10 +13,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 import { ONBOARDING_STEP_COUNT, ONBOARDING_STEPS } from '../../data/onboarding-steps.data';
-import { OnboardingLessonContentSection, OnboardingStep, StepManifest } from '../../models/onboarding.models';
+import { OnboardingLessonContentSection, OnboardingLessonExercise, OnboardingStep, StepManifest } from '../../models/onboarding.models';
 import { OnboardingStateService, Step2ExperienceChoice } from '../../services/onboarding-state.service';
 import { MarkdownViewComponent } from '../../components/markdown-view/markdown-view.component';
 import { LessonFlowComponent } from '../../components/lesson-flow/lesson-flow.component';
+import { LessonExercisesComponent } from '../../components/lesson-exercises/lesson-exercises.component';
 import { ChoiceCardComponent } from '../../components/choice-card/choice-card.component';
 import { CalloutComponent } from '../../components/callout/callout.component';
 import { StepTasksComponent, SubtaskChange } from '../../components/step-tasks/step-tasks.component';
@@ -34,6 +35,7 @@ import { StepSkipDialogComponent, StepSkipDialogResult } from './step-skip-dialo
     MatTooltipModule,
     MarkdownViewComponent,
     LessonFlowComponent,
+    LessonExercisesComponent,
     ChoiceCardComponent,
     CalloutComponent,
     StepTasksComponent
@@ -87,6 +89,7 @@ export class StepPageComponent {
   readonly lessonCompleted = signal(false);
   readonly manifestEntry = computed(() => this.stepManifest()?.[this.step().id] ?? null);
   readonly effectiveTasks = computed(() => this.manifestEntry()?.tasks ?? this.step().tasks);
+  readonly effectiveExercises = computed(() => (this.manifestEntry()?.exercises ?? []) as OnboardingLessonExercise[]);
   readonly effectiveTaskNotes = computed(() => (this.manifestEntry()?.taskNotes ?? []) as OnboardingLessonContentSection[]);
   readonly effectiveResources = computed(() => this.manifestEntry()?.resources ?? this.step().resources ?? []);
   readonly effectiveLessonFlow = computed(() => {
@@ -145,6 +148,7 @@ export class StepPageComponent {
   readonly isFinishStep = computed(() => this.step().id === ONBOARDING_STEP_COUNT);
 
   @ViewChild('todoSection', { read: ElementRef }) private todoSection?: ElementRef<HTMLElement>;
+  @ViewChild('exerciseSection', { read: ElementRef }) private exerciseSection?: ElementRef<HTMLElement>;
   @ViewChild('lessonFlowSection') private lessonFlowSection?: ElementRef<HTMLElement>;
 
   readonly githubProfileShareTask = 'Link zum GitHub-Profil an Dozent*in schicken (Teams oder E-Mail).';
@@ -174,6 +178,11 @@ export class StepPageComponent {
       this.state.step2Experience() === 'existing-beginner'
     )
   );
+  readonly showLessonExercises = computed(() =>
+    Boolean(this.visibleLessonFlow()) &&
+    this.showAccountStepContent() &&
+    this.effectiveExercises().length > 0
+  );
   readonly showAccountSecurityHint = computed(() =>
     this.isAccountChoiceStep() && this.state.step2Experience() === 'new'
   );
@@ -200,12 +209,17 @@ export class StepPageComponent {
       this.isVscodeInstallStep() ||
       this.isGitInstallStep() ||
       this.isCloneStep() ||
+      this.showLessonExercises() ||
       this.showTodoSection() ||
       this.showAccountSecurityHint() ||
       this.showStepResources() ||
       (this.step().vscodeHint?.length ?? 0) > 0 && !this.isCloneStep();
   });
   readonly lessonFollowUpLabel = computed(() => {
+    if (this.showLessonExercises()) {
+      return 'Unter der Lektion folgen noch Übungen.';
+    }
+
     if (this.showTodoSection()) {
       return 'Unter der Lektion folgen noch Aufgaben.';
     }
@@ -391,6 +405,11 @@ export class StepPageComponent {
     this.lessonCompleted.set(true);
 
     const lessonBottom = this.lessonFlowSection?.nativeElement.getBoundingClientRect().bottom ?? 0;
+
+    if (this.exerciseSection?.nativeElement) {
+      this.exerciseSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
 
     if (this.todoSection?.nativeElement) {
       this.todoSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
