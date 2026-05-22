@@ -95,6 +95,7 @@ export class KursstartComponent {
 
   readonly completedCount = computed(() => this.state.getCompletedCount());
   readonly hasProgress = computed(() => this.state.getCompletedCount() > 0);
+  readonly hasProgressBeyondVoucher = computed(() => this.state.getCompletedStepIds().some(stepId => stepId > 1));
   readonly isCompleted = computed(() => this.state.getCompletedCount() >= ONBOARDING_STEP_COUNT);
   readonly resumeStep = computed(() => this.state.getFirstIncompleteStepId() ?? ONBOARDING_STEP_COUNT);
   readonly resumeLink = computed(() => this.isCompleted()
@@ -102,7 +103,7 @@ export class KursstartComponent {
     : `/kurse/${this.selectedCourse().id}/onboarding/step/${this.resumeStep()}`);
   readonly resumeLabel = computed(() =>
     this.isCompleted() ? 'Zur Zusammenfassung'
-    : this.hasProgress() ? 'Kurs fortsetzen'
+    : this.hasProgressBeyondVoucher() ? 'Kurs fortsetzen'
     : 'Kurs starten'
   );
 
@@ -311,7 +312,7 @@ export class KursstartComponent {
 
   readonly navbarCta = computed(() => {
     if (this.isCompleted()) return 'Zur Zusammenfassung';
-    if (this.hasProgress()) return 'Kurs fortsetzen';
+    if (this.hasProgressBeyondVoucher()) return 'Kurs fortsetzen';
     return 'Starte mit Modul 1';
   });
 
