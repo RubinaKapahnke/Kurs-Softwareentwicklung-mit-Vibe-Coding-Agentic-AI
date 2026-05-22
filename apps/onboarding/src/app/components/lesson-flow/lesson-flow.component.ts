@@ -324,7 +324,7 @@ export class LessonFlowComponent implements OnChanges {
       return '';
     }
 
-    return lessonMarkdown.renderInline(text);
+    return lessonMarkdown.renderInline(this.normalizeContentLinks(text));
   }
 
   renderBlockText(text: string): string {
@@ -332,7 +332,14 @@ export class LessonFlowComponent implements OnChanges {
       return '';
     }
 
-    return lessonMarkdown.render(text).trim();
+    return lessonMarkdown.render(this.normalizeContentLinks(text)).trim();
+  }
+
+  private normalizeContentLinks(markdown: string): string {
+    return markdown
+      .replace(/(\]\()\/content\//g, '$1content/')
+      .replace(/(src=["'])\/content\//g, '$1content/')
+      .replace(/(href=["'])\/content\//g, '$1content/');
   }
 
   isSubheadingParagraph(text: string): boolean {

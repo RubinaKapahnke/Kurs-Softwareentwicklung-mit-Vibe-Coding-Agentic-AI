@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -124,6 +124,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   ]
 })
 export class MarkdownViewComponent implements OnChanges {
+  private readonly document = inject(DOCUMENT);
+
   @Input() src?: string;
   html: SafeHtml | null = null;
   loading = false;
@@ -141,7 +143,9 @@ export class MarkdownViewComponent implements OnChanges {
     this.loading = true;
     this.error = false;
     this.html = null;
-    this.http.get(src, { responseType: 'text' }).subscribe({
+    const resolvedSrc = this.resolveContentUrl(src);
+
+    this.http.get(resolvedSrc, { responseType: 'text' }).subscribe({
       next: (md) => {
         void (async () => {
           try {
@@ -160,7 +164,7 @@ export class MarkdownViewComponent implements OnChanges {
             });
 
             // Parse Markdown zu HTML
-            const rawHtml = mdi.render(md);
+            const rawHtml = mdi.render(this.normalizeContentLinks(md));
 
             // Konfiguriere dompurify mit Tabellen- und Link-Elementen
             const purifyConfig = {
@@ -197,5 +201,20 @@ export class MarkdownViewComponent implements OnChanges {
         this.loading = false;
       }
     });
+  }
+
+  private resolveContentUrl(url: string): string {
+    if (!url.startsWith('/content/')) {
+      return url;
+    }
+
+    return new URL(url.slice(1), this.document.baseURI).toString();
+  }
+
+  private normalizeContentLinks(markdown: string): string {
+    return markdown
+      .replace(/(\]\()\/content\//g, '$1content/')
+      .replace(/(src=["'])\/content\//g, '$1content/')
+      .replace(/(href=["'])\/content\//g, '$1content/');
   }
 }

@@ -57,10 +57,18 @@ export class StepPageComponent {
   });
 
   constructor() {
-    this.http.get<StepManifest>('/content/step-manifest.json').subscribe({
+    this.http.get<StepManifest>(this.resolveContentUrl('/content/step-manifest.json')).subscribe({
       next: (manifest) => this.stepManifest.set(manifest),
       error: () => this.stepManifest.set({})
     });
+  }
+
+  private resolveContentUrl(url: string): string {
+    if (!url.startsWith('/content/')) {
+      return url;
+    }
+
+    return new URL(url.slice(1), this.document.baseURI).toString();
   }
 
   private readonly resetScrollOnStepChange = effect(() => {
