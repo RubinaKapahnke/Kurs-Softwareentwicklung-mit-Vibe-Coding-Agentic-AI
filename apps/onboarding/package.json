@@ -9,6 +9,7 @@
     "start": "ng serve",
     "prebuild": "npm run sync-content",
     "build": "ng build",
+    "build:pages": "npm run sync-content && ng build --configuration production --base-href /Kurs-Softwareentwicklung-mit-Vibe-Coding-Agentic-AI/",
     "prewatch": "npm run sync-content",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
