@@ -25,7 +25,7 @@ In dieser Übung arbeitest du:
 
 ### Aufgabe 1: GitHub-Konto erstellen
 
-Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md)
+Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)
 
 **Falls du noch keinen Account hast:**
 
@@ -54,7 +54,7 @@ Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-prof
 
 ### Aufgabe 2: Dein Profil vervollständigen
 
-Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md)
+Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)
 
 1. **Profilseite öffnen:**
    - Klicke oben rechts auf dein **Profilbild** oder auf das **Hamburger-Menü** (☰)
@@ -76,9 +76,9 @@ Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-prof
 
 ### Aufgabe 3: Deine Trainerin/deinen Trainer einladen
 
-Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md)
+Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)
 
-**Vorbedingung:** Du musst zuerst dein **Übungs-Repo** erstellen (siehe nächste Übung: Meilenstein 1, Übung 2 oder [course/01-course-modules/01-Onboarding-in-den-Kurs/03-github-features-repositories-und-readme-vorlage.md](../01-course-modules/01-Onboarding-in-den-Kurs/03-github-features-repositories-und-readme-vorlage.md)).
+**Vorbedingung:** Du musst zuerst dein **Übungs-Repo** erstellen (siehe nächste Übung: Meilenstein 1, Übung 2 oder [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)).
 
 **Wenn dein Übungs-Repo bereit ist:**
 
@@ -107,7 +107,7 @@ Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-prof
 ## Modulabdeckung (Check)
 
 - ✓ [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md): Was ist GitHub und wie verwenden wir es im Kurs?
-- ✓ [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md): GitHub-Konto anlegen, Profil und Collaborator
+- ✓ [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md): GitHub-Konto anlegen, Profil und Collaborator
 
 ---
 

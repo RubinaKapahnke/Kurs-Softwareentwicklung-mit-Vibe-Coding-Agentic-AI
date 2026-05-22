@@ -6,6 +6,12 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ## Tagesübersicht (grob)
 
+### 22.05.2026
+- Onboarding-Konsistenz auf den Zielzustand der Lektionen 01 und 02 ausgerichtet: veraltete Quellenpfade in `table-of-contents.md` und Meilenstein-01-Übungen auf aktuelle flache Moduldateien aktualisiert.
+- Onboarding-Step-Fallbackpfade auf die synchronisierten Step-Inhalte (`/content/step-02/lektion-inhalte.md`, `/content/step-03/lektion-inhalte.md`) umgestellt.
+- Inhalte aus `course/01-course-modules/99-archiv/` in die neue flache Onboarding-Struktur migriert: neue Lektionen 09 bis 16 sowie Aufgaben-Dateien für 10, 11 und 15 angelegt, Onboarding-Dokumentation synchronisiert und `99-archiv/` geleert.
+- `course/01-course-modules/99-unsortiert/` weiter bereinigt: verwertete Modulziel-Inhalte als `course/01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md` übernommen, Modulübersichten synchronisiert und die verbliebenen Altdateien entfernt.
+
 ### 19.05.2026
 - Kursstruktur auf nummerierte `course/`-Ordner konsolidiert (`00-course-guides`, `01-course-modules`, `02-course-exercises`, `03-course-library`, `99-course-development`) und zentrale Meilenstein-/README-/Onboarding-Verweise auf `COURSE_MILESTONES.md` synchronisiert.
 - Root-Weiterleitung `COURSE_MILESTONES.md` entfernt; zentrale Roadmap liegt ausschließlich unter `course/00-course-guides/COURSE_MILESTONES.md`.

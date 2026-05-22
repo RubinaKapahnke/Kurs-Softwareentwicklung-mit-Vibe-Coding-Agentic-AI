@@ -17,7 +17,7 @@ Hier sind die Module des Kurses enthalten.
 
 | Ordner | File | Status | Erklärung |
 |:-------|:-----|:-------|:----------|
-| 01-Onboarding-in-den-Kurs | [00-modulziele.md](../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md) | `in Arbeit` | Modulziele für den Einstieg in den Kurs. |
+| 01-Onboarding-in-den-Kurs | [00-modulziele.md](../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md) | `in Arbeit` | Modulziele zu Arbeitsumgebung, Dokumentation und Versionsverwaltung. |
 | 02-produktbeschreibung-inkrementelle-planung | [00-modulziele.md](../01-course-modules/02-produktbeschreibung-inkrementelle-planung/00-modulziele.md) | `in Arbeit` | Modulziele zu Produktbeschreibung und inkrementeller Planung. |
 | 03-vibe-coding-prompting-context-engineering | [00-modulziele.md](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md) | `in Arbeit` | Modulziele zu Vibe Coding, Prompting und Context Engineering. |
 | 04-ai-literacy-modellverstaendnis | [00-modulziele.md](../01-course-modules/04-ai-literacy-modellverstaendnis/00-modulziele.md) | `in Arbeit` | Modulziele zu AI Literacy und Modellverständnis. |
@@ -32,18 +32,33 @@ Hier sind die Module des Kurses enthalten.
 | 12-teamarbeit-datenschutz-urheberrecht-governance | [00-modulziele.md](../01-course-modules/12-teamarbeit-datenschutz-urheberrecht-governance/00-modulziele.md) | `in Arbeit` | Modulziele zu Teamarbeit, Datenschutz, Urheberrecht und Governance. |
 | 13-deployment-monitoring-release-management | [00-modulziele.md](../01-course-modules/13-deployment-monitoring-release-management/00-modulziele.md) | `in Arbeit` | Modulziele zu Deployment, Monitoring und Release Management. |
 | 14-abschlussprojekt-portfolio | [00-modulziele.md](../01-course-modules/14-abschlussprojekt-portfolio/00-modulziele.md) | `in Arbeit` | Modulziele zu Abschlussprojekt und Portfolio. |
-| 99-unsortiert | [github-repository-erstellen.md](../01-course-modules/99-unsortiert/github-repository-erstellen.md) | `unsortiert` | Material zum Erstellen eines GitHub-Repositorys. |
-| 99-unsortiert | [modulziele.md](../01-course-modules/99-unsortiert/modulziele.md) | `unsortiert` | Unsortierte Modulziele. |
 
 ### Onboarding-Materialien
 
 | File | Status | Erklärung |
 |:-----|:-------|:----------|
-| [01-github-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/01-github-im-kurs.md) | `in Arbeit` | Erklärung, warum GitHub im Kurs genutzt wird. |
-| [02-github-konto-profil-und-collaborator-aufgabe.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-konto-profil-und-collaborator-aufgabe.md) | `in Arbeit` | Aufgabe zu GitHub-Konto, Profil und Collaborator-Zugang. |
-| [03-github-features-repositories-und-readme-vorlage.md](../01-course-modules/01-Onboarding-in-den-Kurs/03-github-features-repositories-und-readme-vorlage.md) | `in Arbeit` | Einstieg in GitHub-Features, Repositories und README-Vorlage. |
+| [01-willkommen-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md) | `in Arbeit` | Einstieg in den Kursablauf und die Arbeitsweise. |
+| [02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md) | `in Arbeit` | GitHub-Grundlagen, Account und erstes Übungs-Repository. |
+| [03-markdown-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/03-markdown-grundlagen.md) | `in Arbeit` | Markdown-Grundlagen für den Kurseinstieg. |
 | [04-version-control-und-gitops-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-version-control-und-gitops-im-kurs.md) | `in Arbeit` | Erklärung zu Version Control und GitOps im Kurskontext. |
+| [04-eigenes-uebungs-repository.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-eigenes-uebungs-repository.md) | `in Arbeit` | Praktischer Schritt zum eigenen Übungs-Repository. |
+| [04-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-aufgaben.md) | `in Arbeit` | Aufgaben zu Lektion 04. |
+| [05-git-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/05-git-grundlagen.md) | `in Arbeit` | Git-Grundlagen im Onboarding. |
+| [05-git-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/05-git-aufgaben.md) | `in Arbeit` | Aufgaben zu Lektion 05. |
 | [05-vscode-speicherkonflikt-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/05-vscode-speicherkonflikt-im-kurs.md) | `in Arbeit` | Hilfe bei Speicherkonflikten in VS Code. |
+| [06-markdown-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/06-markdown-grundlagen.md) | `in Arbeit` | Vertiefung Markdown im Onboarding. |
+| [06-markdown-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/06-markdown-aufgaben.md) | `in Arbeit` | Aufgaben zu Lektion 06. |
+| [07-einstieg-vscode.md](../01-course-modules/01-Onboarding-in-den-Kurs/07-einstieg-vscode.md) | `in Arbeit` | Einstieg in VS Code. |
+| [08-vscode-lokal-einrichten.md](../01-course-modules/01-Onboarding-in-den-Kurs/08-vscode-lokal-einrichten.md) | `in Arbeit` | VS Code lokal einrichten. |
+| [08-vscode-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/08-vscode-aufgaben.md) | `in Arbeit` | Aufgaben zu Lektion 08. |
+| [09-was-ist-git.md](../01-course-modules/01-Onboarding-in-den-Kurs/09-was-ist-git.md) | `in Arbeit` | Einordnung, warum Git gebraucht wird. |
+| [10-git-installieren.md](../01-course-modules/01-Onboarding-in-den-Kurs/10-git-installieren.md) | `in Arbeit` | Git lokal installieren und prüfen. |
+| [11-terminal-und-shell-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/11-terminal-und-shell-grundlagen.md) | `in Arbeit` | Terminal und Shell im Kurskontext. |
+| [12-git-in-vscode-via-terminal.md](../01-course-modules/01-Onboarding-in-den-Kurs/12-git-in-vscode-via-terminal.md) | `in Arbeit` | Git direkt im VS-Code-Terminal nutzen. |
+| [13-branches-commits-pullrequests.md](../01-course-modules/01-Onboarding-in-den-Kurs/13-branches-commits-pullrequests.md) | `in Arbeit` | Branches, Commits und Pull Requests verstehen. |
+| [14-kurs-repository-klonen.md](../01-course-modules/01-Onboarding-in-den-Kurs/14-kurs-repository-klonen.md) | `in Arbeit` | Kurs-Repository lokal klonen. |
+| [15-uebungen-im-gesamt-setting.md](../01-course-modules/01-Onboarding-in-den-Kurs/15-uebungen-im-gesamt-setting.md) | `in Arbeit` | Zusammenspiel von Kurs-Repo, eigenem Repo und Lernfortschritt. |
+| [16-start-in-den-gesamtkurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/16-start-in-den-gesamtkurs.md) | `in Arbeit` | Übergang vom Onboarding in den Gesamtkurs. |
 | [README_LERNINHALTE.md](../01-course-modules/01-Onboarding-in-den-Kurs/README_LERNINHALTE.md) | `in Arbeit` | Übersicht über Lerninhalte im Onboarding-Modul. |
 | [README-template-tn-repo.md](../01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md) | `Vorlage` | README-Vorlage für ein Teilnehmer-Repository. |
 | [anleitung-lerninhalte-zu-steps.md](../01-course-modules/01-Onboarding-in-den-Kurs/anleitung-lerninhalte-zu-steps.md) | `in Arbeit` | Anleitung, wie Lerninhalte in Onboarding-Steps übertragen werden. |
@@ -52,23 +67,22 @@ Hier sind die Module des Kurses enthalten.
 
 | Lektion | Inhalte | Aufgaben | Erklärung |
 |:--------|:--------|:---------|:----------|
-| Zugang freischalten | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lerninhalte/lektion-01-zugang-freischalten/lektion-inhalte.md) | - | Zugang und Freischaltung. |
-| 01 Willkommen im Kurs | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-01-willkommen-im-kurs/lektion-inhalte.md) | - | Willkommen im Kurs und erster Einstieg. |
-| 02 GitHub Account | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-02-github-account/lektion-inhalte.md) | - | GitHub-Account anlegen und verstehen. |
-| 03 GitHub Repositories verstehen | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-03-github-repositories-verstehen/lektion-inhalte.md) | - | GitHub-Repositories verstehen. |
-| 04 Eigenes Übungs-Repository | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-04-eigenes-uebungs-repository/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-04-eigenes-uebungs-repository/aufgaben.md) | Eigenes Übungs-Repository anlegen. |
-| 05 Git Grundlagen | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-05-git-grundlagen/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-05-git-grundlagen/aufgaben.md) | Git-Grundlagen. |
-| 06 Erste Übungen im Browser | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-06-erste-uebungen-im-browser/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-06-erste-uebungen-im-browser/aufgaben.md) | Erste Übungen im Browser. |
-| 07 Was ist VS Code | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-07-was-ist-vs-code/lektion-inhalte.md) | - | VS Code kennenlernen. |
-| 08 VS Code installieren | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-08-vs-code-installieren/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-08-vs-code-installieren/aufgaben.md) | VS Code installieren. |
-| 09 GitHub Copilot Extension | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-09-github-copilot-extension/lektion-inhalte.md) | - | Copilot-Erweiterung einrichten. |
-| 10 Git installieren | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-10-git-installieren/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-10-git-installieren/aufgaben.md) | Git installieren. |
-| 11 Terminal und Shell Grundlagen | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-11-terminal-und-shell-grundlagen/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-11-terminal-und-shell-grundlagen/aufgaben.md) | Terminal und Shell-Grundlagen. |
-| 12 Git in VS Code via Terminal | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-12-git-in-vscode-via-terminal/lektion-inhalte.md) | [aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-12-git-in-vscode-via-terminal/aufgaben.md) | Git in VS Code über das Terminal. |
-| 13 Branches, Commits, Pull Requests | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-13-branches-commits-pullrequests/lektion-inhalte.md) | - | Branches, Commits und Pull Requests. |
-| 14 Kurs-Repository klonen | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-14-kurs-repository-klonen/lektion-inhalte.md) | - | Kurs-Repository klonen. |
-| 15 Übungen im Gesamt-Setting | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-15-uebungen-im-gesamt-setting/lektion-inhalte.md) | - | Übungen im Gesamt-Setting. |
-| 16 Start in den Gesamtkurs | [lektion-inhalte.md](../01-course-modules/01-Onboarding-in-den-Kurs/lektion-16-start-in-den-gesamtkurs/lektion-inhalte.md) | - | Start in den Gesamtkurs. |
+| 01 Willkommen im Kurs | [01-willkommen-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md) | - | Willkommen im Kurs und erster Einstieg. |
+| 02 GitHub-Erste Schritte | [02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md) | - | GitHub-Grundlagen, Account und erstes Übungs-Repository. |
+| 03 Markdown Grundlagen | [03-markdown-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/03-markdown-grundlagen.md) | - | Grundlagen zu Markdown im Onboarding. |
+| 04 Eigenes Übungs-Repository | [04-eigenes-uebungs-repository.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-eigenes-uebungs-repository.md) | [04-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-aufgaben.md) | Eigenes Übungs-Repository anlegen und anwenden. |
+| 05 Git Grundlagen | [05-git-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/05-git-grundlagen.md) | [05-git-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/05-git-aufgaben.md) | Git-Grundlagen und Übungen. |
+| 06 Markdown Vertiefung | [06-markdown-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/06-markdown-grundlagen.md) | [06-markdown-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/06-markdown-aufgaben.md) | Vertiefung und Übungen zu Markdown. |
+| 07 Einstieg VS Code | [07-einstieg-vscode.md](../01-course-modules/01-Onboarding-in-den-Kurs/07-einstieg-vscode.md) | - | Einstieg in VS Code. |
+| 08 VS Code lokal einrichten | [08-vscode-lokal-einrichten.md](../01-course-modules/01-Onboarding-in-den-Kurs/08-vscode-lokal-einrichten.md) | [08-vscode-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/08-vscode-aufgaben.md) | VS Code lokal einrichten und üben. |
+| 09 Was ist Git? | [09-was-ist-git.md](../01-course-modules/01-Onboarding-in-den-Kurs/09-was-ist-git.md) | - | Warum Git gebraucht wird und was es besser löst. |
+| 10 Git installieren | [10-git-installieren.md](../01-course-modules/01-Onboarding-in-den-Kurs/10-git-installieren.md) | [10-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/10-aufgaben.md) | Git lokal installieren und prüfen. |
+| 11 Terminal und Shell Grundlagen | [11-terminal-und-shell-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/11-terminal-und-shell-grundlagen.md) | [11-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/11-aufgaben.md) | Terminal, Shell und Navigation im Kurs. |
+| 12 Git in VS Code via Terminal | [12-git-in-vscode-via-terminal.md](../01-course-modules/01-Onboarding-in-den-Kurs/12-git-in-vscode-via-terminal.md) | - | Die wichtigsten Git-Befehle in VS Code nutzen. |
+| 13 Branches, Commits, Pull Requests | [13-branches-commits-pullrequests.md](../01-course-modules/01-Onboarding-in-den-Kurs/13-branches-commits-pullrequests.md) | - | Branch- bis PR-Ablauf verstehen. |
+| 14 Kurs-Repository klonen | [14-kurs-repository-klonen.md](../01-course-modules/01-Onboarding-in-den-Kurs/14-kurs-repository-klonen.md) | - | Das gemeinsame Kurs-Repository lokal öffnen. |
+| 15 Übungen im Gesamt-Setting | [15-uebungen-im-gesamt-setting.md](../01-course-modules/01-Onboarding-in-den-Kurs/15-uebungen-im-gesamt-setting.md) | [15-aufgaben.md](../01-course-modules/01-Onboarding-in-den-Kurs/15-aufgaben.md) | Repo-Rollen und Lernfortschritt sauber einordnen. |
+| 16 Start in den Gesamtkurs | [16-start-in-den-gesamtkurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/16-start-in-den-gesamtkurs.md) | - | Klarer Einstieg nach dem Onboarding. |
 
 ## 02-course-exercises
 

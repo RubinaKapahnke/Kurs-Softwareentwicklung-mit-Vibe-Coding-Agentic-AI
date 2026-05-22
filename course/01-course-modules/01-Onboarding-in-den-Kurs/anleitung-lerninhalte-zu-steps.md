@@ -17,7 +17,7 @@ Beispiel:
 course/01-course-modules/01-Onboarding-in-den-Kurs/
 ├── 01-willkommen-im-kurs.md
 ├── 01-aufgaben.md                  (optional)
-├── 02-github-account.md
+├── 02-github-erste-schritte.md
 └── 02-aufgaben.md                  (optional)
 ```
 

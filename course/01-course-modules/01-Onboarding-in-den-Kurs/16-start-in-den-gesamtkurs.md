@@ -1,6 +1,3 @@
-<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: 16-start-in-den-gesamtkurs.md -->
-
 # Lektion 16: Start in den Gesamtkurs
 
 ## Ziel

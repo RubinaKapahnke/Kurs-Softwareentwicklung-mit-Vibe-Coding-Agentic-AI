@@ -18,11 +18,11 @@ Beispiel:
 01-Onboarding-in-den-Kurs/
 ├── 01-willkommen-im-kurs.md
 ├── 01-aufgaben.md                  (optional)
-├── 02-github-account.md
+├── 02-github-erste-schritte.md
 └── 02-aufgaben.md                  (optional)
 ```
 
-Wichtig: Eine flache Lektionsdatei wird nur als Onboarding-Step erkannt, wenn die erste Überschrift mit `# Lektion NN:` beginnt. So werden andere Moduldateien wie `01-github-im-kurs.md` nicht versehentlich synchronisiert.
+Wichtig: Eine flache Lektionsdatei wird nur als Onboarding-Step erkannt, wenn die erste Überschrift mit `# Lektion NN:` beginnt. So werden andere Moduldateien nicht versehentlich synchronisiert.
 
 Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt.
 

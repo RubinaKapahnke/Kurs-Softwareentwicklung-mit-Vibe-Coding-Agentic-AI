@@ -80,7 +80,7 @@ Wahrscheinlich ist dir bereits aufgefallen, dass die App nur einen Teil des Brow
 
 **So zum Beispiel:**
 
-![Apps nebeneinander](/content/Assets/m01-l01-apps%20nebeneinander%201.png)
+![Apps nebeneinander](/content/Assets/m01-l01-apps-nebeneinander.png)
 
 
 ### Hinweis: Lernbausteine bauen aufeinander auf

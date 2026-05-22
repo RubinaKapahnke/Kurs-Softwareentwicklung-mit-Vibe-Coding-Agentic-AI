@@ -1,4 +1,8 @@
-﻿# Lektion 09: Was ist Git?
+# Lektion 09: Was ist Git?
+
+## Ziel
+
+Du verstehst, warum Versionskontrolle wichtig ist und was Git daran besser loest als manuelle Dateikopien.
 
 ## Kapitel 1: Szenario
 
@@ -13,15 +17,15 @@
 
 1. Backup
 2. Experimentieren
-3. Zwischenstände festhalten
+3. Zwischenstaende festhalten
 
-- Genau dafür gibt es bessere Werkzeuge: Git.
+- Genau dafuer gibt es bessere Werkzeuge: Git.
 
 ## Kapitel 3: Warum Git besser passt
 
-- Git speichert Änderungen strukturiert.
-- Änderungen sind nachvollziehbar.
-- Teamarbeit ist parallel möglich.
+- Git speichert Aenderungen strukturiert.
+- Aenderungen sind nachvollziehbar.
+- Teamarbeit ist parallel moeglich.
 
 Kurz: Versionsverwaltung wird planbar und sauber.
 
@@ -32,11 +36,10 @@ Hinweis: Wähle alle zutreffenden Aussagen aus.
 Mehrfachauswahl: ja
 
 - [x] Fehler passieren schneller
-- [x] Doppelte Dateien verbrauchen unnötig Speicher
+- [x] Doppelte Dateien verbrauchen unnoetig Speicher
 - [x] Es kostet auf Dauer viel Zeit
-- [x] Bei größeren Projekten wird es schnell unübersichtlich
+- [x] Bei groesseren Projekten wird es schnell unuebersichtlich
 - [x] Teamarbeit wird schwieriger
 
-Erfolg: Richtig! Genau diese Punkte löst ein Versionskontrollsystem deutlich besser.
-Fehler: Fast. Prüfe noch einmal alle Aussagen und denke an Teamarbeit und Übersicht.
-
+Erfolg: Richtig! Genau diese Punkte loest ein Versionskontrollsystem deutlich besser.
+Fehler: Fast. Pruefe noch einmal alle Aussagen und denke an Teamarbeit und Uebersicht.

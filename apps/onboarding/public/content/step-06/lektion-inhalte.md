@@ -17,8 +17,8 @@ Markdown ist für den Kurs wichtig, weil du damit Inhalte schnell lesbar struktu
 
 Bevor du startest, schau in diese beiden Dateien:
 
-1. [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../../../03-course-library/01-markdown/01-markdown-grundlagen.md)
-2. [course/03-course-library/01-markdown/02-formatierung_md-files.md](../../../03-course-library/01-markdown/02-formatierung_md-files.md)
+1. [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../../03-course-library/01-markdown/01-markdown-grundlagen.md)
+2. [course/03-course-library/01-markdown/02-formatierung_md-files.md](../../03-course-library/01-markdown/02-formatierung_md-files.md)
 
 Worauf du beim Lesen achten solltest:
 

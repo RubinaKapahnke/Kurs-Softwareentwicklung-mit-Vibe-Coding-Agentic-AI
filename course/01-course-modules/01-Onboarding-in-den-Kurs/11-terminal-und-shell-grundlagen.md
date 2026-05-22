@@ -43,7 +43,7 @@ Im Alltag sagt man oft "Terminal" oder "Shell" synonymisch – was technisch nic
 - Du klickst auf Symbole, Menüs, Schaltflächen
 - Beispiel: VS Code mit Mausklicks, GitHub.com im Browser
 - **Vorteil:** Anfängerfreundlich, sichtbar, intuitiv
-- **Nachteil:** Langsam für Wiederholte Aufgaben, schwer zu automatisieren
+- **Nachteil:** Langsam für wiederholte Aufgaben, schwer zu automatisieren
 
 ### CLI (Kommandozeilen-Schnittstelle)
 
@@ -63,7 +63,7 @@ Im Kurs brauchst du die CLI aus mehreren Gründen:
 3. **Navigation zum richtigen Projekt-Ordner** ist im Terminal einfacher und sicherer
 4. **Viele Fehler werden erst im Terminal sichtbar**
 
-CLI + GUI ergänzen sich im Kurs – du nutzt den Browser für einfache Übungen (Kapitel 06) und die CLI für komplexere Workflows (ab Kapitel 05, Git).
+CLI + GUI ergänzen sich im Kurs – du nutzt den Browser für einfache Übungen und die CLI für komplexere Workflows.
 
 ---
 
@@ -99,10 +99,10 @@ Schreibst du diese Befehle einmal in eine Datei (z. B. `auto-push.sh` auf macOS/
 
 ### Im Kurs relevant?
 
-Für die ersten Schritte (Lektionen 04–08) brauchst du nicht selbst zu scripten. Aber:
+Für die ersten Schritte brauchst du nicht selbst zu scripten. Aber:
 - In `package.json` siehst du vordefinierte Scripts (z. B. `"build": "ng build"`)
 - Mit `npm run <script-name>` führst du diese Scripts aus
-- Das ist im Grunde, deine erste Script-Erfahrung
+- Das ist im Grunde deine erste Script-Erfahrung
 
 ---
 
@@ -123,7 +123,7 @@ Für die ersten Schritte (Lektionen 04–08) brauchst du nicht selbst zu scripte
 
 | Shell | Typisch auf | Besonderheit | Für Anfänger? |
 |-------|-------------|--------------|--------------|
-| **PowerShell (7+)** | Windows, modern | Microsoft's modern Sprache, objekt-orientiert | ✅ Ja, mit Umgewöhnung |
+| **PowerShell (7+)** | Windows, modern | Microsofts moderne Sprache, objekt-orientiert | ✅ Ja, mit Umgewöhnung |
 | **Cmd (cmd.exe)** | Windows, alt | Alter Windows-Standard, begrenzt | ⚠ Veraltet, nicht empfohlen |
 | **Bash (WSL/Git Bash)** | Windows (via Emulation) | Unix-Befehle auf Windows, für Lernende hilfreich | ✅ Ja, einfacher |
 
@@ -155,7 +155,7 @@ Auf Windows hast du zwei Möglichkeiten:
 
 ### macOS: Bash (Standard)
 
-- Auf MacOS ist Bash (oder Zsh, eine moderne Version von Bash) vorinstalliert
+- Auf macOS ist Bash (oder Zsh, eine moderne Version von Bash) vorinstalliert
 - Du brauchst nichts extra zu installieren
 - Alle Befehle dieser Lektion funktionieren sofort
 
@@ -268,8 +268,6 @@ Get-Location
 
 **Übung:** Öffne VS Code Terminal und tippe `pwd` (oder `Get-Location`). Sieh dir deinen Pfad an.
 
----
-
 ### 8.2 Inhalte eines Ordners anzeigen: `ls` und `Get-ChildItem`
 
 **Was tut es:** Zeigt alle **Dateien und Ordner** im aktuellen Verzeichnis.
@@ -309,12 +307,10 @@ Get-ChildItem -Force
 Get-ChildItem -Force | Format-Table
 ```
 
-**Übung:** 
+**Übung:**
 1. Tippe `ls` (oder `Get-ChildItem`) im Kurs-Ordner
 2. Du solltest Ordner wie `course/`, `apps/`, `tools/` sehen
 3. Tippe `ls -la` (oder `Get-ChildItem -Force`) und schaue, ob noch mehr Dateien auftauchen (z. B. `.git/`, `.gitignore`)
-
----
 
 ### 8.3 Zwischen Ordnern wechseln: `cd`
 
@@ -362,8 +358,6 @@ cd "Mein Ordner"
 4. Wechsle in `cd apps/onboarding` (mit Slash dazwischen)
 5. Tippe `pwd` zur Bestätigung
 
----
-
 ### 8.4 Text auf dem Bildschirm ausgeben: `echo`
 
 **Was tut es:** Gibt Text aus, den du schreibst.
@@ -388,7 +382,7 @@ echo "Ich bin in $PWD"
 echo
 ```
 
-**Wofür das nützlich ist:** 
+**Wofür das nützlich ist:**
 - In Scripts: um zu zeigen, was gerade passiert
 - Um Umgebungsvariablen zu checken (z. B. `echo $PWD`)
 
@@ -396,8 +390,6 @@ echo
 1. Tippe `echo "Ich lerne Terminal-Befehle"`
 2. Du solltest die Nachricht sehen
 3. Tippe `echo $PWD`, um deinen aktuellen Pfad zu sehen
-
----
 
 ### 8.5 Einen neuen Ordner anlegen: `mkdir`
 
@@ -430,9 +422,7 @@ New-Item -ItemType Directory -Name "mein-projekt"
 **Übung:**
 1. Im Kurs-Ordner: `mkdir test-ordner`
 2. Tippe `ls` – du solltest `test-ordner` sehen
-3. Lösche ihn danach: `rmdir test-ordner` (siehe Kapitel 8.7)
-
----
+3. Lösche ihn danach: `rmdir test-ordner`
 
 ### 8.6 Eine leere Datei anlegen: `touch`
 
@@ -466,9 +456,7 @@ New-Item "README.md"
 **Übung:**
 1. Im Kurs-Ordner: `touch test.md`
 2. Tippe `ls` – du solltest `test.md` sehen
-3. Lösche sie danach: `rm test.md` (siehe Kapitel 8.8)
-
----
+3. Lösche sie danach: `rm test.md`
 
 ### 8.7 Ein Verzeichnis löschen: `rmdir` und `rm -r`
 
@@ -490,7 +478,7 @@ rmdir nicht-leerer-ordner
 # Fehler: Directory not empty
 ```
 
-**Wenn der Ordner nicht leer ist:** Nutze `rm -r` (siehe Kapitel 8.8).
+**Wenn der Ordner nicht leer ist:** Nutze `rm -r`.
 
 **PowerShell:**
 ```powershell
@@ -503,9 +491,7 @@ Remove-Item -Path "ordnername" -Recurse -Force
 1. `mkdir test-ordner`
 2. `rmdir test-ordner` – sollte funktionieren
 3. `mkdir nicht-leer && touch nicht-leer/datei.txt` – einen nicht-leeren Ordner erstellen
-4. Versuche `rmdir nicht-leer` – sieht du die Fehlermeldung?
-
----
+4. Versuche `rmdir nicht-leer` – siehst du die Fehlermeldung?
 
 ### 8.8 Eine Datei löschen: `rm`
 
@@ -514,7 +500,7 @@ Remove-Item -Path "ordnername" -Recurse -Force
 **Syntax:**
 ```bash
 rm <dateiname>               # Datei löschen
-rm -r <ordnername>          # Ordner mit Inhalt löschen
+rm -r <ordnername>           # Ordner mit Inhalt löschen
 ```
 
 **Beispiele:**
@@ -545,8 +531,6 @@ Remove-Item "ordner" -Recurse -Force
 1. `touch zu-loeschen.txt`
 2. `rm zu-loeschen.txt`
 3. `ls` – die Datei sollte weg sein
-
----
 
 ### 8.9 Verzeichnis wechseln und auflisten: `ls` und `cd` zusammen
 
@@ -588,8 +572,6 @@ pwd
 4. Wechsle in einen Ordner (z. B. `cd 01-*` und drücke Tab zum Auto-Complete)
 5. Wechsle zurück zum Kurs-Ordner: `cd ../../..`
 
----
-
 ### 8.10 Dateityp verschieben: `mv`
 
 **Was tut es:** **Move** – verschiebt eine Datei oder benennt sie um.
@@ -618,152 +600,18 @@ mv /pfad/zu/datei.txt /neuer/pfad/datei.txt
 **PowerShell:**
 ```powershell
 Move-Item "alt.txt" "neu.txt"
-Move-Item "alt.txt" "ordner\"
 ```
 
-**Übung:**
-1. `touch alte-datei.md`
-2. `mv alte-datei.md neue-datei.md`
-3. `ls` – sollte nur `neue-datei.md` zeigen
-4. `rm neue-datei.md`
+## Was ist zu tun
 
----
+1. Öffne VS Code Terminal und prüfe mit `pwd` oder `Get-Location`, in welchem Ordner du bist.
+2. Erkunde mit `ls` oder `Get-ChildItem` die Struktur deines Kurs-Ordners.
+3. Wechsle mit `cd` in Unterordner und wieder zurück.
+4. Lege Test-Dateien und Test-Ordner an und räume sie wieder auf.
+5. Nutze Tab-Autocomplete, um schneller zwischen Ordnern zu wechseln.
+6. Schreibe und starte ein kleines Test-Script.
 
-### 8.11 Datei kopieren: `cp`
+## Hilfreiche Links
 
-**Was tut es:** **Copy** – erstellt eine Kopie einer Datei.
-
-**Syntax:**
-```bash
-cp <quelle> <ziel>
-```
-
-**Beispiele:**
-
-```bash
-# Datei kopieren
-cp original.txt kopie.txt
-
-# Datei in einen Ordner kopieren
-cp datei.txt ordner/
-
-# Ordner mit Inhalt kopieren (-r = Rekursiv)
-cp -r alter-ordner neuer-ordner
-```
-
-**PowerShell:**
-```powershell
-Copy-Item "original.txt" "kopie.txt"
-Copy-Item "original.txt" "ordner\"
-```
-
-**Übung:**
-1. `touch original.txt`
-2. `cp original.txt kopie.txt`
-3. `ls` – sollte beide Dateien zeigen
-4. `rm original.txt kopie.txt`
-
----
-
-### 8.12 Inhalt einer Datei anzeigen: `cat`
-
-**Was tut es:** **Concatenate** – zeigt den **kompletten Inhalt** einer Textdatei auf dem Bildschirm an.
-
-**Syntax:**
-```bash
-cat <dateiname>
-```
-
-**Beispiele:**
-
-```bash
-# Inhalt einer Datei anzeigen
-cat README.md
-
-# Mehrere Dateien nacheinander anzeigen
-cat file1.txt file2.txt
-
-# Ausgabe in eine neue Datei lenken (merging)
-cat file1.txt file2.txt > combined.txt
-```
-
-**PowerShell:**
-```powershell
-Get-Content "README.md"
-# oder (Alias):
-cat "README.md"
-```
-
-**Übung:**
-1. `echo "Hallo Welt" > test.txt` (erstellt eine Datei mit Inhalt)
-2. `cat test.txt` – zeigt "Hallo Welt"
-3. `rm test.txt`
-
----
-
-### 8.13 Dateien suchen: `find`
-
-**Was tut es:** **Find** – sucht nach Dateien, die ein bestimmtes Muster erfüllen.
-
-**Syntax:**
-```bash
-find <pfad> -name "<muster>"
-```
-
-**Beispiele:**
-
-```bash
-# Alle Markdown-Dateien im aktuellen Ordner und Unterordnern
-find . -name "*.md"
-
-# Alle Ordner namens "node_modules"
-find . -type d -name "node_modules"
-
-# Alle Dateien größer als 1 MB
-find . -type f -size +1M
-
-# Im gesamten Projekt nach einer bestimmten Datei
-find . -name "package.json"
-```
-
-**PowerShell:**
-```powershell
-Get-ChildItem -Path "." -Recurse -Filter "*.md"
-# oder:
-Get-ChildItem -Path "." -Recurse -Include "*.md"
-```
-
-**Übung:**
-1. `find . -name "*.md"` – zeigt alle Markdown-Dateien im Kurs
-2. `find course/ -name "README*"` – zeigt alle README-Dateien im course-Ordner
-3. `find . -type d -name "kursmodule"` – sucht den kursmodule-Ordner
-
----
-
-## Kapitel 9: Checkliste und Erfolgskriterium
-
-### Hast du alles verstanden?
-
-- [ ] Ich kenne den Unterschied zwischen Terminal und Shell
-- [ ] Ich kenne die wichtigsten Shells (Bash, Zsh, PowerShell) und weiß, welche ich nutze
-- [ ] Ich kann das Terminal in VS Code öffnen (Ctrl+Backtick)
-- [ ] Ich kann mit `cd` und `ls` navigieren
-- [ ] Ich weiß, wie ich mit `pwd` meinen aktuellen Ordner sehe
-- [ ] Ich kann Ordner anlegen (`mkdir`) und löschen (`rmdir`)
-- [ ] Ich kann Dateien anlegen (`touch`), kopieren (`cp`), verschieben (`mv`), löschen (`rm`)
-- [ ] Ich kann Dateiinhalte mit `cat` anschauen
-- [ ] Ich kann mit `find` nach Dateien suchen
-- [ ] Ich nutze Tab-Autocomplete, um schneller zu tippen
-
-### Erfolgskriterium
-
-Du hast diese Lektion erfolgreich abgeschlossen, wenn du:
-
-1. **Das Terminal öffnest** und zur Kurs-Ordner navigierst
-2. **Mit `ls` die Inhalte siehst** (course/, apps/, tools/, etc.)
-3. **In `cd course/01-course-modules/` wechselst** und dort `ls` nutzt
-4. **Eine Test-Datei anlegst** (`touch test.md`), dich mit `cat` anschaust und dann löschst (`rm test.md`)
-5. **Mit `find . -name "*.md"` nach Markdown-Dateien suchst** und das Ergebnis verstehst
-
-Wenn das alles funktioniert, hast du die Kernbefehle wirklich verstanden!
-
+- [Terminal-Grundlagen in VS Code](https://code.visualstudio.com/docs/terminal/basics)
+- [PowerShell-Dokumentation](https://learn.microsoft.com/de-de/powershell/)

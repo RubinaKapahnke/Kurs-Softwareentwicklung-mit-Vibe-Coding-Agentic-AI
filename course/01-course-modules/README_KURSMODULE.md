@@ -47,6 +47,6 @@ Für das Modul [01-Onboarding-in-den-Kurs](./01-Onboarding-in-den-Kurs/00-modulz
 - [README_LERNINHALTE.md](./01-Onboarding-in-den-Kurs/README_LERNINHALTE.md)
 - [anleitung-lerninhalte-zu-steps.md](./01-Onboarding-in-den-Kurs/anleitung-lerninhalte-zu-steps.md)
 
-Dort ist pro Lektion ein eigener Ordner direkt im Modulordner angelegt. Jeder Ordner enthält aktuell den heutigen Inhaltsstand in markerbasierten Abschnitten, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
+Dort liegen die Lektionen als flache, nummerierte Dateien direkt im Modulordner. Die Inhalte enthalten markerbasierte Abschnitte, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
 
-Aktueller Stand: Die Onboarding-App nutzt einen manifestbasierten Sync aus diesen Lektionen-Ordnern. Dabei werden insbesondere `lektion-inhalte.md` (Lesson-Flow-Inhalt) und optional `aufgaben.md` (Aufgabenliste) verarbeitet.
+Aktueller Stand: Die Onboarding-App nutzt einen manifestbasierten Sync aus diesen Lektionsdateien. Dabei werden insbesondere `XX-thema.md` und optional `XX-aufgaben.md` verarbeitet.

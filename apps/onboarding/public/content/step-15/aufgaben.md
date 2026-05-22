@@ -1,3 +1,6 @@
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- Source: 15-aufgaben.md -->
+
 ## Aufgaben
 
 1. COURSE_MILESTONES.md lesen.

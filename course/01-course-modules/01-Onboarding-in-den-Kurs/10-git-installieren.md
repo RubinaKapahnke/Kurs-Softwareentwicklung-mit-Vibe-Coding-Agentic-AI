@@ -1,6 +1,3 @@
-<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: 10-git-installieren.md -->
-
 # Lektion 10: Git installieren
 
 ## Ziel
