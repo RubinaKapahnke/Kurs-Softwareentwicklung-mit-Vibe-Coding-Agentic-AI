@@ -1,0 +1,22 @@
+<section class="page-shell">
+  <header class="error-card">
+    <p class="eyebrow">Learning Platform</p>
+    <h1>{{ copy().title }}</h1>
+    <p class="description">{{ copy().description }}</p>
+
+    @if (courseId()) {
+      <p class="context">Kurs: {{ courseId() }}</p>
+    }
+
+    @if (moduleId()) {
+      <p class="context">Modul: {{ moduleId() }}</p>
+    }
+
+    <div class="actions" aria-label="Fehleraktionen">
+      <a class="btn btn-primary" routerLink="/">Zur Kursuebersicht</a>
+      @if (courseId() && moduleId()) {
+        <a class="btn" [routerLink]="['/kurse', courseId(), 'module', moduleId()]">Zum Modul</a>
+      }
+    </div>
+  </header>
+</section>

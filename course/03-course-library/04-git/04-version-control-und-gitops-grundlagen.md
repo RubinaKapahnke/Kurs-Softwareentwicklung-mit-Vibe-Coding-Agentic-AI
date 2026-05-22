@@ -1,4 +1,4 @@
-# Versionsverwaltung und GitOps: Einordnung
+﻿# Versionsverwaltung und GitOps: Einordnung
 
 Dieses Dokument erklaert zwei Konzepte, die aufeinander aufbauen:
 
@@ -95,4 +95,5 @@ Pull Requests. GitOps wird spaeter relevant, wenn es um Deployment und
 Infrastruktur geht (Modul 13).
 
 Kursspezifische Einordnung:
-- [../../01-course-modules/01-Onboarding-in-den-Kurs/04-version-control-und-gitops-im-kurs.md](../../01-course-modules/01-Onboarding-in-den-Kurs/04-version-control-und-gitops-im-kurs.md)
+- [../../01-course-modules/01-Onboarding-in-den-Kurs/17-version-control-und-gitops-im-kurs.md](../../01-course-modules/01-Onboarding-in-den-Kurs/17-version-control-und-gitops-im-kurs.md)
+

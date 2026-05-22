@@ -1,0 +1,68 @@
+<section class="page-shell">
+  <header class="hero">
+    <p class="eyebrow">Learning Platform</p>
+    <h1>Kurse und Module</h1>
+    <p class="lead">Diese neue App ist die generische Basis fuer alle Kurse. Inhalte kommen datengetrieben aus dem Kurskatalog.</p>
+    <div class="hero-meta" aria-label="Kursstatus">
+      <p><span>{{ liveCourses().length }}</span> aktiv</p>
+      <p><span>{{ comingSoonCourses().length }}</span> in Vorbereitung</p>
+    </div>
+  </header>
+
+  @if (loading()) {
+    <p class="state">Lade Kurskatalog...</p>
+  } @else if (error()) {
+    <p class="state state-error">{{ error() }}</p>
+  } @else {
+    <section class="block">
+      <div class="block-head">
+        <h2>Verfuegbare Kurse</h2>
+        <p>Starte im Standardmodul oder setze direkt am ersten offenen Schritt fort.</p>
+      </div>
+      @if (liveCourses().length === 0) {
+        <p class="state">Es sind aktuell keine Live-Kurse hinterlegt.</p>
+      } @else {
+        <div class="grid">
+          @for (course of liveCourses(); track course.id) {
+            <article class="card">
+              <p class="status live">Jetzt verfuegbar</p>
+              <h3>{{ course.title }}</h3>
+              <p class="meta">Kurs-ID: {{ course.id }}</p>
+              <p class="progress" [class.progress-warning]="hasProgressWarning(course)">Fortschritt: {{ progressLabel(course) }}</p>
+              @if (!hasProgressWarning(course)) {
+                <div class="progress-track" aria-hidden="true">
+                  <span class="progress-fill" [style.width.%]="progressByCourse()[course.id]?.percent ?? 0"></span>
+                </div>
+              }
+              <div class="card-actions">
+                <a class="cta" [routerLink]="['/kurse', course.id, 'module', course.defaultModuleId]">Standardmodul oeffnen</a>
+                @if (nextOpenStepId(course)) {
+                  <a class="cta cta-secondary" [routerLink]="['/kurse', course.id, 'module', course.defaultModuleId, 'step', nextOpenStepId(course)]">Weiterlernen</a>
+                }
+              </div>
+            </article>
+          }
+        </div>
+      }
+    </section>
+
+    <section class="block">
+      <div class="block-head">
+        <h2>Weitere Kurse im Aufbau</h2>
+        <p>Hier erscheinen kommende Kurse, sobald ein Modul live geschaltet wird.</p>
+      </div>
+      @if (comingSoonCourses().length === 0) {
+        <p class="state">Keine weiteren Kurse im Aufbau.</p>
+      } @else {
+        <ul class="coming-soon-list">
+          @for (course of comingSoonCourses(); track course.id) {
+            <li>
+              <strong>{{ course.title }}</strong>
+              <span>{{ course.id }}</span>
+            </li>
+          }
+        </ul>
+      }
+    </section>
+  }
+</section>

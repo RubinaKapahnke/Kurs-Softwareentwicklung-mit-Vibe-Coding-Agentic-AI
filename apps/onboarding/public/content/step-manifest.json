@@ -1304,6 +1304,216 @@
               ]
             }
           ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 5: Schnellstart mit GitHub Codespaces",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Codespaces ist eine cloudbasierte Entwicklungsumgebung von GitHub. Du arbeitest direkt im Browser in einer VS-Code-Ansicht, ohne lokal etwas installieren zu müssen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "So kannst du sehr schnell starten, bevor wir später auf lokales Arbeiten wechseln."
+                }
+              ],
+              "paragraphs": [
+                "Codespaces ist eine cloudbasierte Entwicklungsumgebung von GitHub. Du arbeitest direkt im Browser in einer VS-Code-Ansicht, ohne lokal etwas installieren zu müssen.",
+                "So kannst du sehr schnell starten, bevor wir später auf lokales Arbeiten wechseln."
+              ]
+            },
+            {
+              "heading": "Was du im Schnellstart lernst",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "einen Codespace direkt aus deinem Übungs-Repository starten",
+                    "Dateien im Codespace bearbeiten und speichern",
+                    "optional eine Anwendung mit Port-Weiterleitung im Browser öffnen",
+                    "Änderungen committen und in dein bestehendes Übungs-Repository pushen",
+                    "den Editor mit Erweiterungen anpassen"
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "einen Codespace direkt aus deinem Übungs-Repository starten",
+                "Dateien im Codespace bearbeiten und speichern",
+                "optional eine Anwendung mit Port-Weiterleitung im Browser öffnen",
+                "Änderungen committen und in dein bestehendes Übungs-Repository pushen",
+                "den Editor mit Erweiterungen anpassen"
+              ]
+            },
+            {
+              "heading": "Schritt-für-Schritt: Erster Codespace",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne dein eigenes Übungs-Repository auf GitHub.",
+                    "Klicke auf **Code** und wechsle auf den Tab **Codespaces**.",
+                    "Klicke auf **Create codespace on main**.",
+                    "Warte, bis der Codespace vollständig geladen ist."
+                  ]
+                }
+              ],
+              "orderedItems": [
+                "Öffne dein eigenes Übungs-Repository auf GitHub.",
+                "Klicke auf **Code** und wechsle auf den Tab **Codespaces**.",
+                "Klicke auf **Create codespace on main**.",
+                "Warte, bis der Codespace vollständig geladen ist."
+              ]
+            },
+            {
+              "heading": "Erste Änderung im Übungs-Repository",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne im Explorer die Datei `README.md`.",
+                    "Ergänze 1 bis 2 Zeilen zu deinem aktuellen Lernstand.",
+                    "Speichere die Datei."
+                  ]
+                }
+              ],
+              "orderedItems": [
+                "Öffne im Explorer die Datei `README.md`.",
+                "Ergänze 1 bis 2 Zeilen zu deinem aktuellen Lernstand.",
+                "Speichere die Datei."
+              ]
+            },
+            {
+              "heading": "Optional: Anwendung mit Port-Weiterleitung testen",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Diesen Teil machst du nur, wenn in deinem Übungs-Repository eine startbare App liegt."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne das Terminal im Codespace.",
+                    "Starte die App mit dem passenden Projektbefehl, zum Beispiel `npm run dev`.",
+                    "Wenn der Hinweis auf einen weitergeleiteten Port erscheint, klicke auf **Im Browser öffnen**.",
+                    "Prüfe, ob die Anwendung läuft."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Falls die Browser-Registerkarte geschlossen wurde:"
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne im Codespace den Bereich **Ports**.",
+                    "Suche den laufenden Port.",
+                    "Nutze dort **Im Browser öffnen**."
+                  ]
+                }
+              ],
+              "paragraphs": [
+                "Diesen Teil machst du nur, wenn in deinem Übungs-Repository eine startbare App liegt.",
+                "Falls die Browser-Registerkarte geschlossen wurde:"
+              ],
+              "orderedItems": [
+                "Öffne das Terminal im Codespace.",
+                "Starte die App mit dem passenden Projektbefehl, zum Beispiel `npm run dev`.",
+                "Wenn der Hinweis auf einen weitergeleiteten Port erscheint, klicke auf **Im Browser öffnen**.",
+                "Prüfe, ob die Anwendung läuft.",
+                "Öffne im Codespace den Bereich **Ports**.",
+                "Suche den laufenden Port.",
+                "Nutze dort **Im Browser öffnen**."
+              ]
+            },
+            {
+              "heading": "Änderung committen und pushen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne **Quellcodeverwaltung**.",
+                    "Stage die geänderte Datei.",
+                    "Schreibe eine Commit-Nachricht und committe.",
+                    "Klicke auf **Sync Changes** oder **Push**.",
+                    "Öffne dein Übungs-Repository auf GitHub und prüfe, ob der Commit sichtbar ist."
+                  ]
+                }
+              ],
+              "orderedItems": [
+                "Öffne **Quellcodeverwaltung**.",
+                "Stage die geänderte Datei.",
+                "Schreibe eine Commit-Nachricht und committe.",
+                "Klicke auf **Sync Changes** oder **Push**.",
+                "Öffne dein Übungs-Repository auf GitHub und prüfe, ob der Commit sichtbar ist."
+              ]
+            },
+            {
+              "heading": "Personalisieren mit Erweiterungen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne **Extensions** im Codespace.",
+                    "Suche eine Erweiterung, zum Beispiel `fairyfloss`.",
+                    "Installiere sie und aktiviere das gewünschte Theme."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Optional: Mit Einstellungssynchronisierung kannst du Erweiterungen und Editor-Einstellungen über mehrere Geräte hinweg konsistent halten."
+                }
+              ],
+              "paragraphs": [
+                "Optional: Mit Einstellungssynchronisierung kannst du Erweiterungen und Editor-Einstellungen über mehrere Geräte hinweg konsistent halten."
+              ],
+              "orderedItems": [
+                "Öffne **Extensions** im Codespace.",
+                "Suche eine Erweiterung, zum Beispiel `fairyfloss`.",
+                "Installiere sie und aktiviere das gewünschte Theme."
+              ]
+            },
+            {
+              "heading": "Mini-Check: Codespaces Schnellstart",
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "[ ] Ich habe einen Codespace aus meinem Übungs-Repository gestartet.",
+                    "[ ] Ich habe eine Datei im Codespace bearbeitet, committet und gepusht.",
+                    "[ ] Ich kann optional einen weitergeleiteten Port im Browser öffnen, wenn eine App läuft."
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "[ ] Ich habe einen Codespace aus meinem Übungs-Repository gestartet.",
+                "[ ] Ich habe eine Datei im Codespace bearbeitet, committet und gepusht.",
+                "[ ] Ich kann optional einen weitergeleiteten Port im Browser öffnen, wenn eine App läuft."
+              ]
+            },
+            {
+              "heading": "Fallback bei typischen Problemen",
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "**Codespace startet nicht:** Seite neu laden und den Codespace im Tab **Codespaces** erneut erstellen.",
+                    "**Port-Hinweis erscheint nicht:** im Bereich **Ports** prüfen, ob die Anwendung wirklich läuft.",
+                    "**Push nicht möglich:** prüfen, ob du im richtigen Repository bist und der Commit wirklich erstellt wurde.",
+                    "**App zeigt keine Änderung:** Browser aktualisieren und prüfen, ob die Datei gespeichert wurde."
+                  ]
+                }
+              ],
+              "orderedItems": [
+                "**Codespace startet nicht:** Seite neu laden und den Codespace im Tab **Codespaces** erneut erstellen.",
+                "**Port-Hinweis erscheint nicht:** im Bereich **Ports** prüfen, ob die Anwendung wirklich läuft.",
+                "**Push nicht möglich:** prüfen, ob du im richtigen Repository bist und der Commit wirklich erstellt wurde.",
+                "**App zeigt keine Änderung:** Browser aktualisieren und prüfen, ob die Datei gespeichert wurde."
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1400,7 +1610,7 @@
   },
   "3": {
     "title": "Markdown verstehen und README schreiben",
-    "goal": "Du verstehst, wofür Markdown genutzt wird, kannst einfache Markdown-Dateien schreiben und erstellst eine sinnvolle README für dein Übungs-Repository.",
+    "goal": "Du verstehst, wofür Markdown im Kurs genutzt wird, kannst die wichtigsten Markdown-Elemente sicher anwenden und schreibst eine klare README für dein Übungs-Repository.",
     "sections": [
       {
         "type": "lesson",
@@ -1412,331 +1622,86 @@
       "slides": [
         {
           "type": "content",
-          "title": "Kapitel 1: Was ist Markdown?",
+          "title": "Kapitel 1: Warum Markdown im Kurs so wichtig ist",
           "sections": [
             {
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Markdown ist eine einfache Schreibweise, mit der du Texte strukturieren und formatieren kannst."
+                  "text": "Markdown ist eine einfache Schreibweise für strukturierte Texte. Du schreibst normalen Text und nutzt wenige Zeichen für Überschriften, Listen, Links und Code."
                 },
                 {
                   "type": "paragraph",
-                  "text": "Du schreibst dabei normalen Text mit wenigen Sonderzeichen. Daraus entstehen Überschriften, Listen, Links, Bilder, Tabellen oder Code-Blöcke."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Markdown ist besonders praktisch, weil der Text auch ohne spezielle Software lesbar bleibt. Gleichzeitig kann GitHub daraus eine gut formatierte Ansicht erzeugen."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Beispiel:"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "```markdown"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Das ist ein kurzer Text."
+                  "text": "Warum das wichtig ist:"
                 },
                 {
                   "type": "unordered-list",
                   "items": [
-                    "erster Punkt",
-                    "zweiter Punkt",
-                    "dritter Punkt"
+                    "Deine Inhalte sind ohne Spezialsoftware lesbar.",
+                    "GitHub stellt Markdown automatisch sauber dar.",
+                    "Du kannst Aufgaben, Lernnotizen und PR-Beschreibungen einheitlich dokumentieren.",
+                    "KI-Tools verstehen klar strukturierte Informationen besser."
                   ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "```"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "In GitHub wird daraus eine formatierte Überschrift, ein Absatz und eine Liste."
                 }
               ],
               "paragraphs": [
-                "Markdown ist eine einfache Schreibweise, mit der du Texte strukturieren und formatieren kannst.",
-                "Du schreibst dabei normalen Text mit wenigen Sonderzeichen. Daraus entstehen Überschriften, Listen, Links, Bilder, Tabellen oder Code-Blöcke.",
-                "Markdown ist besonders praktisch, weil der Text auch ohne spezielle Software lesbar bleibt. Gleichzeitig kann GitHub daraus eine gut formatierte Ansicht erzeugen.",
-                "Beispiel:",
-                "```markdown",
-                "Das ist ein kurzer Text.",
-                "```",
-                "In GitHub wird daraus eine formatierte Überschrift, ein Absatz und eine Liste."
+                "Markdown ist eine einfache Schreibweise für strukturierte Texte. Du schreibst normalen Text und nutzt wenige Zeichen für Überschriften, Listen, Links und Code.",
+                "Warum das wichtig ist:"
               ],
               "unorderedItems": [
-                "erster Punkt",
-                "zweiter Punkt",
-                "dritter Punkt"
-              ]
-            },
-            {
-              "heading": "Warum nutzen wir Markdown?",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Markdown ist einfach, schnell und sehr verbreitet. Du brauchst kein Layoutprogramm und keine komplizierte Oberfläche. Ein normaler Texteditor reicht aus."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Im Kurs nutzen wir Markdown, weil du damit:"
-                },
-                {
-                  "type": "unordered-list",
-                  "items": [
-                    "Notizen strukturieren kannst,",
-                    "Aufgaben dokumentieren kannst,",
-                    "README-Dateien schreiben kannst,",
-                    "Prompts und Kontext für KI-Tools vorbereiten kannst,",
-                    "Projektinformationen sauber festhalten kannst."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Kurz gesagt: Markdown hilft dir, Gedanken, Wissen und Projektinformationen klar aufzuschreiben."
-                }
-              ],
-              "paragraphs": [
-                "Markdown ist einfach, schnell und sehr verbreitet. Du brauchst kein Layoutprogramm und keine komplizierte Oberfläche. Ein normaler Texteditor reicht aus.",
-                "Im Kurs nutzen wir Markdown, weil du damit:",
-                "Kurz gesagt: Markdown hilft dir, Gedanken, Wissen und Projektinformationen klar aufzuschreiben."
-              ],
-              "unorderedItems": [
-                "Notizen strukturieren kannst,",
-                "Aufgaben dokumentieren kannst,",
-                "README-Dateien schreiben kannst,",
-                "Prompts und Kontext für KI-Tools vorbereiten kannst,",
-                "Projektinformationen sauber festhalten kannst."
+                "Deine Inhalte sind ohne Spezialsoftware lesbar.",
+                "GitHub stellt Markdown automatisch sauber dar.",
+                "Du kannst Aufgaben, Lernnotizen und PR-Beschreibungen einheitlich dokumentieren.",
+                "KI-Tools verstehen klar strukturierte Informationen besser."
               ]
             }
           ]
         },
         {
           "type": "content",
-          "title": "Kapitel 2: Typische Einsatzgebiete von Markdown",
+          "title": "Kapitel 2: Wo du Markdown konkret verwendest",
           "sections": [
             {
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Markdown wird in vielen Bereichen der Softwareentwicklung und Dokumentation eingesetzt."
-                }
-              ],
-              "paragraphs": [
-                "Markdown wird in vielen Bereichen der Softwareentwicklung und Dokumentation eingesetzt."
-              ]
-            },
-            {
-              "heading": "README-Dateien",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Eine README ist oft die Startseite eines Repositorys. Sie erklärt, worum es im Projekt geht, wie man es nutzt und welche Informationen wichtig sind."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Typische Inhalte einer README:"
+                  "text": "Im Modul 01 brauchst du Markdown vor allem in diesen Situationen:"
                 },
                 {
                   "type": "unordered-list",
                   "items": [
-                    "Projektname",
-                    "kurze Beschreibung",
-                    "Installation oder Nutzung",
-                    "wichtige Befehle",
-                    "Projektstruktur",
-                    "Lernstand oder nächste Schritte",
-                    "Links und Quellen"
+                    "README-Datei im eigenen Übungs-Repository",
+                    "Beschreibungen in Pull Requests",
+                    "kurze Lernnotizen und Zwischenstände",
+                    "Aufgaben- und Lösungsdokumentation"
                   ]
                 }
               ],
               "paragraphs": [
-                "Eine README ist oft die Startseite eines Repositorys. Sie erklärt, worum es im Projekt geht, wie man es nutzt und welche Informationen wichtig sind.",
-                "Typische Inhalte einer README:"
+                "Im Modul 01 brauchst du Markdown vor allem in diesen Situationen:"
               ],
               "unorderedItems": [
-                "Projektname",
-                "kurze Beschreibung",
-                "Installation oder Nutzung",
-                "wichtige Befehle",
-                "Projektstruktur",
-                "Lernstand oder nächste Schritte",
-                "Links und Quellen"
-              ]
-            },
-            {
-              "heading": "Dokumentation",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Markdown eignet sich gut für technische Dokumentation. Du kannst damit Anleitungen, Erklärungen, Checklisten und Notizen erstellen."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Beispiele:"
-                },
-                {
-                  "type": "unordered-list",
-                  "items": [
-                    "Installationsanleitung",
-                    "Schritt-für-Schritt-Dokumentation",
-                    "Glossar",
-                    "Projektübersicht",
-                    "Fehler- und Lösungsdokumentation"
-                  ]
-                }
-              ],
-              "paragraphs": [
-                "Markdown eignet sich gut für technische Dokumentation. Du kannst damit Anleitungen, Erklärungen, Checklisten und Notizen erstellen.",
-                "Beispiele:"
-              ],
-              "unorderedItems": [
-                "Installationsanleitung",
-                "Schritt-für-Schritt-Dokumentation",
-                "Glossar",
-                "Projektübersicht",
-                "Fehler- und Lösungsdokumentation"
-              ]
-            },
-            {
-              "heading": "GitHub Issues und Pull Requests",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Auch in GitHub selbst wird Markdown genutzt. Du kannst damit Issues, Pull Requests und Kommentare besser strukturieren."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Beispiele:"
-                },
-                {
-                  "type": "unordered-list",
-                  "items": [
-                    "Fehlerbeschreibung",
-                    "Aufgabenliste",
-                    "Lösungsvorschlag",
-                    "Review-Kommentar",
-                    "offene Fragen"
-                  ]
-                }
-              ],
-              "paragraphs": [
-                "Auch in GitHub selbst wird Markdown genutzt. Du kannst damit Issues, Pull Requests und Kommentare besser strukturieren.",
-                "Beispiele:"
-              ],
-              "unorderedItems": [
-                "Fehlerbeschreibung",
-                "Aufgabenliste",
-                "Lösungsvorschlag",
-                "Review-Kommentar",
-                "offene Fragen"
-              ]
-            },
-            {
-              "heading": "Lernnotizen",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Markdown eignet sich sehr gut für eigene Lernnotizen, weil du Inhalte schnell ordnen kannst."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Beispiele:"
-                },
-                {
-                  "type": "unordered-list",
-                  "items": [
-                    "Was habe ich gelernt?",
-                    "Welche Begriffe sind neu?",
-                    "Welche Fehler sind aufgetreten?",
-                    "Welche Lösung hat funktioniert?",
-                    "Welche Fragen sind noch offen?"
-                  ]
-                }
-              ],
-              "paragraphs": [
-                "Markdown eignet sich sehr gut für eigene Lernnotizen, weil du Inhalte schnell ordnen kannst.",
-                "Beispiele:"
-              ],
-              "unorderedItems": [
-                "Was habe ich gelernt?",
-                "Welche Begriffe sind neu?",
-                "Welche Fehler sind aufgetreten?",
-                "Welche Lösung hat funktioniert?",
-                "Welche Fragen sind noch offen?"
-              ]
-            },
-            {
-              "heading": "KI und Context Engineering",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Im Kurs spielt Markdown auch eine wichtige Rolle für KI-gestützte Entwicklung."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "KI-Tools arbeiten besser, wenn Informationen klar, strukturiert und nachvollziehbar bereitgestellt werden. Markdown hilft dir dabei, Kontext für KI verständlich aufzubereiten."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Beispiele:"
-                },
-                {
-                  "type": "unordered-list",
-                  "items": [
-                    "Projektbeschreibung",
-                    "Anforderungen",
-                    "Regeln für den Code",
-                    "Prompts",
-                    "Aufgabenlisten",
-                    "Fehlermeldungen",
-                    "bisherige Lösungsversuche"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Wenn du deine Informationen sauber in Markdown dokumentierst, kann eine KI besser verstehen, was du willst, was bereits existiert und welche Regeln sie beachten soll."
-                }
-              ],
-              "paragraphs": [
-                "Im Kurs spielt Markdown auch eine wichtige Rolle für KI-gestützte Entwicklung.",
-                "KI-Tools arbeiten besser, wenn Informationen klar, strukturiert und nachvollziehbar bereitgestellt werden. Markdown hilft dir dabei, Kontext für KI verständlich aufzubereiten.",
-                "Beispiele:",
-                "Wenn du deine Informationen sauber in Markdown dokumentierst, kann eine KI besser verstehen, was du willst, was bereits existiert und welche Regeln sie beachten soll."
-              ],
-              "unorderedItems": [
-                "Projektbeschreibung",
-                "Anforderungen",
-                "Regeln für den Code",
-                "Prompts",
-                "Aufgabenlisten",
-                "Fehlermeldungen",
-                "bisherige Lösungsversuche"
+                "README-Datei im eigenen Übungs-Repository",
+                "Beschreibungen in Pull Requests",
+                "kurze Lernnotizen und Zwischenstände",
+                "Aufgaben- und Lösungsdokumentation"
               ]
             }
           ]
         },
         {
           "type": "content",
-          "title": "Kapitel 3: Die wichtigsten Markdown-Grundlagen",
+          "title": "Kapitel 3: Markdown-Schnellstart (mit Beispielen)",
           "sections": [
             {
               "heading": "Überschriften",
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Überschriften werden mit `#` geschrieben."
-                },
-                {
-                  "type": "paragraph",
                   "text": "```markdown"
                 }
               ],
               "paragraphs": [
-                "Überschriften werden mit `#` geschrieben.",
                 "```markdown"
               ]
             }
@@ -1752,15 +1717,10 @@
                 {
                   "type": "paragraph",
                   "text": "```"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Nutze Überschriften, um deinen Text klar zu gliedern."
                 }
               ],
               "paragraphs": [
-                "```",
-                "Nutze Überschriften, um deinen Text klar zu gliedern."
+                "```"
               ]
             },
             {
@@ -1768,26 +1728,16 @@
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Ein normaler Absatz ist einfacher Text."
-                },
-                {
-                  "type": "paragraph",
                   "text": "```markdown\nDas ist ein Absatz."
                 },
                 {
                   "type": "paragraph",
                   "text": "Das ist ein neuer Absatz.\n```"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Zwischen zwei Absätzen steht eine Leerzeile."
                 }
               ],
               "paragraphs": [
-                "Ein normaler Absatz ist einfacher Text.",
                 "```markdown\nDas ist ein Absatz.",
-                "Das ist ein neuer Absatz.\n```",
-                "Zwischen zwei Absätzen steht eine Leerzeile."
+                "Das ist ein neuer Absatz.\n```"
               ]
             },
             {
@@ -1795,27 +1745,19 @@
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Ungeordnete Listen schreibst du mit `-`."
-                },
-                {
-                  "type": "paragraph",
                   "text": "```markdown"
                 },
                 {
                   "type": "unordered-list",
                   "items": [
-                    "GitHub",
-                    "Markdown",
-                    "README"
+                    "Punkt A",
+                    "Punkt B",
+                    "Punkt C"
                   ]
                 },
                 {
                   "type": "paragraph",
                   "text": "```"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Geordnete Listen schreibst du mit Zahlen."
                 },
                 {
                   "type": "paragraph",
@@ -1824,9 +1766,9 @@
                 {
                   "type": "ordered-list",
                   "items": [
-                    "Repository öffnen",
-                    "README bearbeiten",
-                    "Änderungen speichern"
+                    "Schritt 1",
+                    "Schritt 2",
+                    "Schritt 3"
                   ]
                 },
                 {
@@ -1835,44 +1777,32 @@
                 }
               ],
               "paragraphs": [
-                "Ungeordnete Listen schreibst du mit `-`.",
                 "```markdown",
                 "```",
-                "Geordnete Listen schreibst du mit Zahlen.",
                 "```markdown",
                 "```"
               ],
               "orderedItems": [
-                "Repository öffnen",
-                "README bearbeiten",
-                "Änderungen speichern"
+                "Schritt 1",
+                "Schritt 2",
+                "Schritt 3"
               ],
               "unorderedItems": [
-                "GitHub",
-                "Markdown",
-                "README"
+                "Punkt A",
+                "Punkt B",
+                "Punkt C"
               ]
             },
             {
-              "heading": "Hervorhebungen",
+              "heading": "Hervorhebung",
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Du kannst Wörter fett oder kursiv schreiben."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "```markdown\n**wichtiger Text**"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "*kursiver Text*\n```"
+                  "text": "```markdown\n**fett**\n*kursiv*\n```"
                 }
               ],
               "paragraphs": [
-                "Du kannst Wörter fett oder kursiv schreiben.",
-                "```markdown\n**wichtiger Text**",
-                "*kursiver Text*\n```"
+                "```markdown\n**fett**\n*kursiv*\n```"
               ]
             },
             {
@@ -1880,15 +1810,10 @@
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Links bestehen aus einem Linktext und der URL."
-                },
-                {
-                  "type": "paragraph",
                   "text": "```markdown\n[GitHub Docs](https://docs.github.com/de)\n```"
                 }
               ],
               "paragraphs": [
-                "Links bestehen aus einem Linktext und der URL.",
                 "```markdown\n[GitHub Docs](https://docs.github.com/de)\n```"
               ]
             },
@@ -1897,71 +1822,213 @@
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Bilder funktionieren ähnlich wie Links, aber mit einem Ausrufezeichen am Anfang."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "```markdown\n```"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Die Beschreibung ist wichtig, damit andere verstehen, was auf dem Bild zu sehen ist."
+                  "text": "```markdown\n![Screenshot vom Repository](https://example.com/screenshot.png)\n```"
                 }
               ],
               "paragraphs": [
-                "Bilder funktionieren ähnlich wie Links, aber mit einem Ausrufezeichen am Anfang.",
-                "```markdown\n```",
-                "Die Beschreibung ist wichtig, damit andere verstehen, was auf dem Bild zu sehen ist."
+                "```markdown\n![Screenshot vom Repository](https://example.com/screenshot.png)\n```"
               ]
             },
             {
-              "heading": "Code im Text",
+              "heading": "Code im Text und Codeblock",
               "blocks": [
                 {
                   "type": "paragraph",
-                  "text": "Kurze Code-Begriffe schreibst du mit Backticks."
+                  "text": "```markdown\nDie zentrale Datei heißt `README.md`.\n```"
                 },
                 {
                   "type": "paragraph",
-                  "text": "```markdown\nDie Datei heißt `README.md`.\n```"
+                  "text": "````markdown\n```bash\ngit status\n```\n````"
                 }
               ],
               "paragraphs": [
-                "Kurze Code-Begriffe schreibst du mit Backticks.",
-                "```markdown\nDie Datei heißt `README.md`.\n```"
-              ]
-            },
-            {
-              "heading": "Code-Blöcke",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "text": "Längere Code-Beispiele schreibst du mit drei Backticks."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "````markdown\n```html\n<h1>Hallo Welt</h1>\n```"
-                }
-              ],
-              "paragraphs": [
-                "Längere Code-Beispiele schreibst du mit drei Backticks.",
-                "````markdown\n```html\n<h1>Hallo Welt</h1>\n```"
+                "```markdown\nDie zentrale Datei heißt `README.md`.\n```",
+                "````markdown\n```bash\ngit status\n```\n````"
               ]
             }
           ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 4: Mini-Übung - README in der Cloud schreiben",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Arbeite direkt auf GitHub (Web-Editor oder Codespaces)."
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Öffne dein Übungs-Repository.",
+                    "Öffne oder erstelle die Datei README.md.",
+                    "Ergänze diese vier Bausteine:"
+                  ]
+                },
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Überschrift mit Projektname",
+                    "kurze Beschreibung in 1 bis 2 Sätzen",
+                    "Liste mit deinem aktuellen Lernfokus",
+                    "mindestens ein Link, zum Beispiel auf eine Kursquelle"
+                  ]
+                },
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "Nutze Preview und prüfe die Darstellung.",
+                    "Committe die Änderung mit verständlicher Nachricht."
+                  ]
+                }
+              ],
+              "paragraphs": [
+                "Arbeite direkt auf GitHub (Web-Editor oder Codespaces)."
+              ],
+              "orderedItems": [
+                "Öffne dein Übungs-Repository.",
+                "Öffne oder erstelle die Datei README.md.",
+                "Ergänze diese vier Bausteine:",
+                "Nutze Preview und prüfe die Darstellung.",
+                "Committe die Änderung mit verständlicher Nachricht."
+              ],
+              "unorderedItems": [
+                "Überschrift mit Projektname",
+                "kurze Beschreibung in 1 bis 2 Sätzen",
+                "Liste mit deinem aktuellen Lernfokus",
+                "mindestens ein Link, zum Beispiel auf eine Kursquelle"
+              ]
+            },
+            {
+              "heading": "Beispielstruktur für README.md",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "```md"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Ich nutze dieses Repository, um die Übungen aus Modul 01 strukturiert umzusetzen."
+                }
+              ],
+              "paragraphs": [
+                "```md",
+                "Ich nutze dieses Repository, um die Übungen aus Modul 01 strukturiert umzusetzen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Aktueller Fokus",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Markdown sicher anwenden",
+                    "Git-Workflow festigen",
+                    "sauber dokumentieren"
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "Markdown sicher anwenden",
+                "Git-Workflow festigen",
+                "sauber dokumentieren"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Nützliche Quelle",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "[Markdown Grundlagen im Kurs](../../03-course-library/01-markdown/01-markdown-grundlagen.md)\n```"
+                }
+              ],
+              "paragraphs": [
+                "[Markdown Grundlagen im Kurs](../../03-course-library/01-markdown/01-markdown-grundlagen.md)\n```"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Kapitel 5: Häufige Fehler und schnelle Korrektur",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Überschrift wird nicht groß dargestellt: `#` und Leerzeichen prüfen.",
+                    "Link funktioniert nicht: `[]` und `()` in der richtigen Reihenfolge setzen.",
+                    "Liste wird nicht erkannt: auf `-` plus Leerzeichen achten.",
+                    "Vorschau sieht anders aus als erwartet: Datei in Preview kontrollieren."
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "Überschrift wird nicht groß dargestellt: `#` und Leerzeichen prüfen.",
+                "Link funktioniert nicht: `[]` und `()` in der richtigen Reihenfolge setzen.",
+                "Liste wird nicht erkannt: auf `-` plus Leerzeichen achten.",
+                "Vorschau sieht anders aus als erwartet: Datei in Preview kontrollieren."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Kurzcheck zu Markdown",
+          "prompt": "Welche Aussage trifft für Markdown im Kurs am besten zu?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Markdown ist nur für große Projektdokumentationen gedacht.",
+              "isCorrect": false
+            },
+            {
+              "id": "b",
+              "label": "Markdown hilft, Inhalte schnell, lesbar und versionierbar zu dokumentieren.",
+              "isCorrect": true
+            },
+            {
+              "id": "c",
+              "label": "Markdown funktioniert nur lokal in VS Code, nicht auf GitHub.",
+              "isCorrect": false
+            }
+          ],
+          "successMessage": "Genau. Im Kurs nutzt du Markdown durchgehend für verständliche, nachvollziehbare Dokumentation.",
+          "instruction": "Wähle die treffendste Aussage aus.",
+          "errorMessage": "Noch nicht ganz. Markdown ist bewusst leichtgewichtig und funktioniert sehr gut auf GitHub."
         }
       ]
     },
-    "requiresLessonCompletion": false
+    "requiresLessonCompletion": true,
+    "tasks": [
+      "README im Übungs-Repository mit den vier Bausteinen überarbeiten.",
+      "Änderung als Commit speichern.",
+      "Kurz notieren, welche Markdown-Elemente du sicher kannst und was du noch üben willst."
+    ],
+    "taskNotes": [],
+    "resources": [
+      {
+        "label": "GitHub Docs: Schreiben auf GitHub",
+        "href": "https://docs.github.com/de/get-started/writing-on-github"
+      }
+    ]
   },
   "4": {
     "title": "Eigenes Übungs-Repository anlegen",
     "goal": "Du erstellst dein erstes eigenes Repository auf GitHub und weißt danach, wofür es im Kurs gebraucht wird.",
     "sections": [
-      {
-        "type": "tasks",
-        "file": "/content/step-04/aufgaben.md"
-      },
       {
         "type": "lesson",
         "file": "/content/step-04/lektion-inhalte.md"
@@ -2430,8 +2497,9 @@
     },
     "requiresLessonCompletion": false,
     "tasks": [
-      "Lege auf GitHub ein neues Repository an.",
-      "Wähle einen passenden Namen, stelle auf Private und aktiviere die README."
+      "Lege dein persönliches Übungs-Repository nach Anleitung an.",
+      "Prüfe Sichtbarkeit, Name und Basisinhalte (z. B. README).",
+      "Notiere den Repository-Link für deine Kurskommunikation."
     ],
     "taskNotes": [],
     "resources": [
@@ -4079,10 +4147,6 @@
     "goal": "Du installierst Git auf deinem Rechner und pruefst es im Terminal.",
     "sections": [
       {
-        "type": "tasks",
-        "file": "/content/step-10/aufgaben.md"
-      },
-      {
         "type": "lesson",
         "file": "/content/step-10/lektion-inhalte.md"
       }
@@ -4250,10 +4314,6 @@
     "title": "Terminal- und Shell-Grundlagen",
     "goal": "Du verstehst, was Terminal und Shell sind, kannst dich sicher im Dateisystem bewegen und kennst die wichtigsten Shell-Befehle für die Arbeit in diesem Kurs. Du weißt, wie du das Terminal in VS Code nutzt und wie Autocomplete dich beim Tippen unterstützt.",
     "sections": [
-      {
-        "type": "tasks",
-        "file": "/content/step-11/aufgaben.md"
-      },
       {
         "type": "lesson",
         "file": "/content/step-11/lektion-inhalte.md"
@@ -5546,350 +5606,14 @@
     },
     "requiresLessonCompletion": false,
     "tasks": [
-      "Öffne VS Code (falls nicht bereits offen)",
-      "Öffne das Terminal: **Ctrl+Backtick** (Windows/Linux) oder **Cmd+Backtick** (macOS)",
-      "Du solltest einen Prompt (mit `>` oder `$`) sehen",
-      "Tippe `pwd` (Bash/Zsh) oder `Get-Location` (PowerShell) und drücke Enter",
-      "Du solltest einen Pfad sehen, der zu deinem Kurs-Ordner führt",
-      "Im Terminal: Tippe `ls` (Bash/Zsh) oder `Get-ChildItem` (PowerShell)",
-      "Du solltest folgende Ordner/Dateien sehen:",
-      "`course/`",
-      "`apps/`",
-      "`tools/`",
-      "`README.md`",
-      "Eventuell `.git/` (versteckter Ordner)",
-      "Falls du `.git/` nicht siehst, tippe `ls -a` (Bash/Zsh) oder `Get-ChildItem -Force` (PowerShell)",
-      "Im Terminal: `cd course`",
-      "Bestätige mit `pwd` – du solltest einen Pfad sehen, der auf `course` endet",
-      "Tippe `ls` – du solltest Unterordner wie `00-course-guides/`, `01-course-modules/`, `02-course-exercises/`, `03-course-library/`, `99-course-development/` und `learners/` sehen",
-      "Wechsle in `cd 01-course-modules`",
-      "Tippe `ls` – du solltest Ordner wie `01-Onboarding-in-den-Kurs/`, `02-produktbeschreibung-...` sehen",
-      "Gehe zwei Ebenen zurück: `cd ../..`",
-      "Bestätige mit `pwd` – du solltest wieder im Kurs-Ordner sein",
-      "Im Kurs-Ordner: Tippe `cd co` (nur die ersten Buchstaben von \"course\")",
-      "Drücke **Tab** – das Terminal sollte zu `cd course` ergänzen",
-      "Drücke Enter",
-      "Tippe `cd 01-` (für `01-course-modules`)",
-      "Drücke **Tab** – sollte zu `cd 01-course-modules` ergänzen",
-      "Drücke Enter",
-      "Tippe `cd 01` (für `01-Onboarding-...`)",
-      "Drücke **Tab** – sollte ergänzen",
-      "Drücke Enter",
-      "Tippe `ls` und schau die Lektionen-Dateien an",
-      "Navigiere zu `cd ~/Desktop` (oder auf Windows: `cd $HOME\\Desktop`)",
-      "Erstelle einen Test-Ordner: `mkdir terminal-test`",
-      "Wechsle hinein: `cd terminal-test`",
-      "Erstelle drei Test-Dateien:",
-      "`touch note1.md`",
-      "`touch note2.md`",
-      "`touch script.ps1` (oder `script.sh` auf macOS/Linux)",
-      "Zeige alle Dateien: `ls` oder `Get-ChildItem`",
-      "Du solltest die drei Dateien sehen",
-      "Du bist noch in `terminal-test` Ordner",
-      "Kopiere `note1.md` zu `note1-backup.md`: `cp note1.md note1-backup.md`",
-      "Bestätige mit `ls` – du solltest jetzt 4 Dateien sehen",
-      "Verschiebe `script.ps1` zu `script-alt.ps1`: `mv script.ps1 script-alt.ps1`",
-      "Bestätige mit `ls` – die alte Datei sollte weg sein, die neue da",
-      "Du bist noch in `terminal-test`",
-      "Schreibe Inhalt in eine Datei:",
-      "Zeige den Inhalt: `cat note1.md`",
-      "Du solltest den Text sehen: `Das ist meine erste Notiz`",
-      "Schreibe mehr Inhalt:",
-      "Schau noch einmal: `cat note1.md`",
-      "Du solltest jetzt zwei Zeilen sehen",
-      "Navigiere zurück zum Kurs-Ordner",
-      "Suche alle Markdown-Dateien: `find . -name \"*.md\"`",
-      "Du solltest viele Dateien sehen (README.md, verschiedene Lektionen, etc.)",
-      "Suche nur im `course/` Ordner: `find course -name \"*.md\"`",
-      "Suche nur nach Ordnern namens `01-*`: `find course/01-course-modules -type d -name \"01-*\"`",
-      "Du solltest den Onboarding-Ordner sehen",
-      "Navigiere zum Test-Ordner: `cd ~/Desktop/terminal-test`",
-      "Lösche einzelne Dateien:",
-      "Bestätige mit `ls` – der Ordner sollte leer sein",
-      "Gehe ein Verzeichnis nach oben: `cd ..`",
-      "Lösche den leeren Ordner: `rmdir terminal-test`",
-      "Bestätige mit `ls` – `terminal-test` sollte weg sein",
-      "**Orientiere dich:**",
-      "`pwd` – wo bist du?",
-      "`ls` – was ist hier?",
-      "**Navigiere zur Übung:**",
-      "`cd course/02-course-exercises`",
-      "`ls` – welche Übungen gibt es?",
-      "**Suche für ein Pattern:**",
-      "`find . -name \"meilenstein-*.md\"`",
-      "Wie viele Übungen gibt es?",
-      "**Schaue eine Datei an:**",
-      "`cat meilenstein-01-uebung-01.md | head -20`",
-      "Oder einfach: `cat meilenstein-01-uebung-01.md`",
-      "**Gehe zurück zur Root:**",
-      "`cd ../..`",
-      "`pwd` – bestätige, dass du im Kurs-Ordner bist",
-      "Erstelle ein Script:",
-      "Schreib Befehle hinein:",
-      "Mache das Script ausführbar:",
-      "Führe es aus:",
-      "Erstelle ein Script:",
-      "Schreib Befehle rein:",
-      "Führe es aus:"
+      "Öffne VS Code Terminal und prüfe mit `pwd` oder `Get-Location`, in welchem Ordner du bist.",
+      "Erkunde mit `ls` oder `Get-ChildItem` die Struktur deines Kurs-Ordners.",
+      "Wechsle mit `cd` in Unterordner und wieder zurück.",
+      "Lege Test-Dateien und Test-Ordner an und räume sie wieder auf.",
+      "Nutze Tab-Autocomplete, um schneller zwischen Ordnern zu wechseln.",
+      "Schreibe und starte ein kleines Test-Script."
     ],
-    "taskNotes": [
-      {
-        "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffne VS Code Terminal und arbeite die Aufgaben der Reihe nach durch."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Terminal öffnen und die erste Navigation."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du siehst den Pfad deines aktuellen Ordners."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Mit `ls` die Inhalte deines Kurs-Ordners sehen."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du kannst die Inhalte deines Kurs-Ordners aufzählen."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Mit `cd` navigieren."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du kannst mit `cd` navigieren und mit `pwd` deine Position bestätigen."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Tab-Taste für schnellere Navigation nutzen."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Tab-Autocomplete funktioniert und spart dir Tipparbeit."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Mit `mkdir`, `touch`, `ls` arbeiten."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du hast einen Ordner mit drei Dateien erstellt."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** `cp` und `mv` praktizieren."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du hast Dateien kopiert und umbenannt."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Mit `cat` Dateien anzuschauen (und `echo` zum Schreiben nutzen)."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "```bash\necho \"Das ist meine erste Notiz\" > note1.md\n```\n```bash\necho \"Das ist eine zweite Zeile\" >> note1.md\n```"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du kannst Dateien schreiben und mit `cat` ansehen."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** `find` zum Suchen nutzen."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du kannst mit `find` nach Dateien und Ordnern suchen."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Mit `rm` und `rmdir` aufräumen."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "```bash\nrm note1.md\nrm note1-backup.md\nrm note2.md\nrm script-alt.ps1\n```"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du hast den Test-Ordner und alle Dateien gelöscht."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Alle bisherigen Befehle in einem praktischen Szenario."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Du verstehst den kompletten Workflow und kannst selbstständig navigieren."
-          },
-          {
-            "type": "paragraph",
-            "text": "---"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Was du lernst:** Grundlagen von Scripting."
-          },
-          {
-            "type": "paragraph",
-            "text": "**Anleitung (für macOS/Linux – Bash/Zsh):**"
-          },
-          {
-            "type": "paragraph",
-            "text": "```bash\ntouch mein-script.sh\n```\n```bash\necho \"#!/bin/bash\" > mein-script.sh\necho \"echo 'Hallo aus meinem Script!'\" >> mein-script.sh\necho \"pwd\" >> mein-script.sh\necho \"ls -la\" >> mein-script.sh\n```\n```bash\nchmod +x mein-script.sh\n```\n```bash\n./mein-script.sh\n```"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Für Windows – PowerShell:**"
-          },
-          {
-            "type": "paragraph",
-            "text": "```powershell\nNew-Item \"mein-script.ps1\"\n```\n```powershell\nAdd-Content \"mein-script.ps1\" \"Write-Host 'Hallo aus meinem Script!'\"\nAdd-Content \"mein-script.ps1\" \"Get-Location\"\nAdd-Content \"mein-script.ps1\" \"Get-ChildItem\"\n```\n```powershell\n.\\mein-script.ps1\n```"
-          },
-          {
-            "type": "paragraph",
-            "text": "**Erfolgskriterium:** Dein Script läuft und zeigt Output."
-          }
-        ],
-        "paragraphs": [
-          "Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffne VS Code Terminal und arbeite die Aufgaben der Reihe nach durch.",
-          "---",
-          "**Was du lernst:** Terminal öffnen und die erste Navigation.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du siehst den Pfad deines aktuellen Ordners.",
-          "---",
-          "**Was du lernst:** Mit `ls` die Inhalte deines Kurs-Ordners sehen.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du kannst die Inhalte deines Kurs-Ordners aufzählen.",
-          "---",
-          "**Was du lernst:** Mit `cd` navigieren.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du kannst mit `cd` navigieren und mit `pwd` deine Position bestätigen.",
-          "---",
-          "**Was du lernst:** Tab-Taste für schnellere Navigation nutzen.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Tab-Autocomplete funktioniert und spart dir Tipparbeit.",
-          "---",
-          "**Was du lernst:** Mit `mkdir`, `touch`, `ls` arbeiten.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du hast einen Ordner mit drei Dateien erstellt.",
-          "---",
-          "**Was du lernst:** `cp` und `mv` praktizieren.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du hast Dateien kopiert und umbenannt.",
-          "---",
-          "**Was du lernst:** Mit `cat` Dateien anzuschauen (und `echo` zum Schreiben nutzen).",
-          "**Anleitung:**",
-          "```bash\necho \"Das ist meine erste Notiz\" > note1.md\n```\n```bash\necho \"Das ist eine zweite Zeile\" >> note1.md\n```",
-          "**Erfolgskriterium:** Du kannst Dateien schreiben und mit `cat` ansehen.",
-          "---",
-          "**Was du lernst:** `find` zum Suchen nutzen.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du kannst mit `find` nach Dateien und Ordnern suchen.",
-          "---",
-          "**Was du lernst:** Mit `rm` und `rmdir` aufräumen.",
-          "**Anleitung:**",
-          "```bash\nrm note1.md\nrm note1-backup.md\nrm note2.md\nrm script-alt.ps1\n```",
-          "**Erfolgskriterium:** Du hast den Test-Ordner und alle Dateien gelöscht.",
-          "---",
-          "**Was du lernst:** Alle bisherigen Befehle in einem praktischen Szenario.",
-          "**Anleitung:**",
-          "**Erfolgskriterium:** Du verstehst den kompletten Workflow und kannst selbstständig navigieren.",
-          "---",
-          "**Was du lernst:** Grundlagen von Scripting.",
-          "**Anleitung (für macOS/Linux – Bash/Zsh):**",
-          "```bash\ntouch mein-script.sh\n```\n```bash\necho \"#!/bin/bash\" > mein-script.sh\necho \"echo 'Hallo aus meinem Script!'\" >> mein-script.sh\necho \"pwd\" >> mein-script.sh\necho \"ls -la\" >> mein-script.sh\n```\n```bash\nchmod +x mein-script.sh\n```\n```bash\n./mein-script.sh\n```",
-          "**Für Windows – PowerShell:**",
-          "```powershell\nNew-Item \"mein-script.ps1\"\n```\n```powershell\nAdd-Content \"mein-script.ps1\" \"Write-Host 'Hallo aus meinem Script!'\"\nAdd-Content \"mein-script.ps1\" \"Get-Location\"\nAdd-Content \"mein-script.ps1\" \"Get-ChildItem\"\n```\n```powershell\n.\\mein-script.ps1\n```",
-          "**Erfolgskriterium:** Dein Script läuft und zeigt Output."
-        ]
-      }
-    ],
+    "taskNotes": [],
     "resources": [
       {
         "label": "Terminal-Grundlagen in VS Code",
@@ -6076,6 +5800,186 @@
               ]
             }
           ]
+        },
+        {
+          "type": "content",
+          "title": "PR-Vorlage Fuer Die Startphase",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Nutze diese Vorlage in den ersten Uebungen, bis der Git-Workflow sicher sitzt."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "```md"
+                }
+              ],
+              "paragraphs": [
+                "Nutze diese Vorlage in den ersten Uebungen, bis der Git-Workflow sicher sitzt.",
+                "```md"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Titel",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "[MS-XX][UE-YY] Kurzer, klarer Titel der Aenderung"
+                }
+              ],
+              "paragraphs": [
+                "[MS-XX][UE-YY] Kurzer, klarer Titel der Aenderung"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Ziel der Aenderung",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Was wurde geaendert?",
+                    "Warum ist das fuer die Uebung wichtig?"
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "Was wurde geaendert?",
+                "Warum ist das fuer die Uebung wichtig?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Was wurde konkret gemacht?",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "[ ] Datei/Ordner A angepasst",
+                    "[ ] Datei/Ordner B angepasst",
+                    "[ ] Dokumentation aktualisiert"
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "[ ] Datei/Ordner A angepasst",
+                "[ ] Datei/Ordner B angepasst",
+                "[ ] Dokumentation aktualisiert"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Selbstcheck vor dem Request",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "[ ] Ich habe `git status` geprueft",
+                    "[ ] Ich habe die Aenderung lokal oder in der Cloud getestet",
+                    "[ ] Commit-Nachricht ist verstaendlich",
+                    "[ ] Nur zur Aufgabe passende Dateien sind im PR"
+                  ]
+                }
+              ],
+              "unorderedItems": [
+                "[ ] Ich habe `git status` geprueft",
+                "[ ] Ich habe die Aenderung lokal oder in der Cloud getestet",
+                "[ ] Commit-Nachricht ist verstaendlich",
+                "[ ] Nur zur Aufgabe passende Dateien sind im PR"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Lernnotiz (2-4 Saetze)",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Was habe ich bei dieser Aenderung verstanden?\nWas war noch unsicher?"
+                }
+              ],
+              "paragraphs": [
+                "Was habe ich bei dieser Aenderung verstanden?\nWas war noch unsicher?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Referenzen",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "unordered-list",
+                  "items": [
+                    "Meilenstein: Link zur passenden Stelle in `COURSE_MILESTONES.md`",
+                    "Uebung: Link zur Uebungsdatei",
+                    "Quelle: Link zur Modul- oder Library-Datei"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "```"
+                }
+              ],
+              "paragraphs": [
+                "```"
+              ],
+              "unorderedItems": [
+                "Meilenstein: Link zur passenden Stelle in `COURSE_MILESTONES.md`",
+                "Uebung: Link zur Uebungsdatei",
+                "Quelle: Link zur Modul- oder Library-Datei"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Mini-Checkliste Vor Dem Oeffnen Einer PR",
+          "sections": [
+            {
+              "blocks": [
+                {
+                  "type": "ordered-list",
+                  "items": [
+                    "`git branch` und `git status` ausfuehren.",
+                    "Pruefen, ob du im richtigen Branch arbeitest.",
+                    "Nur aufgabenrelevante Dateien committen.",
+                    "Vorlage ausfuellen, dann Pull Request oeffnen."
+                  ]
+                }
+              ],
+              "orderedItems": [
+                "`git branch` und `git status` ausfuehren.",
+                "Pruefen, ob du im richtigen Branch arbeitest.",
+                "Nur aufgabenrelevante Dateien committen.",
+                "Vorlage ausfuellen, dann Pull Request oeffnen."
+              ]
+            }
+          ]
         }
       ]
     },
@@ -6184,10 +6088,6 @@
     "title": "Übungen im Gesamt-Setting",
     "goal": "Du verstehst, wie Übungen im Gesamtkurs zusammenspielen: zentrale Aufgaben im Kurs-Repository, eigene Umsetzung im persönlichen Repository und Lernfortschritt wieder zurueck im Kurs-Repository.",
     "sections": [
-      {
-        "type": "tasks",
-        "file": "/content/step-15/aufgaben.md"
-      },
       {
         "type": "lesson",
         "file": "/content/step-15/lektion-inhalte.md"
@@ -6312,9 +6212,9 @@
     },
     "requiresLessonCompletion": false,
     "tasks": [
-      "COURSE_MILESTONES.md lesen.",
-      "README_UEBUNGEN.md lesen.",
-      "Grundregel prüfen: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.",
+      "`COURSE_MILESTONES.md` lesen.",
+      "`README_UEBUNGEN.md` lesen.",
+      "Grundregel pruefen: Aufgaben zentral lesen, Loesungen im eigenen Repository umsetzen.",
       "Lernfortschrittsdatei bleibt zentral im Kurs-Repository."
     ],
     "taskNotes": []

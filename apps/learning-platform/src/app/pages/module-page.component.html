@@ -1,0 +1,64 @@
+<section class="page-shell">
+  <a class="back-link" routerLink="/">Zur Kursuebersicht</a>
+
+  @if (loading()) {
+    <p class="state">Lade Modul...</p>
+  } @else if (error()) {
+    <p class="state state-error">{{ error() }}</p>
+  } @else {
+    <header class="module-header">
+      <p class="eyebrow">{{ courseTitle() }}</p>
+      <h1>{{ moduleTitle() }}</h1>
+      <div class="module-meta">
+        <p>Typ: <strong>{{ moduleType() }}</strong></p>
+        <p>Abschlussregel: <strong>{{ completionRule() }}</strong></p>
+      </div>
+      <p class="module-progress">Fortschritt: {{ progressLabel() }}</p>
+      <div class="module-actions">
+        <button type="button" class="resume-btn" [disabled]="!resumeStepId()" (click)="goToResumeStep()">
+          @if (resumeStepId()) {
+            Weiterlernen ab Schritt {{ resumeStepId() }}
+          } @else {
+            Kein gueltiger Schritt verfuegbar
+          }
+        </button>
+      </div>
+    </header>
+
+    <section class="steps-block">
+      <h2>Schritte</h2>
+      @if (sortedSteps().length === 0) {
+        <p class="state state-error">Dieses Modul enthaelt keine gueltigen Schritte.</p>
+      } @else {
+        <ol>
+          @for (step of sortedSteps(); track step.id) {
+            <li>
+              <article class="step-card">
+                <h3>Schritt {{ step.id }}: {{ step.title }}</h3>
+                <p class="step-meta">Slug: {{ step.slug }} | Pflicht: {{ step.required ? 'ja' : 'nein' }}</p>
+                <p class="step-state">Status: {{ isCompleted(step.id) ? 'erledigt' : 'offen' }}</p>
+                <a class="step-link" [routerLink]="['/kurse', courseId(), 'module', moduleId(), 'step', step.id]">Schritt oeffnen</a>
+
+                <p class="section-label">Sektionen</p>
+                <ul>
+                  @for (section of step.sections; track section.file) {
+                    <li>{{ section.type }} -> {{ section.file }}</li>
+                  }
+                </ul>
+
+                @if (step.resources?.length) {
+                  <p class="section-label">Ressourcen</p>
+                  <ul>
+                    @for (resource of step.resources ?? []; track resource.href) {
+                      <li><a [href]="resource.href" target="_blank" rel="noopener">{{ resource.label }}</a></li>
+                    }
+                  </ul>
+                }
+              </article>
+            </li>
+          }
+        </ol>
+      }
+    </section>
+  }
+</section>

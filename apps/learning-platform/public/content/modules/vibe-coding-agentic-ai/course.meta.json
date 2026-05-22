@@ -1,0 +1,11 @@
+{
+  "id": "vibe-coding-agentic-ai",
+  "shortTitle": "Vibe Coding & Agentic AI",
+  "audience": [
+    "Einsteiger in Softwareentwicklung mit KI-Unterstuetzung",
+    "Fachpersonen mit Produkt- oder Datenfokus"
+  ],
+  "outcome": "Teilnehmende bauen ein lauffaehiges, wartbares Produktinkrement.",
+  "owners": ["team-learning"],
+  "version": 1
+}

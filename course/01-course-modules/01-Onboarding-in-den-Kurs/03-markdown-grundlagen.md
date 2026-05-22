@@ -2,121 +2,31 @@
 
 ## Ziel
 
-Du verstehst, wofür Markdown genutzt wird, kannst einfache Markdown-Dateien schreiben und erstellst eine sinnvolle README für dein Übungs-Repository.
+Du verstehst, wofür Markdown im Kurs genutzt wird, kannst die wichtigsten Markdown-Elemente sicher anwenden und schreibst eine klare README für dein Übungs-Repository.
 
-## Kapitel 1: Was ist Markdown?
+## Kapitel 1: Warum Markdown im Kurs so wichtig ist
 
-Markdown ist eine einfache Schreibweise, mit der du Texte strukturieren und formatieren kannst.
+Markdown ist eine einfache Schreibweise für strukturierte Texte. Du schreibst normalen Text und nutzt wenige Zeichen für Überschriften, Listen, Links und Code.
 
-Du schreibst dabei normalen Text mit wenigen Sonderzeichen. Daraus entstehen Überschriften, Listen, Links, Bilder, Tabellen oder Code-Blöcke.
+Warum das wichtig ist:
 
-Markdown ist besonders praktisch, weil der Text auch ohne spezielle Software lesbar bleibt. Gleichzeitig kann GitHub daraus eine gut formatierte Ansicht erzeugen.
+- Deine Inhalte sind ohne Spezialsoftware lesbar.
+- GitHub stellt Markdown automatisch sauber dar.
+- Du kannst Aufgaben, Lernnotizen und PR-Beschreibungen einheitlich dokumentieren.
+- KI-Tools verstehen klar strukturierte Informationen besser.
 
-Beispiel:
+## Kapitel 2: Wo du Markdown konkret verwendest
 
-```markdown
-# Meine Überschrift
+Im Modul 01 brauchst du Markdown vor allem in diesen Situationen:
 
-Das ist ein kurzer Text.
+- README-Datei im eigenen Übungs-Repository
+- Beschreibungen in Pull Requests
+- kurze Lernnotizen und Zwischenstände
+- Aufgaben- und Lösungsdokumentation
 
-- erster Punkt
-- zweiter Punkt
-- dritter Punkt
-```
-
-In GitHub wird daraus eine formatierte Überschrift, ein Absatz und eine Liste.
-
-### Warum nutzen wir Markdown?
-
-Markdown ist einfach, schnell und sehr verbreitet. Du brauchst kein Layoutprogramm und keine komplizierte Oberfläche. Ein normaler Texteditor reicht aus.
-
-Im Kurs nutzen wir Markdown, weil du damit:
-
-- Notizen strukturieren kannst,
-- Aufgaben dokumentieren kannst,
-- README-Dateien schreiben kannst,
-- Prompts und Kontext für KI-Tools vorbereiten kannst,
-- Projektinformationen sauber festhalten kannst.
-
-Kurz gesagt: Markdown hilft dir, Gedanken, Wissen und Projektinformationen klar aufzuschreiben.
-
-## Kapitel 2: Typische Einsatzgebiete von Markdown
-
-Markdown wird in vielen Bereichen der Softwareentwicklung und Dokumentation eingesetzt.
-
-### README-Dateien
-
-Eine README ist oft die Startseite eines Repositorys. Sie erklärt, worum es im Projekt geht, wie man es nutzt und welche Informationen wichtig sind.
-
-Typische Inhalte einer README:
-
-- Projektname
-- kurze Beschreibung
-- Installation oder Nutzung
-- wichtige Befehle
-- Projektstruktur
-- Lernstand oder nächste Schritte
-- Links und Quellen
-
-### Dokumentation
-
-Markdown eignet sich gut für technische Dokumentation. Du kannst damit Anleitungen, Erklärungen, Checklisten und Notizen erstellen.
-
-Beispiele:
-
-- Installationsanleitung
-- Schritt-für-Schritt-Dokumentation
-- Glossar
-- Projektübersicht
-- Fehler- und Lösungsdokumentation
-
-### GitHub Issues und Pull Requests
-
-Auch in GitHub selbst wird Markdown genutzt. Du kannst damit Issues, Pull Requests und Kommentare besser strukturieren.
-
-Beispiele:
-
-- Fehlerbeschreibung
-- Aufgabenliste
-- Lösungsvorschlag
-- Review-Kommentar
-- offene Fragen
-
-### Lernnotizen
-
-Markdown eignet sich sehr gut für eigene Lernnotizen, weil du Inhalte schnell ordnen kannst.
-
-Beispiele:
-
-- Was habe ich gelernt?
-- Welche Begriffe sind neu?
-- Welche Fehler sind aufgetreten?
-- Welche Lösung hat funktioniert?
-- Welche Fragen sind noch offen?
-
-### KI und Context Engineering
-
-Im Kurs spielt Markdown auch eine wichtige Rolle für KI-gestützte Entwicklung.
-
-KI-Tools arbeiten besser, wenn Informationen klar, strukturiert und nachvollziehbar bereitgestellt werden. Markdown hilft dir dabei, Kontext für KI verständlich aufzubereiten.
-
-Beispiele:
-
-- Projektbeschreibung
-- Anforderungen
-- Regeln für den Code
-- Prompts
-- Aufgabenlisten
-- Fehlermeldungen
-- bisherige Lösungsversuche
-
-Wenn du deine Informationen sauber in Markdown dokumentierst, kann eine KI besser verstehen, was du willst, was bereits existiert und welche Regeln sie beachten soll.
-
-## Kapitel 3: Die wichtigsten Markdown-Grundlagen
+## Kapitel 3: Markdown-Schnellstart (mit Beispielen)
 
 ### Überschriften
-
-Überschriften werden mit `#` geschrieben.
 
 ```markdown
 # Überschrift 1
@@ -124,11 +34,7 @@ Wenn du deine Informationen sauber in Markdown dokumentierst, kann eine KI besse
 ### Überschrift 3
 ```
 
-Nutze Überschriften, um deinen Text klar zu gliedern.
-
 ### Absätze
-
-Ein normaler Absatz ist einfacher Text.
 
 ```markdown
 Das ist ein Absatz.
@@ -136,39 +42,28 @@ Das ist ein Absatz.
 Das ist ein neuer Absatz.
 ```
 
-Zwischen zwei Absätzen steht eine Leerzeile.
-
 ### Listen
 
-Ungeordnete Listen schreibst du mit `-`.
-
 ```markdown
-- GitHub
-- Markdown
-- README
+- Punkt A
+- Punkt B
+- Punkt C
 ```
 
-Geordnete Listen schreibst du mit Zahlen.
-
 ```markdown
-1. Repository öffnen
-2. README bearbeiten
-3. Änderungen speichern
+1. Schritt 1
+2. Schritt 2
+3. Schritt 3
 ```
 
-### Hervorhebungen
-
-Du kannst Wörter fett oder kursiv schreiben.
+### Hervorhebung
 
 ```markdown
-**wichtiger Text**
-
-*kursiver Text*
+**fett**
+*kursiv*
 ```
 
 ### Links
-
-Links bestehen aus einem Linktext und der URL.
 
 ```markdown
 [GitHub Docs](https://docs.github.com/de)
@@ -176,26 +71,93 @@ Links bestehen aus einem Linktext und der URL.
 
 ### Bilder
 
-Bilder funktionieren ähnlich wie Links, aber mit einem Ausrufezeichen am Anfang.
-
 ```markdown
+![Screenshot vom Repository](https://example.com/screenshot.png)
 ```
 
-Die Beschreibung ist wichtig, damit andere verstehen, was auf dem Bild zu sehen ist.
-
-### Code im Text
-
-Kurze Code-Begriffe schreibst du mit Backticks.
+### Code im Text und Codeblock
 
 ```markdown
-Die Datei heißt `README.md`.
+Die zentrale Datei heißt `README.md`.
 ```
-
-### Code-Blöcke
-
-Längere Code-Beispiele schreibst du mit drei Backticks.
 
 ````markdown
-```html
-<h1>Hallo Welt</h1>
+```bash
+git status
 ```
+````
+
+## Kapitel 4: Mini-Übung - README in der Cloud schreiben
+
+Arbeite direkt auf GitHub (Web-Editor oder Codespaces).
+
+1. Öffne dein Übungs-Repository.
+2. Öffne oder erstelle die Datei README.md.
+3. Ergänze diese vier Bausteine:
+   - Überschrift mit Projektname
+   - kurze Beschreibung in 1 bis 2 Sätzen
+   - Liste mit deinem aktuellen Lernfokus
+   - mindestens ein Link, zum Beispiel auf eine Kursquelle
+4. Nutze Preview und prüfe die Darstellung.
+5. Committe die Änderung mit verständlicher Nachricht.
+
+### Beispielstruktur für README.md
+
+```md
+# Mein Übungs-Repository
+
+Ich nutze dieses Repository, um die Übungen aus Modul 01 strukturiert umzusetzen.
+
+## Aktueller Fokus
+
+- Markdown sicher anwenden
+- Git-Workflow festigen
+- sauber dokumentieren
+
+## Nützliche Quelle
+
+[Markdown Grundlagen im Kurs](../../03-course-library/01-markdown/01-markdown-grundlagen.md)
+```
+
+## Kapitel 5: Häufige Fehler und schnelle Korrektur
+
+- Überschrift wird nicht groß dargestellt: `#` und Leerzeichen prüfen.
+- Link funktioniert nicht: `[]` und `()` in der richtigen Reihenfolge setzen.
+- Liste wird nicht erkannt: auf `-` plus Leerzeichen achten.
+- Vorschau sieht anders aus als erwartet: Datei in Preview kontrollieren.
+
+## Quiz: Kurzcheck zu Markdown
+
+Frage: Welche Aussage trifft für Markdown im Kurs am besten zu?
+Hinweis: Wähle die treffendste Aussage aus.
+Mehrfachauswahl: nein
+
+- [ ] Markdown ist nur für große Projektdokumentationen gedacht.
+- [x] Markdown hilft, Inhalte schnell, lesbar und versionierbar zu dokumentieren.
+- [ ] Markdown funktioniert nur lokal in VS Code, nicht auf GitHub.
+
+Erfolg: Genau. Im Kurs nutzt du Markdown durchgehend für verständliche, nachvollziehbare Dokumentation.
+Fehler: Noch nicht ganz. Markdown ist bewusst leichtgewichtig und funktioniert sehr gut auf GitHub.
+
+## Fallback
+
+- Datei wird nicht angezeigt: im Repository nach README.md suchen.
+- Commit-Button ist inaktiv: zuerst Inhalt ändern oder ergänzen.
+- Unsicher bei der Syntax: ein kleines Beispiel kopieren und schrittweise anpassen.
+
+## Erfolgskriterium
+
+Du hast eine strukturierte README erstellt oder verbessert und kannst Überschriften, Listen, Links sowie Codebeispiele in Markdown sicher einsetzen.
+
+## Was ist zu tun
+
+1. README im Übungs-Repository mit den vier Bausteinen überarbeiten.
+2. Änderung als Commit speichern.
+3. Kurz notieren, welche Markdown-Elemente du sicher kannst und was du noch üben willst.
+
+## Hilfreiche Links
+
+- [Markdown Modulguide](../../03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md)
+- [Markdown Grundlagen](../../03-course-library/01-markdown/01-markdown-grundlagen.md)
+- [Formatierung von Markdown-Dateien](../../03-course-library/01-markdown/02-formatierung_md-files.md)
+- [GitHub Docs: Schreiben auf GitHub](https://docs.github.com/de/get-started/writing-on-github)

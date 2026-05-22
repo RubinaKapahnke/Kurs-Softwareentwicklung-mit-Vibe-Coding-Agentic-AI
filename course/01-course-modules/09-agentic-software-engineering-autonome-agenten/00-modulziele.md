@@ -25,6 +25,12 @@ Relevant für Entwickler\*innen, Automation Specialists, Operations, Data Teams,
 - Noch als eigenes Lernmaterial anzulegen: Agentic Software Engineering und autonome Agenten.
 - Übergangsweise relevant: [Prompt-Dateien Grundlagen](../../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
+## Kursspezifische Dateien in diesem Kursmodul
+
+- [01-generative-vs-agentic-ai.md](./01-generative-vs-agentic-ai.md)
+- [02-von-ai-agents-zu-agentic-ai.md](./02-von-ai-agents-zu-agentic-ai.md)
+- [03-langgraph-kernkomponenten-und-workflows.md](./03-langgraph-kernkomponenten-und-workflows.md)
+
 ## Abschlussnachweis
 
 Der Baustein gilt als abgeschlossen, wenn ein Agentenworkflow so dokumentiert ist, dass Ziel, Grenzen und Prüfung klar erkennbar sind.

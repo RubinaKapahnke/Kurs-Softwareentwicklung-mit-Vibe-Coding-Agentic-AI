@@ -1,0 +1,61 @@
+<section class="page-shell">
+  <button type="button" class="back-link" (click)="goBackToModule()">Zurueck zum Modul</button>
+
+  @if (loading()) {
+    <p class="state">Lade Schritt...</p>
+  } @else if (error()) {
+    <p class="state state-error">{{ error() }}</p>
+  } @else {
+    <header class="step-header">
+      <p class="eyebrow">{{ courseTitle() }} | {{ moduleTitle() }}</p>
+      <h1>Schritt {{ currentStep()?.id }}: {{ currentStep()?.title }}</h1>
+      <p class="summary">Fortschritt im Modul: {{ completionSummary() }}</p>
+      <div class="header-actions">
+        <button type="button" class="mark-btn" (click)="toggleDone()">
+          {{ isCompleted() ? 'Als offen markieren' : 'Als erledigt markieren' }}
+        </button>
+      </div>
+    </header>
+
+    <section class="block">
+      <h2>Inhalt</h2>
+      <p class="step-meta">Slug: {{ currentStep()?.slug }} | Pflicht: {{ currentStep()?.required ? 'ja' : 'nein' }}</p>
+
+      <p class="section-label">Sektionen</p>
+      <ul>
+        @for (section of currentStep()?.sections ?? []; track section.file) {
+          <li>{{ section.type }} -> {{ section.file }}</li>
+        }
+      </ul>
+
+      @if ((currentStep()?.resources ?? []).length > 0) {
+        <p class="section-label">Ressourcen</p>
+        <ul>
+          @for (resource of currentStep()?.resources ?? []; track resource.href) {
+            <li><a [href]="resource.href" target="_blank" rel="noopener">{{ resource.label }}</a></li>
+          }
+        </ul>
+      }
+    </section>
+
+    <nav class="step-nav">
+      <button type="button" class="nav-btn" [disabled]="!previousStep()" (click)="goToPreviousStep()">
+        @if (previousStep()) {
+          Zurueck: Schritt {{ previousStep()!.id }}
+        } @else {
+          Zurueck
+        }
+      </button>
+
+      <button type="button" class="nav-btn" (click)="goBackToModule()">Zum Modul</button>
+
+      <button type="button" class="nav-btn nav-btn-primary" [disabled]="!nextStep()" (click)="goToNextStep()">
+        @if (nextStep()) {
+          Weiter: Schritt {{ nextStep()!.id }}
+        } @else {
+          Weiter
+        }
+      </button>
+    </nav>
+  }
+</section>

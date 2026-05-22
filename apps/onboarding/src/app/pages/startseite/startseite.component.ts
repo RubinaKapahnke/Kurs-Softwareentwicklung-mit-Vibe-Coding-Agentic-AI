@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { ONBOARDING_STEP_COUNT } from '../../data/onboarding-steps.data';
 import { OnboardingStateService } from '../../services/onboarding-state.service';
+import {
+  LEARNING_PLATFORM_BASE_URL,
+  isLegacyRedirectEnabled,
+  setLegacyRedirectEnabled
+} from '../../services/legacy-learning-platform-redirect';
 
 type CourseStatus = 'live' | 'coming-soon';
 
@@ -27,6 +32,8 @@ interface CourseCatalogEntry {
 export class StartseiteComponent {
   private readonly state = inject(OnboardingStateService);
   private readonly primaryCourseId = 'vibe-coding-agentic-ai';
+  readonly learningPlatformUrl = LEARNING_PLATFORM_BASE_URL;
+  readonly legacyRedirectEnabled = signal(isLegacyRedirectEnabled());
   readonly stepCount = ONBOARDING_STEP_COUNT;
 
   readonly courseCatalog: CourseCatalogEntry[] = [
@@ -76,4 +83,10 @@ export class StartseiteComponent {
       ? `/kurse/${this.featuredCourse().id}/onboarding/zusammenfassung`
       : `/kurse/${this.featuredCourse().id}/onboarding/step/${firstIncompleteStepId}`;
   });
+
+  toggleLegacyRedirect(): void {
+    const next = !this.legacyRedirectEnabled();
+    setLegacyRedirectEnabled(next);
+    this.legacyRedirectEnabled.set(next);
+  }
 }

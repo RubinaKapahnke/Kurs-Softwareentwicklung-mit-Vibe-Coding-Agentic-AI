@@ -1,4 +1,4 @@
-# Themen nachlesen oder ergänzen
+﻿# Themen nachlesen oder ergänzen
 
 ## Git, Github
 - github stammordner ohne VSCode verknüpfen?
@@ -404,6 +404,6 @@ Human-in-the-Loop im Code
     - Atlassian: "GitOps"
 - Eingearbeitet in:
     - `course/03-course-library/04-git/04-version-control-und-gitops-grundlagen.md`
-    - `course/01-course-modules/01-Onboarding-in-den-Kurs/04-version-control-und-gitops-im-kurs.md`
+    - `course/01-course-modules/01-Onboarding-in-den-Kurs/17-version-control-und-gitops-im-kurs.md`
     - `.github/prompts/course-dev-fremdtexte-verarbeiten.prompt.md`
     - `AGENTS.md`

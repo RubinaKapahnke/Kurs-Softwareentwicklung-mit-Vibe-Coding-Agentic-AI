@@ -1,0 +1,11 @@
+[
+  {
+    "id": "vibe-coding-agentic-ai",
+    "title": "Softwareentwicklung mit Vibe Coding & Agentic AI",
+    "status": "live",
+    "defaultModuleId": "m01-onboarding",
+    "moduleIds": ["m01-onboarding"],
+    "language": "de",
+    "version": 1
+  }
+]

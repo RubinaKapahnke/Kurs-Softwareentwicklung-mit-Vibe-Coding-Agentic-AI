@@ -1,0 +1,43 @@
+﻿:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.app-shell__layer {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.app-shell__layer--left {
+  top: -120px;
+  left: -130px;
+  width: 340px;
+  height: 340px;
+  border-radius: 56% 44% 38% 62%;
+  background: rgba(38, 101, 123, 0.2);
+}
+
+.app-shell__layer--right {
+  top: 140px;
+  right: -140px;
+  width: 360px;
+  height: 360px;
+  border-radius: 44% 56% 62% 38%;
+  background: rgba(178, 108, 0, 0.16);
+}
+
+@media (max-width: 900px) {
+  .app-shell__layer {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+}

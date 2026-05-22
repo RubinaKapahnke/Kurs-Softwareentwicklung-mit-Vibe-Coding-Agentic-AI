@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "sync-content": "node sync-content.mjs",
+    "validate-learning-content": "node tools/validate-learning-content.mjs",
     "prestart": "npm run sync-content",
     "start": "ng serve",
     "prebuild": "npm run sync-content",

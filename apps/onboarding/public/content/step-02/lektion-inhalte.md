@@ -293,6 +293,77 @@ Wenn du in GitHub auf **Commit changes** klickst, wird genau dieser Stand in der
 
 Hinweis: In dieser Lektion reicht dieses Grundverständnis. Commit-Strategien und gute Commit-Nachrichten behandeln wir später im Kurs noch ausführlich.
 
+## Kapitel 5: Schnellstart mit GitHub Codespaces
+
+Codespaces ist eine cloudbasierte Entwicklungsumgebung von GitHub. Du arbeitest direkt im Browser in einer VS-Code-Ansicht, ohne lokal etwas installieren zu müssen.
+
+So kannst du sehr schnell starten, bevor wir später auf lokales Arbeiten wechseln.
+
+### Was du im Schnellstart lernst
+
+- einen Codespace direkt aus deinem Übungs-Repository starten
+- Dateien im Codespace bearbeiten und speichern
+- optional eine Anwendung mit Port-Weiterleitung im Browser öffnen
+- Änderungen committen und in dein bestehendes Übungs-Repository pushen
+- den Editor mit Erweiterungen anpassen
+
+### Schritt-für-Schritt: Erster Codespace
+
+1. Öffne dein eigenes Übungs-Repository auf GitHub.
+2. Klicke auf **Code** und wechsle auf den Tab **Codespaces**.
+3. Klicke auf **Create codespace on main**.
+3. Warte, bis der Codespace vollständig geladen ist.
+
+### Erste Änderung im Übungs-Repository
+
+1. Öffne im Explorer die Datei `README.md`.
+2. Ergänze 1 bis 2 Zeilen zu deinem aktuellen Lernstand.
+3. Speichere die Datei.
+
+### Optional: Anwendung mit Port-Weiterleitung testen
+
+Diesen Teil machst du nur, wenn in deinem Übungs-Repository eine startbare App liegt.
+
+1. Öffne das Terminal im Codespace.
+2. Starte die App mit dem passenden Projektbefehl, zum Beispiel `npm run dev`.
+3. Wenn der Hinweis auf einen weitergeleiteten Port erscheint, klicke auf **Im Browser öffnen**.
+4. Prüfe, ob die Anwendung läuft.
+
+Falls die Browser-Registerkarte geschlossen wurde:
+
+1. Öffne im Codespace den Bereich **Ports**.
+2. Suche den laufenden Port.
+3. Nutze dort **Im Browser öffnen**.
+
+### Änderung committen und pushen
+
+1. Öffne **Quellcodeverwaltung**.
+2. Stage die geänderte Datei.
+3. Schreibe eine Commit-Nachricht und committe.
+4. Klicke auf **Sync Changes** oder **Push**.
+5. Öffne dein Übungs-Repository auf GitHub und prüfe, ob der Commit sichtbar ist.
+
+### Personalisieren mit Erweiterungen
+
+1. Öffne **Extensions** im Codespace.
+2. Suche eine Erweiterung, zum Beispiel `fairyfloss`.
+3. Installiere sie und aktiviere das gewünschte Theme.
+
+Optional: Mit Einstellungssynchronisierung kannst du Erweiterungen und Editor-Einstellungen über mehrere Geräte hinweg konsistent halten.
+
+### Mini-Check: Codespaces Schnellstart
+
+- [ ] Ich habe einen Codespace aus meinem Übungs-Repository gestartet.
+- [ ] Ich habe eine Datei im Codespace bearbeitet, committet und gepusht.
+- [ ] Ich kann optional einen weitergeleiteten Port im Browser öffnen, wenn eine App läuft.
+
+### Fallback bei typischen Problemen
+
+1. **Codespace startet nicht:** Seite neu laden und den Codespace im Tab **Codespaces** erneut erstellen.
+2. **Port-Hinweis erscheint nicht:** im Bereich **Ports** prüfen, ob die Anwendung wirklich läuft.
+3. **Push nicht möglich:** prüfen, ob du im richtigen Repository bist und der Commit wirklich erstellt wurde.
+4. **App zeigt keine Änderung:** Browser aktualisieren und prüfen, ob die Datei gespeichert wurde.
+
 ## Übungen zur Lektion
 
 ### Übung 1: README als Startseite bearbeiten
