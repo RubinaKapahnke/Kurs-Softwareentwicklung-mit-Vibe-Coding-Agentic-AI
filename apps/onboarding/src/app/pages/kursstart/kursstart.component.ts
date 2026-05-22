@@ -102,7 +102,7 @@ export class KursstartComponent {
     : `/kurse/${this.selectedCourse().id}/onboarding/step/${this.resumeStep()}`);
   readonly resumeLabel = computed(() =>
     this.isCompleted() ? 'Zur Zusammenfassung'
-    : this.voucherValidated() ? 'Kurs fortsetzen'
+    : this.hasProgress() ? 'Kurs fortsetzen'
     : 'Kurs starten'
   );
 
