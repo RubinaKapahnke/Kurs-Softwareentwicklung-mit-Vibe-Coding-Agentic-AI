@@ -74,4 +74,4 @@ Die Datei README.md erklaert Zweck, Nutzung und Struktur eines Repositories. Sie
 ## Weiterfuehrung
 
 - Allgemeines zu Git: [../04-git/01-git-grundlagen.md](../04-git/01-git-grundlagen.md)
-- Kursspezifische Anwendung: [../../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md](../../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md)
+- Kursspezifische Anwendung: [../../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md](../../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)

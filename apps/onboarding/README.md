@@ -103,7 +103,7 @@ Ergebnis:
 - `###` erzeugt Abschnitte innerhalb der Slide.
 - `####` erzeugt eine Zwischenüberschrift im Abschnitt.
 - Inline-Markdown ist erlaubt: `*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`.
-- Bilder können direkt im Markdown eingebunden werden, z. B. `![Beschreibung](../Assets/m01-l02-gh-01-sign-up-startseite.png)`.
+- Bilder können direkt im Markdown eingebunden werden, z. B. `![Beschreibung](../../course/01-course-modules/Assets/m01-l02-gh-01-sign-up-startseite.png)`.
 	- Diese relativen Pfade werden beim Sync auf `/content/Assets/...` normalisiert.
 	- Quelle für Bilder: `course/01-course-modules/Assets/`.
 	- Der Sync spiegelt die Bilder nach `apps/onboarding/public/content/Assets/`.

@@ -35,4 +35,4 @@ Nutze die Checklisten als Selbstcheck fuer das GitHub-Modul.
 
 - Fuer allgemeine Grundlagen: [GitHub: Grundlagen und Einstieg](./01-github-grundlagen.md)
 - Fuer Git-Verbindung: [Git Modulguide](../04-git/00-git-versionierung-modulguide.md)
-- Fuer kursspezifische Praxis: [Kursmodul 01](../../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md)
+- Fuer kursspezifische Praxis: [Kursmodul 01](../../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)
