@@ -32,24 +32,23 @@ Diese Datei bleibt bewusst im Kurs-Repo unter `course/learners/`. Sie ist die ka
 
 **Lernerfolgs-Kriterien UE-MX-YY:**
 - [x] ...
-
-## Das möchte ich noch lernen
-- [ ] ...
-
-## Fragen an die Gruppe
-- ...
 ```
+
+## Zusatzdatei pro Person
+
+Rueckfragen, freie Notizen, Feedback und Lernwuensche werden in einer separaten Datei gepflegt:
+
+`lernbegleitnotizen_<name>.md`
 
 ## Regeln
 
 | Regel | Detail |
 |:---|:---|
-| `## Das möchte ich noch lernen` | Erscheint **einmal** am Dateiende – nicht nach jedem Journaleintrag |
-| `## Fragen an die Gruppe` | Erscheint **einmal** am Dateiende – nicht nach jedem Journaleintrag |
 | Abgabe- und Lernerfolgs-Kriterien | Stehen **direkt unter den passenden Journaleintrag** (nicht am Dateiende) |
 | Repo-Trennung | Loesungsartefakte duerfen im eigenen Repo liegen; diese Datei bleibt trotzdem zentral unter `course/learners/` |
 | `## Nächster kleiner Schritt` | **Verboten als eigener Abschnitt** – der nächste Schritt steht im letzten Journaleintrag |
 | Journaleinträge | Format `### DD.MM. (Uebung XX – Titel)` |
+| Rueckfragen/Notizen/Feedback/Lernwuensche | Stehen in `lernbegleitnotizen_<name>.md` im gleichen Ordner |
 
 ## Automatischer Test
 

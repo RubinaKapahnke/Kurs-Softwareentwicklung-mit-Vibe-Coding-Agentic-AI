@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://knoot.local/schemas/module.meta.schema.json",
+  "title": "Module Meta",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "courseId",
+    "title",
+    "order",
+    "type",
+    "completionRule",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "courseId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": { "type": "string", "minLength": 3 },
+    "order": { "type": "integer", "minimum": 1 },
+    "type": { "type": "string", "enum": ["guided", "self-paced", "workshop"] },
+    "entryRule": { "type": "string", "minLength": 2 },
+    "completionRule": { "type": "string", "minLength": 2 },
+    "strategy": { "type": "string", "minLength": 2 },
+    "templateId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "compatibilityTags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 2 },
+      "uniqueItems": true
+    },
+    "estimatedDurationMinutes": { "type": "integer", "minimum": 1 },
+    "variantOf": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "variantKey": { "type": "string", "minLength": 2 },
+    "version": { "type": "integer", "minimum": 1 }
+  }
+}

@@ -1,17 +1,17 @@
-﻿# Kurs-Tool: Modul Onboarding
+# Kurs-Tool: Modul Onboarding
 
 Diese Datei ist die Arbeitsgrundlage fuer Pflege, Erweiterung und Abnahme der Onboarding-App.
 
 ## Zielbild
 
-Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwissen bis zur aktiven Mitarbeit im Kurs-Repo gefuehrt werden und danach sicher mit NEXT_STEPS.md weiterarbeiten koennen.
+Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwissen bis zur aktiven Mitarbeit im Kurs-Repo gefuehrt werden und danach sicher mit COURSE_MILESTONES.md weiterarbeiten koennen.
 
 ## Produkt-Scope (MVP)
 
 - Hoechstens 6 lineare Kernschritte bis zum lokalen Clone sind als Fuehrungslogik klar erkennbar.
 - Der aktuelle Stand nutzt mehr Detailschritte, muss aber fuer Lernende weiterhin wie ein klarer, sicherer Flow wirken.
 - Pro Schritt ist ein Erfolgskriterium sichtbar.
-- Nach dem Onboarding ist NEXT_STEPS.md der fachliche Einstieg in den Kursfluss.
+- Nach dem Onboarding ist COURSE_MILESTONES.md der fachliche Einstieg in den Kursfluss.
 
 ## ONB-001: Abnahme-Checkliste (PRD zu DoD)
 
@@ -36,7 +36,7 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 
 ### D. Bruecke in den Kursfluss
 
-- [ ] Der Abschluss fuehrt klar zu NEXT_STEPS.md und README_UEBUNGEN.md.
+- [ ] Der Abschluss fuehrt klar zu COURSE_MILESTONES.md und README_UEBUNGEN.md.
 - [ ] GitHub-Links und VS-Code-Alternative sind als gleichwertige Wege sichtbar.
 - [ ] Lernende koennen nach dem Abschluss den Unterschied erklaeren: Kurs-Repo fuer Orientierung/Fortschritt, eigenes Repo fuer Umsetzung.
 
@@ -50,7 +50,7 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 
 1. Neue Person ohne Account
 - [ ] Start bei Schritt 1, Voucher validieren, neuer Account-Pfad, bis Abschluss.
-- [ ] Abschlusslinks in NEXT_STEPS.md und README_UEBUNGEN.md geprueft.
+- [ ] Abschlusslinks in COURSE_MILESTONES.md und README_UEBUNGEN.md geprueft.
 
 2. Person mit bestehendem Account, wenig Repo-Erfahrung
 - [ ] Existing-Beginner-Pfad durchlaufen.
@@ -81,8 +81,9 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 
 Die redaktionelle Quelle für Lesson-Flow-Inhalte liegt im Kursmodul unter:
 
-- `course/kursmodule/01-arbeitsumgebung-dokumentation-versionsverwaltung/lerninhalte/lektion-XX-.../lektion-inhalte.md`
-- optional: `.../aufgaben.md`
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/XX-thema.md`
+- optional: `course/01-course-modules/01-Onboarding-in-den-Kurs/XX-aufgaben.md`
+- Alternativ werden ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` weiterhin erkannt.
 
 Der Sync erfolgt in `apps/onboarding` mit:
 
@@ -98,14 +99,21 @@ Ergebnis:
 ## Markdown-Konvention Fuer Lesson-Flow
 
 - Jede `##`-Überschrift erzeugt eine neue Lesson-Slide.
-- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`, `## Übungen zur Lektion`.
 - `###` erzeugt Abschnitte innerhalb der Slide.
 - `####` erzeugt eine Zwischenüberschrift im Abschnitt.
-- Bilder können direkt im Markdown eingebunden werden: `![Beschreibung](/assets/lessons/step-02-github-login.png)`.
-  - Verwende absolute Pfade mit `/assets/lessons/`.
-  - Bilder liegen unter `public/assets/lessons/`.
-  - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
-  - Siehe [public/assets/lessons/README.md](public/assets/lessons/README.md) für Bildmaße und Anforderungen.
+- Inline-Markdown ist erlaubt: `*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`.
+- Bilder können direkt im Markdown eingebunden werden, z. B. `![Beschreibung](../../course/01-course-modules/Assets/m01-l02-gh-01-sign-up-startseite.png)`.
+	- Diese relativen Pfade werden beim Sync auf `/content/Assets/...` normalisiert.
+	- Quelle für Bilder: `course/01-course-modules/Assets/`.
+	- Der Sync spiegelt die Bilder nach `apps/onboarding/public/content/Assets/`.
+
+### Struktur-Sektionen ohne Slide
+
+- `## Was ist zu tun`: Wird als Aufgabenquelle für den Schritt übernommen (falls vorhanden).
+- `## Hilfreiche Links`: Wird als Ressourcenliste für den Schritt übernommen (falls vorhanden).
+- `## Übungen zur Lektion`: Wird als eigene Übungs-Komponente unterhalb des Lesson-Flows dargestellt. Übungsschritte sind abhakbar, pro Übung kann `erledigt` oder `nicht geschafft` markiert werden.
+- Diese Sektionen erscheinen nicht als eigene Slides im Lesson-Flow.
 
 ### Quiz-Pattern
 

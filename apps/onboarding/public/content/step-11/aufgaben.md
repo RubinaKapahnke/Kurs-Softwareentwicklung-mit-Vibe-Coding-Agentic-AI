@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-11-terminal-und-shell-grundlagen/aufgaben.md -->
+<!-- Source: 11-aufgaben.md -->
 
 # Lektion 11: Aufgaben – Terminal- und Shell-Grundlagen
 
@@ -50,8 +50,8 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 
 1. Im Terminal: `cd course`
 2. Bestätige mit `pwd` – du solltest einen Pfad sehen, der auf `course` endet
-3. Tippe `ls` – du solltest Unterordner wie `course-library/`, `kursmodule/`, `uebungen/` sehen
-4. Wechsle in `cd kursmodule`
+3. Tippe `ls` – du solltest Unterordner wie `00-course-guides/`, `01-course-modules/`, `02-course-exercises/`, `03-course-library/`, `99-course-development/` und `learners/` sehen
+4. Wechsle in `cd 01-course-modules`
 5. Tippe `ls` – du solltest Ordner wie `01-Onboarding-in-den-Kurs/`, `02-produktbeschreibung-...` sehen
 6. Gehe zwei Ebenen zurück: `cd ../..`
 7. Bestätige mit `pwd` – du solltest wieder im Kurs-Ordner sein
@@ -69,13 +69,13 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 1. Im Kurs-Ordner: Tippe `cd co` (nur die ersten Buchstaben von "course")
 2. Drücke **Tab** – das Terminal sollte zu `cd course` ergänzen
 3. Drücke Enter
-4. Tippe `cd k` (für "kursmodule")
-5. Drücke **Tab** – sollte zu `cd kursmodule` ergänzen
+4. Tippe `cd 01-` (für `01-course-modules`)
+5. Drücke **Tab** – sollte zu `cd 01-course-modules` ergänzen
 6. Drücke Enter
-7. Tippe `cd 01` (für "01-Onboarding-...")
+7. Tippe `cd 01` (für `01-Onboarding-...`)
 8. Drücke **Tab** – sollte ergänzen
 9. Drücke Enter
-10. Tippe `ls` und schau die Lektionen-Ordner an
+10. Tippe `ls` und schau die Lektionen-Dateien an
 
 **Erfolgskriterium:** Tab-Autocomplete funktioniert und spart dir Tipparbeit.
 
@@ -109,7 +109,7 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 
 1. Du bist noch in `terminal-test` Ordner
 2. Kopiere `note1.md` zu `note1-backup.md`: `cp note1.md note1-backup.md`
-3. Bestätige mit `ls` – du solltest jetzt 4 Dateien sehen (die Original + die Kopie)
+3. Bestätige mit `ls` – du solltest jetzt 4 Dateien sehen
 4. Verschiebe `script.ps1` zu `script-alt.ps1`: `mv script.ps1 script-alt.ps1`
 5. Bestätige mit `ls` – die alte Datei sollte weg sein, die neue da
 
@@ -124,13 +124,13 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 **Anleitung:**
 
 1. Du bist noch in `terminal-test`
-2. Schreibe Inhalt in eine Datei (und siehe was `echo` und `>` tun):
+2. Schreibe Inhalt in eine Datei:
    ```bash
    echo "Das ist meine erste Notiz" > note1.md
    ```
 3. Zeige den Inhalt: `cat note1.md`
-4. Du solltest den Text sehen: "Das ist meine erste Notiz"
-5. Schreibe mehr Inhalt (mit `>>` wird hinzugefügt statt überschrieben):
+4. Du solltest den Text sehen: `Das ist meine erste Notiz`
+5. Schreibe mehr Inhalt:
    ```bash
    echo "Das ist eine zweite Zeile" >> note1.md
    ```
@@ -147,11 +147,11 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 
 **Anleitung:**
 
-1. Navigiere zurück zum Kurs-Ordner: `cd ../../..` (oder `cd ~` + Kurs-Pfad)
+1. Navigiere zurück zum Kurs-Ordner
 2. Suche alle Markdown-Dateien: `find . -name "*.md"`
 3. Du solltest viele Dateien sehen (README.md, verschiedene Lektionen, etc.)
 4. Suche nur im `course/` Ordner: `find course -name "*.md"`
-5. Suche nur nach Ordnern namens "01-*": `find course/kursmodule -type d -name "01-*"`
+5. Suche nur nach Ordnern namens `01-*`: `find course/01-course-modules -type d -name "01-*"`
 6. Du solltest den Onboarding-Ordner sehen
 
 **Erfolgskriterium:** Du kannst mit `find` nach Dateien und Ordnern suchen.
@@ -164,7 +164,7 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 
 **Anleitung:**
 
-1. Navigiere zum Test-Ordner (falls nicht dort): `cd ~/Desktop/terminal-test`
+1. Navigiere zum Test-Ordner: `cd ~/Desktop/terminal-test`
 2. Lösche einzelne Dateien:
    ```bash
    rm note1.md
@@ -187,14 +187,12 @@ Diese Aufgaben helfen dir, die Befehle aus der Lektion praktisch zu üben. Öffn
 
 **Anleitung:**
 
-Stelle dir vor: Du hast neue Notizen im Kurs und möchtest diese sichern.
-
 1. **Orientiere dich:**
    - `pwd` – wo bist du?
    - `ls` – was ist hier?
 
 2. **Navigiere zur Übung:**
-   - `cd course/uebungen`
+   - `cd course/02-course-exercises`
    - `ls` – welche Übungen gibt es?
 
 3. **Suche für ein Pattern:**
@@ -202,7 +200,7 @@ Stelle dir vor: Du hast neue Notizen im Kurs und möchtest diese sichern.
    - Wie viele Übungen gibt es?
 
 4. **Schaue eine Datei an:**
-   - `cat meilenstein-01-uebung-01.md | head -20` (zeigt erste 20 Zeilen)
+   - `cat meilenstein-01-uebung-01.md | head -20`
    - Oder einfach: `cat meilenstein-01-uebung-01.md`
 
 5. **Gehe zurück zur Root:**
@@ -223,29 +221,21 @@ Stelle dir vor: Du hast neue Notizen im Kurs und möchtest diese sichern.
    ```bash
    touch mein-script.sh
    ```
-
-2. Schreib Befehle hinein (mit `echo` und Umleitung `>`):
+2. Schreib Befehle hinein:
    ```bash
    echo "#!/bin/bash" > mein-script.sh
    echo "echo 'Hallo aus meinem Script!'" >> mein-script.sh
    echo "pwd" >> mein-script.sh
    echo "ls -la" >> mein-script.sh
    ```
-
 3. Mache das Script ausführbar:
    ```bash
    chmod +x mein-script.sh
    ```
-
 4. Führe es aus:
    ```bash
    ./mein-script.sh
    ```
-
-5. Du solltest sehen:
-   - "Hallo aus meinem Script!"
-   - Deinen aktuellen Ordner (pwd)
-   - Inhalte des Ordners (ls)
 
 **Für Windows – PowerShell:**
 
@@ -253,30 +243,15 @@ Stelle dir vor: Du hast neue Notizen im Kurs und möchtest diese sichern.
    ```powershell
    New-Item "mein-script.ps1"
    ```
-
 2. Schreib Befehle rein:
    ```powershell
    Add-Content "mein-script.ps1" "Write-Host 'Hallo aus meinem Script!'"
    Add-Content "mein-script.ps1" "Get-Location"
    Add-Content "mein-script.ps1" "Get-ChildItem"
    ```
-
 3. Führe es aus:
    ```powershell
    .\mein-script.ps1
    ```
 
 **Erfolgskriterium:** Dein Script läuft und zeigt Output.
-
----
-
-## Zusammenfassung
-
-Du hast jetzt praktisch gelernt:
-- ✅ Terminal öffnen und navigieren
-- ✅ Ordner und Dateien erstellen
-- ✅ Dateien kopieren, verschieben, löschen
-- ✅ Inhalte ansehen und suchen
-- ✅ Erste Script-Erfahrung
-
-Mit diesen Grundlagen bist du bereit, im Kurs Git-Befehle im Terminal zu nutzen!

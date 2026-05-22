@@ -1,0 +1,73 @@
+<section class="lesson-exercises" aria-label="Übungen zur Lektion">
+  <h3>Übungen zur Lektion</h3>
+
+  <div class="lesson-exercises__list">
+    @for (exercise of exercises(); track exercise.title; let exerciseIndex = $index) {
+      <article class="lesson-exercise-card">
+        <header class="lesson-exercise-card__header">
+          <h4>{{ exercise.title }}</h4>
+          @if (exercise.goal) {
+            <p class="lesson-exercise-card__goal">{{ exercise.goal }}</p>
+          }
+        </header>
+
+        @if (exercise.steps.length > 0) {
+          <div class="lesson-exercise-card__steps" role="list">
+            @for (step of exercise.steps; track step; let stepIndex = $index) {
+              <mat-checkbox
+                class="lesson-exercise-card__step-item"
+                role="listitem"
+                [checked]="isStepChecked(exerciseIndex, stepIndex)"
+                (change)="toggleStep(exerciseIndex, stepIndex, $event.checked)">
+                {{ step }}
+              </mat-checkbox>
+            }
+          </div>
+        }
+
+        @if (exercise.checks.length > 0) {
+          <div class="lesson-exercise-card__checks">
+            <h5>Mini-Check</h5>
+            <ul>
+              @for (check of exercise.checks; track check) {
+                <li>{{ check }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        <div class="lesson-exercise-card__status-actions">
+          <button
+            mat-stroked-button
+            type="button"
+            [class.lesson-exercise-card__status-btn--active]="isExerciseCompleted(exerciseIndex)"
+            (click)="setExerciseStatus(exerciseIndex, isExerciseCompleted(exerciseIndex) ? null : 'completed')">
+            <mat-icon aria-hidden="true">task_alt</mat-icon>
+            Als erledigt markieren
+          </button>
+
+          <button
+            mat-stroked-button
+            type="button"
+            [class.lesson-exercise-card__status-btn--active-failed]="isExerciseFailed(exerciseIndex)"
+            (click)="setExerciseStatus(exerciseIndex, isExerciseFailed(exerciseIndex) ? null : 'failed')">
+            <mat-icon aria-hidden="true">flag</mat-icon>
+            Nicht geschafft
+          </button>
+        </div>
+
+        @if (isExerciseCompleted(exerciseIndex)) {
+          <p class="lesson-exercise-card__status-note lesson-exercise-card__status-note--completed">
+            Status: Erledigt
+          </p>
+        }
+
+        @if (isExerciseFailed(exerciseIndex)) {
+          <p class="lesson-exercise-card__status-note lesson-exercise-card__status-note--failed">
+            Status: Nicht geschafft
+          </p>
+        }
+      </article>
+    }
+  </div>
+</section>

@@ -6,7 +6,7 @@ applyTo: "apps/onboarding/**"
 
 ## Ziel des Bereichs
 
-Diese App fuehrt bereits aufgenommene Kursteilnehmende ohne Vorwissen in einem linearen Ablauf vom Einstieg ueber das Onboarding bis zum lokalen Clone des Kurs-Repos und zum Startpunkt in `NEXT_STEPS.md`.
+Diese App fuehrt bereits aufgenommene Kursteilnehmende ohne Vorwissen in einem linearen Ablauf vom Einstieg ueber das Onboarding bis zum lokalen Clone des Kurs-Repos und zum Startpunkt in `course/00-course-guides/COURSE_MILESTONES.md`.
 
 ## Stack (verbindlich)
 
@@ -76,7 +76,7 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 - Bei neuen Dateien/Foldern README-Projektstruktur synchron halten.
 - Onboarding-App darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
-- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Onboarding ist `NEXT_STEPS.md` der fachliche Startpunkt.
+- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Onboarding ist `course/00-course-guides/COURSE_MILESTONES.md` der fachliche Startpunkt.
 
 ## Markdown-Content (Onboarding)
 
@@ -88,18 +88,26 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 ## Manifest-Sync aus Kursmodul-Lektionen
 
-- Lesson-Flow-Inhalte werden aus `course/kursmodule/01-.../lerninhalte/lektion-XX-.../lektion-inhalte.md` synchronisiert.
-- Aufgaben werden optional aus `aufgaben.md` derselben Lektion synchronisiert.
+- Lesson-Flow-Inhalte werden aus `course/01-course-modules/01-.../XX-thema.md` synchronisiert.
+- Aufgaben werden optional aus `XX-aufgaben.md` derselben Lektion synchronisiert.
+- Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt.
 - `npm run sync-content` in `apps/onboarding` erzeugt/aktualisiert `public/content/step-manifest.json` und die Inhalte unter `public/content/step-XX/`.
 - Bei nicht-Account-Choice-Steps hat manifestbasierter Lesson-Flow Vorrang vor statisch hinterlegtem `lessonFlow` in `onboarding-steps.data.ts`.
 
 ## Markdown-Konvention fuer Lesson-Flow
 
 - `##` erzeugt eine neue Lesson-Seite (Slide).
-- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
+- Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`, `## Übungen zur Lektion`.
 - `###` erzeugt einen Abschnitt innerhalb der aktuellen Slide.
 - `####` wird als Zwischenüberschrift im Abschnitt gerendert (uppercase).
 - Inline-Markdown ist erlaubt: `*kursiv*`, `**fett**`, `***fett-kursiv***`, `[Link](https://...)`.
+
+### Struktur-Sektionen ohne Slide
+
+- `## Was ist zu tun` wird als Aufgabenliste fuer den Schritt interpretiert (vergleichbar mit Aufgaben aus `XX-aufgaben.md`).
+- `## Hilfreiche Links` wird als Ressourcenliste fuer den Schritt interpretiert.
+- `## Übungen zur Lektion` wird als Übungsbereich unterhalb des Lesson-Flows gerendert. Die enthaltenen Übungsschritte sind interaktiv abhakbar; pro Übung kann der Status `erledigt` oder `nicht geschafft` gesetzt werden.
+- Beide Sektionen sind fuer Autoren gedacht und erscheinen nicht als eigene Lesson-Slides im Lesson-Flow.
 
 ### Quiz-Pattern in Markdown
 

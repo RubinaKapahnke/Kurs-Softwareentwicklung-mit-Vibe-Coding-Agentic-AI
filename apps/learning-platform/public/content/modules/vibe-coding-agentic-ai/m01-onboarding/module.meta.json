@@ -1,0 +1,14 @@
+{
+  "id": "m01-onboarding",
+  "courseId": "vibe-coding-agentic-ai",
+  "title": "Onboarding in den Kurs",
+  "order": 1,
+  "type": "guided",
+  "entryRule": "voucher-required",
+  "completionRule": "all-required-steps",
+  "strategy": "onboarding-v1",
+  "templateId": "onboarding-core-v1",
+  "compatibilityTags": ["beginner", "foundation"],
+  "estimatedDurationMinutes": 180,
+  "version": 1
+}

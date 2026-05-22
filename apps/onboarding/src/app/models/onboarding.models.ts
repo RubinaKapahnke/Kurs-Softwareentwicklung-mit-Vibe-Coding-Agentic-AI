@@ -9,8 +9,10 @@ export interface StepManifestEntry {
   sections: StepManifestSection[];
   requiresLessonCompletion?: boolean;
   lessonFlow?: OnboardingLessonFlow | null;
+  exercises?: OnboardingLessonExercise[] | null;
   tasks?: string[] | null;
   taskNotes?: OnboardingLessonContentSection[] | null;
+  resources?: OnboardingResourceLink[] | null;
 }
 
 export type StepManifest = Record<number, StepManifestEntry>;
@@ -25,13 +27,29 @@ export interface OnboardingResourceLink {
   href: string;
 }
 
+export type OnboardingExerciseStatus = 'completed' | 'failed' | null;
+
+export interface OnboardingLessonExercise {
+  title: string;
+  goal?: string;
+  steps: string[];
+  checks: string[];
+}
+
 export interface OnboardingLessonContentSection {
   heading?: string;
+  blocks?: OnboardingLessonContentBlock[];
   paragraphs?: string[];
   orderedItems?: string[];
   unorderedItems?: string[];
   tone?: 'default' | 'highlight' | 'danger' | 'success' | 'info' | 'tip';
 }
+
+export type OnboardingLessonContentBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'subheading'; text: string }
+  | { type: 'ordered-list'; items: string[] }
+  | { type: 'unordered-list'; items: string[] };
 
 export interface OnboardingLessonContentSlide {
   type: 'content';

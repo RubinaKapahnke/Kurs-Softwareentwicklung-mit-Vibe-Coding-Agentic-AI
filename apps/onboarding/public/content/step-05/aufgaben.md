@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-05-git-grundlagen/aufgaben.md -->
+<!-- Source: 05-git-grundlagen/aufgaben.md -->
 
 ## Aufgaben
 

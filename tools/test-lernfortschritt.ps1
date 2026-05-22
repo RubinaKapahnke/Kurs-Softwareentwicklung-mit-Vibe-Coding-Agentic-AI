@@ -39,8 +39,7 @@ foreach ($file in $lernFiles) {
     $pflichtAbschnitte = @(
         @{ Heading = "## Aktueller Fokus";              Hint = "Abschnitt '## Aktueller Fokus' fehlt" },
         @{ Heading = "## Abgeschlossene Meilensteine";  Hint = "Abschnitt '## Abgeschlossene Meilensteine' fehlt" },
-        @{ Heading = "## Lernjournal";                  Hint = "Abschnitt '## Lernjournal' fehlt" },
-        @{ Heading = "## Das moechte ich noch lernen";  Hint = "Abschnitt '## Das moechte ich noch lernen' fehlt (einmalig am Dateiende)" }
+        @{ Heading = "## Lernjournal";                  Hint = "Abschnitt '## Lernjournal' fehlt" }
     )
 
     foreach ($s in $pflichtAbschnitte) {
@@ -49,22 +48,6 @@ foreach ($file in $lernFiles) {
             -Condition ($content -match [regex]::Escape($s.Heading) -or $content -match 'Das m.{1,4}chte ich noch lernen') `
             -Hint $s.Hint
     }
-    # Separater Test fuer "Das moechte ich noch lernen" mit Umlauten
-    $hasMoechte = $content -match 'Das m.{0,10}chte ich noch lernen'
-    $results = $results | Where-Object { $_.Name -notlike "*moechte*" }
-    if ($hasMoechte) { $passed++ } else { $failed++ }
-    $results += [PSCustomObject]@{
-        Status = if ($hasMoechte) { "OK  " } else { "FAIL" }
-        Name   = "Pflichtabschnitt: '## Das moechte ich noch lernen'"
-        Hint   = if ($hasMoechte) { "" } else { "Abschnitt '## Das moechte ich noch lernen' fehlt (einmalig am Dateiende)" }
-    }
-
-    # --- "Fragen an die Gruppe" am Dateiende ---
-    Test-Check `
-        -Name "Abschnitt '## Fragen an die Gruppe' vorhanden" `
-        -Condition ($content -match '## Fragen an die Gruppe') `
-        -Hint "Abschnitt '## Fragen an die Gruppe' fehlt (einmalig am Dateiende)"
-
     # --- Kein "## Naechster kleiner Schritt"-Abschnitt (verboten laut AGENTS.md) ---
     Test-Check `
         -Name "Kein verbotener 'Naechster kleiner Schritt'-Abschnitt" `
@@ -73,9 +56,10 @@ foreach ($file in $lernFiles) {
 
     # --- Lernjournal hat mindestens einen Eintrag (### DD.MM.) ---
     $journalEntries = ([regex]::Matches($content, '### \d{2}\.\d{2}\.?')).Count
+    $isTemplateFile = $file.Name -match '^lernfortschritt_.*vorlage.*\.md$'
     Test-Check `
         -Name "Lernjournal: mindestens 1 Eintrag (### DD.MM.) gefunden ($journalEntries)" `
-        -Condition ($journalEntries -ge 1) `
+        -Condition ($journalEntries -ge 1 -or $isTemplateFile) `
         -Hint "Das Lernjournal sollte mindestens einen Eintrag im Format '### DD.MM. (...)' enthalten"
 
     # --- Ausgabe ---

@@ -11,6 +11,10 @@
         <a href="#top" class="navbar-link">Start</a>
         <a href="#value" class="navbar-link">Wert</a>
         <a href="#courses" class="navbar-link">Kurse</a>
+        <a [href]="learningPlatformUrl" target="_blank" rel="noopener" class="navbar-link navbar-link--new-app">Neue Learning-Platform testen</a>
+        <button type="button" class="navbar-link navbar-link--toggle" (click)="toggleLegacyRedirect()">
+          Auto-Weiterleitung: {{ legacyRedirectEnabled() ? 'AN' : 'AUS' }}
+        </button>
         <a [routerLink]="['/kurse', featuredCourse().id]" mat-button class="navbar-cta">Kursüberblick</a>
       </nav>
     </div>

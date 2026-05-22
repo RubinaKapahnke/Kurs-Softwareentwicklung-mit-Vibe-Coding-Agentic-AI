@@ -1,4 +1,4 @@
-﻿# Onboarding App - Aufgaben & Planung
+# Onboarding App - Aufgaben & Planung
 
 ## Architektur
 
@@ -50,7 +50,7 @@
 
 ### Sprint D - Positionierung & UX-Vertiefung
 - ONB-047: USP-/Warum-unsere-Kurse-Section ergänzen
-- UX-110: Übergang in NEXT_STEPS.md stärken
+- UX-110: Übergang in COURSE_MILESTONES.md stärken
 - UX-100: Inhalte für Einsteiger*innen vertiefen, aber optional halten
 - UX-120: Desktop-First klar auf App-Ebene verankern
 
@@ -63,7 +63,7 @@
 - [ ] Neue Person kommt ohne Hilfe bis zum lokal geöffneten Kurs-Repository.
 - [ ] Neue Person kann den Unterschied Kurs-Repository vs. eigenes Repository korrekt erklären.
 - [ ] Neue Person weiß, dass lernfortschritt_<name>.md zentral im Kurs-Repository gepflegt wird.
-- [ ] Abschluss verlinkt klar auf NEXT_STEPS.md und course/uebungen/README_UEBUNGEN.md.
+- [ ] Abschluss verlinkt klar auf COURSE_MILESTONES.md und course/02-course-exercises/README_UEBUNGEN.md.
 - [ ] Build und Tests laufen für apps/onboarding stabil.
 
 ## Archiv - Erledigte Aufgaben

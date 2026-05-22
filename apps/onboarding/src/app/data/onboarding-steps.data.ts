@@ -114,7 +114,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         href: 'https://github.com/orgs/community/discussions'
       }
     ],
-    markdownSource: '/content/github-account.md',
+    markdownSource: '/content/step-02/lektion-inhalte.md',
     lessonFlow: {
       title: 'GitHub-Account anlegen',
       continueLabel: 'Weiter',
@@ -208,7 +208,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     successCriterion: 'Dein Repository ist auf github.com angelegt und enthält eine README.md.',
-    markdownSource: '/content/github-repository-erstellen.md',
+    markdownSource: '/content/step-03/lektion-inhalte.md',
     lessonFlow: {
       title: 'Ein GitHub-Repository erstellen',
       continueLabel: 'Weiter',
@@ -489,8 +489,30 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   },
   {
     id: 8,
+    title: 'VS Code installieren',
+    goal: 'Du installierst VS Code auf deinem Rechner, öffnest den Extension-Bereich und installierst GitHub Copilot sowie GitHub Copilot Chat.',
+    tasks: [
+      'Installiere VS Code lokal auf deinem Rechner.',
+      'Richte die wichtigsten Einstellungen und Erweiterungen für den Kurs ein.',
+      'Prüfe, dass Terminal und Git in VS Code funktionieren.'
+    ],
+    fallbackHelp: [],
+    successCriterion: 'VS Code ist installiert, startet ohne Fehler und sowohl GitHub Copilot als auch GitHub Copilot Chat sind in VS Code installiert.',
+    resources: [
+      {
+        label: 'VS Code Setup',
+        href: 'https://code.visualstudio.com/docs/setup/setup-overview'
+      },
+      {
+        label: 'VS Code Extensions',
+        href: 'https://code.visualstudio.com/docs/editor/extension-marketplace'
+      }
+    ]
+  },
+  {
+    id: 9,
     title: 'Was ist Git?',
-    goal: 'Du verstehst, warum Versionskontrolle wichtig ist und was Git davon löst.',
+    goal: 'Du verstehst, warum Versionskontrolle wichtig ist und was Git daran besser loest als manuelle Dateikopien.',
     tasks: [],
     fallbackHelp: [],
     successCriterion: '',
@@ -499,120 +521,16 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         label: 'InterGit – Interaktives Git-Visualisierungstool',
         href: 'https://inter-git.com/'
       }
-    ],
-    lessonFlow: {
-      title: 'Mini-Lektion: Warum Versionskontrolle?',
-      continueLabel: 'Weiter',
-      finishLabel: 'Lektion abgeschlossen',
-      slides: [
-        {
-          type: 'content',
-          title: 'Ein kurzes Szenario',
-          sections: [
-            {
-              orderedItems: [
-                'Du bearbeitest eine Datei bis zu einem Zwischenstand.',
-                'Du kopierst sie und nennst die Datei zum Beispiel datei-version-1.',
-                'Du arbeitest weiter und erstellst wieder eine Kopie.',
-                'Am Ende liegen viele Dateiversionen nebeneinander.'
-              ]
-            },
-            {
-              heading: 'Klingt erstmal praktisch. Aber skaliert das wirklich?',
-              tone: 'highlight'
-            }
-          ]
-        },
-        {
-          type: 'content',
-          title: 'Warum machen Menschen das trotzdem?',
-          sections: [
-            {
-              orderedItems: [
-                'Backup: Ein älterer Stand ist schnell erreichbar.',
-                'Experimentieren: Neue Ideen ohne sofort alles zu riskieren.',
-                'Zwischenstände festhalten: Wichtige Meilensteine bleiben sichtbar.'
-              ],
-              tone: 'highlight'
-            },
-            {
-              paragraphs: [
-                'Diese Vorteile sind real. Genau deshalb gibt es heute bessere Werkzeuge dafür: Versionskontrollsysteme wie Git.'
-              ]
-            }
-          ]
-        },
-        {
-          type: 'quiz',
-          title: 'Schnell-Check',
-          prompt: 'Welche Nachteile hat manuelle Versionierung mit vielen Dateikopien?',
-          instruction: 'Wähle alle zutreffenden Aussagen aus.',
-          multiSelect: true,
-          options: [
-            {
-              id: 'mistakes',
-              label: 'Fehler passieren schneller',
-              isCorrect: true
-            },
-            {
-              id: 'storage',
-              label: 'Doppelte Dateien verbrauchen unnötig Speicher',
-              isCorrect: true
-            },
-            {
-              id: 'time',
-              label: 'Es kostet auf Dauer viel Zeit',
-              isCorrect: true
-            },
-            {
-              id: 'messy',
-              label: 'Bei größeren Projekten wird es schnell unübersichtlich',
-              isCorrect: true
-            },
-            {
-              id: 'teamwork',
-              label: 'Teamarbeit wird schwieriger',
-              isCorrect: true
-            }
-          ],
-          successMessage: 'Richtig! Genau diese Punkte löst ein Versionskontrollsystem deutlich besser.',
-          errorMessage: 'Fast. Prüfe noch einmal alle Aussagen und denke an Teamarbeit und Übersicht.'
-        },
-        {
-          type: 'content',
-          title: 'Warum Git hier besser passt',
-          sections: [
-            {
-              paragraphs: [
-                'Git speichert Änderungen strukturiert, statt ständig komplette Dateikopien anzulegen.',
-                'Du siehst nachvollziehbar, wer was geändert hat und kannst sicher zu früheren Ständen zurück.'
-              ],
-              tone: 'highlight'
-            },
-            {
-              paragraphs: [
-                'Im Team können mehrere Personen parallel arbeiten, ohne sich gegenseitig Dateien zu überschreiben.'
-              ]
-            },
-            {
-              paragraphs: [
-                'Kurz: Mit Git wird Versionsverwaltung planbar und sauber. Genau das nutzen wir im Kurs ab jetzt Schritt für Schritt.'
-              ],
-              tone: 'highlight'
-            }
-          ]
-        }
-      ]
-    }
+    ]
   },
   {
-    id: 9,
+    id: 10,
     title: 'Git installieren',
-    goal: 'Du installierst Git auf deinem Rechner und prüfst, dass es im Terminal erkennbar ist.',
+    goal: 'Du installierst Git auf deinem Rechner und prüfst es im Terminal.',
     tasks: [
-      'Lade Git von git-scm.com herunter und führe den Installer aus (alle Standardoptionen übernehmen).',
-      'Öffne in VS Code ein Terminal (Terminal → Neues Terminal).',
-      'Tippe git --version und prüfe, dass eine Versionsnummer erscheint.'
+      'Git herunterladen und installieren.',
+      'In VS Code ein Terminal öffnen.',
+      'git --version ausführen.'
     ],
     fallbackHelp: [
       {
@@ -624,11 +542,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         detail: 'Menü Terminal → Neues Terminal. Oder Tastenkombination Strg+` (Windows) / Ctrl+` (Mac).'
       }
     ],
-    successCriterion:
-      'Im VS-Code-Terminal zeigt git --version eine gültige Versionsnummer (z. B. git version 2.x.x).',
+    successCriterion: 'git --version zeigt eine gültige Versionsnummer.',
     desktopHint: [
       'Dieser Schritt braucht einen Rechner mit installierbarem Git und einem VS-Code-Terminal.',
-      'Auf dem Smartphone kannst du die Hinweise lesen, den Schritt aber spaeter besser am Rechner ausfuehren.'
+      'Wenn du gerade mobil liest, nutze diesen Schritt später an deinem Rechner weiter.'
     ],
     resources: [
       {
@@ -642,89 +559,28 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ]
   },
   {
-    id: 10,
-    title: 'Kurs-Repo klonen',
-    goal: 'Du klonst das gemeinsame Kurs-Repository auf deinen Rechner und öffnest es in VS Code.',
-    tasks: [
-      'Warte auf die Einladung zum Kurs-Repo von der Trainerin (kommt per GitHub-Benachrichtigung).',
-      'Kopiere die HTTPS-Clone-URL des Kurs-Repos auf GitHub.',
-      'Führe im VS-Code-Terminal git clone <URL> aus und öffne den Ordner.'
-    ],
-    fallbackHelp: [
-      {
-        title: 'Einladung noch nicht da',
-        detail: 'Schau in deinen GitHub-Benachrichtigungen nach - oder kontaktiere die Trainerin direkt.'
-      },
-      {
-        title: 'git clone schlägt fehl',
-        detail: 'Stelle sicher, dass du die HTTPS-URL kopiert hast (nicht SSH) und ins Kurs-Repo eingeladen bist.'
-      },
-      {
-        title: 'code . funktioniert nicht',
-        detail: 'Öffne den Ordner in VS Code über Datei → Ordner öffnen.'
-      }
-    ],
-    successCriterion:
-      'Der Kurs-Ordner ist in VS Code geöffnet. Du siehst NEXT_STEPS.md in der Dateiliste.',
-    desktopHint: [
-      'Klonen und Öffnen des Kurs-Repositories ist ein Desktop-Schritt.',
-      'Wenn du gerade mobil liest, nutze diesen Schritt später an deinem Rechner weiter.'
-    ],
-    resources: [
-      {
-        label: 'Kurs-Repo auf GitHub',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426'
-      },
-      {
-        label: 'NEXT_STEPS.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
-      },
-      {
-        label: 'InterGit – Interaktives Git-Visualisierungstool',
-        href: 'https://inter-git.com/'
-      }
-    ],
-    vscodeHint: [
-      'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe NEXT_STEPS.md und bestätige mit Enter.'
-    ]
-  },
-  {
     id: 11,
-    title: 'Kurs-Handhabung verstehen',
-    goal: 'Du verstehst, welche Dateien im Kurs-Repository bleiben, was in deinem eigenen Repository entsteht und warum der Lernfortschritt zentral gepflegt wird.',
+    title: 'Terminal- und Shell-Grundlagen',
+    goal: 'Du verstehst, was Terminal und Shell sind, kannst dich sicher im Dateisystem bewegen und kennst die wichtigsten Shell-Befehle für die Arbeit in diesem Kurs.',
     tasks: [
-      'Öffne im Kurs-Repository die Datei NEXT_STEPS.md und lies Meilenstein 1.',
-      'Öffne im Kurs-Repository die Datei course/uebungen/README_UEBUNGEN.md und lies den Übungsablauf.',
-      'Prüfe für dich die Grundregel: Aufgaben zentral lesen, Lösungen im eigenen Repository umsetzen.',
-      'Prüfe für dich die Grundregel: lernfortschritt_<name>.md bleibt zentral im Kurs-Repository für Überblick und Dashboard.'
+      'Öffne VS Code Terminal und prüfe mit pwd oder Get-Location, in welchem Ordner du bist.',
+      'Erkunde mit ls oder Get-ChildItem die Struktur deines Kurs-Ordners.',
+      'Wechsle mit cd in Unterordner und wieder zurück.',
+      'Lege Test-Dateien und Test-Ordner an und räume sie wieder auf.',
+      'Nutze Tab-Autocomplete, um schneller zwischen Ordnern zu wechseln.'
     ],
-    fallbackHelp: [
-      {
-        title: 'Ich verwechsle eigenes Repository und Kurs-Repository',
-        detail: 'Merke dir: NEXT_STEPS, course/uebungen und course/learners gehören ins Kurs-Repository. Deine Lösungsdateien und Projektartefakte gehören standardmäßig in dein eigenes Repository.'
-      },
-      {
-        title: 'Ich finde README_UEBUNGEN.md nicht',
-        detail: 'Nutze in VS Code Strg+P (Windows) / Cmd+P (Mac) und tippe README_UEBUNGEN.md.'
-      }
-    ],
-    successCriterion: 'Du kannst erklären, was im Kurs-Repository bleibt, was in deinem eigenen Repository liegt und warum die Lernfortschrittsdatei zentral gepflegt wird.',
+    fallbackHelp: [],
+    successCriterion: 'Du kannst dich im Dateisystem bewegen und die wichtigsten Befehle im Terminal sicher einsetzen.',
     resources: [
       {
-        label: 'NEXT_STEPS.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md'
+        label: 'Terminal-Grundlagen in VS Code',
+        href: 'https://code.visualstudio.com/docs/terminal/basics'
       },
       {
-        label: 'README_UEBUNGEN.md',
-        href: 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/uebungen/README_UEBUNGEN.md'
+        label: 'PowerShell-Dokumentation',
+        href: 'https://learn.microsoft.com/de-de/powershell/'
       }
-    ],
-    vscodeHint: [
-      'Drücke Strg+P in VS Code (Windows) / Cmd+P (Mac).',
-      'Tippe NEXT_STEPS.md oder README_UEBUNGEN.md und bestätige mit Enter.'
-    ],
-    markdownSource: '/content/kurs-handhabung.md'
+    ]
   },
   {
     id: 12,

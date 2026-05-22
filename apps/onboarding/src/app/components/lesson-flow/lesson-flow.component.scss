@@ -4,8 +4,11 @@
   --quiz-state-positive-text: color-mix(in srgb, var(--color-success) 38%, var(--color-text));
   --quiz-state-positive-feedback: color-mix(in srgb, var(--color-success) 40%, var(--color-text));
   --quiz-state-negative-text: color-mix(in srgb, var(--color-accent-dark) 88%, white);
+  --quiz-state-neutral-text: var(--color-text);
+  --quiz-state-neutral-feedback: color-mix(in srgb, var(--color-text) 72%, white);
   --quiz-state-positive-icon: color-mix(in srgb, var(--color-success) 72%, black);
   --quiz-state-negative-icon: var(--color-accent-dark);
+  --quiz-state-neutral-icon: color-mix(in srgb, var(--color-text) 62%, white);
 }
 
 .lesson-flow {
@@ -316,6 +319,15 @@
   display: block;
 }
 
+.lesson-section__check-item {
+  list-style: none;
+  margin-left: -1.35rem;
+}
+
+.lesson-section__check-item mat-checkbox {
+  display: block;
+}
+
 .lesson-section :is(p, li) a {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
@@ -486,12 +498,12 @@
 }
 
 .lesson-quiz-option--state-correct-unselected {
-  border-color: var(--border-danger);
-  background: transparent;
+  border-color: var(--border-success);
+  background: color-mix(in srgb, var(--surface-success) 48%, white);
 }
 
 .lesson-quiz-option--state-correct-unselected .lesson-quiz-option__label {
-  color: var(--quiz-state-negative-text);
+  color: var(--quiz-state-positive-text);
 }
 
 .lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__label {
@@ -499,32 +511,38 @@
 }
 
 .lesson-quiz-option--state-incorrect-unselected {
-  border-color: var(--border-success);
+  border-color: var(--border-info);
   background: transparent;
 }
 
 .lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__label {
-  color: var(--quiz-state-positive-text);
+  color: var(--quiz-state-neutral-text);
 }
 
 .lesson-quiz-option--state-correct-selected :is(mat-checkbox, mat-radio-button),
-.lesson-quiz-option--state-incorrect-unselected :is(mat-checkbox, mat-radio-button) {
+.lesson-quiz-option--state-correct-unselected :is(mat-checkbox, mat-radio-button) {
   color: var(--quiz-state-positive-text);
 }
 
-.lesson-quiz-option--state-incorrect-selected :is(mat-checkbox, mat-radio-button),
-.lesson-quiz-option--state-correct-unselected :is(mat-checkbox, mat-radio-button) {
+.lesson-quiz-option--state-incorrect-selected :is(mat-checkbox, mat-radio-button) {
   color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-unselected :is(mat-checkbox, mat-radio-button) {
+  color: var(--quiz-state-neutral-text);
 }
 
 :host ::ng-deep .lesson-quiz-option--state-correct-selected .mdc-label,
-:host ::ng-deep .lesson-quiz-option--state-incorrect-unselected .mdc-label {
+:host ::ng-deep .lesson-quiz-option--state-correct-unselected .mdc-label {
   color: var(--quiz-state-positive-text);
 }
 
-:host ::ng-deep .lesson-quiz-option--state-incorrect-selected .mdc-label,
-:host ::ng-deep .lesson-quiz-option--state-correct-unselected .mdc-label {
+:host ::ng-deep .lesson-quiz-option--state-incorrect-selected .mdc-label {
   color: var(--quiz-state-negative-text);
+}
+
+:host ::ng-deep .lesson-quiz-option--state-incorrect-unselected .mdc-label {
+  color: var(--quiz-state-neutral-text);
 }
 
 .lesson-quiz-option--state-incorrect-selected {
@@ -562,13 +580,16 @@
 }
 
 .lesson-quiz-option--state-correct-selected .lesson-quiz-option__state-icon,
-.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__state-icon {
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__state-icon {
   color: var(--quiz-state-positive-icon);
 }
 
-.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__state-icon,
-.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__state-icon {
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__state-icon {
   color: var(--quiz-state-negative-icon);
+}
+
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__state-icon {
+  color: var(--quiz-state-neutral-icon);
 }
 
 .lesson-quiz-option__feedback {
@@ -623,13 +644,16 @@
 }
 
 .lesson-quiz-option--state-correct-selected .lesson-quiz-option__feedback,
-.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__feedback {
+.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__feedback {
   color: var(--quiz-state-positive-feedback);
 }
 
-.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__feedback,
-.lesson-quiz-option--state-correct-unselected .lesson-quiz-option__feedback {
+.lesson-quiz-option--state-incorrect-selected .lesson-quiz-option__feedback {
   color: var(--quiz-state-negative-text);
+}
+
+.lesson-quiz-option--state-incorrect-unselected .lesson-quiz-option__feedback {
+  color: var(--quiz-state-neutral-feedback);
 }
 
 .lesson-flow__quiz-feedback--error {
@@ -644,11 +668,28 @@
   margin-top: auto;
   padding: 0.75rem 1.25rem 1.1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
   border-top: 1px solid var(--border-subtle);
   background: var(--color-surface);
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.lesson-flow__scroll-hint {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-primary-dark);
+  padding: 0.2rem 0.1rem;
+}
+
+.lesson-flow__scroll-hint mat-icon {
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .lesson-flow__back {

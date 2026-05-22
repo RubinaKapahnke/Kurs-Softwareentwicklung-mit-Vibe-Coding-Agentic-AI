@@ -17,7 +17,7 @@ Kurzreferenz: `[Kursentwickler]` | `[Lernende]` | `[KI-Agent]` – jede User Sto
 
 ## Constraints
 
-- DO NOT erfinde Features ohne Basis in den Repo-Dateien (NEXT_STEPS.md, Übungen, Module, Lernfortschrittsdateien).
+- DO NOT erfinde Features ohne Basis in den Repo-Dateien (`course/00-course-guides/COURSE_MILESTONES.md`, Übungen, Module, Lernfortschrittsdateien).
 - DO NOT schlage Technologien vor, die vom Stack abweichen (nur Angular, Angular Material, TypeScript Strict, JSON).
 - DO NOT schreibe Zeitschätzungen oder Sprint-Nummern.
 - DO NOT vermische Persona-Anforderungen – kennzeichne jede User Story mit `[Kursentwickler]`, `[Lernende]` oder `[KI-Agent]`.
@@ -27,11 +27,11 @@ Kurzreferenz: `[Kursentwickler]` | `[Lernende]` | `[KI-Agent]` – jede User Sto
 
 ## Approach
 
-1. **Kontext laden**: Lies zuerst `apps/dashboard/prd_dashboard.md` und `NEXT_STEPS.md`. Scan alle Lernfortschrittsdateien unter `course/learners/*/lernfortschritt_*.md` und alle Übungen in `course/uebungen/`.
+1. **Kontext laden**: Lies zuerst `apps/dashboard/prd_dashboard.md` und `course/00-course-guides/COURSE_MILESTONES.md`. Scan alle Lernfortschrittsdateien unter `course/learners/*/lernfortschritt_*.md` und alle Übungen in `course/02-course-exercises/`.
 
 2. **Anforderungen ableiten**: Identifiziere, welche Daten das Dashboard anzeigen muss, um den drei Personas zu helfen:
    - Welche Felder stehen in den Lernfortschrittsdateien?
-   - Welche Meilensteine/Übungen existieren in NEXT_STEPS.md?
+   - Welche Meilensteine/Übungen existieren in `course/00-course-guides/COURSE_MILESTONES.md`?
    - Welche Informationen fehlen noch (Datenlücken)?
 
 3. **User Stories formulieren**: Pro Feature eine User Story im Format:

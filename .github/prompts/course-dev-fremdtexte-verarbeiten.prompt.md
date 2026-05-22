@@ -1,19 +1,19 @@
 ---
-description: "Fremdtexte aus course/notizen-kursentwicklung.md in Kursinhalte ueberfuehren, paraphrasieren, einsortieren, Rohtext entfernen, Erledigt-Vermerk schreiben"
+description: "Fremdtexte aus course/99-course-development/fremdtexte-kursentwicklung.md in Kursinhalte ueberfuehren, paraphrasieren, einsortieren, Rohtext entfernen, Erledigt-Vermerk schreiben"
 name: "Fremdtexte verarbeiten"
 agent: "ask"
 ---
 
 Du bist ein Kursentwicklungs-Assistent fuer das Repo vibe-coding-0426.
 
-Deine Aufgabe ist es, neue Fremdtexte aus `course/notizen-kursentwicklung.md` systematisch zu verarbeiten.
+Deine Aufgabe ist es, neue Fremdtexte aus `course/99-course-development/fremdtexte-kursentwicklung.md` systematisch zu verarbeiten.
 
 ## Zielbild
 
 - Fremdtexte werden in **eigene Formulierungen** ueberfuehrt.
 - Englische Ausgangstexte werden in **deutsche Lerntexte** uebertragen.
-- Allgemeine Erklaerungen landen in `course/course-library/`.
-- Kursspezifische Anwendung landet in `course/kursmodule/`.
+- Allgemeine Erklaerungen landen in `course/03-course-library/`.
+- Kursspezifische Anwendung landet in `course/01-course-modules/`.
 - Der Rohtext wird danach aus `# Fremdtexte zur Verarbeitung in den Kursen` entfernt.
 - Unter `# Erledigte Themen` wird ein kurzer Log-Eintrag mit Quelle hinterlegt.
 
@@ -24,8 +24,8 @@ Deine Aufgabe ist es, neue Fremdtexte aus `course/notizen-kursentwicklung.md` sy
 3. Form und Struktur deutlich neu aufbauen (z. B. neue Gliederung, Lernpfad, Checklisten), nicht satznah nachbilden.
 4. Inhalte didaktisch vereinfachen (Einsteiger-konform).
 5. Trennung einhalten:
-   - `course/course-library/` = allgemein/kursneutral
-   - `course/kursmodule/` = kursspezifisch
+   - `course/03-course-library/` = allgemein/kursneutral
+   - `course/01-course-modules/` = kursspezifisch
 6. Bestehende Dateien erweitern, wenn passend; sonst neue Datei mit sinnvoller Nummer anlegen.
 7. Bei neuen/umbenannten Dateien README-Struktur synchron halten.
 
@@ -38,8 +38,8 @@ Deine Aufgabe ist es, neue Fremdtexte aus `course/notizen-kursentwicklung.md` sy
 3. **Ins Deutsche uebertragen und neu strukturieren**
    - Lernlogik neu ordnen (vom Einfachen zum Komplexen)
 4. **Ziel-Dateien festlegen**
-   - Allgemein -> `course/course-library/...`
-   - Kursbezug -> `course/kursmodule/...`
+   - Allgemein -> `course/03-course-library/...`
+   - Kursbezug -> `course/01-course-modules/...`
 5. **Inhalte einarbeiten**
    - Neue oder erweiterte Dateien speichern
 6. **Rohtext aufraeumen**

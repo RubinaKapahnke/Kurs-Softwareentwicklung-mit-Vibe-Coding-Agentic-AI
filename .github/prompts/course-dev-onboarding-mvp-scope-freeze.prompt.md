@@ -1,4 +1,4 @@
-﻿---
+---
 description: "Use when: Onboarding-MVP-Scope einfrieren, Feature-Drift stoppen, klare Out-of-Scope-Liste erstellen, MVP vor Umsetzung schaerfen, onboarding mvp scope freeze"
 name: "Onboarding MVP Scope Freeze (course-dev)"
 agent: "Onboarding Web Architect (course-dev)"
@@ -41,7 +41,7 @@ Arbeite in genau dieser Reihenfolge:
 - Mindestens enthalten:
   - Linearer Flow mit hoechstens 6 Schritten
   - Pro Schritt ein Erfolgskriterium
-  - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `NEXT_STEPS.md` ohne Vorwissen
+  - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `course/00-course-guides/COURSE_MILESTONES.md` ohne Vorwissen
   - Keine neue monolithische Page/Komponente und keine unnoetige Komponenten-Vermehrung
 
 7. **Naechster Umsetzungsschritt**

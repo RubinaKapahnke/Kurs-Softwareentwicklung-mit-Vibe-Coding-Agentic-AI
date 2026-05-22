@@ -1,9 +1,9 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-08-vs-code-installieren/lektion-inhalte.md -->
+<!-- Source: 08-vscode-lokal-einrichten.md -->
 
 # Lektion 08: VS Code installieren
 
-<!-- onboarding:start step-08-main -->
+
 ## Ziel
 
 Du installierst VS Code auf deinem Rechner, öffnest den Extension-Bereich und installierst GitHub Copilot sowie GitHub Copilot Chat.
@@ -75,4 +75,15 @@ Du installierst VS Code auf deinem Rechner, öffnest den Extension-Bereich und i
 ## Erfolgskriterium
 
 VS Code ist installiert, startet ohne Fehler und sowohl GitHub Copilot als auch GitHub Copilot Chat sind in VS Code installiert.
-<!-- onboarding:end step-08-main -->
+
+
+## Was ist zu tun
+
+1. Installiere VS Code lokal auf deinem Rechner.
+2. Richte die wichtigsten Einstellungen und Erweiterungen für den Kurs ein.
+3. Prüfe, dass Terminal und Git in VS Code funktionieren.
+
+## Hilfreiche Links
+
+- [VS Code Setup](https://code.visualstudio.com/docs/setup/setup-overview)
+- [VS Code Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace)

@@ -1,0 +1,26 @@
+{
+  "moduleId": "m01-onboarding",
+  "steps": [
+    {
+      "id": 1,
+      "slug": "ankommen-und-verstehen",
+      "title": "Ankommen und Verstehen",
+      "required": true,
+      "sections": [
+        {
+          "type": "lesson",
+          "file": "step-01/lektion-inhalte.md"
+        }
+      ],
+      "resources": [
+        {
+          "label": "Course Milestones",
+          "href": "https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/00-course-guides/COURSE_MILESTONES.md"
+        }
+      ],
+      "completionMode": "lesson-only",
+      "featureFlags": ["quiz"]
+    }
+  ],
+  "version": 1
+}

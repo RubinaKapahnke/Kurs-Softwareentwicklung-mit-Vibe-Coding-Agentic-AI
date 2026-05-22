@@ -1,0 +1,67 @@
+name: Deploy Learning Platform to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "apps/learning-platform/**"
+      - "course/catalog/**"
+      - "course/01-course-modules/**"
+      - ".github/workflows/deploy-learning-platform-pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/learning-platform
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: apps/learning-platform/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build for Pages
+        run: npm run build:pages
+
+      - name: Verify Pages build output
+        run: |
+          if [ ! -d "dist/learning-platform/browser" ]; then
+            echo "Build-Ausgabe fehlt: dist/learning-platform/browser"
+            exit 1
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/learning-platform/dist/learning-platform/browser
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

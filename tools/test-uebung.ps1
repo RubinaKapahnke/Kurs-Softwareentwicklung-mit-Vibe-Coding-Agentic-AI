@@ -1,8 +1,8 @@
-﻿# test-uebung.ps1
+# test-uebung.ps1
 # Prueft eine einzelne Uebungsdatei gegen den Uebungsstandard.
 #
 # Aufruf:
-#   .\tools\test-uebung.ps1 -File "course/uebungen/meilenstein-02-uebung-01.md"
+#   .\tools\test-uebung.ps1 -File "course/02-course-exercises/meilenstein-02-uebung-01.md"
 #
 # Rueckgabewert: Exit-Code 0 = alles OK, 1 = mindestens ein Fehler
 

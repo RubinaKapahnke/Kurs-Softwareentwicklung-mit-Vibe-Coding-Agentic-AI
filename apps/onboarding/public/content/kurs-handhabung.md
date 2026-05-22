@@ -1,4 +1,4 @@
-﻿## So funktioniert der Kurs im Alltag
+## So funktioniert der Kurs im Alltag
 
 Damit du spaeter nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
 
@@ -6,9 +6,9 @@ Damit du spaeter nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
 
 Im Kurs-Repo findest du die gemeinsame Lernlogik:
 
-- `NEXT_STEPS.md` zeigt dir den aktuellen Meilenstein.
-- `course/uebungen/` enthaelt die zentralen Uebungsaufgaben.
-- `course/course-library/` erklaert die Inhalte und Befehle.
+- `COURSE_MILESTONES.md` zeigt dir den aktuellen Meilenstein.
+- `course/02-course-exercises/` enthaelt die zentralen Uebungsaufgaben.
+- `course/03-course-library/` erklaert die Inhalte und Befehle.
 - `course/learners/` enthaelt die zentralen Lernfortschrittsdateien.
 
 ### 2. Dein eigenes Repo ist dein Arbeitsraum
@@ -53,7 +53,7 @@ Das hat drei Gruende:
 
 ### 4. Typischer Ablauf bei einer Uebung
 
-1. Oeffne `NEXT_STEPS.md` und die passende Uebung im Kurs-Repo.
+1. Oeffne `COURSE_MILESTONES.md` und die passende Uebung im Kurs-Repo.
 2. Lies die Quellenlinks in der Uebung.
 3. Setze die Aufgabe in deinem eigenen Repo um.
 4. Erstelle dort deinen Commit und deine PR.
@@ -63,8 +63,8 @@ Das hat drei Gruende:
 
 - **Fehler:** Uebungsloesung im Kurs-Repo erstellen.
 	**Besser:** Loesung im eigenen Repo bauen, im Kurs-Repo nur den Lernstand dokumentieren.
-- **Fehler:** Direkt im eigenen Repo starten, ohne `NEXT_STEPS.md` zu lesen.
-	**Besser:** Immer zuerst `NEXT_STEPS.md` im Kurs-Repo oeffnen.
+- **Fehler:** Direkt im eigenen Repo starten, ohne `COURSE_MILESTONES.md` zu lesen.
+	**Besser:** Immer zuerst `COURSE_MILESTONES.md` im Kurs-Repo oeffnen.
 - **Fehler:** Lernfortschritt nur lokal notieren.
 	**Besser:** Lernfortschritt in `course/learners/<name>/lernfortschritt_<name>.md` im Kurs-Repo pflegen.
 

@@ -10,7 +10,7 @@ export interface LearnerProgress {
   individualLearningWishes: string[];
 }
 
-// Datenquelle: NEXT_STEPS.md
+// Datenquelle: course/00-course-guides/COURSE_MILESTONES.md
 export interface MilestoneStatus {
   milestoneId: string;
   milestoneTitle: string;
@@ -23,7 +23,7 @@ export interface MilestoneStatus {
   exerciseStatus: ExerciseStatus[];
 }
 
-// Datenquelle: course/uebungen/meilenstein-*-uebung-*.md
+// Datenquelle: course/02-course-exercises/meilenstein-*-uebung-*.md
 export interface ExerciseStatus {
   exerciseId: string;
   exerciseTitle: string;

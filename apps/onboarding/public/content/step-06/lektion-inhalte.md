@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-06-erste-uebungen-im-browser/lektion-inhalte.md -->
+<!-- Source: 06-markdown-grundlagen.md -->
 
-# Lektion 06: Erste Übungen im eigenen Repository
+# Lektion 06: Markdown Grundlagen
 
 ## Ziel
 
@@ -17,8 +17,8 @@ Markdown ist für den Kurs wichtig, weil du damit Inhalte schnell lesbar struktu
 
 Bevor du startest, schau in diese beiden Dateien:
 
-1. [course/course-library/01-markdown/01-markdown-grundlagen.md](../../course-library/01-markdown/01-markdown-grundlagen.md)
-2. [course/course-library/01-markdown/02-formatierung_md-files.md](../../course-library/01-markdown/02-formatierung_md-files.md)
+1. [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../../03-course-library/01-markdown/01-markdown-grundlagen.md)
+2. [course/03-course-library/01-markdown/02-formatierung_md-files.md](../../03-course-library/01-markdown/02-formatierung_md-files.md)
 
 Worauf du beim Lesen achten solltest:
 
@@ -92,3 +92,14 @@ So lernst du früh, dass GitHub nicht nur Dateien speichert, sondern auch die Ve
 ## Erfolgskriterium
 
 Du hast mindestens 2 Commits im Repository sichtbar und kannst einfache Markdown-Formatierungen direkt auf GitHub anwenden.
+
+## Was ist zu tun
+
+1. Erstelle oder bearbeite eine Markdown-Datei im Repository.
+2. Nutze Überschriften, Listen, Links und Codeblöcke mindestens einmal.
+3. Prüfe die Darstellung im Vorschau-Modus.
+
+## Hilfreiche Links
+
+- [Markdown-Syntax (GitHub Docs)](https://docs.github.com/de/get-started/writing-on-github)
+- [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)

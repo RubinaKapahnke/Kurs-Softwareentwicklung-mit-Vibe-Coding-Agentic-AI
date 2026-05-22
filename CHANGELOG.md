@@ -1,10 +1,20 @@
-﻿# Changelog
+# Changelog
 
 Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
 ## Tagesübersicht (grob)
+
+### 22.05.2026
+- Onboarding-Konsistenz auf den Zielzustand der Lektionen 01 und 02 ausgerichtet: veraltete Quellenpfade in `table-of-contents.md` und Meilenstein-01-Übungen auf aktuelle flache Moduldateien aktualisiert.
+- Onboarding-Step-Fallbackpfade auf die synchronisierten Step-Inhalte (`/content/step-02/lektion-inhalte.md`, `/content/step-03/lektion-inhalte.md`) umgestellt.
+- Inhalte aus `course/01-course-modules/99-archiv/` in die neue flache Onboarding-Struktur migriert: neue Lektionen 09 bis 16 sowie Aufgaben-Dateien für 10, 11 und 15 angelegt, Onboarding-Dokumentation synchronisiert und `99-archiv/` geleert.
+- `course/01-course-modules/99-unsortiert/` weiter bereinigt: verwertete Modulziel-Inhalte als `course/01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md` übernommen, Modulübersichten synchronisiert und die verbliebenen Altdateien entfernt.
+
+### 19.05.2026
+- Kursstruktur auf nummerierte `course/`-Ordner konsolidiert (`00-course-guides`, `01-course-modules`, `02-course-exercises`, `03-course-library`, `99-course-development`) und zentrale Meilenstein-/README-/Onboarding-Verweise auf `COURSE_MILESTONES.md` synchronisiert.
+- Root-Weiterleitung `COURSE_MILESTONES.md` entfernt; zentrale Roadmap liegt ausschließlich unter `course/00-course-guides/COURSE_MILESTONES.md`.
 
 ### 12.05.2026
 - Onboarding-Inhalte für Lektionen 05, 06, 08 und 15 überarbeitet, Git-/Markdown-/VS-Code-Anleitungen ausgebaut und der Onboarding-Flow um eine neue Lektion 16 erweitert.
@@ -22,8 +32,8 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - Folgeuebung `meilenstein-04-uebung-02.md` fuer KI-Code-Verstehen + kleine Logikverbesserung erstellt und in Kursnavigation integriert.
 
 ### 08.05.2026
-- Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/kursmodule/` mit 14 Kursmodulen.
-- Root-Dokumentation synchronisiert (`README.md`, `NEXT_STEPS.md`, `course/uebungen/README_UEBUNGEN.md`, `apps/README_APPS.md`).
+- Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/01-course-modules/` mit 14 Kursmodulen.
+- Root-Dokumentation synchronisiert (`README.md`, `COURSE_MILESTONES.md`, `course/02-course-exercises/README_UEBUNGEN.md`, `apps/README_APPS.md`).
 - Onboarding-App um Markdown-Content-Workflow erweitert (`public/content`, `markdownSource`, Renderer-Komponente mit Sanitizing).
 - Agent-/Instruction-Set für Konsistenz und Onboarding-Markdown-Flow erweitert (`AGENTS.md`, Onboarding-Instruction, Onboarding-Web-Architect, Repo-Consistency-Checker).
 - Validierung erfolgreich: Onboarding-Build grün, 313 Linkchecks OK, alle 8 Uebungen bestanden.
@@ -55,21 +65,21 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Kursmodule-Ebene neu:**
 - `KURSBESCHREIBUNG.md`: Gesamtkursbeschreibung mit Pfaden, Kurslogik und Meilensteinbedeutung konsolidiert
-- `course/kursmodule/` mit 14 eigenstaendigen Kursmodulen (`00-modulziele.md` je Modul) angelegt
-- `course/kursmodule/README_KURSMODULE.md`: Uebersicht aller Kursbausteine
+- `course/01-course-modules/` mit 14 eigenstaendigen Kursmodulen (`00-modulziele.md` je Modul) angelegt
+- `course/01-course-modules/README_KURSMODULE.md`: Uebersicht aller Kursbausteine
 
 **Agents/Instructions erweitert:**
-- `AGENTS.md`: Abschnitt Markdown-Content-Konvention und neue Architektur-Ebene `course/kursmodule/` dokumentiert
+- `AGENTS.md`: Abschnitt Markdown-Content-Konvention und neue Architektur-Ebene `course/01-course-modules/` dokumentiert
 - `.github/instructions/onboarding.instructions.md`: Markdown-Content-Regeln (DOMPurify, `markdownSource`, Komponenten-Trennung) erganzt
 - `.github/agents/course-dev-onboarding-web-architect.agent.md`: Neu angelegt
 
 **Konsistenz-Fixes (Paket A+B - Repo-Consistency-Checker Session 8):**
 - Alle `apps/learners/` → `course/learners/` in 9 Uebungsdateien + README_UEBUNGEN korrigiert
-- `docs/uebungen`-Linktexte in Uebungen auf `course/uebungen` aktualisiert
-- `course/course-library/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
-- `course/course-library/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
-- `apps/dashboard/models/dashboard.models.ts`: Interface-Kommentare auf korrekte Pfade (`course/learners/`, `course/uebungen/`) aktualisiert
-- `README.md`: `course/notizen-kursentwicklung.md` in Projektstruktur ergaenzt
+- `docs/uebungen`-Linktexte in Uebungen auf `course/02-course-exercises` aktualisiert
+- `course/03-course-library/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
+- `course/03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
+- `apps/dashboard/models/dashboard.models.ts`: Interface-Kommentare auf korrekte Pfade (`course/learners/`, `course/02-course-exercises/`) aktualisiert
+- `README.md`: `course/99-course-development/fremdtexte-kursentwicklung.md` in Projektstruktur ergaenzt
 
 **Ergebnis:** 313 Links OK, 8 Uebungen OK, 5 Lernfortschritt-Dateien OK (unveraendert)
 
@@ -92,8 +102,8 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - Dynamic CTA: Startseite/Kursstart koennen bei vorhandenem Fortschritt zu `Kurs fortsetzen` und dem ersten offenen Schritt springen.
 
 **Kursmaterial und Architektur-Lernen:**
-- `course/kursmodule/07-architektur-wartbare-produktstruktur/01-code-monster-entstehung-und-refactoring.md`: Erklaertext fuer den Kurs ergaenzt.
-- `course/kursmodule/07-architektur-wartbare-produktstruktur/beispiel-code-monster-step-page.component.scss.txt`: Inertes Beispiel fuer Code-Monster ohne App-Funktion.
+- `course/01-course-modules/07-architektur-wartbare-produktstruktur/01-code-monster-entstehung-und-refactoring.md`: Erklaertext fuer den Kurs ergaenzt.
+- `course/01-course-modules/07-architektur-wartbare-produktstruktur/beispiel-code-monster-step-page.component.scss.txt`: Inertes Beispiel fuer Code-Monster ohne App-Funktion.
 - GitHub-/Git-Grundlagen und Kursnotizen erweitert, inklusive Repository-Erstellen-Anleitung.
 
 **Agenten, Prompts und Kontext-Regeln:**
@@ -111,11 +121,11 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ### Kurs-, Modul- und Uebungs-Updates
 
-- Modul- und Kursstruktur auf `00-modulziele.md` vereinheitlicht (inkl. Umstellung in `course/kursmodule/` und Folgepfaden).
-- GitHub-Inhalte fuer Kursmodul 01 ausgebaut und sauber zwischen `course/kursmodule/` (kursbezogen) und `course/course-library/` (allgemein) getrennt.
+- Modul- und Kursstruktur auf `00-modulziele.md` vereinheitlicht (inkl. Umstellung in `course/01-course-modules/` und Folgepfaden).
+- GitHub-Inhalte fuer Kursmodul 01 ausgebaut und sauber zwischen `course/01-course-modules/` (kursbezogen) und `course/03-course-library/` (allgemein) getrennt.
 - Neue Inhalte zu Version Control / GitOps ergaenzt (allgemein + kursspezifische Einordnung).
 - Neue Inhalte zu VS-Code-Speicherkonflikten (`Compare`/`Overwrite`, `Revert Block`, Fallback bei wiederholtem Save-Fehler) in Library und Kursmodul ergaenzt.
-- `NEXT_STEPS.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
+- `COURSE_MILESTONES.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
 - Uebungsbereich erweitert/angepasst (inkl. Meilenstein-01-Uebungen und Standardkonformitaet ohne vorausabgehakte Checklisten).
 
 ## 09.05.2026 (Session 9b)
@@ -152,21 +162,21 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### Programmierlogik-Modul und Meilenstein-4-Folgeuebung
 
 **Neues Lernmodul in der Course Library:**
-- `course/course-library/08-programmierlogik/00-programmierlogik-modulguide.md`: Modul-Einstieg mit Must/Should/Nice-Selbstcheck.
-- `course/course-library/08-programmierlogik/01-programmierlogik-grundlagen.md`: Variablen, Funktionen, Bedingungen, Datenfluss und typische Logikfehler in KI-Code.
-- `course/course-library/08-programmierlogik/02-programmierlogik-code-lesen.md`: Schrittweise Methode zum Lesen, Rueckfragen und risikoarmen Verbessern von KI-Code.
+- `course/03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md`: Modul-Einstieg mit Must/Should/Nice-Selbstcheck.
+- `course/03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md`: Variablen, Funktionen, Bedingungen, Datenfluss und typische Logikfehler in KI-Code.
+- `course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md`: Schrittweise Methode zum Lesen, Rueckfragen und risikoarmen Verbessern von KI-Code.
 
 **Meilenstein-4-Integration:**
-- `NEXT_STEPS.md`: Modul 08 als Einstieg/Vertiefung in Meilenstein 4 aufgenommen und Umsetzungsblock "Programmierlogik im KI-Code verstehen" ergaenzt.
-- `course/uebungen/meilenstein-04-uebung-02.md`: Neue Folgeuebung "KI-Code lesen und gezielt verbessern" erstellt.
-- `course/uebungen/README_UEBUNGEN.md`: Uebersicht um Meilenstein-04-Uebung-02 erweitert.
+- `COURSE_MILESTONES.md`: Modul 08 als Einstieg/Vertiefung in Meilenstein 4 aufgenommen und Umsetzungsblock "Programmierlogik im KI-Code verstehen" ergaenzt.
+- `course/02-course-exercises/meilenstein-04-uebung-02.md`: Neue Folgeuebung "KI-Code lesen und gezielt verbessern" erstellt.
+- `course/02-course-exercises/README_UEBUNGEN.md`: Uebersicht um Meilenstein-04-Uebung-02 erweitert.
 
 **Dokumentation und Agent-Workflow:**
-- `README.md`: Projektstruktur um `course/course-library/08-programmierlogik/` und den neuen Prompt-Eintrag in `.github/prompts/` erweitert.
+- `README.md`: Projektstruktur um `course/03-course-library/08-programmierlogik/` und den neuen Prompt-Eintrag in `.github/prompts/` erweitert.
 - `.github/prompts/course-dev-meilenstein-04-folgeuebung.prompt.md`: Prompt-Handoff fuer den Exercise-Creator-Agent angelegt.
 
 **Validierung:**
-- `tools/test-uebung.ps1 -File "course/uebungen/meilenstein-04-uebung-02.md"`: 21 OK, 0 Fehler.
+- `tools/test-uebung.ps1 -File "course/02-course-exercises/meilenstein-04-uebung-02.md"`: 21 OK, 0 Fehler.
 - `tools/test-alle-uebungen.ps1`: alle 11 Uebungen bestanden, Coverage-Check konsistent.
 - `tools/test-links.ps1`: alle geprueften Links OK.
 
@@ -174,11 +184,11 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ### Onboarding-Lektionen erweitert und neu aufgeteilt
 
-- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-05-git-grundlagen/lektion-inhalte.md`: Git-/GitHub-Abläufe deutlich vertieft (PR, Reviewer, Fork, Clone, Fetch, Remotes, Commit History, Praxisbeispiel).
-- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-06-erste-uebungen-im-browser/lektion-inhalte.md` und `aufgaben.md`: Markdown-Grundlagen und Browser-Übungen erweitert.
-- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-08-vs-code-installieren/lektion-inhalte.md` und `aufgaben.md`: VS-Code-Installation, Extensions, GitHub Copilot und Copilot Chat ergänzt; überflüssige Zusatzseite entfernt.
-- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-15-uebungen-im-gesamt-setting/lektion-inhalte.md`: inhaltlich zu „Übungen im Gesamt-Setting“ umgestellt.
-- `course/kursmodule/01-Onboarding-in-den-Kurs/lektion-16-start-in-den-gesamtkurs/lektion-inhalte.md`: neue Abschlusslektion für den Übergang in den Gesamtkurs angelegt.
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-05-git-grundlagen/lektion-inhalte.md`: Git-/GitHub-Abläufe deutlich vertieft (PR, Reviewer, Fork, Clone, Fetch, Remotes, Commit History, Praxisbeispiel).
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-06-erste-uebungen-im-browser/lektion-inhalte.md` und `aufgaben.md`: Markdown-Grundlagen und Browser-Übungen erweitert.
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-08-vs-code-installieren/lektion-inhalte.md` und `aufgaben.md`: VS-Code-Installation, Extensions, GitHub Copilot und Copilot Chat ergänzt; überflüssige Zusatzseite entfernt.
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-15-uebungen-im-gesamt-setting/lektion-inhalte.md`: inhaltlich zu „Übungen im Gesamt-Setting“ umgestellt.
+- `course/01-course-modules/01-Onboarding-in-den-Kurs/lektion-16-start-in-den-gesamtkurs/lektion-inhalte.md`: neue Abschlusslektion für den Übergang in den Gesamtkurs angelegt.
 - `apps/onboarding/src/app/data/onboarding-steps.data.ts`: statische Step-Liste auf 16 Schritte erweitert.
 - `README.md`: Projektstruktur im Root-README um die Onboarding-Lektionen 13 bis 16 ergänzt.
 
@@ -207,15 +217,15 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `.github/prompts/learners-lernjournal-eintrag.prompt.md`: Geführter Journaleintrag-Dialog
 
 **Neue Instructions-Dateien:**
-- `.github/instructions/uebungen-standard.instructions.md`: Übungs-Template + Konsistenz-Checkliste (`applyTo: course/uebungen/**`)
+- `.github/instructions/uebungen-standard.instructions.md`: Übungs-Template + Konsistenz-Checkliste (`applyTo: course/02-course-exercises/**`)
 - `.github/instructions/learners-progress.instructions.md`: Lernfortschritt-Struktur + Regeln (`applyTo: course/learners/**`)
 
 **AGENTS.md:** 376 → 174 Zeilen (Template, Lernfortschritt-Block und Konsistenz-Checkliste in Instructions ausgelagert)
 
 **Fixes:**
-- Toten Link in `course/uebungen/README_UEBUNGEN.md` behoben (`../course/course-library/` → `../modules/`)
+- Toten Link in `course/02-course-exercises/README_UEBUNGEN.md` behoben (`../course/03-course-library/` → `../modules/`)
 - `lernfortschritt_raphael.md`: fehlenden Abschnitt `## Das möchte ich noch lernen` ergänzt
-- `dashboard.instructions.md`: veraltete Pfade `apps/learners/` + `docs/uebungen/` auf `course/learners/` + `course/uebungen/` korrigiert
+- `dashboard.instructions.md`: veraltete Pfade `apps/learners/` + `docs/uebungen/` auf `course/learners/` + `course/02-course-exercises/` korrigiert
 - Personas-Redundanz in Dashboard-Agent-Dateien entfernt (kanonisch in `dashboard.instructions.md`)
 - Links in Agent-Dateien auf korrekte relative Pfade korrigiert
 - `test-links.ps1`: `$matches`-Konflikt behoben, Platzhalter-Links werden übersprungen
@@ -227,19 +237,19 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### Konsistenz-Check - Pfadkorrekturen nach Session 5
 
 **`apps/dashboard/prd_dashboard.md`:**
-- Linktexte auf neue Pfade aktualisiert: `apps/learners/` → `course/learners/`, `docs/uebungen/` → `course/uebungen/`
-- TypeScript-Interface-Kommentare korrigiert (`apps/learners/` → `course/learners/`, `docs/uebungen/` → `course/uebungen/`)
+- Linktexte auf neue Pfade aktualisiert: `apps/learners/` → `course/learners/`, `docs/uebungen/` → `course/02-course-exercises/`
+- TypeScript-Interface-Kommentare korrigiert (`apps/learners/` → `course/learners/`, `docs/uebungen/` → `course/02-course-exercises/`)
 
 **Ergebnis:** Alle 255 relativen Links grün (`tools/test-links.ps1`), 8 Übungen OK, 5 Lernfortschritt-Dateien OK
 
 
 
 - `apps/learners/` → `course/learners/` verschoben
-- `modules/` → `course/course-library/` verschoben
-- `docs/uebungen/` → `course/uebungen/` verschoben
+- `modules/` → `course/03-course-library/` verschoben
+- `docs/uebungen/` → `course/02-course-exercises/` verschoben
 - `docs/GLOSSARY.md` gelöscht (war nie gepflegt)
 - Alle relativen Links in 8 Übungsdateien angepasst (`../../modules/` → `../modules/`)
-- `NEXT_STEPS.md`, `README.md`, `AGENTS.md`, `README_UEBUNGEN.md`, `README_APPS.md` auf neue Pfade aktualisiert
+- `COURSE_MILESTONES.md`, `README.md`, `AGENTS.md`, `README_UEBUNGEN.md`, `README_APPS.md` auf neue Pfade aktualisiert
 - Alle 5 Agent-Dateien in `.github/agents/` auf neue Pfade aktualisiert
 - `tools/test-alle-uebungen.ps1` + `tools/test-uebung.ps1` auf neue Pfade angepasst
 - Alle 8 Übungen bestehen weiterhin (0 Fehler)
@@ -329,7 +339,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-### NEXT_STEPS.md - Veraltete Tasks entfernt
+### COURSE_MILESTONES.md - Veraltete Tasks entfernt
 
 - 3 Tasks unter Meilenstein 2, Übung 01 entfernt: „Unterordner `lernstand_vorname` anlegen", „Datei `meilensteine_<vorname>.md` anlegen", „Bisherige und kommende Aufgaben in der Datei pflegen"
 
@@ -386,7 +396,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Neu: `modules/04-git/02-git-branch-workflow.md`** - Vollständiger Branch-Lebenszyklus (erstellen → PR → aufräumen), Remote/lokale Branch-Löschung, `git fetch --prune`, Aufräum-Checkliste
 
-**`00-git-modulguide.md`:** Branch-Workflow-Link + Should-have ergänzt
+**`00-git-versionierung-modulguide.md`:** Branch-Workflow-Link + Should-have ergänzt
 
 ---
 
@@ -407,7 +417,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - **`course-dev-dashboard-po.agent.md`** - Dashboard-PO: leitet Anforderungen aus Übungen/Meilensteinen ab, drei Personas ([Kursentwickler], [Lernende], [KI-Agent]), pflegt PRD + MoSCoW
 - **`course-dev-dashboard-developer.agent.md`** - Senior Developer/Architect, wird vom PO aufgerufen; Angular Standalone/Strict, dreiphasiger Approach (Architektur → Interfaces → Komponenten)
 - **`course-dev-exercise-creator.agent.md`** - Übungserstellung nach AGENTS.md-Standard; prüft Modulabdeckung, generiert vollständige Übungsdatei
-- **`course-dev-repo-consistency-checker.agent.md`** - Prüft Links, Modulabdeckung, NEXT_STEPS↔Übungen-Konsistenz
+- **`course-dev-repo-consistency-checker.agent.md`** - Prüft Links, Modulabdeckung, COURSE_MILESTONES↔Übungen-Konsistenz
 - **`course-dev-curriculum.agent.md`** - Curriculum-Planung: Module, Meilensteine, Lernziele; korrigiert Inkonsistenzfunde
 - **`.github/prompts/learners-dashboard-feedback.prompt.md`** - Strukturiertes Feedback für Lernende (3 Fragen → User Stories)
 - **`.github/instructions/dashboard.instructions.md`** - `applyTo: "apps/dashboard/**"`, Stack-Vorgaben + Datenquell-Pfade als automatischer Kontext
@@ -417,7 +427,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### Modul 07-architecture-foundations - Neu
 
 **Neu: `modules/07-architecture-foundations/`**
-- `00-architecture-foundations-modulguide.md`: Modulguide mit inline Selbstcheck (Must/Should/Nice)
+- `00-architecture-foundations-projektstruktur-modulguide.md`: Modulguide mit inline Selbstcheck (Must/Should/Nice)
 - `01-architecture-foundations-grundlagen.md`: Konzepte (Was ist Architektur, Schichten, Verantwortlichkeiten)
 - `02-architecture-foundations-praxis.md`: Praxisbeispiele aus dem Dashboard-Kontext
 
@@ -427,7 +437,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Neu: `modules/02-vscode/02-vscode-copilot.md`** - Copilot-Grundlagen, Slash-Commands, Chat vs. Inline-Completion
 
-**`modules/02-vscode/00-vscode-modulguide.md`:** `02-vscode-copilot.md` in Inhaltsliste und Selbstcheck ergänzt
+**`modules/02-vscode/00-vscode-arbeitsumgebung-modulguide.md`:** `02-vscode-copilot.md` in Inhaltsliste und Selbstcheck ergänzt
 
 ---
 
@@ -443,7 +453,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
-### NEXT_STEPS.md - Meilenstein 4
+### COURSE_MILESTONES.md - Meilenstein 4
 
 - Meilenstein 4 (Architektur-Grundlagen) mit Modul-Einstiegen, Lernzielen (Must/Should/Nice) und Übungslinks ergänzt
 - `modules/04-git/01-git-grundlagen.md` umbenannt (war `02-git-grundlagen.md`), Verweise aktualisiert

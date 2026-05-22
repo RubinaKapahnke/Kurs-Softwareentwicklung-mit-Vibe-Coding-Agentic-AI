@@ -9,7 +9,7 @@ agent: "ask"
   Dies ist eine Prompt-Datei (.prompt.md) fuer VS Code Copilot.
   Sie liegt in .github/prompts/, weil Copilot Prompt-Dateien nur an diesem Ort erkennt.
   Im Chat aufrufbar mit: /  dann "Dashboard Feedback" auswaehlen.
-  Mehr dazu: course/course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
+  Mehr dazu: course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
 -->
 
 Du hilfst einer lernenden Person dabei, strukturiertes Feedback zum **Progress-Hub** (dem Kurs-Dashboard) zu formulieren. Das Feedback soll helfen, das Dashboard besser auf die Bedürfnisse der Lernenden auszurichten.

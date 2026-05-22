@@ -1,4 +1,4 @@
-﻿---
+---
 applyTo: "apps/dashboard/**"
 ---
 
@@ -32,8 +32,8 @@ Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form
 ## Datenquellen im Repo
 
 - Lernfortschrittsdaten: `course/learners/*/lernfortschritt_*.md`
-- Meilensteine und Übungsverknüpfungen: `NEXT_STEPS.md`
-- Übungsdateien: `course/uebungen/meilenstein-*.md`
+- Meilensteine und Übungsverknüpfungen: `course/00-course-guides/COURSE_MILESTONES.md`
+- Übungsdateien: `course/02-course-exercises/meilenstein-*.md`
 - PRD (Anforderungen): `apps/dashboard/prd_dashboard.md`
 
 ## Konventionen

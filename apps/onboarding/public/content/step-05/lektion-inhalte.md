@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-05-git-grundlagen/lektion-inhalte.md -->
+<!-- Source: 05-git-grundlagen.md -->
 
 # Lektion 05: Git-Grundlagen
 
@@ -287,3 +287,14 @@ Die Commit History ist die nachvollziehbare Chronik deines Projekts: Wer hat wan
 ## Erfolgskriterium
 
 Du kannst Branch, Commit, Commit History, Pull, Push, Fetch, Clone, Fork, Remote, Pull Request, Reviewer und Merge in einfachen Worten erklären und den typischen Ablauf benennen.
+
+## Was ist zu tun
+
+1. Arbeite die Git-Grundbegriffe und den Grundworkflow (add/commit/push) durch.
+2. Führe die zentralen Befehle mindestens einmal im eigenen Repository aus.
+3. Prüfe nach jedem Schritt den Status mit git status.
+
+## Hilfreiche Links
+
+- [GitHub: Git einrichten](https://docs.github.com/de/get-started/git-basics/set-up-git)
+- [GitHub: Git-Befehle im Überblick](https://docs.github.com/de/get-started/using-git/about-git)

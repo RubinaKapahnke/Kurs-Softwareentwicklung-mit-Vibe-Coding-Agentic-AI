@@ -1,4 +1,4 @@
-﻿# Product Requirements Document (PRD): Kurs-Tool (Modul Onboarding)
+# Product Requirements Document (PRD): Kurs-Tool (Modul Onboarding)
 
 **Projekt:** KnOot Academy Kurs-Tool
 **Status:** Requirement Baseline v1
@@ -77,7 +77,7 @@ Inhalte:
 - Ich weiß es doch nicht-Fallback zur sicheren Standardführung
 
 ### Abschluss/Brücke
-- GitHub-Link zu `NEXT_STEPS.md`
+- GitHub-Link zu `COURSE_MILESTONES.md`
 - GitHub-Link zu `README_UEBUNGEN.md`
 - Alternative VS-Code-Navigation (Dateiname direkt öffnen)
 - Skip-Option mit späterem Wiedereinstieg

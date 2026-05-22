@@ -8,7 +8,7 @@ agent: "ask"
   HINWEIS FUER LERNENDE:
   Diese Prompt-Datei hilft dir dabei, deinen Lernfortschritt zu dokumentieren.
   Im Chat aufrufbar mit: / → dann "Lernjournal-Eintrag" auswaehlen.
-  Mehr dazu: course/course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
+  Mehr dazu: course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md
 -->
 
 Du hilfst einer lernenden Person dabei, einen neuen Eintrag in ihre persoenliche `lernfortschritt_<name>.md`-Datei zu schreiben.

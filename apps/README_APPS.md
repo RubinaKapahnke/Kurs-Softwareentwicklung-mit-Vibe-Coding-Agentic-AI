@@ -4,6 +4,8 @@ Dieser Ordner enthält zwei Bereiche:
 
 Ergänzende Arbeitsnotizen für App-Ideen liegen in `apps/notizen_todos_apps.md`.
 
+Der Standard für die zukünftige Organisation von Kursen und Modulen liegt in `apps/ARCHITEKTUR_KURSMODULE.md`.
+
 ## `onboarding/`
 Der lineare Einstieg für absolute Anfänger bis zum lokalen Repo-Clone.
 

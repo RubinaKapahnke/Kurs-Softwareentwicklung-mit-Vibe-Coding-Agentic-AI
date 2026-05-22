@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: lektion-04-eigenes-uebungs-repository/lektion-inhalte.md -->
+<!-- Source: 04-eigenes-uebungs-repository.md -->
 
 # Lektion 04: Eigenes Übungs-Repository anlegen
 
@@ -165,3 +165,14 @@ Auf Branch, Commit und Merge gehen wir in den nächsten Lektionen noch genauer e
 ## Erfolgskriterium
 
 Dein Repository ist auf github.com angelegt, ist privat und enthält eine README.md.
+
+## Was ist zu tun
+
+1. Lege dein persönliches Übungs-Repository nach Anleitung an.
+2. Prüfe Sichtbarkeit, Name und Basisinhalte (z. B. README).
+3. Notiere den Repository-Link für deine Kurskommunikation.
+
+## Hilfreiche Links
+
+- [Neues Repository erstellen](https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-new-repository)
+- [README-Dateien zu Repositories hinzufügen](https://docs.github.com/de/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)

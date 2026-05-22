@@ -1,12 +1,12 @@
-﻿# tools/
+# tools/
 
 Dieser Ordner enthält Skripte für den **Kursbetrieb** - sie werden von Dozenten und KI-Agenten genutzt, um Dateien automatisch auf Vollständigkeit und Konsistenz zu prüfen.
 
 **Als Lernende/r musst du hier nichts tun.** Dein Arbeitsbereich ist:
 
 - [`course/learners/<dein-name>/`](../course/learners/) → deine persönlichen Dateien
-- [`course/uebungen/`](../course/uebungen/) → zentrale Übungsaufgaben
-- [`course/course-library/`](../course/course-library/) → Lernmaterial
+- [`course/02-course-exercises/`](../course/02-course-exercises/) → zentrale Übungsaufgaben
+- [`course/03-course-library/`](../course/03-course-library/) → Lernmaterial
 
 ---
 
@@ -14,8 +14,8 @@ Dieser Ordner enthält Skripte für den **Kursbetrieb** - sie werden von Dozente
 
 | Skript | Zweck | Aufruf |
 |:---|:---|:---|
-| `test-alle-uebungen.ps1` | Prüft alle Übungsdateien in `course/uebungen/` gegen den Übungsstandard | `.\tools\test-alle-uebungen.ps1` |
-| `test-uebung.ps1` | Prüft eine einzelne Übungsdatei | `.\tools\test-uebung.ps1 -File "course/uebungen/<datei>.md"` |
+| `test-alle-uebungen.ps1` | Prüft alle Übungsdateien in `course/02-course-exercises/` gegen den Übungsstandard | `.\tools\test-alle-uebungen.ps1` |
+| `test-uebung.ps1` | Prüft eine einzelne Übungsdatei | `.\tools\test-uebung.ps1 -File "course/02-course-exercises/<datei>.md"` |
 | `test-lernfortschritt.ps1` | Prüft alle `lernfortschritt_*.md`-Dateien auf Pflichtstruktur | `.\tools\test-lernfortschritt.ps1` |
 | `test-links.ps1` | Prüft alle relativen Markdown-Links auf Existenz | `.\tools\test-links.ps1` |
 

@@ -58,6 +58,9 @@ function finalizeLessonSection(section) {
   if (section.tone) {
     next.tone = section.tone;
   }
+  if (section.blocks.length > 0) {
+    next.blocks = section.blocks;
+  }
   if (section.paragraphs.length > 0) {
     next.paragraphs = section.paragraphs;
   }
@@ -96,7 +99,7 @@ function stripTonePrefixFromHeading(headingText) {
 
 function parseSlideSections(lines) {
   const sections = [];
-  let current = { heading: undefined, tone: undefined, paragraphs: [], orderedItems: [], unorderedItems: [] };
+  let current = { heading: undefined, tone: undefined, blocks: [], paragraphs: [], orderedItems: [], unorderedItems: [] };
   let paragraphBuffer = [];
 
   const flushParagraphBuffer = () => {
@@ -105,14 +108,16 @@ function parseSlideSections(lines) {
     }
 
     // Keep multiline markdown blocks intact so tables and similar block syntax survive manifest sync.
-    current.paragraphs.push(paragraphBuffer.join('\n'));
+    const paragraph = paragraphBuffer.join('\n');
+    current.paragraphs.push(paragraph);
+    current.blocks.push({ type: 'paragraph', text: paragraph });
     paragraphBuffer = [];
   };
 
   const pushCurrent = () => {
     flushParagraphBuffer();
     const next = finalizeLessonSection(current);
-    if (!next.heading && !next.paragraphs?.length && !next.orderedItems?.length) {
+    if (!next.heading && !next.blocks?.length && !next.paragraphs?.length && !next.orderedItems?.length && !next.unorderedItems?.length) {
       return;
     }
     sections.push(next);
@@ -130,13 +135,16 @@ function parseSlideSections(lines) {
         current = {
           heading: displayHeading || headingText,
           tone: headingToTone(headingText),
+          blocks: [],
           paragraphs: [],
           orderedItems: [],
           unorderedItems: [],
         };
       } else if (heading.level === 4) {
         flushParagraphBuffer();
-        current.paragraphs.push(`${SUBHEADING_PREFIX}${sanitizeInlineMarkdown(heading.text)}`);
+        const subheading = `${SUBHEADING_PREFIX}${sanitizeInlineMarkdown(heading.text)}`;
+        current.paragraphs.push(subheading);
+        current.blocks.push({ type: 'subheading', text: sanitizeInlineMarkdown(heading.text) });
       }
       continue;
     }
@@ -150,14 +158,30 @@ function parseSlideSections(lines) {
     const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
     if (orderedMatch) {
       flushParagraphBuffer();
-      current.orderedItems.push(sanitizeInlineMarkdown(orderedMatch[1]));
+      const item = sanitizeInlineMarkdown(orderedMatch[1]);
+      current.orderedItems.push(item);
+
+      const lastBlock = current.blocks[current.blocks.length - 1];
+      if (lastBlock?.type === 'ordered-list') {
+        lastBlock.items.push(item);
+      } else {
+        current.blocks.push({ type: 'ordered-list', items: [item] });
+      }
       continue;
     }
 
     const bulletMatch = line.match(/^[-*]\s+(.+)$/);
     if (bulletMatch) {
       flushParagraphBuffer();
-      current.unorderedItems.push(sanitizeInlineMarkdown(bulletMatch[1]));
+      const item = sanitizeInlineMarkdown(bulletMatch[1]);
+      current.unorderedItems.push(item);
+
+      const lastBlock = current.blocks[current.blocks.length - 1];
+      if (lastBlock?.type === 'unordered-list') {
+        lastBlock.items.push(item);
+      } else {
+        current.blocks.push({ type: 'unordered-list', items: [item] });
+      }
       continue;
     }
 
@@ -336,7 +360,7 @@ function parseLessonFlowFromMarkdown(markdown, fallbackTitle, sourceLabel) {
     }
   }
 
-  const ignoredH2 = new Set(['ziel', 'aufgaben', 'fallback', 'erfolgskriterium']);
+  const ignoredH2 = new Set(['ziel', 'aufgaben', 'fallback', 'erfolgskriterium', 'was ist zu tun', 'hilfreiche links', 'übungen zur lektion', 'uebungen zur lektion']);
   const slides = [];
 
   for (let i = 0; i < h2Blocks.length; i++) {
@@ -372,6 +396,188 @@ function parseLessonFlowFromMarkdown(markdown, fallbackTitle, sourceLabel) {
     title: lessonTitle || fallbackTitle,
     slides,
   };
+}
+
+function findHeadingSectionLines(markdown, headings) {
+  const lines = markdown.split(/\r?\n/);
+  const normalizedTargets = headings.map((heading) => heading.trim().toLowerCase());
+
+  let startIndex = -1;
+  let startLevel = 0;
+
+  for (let index = 0; index < lines.length; index++) {
+    const heading = parseHeading(lines[index]);
+    if (!heading) {
+      continue;
+    }
+
+    const normalized = heading.text.trim().toLowerCase();
+    if (normalizedTargets.includes(normalized)) {
+      startIndex = index;
+      startLevel = heading.level;
+      break;
+    }
+  }
+
+  if (startIndex === -1) {
+    return null;
+  }
+
+  let endIndex = lines.length;
+  for (let index = startIndex + 1; index < lines.length; index++) {
+    const heading = parseHeading(lines[index]);
+    if (!heading) {
+      continue;
+    }
+
+    if (heading.level <= startLevel) {
+      endIndex = index;
+      break;
+    }
+  }
+
+  return lines.slice(startIndex + 1, endIndex);
+}
+
+function extractTasksFromWasIstZuTun(markdown) {
+  const sectionLines = findHeadingSectionLines(markdown, ['Was ist zu tun', 'Was ist zu tun?']);
+  if (!sectionLines || sectionLines.every((line) => !line.trim())) {
+    return null;
+  }
+
+  const syntheticTaskMarkdown = `## Aufgaben\n${sectionLines.join('\n')}`;
+  const extracted = extractTasksFromMarkdown(syntheticTaskMarkdown);
+  if (extracted.tasks.length === 0) {
+    return null;
+  }
+
+  return extracted;
+}
+
+function extractResourcesFromHilfreicheLinks(markdown) {
+  const sectionLines = findHeadingSectionLines(markdown, ['Hilfreiche Links']);
+  if (!sectionLines) {
+    return null;
+  }
+
+  const resources = [];
+
+  for (const rawLine of sectionLines) {
+    const line = rawLine.trim();
+    if (!line) {
+      continue;
+    }
+
+    const markdownLinkMatch = line.match(/^[-*\d.\s]*\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)\s*$/i);
+    if (markdownLinkMatch) {
+      resources.push({
+        label: sanitizeInlineMarkdown(markdownLinkMatch[1]),
+        href: markdownLinkMatch[2].trim(),
+      });
+      continue;
+    }
+
+    const plainUrlMatch = line.match(/^[-*\d.\s]*(https?:\/\/\S+)\s*$/i);
+    if (plainUrlMatch) {
+      const href = plainUrlMatch[1].trim();
+      resources.push({
+        label: href,
+        href,
+      });
+    }
+  }
+
+  return resources.length > 0 ? resources : null;
+}
+
+function extractExercisesFromUebungen(markdown) {
+  const sectionLines = findHeadingSectionLines(markdown, ['Übungen zur Lektion', 'Uebungen zur Lektion']);
+  if (!sectionLines || sectionLines.every((line) => !line.trim())) {
+    return null;
+  }
+
+  const exercises = [];
+  let current = null;
+  let mode = null;
+
+  const pushCurrent = () => {
+    if (!current) {
+      return;
+    }
+
+    if (current.title || current.goal || current.steps.length > 0 || current.checks.length > 0) {
+      exercises.push(current);
+    }
+  };
+
+  for (const rawLine of sectionLines) {
+    const heading = parseHeading(rawLine);
+    if (heading?.level === 3) {
+      pushCurrent();
+      current = {
+        title: sanitizeInlineMarkdown(heading.text),
+        goal: undefined,
+        steps: [],
+        checks: [],
+      };
+      mode = null;
+      continue;
+    }
+
+    if (!current) {
+      continue;
+    }
+
+    const line = rawLine.trim();
+    if (!line) {
+      continue;
+    }
+
+    const goalMatch = line.match(/^Ziel:\s*(.+)$/i);
+    if (goalMatch) {
+      current.goal = sanitizeInlineMarkdown(goalMatch[1]);
+      mode = null;
+      continue;
+    }
+
+    if (/^Aufgabe:\s*$/i.test(line)) {
+      mode = 'steps';
+      continue;
+    }
+
+    if (/^Mini-Check:\s*$/i.test(line)) {
+      mode = 'checks';
+      continue;
+    }
+
+    const checkboxMatch = line.match(/^[-*]\s+\[(?: |x|X)\]\s+(.+)$/);
+    if (checkboxMatch) {
+      current.checks.push(sanitizeInlineMarkdown(checkboxMatch[1]));
+      continue;
+    }
+
+    const orderedMatch = line.match(/^\d+\.\s+(.+)$/);
+    if (orderedMatch) {
+      if (mode === 'checks') {
+        current.checks.push(sanitizeInlineMarkdown(orderedMatch[1]));
+      } else {
+        current.steps.push(sanitizeInlineMarkdown(orderedMatch[1]));
+      }
+      continue;
+    }
+
+    const bulletMatch = line.match(/^[-*]\s+(.+)$/);
+    if (bulletMatch) {
+      if (mode === 'checks') {
+        current.checks.push(sanitizeInlineMarkdown(bulletMatch[1]));
+      } else {
+        current.steps.push(sanitizeInlineMarkdown(bulletMatch[1]));
+      }
+    }
+  }
+
+  pushCurrent();
+  return exercises.length > 0 ? exercises : null;
 }
 
 function extractSectionByHeading(markdown, fromHeading, sourcePath) {
@@ -445,7 +651,8 @@ async function syncEntry(entry) {
   assertInside(publicContentRoot, targetPath, 'Target path');
 
   const markdown = await fs.readFile(sourcePath, 'utf8');
-  const section = extractSection(markdown, entry, sourcePath);
+  const rawSection = extractSection(markdown, entry, sourcePath);
+  const section = `${normalizeOnboardingAssetLinks(stripAuthorHtmlComments(rawSection))}\n`;
   const selectorLabel = entry.fullFile
     ? 'Full file'
     : entry.fromHeading
@@ -502,6 +709,9 @@ async function main() {
 
   const manifestResult = await syncLerninhalteManifest();
   console.log(`${manifestResult}: public/content/step-manifest.json`);
+
+  const assetsResult = await syncOnboardingAssets();
+  console.log(`${assetsResult}: public/content/Assets`);
 }
 
 // Map: filename → section type (defines the convention)
@@ -511,7 +721,103 @@ const SECTION_TYPE_MAP = {
   'uebung.md': 'uebung',
 };
 
-const KURSMODULE_ROOT = path.resolve(appRoot, '../../course/kursmodule');
+const KURSMODULE_ROOT = path.resolve(appRoot, '../../course/01-course-modules');
+const KURSMODULE_ASSETS_ROOT = path.resolve(KURSMODULE_ROOT, 'Assets');
+const PUBLIC_CONTENT_ASSETS_ROOT = path.resolve(publicContentRoot, 'Assets');
+const LESSON_FOLDER_PATTERN = /^(?:lektion-)?(\d{2})-/;
+const FLAT_STEP_FILE_PATTERN = /^(\d{2})-(.+)\.md$/i;
+
+function normalizeOnboardingAssetLinks(markdown) {
+  // Relative markdown links are resolved against the browser URL, not the markdown file path.
+  // Normalize central module assets to a stable absolute path in the onboarding app.
+  return markdown.replace(/\((\.\.\/Assets\/[^)\s]+)\)/g, (_match, relativePath) => {
+    const assetFile = relativePath.replace(/^\.\.\/Assets\//, '');
+    return `(/content/Assets/${assetFile})`;
+  });
+}
+
+function stripAuthorHtmlComments(markdown) {
+  return markdown.replace(/<!--[\s\S]*?-->/g, '').trim();
+}
+
+async function syncOnboardingAssets() {
+  try {
+    await fs.access(KURSMODULE_ASSETS_ROOT);
+  } catch {
+    return 'Skipped (no source assets found)';
+  }
+
+  assertInside(repoRoot, KURSMODULE_ASSETS_ROOT, 'Assets source');
+  assertInside(publicContentRoot, PUBLIC_CONTENT_ASSETS_ROOT, 'Assets target');
+  await fs.mkdir(path.dirname(PUBLIC_CONTENT_ASSETS_ROOT), { recursive: true });
+  await fs.cp(KURSMODULE_ASSETS_ROOT, PUBLIC_CONTENT_ASSETS_ROOT, { recursive: true, force: true });
+  return 'Synced';
+}
+
+function getLessonFolderStepId(folderName) {
+  const match = folderName.match(LESSON_FOLDER_PATTERN);
+  return match ? Number(match[1]) : null;
+}
+
+function isLessonFolderName(folderName) {
+  return getLessonFolderStepId(folderName) !== null;
+}
+
+function getFlatStepFileInfo(fileName) {
+  const match = fileName.match(FLAT_STEP_FILE_PATTERN);
+  if (!match) return null;
+
+  const stepId = Number(match[1]);
+  const slug = match[2].toLowerCase();
+  if (slug === 'aufgaben') {
+    return { stepId, sectionType: 'tasks', outputFilename: 'aufgaben.md' };
+  }
+  if (slug === 'uebung') {
+    return { stepId, sectionType: 'uebung', outputFilename: 'uebung.md' };
+  }
+
+  return { stepId, sectionType: 'lesson', outputFilename: 'lektion-inhalte.md' };
+}
+
+function isFlatLessonContent(markdown, stepId) {
+  const h1 = markdown.split(/\r?\n/).find((line) => /^\s*#\s+/.test(line));
+  if (!h1) return false;
+
+  const match = h1.match(/^\s*#\s+Lektion\s+(\d+)\s*:/i);
+  return match ? Number(match[1]) === stepId : false;
+}
+
+async function collectFlatStepEntries(rootPath, dirEntries) {
+  const groupedFiles = new Map();
+
+  for (const entry of dirEntries) {
+    if (!entry.isFile()) continue;
+
+    const info = getFlatStepFileInfo(entry.name);
+    if (!info) continue;
+
+    const srcPath = path.join(rootPath, entry.name);
+    if (info.sectionType === 'lesson') {
+      const content = await fs.readFile(srcPath, 'utf8');
+      if (!isFlatLessonContent(content, info.stepId)) continue;
+    }
+
+    const group = groupedFiles.get(info.stepId) ?? [];
+    group.push({
+      sectionType: info.sectionType,
+      outputFilename: info.outputFilename,
+      sourceLabel: entry.name,
+      srcPath,
+    });
+    groupedFiles.set(info.stepId, group);
+  }
+
+  return Array.from(groupedFiles.entries()).map(([stepId, files]) => ({
+    stepId,
+    sourceLabel: files.find((file) => file.sectionType === 'lesson')?.sourceLabel ?? files[0].sourceLabel,
+    files,
+  }));
+}
 
 async function resolveLerninhalteRoot() {
   const entries = await fs.readdir(KURSMODULE_ROOT, { withFileTypes: true });
@@ -522,7 +828,14 @@ async function resolveLerninhalteRoot() {
   for (const candidate of onboardingCandidates) {
     const moduleRootPath = path.join(KURSMODULE_ROOT, candidate.name);
     const directLessonFolders = await fs.readdir(moduleRootPath, { withFileTypes: true })
-      .then((moduleEntries) => moduleEntries.some((entry) => entry.isDirectory() && /^lektion-\d{2}-/.test(entry.name)));
+      .then(async (moduleEntries) => {
+        if (moduleEntries.some((entry) => entry.isDirectory() && isLessonFolderName(entry.name))) {
+          return true;
+        }
+
+        const flatEntries = await collectFlatStepEntries(moduleRootPath, moduleEntries);
+        return flatEntries.length > 0;
+      });
 
     if (directLessonFolders) {
       return moduleRootPath;
@@ -540,43 +853,83 @@ async function resolveLerninhalteRoot() {
   }
 
   throw new Error(
-    `Onboarding module directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/ with direct lektion-XX-* folders (or legacy lerninhalte/).`
+    `Onboarding module directory not found under ${KURSMODULE_ROOT}. Expected a folder like 01-*/ with direct XX-* or lektion-XX-* folders (or legacy lerninhalte/).`
   );
 }
 
 async function syncLerninhalteManifest() {
   const lerninhalteRoot = await resolveLerninhalteRoot();
   const dirEntries = await fs.readdir(lerninhalteRoot, { withFileTypes: true });
-  const lektionFolders = dirEntries
-    .filter(e => e.isDirectory() && /^lektion-\d{2}-/.test(e.name))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  const folderStepEntries = dirEntries
+    .filter(e => e.isDirectory() && isLessonFolderName(e.name))
+    .map((folder) => {
+      const stepId = getLessonFolderStepId(folder.name);
+      const folderPath = path.join(lerninhalteRoot, folder.name);
+      return {
+        stepId,
+        sourceLabel: folder.name,
+        folderPath,
+        files: null,
+      };
+    });
+
+  const flatStepEntries = await collectFlatStepEntries(lerninhalteRoot, dirEntries);
+  const stepEntries = [...folderStepEntries, ...flatStepEntries]
+    .filter((entry) => entry.stepId !== null)
+    .sort((a, b) => a.stepId - b.stepId || a.sourceLabel.localeCompare(b.sourceLabel));
 
   const manifest = {};
+  const seenStepIds = new Map();
 
-  for (const folder of lektionFolders) {
-    const stepId = parseInt(folder.name.match(/^lektion-(\d{2})-/)[1], 10);
-    const folderPath = path.join(lerninhalteRoot, folder.name);
+  for (const stepEntry of stepEntries) {
+    const stepId = stepEntry.stepId;
+
+    const previousFolder = seenStepIds.get(stepId);
+    if (previousFolder) {
+      throw new Error(
+        `Duplicate onboarding lesson step ${stepId}: ${previousFolder} and ${stepEntry.sourceLabel}`
+      );
+    }
+    seenStepIds.set(stepId, stepEntry.sourceLabel);
+
     const stepSlug = `step-${String(stepId).padStart(2, '0')}`;
     const targetDir = path.join(publicContentRoot, stepSlug);
 
-    const filesInFolder = await fs.readdir(folderPath);
+    const filesToSync = stepEntry.files ?? await Promise.all(
+      Object.entries(SECTION_TYPE_MAP).map(async ([filename, sectionType]) => {
+        const srcPath = path.join(stepEntry.folderPath, filename);
+        try {
+          await fs.access(srcPath);
+          return {
+            sectionType,
+            outputFilename: filename,
+            sourceLabel: `${stepEntry.sourceLabel}/${filename}`,
+            srcPath,
+          };
+        } catch {
+          return null;
+        }
+      })
+    ).then((files) => files.filter(Boolean));
+
     const sections = [];
     let title = null;
     let goal = null;
     let requiresLessonCompletion = false;
     let lessonFlow = null;
+    let manifestExercises = null;
     let manifestTasks = null;
     let manifestTaskNotes = null;
+    let manifestResources = null;
 
-    for (const [filename, sectionType] of Object.entries(SECTION_TYPE_MAP)) {
-      if (!filesInFolder.includes(filename)) continue;
-
-      const srcPath = path.join(folderPath, filename);
-      const dstPath = path.join(targetDir, filename);
+    for (const fileToSync of filesToSync) {
+      const { outputFilename, sectionType, sourceLabel, srcPath } = fileToSync;
+      const dstPath = path.join(targetDir, outputFilename);
       assertInside(repoRoot, srcPath, 'Lerninhalte source');
       assertInside(publicContentRoot, dstPath, 'Lerninhalte target');
 
-      const content = await fs.readFile(srcPath, 'utf8');
+      const rawContent = await fs.readFile(srcPath, 'utf8');
+      const content = normalizeOnboardingAssetLinks(stripAuthorHtmlComments(rawContent));
 
       // Extract title and goal from lesson file for manifest metadata
       if (sectionType === 'lesson') {
@@ -598,11 +951,27 @@ async function syncLerninhalteManifest() {
         const parsedLessonFlow = parseLessonFlowFromMarkdown(
           content,
           `Lektion ${stepId}`,
-          `${folder.name}/lektion-inhalte.md`
+          sourceLabel
         );
         if (parsedLessonFlow.slides.length > 0) {
           lessonFlow = parsedLessonFlow;
           requiresLessonCompletion = parsedLessonFlow.slides.some((slide) => slide.type === 'quiz');
+        }
+
+        const wasIstZuTunTasks = extractTasksFromWasIstZuTun(content);
+        if (wasIstZuTunTasks && manifestTasks === null) {
+          manifestTasks = wasIstZuTunTasks.tasks;
+          manifestTaskNotes = wasIstZuTunTasks.taskNotes;
+        }
+
+        const hilfreicheLinks = extractResourcesFromHilfreicheLinks(content);
+        if (hilfreicheLinks && manifestResources === null) {
+          manifestResources = hilfreicheLinks;
+        }
+
+        const lessonExercises = extractExercisesFromUebungen(content);
+        if (lessonExercises && manifestExercises === null) {
+          manifestExercises = lessonExercises;
         }
       }
 
@@ -617,7 +986,7 @@ async function syncLerninhalteManifest() {
 
       // Copy file to public/content/step-NN/
       await fs.mkdir(targetDir, { recursive: true });
-      const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: ${folder.name}/${filename} -->\n\n`;
+      const header = `<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->\n<!-- Source: ${sourceLabel} -->\n\n`;
       const output = header + content.trim() + '\n';
 
       let current = null;
@@ -626,7 +995,7 @@ async function syncLerninhalteManifest() {
         await fs.writeFile(dstPath, output, 'utf8');
       }
 
-      sections.push({ type: sectionType, file: `/content/${stepSlug}/${filename}` });
+      sections.push({ type: sectionType, file: `/content/${stepSlug}/${outputFilename}` });
     }
 
     if (sections.length > 0) {
@@ -634,6 +1003,12 @@ async function syncLerninhalteManifest() {
       if (manifestTasks !== null) {
         entry.tasks = manifestTasks;
         entry.taskNotes = manifestTaskNotes;
+      }
+      if (manifestExercises !== null) {
+        entry.exercises = manifestExercises;
+      }
+      if (manifestResources !== null) {
+        entry.resources = manifestResources;
       }
       manifest[stepId] = entry;
     }

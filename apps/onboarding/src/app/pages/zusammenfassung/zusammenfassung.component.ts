@@ -24,12 +24,12 @@ export class ZusammenfassungComponent {
   readonly completedCount = computed(() => this.state.getCompletedCount());
   readonly allDone = computed(() => this.completedCount() === ONBOARDING_STEP_COUNT);
   readonly firstIncompleteStepId = computed(() => this.state.getFirstIncompleteStepId());
-  readonly nextStepsUrl = 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/NEXT_STEPS.md';
-  readonly exercisesReadmeUrl = 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/uebungen/README_UEBUNGEN.md';
+  readonly nextStepsUrl = 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/00-course-guides/COURSE_MILESTONES.md';
+  readonly exercisesReadmeUrl = 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/02-course-exercises/README_UEBUNGEN.md';
   readonly vscodeCourseEntryHints = [
     'Oeffne das Kurs-Repo in VS Code.',
     'Druecke Strg+P (Windows) oder Cmd+P (Mac).',
-    'Tippe NEXT_STEPS.md und bestaetige mit Enter.'
+    'Tippe course/00-course-guides/COURSE_MILESTONES.md und bestaetige mit Enter.'
   ] as const;
 
   private getCourseId(): string {

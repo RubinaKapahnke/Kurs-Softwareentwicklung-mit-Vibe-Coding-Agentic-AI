@@ -1,5 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 
+import { OnboardingExerciseStatus } from '../models/onboarding.models';
+
 import { ONBOARDING_STEP_COUNT } from '../data/onboarding-steps.data';
 
 const DEFAULT_COURSE_ID = 'vibe-coding-agentic-ai';
@@ -9,6 +11,7 @@ const KEY_COMPLETED_SUFFIX = 'completed_steps';
 const KEY_SUBTASKS_SUFFIX = 'completed_subtasks';
 const KEY_VOUCHER_SUFFIX = 'voucher';
 const KEY_QUIZZES_SUFFIX = 'quizzes';
+const KEY_EXERCISES_SUFFIX = 'exercises';
 const ACCOUNT_SETUP_STEP_ID = 2;
 
 /** MVP: Ein einziger gültiger Code. Wird später durch echte API-Validierung ersetzt. */
@@ -33,6 +36,13 @@ export interface QuizState {
   passed: boolean;
 }
 
+interface ExerciseState {
+  checkedStepIndexes: number[];
+  status: OnboardingExerciseStatus;
+}
+
+type ExerciseStateMap = Record<number, Record<number, ExerciseState>>;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -43,6 +53,7 @@ export class OnboardingStateService {
   private readonly _step2Experience = signal<Step2ExperienceChoice>(this.loadExp());
   private readonly _githubVisibilityConfirmed = signal(this.loadVisibility());
   private readonly _quizzes = signal<Record<string, QuizState>>(this.loadQuizzes());
+  private readonly _exercises = signal<ExerciseStateMap>(this.loadExercises());
 
   // Voucher-Gate (Step 1)
   private readonly _voucherValidated = signal<boolean>(this.loadVoucherValidated());
@@ -255,6 +266,71 @@ export class OnboardingStateService {
     this.persistQuizzes();
   }
 
+  isExerciseStepChecked(stepId: number, exerciseIndex: number, stepIndex: number): boolean {
+    const exercise = this._exercises()[stepId]?.[exerciseIndex];
+    if (!exercise) {
+      return false;
+    }
+    return exercise.checkedStepIndexes.includes(stepIndex);
+  }
+
+  setExerciseStepChecked(stepId: number, exerciseIndex: number, stepIndex: number, checked: boolean): void {
+    if (stepId < 1 || stepId > ONBOARDING_STEP_COUNT || exerciseIndex < 0 || stepIndex < 0) {
+      return;
+    }
+
+    this._exercises.update((current) => {
+      const next: ExerciseStateMap = {
+        ...current,
+        [stepId]: { ...(current[stepId] ?? {}) },
+      };
+
+      const existing = next[stepId][exerciseIndex] ?? { checkedStepIndexes: [], status: null };
+      const checkedSet = new Set(existing.checkedStepIndexes);
+      if (checked) {
+        checkedSet.add(stepIndex);
+      } else {
+        checkedSet.delete(stepIndex);
+      }
+
+      next[stepId][exerciseIndex] = {
+        ...existing,
+        checkedStepIndexes: [...checkedSet].sort((a, b) => a - b),
+      };
+
+      return next;
+    });
+
+    this.persistExercises();
+  }
+
+  getExerciseStatus(stepId: number, exerciseIndex: number): OnboardingExerciseStatus {
+    return this._exercises()[stepId]?.[exerciseIndex]?.status ?? null;
+  }
+
+  setExerciseStatus(stepId: number, exerciseIndex: number, status: OnboardingExerciseStatus): void {
+    if (stepId < 1 || stepId > ONBOARDING_STEP_COUNT || exerciseIndex < 0) {
+      return;
+    }
+
+    this._exercises.update((current) => {
+      const next: ExerciseStateMap = {
+        ...current,
+        [stepId]: { ...(current[stepId] ?? {}) },
+      };
+
+      const existing = next[stepId][exerciseIndex] ?? { checkedStepIndexes: [], status: null };
+      next[stepId][exerciseIndex] = {
+        ...existing,
+        status,
+      };
+
+      return next;
+    });
+
+    this.persistExercises();
+  }
+
   private loadCompletedSteps(): Set<number> {
     const stored = localStorage.getItem(this.storageKey(KEY_COMPLETED_SUFFIX));
     if (!stored) return new Set();
@@ -318,6 +394,7 @@ export class OnboardingStateService {
     this._githubVisibilityConfirmed.set(this.loadVisibility());
     this._voucherValidated.set(this.loadVoucherValidated());
     this._quizzes.set(this.loadQuizzes());
+    this._exercises.set(this.loadExercises());
     this._participationStatus.set(null);
     this._hasVoucherAnswer.set(null);
   }
@@ -372,5 +449,48 @@ export class OnboardingStateService {
     const value = JSON.stringify(this._quizzes());
     console.log(`[Service] persistQuizzes() to ${key}:`, value);
     localStorage.setItem(key, value);
+  }
+
+  private loadExercises(): ExerciseStateMap {
+    const stored = localStorage.getItem(this.storageKey(KEY_EXERCISES_SUFFIX));
+    if (!stored) {
+      return {};
+    }
+
+    try {
+      const parsed = JSON.parse(stored) as Record<string, Record<string, ExerciseState>>;
+      return Object.entries(parsed).reduce<ExerciseStateMap>((result, [stepIdKey, stepState]) => {
+        const stepId = Number(stepIdKey);
+        if (!Number.isInteger(stepId) || stepId < 1 || stepId > ONBOARDING_STEP_COUNT || typeof stepState !== 'object' || !stepState) {
+          return result;
+        }
+
+        const exercises = Object.entries(stepState).reduce<Record<number, ExerciseState>>((exerciseResult, [exerciseIndexKey, exercise]) => {
+          const exerciseIndex = Number(exerciseIndexKey);
+          if (!Number.isInteger(exerciseIndex) || exerciseIndex < 0 || !exercise || !Array.isArray(exercise.checkedStepIndexes)) {
+            return exerciseResult;
+          }
+
+          const status: OnboardingExerciseStatus = exercise.status === 'completed' || exercise.status === 'failed'
+            ? exercise.status
+            : null;
+
+          exerciseResult[exerciseIndex] = {
+            checkedStepIndexes: exercise.checkedStepIndexes.filter((index) => Number.isInteger(index) && index >= 0),
+            status,
+          };
+          return exerciseResult;
+        }, {});
+
+        result[stepId] = exercises;
+        return result;
+      }, {});
+    } catch {
+      return {};
+    }
+  }
+
+  private persistExercises(): void {
+    localStorage.setItem(this.storageKey(KEY_EXERCISES_SUFFIX), JSON.stringify(this._exercises()));
   }
 }
