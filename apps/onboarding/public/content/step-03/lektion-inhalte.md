@@ -1,152 +1,204 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
-<!-- Source: 03-github-repositories-verstehen-browser.md -->
+<!-- Source: 03-markdown-grundlagen.md -->
 
-# Lektion 03: GitHub-Repositories und Git verstehen
+# Lektion 03: Markdown verstehen und README schreiben
 
 ## Ziel
 
-Du verstehst, wie wir GitHub im Kurs nutzen, was Repositories sind und warum Git die Basis für Versionskontrolle ist.
+Du verstehst, wofür Markdown genutzt wird, kannst einfache Markdown-Dateien schreiben und erstellst eine sinnvolle README für dein Übungs-Repository.
 
-## GitHub im Kurskontext
+## Kapitel 1: Was ist Markdown?
 
-GitHub ist in diesem Kurs die gemeinsame Plattform für Zusammenarbeit an Dateien, nachvollziehbare Änderungen und den Austausch über Aufgaben und Feedback.
+Markdown ist eine einfache Schreibweise, mit der du Texte strukturieren und formatieren kannst.
 
-### GitHub und Git: kurz unterschieden
+Du schreibst dabei normalen Text mit wenigen Sonderzeichen. Daraus entstehen Überschriften, Listen, Links, Bilder, Tabellen oder Code-Blöcke.
 
-- Git ist das lokale Versionskontrollsystem.
-- GitHub ist die Online-Plattform für Repositories und Teamarbeit.
+Markdown ist besonders praktisch, weil der Text auch ohne spezielle Software lesbar bleibt. Gleichzeitig kann GitHub daraus eine gut formatierte Ansicht erzeugen.
 
-## Was ist ein Version Control System?
+Beispiel:
 
-Ein Version Control System ist ein Werkzeug, das Änderungen an Dateien speichert und nachvollziehbar macht.
+```markdown
+# Meine Überschrift
 
-### Einfach erklärt
+Das ist ein kurzer Text.
 
-Stell dir vor, du arbeitest an einem Dokument und willst später sehen, was sich geändert hat. Ein Version Control System merkt sich diese Zwischenstände für dich. So kannst du alte Stände wiederfinden, Fehler leichter zurücknehmen und Schritt für Schritt arbeiten.
+- erster Punkt
+- zweiter Punkt
+- dritter Punkt
+```
 
-### Wofuer ist ein Version Control System gedacht?
+In GitHub wird daraus eine formatierte Überschrift, ein Absatz und eine Liste.
 
-1. Du speicherst Änderungen nicht nur im aktuellen Stand, sondern mit Verlauf.
-2. Du kannst frühere Versionen wieder ansehen oder wiederherstellen.
-3. Du erkennst, wer was wann geändert hat.
-4. Du arbeitest sicher an neuen Ideen, ohne den Hauptstand zu verlieren.
-5. Im Team wird Zusammenarbeit kontrollierbar und nachvollziehbar.
+### Warum nutzen wir Markdown?
 
-### Warum ist das im Kurs wichtig?
+Markdown ist einfach, schnell und sehr verbreitet. Du brauchst kein Layoutprogramm und keine komplizierte Oberfläche. Ein normaler Texteditor reicht aus.
 
-- Du kannst kleine Lernschritte sauber festhalten.
-- Du kannst Fehler rückgängig machen, ohne alles neu zu beginnen.
-- Dozentinnen und Dozenten können deinen Fortschritt besser nachvollziehen.
-- Git ist das Version Control System, mit dem wir hier praktisch arbeiten.
+Im Kurs nutzen wir Markdown, weil du damit:
 
-### So nutzen wir GitHub im Kurs
+- Notizen strukturieren kannst,
+- Aufgaben dokumentieren kannst,
+- README-Dateien schreiben kannst,
+- Prompts und Kontext für KI-Tools vorbereiten kannst,
+- Projektinformationen sauber festhalten kannst.
 
-1. Das Kurs-Repository enthält zentrale Materialien und Übungen.
-2. Teilnehmende arbeiten zusätzlich im eigenen Übungs-Repository.
-3. Dozentinnen und Dozenten geben Feedback über GitHub.
+Kurz gesagt: Markdown hilft dir, Gedanken, Wissen und Projektinformationen klar aufzuschreiben.
 
-## Repositories verstehen
+## Kapitel 2: Typische Einsatzgebiete von Markdown
 
-Ein Repository ist der gemeinsame Ort für Dateien und die komplette Versionsgeschichte. Im Kurs arbeiten wir sowohl mit dem Kurs-Repository als auch mit deinem eigenen Übungs-Repository.
+Markdown wird in vielen Bereichen der Softwareentwicklung und Dokumentation eingesetzt.
 
-### Repositories im Kurs
+### README-Dateien
 
-- Kurs-Repository: zentrale Materialien, Module und Übungen
-- Eigenes Übungs-Repository: persönliche Lösungen
+Eine README ist oft die Startseite eines Repositorys. Sie erklärt, worum es im Projekt geht, wie man es nutzt und welche Informationen wichtig sind.
 
-## README und Markdown verstehen
+Typische Inhalte einer README:
 
-### Was ist eine README?
+- Projektname
+- kurze Beschreibung
+- Installation oder Nutzung
+- wichtige Befehle
+- Projektstruktur
+- Lernstand oder nächste Schritte
+- Links und Quellen
 
-Eine README ist die Startdatei eines Repositories. Sie erklärt kurz, worum es in diesem Repository geht, was man dort findet und wie man anfangen kann.
+### Dokumentation
 
-### Wofuer ist eine README gedacht?
+Markdown eignet sich gut für technische Dokumentation. Du kannst damit Anleitungen, Erklärungen, Checklisten und Notizen erstellen.
 
-1. Sie begrüßt neue Menschen, die das Repository zum ersten Mal sehen.
-2. Sie erklärt den Inhalt in einfacher Sprache.
-3. Sie zeigt den naechsten sinnvollen Schritt.
-4. Sie macht das Repository nicht leer oder unklar.
+Beispiele:
 
-### Was sind Markdown-Dateien?
+- Installationsanleitung
+- Schritt-für-Schritt-Dokumentation
+- Glossar
+- Projektübersicht
+- Fehler- und Lösungsdokumentation
 
-Markdown-Dateien sind Textdateien mit der Endung `.md`. Darin kannst du Überschriften, Listen, Hervorhebungen und Links schreiben, ohne eine komplizierte Formatierung zu brauchen.
+### GitHub Issues und Pull Requests
 
-### Warum nutzen wir Markdown im Kurs?
+Auch in GitHub selbst wird Markdown genutzt. Du kannst damit Issues, Pull Requests und Kommentare besser strukturieren.
 
-1. Markdown ist leicht zu lesen und leicht zu schreiben.
-2. GitHub zeigt Markdown automatisch schön formatiert an.
-3. Wir können damit Anleitungen, Erklärungen und Aufgaben klar strukturieren.
+Beispiele:
 
-### Merksatz
+- Fehlerbeschreibung
+- Aufgabenliste
+- Lösungsvorschlag
+- Review-Kommentar
+- offene Fragen
 
-- README = Einstieg und Orientierung im Repository.
-- Markdown = die einfache Schreibweise für solche Dokumente.
+### Lernnotizen
 
-## Wichtige Begriffe vor dem Start
+Markdown eignet sich sehr gut für eigene Lernnotizen, weil du Inhalte schnell ordnen kannst.
 
-Bevor du mit Repositories beginnst, solltest du diese Begriffe kennen:
+Beispiele:
 
-| Begriff | Definition |
-|:---|:---|
-| Branch | Eine Parallelversion deines Codes, die im Repository enthalten ist, aber keine Auswirkungen auf den primären oder Main-Branch hat. |
-| Klon | So lädst du eine vollständige Kopie der Daten eines Repositories aus GitHub.com herunter, einschließlich aller Versionen der einzelnen Dateien und Ordner. |
-| Fork | Ein neues Repository, das denselben Code und dieselben Sichtbarkeitseinstellungen verwendet wie das ursprüngliche „Upstream“-Repository. |
-| Merge | Änderungen von einem Branch auf einen anderen übertragen. |
-| Pull Request | Eine Anforderung, die Änderungen eines Branches in einen anderen Branch zusammenzuführen. |
-| Remote-Repository | Ein Repository, das auf GitHub gespeichert ist, nicht auf deinem Computer. |
-| Upstream | Das ursprüngliche Repository oder der ursprüngliche Branch, von dem geklont oder geforkt wurde. |
+- Was habe ich gelernt?
+- Welche Begriffe sind neu?
+- Welche Fehler sind aufgetreten?
+- Welche Lösung hat funktioniert?
+- Welche Fragen sind noch offen?
 
-### Merksatz
+### KI und Context Engineering
 
-- Lokal arbeitest du auf deinem Rechner.
-- Remote liegt das Repository auf GitHub.
-- Branches helfen dir, Änderungen sicher vorzubereiten.
-- Pull Requests machen Änderungen prüfbar und besprechbar.
+Im Kurs spielt Markdown auch eine wichtige Rolle für KI-gestützte Entwicklung.
 
-### Git im Kurskontext
+KI-Tools arbeiten besser, wenn Informationen klar, strukturiert und nachvollziehbar bereitgestellt werden. Markdown hilft dir dabei, Kontext für KI verständlich aufzubereiten.
 
-Dieses Dokument verbindet die allgemeinen Grundlagen aus der Course-Library mit dem praktischen Kursablauf.
+Beispiele:
 
-Allgemeine Quelle:
+- Projektbeschreibung
+- Anforderungen
+- Regeln für den Code
+- Prompts
+- Aufgabenlisten
+- Fehlermeldungen
+- bisherige Lösungsversuche
 
-- [Version Control und GitOps: Grundlagen](../../../03-course-library/04-git/04-version-control-und-gitops-grundlagen.md)
+Wenn du deine Informationen sauber in Markdown dokumentierst, kann eine KI besser verstehen, was du willst, was bereits existiert und welche Regeln sie beachten soll.
 
-## Was wir im Modul 01 konkret brauchen
+## Kapitel 3: Die wichtigsten Markdown-Grundlagen
 
-Im ersten Kursmodul ist Version Control kein Nebenthema, sondern Sicherheitsnetz für deinen Lernfortschritt.
+### Überschriften
 
-Du nutzt Git/GitHub hier vor allem für:
+Überschriften werden mit `#` geschrieben.
 
-- nachvollziehbare Lernschritte (kleine Commits statt großer Sprünge)
-- sichere Zusammenarbeit über Branches und Pull Requests
-- klare Dokumentation, die andere Menschen und KI lesen können
+```markdown
+# Überschrift 1
+## Überschrift 2
+### Überschrift 3
+```
 
-## Praktische Leitplanken für Einsteiger:innen
+Nutze Überschriften, um deinen Text klar zu gliedern.
 
-1. Arbeite in kleinen, klar benannten Schritten.
-2. Prüfe vor jedem Push kurz mit `git status`.
-3. Nutze Commit-Nachrichten, die den Zweck beschreiben.
-4. Halte `main` stabil und arbeite für Aufgaben in einem Branch.
+### Absätze
 
-## Was von GitOps hier schon mitgedacht wird
+Ein normaler Absatz ist einfacher Text.
 
-GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du bereits Grundprinzipien, die später wichtig werden:
+```markdown
+Das ist ein Absatz.
 
-- Git als verbindliche Quelle für den gewünschten Stand
-- Änderungen über Review-Prozess statt Direkt-Eingriffe
-- reproduzierbare Änderungen durch klare Historie
+Das ist ein neuer Absatz.
+```
 
-## Naechster Schritt
+Zwischen zwei Absätzen steht eine Leerzeile.
 
-Im naechsten Schritt legst du dein eigenes Repository an und uebst die ersten Aktionen auf GitHub.
+### Listen
 
-## Was ist zu tun
+Ungeordnete Listen schreibst du mit `-`.
 
-1. Öffne ein Repository in GitHub und erkunde die wichtigsten Bereiche (Code, Issues, Pull Requests).
-2. Prüfe, wie sich Dateien, Commits und Branches im Browser darstellen.
-3. Vergleiche eigenes Übungs-Repository und Kurs-Repository in ihrer Rolle.
+```markdown
+- GitHub
+- Markdown
+- README
+```
 
-## Hilfreiche Links
+Geordnete Listen schreibst du mit Zahlen.
 
-- [Repositories auf GitHub erstellen](https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-new-repository)
-- [GitHub Glossar](https://docs.github.com/de/get-started/learning-about-github/github-glossary)
+```markdown
+1. Repository öffnen
+2. README bearbeiten
+3. Änderungen speichern
+```
+
+### Hervorhebungen
+
+Du kannst Wörter fett oder kursiv schreiben.
+
+```markdown
+**wichtiger Text**
+
+*kursiver Text*
+```
+
+### Links
+
+Links bestehen aus einem Linktext und der URL.
+
+```markdown
+[GitHub Docs](https://docs.github.com/de)
+```
+
+### Bilder
+
+Bilder funktionieren ähnlich wie Links, aber mit einem Ausrufezeichen am Anfang.
+
+```markdown
+```
+
+Die Beschreibung ist wichtig, damit andere verstehen, was auf dem Bild zu sehen ist.
+
+### Code im Text
+
+Kurze Code-Begriffe schreibst du mit Backticks.
+
+```markdown
+Die Datei heißt `README.md`.
+```
+
+### Code-Blöcke
+
+Längere Code-Beispiele schreibst du mit drei Backticks.
+
+````markdown
+```html
+<h1>Hallo Welt</h1>
+```

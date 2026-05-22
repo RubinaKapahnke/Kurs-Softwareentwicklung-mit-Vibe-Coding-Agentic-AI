@@ -179,7 +179,6 @@ Links bestehen aus einem Linktext und der URL.
 Bilder funktionieren ähnlich wie Links, aber mit einem Ausrufezeichen am Anfang.
 
 ```markdown
-![Beschreibung des Bildes](../Assets/beispielbild.png)
 ```
 
 Die Beschreibung ist wichtig, damit andere verstehen, was auf dem Bild zu sehen ist.

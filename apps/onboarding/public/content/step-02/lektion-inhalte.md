@@ -353,7 +353,6 @@ Ziel: Offene Punkte früh sichtbar machen, statt sie mitzuschleppen.
 Aufgabe:
 
 
-
 ![Übung 3: Rückfragen-Datei anlegen und ausfüllen](/content/Assets/m01-l02-uebung-03-rueckfragen-datei.png)
 
 1. Lege eine Datei `rueckfragen.md` in deinem Übungs-Repository an.
