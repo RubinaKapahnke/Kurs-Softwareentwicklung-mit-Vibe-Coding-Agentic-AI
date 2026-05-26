@@ -50,12 +50,13 @@ Für Modul 01 verwenden wir die Benennung einheitlich: Die redaktionelle Quelle 
 
 ## Lerninhalte Nach Lektionen (Modul 01)
 
-Für das Modul [01-Onboarding-in-den-Kurs](./01-Onboarding-in-den-Kurs/00-modulziele.md) gibt es eine neue, generische Quellenstruktur für Lerninhalte nach Lektionen:
+Für das Modul [01-Onboarding-in-den-Kurs](./01-Onboarding-in-den-Kurs/00-modulziele.md) liegen die teilnehmenden sichtbaren Lektionen als flache, nummerierte Dateien direkt im Modulordner.
 
-- [README_LERNINHALTE.md](./01-Onboarding-in-den-Kurs/README_LERNINHALTE.md)
-- [anleitung-lerninhalte-zu-steps.md](./01-Onboarding-in-den-Kurs/anleitung-lerninhalte-zu-steps.md)
+Interne Hinweise zur Umrechnung in App-Schritte liegen in der Kursentwicklung:
 
-Dort liegen die Lektionen als flache, nummerierte Dateien direkt im Modulordner. Die Inhalte enthalten markerbasierte Abschnitte, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
+- [README_LERNINHALTE.md](../99-course-development/README_LERNINHALTE.md)
+- [anleitung-lerninhalte-zu-steps.md](../99-course-development/anleitung-lerninhalte-zu-steps.md)
+
+Die Inhalte enthalten markerbasierte Abschnitte, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
 
 Aktueller Stand: Die Onboarding-App nutzt einen manifestbasierten Sync aus diesen Lektionsdateien. Dabei werden insbesondere `XX-thema.md` und optional `XX-aufgaben.md` verarbeitet.
-

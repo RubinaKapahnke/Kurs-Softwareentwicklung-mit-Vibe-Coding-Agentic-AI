@@ -1,4 +1,4 @@
-import { GitActivity, LearnerProgress } from '../../models';
+﻿import { GitActivity, LearnerProgress } from '../../models';
 
 export interface AiLearnerScenario {
   scenarioId: string;
@@ -40,7 +40,7 @@ const baseMilestones = [
 export const AI_LEARNER_SCENARIOS: AiLearnerScenario[] = [
   {
     scenarioId: 'ai-s1',
-    title: 'Stabiler Fortschritt mit Rueckfrage',
+    title: 'Stabiler Fortschritt mit Rückfrage',
     description: 'AI-Learner mit regelmaessigem Fortschritt und einer offenen Inhaltsfrage.',
     learner: {
       learnerId: 'ai-learner',
@@ -50,7 +50,7 @@ export const AI_LEARNER_SCENARIOS: AiLearnerScenario[] = [
       journalEntries: [
         {
           dateIso: '2026-04-29',
-          did: 'Uebung m2-u1 abgeschlossen',
+          did: 'Übung m2-u1 abgeschlossen',
           wentWell: 'Branch und PR sauber gepflegt',
           blockedBy: 'Unsicherheit bei Review-Kommentaren',
           nextStep: 'm2-u2 mit Fokus auf Terminal-Routine abschliessen',
@@ -58,7 +58,7 @@ export const AI_LEARNER_SCENARIOS: AiLearnerScenario[] = [
       ],
       nextSmallStep: 'm2-u2 committen und PR aktualisieren',
       groupQuestions: ['Wann nutze ich changes requested statt comment?'],
-      individualLearningWishes: ['Mehr Architekturbeispiele fuer Angular', 'Pair-Review mit gleichem Lernstand'],
+      individualLearningWishes: ['Mehr Architekturbeispiele für Angular', 'Pair-Review mit gleichem Lernstand'],
     },
     gitActivity: {
       learnerId: 'ai-learner',
@@ -116,12 +116,12 @@ export const AI_LEARNER_SCENARIOS: AiLearnerScenario[] = [
           did: 'Nur kleine Korrekturen',
           wentWell: 'Fehler reproduzierbar gemacht',
           blockedBy: 'Unklarer Review-Fluss auf GitHub',
-          nextStep: 'Gezielte Review-Uebung mit Tandem',
+          nextStep: 'Gezielte Review-Übung mit Tandem',
         },
       ],
       nextSmallStep: 'Review-Rollen im Team abstimmen',
       groupQuestions: [
-        'Wann branch loeschen?',
+        'Wann branch löschen?',
         'Wie kommentiere ich strukturiert im PR?',
         'Welche Checks sind vor Merge Pflicht?',
       ],
@@ -146,8 +146,8 @@ export const AI_LEARNER_SCENARIOS: AiLearnerScenario[] = [
   },
   {
     scenarioId: 'ai-s3',
-    title: 'Kooperationspotenzial durch gleiche Lernwuensche',
-    description: 'AI-Learner teilt Lernwuensche mit mehreren TN und eignet sich fuer Pairing-Vorschlaege.',
+    title: 'Kooperationspotenzial durch gleiche Lernwünsche',
+    description: 'AI-Learner teilt Lernwünsche mit mehreren TN und eignet sich für Pairing-Vorschlaege.',
     learner: {
       learnerId: 'ai-learner',
       learnerName: 'AI Learner',
@@ -162,9 +162,9 @@ export const AI_LEARNER_SCENARIOS: AiLearnerScenario[] = [
           nextStep: 'Pairing mit TN mit gleichem Wunsch starten',
         },
       ],
-      nextSmallStep: 'Test-Checklist fuer m2-u2 erstellen',
-      groupQuestions: ['Wer moechte gemeinsam Angular Tests vertiefen?'],
-      individualLearningWishes: ['Teststrategie fuer Angular Components', 'Mehr API-Verstaendnis in Angular'],
+      nextSmallStep: 'Test-Checklist für m2-u2 erstellen',
+      groupQuestions: ['Wer möchte gemeinsam Angular Tests vertiefen?'],
+      individualLearningWishes: ['Teststrategie für Angular Components', 'Mehr API-Verstaendnis in Angular'],
     },
     gitActivity: {
       learnerId: 'ai-learner',

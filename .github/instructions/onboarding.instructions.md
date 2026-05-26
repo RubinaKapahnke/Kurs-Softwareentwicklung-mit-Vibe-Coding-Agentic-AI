@@ -2,11 +2,11 @@
 applyTo: "apps/onboarding/**"
 ---
 
-# Onboarding App: Architekturregeln fuer Copilot
+# Onboarding App: Architekturregeln für Copilot
 
 ## Ziel des Bereichs
 
-Diese App ist das Kurs-Tool fuer den gesamten Kurs. Im aktuellen Ausbaustand fuehrt sie bereits aufgenommene Kursteilnehmende voraussetzungsarm, aber in erwachsenem Ton, vom Einstieg ueber das Modul Onboarding bis zum lokalen Clone des Kurs-Repos und anschliessend in den weiteren Kursfluss.
+Diese App ist das Kurs-Tool für den gesamten Kurs. Im aktuellen Ausbaustand führt sie bereits aufgenommene Kursteilnehmende voraussetzungsarm, aber in erwachsenem Ton, vom Einstieg über das Modul Onboarding bis zum lokalen Clone des Kurs-Repos und anschliessend in den weiteren Kursfluss.
 
 ## Stack (verbindlich)
 
@@ -32,36 +32,36 @@ Schlage keine alternativen Frameworks oder UI-Libraries vor.
 
 Bestehende Struktur unter `apps/onboarding/src/app/` als Standard weiterverwenden:
 
-- `components/markdown-view/` fuer Markdown-Rendering
-- `data/onboarding-steps.data.ts` fuer die Lektionsdefinitionen
-- `models/onboarding.models.ts` fuer Typen
-- `services/onboarding-state.service.ts` fuer lokalen Onboarding-Zustand
-- `pages/startseite/` fuer Landing-Einstieg
-- `pages/kursstart/` fuer Voucher-/Kurszugangslogik
-- `pages/onboarding-shell/` fuer den gerahmten Lektionfluss
-- `pages/step-page/` fuer die eigentlichen Lektionseiten unter `/onboarding/step/:id`
-- `pages/zusammenfassung/` fuer den Abschluss vor dem Kursstart
+- `components/markdown-view/` für Markdown-Rendering
+- `data/onboarding-steps.data.ts` für die Lektionsdefinitionen
+- `models/onboarding.models.ts` für Typen
+- `services/onboarding-state.service.ts` für lokalen Onboarding-Zustand
+- `pages/startseite/` für Landing-Einstieg
+- `pages/kursstart/` für Voucher-/Kurszugangslogik
+- `pages/onboarding-shell/` für den gerahmten Lektionfluss
+- `pages/step-page/` für die eigentlichen Lektionseiten unter `/onboarding/step/:id`
+- `pages/zusammenfassung/` für den Abschluss vor dem Kursstart
 
-Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine parallele `features/step-01-*`-Struktur ein, solange dafuer kein expliziter Umbau beschlossen ist.
+Lege neue Features standardmaessig innerhalb dieser Struktur an. Führe keine parallele `features/step-01-*`-Struktur ein, solange dafür kein expliziter Umbau beschlossen ist.
 
 ## Terminologie
 
 - `Modul` = fachlicher Kursbaustein, z. B. Modul Onboarding.
 - `Lektion` = zentrale Lern- und Navigationseinheit im Kurs. Die Markdown-Quelle wie `01-willkommen-im-kurs.md` und der Eintrag im Kurs-Tool bezeichnen dieselbe Einheit.
 - `Slide` oder `Seite` = einzelne Ansicht innerhalb des Lesson-Flows.
-- Im sichtbaren Text konsequent `Lektion` verwenden; vermeide parallele Mischbegriffe fuer dieselbe Einheit.
+- Im sichtbaren Text konsequent `Lektion` verwenden; vermeide parallele Mischbegriffe für dieselbe Einheit.
 
 ## Komponenten-Governance gegen Code-Monster
 
-- `pages/**` sind Orchestratoren: Route, State-Anbindung, grobe Seitengliederung und Events. Sie sollen keine langen, wiederholten UI-Bloecke oder fachlichen Mini-Flows aufnehmen.
-- Wiederkehrende UI-Muster zuerst mit bestehenden Komponenten loesen: `app-choice-card`, `app-callout`, `app-lesson-flow`, `app-markdown-view`, `app-step-tasks`, `app-voucher-gate`.
+- `pages/**` sind Orchestratoren: Route, State-Anbindung, grobe Seitengliederung und Events. Sie sollen keine langen, wiederholten UI-Blöcke oder fachlichen Mini-Flows aufnehmen.
+- Wiederkehrende UI-Muster zuerst mit bestehenden Komponenten lösen: `app-choice-card`, `app-callout`, `app-lesson-flow`, `app-markdown-view`, `app-step-tasks`, `app-voucher-gate`.
 - Neue Komponenten nur anlegen, wenn mindestens eines gilt:
   - Das Muster wird absehbar an mehreren Stellen genutzt.
   - Ein bestehendes Template/SCSS-File wird sonst deutlich zu gross oder schwer lesbar.
   - Die Komponente hat eine klare fachliche Verantwortung mit eigenen Inputs/Outputs.
-- Keine Komponenten fuer einmalige Kleinst-Markups anlegen. Nutze dafuer bestehende Material-Komponenten, CSS-Utilities oder lokale Template-Struktur.
+- Keine Komponenten für einmalige Kleinst-Markups anlegen. Nutze dafür bestehende Material-Komponenten, CSS-Utilities oder lokale Template-Struktur.
 - Wenn unklar ist, ob neue Komponente oder bestehende Wiederverwendung besser ist: erst kurz die Optionen mit Folgen nennen und nach Freigabe fragen.
-- Vor groesseren App-Erweiterungen kurz pruefen: Welche vorhandene Komponente kann erweitert werden? Welche Daten/Markdown-Inhalte koennen statt Template-Code genutzt werden?
+- Vor größeren App-Erweiterungen kurz prüfen: Welche vorhandene Komponente kann erweitert werden? Welche Daten/Markdown-Inhalte können statt Template-Code genutzt werden?
 
 ## UX- und Textregeln
 
@@ -69,10 +69,10 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 - Vermeide paternalistische oder infantilisierende Sprache.
 - Lernenden-Texte sprechen immer Teilnehmende direkt an, nicht Autor:innen oder Content-Teams.
 - Keine didaktischen Meta-Erklärungen im sichtbaren Lerntext: nicht begründen, was für die Content-Erstellung sinnvoll ist, sondern was für die lernende Person jetzt relevant ist.
-- Fachbegriffe muessen vor der ersten Nutzung erklaert oder direkt am Einsatzpunkt eingefuehrt werden.
-- Jede relevante Einheit soll kurz klaeren: Was ist jetzt zu tun? Warum jetzt? Wofuer spaeter?
+- Fachbegriffe müssen vor der ersten Nutzung erklärt oder direkt am Einsatzpunkt eingeführt werden.
+- Jede relevante Einheit soll kurz klären: Was ist jetzt zu tun? Warum jetzt? Wofuer später?
 - Spätestens auf der ersten oder zweiten Slide braucht es einen sichtbaren Arbeitsanlass, eine konkrete Aktion, eine Entscheidung oder ein Artefakt.
-- Jeder Lektion enthaelt:
+- Jeder Lektion enthält:
   - Was ist zu tun?
   - Falls es nicht klappt
   - Woran erkenne ich Erfolg?
@@ -81,21 +81,21 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 - TypeScript Strict ohne any.
 - Keine monolithischen Komponenten.
-- Keine wachsenden Template-/SCSS-Monolithe: bei wiederholten Bloecken oder schwer scanbaren Dateien frueh extrahieren oder vereinfachen.
+- Keine wachsenden Template-/SCSS-Monolithe: bei wiederholten Blöcken oder schwer scanbaren Dateien frueh extrahieren oder vereinfachen.
 - Relevante Typen und Zustandsuebergaenge explizit modellieren.
-- Build und Typecheck nach groesseren Aenderungen ausfuehren.
+- Build und Typecheck nach größeren Änderungen ausfuehren.
 
 ## Repo-Integration
 
 - Bei neuen Dateien/Foldern README-Projektstruktur synchron halten.
 - Das Kurs-Tool mit aktuellem Schwerpunkt Modul Onboarding darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
-- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Modul Onboarding fuehrt das Kurs-Tool weiter in `course/00-course-guides/COURSE_MILESTONES.md` und spaeter in weitere Kursmodule.
+- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Modul Onboarding führt das Kurs-Tool weiter in `course/00-course-guides/COURSE_MILESTONES.md` und später in weitere Kursmodule.
 
 ## Markdown-Content (Onboarding)
 
-- Erklaertexte fuer Lektionen duerfen als Markdown-Dateien unter `apps/onboarding/public/content/` gepflegt werden.
+- Erklaertexte für Lektionen dürfen als Markdown-Dateien unter `apps/onboarding/public/content/` gepflegt werden.
 - Pro Lektion wird ein optionaler Pfad im Datenmodell verwendet (`markdownSource`).
-- Rendering erfolgt ueber die bestehende Komponente `apps/onboarding/src/app/components/markdown-view/`.
+- Rendering erfolgt über die bestehende Komponente `apps/onboarding/src/app/components/markdown-view/`.
 - Markdown-HTML muss vor der Anzeige sanitiziert werden (z. B. DOMPurify), keine ungefilterte Ausgabe.
 - Auch bei Markdown-Inhalten bleibt die interaktive Lektionslogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
 
@@ -108,7 +108,7 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 - `npm run sync-content` in `apps/onboarding` erzeugt/aktualisiert `public/content/step-manifest.json` und die Inhalte unter `public/content/step-XX/`.
 - Bei nicht-Account-Choice-Steps hat manifestbasierter Lesson-Flow Vorrang vor statisch hinterlegtem `lessonFlow` in `onboarding-steps.data.ts`.
 
-## Markdown-Konvention fuer Lesson-Flow
+## Markdown-Konvention für Lesson-Flow
 
 - `##` erzeugt eine neue Lesson-Seite (Slide).
 - Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`, `## Übungen zur Lektion`.
@@ -118,10 +118,10 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 ### Struktur-Sektionen ohne Slide
 
-- `## Was ist zu tun` wird als Aufgabenliste fuer den Lektion interpretiert (vergleichbar mit Aufgaben aus `XX-aufgaben.md`).
-- `## Hilfreiche Links` wird als Ressourcenliste fuer den Lektion interpretiert.
+- `## Was ist zu tun` wird als Aufgabenliste für den Lektion interpretiert (vergleichbar mit Aufgaben aus `XX-aufgaben.md`).
+- `## Hilfreiche Links` wird als Ressourcenliste für den Lektion interpretiert.
 - `## Übungen zur Lektion` wird als Übungsbereich unterhalb des Lesson-Flows gerendert. Die enthaltenen Übungsschritte sind interaktiv abhakbar; pro Übung kann der Status `erledigt` oder `nicht geschafft` gesetzt werden.
-- Beide Sektionen sind fuer Autoren gedacht und erscheinen nicht als eigene Lesson-Slides im Lesson-Flow.
+- Beide Sektionen sind für Autoren gedacht und erscheinen nicht als eigene Lesson-Slides im Lesson-Flow.
 
 ### Quiz-Pattern in Markdown
 
@@ -132,11 +132,11 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 - Offensichtlich alberne oder rein kindlich formulierte Falschantworten sind zu vermeiden.
 - Optional: `Hinweis:`, `Mehrfachauswahl: ja|nein`, `Erfolg:`, `Fehler:`.
 
-### Farbfelder ueber H3-Praefixe
+### Farbfelder über H3-Praefixe
 
 - `### Wichtig:` / `### Hinweis:` -> gelbes Feld
 - `### Achtung:` -> rotes Feld
-- `### Erfolg:` / `### OK:` / `### Gruen:` -> grünes Feld
+- `### Erfolg:` / `### OK:` / `### Grün:` -> grünes Feld
 - `### Blau:` -> blaues Feld
 - `### Info:` / `### Tipp:` -> eigener Hinweis-Farbton
 
@@ -144,15 +144,15 @@ Das Präfix wird nicht angezeigt; sichtbar bleibt nur der Text nach dem Doppelpu
 
 ## Verbindlicher Component-Contract: Lesson Flow
 
-Die Komponente `app-lesson-flow` gilt als UI- und Verhaltens-Standard fuer Onboarding-Lektionen mit Lektionen.
-Alle Agents muessen diese Regeln beibehalten, solange keine explizite Produktentscheidung etwas anderes festlegt.
+Die Komponente `app-lesson-flow` gilt als UI- und Verhaltens-Standard für Onboarding-Lektionen mit Lektionen.
+Alle Agents müssen diese Regeln beibehalten, solange keine explizite Produktentscheidung etwas anderes festlegt.
 
 ### Layout und Navigation
 
 - Die Lesson-Flow-Komponente hat eine feste, viewport-basierte Hoehe mit Ober-/Untergrenze (derzeit: `height: clamp(420px, 58dvh, 680px)`).
 - Der Footer mit den Buttons bleibt innerhalb der Komponente am unteren Rand (`.lesson-flow__actions`), niemals als globaler Seiten-Footer.
 - Der Inhaltsbereich scrollt nur innerhalb der Komponente (`.lesson-flow__content` / `.lesson-flow__quiz`), Scrollbar darf visuell verborgen sein.
-- Der `Weiter`-Button im Lesson-Footer hat dieselbe Breite wie `Zurueck` und steht rechts.
+- Der `Weiter`-Button im Lesson-Footer hat dieselbe Breite wie `Zurück` und steht rechts.
 
 ### Inhaltliche Struktur
 
@@ -162,19 +162,19 @@ Alle Agents muessen diese Regeln beibehalten, solange keine explizite Produktent
 
 ### Verhalten beim letzten Lesson-Button
 
-- Das `finished`-Event der Lesson darf nicht automatisch in die naechste Onboarding-Lektion navigieren.
+- Das `finished`-Event der Lesson darf nicht automatisch in die nächste Onboarding-Lektion navigieren.
 - Falls unterhalb der Lesson **keine weiteren Lektionsinhalte** folgen, ist der letzte Lesson-Button inaktiv und zeigt `Lektion abgeschlossen`.
-- Falls unterhalb der Lesson **weitere Lektionsinhalte** folgen (z. B. Aufgabenblock), fuehrt der letzte Lesson-Button innerhalb derselben Lektion genau dorthin (z. B. Scroll zu `Was ist zu tun?`) und bleibt dafuer aktiv.
-- Labels auf der letzten Folie muessen dieses Verhalten eindeutig widerspiegeln (z. B. `Lektion abgeschlossen` bei inaktivem Ende oder `Zu den Aufgaben` bei Sprung zum Folgeinhalt; niemals `weiter zu Lektion X`).
+- Falls unterhalb der Lesson **weitere Lektionsinhalte** folgen (z. B. Aufgabenblock), führt der letzte Lesson-Button innerhalb derselben Lektion genau dorthin (z. B. Scroll zu `Was ist zu tun?`) und bleibt dafür aktiv.
+- Labels auf der letzten Folie müssen dieses Verhalten eindeutig widerspiegeln (z. B. `Lektion abgeschlossen` bei inaktivem Ende oder `Zu den Aufgaben` bei Sprung zum Folgeinhalt; niemals `weiter zu Lektion X`).
 
 ### Link-Konvention in Lesson-Texten
 
-- Vorkommen wie `github.com` oder `github.com/new` in Lesson-Texten muessen klickbar sein.
+- Vorkommen wie `github.com` oder `github.com/new` in Lesson-Texten müssen klickbar sein.
 - Plaintext-URLs in `paragraphs` und `orderedItems` werden automatisch verlinkt; dieses Verhalten ist beizubehalten.
 
 ### Aenderungsregel
 
-- Aenderungen an Hoehe, Footer-Position, Button-Verhalten oder Linkify-Logik nur mit expliziter Freigabe.
+- Änderungen an Hoehe, Footer-Position, Button-Verhalten oder Linkify-Logik nur mit expliziter Freigabe.
 - Bei Refactorings muss das sichtbare Verhalten identisch bleiben.
 
 
@@ -206,7 +206,7 @@ Weitere Sekundaerfarben (nur bei Bedarf): Ziggurat `#BED4E3`, Casper `#A7BECE`, 
 
 | Schriftart | Verwendung |
 |:---|:---|
-| **Poppins** | Alle Standardtexte (Body, Ueberschriften). Titel koennen in Grossbuchstaben gesetzt werden. |
+| **Poppins** | Alle Standardtexte (Body, Überschriften). Titel können in Grossbuchstaben gesetzt werden. |
 | **Recoleta** | Nur kurze Untertitel-Akzente (sparsam einsetzen). |
 
 - Fliesstext immer in Poppins Normal.
@@ -219,9 +219,9 @@ Weitere Sekundaerfarben (nur bei Bedarf): Ziggurat `#BED4E3`, Casper `#A7BECE`, 
 - Alle Token in `src/styles/_tokens.scss` als CSS Custom Properties definieren.
 - Kein `!important`, kein Inline-Style.
 - Keine hardcodierten Hex-/RGBA-Farben in Komponenten-SCSS; nutze Tokens, `color-mix()` mit Tokens oder bestehende Surface-/Border-Tokens.
-- Wiederverwendbare Button-, Card-, Callout-, State- und Layout-Muster zuerst ueber bestehende Komponenten oder globale `ui-*` Utilities loesen.
+- Wiederverwendbare Button-, Card-, Callout-, State- und Layout-Muster zuerst über bestehende Komponenten oder globale `ui-*` Utilities loesen.
 - Neue globale Style-Utilities nur anlegen, wenn sie an mehreren Stellen gebraucht werden; sonst lokal und klein halten.
-- Direktes Styling von Material-Interna vermeiden; Material ueber `--mdc-*` und `--mat-*` Variablen anpassen.
+- Direktes Styling von Material-Interna vermeiden; Material über `--mdc-*` und `--mat-*` Variablen anpassen.
 - Angular Material Theme auf Basis von `--color-primary` (Calypso) konfigurieren.
 ### Material Design 3 (M3) – Konventionen
 

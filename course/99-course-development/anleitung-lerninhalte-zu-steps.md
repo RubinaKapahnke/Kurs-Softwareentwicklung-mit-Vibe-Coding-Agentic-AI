@@ -40,8 +40,8 @@ Für Modul 01 gilt: Wir nutzen durchgehend den Begriff `Lektion`, damit Inhalt, 
 
 1. `# ...` ist der Lektionstitel (wird als Titel in der Navigation genutzt).
 2. Unter `## Ziel` steht die Zielbeschreibung (erste Textzeile wird als Zieltext in der Navigation übernommen).
-	- Diese Zielbeschreibung benennt nicht nur das Ergebnis, sondern auch den Nutzen fuer die lernende Person.
-	- Gute Zieltexte machen klar, was die Person danach besser einordnen, anwenden oder als naechstes tun kann.
+	- Diese Zielbeschreibung benennt nicht nur das Ergebnis, sondern auch den Nutzen für die lernende Person.
+	- Gute Zieltexte machen klar, was die Person danach besser einordnen, anwenden oder als nächstes tun kann.
 3. Jede weitere `##`-Überschrift wird zu einer eigenen Lesson-Flow-Seite.
 4. Ausnahmen ohne eigene Seite: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`.
 5. `###` erzeugt Abschnitte innerhalb einer Seite.

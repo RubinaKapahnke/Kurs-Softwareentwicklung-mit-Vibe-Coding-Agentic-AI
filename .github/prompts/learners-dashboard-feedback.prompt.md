@@ -1,4 +1,4 @@
----
+﻿---
 description: "Dashboard Feedback: Hilft dir, strukturiertes Feedback zum Progress-Hub zu geben – was gut funktioniert, was fehlt, was du dir als Lernende/r wünschst. Nutze diesen Prompt wenn du Ideen oder Kritik zum Dashboard teilen möchtest."
 name: "Dashboard Feedback"
 agent: "ask"
@@ -6,7 +6,7 @@ agent: "ask"
 
 <!-- 
   HINWEIS FUER LERNENDE:
-  Dies ist eine Prompt-Datei (.prompt.md) fuer VS Code Copilot.
+  Dies ist eine Prompt-Datei (.prompt.md) für VS Code Copilot.
   Sie liegt in .github/prompts/, weil Copilot Prompt-Dateien nur an diesem Ort erkennt.
   Im Chat aufrufbar mit: /  dann "Dashboard Feedback" auswaehlen.
   Mehr dazu: course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md

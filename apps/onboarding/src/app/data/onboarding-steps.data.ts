@@ -512,7 +512,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 9,
     title: 'Was ist Git?',
-    goal: 'Du verstehst, warum Versionskontrolle wichtig ist und was Git daran besser loest als manuelle Dateikopien.',
+    goal: 'Du verstehst, warum Versionskontrolle wichtig ist und was Git daran besser löst als manuelle Dateikopien.',
     tasks: [],
     fallbackHelp: [],
     successCriterion: '',

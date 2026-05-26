@@ -183,7 +183,7 @@ Tabellen brauchen Kopfzeile, Trennzeile und danach die Datenzeilen.
 ### Syntax
 ```md
 Zeilenumbruch mit zwei Leerzeichen am Ende der Zeile.  
-Naechste Zeile im gleichen Absatz.
+Nächste Zeile im gleichen Absatz.
 
 Sonderzeichen escapen: \*kein kursiv\* und \# kein Titel
 
@@ -204,7 +204,7 @@ Fussnote im Text[^1]
 
 ### Vorschau
 Zeilenumbruch mit zwei Leerzeichen am Ende der Zeile.  
-Naechste Zeile im gleichen Absatz.
+Nächste Zeile im gleichen Absatz.
 
 Sonderzeichen escapen: \*kein kursiv\* und \# kein Titel
 
@@ -223,5 +223,5 @@ Fussnote im Text[^1]
 <!-- Das ist ein HTML-Kommentar und wird in der Vorschau normalerweise nicht angezeigt. -->
 
 ### Kurz-Erklärung
-Dieser Abschnitt zeigt nuetzliche Erweiterungen fuer den Alltag: kontrollierte Umbrueche, Escaping, automatische Links, Referenz-Links, Anker-Links, einfaches HTML, Fussnoten und HTML-Kommentare in Markdown.
+Dieser Abschnitt zeigt nützliche Erweiterungen für den Alltag: kontrollierte Umbrüche, Escaping, automatische Links, Referenz-Links, Anker-Links, einfaches HTML, Fussnoten und HTML-Kommentare in Markdown.
 

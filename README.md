@@ -29,21 +29,23 @@ Der Fokus liegt auf:
 1. Kursbeschreibung ([KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md)) → Beschreibt Gesamtbild, Pfade und Kurslogik
 2. Kursmodule ([course/01-course-modules/README_KURSMODULE.md](course/01-course-modules/README_KURSMODULE.md)) → Beschreiben eigenständige Kursbausteine mit Rollenbezug und Praxisartefakt
 3. Meilensteine in [course/00-course-guides/COURSE_MILESTONES.md](course/00-course-guides/COURSE_MILESTONES.md) → Sagen, welcher Fortschritt in dieser Lerngruppe gerade relevant ist
-4. Modul-Inhalte ([course/03-course-library](course/03-course-library)) → Erklären Konzepte und Befehle als Lernmaterial-Sammlung
-5. Übungen ([course/02-course-exercises/README_UEBUNGEN.md](course/02-course-exercises/README_UEBUNGEN.md)) → Verlinken direkt zu Modul-Quellen
-6. Persönlicher Lernfortschritt ([course/learners](course/learners)) → Jede Person dokumentiert ihren Stand und löst Übungen
+4. Wissensbibliothek ([course/03-course-library](course/03-course-library)) → Erklärt Konzepte und Befehle als wikiartige Nachschlage-Sammlung
+5. Übungen ([course/02-course-exercises/README_UEBUNGEN.md](course/02-course-exercises/README_UEBUNGEN.md)) → Verlinken direkt zu Artikel-Quellen
+6. Lernfortschritt-Beispiel ([course/learners](course/learners)) → Enthält eine neutrale Beispielstruktur für persönliche Lernfortschrittsdateien
 
-**Wichtig:** Jede Aufgabe in den Übungen hat direkte Quellenlinks zu den Modul-Dateien. Während du die Übung machst, klickst du direkt auf die Modul-Quelle.
+**Wichtig:** Jede Aufgabe in den Übungen hat direkte Quellenlinks zu den Artikel-Dateien. Während du die Übung machst, klickst du direkt auf die passende Quelle.
+
+**Wording in der Wissensbibliothek:** Einzelne Dateien heißen Artikel, zusammengehörige Ordner heißen Themenbereiche und Überschriften innerhalb eines Artikels heißen Abschnitte. Der Begriff Modul bleibt für [course/01-course-modules/README_KURSMODULE.md](course/01-course-modules/README_KURSMODULE.md) reserviert.
 
 ---
 
-## � Aufbau der Module
+## 📚 Aufbau der Wissensbibliothek
 
-Jedes Modul folgt derselben Struktur. Beispiel: `course/03-course-library/04-git/`
+Die Artikel in der Wissensbibliothek folgen einer wiederkehrenden Struktur. Beispiel: `course/03-course-library/04-git/`
 
 ```
 course/03-course-library/04-git/
-├── 00-git-versionierung-modulguide.md          ← START HIER: Navigation + Überblick + Selbstcheck
+├── 00-was-ist-git.md          ← START HIER: Einstieg + Überblick + Selbstcheck
 ├── 01-git-grundlagen.md          ← Erklärung: Warum Git? Wie funktioniert es?
 └── 03-git-befehlsuebersicht.md   ← Nachschlag: Befehle in Tabellen (nur Git, Terminal)
 ```
@@ -52,15 +54,15 @@ course/03-course-library/04-git/
 
 | Datei | Zweck | Nutze sie wenn... |
 | :--- | :--- | :--- |
-| **00-modulguide.md** | Navigation, Kurzüberblick & **inline Selbstcheck** (Must/Should/Nice) | Du neu im Modul anfängst oder deinen Stand prüfen willst |
+| **00-einstiegsartikel.md** | Navigation, Kurzüberblick & **inline Selbstcheck** (Must/Should/Nice) | Du neu im Artikel anfängst oder deinen Stand prüfen willst |
 | **01-grundlagen.md** | Konzeptuelle Erklärung | Du verstehen willst, **warum** und **wie** |
 | **03-befehlsuebersicht.md** | Befehls-Nachschlagewerk (Tabellen) | Du einen Befehl schnell nachschlagen musst |
 
 **Beachte:**
-- Nicht alle Module haben 03-befehlsuebersicht.md (nur Git und Terminal)
+- Nicht alle Artikel haben 03-befehlsuebersicht.md (nur Git und Terminal)
 - 01-grundlagen.md erklärt Konzepte, enthält aber keine Befehle zum Kopieren
 - 03-befehlsuebersicht.md hat nur Befehle, keine Erklärungen
-- Der Selbstcheck (Must/Should/Nice-Checklisten) steht immer im `00-modulguide.md`
+- Der Selbstcheck (Must/Should/Nice-Checklisten) steht im jeweiligen Einstiegsartikel
 
 ---
 
@@ -80,14 +82,11 @@ course/03-course-library/04-git/
 │   ├── 00-course-guides/
 │   │   ├── COURSE_MILESTONES.md
 │   │   └── table-of-contents.md
-│   ├── AI_SLOP_SURVIVAL_GUIDE.md
 │   ├── HINWEISE_CONTENT_ERSTELLENDE.md
-│   ├── FAQ.md
-│   ├── GLOSSARY.md
-│   ├── BEDIENUNGSHILFEN.md
 │   ├── 01-course-modules/
 │   ├── 02-course-exercises/
 │   ├── 03-course-library/
+│   │   └── 09-kurshilfe/
 │   ├── 99-course-development/
 │   └── learners/
 ├── .github/
@@ -133,7 +132,7 @@ pandoc "course/01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md" -o 
 ## ✅ Nächster Einstiegspunkt
 Wenn du neu in eine Session einsteigst:
 1. [course/00-course-guides/COURSE_MILESTONES.md](course/00-course-guides/COURSE_MILESTONES.md) öffnen
-2. eigenen Lernfortschritt im persönlichen Ordner aktualisieren
+2. eigenen Lernfortschritt nach dem Muster in [course/learners/beispiel](course/learners/beispiel) aktualisieren
 3. aktuelle Übung in [course/02-course-exercises/README_UEBUNGEN.md](course/02-course-exercises/README_UEBUNGEN.md) bearbeiten
 4. Änderungen committen, pushen und PR erstellen
 
@@ -148,6 +147,5 @@ Die ersten Lernschritte arbeiten mit einem klaren, einheitlichen Stack:
 - **Datenformat:** JSON
 
 Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten und Deployment-Werkzeuge sind im Kursrahmen in [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md) beschrieben.
-
 
 

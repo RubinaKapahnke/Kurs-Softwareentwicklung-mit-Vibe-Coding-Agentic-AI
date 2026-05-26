@@ -1,4 +1,4 @@
-﻿# Uebung Meilenstein 3: Prompt-Dateien erstellen und nutzen
+﻿# Übung Meilenstein 3: Prompt-Dateien erstellen und nutzen
 
 ## Ziel
 Du verstehst, wie Prompt-Dateien die KI gezielt steuern, legst eine eigene Prompt-Datei an und erlebst den Unterschied zwischen freiem Prompting und gesteuertem Prompting.
@@ -7,18 +7,18 @@ Du verstehst, wie Prompt-Dateien die KI gezielt steuern, legst eine eigene Promp
 
 ## Vor dem Start - Checkliste
 
-- [ ] VS Code ist geoeffnet und du siehst den Repo-Ordner im Explorer (linke Leiste)
+- [ ] VS Code ist geöffnet und du siehst den Repo-Ordner im Explorer (linke Leiste)
 - [ ] GitHub Copilot Chat ist aktiv - erkennbar am Chat-Symbol in der linken Leiste
-- [ ] Du hast Uebung 02 abgeschlossen (du kennst die vier Prompt-Bausteine)
+- [ ] Du hast Übung 02 abgeschlossen (du kennst die vier Prompt-Bausteine)
 
-In dieser Uebung arbeitest du mit diesen Dateien:
+In dieser Übung arbeitest du mit diesen Dateien:
 - `.github/prompts/learners-prd-assistent.prompt.md` - lesen als Vorbild
-- `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` - **neu anlegen** (deine persoenliche Datei)
+- `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` - **neu anlegen** (deine persönliche Datei)
 - `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` - Beobachtungen eintragen
 
-> **Wichtig - diese Datei nicht bearbeiten:** Die Uebungsdatei (die du gerade liest) bleibt unveraendert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
+> **Wichtig - diese Datei nicht bearbeiten:** Die Übungsdatei (die du gerade liest) bleibt unverändert als Referenz erhalten. Deine eigene Arbeit traegst du ausschliesslich in die oben genannten Dateien ein. Die Checklisten am Ende ("Abgabe" und "Lernerfolgs-Kriterien") kopierst du in deine Lernfortschritt-Datei und hakst sie dort ab.
 
-> **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** Das abzugebende Ergebnis dieser Uebung ist die Prompt-Datei selbst - sie landet im Repo. Die Beobachtungen im Lernjournal sind dein persoenlicher Reflexionsraum und gehoeren in deinen Lernstand.
+> **Warum die Lernfortschrittsdatei statt einer Antwortdatei?** Das abzugebende Ergebnis dieser Übung ist die Prompt-Datei selbst - sie landet im Repo. Die Beobachtungen im Lernjournal sind dein persönlicher Reflexionsraum und gehören in deinen Lernstand.
 
 ---
 
@@ -26,7 +26,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 
 Lies zuerst: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md](../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
 
-Klaere fuer dich vor dem Start:
+Klaere für dich vor dem Start:
 - Was ist ein Frontmatter?
 - Wo muss eine Prompt-Datei liegen, damit Copilot sie findet?
 
@@ -36,7 +36,7 @@ Klaere fuer dich vor dem Start:
 
 ### 1. Bestehende Prompt-Datei lesen und Frontmatter verstehen
 
-Oeffne die Datei [.github/prompts/learners-prd-assistent.prompt.md](../../.github/prompts/learners-prd-assistent.prompt.md) in VS Code.
+Öffne die Datei [.github/prompts/learners-prd-assistent.prompt.md](../../.github/prompts/learners-prd-assistent.prompt.md) in VS Code.
 
 > **Hinweis:** Der Ordner `.github/` erscheint ganz oben im VS Code Explorer. Falls du ihn nicht siehst: `Strg+P` (Windows) bzw. `Cmd+P` (Mac) → `.github/prompts/learners-prd-assistent.prompt.md` eintippen → oeffnen.
 
@@ -54,7 +54,7 @@ Quelle: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md → A
 
 Lege eine neue Datei an: `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md`
 
-> **Warum der eigene Name im Dateinamen?** Alle Kursteilnehmenden legen diese Datei an und mergen spaeter ihre Branches auf `main`. Wenn alle dieselbe Datei anlegen, entsteht ein Merge-Konflikt. Mit dem eigenen Namen im Dateinamen legt jeder eine *andere* Datei an - kein Konflikt.
+> **Warum der eigene Name im Dateinamen?** Alle Kursteilnehmenden legen diese Datei an und mergen später ihre Branches auf `main`. Wenn alle dieselbe Datei anlegen, entsteht ein Merge-Konflikt. Mit dem eigenen Namen im Dateinamen legt jeder eine *andere* Datei an - kein Konflikt.
 
 > **Hinweis zum Ordner:** Navigiere im Explorer ganz nach oben zu `.github/prompts/`. Rechtsklick auf den Ordner → "Neue Datei" → Dateiname eingeben. Oder: `Strg+P` → Ordnerpfad eintippen.
 
@@ -69,9 +69,9 @@ description: "Erklaert Fachbegriffe aus dem Vibe Coding einfach und einheitlich"
 agent: "ask"
 ---
 
-Du bist ein geduldiger Lernbegleiter fuer Einsteiger ins Vibe Coding.
+Du bist ein geduldiger Lernbegleiter für Einsteiger ins Vibe Coding.
 
-Wenn jemand dir einen Begriff nennt, erklaerst du ihn immer nach diesem Muster:
+Wenn jemand dir einen Begriff nennt, erklärst du ihn immer nach diesem Muster:
 1. Was bedeutet der Begriff in einem Satz?
 2. Ein konkretes Alltagsbeispiel (kein Code)
 3. Warum ist das im Vibe Coding relevant?
@@ -86,19 +86,19 @@ Quelle: [course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md → A
 
 ---
 
-### 3. Prompt-Datei ueber `/` im Copilot Chat aufrufen
+### 3. Prompt-Datei über `/` im Copilot Chat aufrufen
 
 Teste jetzt deine neue Prompt-Datei.
 
 **So rufst du sie auf:**
 
-1. Copilot Chat oeffnen (Chat-Symbol in der linken Leiste)
+1. Copilot Chat öffnen (Chat-Symbol in der linken Leiste)
 2. Im Chat-Eingabefeld `/` eintippen
 3. Eine Liste erscheint - suche nach "Erklaer-Assistent" (deine Datei sollte erscheinen)
 4. Auswählen und `Enter` druecken
 5. Tippe dann: `branch`
 
-> Falls deine Datei nicht in der Liste erscheint: Pruefe, ob sie wirklich unter `.github/prompts/` liegt und das Frontmatter exakt auf der ersten Zeile beginnt (kein Leerzeichen oder Kommentar davor). Dann VS Code neu laden: `Strg+Shift+P` → `Developer: Reload Window`.
+> Falls deine Datei nicht in der Liste erscheint: Prüfe, ob sie wirklich unter `.github/prompts/` liegt und das Frontmatter exakt auf der ersten Zeile beginnt (kein Leerzeichen oder Kommentar davor). Dann VS Code neu laden: `Strg+Shift+P` → `Developer: Reload Window`.
 
 Trage das Ergebnis in deiner Lernfortschrittsdatei unter `## Prompt-Datei-Beobachtungen` ein:
 - Wie sah die Antwort der KI aus?
@@ -120,7 +120,7 @@ Vergleiche die beiden Antworten und notiere in deiner Lernfortschrittsdatei:
 
 **So startest du einen neuen Chat:**
 
-1. Copilot Chat ist geoeffnet
+1. Copilot Chat ist geöffnet
 2. Oben im Chat-Fenster: Klick auf das `+`-Symbol ("Neuer Chat")
 3. Tippe deine Frage direkt (ohne `/`)
 
@@ -130,11 +130,11 @@ Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Die KI
 
 ---
 
-### 5. Aenderungen committen und PR erstellen
+### 5. Änderungen committen und PR erstellen
 
-Speichere alle Aenderungen und committe:
+Speichere alle Änderungen und committe:
 
-Pruefe zuerst deinen aktuellen Status:
+Prüfe zuerst deinen aktuellen Status:
 
 ```
 git status
@@ -145,16 +145,16 @@ Dann:
 
 > **Tipp - falls dein letzter PR noch nicht gemerged ist:**
 > - **Option A:** Starte vom letzten Branch: `git checkout <letzter-branch>` - dann `git checkout -b UE-M3-03-<vorname>`. Dein Lernjournal ist sofort aktuell.
-> - **Option B:** Starte von `main`. Deine Aenderungen aus dem letzten PR werden beim Merge zusammengefuehrt - du musst nichts weiter tun.
+> - **Option B:** Starte von `main`. Deine Änderungen aus dem letzten PR werden beim Merge zusammengeführt - du musst nichts weiter tun.
 
 ```
-git checkout -b UE-M3-03-<vorname>   # Erstellt einen neuen Branch fuer diese Uebung
+git checkout -b UE-M3-03-<vorname>   # Erstellt einen neuen Branch für diese Übung
 git add .
-git commit -m "M3 Uebung 03: Eigene Prompt-Datei und Beobachtungen"
+git commit -m "M3 Übung 03: Eigene Prompt-Datei und Beobachtungen"
 git push origin UE-M3-03-<vorname>
 ```
 
-> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Uebungen - UE steht fuer Uebung, M+Zahl fuer den Meilenstein, YY fuer die Uebungs-Nummer.
+> **Merke:** Das Muster `UE-MX-YY-<vorname>` verwendest du in allen Übungen - UE steht für Übung, M+Zahl für den Meilenstein, YY für die Übungs-Nummer.
 
 Erstelle anschliessend auf GitHub einen PR von deinem Branch auf `main`.
 
@@ -172,21 +172,21 @@ Quelle: [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-cour
 
 ## Wiederholung aus frueheren Meilensteinen
 
-Diese Uebung setzt voraus, dass du folgendes bereits kannst:
+Diese Übung setzt voraus, dass du folgendes bereits kannst:
 
 - **Branch erstellen und committen** ([course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md))
 - **Neue Datei anlegen (im Explorer oder Terminal)** ([course-library/05-terminal/03-terminal-befehlsuebersicht.md](../03-course-library/05-terminal/03-terminal-befehlsuebersicht.md))
 - **PR auf GitHub erstellen** ([course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md))
-- **Prompting-Bausteine kennen** (Uebung Meilenstein 3-02: Erfolgreich prompten)
+- **Prompting-Bausteine kennen** (Übung Meilenstein 3-02: Erfolgreich prompten)
 
 ---
 
 ## Abgabe
 
-> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab - nicht hier in der Uebungsdatei.
+> **Kopiere diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab - nicht hier in der Übungsdatei.
 
-Bevor du den PR erstellst, pruefe kurz:
-- [ ] Die Datei `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` existiert und hat gueltiges Frontmatter
+Bevor du den PR erstellst, prüfe kurz:
+- [ ] Die Datei `.github/prompts/learners-erklaer-assistent-<dein-name>.prompt.md` existiert und hat gültiges Frontmatter
 - [ ] Abschnitt `## Prompt-Datei-Beobachtungen` ist in deiner Lernfortschrittsdatei eingetragen
 - [ ] PR auf GitHub ist erstellt
 
@@ -196,11 +196,11 @@ Bevor du den PR erstellst, pruefe kurz:
 
 > **Kopiere auch diese Checkliste** in deine `lernfortschritt_<dein-name>.md` und hake die Punkte dort ab.
 
-Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
+Prüfe nach Abschluss der Übung, ob du diese Punkte mit Ja beantworten kannst:
 
-- [ ] Ich kann erklaeren, was eine Prompt-Datei ist und welchen Vorteil sie gegenueber freiem Prompting hat.
+- [ ] Ich kann erklären, was eine Prompt-Datei ist und welchen Vorteil sie gegenueber freiem Prompting hat.
 - [ ] Ich habe eine eigene Prompt-Datei mit gueltiger Frontmatter-Struktur erstellt.
-- [ ] Ich habe die Prompt-Datei erfolgreich ueber `/` im Copilot Chat aufgerufen.
+- [ ] Ich habe die Prompt-Datei erfolgreich über `/` im Copilot Chat aufgerufen.
 - [ ] Ich habe erlebt, wie eine Prompt-Datei die KI-Antwort kontrollierbar strukturiert.
 - [ ] Ich kann benennen, wann eine Prompt-Datei nuetzlicher ist als einfaches Prompting.
 

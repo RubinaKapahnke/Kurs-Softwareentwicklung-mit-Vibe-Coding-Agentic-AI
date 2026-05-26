@@ -1,17 +1,17 @@
 ﻿# Warum ein Code-Monster entstehen kann
 
-Diese Notiz erklaert an einem echten Kursbeispiel, wie aus vielen kleinen, sinnvollen Aenderungen eine zu grosse Datei entstehen kann.
+Diese Notiz erklärt an einem echten Kursbeispiel, wie aus vielen kleinen, sinnvollen Änderungen eine zu grosse Datei entstehen kann.
 
 ## Was passiert ist
 
-In der Onboarding-App gab es eine zentrale Angular-Komponente fuer die einzelnen Onboarding-Lektionen: `step-page`.
+In der Onboarding-App gab es eine zentrale Angular-Komponente für die einzelnen Onboarding-Lektionen: `step-page`.
 
 Diese Komponente hat nicht nur einen einzigen Screen angezeigt, sondern viele unterschiedliche Situationen:
 
 - Voucher-Eingabe
 - Frage, ob jemand schon einen GitHub-Account hat
-- GitHub-Erklaerung fuer neue Accounts
-- Hinweise fuer bestehende Accounts
+- GitHub-Erklärung für neue Accounts
+- Hinweise für bestehende Accounts
 - Sicherheitswarnungen
 - VS-Code-Installationsschritte
 - Git-Installationsschritte
@@ -19,9 +19,9 @@ Diese Komponente hat nicht nur einen einzigen Screen angezeigt, sondern viele un
 - hilfreiche Links
 - Clone-Hinweise am Ende
 
-Am Anfang ist so eine zentrale Komponente praktisch: Man findet alles an einem Ort, kann schnell etwas ergaenzen und sieht sofort ein Ergebnis.
+Am Anfang ist so eine zentrale Komponente praktisch: Man findet alles an einem Ort, kann schnell etwas ergänzen und sieht sofort ein Ergebnis.
 
-Mit jeder neuen Anforderung kamen aber weitere Sonderfaelle dazu. Ein Design-Fix hier, ein neuer Zustand dort, ein anderer Textblock, ein anderer Button, ein anderer Warnhinweis. Die Datei wurde dadurch nicht auf einmal schlecht. Sie wurde Lektion fuer Lektion zu gross.
+Mit jeder neuen Anforderung kamen aber weitere Sonderfaelle dazu. Ein Design-Fix hier, ein neuer Zustand dort, ein anderer Textblock, ein anderer Button, ein anderer Warnhinweis. Die Datei wurde dadurch nicht auf einmal schlecht. Sie wurde Lektion für Lektion zu gross.
 
 ## Warum das beim Vibe Coding besonders leicht passiert
 
@@ -29,10 +29,10 @@ Vibe Coding ist oft sehr inkrementell. Man sagt zum Beispiel:
 
 - "Mach Lektion 3 etwas schoener."
 - "Der Fortschrittsbereich soll weniger Platz brauchen."
-- "Die Ueberschriften sollen kleiner werden."
+- "Die Überschriften sollen kleiner werden."
 - "Optimiere die Typografie."
 
-Jede einzelne Aufgabe ist klein und sinnvoll. Der KI-Assistent sucht dann meist den schnellsten Ort, an dem die sichtbare Aenderung gemacht werden kann. Wenn bereits eine grosse Datei alle Varianten enthaelt, wird genau diese Datei weiter bearbeitet.
+Jede einzelne Aufgabe ist klein und sinnvoll. Der KI-Assistent sucht dann meist den schnellsten Ort, an dem die sichtbare Änderung gemacht werden kann. Wenn bereits eine grosse Datei alle Varianten enthält, wird genau diese Datei weiter bearbeitet.
 
 Das ist nicht automatisch falsch. Es ist sogar oft der richtige erste Lektion, wenn man schnell Feedback braucht.
 
@@ -49,18 +49,18 @@ Ohne diesen Zwischenstopp waechst die Datei weiter. Genau so entsteht ein Code-M
 
 Typische Warnzeichen sind:
 
-- Eine Datei enthaelt viele fachlich verschiedene Bereiche.
+- Eine Datei enthält viele fachlich verschiedene Bereiche.
 - Klassennamen beziehen sich auf einzelne Lektionen oder Sonderfaelle.
 - Es gibt Kommentare wie "Lektion 3", "Lektion 7", "Git-Lektion", "Voucher-Gate" in derselben Datei.
-- Neue Aenderungen brauchen immer mehr Suche und Scrollen.
+- Neue Änderungen brauchen immer mehr Suche und Scrollen.
 - Alte Styles bleiben liegen, obwohl das Template sie nicht mehr verwendet.
 - Build-Tools warnen vor Groesse, Budget oder Komplexitaet.
 
-Im Kursbeispiel war die Step-Page-SCSS zeitweise ueber 1100 Zeilen lang. Angular meldete danach ein Style-Budget-Warning. Das war ein gutes Signal: Nicht die App war kaputt, aber die Struktur wollte Aufmerksamkeit.
+Im Kursbeispiel war die Step-Page-SCSS zeitweise über 1100 Zeilen lang. Angular meldete danach ein Style-Budget-Warning. Das war ein gutes Signal: Nicht die App war kaputt, aber die Struktur wollte Aufmerksamkeit.
 
 ## Was daran lehrreich ist
 
-Das Code-Monster ist kein Zeichen dafuer, dass KI-gestuetzte Entwicklung nicht funktioniert. Es zeigt vielmehr eine wichtige Regel moderner Softwareentwicklung:
+Das Code-Monster ist kein Zeichen dafür, dass KI-gestuetzte Entwicklung nicht funktioniert. Es zeigt vielmehr eine wichtige Regel moderner Softwareentwicklung:
 
 > Schnelle Iteration braucht regelmaessige Strukturpflege.
 
@@ -76,7 +76,7 @@ Erst wird etwas sichtbar gebaut. Danach wird sortiert:
 
 Im Beispiel wurden zuerst Design- und Typografie-Probleme geloest. Danach wurde sichtbar, dass die zentrale SCSS-Datei zu gross war.
 
-Dann wurden ungenutzte Alt-Styles entfernt, zum Beispiel fuer UI-Bloecke, die im Template gar nicht mehr vorkamen:
+Dann wurden ungenutzte Alt-Styles entfernt, zum Beispiel für UI-Blöcke, die im Template gar nicht mehr vorkamen:
 
 - alte GitHub-Erklaerbox
 - alter Git-Erklaer-Toggle
@@ -96,15 +96,15 @@ Sondern regelmaessig auch:
 
 > "Ist die Struktur noch wartbar?"
 
-Eine gute Faustregel fuer den Kurs:
+Eine gute Faustregel für den Kurs:
 
-Nach mehreren kleinen UI-Aenderungen an derselben Datei kurz stoppen und pruefen:
+Nach mehreren kleinen UI-Änderungen an derselben Datei kurz stoppen und prüfen:
 
 1. Welche Verantwortung hat diese Datei?
-2. Welche Teile gehoeren eigentlich in eigene Komponenten?
-3. Welche Werte gehoeren in Design-Tokens?
+2. Welche Teile gehören eigentlich in eigene Komponenten?
+3. Welche Werte gehören in Design-Tokens?
 4. Welche Styles werden nicht mehr genutzt?
-5. Was wuerde einer neuen Person helfen, diese Stelle schnell zu verstehen?
+5. Was würde einer neuen Person helfen, diese Stelle schnell zu verstehen?
 
 ## Merksatz
 

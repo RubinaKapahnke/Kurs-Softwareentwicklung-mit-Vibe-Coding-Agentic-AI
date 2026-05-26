@@ -17,7 +17,7 @@ In dieser Übung arbeitest du:
 - **Auf dem Kurs-Repo** - du schaust dir nur die Struktur an (keine Änderungen!)
 - **Auf deinem persönlichen Repo** - du erstellst ein neues Repository
 
-> **Wichtig - diese Datei nicht bearbeiten:** Die Aufgabe ist reine Browser-Navigation. Du machst Beobachtungen auf dem Kurs-Repo (ohne es zu aendern) und erstellst dann dein eigenes Repo.
+> **Wichtig - diese Datei nicht bearbeiten:** Die Aufgabe ist reine Browser-Navigation. Du machst Beobachtungen auf dem Kurs-Repo (ohne es zu ändern) und erstellst dann dein eigenes Repo.
 
 ---
 
@@ -98,7 +98,7 @@ Fülle das Formular aus mit **DIESEN Einstellungen:**
 **Lektion 4: Screenshot machen**
 
 - Mache einen Screenshot der neu erstellten Repo-Startseite
-- Dein Repo ist jetzt in deinem GitHub-Account angelegt und bei Einstellung **Private** nur fuer dich und berechtigte Personen sichtbar.
+- Dein Repo ist jetzt in deinem GitHub-Account angelegt und bei Einstellung **Private** nur für dich und berechtigte Personen sichtbar.
 
 ---
 
@@ -140,7 +140,7 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 **Ziel:** Vibe Coding und KI-gestützte Entwicklung lernen 🚀
 ```
 
-**Optional:** Nutze die vollstaendige Vorlage: [course/01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md](../01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md)
+**Optional:** Nutze die vollständige Vorlage: [course/01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md](../01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md)
 
 **Lektion 3: Commit**
 

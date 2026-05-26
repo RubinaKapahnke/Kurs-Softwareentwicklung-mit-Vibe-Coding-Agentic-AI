@@ -25,7 +25,7 @@ Relevant für Teilnehmende mit wenig oder viel Vorerfahrung, Product Owner, Proj
 - [Markdown Modulguide](../../03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md)
 - [VS Code Modulguide](../../03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
 - [GitHub Modulguide](../../03-course-library/03-github/00-github-zusammenarbeit-modulguide.md)
-- [Git Modulguide](../../03-course-library/04-git/00-git-versionierung-modulguide.md)
+- [Git-Artikel](../../03-course-library/04-git/00-was-ist-git.md)
 - [Terminal Modulguide](../../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md)
 
 ## Kursspezifische Dateien in diesem Kursmodul
@@ -61,7 +61,7 @@ Die Weiterentwicklung von Modul 01 erfolgt kompetenzorientiert und ohne feste Ze
 - Anleitung ist als Sicherheitsnetz gedacht und kann bei Bedarf übersprungen werden.
 - Fachbegriffe werden vor der ersten Nutzung erklärt oder direkt am Einsatzpunkt geklärt.
 - Jede Lektion macht sichtbar, was jetzt getan wird, warum es jetzt dran ist und wofür es später gebraucht wird.
-- Allgemeine Lerntipps und wiederverwendbare Hilfeinhalte werden in zentrale FAQ-, Glossar- und Bedienungshilfen-Dateien ausgelagert.
+- Allgemeine Lerntipps und wiederverwendbare Hilfeinhalte werden in zentrale Artikel unter [course/03-course-library/09-kurshilfe](../../03-course-library/09-kurshilfe/00-kurshilfe-artikeluebersicht.md) ausgelagert.
 - Lernkontrolle erfolgt nur dort, wo sie didaktisch etwas prüft, als Verständnis-Check und ohne Dummy-Quizlogik.
 
 ### Git-Und Repo-Strategie
@@ -130,7 +130,7 @@ Die folgende Liste definiert die Ziel-Dateinamen entlang des festgelegten Lernpf
 
 1. 04-repository-struktur-und-arbeitskontext.md
 2. 05-git-basics-in-der-cloud.md
-3. 06-markdown-fuer-pr-und-issues.md
+3. 06-markdown-für-pr-und-issues.md
 4. 07-sammelaufgabe-block-a-cloud-grundlagen.md
 5. 08-branching-grundlagen-in-der-cloud.md
 6. 09-commit-qualitaet-und-nachrichten.md
@@ -157,7 +157,7 @@ Die folgende Zuordnung dient als verbindlicher Umbauplan. Statuswerte:
 3. 04-aufgaben.md -> 07-sammelaufgabe-block-a-cloud-grundlagen.md (übernehmen)
 4. 05-git-grundlagen.md -> 05-git-basics-in-der-cloud.md (zusammenlegen)
 5. 18-git-aufgaben.md -> 07-sammelaufgabe-block-a-cloud-grundlagen.md (zusammenlegen)
-6. 06-markdown-grundlagen.md -> 06-markdown-fuer-pr-und-issues.md (übernehmen)
+6. 06-markdown-grundlagen.md -> 06-markdown-für-pr-und-issues.md (übernehmen)
 7. 20-markdown-aufgaben.md -> 07-sammelaufgabe-block-a-cloud-grundlagen.md (zusammenlegen)
 8. 13-branches-commits-pullrequests.md -> 08-branching-grundlagen-in-der-cloud.md und 10-pull-requests-mit-vorlage.md (aufteilen)
 9. 22-git-installation-aufgaben.md -> 11-sammelaufgabe-block-b-zusammenarbeit.md (übernehmen)
@@ -175,8 +175,8 @@ Die folgende Zuordnung dient als verbindlicher Umbauplan. Statuswerte:
 21. 09-was-ist-git.md -> 05-git-basics-in-der-cloud.md (Kurzrückblick) oder archivieren als Referenz
 22. 19-vscode-speicherkonflikt-im-kurs.md -> 14-lokaler-end-to-end-workflow-mit-konfliktloesung.md (Konfliktteil übernehmen)
 23. README-template-tn-repo.md -> 04-repository-struktur-und-arbeitskontext.md (verlinken) oder als separates Hilfsdokument beibehalten
-24. anleitung-lerninhalte-zu-steps.md -> archivieren (nur Autorenhilfe)
-25. README_LERNINHALTE.md -> beibehalten (Struktur- und Sync-Hinweise)
+24. anleitung-lerninhalte-zu-steps.md -> [course/99-course-development/anleitung-lerninhalte-zu-steps.md](../../99-course-development/anleitung-lerninhalte-zu-steps.md) (nur Autorenhilfe)
+25. README_LERNINHALTE.md -> [course/99-course-development/README_LERNINHALTE.md](../../99-course-development/README_LERNINHALTE.md) (Struktur- und Sync-Hinweise)
 
 ### Priorisierte Umsetzungsreihenfolge (Start Mit 3 Dateien)
 
@@ -198,5 +198,4 @@ Empfohlene Bearbeitungslogik:
 ## Eigenständig nutzbar als
 
 Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Einstieg in KI-lesbare Projektdokumentation.
-
 

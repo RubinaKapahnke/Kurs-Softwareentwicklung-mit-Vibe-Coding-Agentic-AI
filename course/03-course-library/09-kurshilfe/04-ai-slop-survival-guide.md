@@ -29,7 +29,7 @@ Das heißt konkret:
 
 ## Eintrag 01: Lektion 01 - Zugang vor Tempo
 
-**Kontext:** [course/01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md](course/01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)
+**Kontext:** [course/01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md](../../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)
 
 In der ersten Lektion beginnt Slop-Vermeidung nicht mit Code, sondern mit einem sauberen Ausgangspunkt.
 Ein GitHub-Account ist hier nicht nur ein formaler Zugang, sondern Teil des späteren Arbeitsablaufs.

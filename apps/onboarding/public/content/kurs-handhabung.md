@@ -1,44 +1,44 @@
 ﻿## So funktioniert der Kurs im Alltag
 
-Damit du spaeter nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
+Damit du später nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
 
 ### 1. Das Kurs-Repo ist die gemeinsame Orientierung
 
 Im Kurs-Repo findest du die gemeinsame Lernlogik:
 
 - `COURSE_MILESTONES.md` zeigt dir den aktuellen Meilenstein.
-- `course/02-course-exercises/` enthaelt die zentralen Uebungsaufgaben.
-- `course/03-course-library/` erklaert die Inhalte und Befehle.
-- `course/learners/` enthaelt die zentralen Lernfortschrittsdateien.
+- `course/02-course-exercises/` enthält die zentralen Übungsaufgaben.
+- `course/03-course-library/` erklärt die Inhalte und Befehle.
+- `course/learners/` enthält die zentralen Lernfortschrittsdateien.
 
 ### 2. Dein eigenes Repo ist dein Arbeitsraum
 
 Dein eigenes Repo ist der Ort, an dem du normalerweise arbeitest:
 
-- dort entstehen deine Uebungsloesungen
+- dort entstehen deine Übungsloesungen
 - dort liegen deine Projektdateien
 - dort machst du deine Commits und Pull Requests
 
 Kurz gesagt:
 
 - **Aufgabe lesen:** im Kurs-Repo
-- **Loesung bauen:** im eigenen Repo
+- **Lösung bauen:** im eigenen Repo
 - **Fortschritt festhalten:** wieder im Kurs-Repo
 
 ### Schnell-Entscheidung: In welchem Repo arbeite ich jetzt?
 
 | Wenn du gerade ... | Dann arbeite in ... |
 |---|---|
-| den naechsten Meilenstein pruefst | Kurs-Repo |
-| eine Uebungsaufgabe liest | Kurs-Repo |
-| Code oder Dateien fuer eine Loesung erstellst | eigenem Repo |
-| committen und PR fuer deine Loesung machst | eigenem Repo |
+| den nächsten Meilenstein prüfst | Kurs-Repo |
+| eine Übungsaufgabe liest | Kurs-Repo |
+| Code oder Dateien für eine Lösung erstellst | eigenem Repo |
+| committen und PR für deine Lösung machst | eigenem Repo |
 | deinen Lernstand eintraegst | Kurs-Repo |
 
 Wenn du unsicher bist, nutze diese 3 Fragen:
 
 1. Lese ich gerade eine zentrale Vorgabe? -> Kurs-Repo
-2. Baue ich gerade eine Loesung oder ein Artefakt? -> eigenes Repo
+2. Baue ich gerade eine Lösung oder ein Artefakt? -> eigenes Repo
 3. Melde ich gerade meinen Lernstand? -> Kurs-Repo
 
 ### 3. Warum bleibt der Lernfortschritt zentral?
@@ -49,20 +49,20 @@ Das hat drei Gruende:
 
 - die Dozentin sieht den Stand aller Teilnehmenden an einem Ort
 - das Dashboard kann mit einer stabilen Datenquelle arbeiten
-- Rueckfragen, Blockaden und naechste Lektionen bleiben vergleichbar
+- Rückfragen, Blockaden und nächste Lektionen bleiben vergleichbar
 
-### 4. Typischer Ablauf bei einer Uebung
+### 4. Typischer Ablauf bei einer Übung
 
-1. Oeffne `COURSE_MILESTONES.md` und die passende Uebung im Kurs-Repo.
-2. Lies die Quellenlinks in der Uebung.
+1. Öffne `COURSE_MILESTONES.md` und die passende Übung im Kurs-Repo.
+2. Lies die Quellenlinks in der Übung.
 3. Setze die Aufgabe in deinem eigenen Repo um.
 4. Erstelle dort deinen Commit und deine PR.
 5. Trage danach deinen Stand in `course/learners/<name>/lernfortschritt_<name>.md` ein.
 
 ### 5. Typische Verwechslungen (und wie du sie vermeidest)
 
-- **Fehler:** Uebungsloesung im Kurs-Repo erstellen.
-	**Besser:** Loesung im eigenen Repo bauen, im Kurs-Repo nur den Lernstand dokumentieren.
+- **Fehler:** Übungsloesung im Kurs-Repo erstellen.
+	**Besser:** Lösung im eigenen Repo bauen, im Kurs-Repo nur den Lernstand dokumentieren.
 - **Fehler:** Direkt im eigenen Repo starten, ohne `COURSE_MILESTONES.md` zu lesen.
 	**Besser:** Immer zuerst `COURSE_MILESTONES.md` im Kurs-Repo oeffnen.
 - **Fehler:** Lernfortschritt nur lokal notieren.

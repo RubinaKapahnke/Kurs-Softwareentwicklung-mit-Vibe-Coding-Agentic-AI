@@ -1,4 +1,4 @@
-﻿# VS Code: Speicherkonflikt bei geaenderter Datei (Compare/Overwrite)
+﻿# VS Code: Speicherkonflikt bei geänderter Datei (Compare/Overwrite)
 
 Wenn VS Code meldet, dass eine Datei nicht gespeichert werden kann, liegt oft ein sogenannter Speicherkonflikt vor.
 
@@ -10,11 +10,11 @@ Typische Meldung:
 Ein Speicherkonflikt bedeutet:
 - Deine geoeffnete Editor-Version und die Version auf der Festplatte sind nicht mehr gleich.
 
-Das kann passieren, wenn waehrend deiner Bearbeitung zum Beispiel:
+Das kann passieren, wenn während deiner Bearbeitung zum Beispiel:
 - ein `git pull`/Branch-Wechsel die Datei aktualisiert
 - ein Skript/Tool die Datei neu geschrieben hat
 - dieselbe Datei in einem zweiten Editor-Fenster gespeichert wurde
-- ein Merge/Rebase/Autoformatierung die Datei im Hintergrund geaendert hat
+- ein Merge/Rebase/Autoformatierung die Datei im Hintergrund geändert hat
 
 ## Was bedeuten die Buttons?
 
@@ -24,7 +24,7 @@ Das kann passieren, wenn waehrend deiner Bearbeitung zum Beispiel:
 
 - **Overwrite**
   - Ueberschreibt die neuere Datei auf der Festplatte mit deiner aktuellen Editor-Version.
-  - Das kann fremde/neuere Aenderungen loeschen.
+  - Das kann fremde/neuere Änderungen loeschen.
 
 ## Wichtig in der Compare-Ansicht: Revert Block
 
@@ -34,7 +34,7 @@ In der Diff-/Compare-Ansicht zeigt VS Code oft nur den Pfeil **Revert Block**.
 - Wenn du den gruenden Inhalt behalten willst, **nicht** auf Revert Block klicken.
 
 Sicheres Vorgehen:
-1. Diff nur zum Pruefen verwenden.
+1. Diff nur zum Prüfen verwenden.
 2. Zur normalen Datei-Ansicht zurueckgehen.
 3. Dort speichern.
 
@@ -44,18 +44,18 @@ Falls Revert Block versehentlich geklickt wurde:
 ## Sicheres Vorgehen in 4 Lektionen
 
 1. Klicke zuerst auf **Compare**.
-2. Pruefe beide Seiten und entscheide, welche Zeilen behalten werden muessen.
+2. Prüfe beide Seiten und entscheide, welche Zeilen behalten werden muessen.
 3. Uebernimm fehlende Zeilen in die gewuenschte Endversion.
 4. Speichere danach normal.
 
-Nur wenn du sicher bist, dass ausschliesslich deine Version gueltig ist, nutze **Overwrite**.
+Nur wenn du sicher bist, dass ausschliesslich deine Version gültig ist, nutze **Overwrite**.
 
 ## Fehlerbehandlung: Wenn Speichern trotzdem weiter fehlschlaegt
 
 Wenn die Meldung auch nach Compare/Overwrite wiederkommt, sichere zuerst deinen Text und arbeite dann mit einem frischen Datei-Tab weiter.
 
 1. Im betroffenen Tab alles markieren und kopieren.
-2. Eine neue Datei oeffnen, Inhalt einfuegen und als Backup speichern (z. B. `COURSE_MILESTONES_backup_local.md`).
+2. Eine neue Datei öffnen, Inhalt einfuegen und als Backup speichern (z. B. `COURSE_MILESTONES_backup_local.md`).
 3. Den problematischen Tab schliessen.
 4. Die Originaldatei neu aus dem Explorer oeffnen.
 5. Inhalt aus der Backup-Datei in die Originaldatei uebernehmen.
@@ -70,7 +70,7 @@ Damit vermeidest du Datenverlust, auch wenn der offene Editor-Stand veraltet war
 
 ## Bezug zu Git-Workflow
 
-Nach einem Speicherkonflikt kurz im Terminal pruefen:
+Nach einem Speicherkonflikt kurz im Terminal prüfen:
 
 ```bash
 git status

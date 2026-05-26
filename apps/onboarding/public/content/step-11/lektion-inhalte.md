@@ -1,4 +1,4 @@
-<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 11-terminal-und-shell-grundlagen.md -->
 
 # Lektion 11: Terminal- und Shell-Grundlagen
@@ -556,7 +556,7 @@ cd course
 ls
 
 # 5. Wechsle in einen Unterordner
-cd uebungen
+cd übungen
 
 # 6. Schau dir Dateien an
 ls -la

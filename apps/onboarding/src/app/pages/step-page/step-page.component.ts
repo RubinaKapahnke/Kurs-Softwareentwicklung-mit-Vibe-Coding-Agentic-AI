@@ -233,11 +233,11 @@ export class StepPageComponent {
     }
 
     if (this.showRepoExperienceQuestion() || (this.isAccountChoiceStep() && (this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced'))) {
-      return 'Unter der Lektion folgt noch deine Auswahl fuer diesen Lektion.';
+      return 'Unter der Lektion folgt noch deine Auswahl für diesen Lektion.';
     }
 
     if (this.isCloneStep()) {
-      return 'Unter der Lektion folgen noch die naechsten Kursschritte.';
+      return 'Unter der Lektion folgen noch die nächsten Kursschritte.';
     }
 
     return 'Unter der Lektion folgen noch weitere Hinweise.';

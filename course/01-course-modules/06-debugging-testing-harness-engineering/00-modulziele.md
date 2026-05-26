@@ -1,4 +1,4 @@
-# Kursmodul 06: Debugging, Testing & Harness Engineering
+﻿# Kursmodul 06: Debugging, Testing & Harness Engineering
 
 ## Kurzbeschreibung
 
@@ -23,12 +23,12 @@ Relevant für QA, Entwickler\*innen, Support, Operations, Product Owner, Data Te
 ## Quellen aus der Lernmaterial-Sammlung
 
 - Noch als eigenes Lernmaterial anzulegen: Testing und Harness Engineering.
-- Übergangsweise relevant: [Terminal Modulguide](../../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md), [Git Befehlsübersicht](../../03-course-library/04-git/03-git-befehlsuebersicht.md)
+- Übergangsweise relevant: [Terminal Modulguide](../../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md), [Git Befehlsuebersicht](../../03-course-library/04-git/03-git-befehlsuebersicht.md)
 
 ## Abschlussnachweis
 
 Der Baustein gilt als abgeschlossen, wenn ein erwartetes Verhalten oder ein Fehler reproduzierbar geprüft und dokumentiert wurde.
 
-## Eigenständig nutzbar als
+## Eigenstaendig nutzbar als
 
 Debugging-Workshop, Testing-Grundlagenkurs, QA-Enablement oder AI-Evaluation-Einstieg.

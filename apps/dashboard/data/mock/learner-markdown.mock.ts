@@ -1,4 +1,4 @@
-export interface LearnerMarkdownInput {
+﻿export interface LearnerMarkdownInput {
   learnerId: string;
   learnerName: string;
   markdown: string;
@@ -34,7 +34,7 @@ export const LEARNER_MARKDOWN_INPUTS: LearnerMarkdownInput[] = [
 ## Fragen an die Gruppe
 - Wie priorisiere ich Git-Routine und Prompting parallel?
 
-## Individuelle Lernwuensche
+## Individuelle Lernwünsche
 - Tiefere Git-Review-Praxis
 - Mehr API-Verstaendnis in Angular
 `,
@@ -74,8 +74,8 @@ export const LEARNER_MARKDOWN_INPUTS: LearnerMarkdownInput[] = [
 ## Fragen an die Gruppe
 - Wie formuliere ich besseren Strukturkontext?
 
-## Individuelle Lernwuensche
-- Teststrategie fuer Angular Components
+## Individuelle Lernwünsche
+- Teststrategie für Angular Components
 - Tiefere Git-Review-Praxis
 `,
   },
@@ -108,8 +108,8 @@ export const LEARNER_MARKDOWN_INPUTS: LearnerMarkdownInput[] = [
 ## Fragen an die Gruppe
 - Wann nutze ich git stash statt eines neuen Branches?
 
-## Individuelle Lernwuensche
-- Mehr Architekturbeispiele fuer Angular
+## Individuelle Lernwünsche
+- Mehr Architekturbeispiele für Angular
 - Praxis mit echten Projekten
 `,
   },
@@ -146,10 +146,10 @@ export const LEARNER_MARKDOWN_INPUTS: LearnerMarkdownInput[] = [
 - [ ] Meilenstein 3 Übung 1 abschliessen
 
 ## Fragen an die Gruppe
-- Wie strukturiere ich Kontext fuer komplexere Aufgaben?
+- Wie strukturiere ich Kontext für komplexere Aufgaben?
 - Was ist der Unterschied zwischen System-Prompt und User-Prompt?
 
-## Individuelle Lernwuensche
+## Individuelle Lernwünsche
 - Tiefere Git-Review-Praxis
 - Pair-Review mit gleichem Lernstand
 `,
@@ -172,7 +172,7 @@ export const LEARNER_MARKDOWN_INPUTS: LearnerMarkdownInput[] = [
 ## Lernjournal
 
 ### 2026-04-27
-- **Was ich gemacht habe:** Meilenstein 3 abgeschlossen, PRD fuer eigenes Projekt entworfen
+- **Was ich gemacht habe:** Meilenstein 3 abgeschlossen, PRD für eigenes Projekt entworfen
 - **Was gut lief:** PRD-Struktur war klar
 - **Wo ich hänge:** 
 - **Nächster Schritt:** Mit Meilenstein 4 starten
@@ -187,11 +187,11 @@ export const LEARNER_MARKDOWN_INPUTS: LearnerMarkdownInput[] = [
 - [ ] Architecture-Foundations-Modul abschliessen
 
 ## Fragen an die Gruppe
-- Welche Datenbank empfehlt ihr fuer ein Angular-Projekt mit wenig Backend?
+- Welche Datenbank empfehlt ihr für ein Angular-Projekt mit wenig Backend?
 
-## Individuelle Lernwuensche
-- Teststrategie fuer Angular Components
-- Mehr Architekturbeispiele fuer Angular
+## Individuelle Lernwünsche
+- Teststrategie für Angular Components
+- Mehr Architekturbeispiele für Angular
 `,
   },
 ];

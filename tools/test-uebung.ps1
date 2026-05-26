@@ -1,5 +1,5 @@
-# test-uebung.ps1
-# Prueft eine einzelne Uebungsdatei gegen den Uebungsstandard.
+﻿# test-uebung.ps1
+# Prüft eine einzelne Übungsdatei gegen den Übungsstandard.
 #
 # Aufruf:
 #   .\tools\test-uebung.ps1 -File "course/02-course-exercises/meilenstein-02-uebung-01.md"
@@ -63,7 +63,7 @@ for ($i = 0; $i -lt $lines.Count; $i++) {
 
 foreach ($idx in $aufgabenIndices) {
     $aufgabenTitel = $lines[$idx].Trim()
-    # Suche Quelle: innerhalb der naechsten 60 Zeilen (bis zur naechsten Aufgabe oder ---) 
+    # Suche Quelle: innerhalb der nächsten 60 Zeilen (bis zur nächsten Aufgabe oder ---) 
     $nextStop = [Math]::Min($idx + 60, $lines.Count - 1)
     $hasQuelle = $false
     for ($j = $idx + 1; $j -le $nextStop; $j++) {
@@ -129,7 +129,7 @@ $prefilled = ([regex]::Matches($abgabeKriterienBlock, '- \[x\]')).Count
 Test-Check `
     -Name "Keine vorbefuellten [x]-Checkboxen in Abgabe/Lernerfolgs-Kriterien ($prefilled gefunden)" `
     -Condition ($prefilled -eq 0) `
-    -Hint "Checkboxen in Abgabe und Lernerfolgs-Kriterien muessen '- [ ]' sein (nicht '- [x]') - Lernende sollen selbst abhaken"
+    -Hint "Checkboxen in Abgabe und Lernerfolgs-Kriterien müssen '- [ ]' sein (nicht '- [x]') - Lernende sollen selbst abhaken"
 
 # --- 8. Keine Zeitangaben ---
 $zeitPattern = '\d+[\s-]+\d*\s*(Minuten|Stunden|min\b)|Zeitbox|empfohlen:\s*\d'
@@ -169,11 +169,11 @@ if ($content -match 'git checkout -b') {
     Test-Check `
         -Name '"Tipp - falls dein letzter PR nicht gemerged ist"-Block vorhanden' `
         -Condition ($content -match 'Tipp.*letzter PR|letzter PR.*nicht gemerged') `
-        -Hint 'Vor dem ersten "git checkout -b" muss ein Blockzitat mit Option A + Option B fuer unvergegten PR stehen'
+        -Hint 'Vor dem ersten "git checkout -b" muss ein Blockzitat mit Option A + Option B für unvergegten PR stehen'
 }
 # --- Ausgabe ---
 Write-Host ""
-Write-Host "Pruefe: $File" -ForegroundColor Cyan
+Write-Host "Prüfe: $File" -ForegroundColor Cyan
 Write-Host ("-" * 70)
 foreach ($r in $results) {
     $color = if ($r.Status -eq "OK  ") { "Green" } else { "Red" }

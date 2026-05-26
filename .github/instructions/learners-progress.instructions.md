@@ -4,7 +4,7 @@ applyTo: "course/learners/**"
 
 # Lernfortschritt-Standard: Struktur und Regeln
 
-Diese Datei bleibt bewusst im Kurs-Repo unter `course/learners/`. Sie ist die kanonische Quelle fuer Kursueberblick, Betreuung und Dashboard. Uebungsartefakte duerfen im eigenen Repo liegen, der Lernfortschritt selbst wird hier zentral gepflegt.
+Diese Datei bleibt bewusst im Kurs-Repo unter `course/learners/`. Sie ist die kanonische Quelle für Kursueberblick, Betreuung und Dashboard. Übungsartefakte dürfen im eigenen Repo liegen, der Lernfortschritt selbst wird hier zentral gepflegt.
 
 ## Pflichtstruktur jeder `lernfortschritt_<name>.md`
 
@@ -20,7 +20,7 @@ Diese Datei bleibt bewusst im Kurs-Repo unter `course/learners/`. Sie ist die ka
 
 ## Lernjournal
 
-### DD.MM. (Uebung XX – Titel)
+### DD.MM. (Übung XX – Titel)
 **Was habe ich heute gemacht?**
 ...
 
@@ -36,7 +36,7 @@ Diese Datei bleibt bewusst im Kurs-Repo unter `course/learners/`. Sie ist die ka
 
 ## Zusatzdatei pro Person
 
-Rueckfragen, freie Notizen, Feedback und Lernwuensche werden in einer separaten Datei gepflegt:
+Rückfragen, freie Notizen, Feedback und Lernwünsche werden in einer separaten Datei gepflegt:
 
 `lernbegleitnotizen_<name>.md`
 
@@ -45,9 +45,9 @@ Rueckfragen, freie Notizen, Feedback und Lernwuensche werden in einer separaten 
 | Regel | Detail |
 |:---|:---|
 | Abgabe- und Lernerfolgs-Kriterien | Stehen **direkt unter den passenden Journaleintrag** (nicht am Dateiende) |
-| Repo-Trennung | Loesungsartefakte duerfen im eigenen Repo liegen; diese Datei bleibt trotzdem zentral unter `course/learners/` |
+| Repo-Trennung | Lösungsartefakte dürfen im eigenen Repo liegen; diese Datei bleibt trotzdem zentral unter `course/learners/` |
 | `## Nächste kleine Lektion` | **Verboten als eigener Abschnitt** – die nächste Lektion steht im letzten Journaleintrag |
-| Journaleinträge | Format `### DD.MM. (Uebung XX – Titel)` |
+| Journaleinträge | Format `### DD.MM. (Übung XX – Titel)` |
 | Rueckfragen/Notizen/Feedback/Lernwuensche | Stehen in `lernbegleitnotizen_<name>.md` im gleichen Ordner |
 
 ## Automatischer Test

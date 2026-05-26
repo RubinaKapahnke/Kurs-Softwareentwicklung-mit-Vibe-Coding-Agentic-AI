@@ -8,10 +8,12 @@ const repoRoot = path.resolve(appRoot, '..', '..');
 
 const sourceCatalog = path.join(repoRoot, 'course', 'catalog', 'courses.catalog.json');
 const sourceModules = path.join(repoRoot, 'course', '01-course-modules');
+const sourceLibrary = path.join(repoRoot, 'course', '03-course-library');
 
 const targetRoot = path.join(appRoot, 'public', 'content');
 const targetCatalogDir = path.join(targetRoot, 'catalog');
 const targetModulesDir = path.join(targetRoot, 'modules');
+const targetLibraryDir = path.join(targetRoot, 'library');
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -41,6 +43,20 @@ function copyDir(source, target) {
 
     copyFile(sourcePath, targetPath);
   }
+}
+
+function toPosixPath(filePath) {
+  return filePath.split(path.sep).join('/');
+}
+
+function titleFromMarkdown(sourcePath, fallback) {
+  const markdown = fs.readFileSync(sourcePath, 'utf8');
+  const heading = markdown
+    .split(/\r?\n/)
+    .map((line) => line.match(/^#\s+(.+)$/)?.[1]?.trim())
+    .find(Boolean);
+
+  return heading ?? fallback.replace(/\.md$/i, '');
 }
 
 function syncCatalog() {
@@ -88,9 +104,56 @@ function syncModules() {
   }
 }
 
+function collectLibraryEntries() {
+  if (!fs.existsSync(sourceLibrary)) {
+    throw new Error(`Library root not found: ${sourceLibrary}`);
+  }
+
+  const entries = [];
+  const moduleDirs = fs
+    .readdirSync(sourceLibrary, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name, 'de'));
+
+  for (const moduleDir of moduleDirs) {
+    const sourceModuleRoot = path.join(sourceLibrary, moduleDir.name);
+    const files = fs
+      .readdirSync(sourceModuleRoot, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.md'))
+      .sort((a, b) => a.name.localeCompare(b.name, 'de'));
+
+    for (const file of files) {
+      const sourcePath = path.join(sourceModuleRoot, file.name);
+      const relativePath = toPosixPath(path.relative(sourceLibrary, sourcePath));
+
+      entries.push({
+        moduleId: moduleDir.name,
+        title: titleFromMarkdown(sourcePath, file.name),
+        filename: file.name,
+        contentPath: `/content/library/${relativePath}`,
+        routePath: `/bibliothek/${relativePath.replace(/\.md$/i, '')}`
+      });
+    }
+  }
+
+  return entries;
+}
+
+function syncLibrary() {
+  copyDir(sourceLibrary, targetLibraryDir);
+  const index = {
+    generatedFrom: 'course/03-course-library',
+    entries: collectLibraryEntries()
+  };
+
+  ensureDir(targetLibraryDir);
+  fs.writeFileSync(path.join(targetLibraryDir, 'library-index.json'), `${JSON.stringify(index, null, 2)}\n`, 'utf8');
+}
+
 function run() {
   syncCatalog();
   syncModules();
+  syncLibrary();
   console.log('Learning content synced to public/content.');
 }
 

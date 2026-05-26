@@ -29,7 +29,7 @@ Wichtig für v1:
  - Kursüberblick
  - Weitere Kurse (im Aufbau)
 3. Sichtbarer Hinweis, dass weitere Kurse/Vertiefungsmodule aktuell noch nicht verfügbar sind.
-4. Modul-Flow fuer das Modul Onboarding mit Kernschritten bis zum lokalen Clone.
+4. Modul-Flow für das Modul Onboarding mit Kernschritten bis zum lokalen Clone.
 5. Lektion 2 fragt Vorerfahrung ab und bietet je nach Antwort unterschiedliche Folgepfade/Hinweise.
 6. Bei bestehendem GitHub-Account: verpflichtender Hinweis inkl. Pflicht-Checkbox,
  dass der Account im geteilten Repo für andere sichtbar sein kann.

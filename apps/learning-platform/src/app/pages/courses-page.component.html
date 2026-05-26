@@ -1,8 +1,8 @@
-<section class="page-shell">
+﻿<section class="page-shell">
   <header class="hero">
     <p class="eyebrow">Learning Platform</p>
     <h1>Kurse und Module</h1>
-    <p class="lead">Diese neue App ist die generische Basis fuer alle Kurse. Inhalte kommen datengetrieben aus dem Kurskatalog.</p>
+    <p class="lead">Diese neue App ist die generische Basis für alle Kurse. Inhalte kommen datengetrieben aus dem Kurskatalog.</p>
     <div class="hero-meta" aria-label="Kursstatus">
       <p><span>{{ liveCourses().length }}</span> aktiv</p>
       <p><span>{{ comingSoonCourses().length }}</span> in Vorbereitung</p>
@@ -25,7 +25,7 @@
         <div class="grid">
           @for (course of liveCourses(); track course.id) {
             <article class="card">
-              <p class="status live">Jetzt verfuegbar</p>
+              <p class="status live">Jetzt verfügbar</p>
               <h3>{{ course.title }}</h3>
               <p class="meta">Kurs-ID: {{ course.id }}</p>
               <p class="progress" [class.progress-warning]="hasProgressWarning(course)">Fortschritt: {{ progressLabel(course) }}</p>
@@ -35,7 +35,7 @@
                 </div>
               }
               <div class="card-actions">
-                <a class="cta" [routerLink]="['/kurse', course.id, 'module', course.defaultModuleId]">Standardmodul oeffnen</a>
+                <a class="cta" [routerLink]="['/kurse', course.id, 'module', course.defaultModuleId]">Standardmodul öffnen</a>
                 @if (nextOpenStepId(course)) {
                   <a class="cta cta-secondary" [routerLink]="['/kurse', course.id, 'module', course.defaultModuleId, 'step', nextOpenStepId(course)]">Weiterlernen</a>
                 }

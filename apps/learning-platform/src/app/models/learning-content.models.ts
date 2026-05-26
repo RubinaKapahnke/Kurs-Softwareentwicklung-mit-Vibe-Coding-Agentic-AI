@@ -1,4 +1,4 @@
-export type CourseStatus = 'live' | 'coming-soon' | 'archived';
+﻿export type CourseStatus = 'live' | 'coming-soon' | 'archived';
 
 export interface CourseCatalogEntry {
   id: string;
@@ -37,7 +37,7 @@ export interface ModuleMeta {
 }
 
 export interface StepManifestSection {
-  type: 'lesson' | 'tasks' | 'uebung';
+  type: 'lesson' | 'tasks' | 'übung';
   file: string;
 }
 

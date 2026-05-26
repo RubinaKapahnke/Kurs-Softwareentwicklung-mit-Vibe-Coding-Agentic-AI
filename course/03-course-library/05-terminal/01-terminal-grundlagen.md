@@ -20,8 +20,8 @@ Das Terminal (auch Konsole oder Kommandozeile genannt) ist ein Text-basiertes We
 <!-- Ergaenzungen:
 [explorer .] offnet den aktuelle Ortner
 [ni] NewItem erstellt eine Datei
-[del *.txt -wh] (-WhatIf) Listet alle .txt-Dateien auf, die geloescht wuerden, ohne sie wirklich zu entfernen.
-[code . -n] NewWindow oeffnet VS Code im neuen Fenster
+[del *.txt -wh] (-WhatIf) Listet alle .txt-Dateien auf, die gelöscht würden, ohne sie wirklich zu entfernen.
+[code . -n] NewWindow öffnet VS Code im neuen Fenster
  -->
 
 ## Warum ist das Terminal ideal für Vibe Coding?

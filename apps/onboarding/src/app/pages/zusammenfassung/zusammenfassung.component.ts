@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+﻿import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,7 +27,7 @@ export class ZusammenfassungComponent {
   readonly nextStepsUrl = 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/00-course-guides/COURSE_MILESTONES.md';
   readonly exercisesReadmeUrl = 'https://github.com/RubinaKapahnke/vibe-coding-0426/blob/main/course/02-course-exercises/README_UEBUNGEN.md';
   readonly vscodeCourseEntryHints = [
-    'Oeffne das Kurs-Repo in VS Code.',
+    'Öffne das Kurs-Repo in VS Code.',
     'Druecke Strg+P (Windows) oder Cmd+P (Mac).',
     'Tippe course/00-course-guides/COURSE_MILESTONES.md und bestaetige mit Enter.'
   ] as const;

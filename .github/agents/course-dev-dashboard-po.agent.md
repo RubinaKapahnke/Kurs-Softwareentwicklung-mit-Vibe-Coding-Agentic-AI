@@ -1,5 +1,5 @@
----
-description: "Use when: Dashboard-Anforderungen definieren, User Stories schreiben, PRD dashboard aktualisieren, was soll das Dashboard koennen, neue Feature-Idee fuer Progress-Hub, feature backlog priorisieren, Akzeptanzkriterien festlegen, Anforderungsanalyse dashboard, dashboard product owner, dashboard po, Progress-Hub planen"
+﻿---
+description: "Use when: Dashboard-Anforderungen definieren, User Stories schreiben, PRD dashboard aktualisieren, was soll das Dashboard können, neue Feature-Idee für Progress-Hub, feature backlog priorisieren, Akzeptanzkriterien festlegen, Anforderungsanalyse dashboard, dashboard product owner, dashboard po, Progress-Hub planen"
 name: "Dashboard PO (course-dev)"
 tools: [read, search, edit, todo]
 argument-hint: "Was soll am Dashboard analysiert, geplant oder dokumentiert werden?"

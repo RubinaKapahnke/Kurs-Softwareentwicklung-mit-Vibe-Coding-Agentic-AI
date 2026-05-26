@@ -10,7 +10,7 @@
       <nav class="navbar-menu">
         <a href="#inhalte" class="navbar-link" (click)="scrollTo($event, 'inhalte')">Inhalte</a>
         <a href="#ablauf" class="navbar-link" (click)="scrollTo($event, 'ablauf')">Ablauf</a>
-        <a href="#fuer-wen" class="navbar-link" (click)="scrollTo($event, 'fuer-wen')">Für wen?</a>
+        <a href="#für-wen" class="navbar-link" (click)="scrollTo($event, 'für-wen')">Für wen?</a>
         @if (selectedCourseIsLive()) {
           <a mat-flat-button href="https://www.knoot-academy.de/kontakt" target="_blank" rel="noopener" class="navbar-cta ui-primary-button-light">Kontakt aufnehmen</a>
         } @else {
@@ -140,7 +140,7 @@
   </div>
 
   <!-- ── Für wen ─────────────────────────────────────────────── -->
-  <div id="fuer-wen">
+  <div id="für-wen">
     <app-course-audience-section
       [selectedTargetAudience]="selectedTargetAudience()"
     ></app-course-audience-section>

@@ -1,5 +1,5 @@
 ﻿# test-lernfortschritt.ps1
-# Prueft alle lernfortschritt_*.md-Dateien auf Pflichtstruktur gemaess AGENTS.md.
+# Prüft alle lernfortschritt_*.md-Dateien auf Pflichtstruktur gemaess AGENTS.md.
 #
 # Aufruf (vom Repo-Root):
 #   .\tools\test-lernfortschritt.ps1
@@ -48,11 +48,11 @@ foreach ($file in $lernFiles) {
             -Condition ($content -match [regex]::Escape($s.Heading) -or $content -match 'Das m.{1,4}chte ich noch lernen') `
             -Hint $s.Hint
     }
-    # --- Kein "## Naechster kleiner Schritt"-Abschnitt (verboten laut AGENTS.md) ---
+    # --- Kein "## Nächster kleiner Schritt"-Abschnitt (verboten laut AGENTS.md) ---
     Test-Check `
-        -Name "Kein verbotener 'Naechster kleiner Schritt'-Abschnitt" `
-        -Condition ($content -notmatch '(?m)^## .*(N.chster|naechster) kleiner Schritt') `
-        -Hint "'## Naechster kleiner Schritt' ist verboten - naechster Schritt gehoert in den letzten Journaleintrag"
+        -Name "Kein verbotener 'Nächster kleiner Schritt'-Abschnitt" `
+        -Condition ($content -notmatch '(?m)^## .*(N.chster|nächster) kleiner Schritt') `
+        -Hint "'## Nächster kleiner Schritt' ist verboten - nächster Schritt gehört in den letzten Journaleintrag"
 
     # --- Lernjournal hat mindestens einen Eintrag (### DD.MM.) ---
     $journalEntries = ([regex]::Matches($content, '### \d{2}\.\d{2}\.?')).Count
@@ -64,7 +64,7 @@ foreach ($file in $lernFiles) {
 
     # --- Ausgabe ---
     Write-Host ""
-    Write-Host "Pruefe: $($file.Name)" -ForegroundColor Cyan
+    Write-Host "Prüfe: $($file.Name)" -ForegroundColor Cyan
     Write-Host ("-" * 70)
     foreach ($r in $results) {
         $color = if ($r.Status -eq "OK  ") { "Green" } else { "Red" }

@@ -27,7 +27,7 @@ Braucht: Überblick über Meilenstein-Fortschritt aller Teilnehmenden, Hinweise 
 Braucht: Eigenen Lernstand auf einen Blick, klare nächste Lektionen, Vergleich mit Gesamtgruppe (ohne Druck), Motivation durch sichtbaren Fortschritt.
 
 **[KI-Agent]** – Automatisierte Agents, die Daten lesen und schreiben  
-Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form, eindeutige IDs fuer Lernende/Meilensteine/Uebungen, TypeScript-Interfaces im Strict Mode.
+Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form, eindeutige IDs für Lernende/Meilensteine/Uebungen, TypeScript-Interfaces im Strict Mode.
 
 ## Datenquellen im Repo
 
@@ -44,9 +44,9 @@ Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form
 
 ## Komponenten- und Style-Governance
 
-- Page-/Feature-Komponenten bleiben Orchestratoren fuer Datenfluss, Layout und Events; wiederholte UI-Muster oder fachliche Teilbereiche werden in kleinere Komponenten oder Services ausgelagert.
-- Bestehende Komponenten, Angular Material, Datenmodelle und Utilities zuerst pruefen und wiederverwenden, bevor neue Komponenten entstehen.
+- Page-/Feature-Komponenten bleiben Orchestratoren für Datenfluss, Layout und Events; wiederholte UI-Muster oder fachliche Teilbereiche werden in kleinere Komponenten oder Services ausgelagert.
+- Bestehende Komponenten, Angular Material, Datenmodelle und Utilities zuerst prüfen und wiederverwenden, bevor neue Komponenten entstehen.
 - Neue Komponenten nur anlegen, wenn sie eine klare Verantwortung haben und absehbar wiederverwendet werden oder wenn sie eine sonst monolithische Datei deutlich entlasten.
-- Keine Komponenten fuer einmalige Kleinst-Markups erzeugen. Wenn Wiederverwendung unklar ist, erst Optionen und Folgen benennen und nach Freigabe fragen.
-- Styles duerfen nicht wuchern: keine hardcodierten Komponentenfarben, kein `!important`, keine Inline-Styles, keine direkten `.mdc-*` Overrides. Gemeinsame Styles ueber Tokens, Material-Variablen oder bestehende Utilities loesen.
+- Keine Komponenten für einmalige Kleinst-Markups erzeugen. Wenn Wiederverwendung unklar ist, erst Optionen und Folgen benennen und nach Freigabe fragen.
+- Styles dürfen nicht wuchern: keine hardcodierten Komponentenfarben, kein `!important`, keine Inline-Styles, keine direkten `.mdc-*` Overrides. Gemeinsame Styles über Tokens, Material-Variablen oder bestehende Utilities loesen.
 

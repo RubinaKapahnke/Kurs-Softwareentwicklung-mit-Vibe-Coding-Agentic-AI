@@ -59,7 +59,7 @@ Kerninhalt:
 - Entscheidungskriterien für die eigene Idee
 - passende Erwartungen pro Stufe festlegen
 
-### 04-prd-grundstruktur-fuer-den-kurs.md
+### 04-prd-grundstruktur-für-den-kurs.md
 
 Lernziel:
 Teilnehmende können eine erste, nutzbare Produktbeschreibung im PRD-Format erstellen.

@@ -1,5 +1,5 @@
 ﻿export interface StepManifestSection {
-  type: 'lesson' | 'tasks' | 'uebung';
+  type: 'lesson' | 'tasks' | 'übung';
   file: string;
 }
 

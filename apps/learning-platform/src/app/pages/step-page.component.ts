@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+﻿import { CommonModule } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -68,7 +68,7 @@ export class StepPageComponent {
     const stepId = this.stepId();
 
     if (!courseId || !moduleId || !Number.isInteger(stepId) || stepId < 1) {
-      this.error.set('Ungueltige URL fuer Kurs/Modul/Schritt.');
+      this.error.set('Ungueltige URL für Kurs/Modul/Schritt.');
       this.loading.set(false);
       return;
     }
@@ -98,7 +98,7 @@ export class StepPageComponent {
             return;
           }
 
-          this.error.set('Schrittdaten konnten nicht geladen werden. Bitte spaeter erneut versuchen.');
+          this.error.set('Schrittdaten konnten nicht geladen werden. Bitte später erneut versuchen.');
         this.loading.set(false);
       }
     });

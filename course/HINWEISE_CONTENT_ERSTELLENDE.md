@@ -72,7 +72,6 @@ Diese Übersicht hilft dir zu verstehen, wo dein Markdown-Inhalt im Kurs-Tool er
 
 - [AGENTS.md](../AGENTS.md)
 - [.github/instructions/onboarding.instructions.md](../.github/instructions/onboarding.instructions.md)
-- [course/01-course-modules/01-Onboarding-in-den-Kurs/README_LERNINHALTE.md](./01-course-modules/01-Onboarding-in-den-Kurs/README_LERNINHALTE.md)
-- [course/01-course-modules/01-Onboarding-in-den-Kurs/anleitung-lerninhalte-zu-steps.md](./01-course-modules/01-Onboarding-in-den-Kurs/anleitung-lerninhalte-zu-steps.md)
-
+- [course/99-course-development/README_LERNINHALTE.md](./99-course-development/README_LERNINHALTE.md)
+- [course/99-course-development/anleitung-lerninhalte-zu-steps.md](./99-course-development/anleitung-lerninhalte-zu-steps.md)
 

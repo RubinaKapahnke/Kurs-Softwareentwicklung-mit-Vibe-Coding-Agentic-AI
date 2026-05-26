@@ -7,33 +7,33 @@ Allgemeine Quelle:
 
 ## Was wir im Modul 01 konkret brauchen
 
-Im ersten Kursmodul ist Version Control kein Nebenthema, sondern Sicherheitsnetz fuer deinen Lernfortschritt.
+Im ersten Kursmodul ist Version Control kein Nebenthema, sondern Sicherheitsnetz für deinen Lernfortschritt.
 
-Du nutzt Git/GitHub hier vor allem fuer:
+Du nutzt Git/GitHub hier vor allem für:
 - nachvollziehbare Lernschritte (kleine Commits statt grosser Spruenge)
-- sichere Zusammenarbeit ueber Branches und Pull Requests
-- klare Dokumentation, die andere Menschen und KI lesen koennen
+- sichere Zusammenarbeit über Branches und Pull Requests
+- klare Dokumentation, die andere Menschen und KI lesen können
 
-## Praktische Leitplanken fuer Einsteiger:innen
+## Praktische Leitplanken für Einsteiger:innen
 
 1. Arbeite in kleinen, klar benannten Lektionen.
-2. Pruefe vor jedem Push kurz mit `git status`.
+2. Prüfe vor jedem Push kurz mit `git status`.
 3. Nutze Commit-Nachrichten, die den Zweck beschreiben.
-4. Halte `main` stabil und arbeite fuer Aufgaben in einem Branch.
+4. Halte `main` stabil und arbeite für Aufgaben in einem Branch.
 
 ## Was von GitOps hier schon mitgedacht wird
 
-GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du bereits Grundprinzipien, die spaeter wichtig werden:
+GitOps selbst ist in Modul 01 noch nicht das Umsetzungsziel. Trotzdem lernst du bereits Grundprinzipien, die später wichtig werden:
 
-- Git als verbindliche Quelle fuer den gewuenschten Stand
-- Aenderungen ueber Review-Prozess statt Direkt-Eingriffe
-- reproduzierbare Aenderungen durch klare Historie
+- Git als verbindliche Quelle für den gewuenschten Stand
+- Änderungen über Review-Prozess statt Direkt-Eingriffe
+- reproduzierbare Änderungen durch klare Historie
 
 ## Bruecke in spaetere Module
 
-Wenn du spaeter Deployment- und Betriebsmodule bearbeitest, wird aus dem heutigen Git-Workflow ein technischer Betriebsworkflow.
+Wenn du später Deployment- und Betriebsmodule bearbeitest, wird aus dem heutigen Git-Workflow ein technischer Betriebsworkflow.
 
 Merksatz:
 - **Heute:** "Ich versioniere meinen Arbeitsstand sauber."
-- **Spaeter:** "Wir steuern Systemzustaende ueber versionierte Konfiguration."
+- **Später:** "Wir steuern Systemzustaende über versionierte Konfiguration."
 

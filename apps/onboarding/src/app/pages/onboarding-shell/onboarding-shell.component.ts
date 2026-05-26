@@ -38,7 +38,7 @@ export class OnboardingShellComponent {
   readonly progressPercent = computed(() => this.state.getProgressPercent());
   readonly completedCount = computed(() => this.state.getCompletedCount());
 
-  /** Liste aller Lektionen fuer die Navigation */
+  /** Liste aller Lektionen für die Navigation */
   readonly allSteps = ONBOARDING_STEPS;
   readonly summaryLink = computed(() => ['/kurse', this.currentCourseId(), 'onboarding', 'zusammenfassung']);
 

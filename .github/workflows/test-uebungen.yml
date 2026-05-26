@@ -1,4 +1,4 @@
-name: Test Uebungen
+﻿name: Test Übungen
 
 on:
   pull_request:
@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Uebungen gegen Standard pruefen
+      - name: Übungen gegen Standard prüfen
         shell: pwsh
         run: .\tools\test-alle-uebungen.ps1

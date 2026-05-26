@@ -14,7 +14,7 @@ Quiz-Antworten werden nicht persistent gespeichert. Wenn Nutzer zwischen Lektion
 - localStorage-Persistierung mit Prefix `onboarding_<courseId>_quizzes`
 - `loadQuizzes()` und `persistQuizzes()` als private Hilfsmethoden
 
-**Ergebnis**: ✅ Service speichert und laedt korrekt aus localStorage (Console logs zeigen: State wird gespeichert und geladen)
+**Ergebnis**: ✅ Service speichert und lädt korrekt aus localStorage (Console logs zeigen: State wird gespeichert und geladen)
 
 ---
 
@@ -66,7 +66,7 @@ Quiz-Antworten werden nicht persistent gespeichert. Wenn Nutzer zwischen Lektion
 
 ### Hypothese B: Doppeltes Reset
 - State wird restauriert, aber sofort danach reset in anderem Code-Pfad
-- **Test**: Noch mehr console.log() in jedem Signal-Update hinzufuegen
+- **Test**: Noch mehr console.log() in jedem Signal-Update hinzufügen
 
 ### Hypothese C: Template Binding Issue
 - Die `isOptionSelected()` Methode funktioniert nicht richtig
@@ -134,7 +134,7 @@ if (lessonKeyChanged) {
    - Zeigt der Signal den korrekten Wert?
 
 ### 🔧 **Lektion 2: Template Debug Output**
-In `lesson-flow.component.html` temporär hinzufuegen:
+In `lesson-flow.component.html` temporär hinzufügen:
 ```html
 <div style="background: yellow; padding: 10px;">
   Debug: selectedOptionIds = {{ selectedOptionIds() | json }}
@@ -146,7 +146,7 @@ In `lesson-flow.component.html` temporär hinzufuegen:
 - Oder sind sie leer?
 
 ### 🔧 **Lektion 3: More Console Logging**
-In `isOptionSelected()` Methode hinzufuegen:
+In `isOptionSelected()` Methode hinzufügen:
 ```typescript
 isOptionSelected(optionId: string): boolean {
   const result = this.selectedOptionIds().has(optionId);
@@ -170,7 +170,7 @@ JSON.parse(localStorage.getItem('onboarding_vibe-coding-agentic-ai_quizzes'))['s
 ---
 
 ## Bekannte Working Things ✅
-- Service speichert und laedt korrekt
+- Service speichert und lädt korrekt
 - localStorage enthält die richtigen Werte
 - ngOnChanges-Logik ist korrekt strukturiert
 - Build läuft ohne Fehler

@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://knoot.local/schemas/step-manifest.schema.json",
   "title": "Step Manifest",
@@ -33,7 +33,7 @@
               "additionalProperties": false,
               "required": ["type", "file"],
               "properties": {
-                "type": { "type": "string", "enum": ["lesson", "tasks", "uebung"] },
+                "type": { "type": "string", "enum": ["lesson", "tasks", "übung"] },
                 "file": { "type": "string", "minLength": 3 }
               }
             }

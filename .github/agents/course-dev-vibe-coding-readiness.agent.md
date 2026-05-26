@@ -57,7 +57,7 @@ Analysiere den gesamten Workflow (Übungen erstellen, Lernfortschritt tracken, P
 
 ### 5. App-Architektur – Code-Monster und Style-Wucher
 
-Pruefe in `apps/**`, besonders bei Angular-Komponenten:
+Prüfe in `apps/**`, besonders bei Angular-Komponenten:
 
 - **Monolithische Komponenten:** Wachsen Page-/Feature-Komponenten zu stark an? Enthalten sie Routing, State, Template-Sonderfaelle, lange Texte und Styles gleichzeitig?
 - **Wiederverwendung:** Werden bestehende Komponenten, Material-Patterns, Tokens, Services oder Markdown-Inhalte genutzt, bevor neue Komponenten entstehen?
@@ -72,7 +72,7 @@ Pruefe in `apps/**`, besonders bei Angular-Komponenten:
 3. Miss Zeilenlängen, prüfe Struktur, identifiziere Redundanzen.
 4. Führe `.\tools\test-alle-uebungen.ps1` aus – Testabdeckung einschätzen.
 5. Prüfe alle Agent-descriptions auf Trigger-Qualität.
-6. Pruefe App-Komponenten stichprobenartig auf Code-Monster, Wiederverwendungsgrad und Style-Wucher.
+6. Prüfe App-Komponenten stichprobenartig auf Code-Monster, Wiederverwendungsgrad und Style-Wucher.
 7. Sammle Findings nach Schweregrad.
 8. Formuliere konkrete Verbesserungsvorschläge + Automatisierungsideen.
 9. Frage vor jeder Änderung nach Freigabe.

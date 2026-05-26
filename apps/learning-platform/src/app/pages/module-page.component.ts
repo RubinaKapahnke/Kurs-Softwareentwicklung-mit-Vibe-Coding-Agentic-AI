@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+﻿import { CommonModule } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
@@ -75,7 +75,7 @@ export class ModulePageComponent {
             return;
           }
 
-          this.error.set('Moduldaten konnten nicht geladen werden. Bitte spaeter erneut versuchen.');
+          this.error.set('Moduldaten konnten nicht geladen werden. Bitte später erneut versuchen.');
           this.loading.set(false);
         }
       });

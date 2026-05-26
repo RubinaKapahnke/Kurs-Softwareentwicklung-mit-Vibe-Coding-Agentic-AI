@@ -394,11 +394,11 @@ Human-in-the-Loop im Code
 
 # Erledigte Themen 
 
-## 2026-05-09 - Version Control und GitOps aus Fremdtexten ueberfuehrt
+## 2026-05-09 - Version Control und GitOps aus Fremdtexten überführt
 - Summary:
-    - Allgemeine Grundlagen zu Version Control und GitOps in die Git-Library uebernommen (paraphrasiert, einsteigerfreundlich).
-    - Kursspezifische Einordnung fuer Modul 01 ergaenzt, inklusive Bruecke zu spaeteren Betriebsmodulen.
-    - Wiederkehrender Prompt fuer Fremdtext-Verarbeitung und Governance-Regel im Repo angelegt.
+    - Allgemeine Grundlagen zu Version Control und GitOps in die Git-Library übernommen (paraphrasiert, einsteigerfreundlich).
+    - Kursspezifische Einordnung für Modul 01 ergänzt, inklusive Bruecke zu spaeteren Betriebsmodulen.
+    - Wiederkehrender Prompt für Fremdtext-Verarbeitung und Governance-Regel im Repo angelegt.
 - Quelle:
     - Atlassian: "What is version control?"
     - Atlassian: "GitOps"

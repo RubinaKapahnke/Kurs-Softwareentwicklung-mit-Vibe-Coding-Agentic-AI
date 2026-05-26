@@ -1,4 +1,4 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
+﻿import { CommonModule, DOCUMENT } from '@angular/common';
 import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -79,8 +79,8 @@ export class KursstartComponent {
     },
     {
       id: 'ai-literacy-teams',
-      shortTitle: 'AI Literacy fuer Teams',
-      title: 'AI Literacy fuer Teams',
+      shortTitle: 'AI Literacy für Teams',
+      title: 'AI Literacy für Teams',
       lead: 'Ein praxisnaher Einstieg in Modellverstaendnis, Grenzen, Verantwortung und sinnvollen KI-Einsatz im Teamalltag.',
       status: 'coming-soon',
       statusLabel: 'Im Aufbau',

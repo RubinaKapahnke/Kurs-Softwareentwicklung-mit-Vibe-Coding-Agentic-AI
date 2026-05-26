@@ -74,7 +74,7 @@ Kursmodule in `course/01-course-modules/<nr>-<name>/`:
 | Datei | Inhalt | Pflicht? |
 |---|---|---|
 | `00-modulziele.md` | Modulziel, Praxisartefakt, Rollenbezug, Quellen, Abschlussnachweis | Optional |
-| `XX-<thema>.md` | Kursspezifische Inhalte als flache, nummerierte Lektionsdateien | Ja (ueber die Modulfiles insgesamt) |
+| `XX-<thema>.md` | Kursspezifische Inhalte als flache, nummerierte Lektionsdateien | Ja (über die Modulfiles insgesamt) |
 | `XX-<aufgaben>.md` | Aufgabenanleitung zur passenden Lektion | Optional |
 
 Jedes Modul in `course/03-course-library/XX-<name>/` kann folgende Dateien haben:

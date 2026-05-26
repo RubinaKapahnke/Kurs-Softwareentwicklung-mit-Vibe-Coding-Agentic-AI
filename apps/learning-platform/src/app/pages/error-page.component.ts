@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+﻿import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -42,7 +42,7 @@ export class ErrorPageComponent {
       },
       'module-not-found': {
         title: 'Modul nicht gefunden',
-        description: 'Das gewuenschte Modul wurde fuer diesen Kurs nicht gefunden.'
+        description: 'Das gewuenschte Modul wurde für diesen Kurs nicht gefunden.'
       },
       'step-not-found': {
         title: 'Schritt nicht gefunden',
@@ -50,7 +50,7 @@ export class ErrorPageComponent {
       },
       'manifest-empty': {
         title: 'Modul ohne Schritte',
-        description: 'Das Manifest wurde geladen, enthaelt aber keine Schritte.'
+        description: 'Das Manifest wurde geladen, enthält aber keine Schritte.'
       },
       'manifest-invalid': {
         title: 'Manifest fehlerhaft',
@@ -62,7 +62,7 @@ export class ErrorPageComponent {
       },
       'content-load-failed': {
         title: 'Inhalte konnten nicht geladen werden',
-        description: 'Beim Laden ist ein Fehler aufgetreten. Bitte spaeter erneut versuchen.'
+        description: 'Beim Laden ist ein Fehler aufgetreten. Bitte später erneut versuchen.'
       }
     };
 

@@ -104,7 +104,7 @@ Wenn Zugang und Arbeitsbereich stehen, lassen sich Git, VS Code und das Arbeiten
 
 ## Slop vermeiden: Einstieg
 
-Diese Mini-Einheit gehört zur zentralen Sammlung [AI_SLOP_SURVIVAL_GUIDE.md](../../../AI_SLOP_SURVIVAL_GUIDE.md).
+Diese Mini-Einheit gehört zur zentralen Sammlung [AI Slop Survival Guide](../../03-course-library/09-kurshilfe/04-ai-slop-survival-guide.md).
 
 ### Was AI Slop ist
 
@@ -136,7 +136,6 @@ Deshalb achten wir im Kurs von Anfang an auf nachvollziehbare Schritte, klare Be
 - [GitHub](https://github.com)
 - [GitHub Docs: Account erstellen](https://docs.github.com/de/get-started/start-your-journey/creating-an-account-on-github)
 - [GitHub Docs (Deutsch)](https://docs.github.com/de)
-
 
 
 

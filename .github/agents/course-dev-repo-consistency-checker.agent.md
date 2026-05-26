@@ -1,5 +1,5 @@
 ﻿---
-description: "Use when: tote Links pruefen, README Projektbaum stimmt nicht, Uebung fehlt in COURSE_MILESTONES, Datei fehlt im Projektbaum, Link-Validierung, Struktur des Repos pruefen, Markdown-Links defekt, konsistenz pruefen zwischen README und Dateisystem, fehlende Pflichtabschnitte in Uebungen, vollstaendigkeit pruefen"
+description: "Use when: tote Links prüfen, README Projektbaum stimmt nicht, Übung fehlt in COURSE_MILESTONES, Datei fehlt im Projektbaum, Link-Validierung, Struktur des Repos prüfen, Markdown-Links defekt, konsistenz prüfen zwischen README und Dateisystem, fehlende Pflichtabschnitte in Übungen, vollstaendigkeit prüfen"
 name: "Repo Consistency Checker (course-dev)"
 tools: [read, search, edit, execute, todo]
 argument-hint: "Optional: Prüfbereich einschränken. Ohne Angabe wird das gesamte Repo geprüft."

@@ -1,22 +1,22 @@
-# Beispiel-Datei: Code-Monster in einer Step-Page-SCSS
+﻿# Beispiel-Datei: Code-Monster in einer Step-Page-SCSS
 
 ACHTUNG: Diese Datei ist reines Kursmaterial.
 Sie ist keine produktive SCSS-Datei und wird von keiner App importiert.
-Die Endung `.scss.txt` ist absichtlich gewaehlt, damit sie nicht versehentlich in Angular eingebunden wird.
+Die Endung `.scss.txt` ist absichtlich gewählt, damit sie nicht versehentlich in Angular eingebunden wird.
 
 ## Kontext
 
 Diese Beispiel-Datei zeigt einen verkuerzten Ausschnitt aus einer echten Step-Page-SCSS-Datei der Onboarding-App.
 
-Die echte Datei war zeitweise ueber 1100 Zeilen lang, weil viele verschiedene Onboarding-Zustaende in einer einzigen Step-Komponente gestaltet wurden.
+Die echte Datei war zeitweise über 1100 Zeilen lang, weil viele verschiedene Onboarding-Zustaende in einer einzigen Step-Komponente gestaltet wurden.
 
 Das Ziel dieser Datei ist nicht, perfekten Code zu zeigen. Sie zeigt ein Lernmuster:
 
 - viele fachliche Zustaende in einer Datei
 - viele schrittspezifische Klassen
-- alte Styles, die spaeter nicht mehr gebraucht wurden
+- alte Styles, die später nicht mehr gebraucht wurden
 - Designentscheidungen direkt in Komponenten statt in Tokens
-- wachsender Aufwand beim Suchen, Pruefen und Aendern
+- wachsender Aufwand beim Suchen, Prüfen und Ändern
 
 ## Auszug aus dem Code-Monster
 
@@ -185,7 +185,7 @@ Das Ziel dieser Datei ist nicht, perfekten Code zu zeigen. Sie zeigt ein Lernmus
 
 ## Warum dieser Ausschnitt problematisch ist
 
-Der Code ist nicht deshalb problematisch, weil einzelne Regeln falsch sind. Viele Regeln sind fuer sich genommen nachvollziehbar.
+Der Code ist nicht deshalb problematisch, weil einzelne Regeln falsch sind. Viele Regeln sind für sich genommen nachvollziehbar.
 
 Problematisch ist die Mischung:
 
@@ -200,12 +200,12 @@ Problematisch ist die Mischung:
 - Layout-Regeln
 - Farbentscheidungen
 
-Alles lebt in einer Datei. Dadurch wird jede neue Aenderung schwerer:
+Alles lebt in einer Datei. Dadurch wird jede neue Änderung schwerer:
 
 - Man muss laenger suchen.
 - Man erkennt schwerer, welche Klasse zu welchem Schritt gehoert.
 - Alte Styles bleiben leichter liegen.
-- Neue Aenderungen landen wieder in derselben grossen Datei.
+- Neue Änderungen landen wieder in derselben grossen Datei.
 
 ## Was man daraus lernen soll
 
@@ -226,11 +226,11 @@ Oder zumindest:
 
 ```text
 styles/
-├── _tokens.scss                          # Farben, Typografie, Abstaende
+├── _tokens.scss                          # Farben, Typografie, Abstände
 ├── _step-layout.scss                      # gemeinsame Step-Struktur
 └── _forms-and-hints.scss                  # wiederverwendbare Hinweise/Formulare
 ```
 
 ## Merksatz
 
-Wenn eine Datei viele verschiedene Geschichten gleichzeitig erzaehlt, ist sie kein guter Ort mehr fuer neue Details.
+Wenn eine Datei viele verschiedene Geschichten gleichzeitig erzaehlt, ist sie kein guter Ort mehr für neue Details.

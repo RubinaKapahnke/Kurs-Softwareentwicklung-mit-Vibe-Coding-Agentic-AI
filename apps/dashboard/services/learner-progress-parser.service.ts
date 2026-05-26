@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 import { COURSE_MILESTONES } from '../data/course-roadmap.data';
 import {
   ExerciseStatus,
@@ -21,7 +21,7 @@ export class LearnerProgressParserService {
     const groupQuestions = this.extractBulletLines(markdown, '## Fragen an die Gruppe', '##');
     const individualLearningWishes = this.extractBulletLines(
       markdown,
-      '## Individuelle Lernwuensche',
+      '## Individuelle Lernwünsche',
       '##',
     );
 

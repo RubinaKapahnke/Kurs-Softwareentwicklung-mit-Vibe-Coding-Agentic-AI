@@ -553,7 +553,7 @@ cd course
 ls
 
 # 5. Wechsle in einen Unterordner
-cd uebungen
+cd übungen
 
 # 6. Schau dir Dateien an
 ls -la

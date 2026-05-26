@@ -8,7 +8,7 @@ Ein **PRD (Product Requirements Document)** ist ein Dokument, das beschreibt, wa
 
 Ein PRD beantwortet drei grundlegende Fragen:
 - Was ist das Ziel der App?
-- Wer nutzt sie und fuer was?
+- Wer nutzt sie und für was?
 - Wann ist ein Feature fertig?
 
 Ohne diese Klarheit arbeitet die KI ins Leere - oder erfindet Annahmen, die nicht zu deinem Projekt passen.
@@ -31,26 +31,26 @@ Ein gutes PRD ist der wichtigste Kontext, den du einer KI geben kannst. Je klare
 
 ## Aufbau eines PRD
 
-Ein einfaches PRD hat fuenf Abschnitte:
+Ein einfaches PRD hat fünf Abschnitte:
 
 ```markdown
 ## 1. Vision & Zielsetzung
 [Ein Satz: Was ist das Ziel der App?]
 
 ## 2. Kernfunktionen (Features)
-[Was soll die App koennen?]
+[Was soll die App können?]
 
 ## 3. Technische Leitplanken
 [Welche Technologien/Tools werden eingesetzt?]
 
 ## 4. User Stories
-- Als [Wer] moechte ich [Was], damit [Warum].
+- Als [Wer] möchte ich [Was], damit [Warum].
 
 ## 5. Definition of Done
 - [Was muss stimmen, damit ein Feature als fertig gilt?]
 ```
 
-Die wichtigsten Abschnitte fuer den Einstieg sind **1, 4 und 5** - sie geben der KI Vision, Nutzerkontext und Erfolgskriterien.
+Die wichtigsten Abschnitte für den Einstieg sind **1, 4 und 5** - sie geben der KI Vision, Nutzerkontext und Erfolgskriterien.
 
 ---
 
@@ -58,5 +58,5 @@ Die wichtigsten Abschnitte fuer den Einstieg sind **1, 4 und 5** - sie geben der
 
 - [ ] Ich weiss, was ein PRD ist und wofuer es genutzt wird.
 - [ ] Ich verstehe, warum ein PRD als KI-Kontext wichtig ist.
-- [ ] Ich kenne die fuenf Standard-Abschnitte eines PRD.
-- [ ] Ich kann ein einfaches PRD fuer mein eigenes Projekt schreiben.
+- [ ] Ich kenne die fünf Standard-Abschnitte eines PRD.
+- [ ] Ich kann ein einfaches PRD für mein eigenes Projekt schreiben.

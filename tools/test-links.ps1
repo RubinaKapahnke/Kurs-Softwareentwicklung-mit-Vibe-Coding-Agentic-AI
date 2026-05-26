@@ -1,11 +1,11 @@
-# test-links.ps1
-# Prueft alle relativen Markdown-Links in Uebungsdateien und Modul-Dateien auf Existenz.
+﻿# test-links.ps1
+# Prüft alle relativen Markdown-Links in Übungsdateien und Modul-Dateien auf Existenz.
 #
 # Aufruf (vom Repo-Root):
 #   .\tools\test-links.ps1
 #
 # Optionale Parameter:
-#   -Path "course/02-course-exercises"   Nur Links in einem Unterordner pruefen
+#   -Path "course/02-course-exercises"   Nur Links in einem Unterordner prüfen
 #
 # Rueckgabewert: Exit-Code 0 = alle Links OK, 1 = mindestens ein toter Link
 
@@ -41,8 +41,8 @@ foreach ($file in $mdFiles) {
 
     foreach ($match in $linkMatches) {
         $linkTarget = $match.Groups[2].Value
-        # Platzhalter-Links ueberspringen (Template-Muster wie XX-, <name>, UE-MX-)
-        if ($linkTarget -match '<[^>]+>|XX-|YY-|UE-M[X\d]|meilenstein-[XN]-|meilenstein-N|modulname|modul-grundlagen|\bN-uebung\b|^\.\./\.\./docs/|^URL$|^/assets/') {
+        # Platzhalter-Links überspringen (Template-Muster wie XX-, <name>, UE-MX-)
+        if ($linkTarget -match '<[^>]+>|XX-|YY-|UE-M[X\d]|meilenstein-[XN]-|meilenstein-N|modulname|modul-grundlagen|\bN-Übung\b|^\.\./\.\./docs/|^URL$|^/assets/') {
             continue
         }
         # Relativer Pfad relativ zur Datei aufloesen
@@ -67,9 +67,9 @@ foreach ($file in $mdFiles) {
 Write-Host ""
 Write-Host ("=" * 70)
 if ($totalBroken -eq 0) {
-    Write-Host "  Alle $totalChecked geprueften Links sind OK." -ForegroundColor Green
+    Write-Host "  Alle $totalChecked geprüften Links sind OK." -ForegroundColor Green
 } else {
-    Write-Host "  $totalBroken tote Links in $totalChecked geprueften Links gefunden." -ForegroundColor Red
+    Write-Host "  $totalBroken tote Links in $totalChecked geprüften Links gefunden." -ForegroundColor Red
 }
 Write-Host ("=" * 70)
 

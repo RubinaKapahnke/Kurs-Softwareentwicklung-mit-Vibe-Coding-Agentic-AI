@@ -1,311 +1,199 @@
-﻿# 🗺️ Course Milestones: Zentrale Meilensteine
+﻿# Course Milestones: Zentrale Roadmap
 
-Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**. Es führt dich als roten Faden durch den gesamten Kurs. 
+Dieses Dokument beschreibt die fachliche Meilenstein-Roadmap des Kurses. Die Reihenfolge folgt der Kursbeschreibung: erst Arbeitsfaehigkeit, dann Produktidee, dann Vibe-Coding-Schleife, Struktur, Qualitaet, AI Literacy, AI-Systemarchitektur, Schwerpunktpfad, Produktinkrement, Governance, Release-Logik und Abschluss.
 
-## Willkommen im Kurs-Repository
+Die konkreten Übungsdateien liegen in [course/02-course-exercises/](../02-course-exercises/README_UEBUNGEN.md). Einige vorhandene Übungsdateien tragen noch aeltere Nummern aus der bisherigen Ausbaustufe. Fachlich gilt diese Roadmap als führend; Dateinamen werden bei einer spaeteren Übungs-Renummerierung nachgezogen.
 
-Herzlich Willkommen im Repository des Kurses.
-In dieser Datei bekommst du einen Überblick über alle Meilensteine die im Kurs erreicht werden können. 
+## Aktuelle Übungsdateien
 
-**Meilenstein 1** hast du schon fast abgeschlossen. Es fehlen dir noch wenige Lektionen deine Arbeitsumgebung auch hier einzurichten. Wenn du diese absolviert hast, gehts ans Eingemachte 🐧🤖
+Diese Liste hält die vorhandenen Übungsdateien technisch auffindbar, bis die Dateinamen an die neue fachliche Meilenstein-Roadmap angepasst werden.
 
-## So startest du mit dem Kurs hier im Repository
+> **Übung:** [course/02-course-exercises/meilenstein-01-uebung-01.md](../02-course-exercises/meilenstein-01-uebung-01.md)
+> **Übung:** [course/02-course-exercises/meilenstein-01-uebung-02.md](../02-course-exercises/meilenstein-01-uebung-02.md)
+> **Übung:** [course/02-course-exercises/meilenstein-02-uebung-01.md](../02-course-exercises/meilenstein-02-uebung-01.md)
+> **Übung:** [course/02-course-exercises/meilenstein-02-uebung-02.md](../02-course-exercises/meilenstein-02-uebung-02.md)
+> **Übung:** [course/02-course-exercises/meilenstein-02-uebung-03.md](../02-course-exercises/meilenstein-02-uebung-03.md)
+> **Übung:** [course/02-course-exercises/meilenstein-03-uebung-01.md](../02-course-exercises/meilenstein-03-uebung-01.md)
+> **Übung:** [course/02-course-exercises/meilenstein-03-uebung-02.md](../02-course-exercises/meilenstein-03-uebung-02.md)
+> **Übung:** [course/02-course-exercises/meilenstein-03-uebung-03.md](../02-course-exercises/meilenstein-03-uebung-03.md)
+> **Übung:** [course/02-course-exercises/meilenstein-03-uebung-04.md](../02-course-exercises/meilenstein-03-uebung-04.md)
+> **Übung:** [course/02-course-exercises/meilenstein-04-uebung-01.md](../02-course-exercises/meilenstein-04-uebung-01.md)
+> **Übung:** [course/02-course-exercises/meilenstein-04-uebung-02.md](../02-course-exercises/meilenstein-04-uebung-02.md)
 
-Dieses Dokument dient als zentrale Übersicht. Zu jedem Meilenstein findest du [Kursmodule](../01-course-modules/) und [Übungen](../02-course-exercises/).  
-Jeder Meilenstein hat seinen eigenen Modul-Ordner. Die Module sind nummeriert.
-Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilensteins. Der nächste Lektion wird sein, dich mit dem Kurs-Repository vertraut zu machen und deinen Lernbereich einzurichten. 
+## Architektur
 
----
-
-## 🧭 Meilenstein 1: Onboarding in den Kurs
-**Ziel:** Den Kurseinstieg sauber abschliessen, die Arbeitsumgebung vorbereiten und den fachlichen Startpunkt in diesem Repo sicher finden.
-
-### Module
-
-- [x] 01 [Willkommen im Kurs](../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)
-- [x] 02 [Github - Erste Lektionen](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-Lektionen.md)
-
-**Lernziele:**
-
-### Must have
-- [ ] Du hast den Zugang zum Kurs geklaert und kennst den Einstieg ueber Onboarding, Kursstart und `COURSE_MILESTONES.md`.
-- [ ] Du hast einen GitHub-Account, ein eigenes Uebungs-Repo und den Zugriff fuer die Trainerin eingerichtet.
-- [ ] Du hast Git und VS Code lokal eingerichtet und das Kurs-Repo in VS Code geoeffnet.
-
-### Should have
-- [ ] Du erkennst den Unterschied zwischen eigenem Uebungs-Repo und gemeinsamem Kurs-Repo.
-- [ ] Du verstehst, warum Lernfortschritt zentral im Kurs-Repo bleibt und trotzdem in eigenen Repos gearbeitet wird.
-- [ ] Du findest in VS Code Terminal, Explorer und `COURSE_MILESTONES.md` ohne enge Anleitung.
-
-### Nice to have
-- [ ] Du kannst den Onboarding-Ablauf einer anderen Person knapp erklaeren.
-
-**Aktueller Umsetzungsstand:**
-
-- [ ] **Übungen für Meilenstein 1 (Browser-Einstieg)**
-  > **Uebung:** [course/02-course-exercises/meilenstein-01-uebung-01.md](../02-course-exercises/meilenstein-01-uebung-01.md)
-  > **Uebung:** [course/02-course-exercises/meilenstein-01-uebung-02.md](../02-course-exercises/meilenstein-01-uebung-02.md)
-  - [ ] [Meilenstein 1, Übung 1: GitHub-Konto anlegen und Profil vervollständigen](../02-course-exercises/meilenstein-01-uebung-01.md)
-  - [ ] [Meilenstein 1, Übung 2: Erstes Repository erkunden und erstellen](../02-course-exercises/meilenstein-01-uebung-02.md)
-
-- [ ] **Kurszugang und Orientierung klaeren**
-  - [ ] Startseite und Kursstart aufrufen
-  - [ ] Eigenen Teilnahmestatus klaeren
-  - [ ] Persoenlichen Voucher-Code eingeben, falls er fuer deinen Zugang gebraucht wird
-
-- [ ] **GitHub-Zugang und eigenes Uebungs-Repo vorbereiten**
-  - [ ] GitHub-Account anlegen oder einloggen
-  - [ ] Eigenes Uebungs-Repo mit README erstellen
-  - [ ] Verstehen, dass Uebungen im eigenen Repo und nicht direkt im Kurs-Repo bearbeitet werden
-  - [ ] Die Trainerin als Collaborator einladen
-
-- [ ] **Erste GitHub-Lektionen im Browser durchfuehren**
-  - [ ] `uebung-01.md` im eigenen Repo anlegen
-  - [ ] README im Browser bearbeiten
-  - [ ] Pruefen, dass mindestens zwei Commits sichtbar sind
-
-- [ ] **Lokale Arbeitsumgebung einrichten**
-  - [ ] Git installieren und `git --version` pruefen
-  - [ ] VS Code installieren
-  - [ ] Terminal in VS Code oeffnen
-
-- [ ] **Kurs-Repo lokal oeffnen und Startpunkt finden**
-  - [ ] Einladung zum Kurs-Repo annehmen
-  - [ ] HTTPS-Clone-URL kopieren
-  - [ ] Kurs-Repo mit `git clone` herunterladen
-  - [ ] Projektordner in VS Code oeffnen
-  - [ ] `COURSE_MILESTONES.md` im geklonten Repo finden und oeffnen
-
-- [ ] **Kurs-Handhabung verstehen**
-  - [ ] Verstehen, dass Uebungen zentral im Kurs-Repo beschrieben werden
-  - [ ] Verstehen, dass Loesungen standardmaessig im eigenen Repo entstehen
-  - [ ] Verstehen, dass `lernfortschritt_<name>.md` zentral im Kurs-Repo bleibt
-  - [ ] Verstehen, dass diese zentrale Lernfortschrittsdatei fuer Kursueberblick und Dashboard gebraucht wird
+1. [KURSBESCHREIBUNG.md](../../KURSBESCHREIBUNG.md) beschreibt Zielbild, Kurslogik und Pfade.
+2. [course/01-course-modules/](../01-course-modules/README_KURSMODULE.md) beschreibt eigenstaendige Kursbausteine.
+3. Dieses Dokument ordnet Lernfortschritt als Meilensteine.
+4. [course/03-course-library/](../03-course-library/) enthält Artikel, Hilfen und Nachschlagewissen.
+5. [course/02-course-exercises/](../02-course-exercises/README_UEBUNGEN.md) enthält zentrale Übungsaufgaben.
+6. [course/learners/beispiel/](../learners/beispiel/) zeigt die Struktur für Lernfortschritt und PRD.
 
 ---
 
-## 🛠️ Meilenstein 2: Setup & Umgebung
-**Ziel:** Das Repo sicher lokal nutzen, dich in der Entwicklungsumgebung orientieren und den Lernstand ueberwiegend im Terminal verwalten.
+## Meilenstein 1: Arbeitsfaehigkeit hergestellt
 
-**Modul-Einstiege:**
-- [course/03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md](../03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md)
-- [course/03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md](../03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
-- [course/03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md](../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md)
-- [course/03-course-library/04-git/00-git-versionierung-modulguide.md](../03-course-library/04-git/00-git-versionierung-modulguide.md)
-- [course/03-course-library/03-github/00-github-zusammenarbeit-modulguide.md](../03-course-library/03-github/00-github-zusammenarbeit-modulguide.md)
+**Ziel:** Du kannst VS Code, Markdown, GitHub und Git nutzen, um dokumentierte Änderungen nachvollziehbar zu teilen.
 
-**Vertiefung:**
-- [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../03-course-library/01-markdown/01-markdown-grundlagen.md)
-- [course/03-course-library/01-markdown/02-formatierung_md-files.md](../03-course-library/01-markdown/02-formatierung_md-files.md)
-- [course/03-course-library/02-vscode/01-vscode-grundlagen.md](../03-course-library/02-vscode/01-vscode-grundlagen.md)
-- [course/03-course-library/05-terminal/01-terminal-grundlagen.md](../03-course-library/05-terminal/01-terminal-grundlagen.md)
-- [course/03-course-library/05-terminal/03-terminal-befehlsuebersicht.md](../03-course-library/05-terminal/03-terminal-befehlsuebersicht.md)
-- [course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md)
-- [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md)
-- [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md)
+**Moduleinstieg:**
+- [Kursmodul 01: Arbeitsumgebung, Dokumentation & Versionsverwaltung](../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md)
 
-**Lernziele:**
+**Zentrale Artikel:**
+- [Markdown](../03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md)
+- [VS Code](../03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
+- [GitHub](../03-course-library/03-github/00-github-zusammenarbeit-modulguide.md)
+- [Git](../03-course-library/04-git/00-was-ist-git.md)
+- [Terminal](../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md)
 
-### Must have
-- [ ] Repository lokal einrichten.
-- [ ] Persoenlichen Arbeitsbereich anlegen.
-- [ ] Einen erstellten Branch per PR auf `main` bringen.
-- [ ] Eigenen Lernstand verwalten und dabei ueberwiegend im Terminal arbeiten.
-- [ ] Du findest dich sicher in der Entwicklungsumgebung zurecht.
+**Nachweis:**
+- [ ] Lokales Setup oder GitHub-Arbeitsbereich ist nutzbar.
+- [ ] Erste dokumentierte Änderung ist versioniert.
+- [ ] Lernfortschritt ist im Kurs-Repo nachvollziehbar dokumentiert.
 
-### Should have
-- [ ] Sichere Alltagsaktionen im Terminal ausfuehren.
-- [ ] Git-Grundbefehle im Alltag ohne Copy-Paste zusammensetzen.
-- [ ] Du kannst Modulguide, Grundlagen und Befehlsuebersicht als unterschiedliche Dokumenttypen einordnen.
-- [ ] Du erkennst, wie Markdown, VS Code, GitHub, Git und Terminal im Repo zusammenhaengen.
-- [ ] Quellen aus Modulguide und Vertiefung passend zur Aufgabe auswaehlen.
+## Meilenstein 2: Produktidee versioniert beschrieben
 
-### Nice to have
-- [ ] Routine bei Branch-Wechseln, kleinen Korrekturen und wiederholten Commits aufbauen.
-- [ ] Den eigenen Lernstand knapp und regelmaessig dokumentieren.
+**Ziel:** Du beschreibst Problem, Zielgruppe, Nutzen, Entwicklungsstufe und nächste Schritte so, dass Menschen und KI damit arbeiten koennen.
 
-**Aktueller Umsetzungsstand:**
+**Moduleinstieg:**
+- [Kursmodul 02: Produktbeschreibung & inkrementelle Planung](../01-course-modules/02-produktbeschreibung-inkrementelle-planung/00-modulziele.md)
 
-- [ ] **Repository lokal einrichten**
-  - [ ] Terminal in VS Code finden und oeffnen
-  - [ ] Grundlagen der Terminal-Nutzung lernen
-  - [ ] Pruefen, ob Git installiert ist (`git --version`)
-  - [ ] Ggf. Git installieren und lokales Namensschild (E-Mail/Name) anlegen
-  - [ ] HTTPS-URL des Repositories auf GitHub kopieren
-  - [ ] Projekt mit `git clone` herunterladen
-  - [ ] Projektordner in VS Code oeffnen
+**Zentrale Artikel:**
+- [PRD: Grundlagen](../03-course-library/06-ai-instructions/02-prd-grundlagen.md)
+- [Prompting: Grundlagen](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
-- [ ] **Persoenlichen Arbeitsbereich anlegen**
-  - [ ] Eigenen Arbeits-Branch erstellen
-  - [ ] In den bestehenden Ordner navigieren
-  - [ ] Einen eigenen Ordner erstellen
-  - [ ] `prd_vorname.md` anlegen
+**Nachweis:**
+- [ ] Erste Produktbeschreibung oder PRD liegt versioniert vor.
+- [ ] Zielgruppe, Problem und Nutzen sind konkret benannt.
+- [ ] Naechstes Produktinkrement ist klein genug, um bearbeitet zu werden.
 
-- [ ] **Erstellten Branch auf main mergen**
-  - [ ] Aenderungen committen und pushen
-  - [ ] PR von Branch auf `main` erstellen
-  - [ ] PR-Beschreibung ausfuellen
-  - [ ] (Optional) Code-Review abwarten
-  - [ ] PR mergen
-  - [ ] (Optional) Lokalen Branch loeschen und auf `main` wechseln
+## Meilenstein 3: Vibe-Coding-Schleife angewendet
 
-- [ ] **Eigenen Lernstand verwalten - dabei ueberwiegend im Terminal arbeiten**
-  > **Uebung:** [course/02-course-exercises/meilenstein-02-uebung-01.md](../02-course-exercises/meilenstein-02-uebung-01.md)
-  > **Quellen zur Uebung:** [course/03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md](../03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md), [course/03-course-library/05-terminal/01-terminal-grundlagen.md](../03-course-library/05-terminal/01-terminal-grundlagen.md), [course/03-course-library/05-terminal/03-terminal-befehlsuebersicht.md](../03-course-library/05-terminal/03-terminal-befehlsuebersicht.md), [course/03-course-library/04-git/00-git-versionierung-modulguide.md](../03-course-library/04-git/00-git-versionierung-modulguide.md), [course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md), [course/03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md](../03-course-library/01-markdown/00-markdown-dokumentation-modulguide.md), [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../03-course-library/01-markdown/01-markdown-grundlagen.md), [course/03-course-library/01-markdown/02-formatierung_md-files.md](../03-course-library/01-markdown/02-formatierung_md-files.md), [course/03-course-library/03-github/00-github-zusammenarbeit-modulguide.md](../03-course-library/03-github/00-github-zusammenarbeit-modulguide.md), [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md)
-  >
-  > **Durchfuehrung der ersten Uebung:**
-  > 1. Uebungsdatei in [course/02-course-exercises](../02-course-exercises) lesen.
-  > 2. Aufgaben im Terminal ausfuehren und Platzhalter ersetzen.
-  > 3. Eigene Loesung im eigenen Repo anlegen.
-  > 4. Lernfortschrittsdatei im Kurs-Repo aktualisieren.
-  > 5. Committen, pushen, PR erstellen und den Stand sauber dokumentieren.
+**Ziel:** Du setzt einen kleinen, pruefbaren Schritt mit KI-Unterstützung um, liest das Ergebnis, bewertest es und verbesserst es.
 
-  - [ ] `git pull origin main` ausfuehren
-  - [ ] Einen neuen Branch erstellen (`git checkout -b <branch-name>`)
-  - [ ] Eigene Lernfortschrittsdatei aktualisieren
-  - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Lektion
+**Moduleinstieg:**
+- [Kursmodul 03: Vibe Coding, Prompting & Context Engineering](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md)
 
-- [ ] **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
-  > **Uebung:** [course/02-course-exercises/meilenstein-02-uebung-02.md](../02-course-exercises/meilenstein-02-uebung-02.md)
-  > **Quellen zur Uebung:** [course/03-course-library/05-terminal/03-terminal-befehlsuebersicht.md](../03-course-library/05-terminal/03-terminal-befehlsuebersicht.md), [course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md), [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md), [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md)
-  - [ ] In Ordnern navigieren (`cd`, `cd ..`, `pwd`, `dir`/`ls`)
-  - [ ] Dateien anlegen (`echo. > <dateiname>.md`)
-  - [ ] Dateien loeschen (`del <dateiname>`)
-  - [ ] Dateien verschieben/umbenennen (`move <quelle> <ziel>`)
-  - [ ] Ordner anlegen/loeschen (`mkdir`, `rmdir`)
-  - [ ] Branches verwalten (`git checkout -b`, `git checkout`, `git branch -d`)
-  - [ ] Committen und pushen (`git add .`, `git commit -m`, `git push origin <branch>`)
-  - [ ] PR auf GitHub erstellen
-  - [ ] Passende Modulquelle fuer eine Aufgabe eigenstaendig finden
+**Zentrale Artikel:**
+- [AI Instructions, Prompting und Context](../03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md)
+- [Prompt-Dateien: Grundlagen](../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+- [GitHub Copilot in VS Code](../03-course-library/02-vscode/02-vscode-copilot.md)
 
-- [ ] **Routine bei Branch-Wechseln und Lernstand regelmaessig dokumentieren**
-  > **Uebung:** [course/02-course-exercises/meilenstein-02-uebung-03.md](../02-course-exercises/meilenstein-02-uebung-03.md)
-  > **Quellen zur Uebung:** [course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md), [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md), [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md), [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../03-course-library/01-markdown/01-markdown-grundlagen.md)
-  - [ ] Vollstaendigen Branch-Commit-PR-Ablauf zweimal wiederholen
-  - [ ] Zwischen Branches wechseln (`git checkout main`, `git pull`, neuer Branch)
-  - [ ] Strukturierten Lernjournal-Eintrag mit festem Muster anlegen
+**Nachweis:**
+- [ ] Ein Prompt-Kontext ist dokumentiert.
+- [ ] Ein kleines Ergebnis wurde erzeugt oder verbessert.
+- [ ] Bewertung oder Nachbesserung ist nachvollziehbar notiert.
 
----
+## Meilenstein 4: Projektstruktur und Logik verstaendlich gemacht
 
-## 🚀 Meilenstein 3: Einstieg Prompting & Context-Engineering
-**Ziel:** Prompting und Kontext-Verwaltung fuer AI-gestuetzte Entwicklung sicher anwenden.
+**Ziel:** Du kannst erklären, wo welche Verantwortung liegt und wie Daten oder Zustaende durch dein Produkt fliessen.
 
-**Modul-Einstiege:**
-- [course/03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md](../03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md)
+**Moduleinstiege:**
+- [Kursmodul 07: Architektur & wartbare Produktstruktur](../01-course-modules/07-architektur-wartbare-produktstruktur/00-modulziele.md)
+- [Kursmodul 05: Grundlagen Programmierlogik](../01-course-modules/05-grundlagen-programmierlogik/00-modulziele.md)
 
-**Vertiefung:**
-- [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md)
-- [course/03-course-library/06-ai-instructions/02-prd-grundlagen.md](../03-course-library/06-ai-instructions/02-prd-grundlagen.md)
-- [course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md](../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
-- [course/03-course-library/02-vscode/02-vscode-copilot.md](../03-course-library/02-vscode/02-vscode-copilot.md)
+**Zentrale Artikel:**
+- [Architecture Foundations](../03-course-library/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide.md)
+- [Programmierlogik](../03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md)
 
-**Lernziele:**
+**Nachweis:**
+- [ ] Strukturentscheidung, Komponentenliste oder Datenfluss-Skizze liegt vor.
+- [ ] Eine erste Code- oder Logikstelle wurde erklaert.
+- [ ] Verantwortlichkeiten sind grob abgegrenzt.
 
-### Must have
-- [ ] Erfolgreich prompten.
-- [ ] PRD und weitere Doku als Kontext fuer AI erstellen.
+## Meilenstein 5: Fehleranalyse und Qualitaetssicherung nachgewiesen
 
-### Should have
-- [ ] Umgang mit Chats in der Kontext-Verwaltung.
-- [ ] Repository-Struktur fuer Context-Engineering optimieren.
+**Ziel:** Du prüfst erwartetes Verhalten systematisch, statt dich nur auf plausible KI-Ausgaben zu verlassen.
 
-### Nice to have
-- [ ] Eigenen Ordner mit Gelerntem anpassen.
+**Moduleinstieg:**
+- [Kursmodul 06: Debugging, Testing & Harness Engineering](../01-course-modules/06-debugging-testing-harness-engineering/00-modulziele.md)
 
-**Aktueller Umsetzungsstand:**
+**Nachweis:**
+- [ ] Ein Fehler, Risiko oder erwartetes Verhalten ist beschrieben.
+- [ ] Ein Testfall, Prüfprompt oder Debugging-Protokoll liegt vor.
+- [ ] Ergebnis und Schlussfolgerung sind nachvollziehbar.
 
-- [ ] **Erfolgreich prompten**
-  > **Uebung:** [course/02-course-exercises/meilenstein-03-uebung-02.md](../02-course-exercises/meilenstein-03-uebung-02.md)
-  > **Quellen zur Uebung:** [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md), [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md)
-  - [ ] Prompt-Typen verstehen (Frage, Befehl, Kontext)
-  - [ ] Eigene Prompts formulieren und testen
-  - [ ] AI-Feedback auswerten und Prompts verbessern
+## Meilenstein 6: AI Literacy praktisch angewendet
 
-- [ ] **PRD und weitere Doku als Kontext fuer AI erstellen**
-  > **Uebung:** [course/02-course-exercises/meilenstein-03-uebung-01.md](../02-course-exercises/meilenstein-03-uebung-01.md)
-  > **Quellen zur Uebung:** [course/03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md](../03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md), [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md), [course/03-course-library/06-ai-instructions/02-prd-grundlagen.md](../03-course-library/06-ai-instructions/02-prd-grundlagen.md), [course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md](../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md), [course/03-course-library/01-markdown/01-markdown-grundlagen.md](../03-course-library/01-markdown/01-markdown-grundlagen.md), [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md)
-  - [ ] Aufbau und Zweck eines PRD verstehen
-  - [ ] Eigenes PRD mit KI-Hilfe verfassen (`.github/prompts/learners-prd-assistent.prompt.md` nutzen)
-  - [ ] Dokumente AI-verstaendlich strukturieren
+**Ziel:** Du erkennst typische Fehlerquellen von KI-Systemen und prüfst Ergebnisse kritisch.
 
-- [ ] **Umgang mit Chats und Prompt-Dateien in der Kontext-Verwaltung**
-  > **Uebung:** [course/02-course-exercises/meilenstein-03-uebung-03.md](../02-course-exercises/meilenstein-03-uebung-03.md)
-  > **Quellen zur Uebung:** [course/03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md](../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md), [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md), [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md)
-  - [ ] Chats passend zum Kontext nutzen
-  - [ ] Relevante Infos aus Chats dokumentieren
-  - [ ] Kontext fuer neue Aufgaben gezielt zusammenstellen
-  - [ ] Eigene Prompt-Datei anlegen und via `/` aufrufen
+**Moduleinstieg:**
+- [Kursmodul 04: AI Literacy & Modellverstaendnis](../01-course-modules/04-ai-literacy-modellverstaendnis/00-modulziele.md)
 
-- [ ] **Repository-Struktur fuer Context-Engineering optimieren**
-  > **Uebung:** [course/02-course-exercises/meilenstein-03-uebung-04.md](../02-course-exercises/meilenstein-03-uebung-04.md)
-  > **Quellen zur Uebung:** [course/03-course-library/06-ai-instructions/02-prd-grundlagen.md](../03-course-library/06-ai-instructions/02-prd-grundlagen.md), [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md), [course/03-course-library/02-vscode/02-vscode-copilot.md](../03-course-library/02-vscode/02-vscode-copilot.md)
-  - [ ] Bestehende Struktur analysieren
-  - [ ] Verbesserungen fuer AI-freundliche Struktur ableiten
-  - [ ] Eigene Ordner/Dateien entsprechend anpassen
+**Nachweis:**
+- [ ] Risiken oder Fehlerquellen eines KI-Ergebnisses sind benannt.
+- [ ] Quellen, Annahmen oder Grenzen wurden geprueft.
+- [ ] Entscheidung oder Korrektur ist dokumentiert.
 
-- [ ] **Eigenen Ordner mit Gelerntem anpassen**
-  - [ ] Eigene Meilenstein-Doku mit neuen Erkenntnissen erweitern
-  - [ ] Best Practices aus Meilenstein 3 uebernehmen
-  - [ ] Struktur und Inhalte regelmaessig reflektieren und verbessern
+## Meilenstein 7: AI-Systemarchitektur bewusst geplant
 
----
+**Ziel:** Du begruendest, welches Modell, welcher Kontext und welche Kontrollmechanismen für deinen Anwendungsfall passen.
 
-## 🏗️ Meilenstein 4: Projekt starten
-**Ziel:** Das eigene App-Projekt strukturiert aufbauen und mit KI-Unterstuetzung die erste Funktion umsetzen - mit bewusstem Kontext statt blindem Generieren.
+**Moduleinstieg:**
+- [Kursmodul 08: AI System Architecture, Modellwahl & Token Management](../01-course-modules/08-ai-system-architecture-modellwahl-token-management/00-modulziele.md)
 
-**Modul-Einstiege:**
-- [course/03-course-library/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide.md](../03-course-library/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide.md)
-- [course/03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md](../03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md)
-- [course/03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md](../03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md)
+**Nachweis:**
+- [ ] Modellwahl, Kontextquellen und Kontrollpunkte sind skizziert.
+- [ ] Token, Kosten oder Kontextumfang wurden beruecksichtigt.
+- [ ] Menschliche Freigaben oder Grenzen sind sichtbar.
 
-**Vertiefung:**
-- [course/03-course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../03-course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md)
-- [course/03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md)
-- [course/03-course-library/06-ai-instructions/02-prd-grundlagen.md](../03-course-library/06-ai-instructions/02-prd-grundlagen.md)
-- [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md)
-- [course/03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md](../03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md)
-- [course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md)
+## Meilenstein 8: Schwerpunktpfad gewählt
 
-**Lernziele:**
+**Ziel:** Du entscheidest, ob dein Projekt vor allem Web/App, Datenprodukt oder Agentic-AI-Pfad verfolgt.
 
-### Must have
-- [ ] Projektstruktur fuer das eigene App-Projekt aus dem PRD ableiten koennen.
-- [ ] Die KI mit einem vollstaendigen Strukturkontext promten (Stack, Ordner, Komponente, Datenquelle).
-- [ ] Eine erste Komponente mit KI-Unterstuetzung bauen und verstehen, was entsteht.
+**Moduleinstiege:**
+- [Kursmodul 10: Daten, Reporting & RAG-Grundlagen](../01-course-modules/10-daten-reporting-rag-grundlagen/00-modulziele.md)
+- [Kursmodul 11: Schwerpunktpfad Web/App oder Datenprodukt](../01-course-modules/11-schwerpunktpfad-web-app-oder-datenprodukt/00-modulziele.md)
+- [Kursmodul 09: Agentic Software Engineering & autonome Agenten](../01-course-modules/09-agentic-software-engineering-autonome-agenten/00-modulziele.md)
 
-### Should have
-- [ ] Den Datenfluss der eigenen App in einem Prompt beschreiben koennen.
-- [ ] Erkennen, wann eine neue Aufgabe ein Strukturthema ist - und die KI entsprechend einweisen.
+**Nachweis:**
+- [ ] Schwerpunktpfad ist entschieden.
+- [ ] Begruendung passt zum eigenen Produktziel.
+- [ ] Nächste Lern- und Umsetzungsaufgabe ist klar.
 
-### Nice to have
-- [ ] Architekturentscheidungen kurz begruenden koennen (z. B. warum etwas in einen eigenen Ordner kommt).
-- [ ] Einen wiederverwendbaren Strukturkontext-Block fuer Prompts in der eigenen PRD-Datei ablegen.
+## Meilenstein 9: Erstes nutzbares Produktinkrement gebaut
 
-**Aktueller Umsetzungsstand:**
+**Ziel:** Dein Projekt tut etwas Nutzbares und kann von anderen ausprobiert oder geprüft werden.
 
-- [ ] **Projektstruktur verstehen und ableiten**
-  > **Uebung:** [course/02-course-exercises/meilenstein-04-uebung-01.md](../02-course-exercises/meilenstein-04-uebung-01.md)
-  > **Quellen zur Uebung:** [course/03-course-library/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide.md](../03-course-library/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide.md), [course/03-course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../03-course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md), [course/03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md), [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md)
-  - [ ] Modul 07 Grundlagen lesen
-  - [ ] Komponenten-Denken auf das eigene PRD anwenden
-  - [ ] Ordnerstruktur fuer das eigene Projekt skizzieren
+**Moduleinstieg:**
+- [Kursmodul 11: Schwerpunktpfad Web/App oder Datenprodukt](../01-course-modules/11-schwerpunktpfad-web-app-oder-datenprodukt/00-modulziele.md)
 
-- [ ] **KI mit Strukturkontext promten**
-  > **Uebung:** [course/02-course-exercises/meilenstein-04-uebung-01.md](../02-course-exercises/meilenstein-04-uebung-01.md) (Aufgaben 3 und 4)
-  - [ ] Strukturkontext-Block formulieren (Stack, Ordner, Komponente, Datenquelle)
-  - [ ] Block als Kontext vor einem Prompt verwenden und Ergebnis beurteilen
-  - [ ] Strukturkontext in der eigenen PRD-Datei ablegen
+**Nachweis:**
+- [ ] Kleines Produktinkrement liegt im eigenen Repository vor.
+- [ ] Nutzung oder Prüfung ist beschrieben.
+- [ ] Grenzen des aktuellen Stands sind sichtbar.
 
-- [ ] **Erste Komponente mit KI bauen**
-  > **Uebung:** [course/02-course-exercises/meilenstein-04-uebung-01.md](../02-course-exercises/meilenstein-04-uebung-01.md) (Aufgabe 4)
-  - [ ] Komponente benennen und Verantwortlichkeit definieren
-  - [ ] KI mit Strukturkontext + PRD beauftragen, die Komponente zu erstellen
-  - [ ] Ergebnis pruefen: Liegt die Datei am richtigen Ort? Tut sie das Richtige?
+## Meilenstein 10: Team- und Governance-Faehigkeit gezeigt
 
-- [ ] **Programmierlogik im KI-Code verstehen**
-  > **Uebung:** [course/02-course-exercises/meilenstein-04-uebung-02.md](../02-course-exercises/meilenstein-04-uebung-02.md)
-  > **Quellen zur Uebung:** [course/03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md](../03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md), [course/03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md](../03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md), [course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md), [course/03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md), [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md), [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-course-library/04-git/03-git-befehlsuebersicht.md)
-  - [ ] Variablen, Funktionen und Bedingungen in der ersten eigenen Komponente markieren
-  - [ ] Datenfluss in 3-5 Stichpunkten dokumentieren (Input, Verarbeitung, Ausgabe)
-  - [ ] Eine kleine Logikverbesserung mit geringem Risiko umsetzen (z. B. Umbenennung oder fruehe Rueckgabe)
+**Ziel:** Zusammenarbeit, Verantwortung und rechtliche Grenzen sind sichtbar dokumentiert.
 
+**Moduleinstieg:**
+- [Kursmodul 12: Teamarbeit, Datenschutz, Urheberrecht & Governance](../01-course-modules/12-teamarbeit-datenschutz-urheberrecht-governance/00-modulziele.md)
+
+**Nachweis:**
+- [ ] Review, Pull Request oder Entscheidungsnotiz liegt vor.
+- [ ] Datenschutz- oder Lizenzfrage wurde geprueft.
+- [ ] Verantwortlichkeit ist benannt.
+
+## Meilenstein 11: Versionierung und Release-Logik angewendet
+
+**Ziel:** Dein Produktstand ist nachvollziehbar, Änderungen sind eingeordnet und nächste Releases können geplant werden.
+
+**Moduleinstieg:**
+- [Kursmodul 13: Deployment, Monitoring & Release Management](../01-course-modules/13-deployment-monitoring-release-management/00-modulziele.md)
+
+**Nachweis:**
+- [ ] Versionsnummer, Release Notes oder Deployment-Plan liegt vor.
+- [ ] Bekannte Grenzen oder Risiken sind beschrieben.
+- [ ] Weiterentwicklung ist als nächster Schritt planbar.
+
+## Meilenstein 12: Abschlussinkrement praesentiert
+
+**Ziel:** Du praesentierst dein eigenes Produkt als nutzbares, dokumentiertes und weiterfuehrbares Ergebnis.
+
+**Moduleinstieg:**
+- [Kursmodul 14: Abschlussprojekt & Portfolio](../01-course-modules/14-abschlussprojekt-portfolio/00-modulziele.md)
+
+**Nachweis:**
+- [ ] Eigenes Repository enthält Produkt, Doku und Pruefhinweise.
+- [ ] Ergebnis kann als Portfolio-Stueck, internes Tool, Prototyp oder Lernprojekt verstanden werden.
+- [ ] Reflexion und nächste Schritte sind dokumentiert.

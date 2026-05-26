@@ -1,5 +1,5 @@
-<section class="page-shell">
-  <button type="button" class="back-link" (click)="goBackToModule()">Zurueck zum Modul</button>
+﻿<section class="page-shell">
+  <button type="button" class="back-link" (click)="goBackToModule()">Zurück zum Modul</button>
 
   @if (loading()) {
     <p class="state">Lade Schritt...</p>
@@ -41,9 +41,9 @@
     <nav class="step-nav">
       <button type="button" class="nav-btn" [disabled]="!previousStep()" (click)="goToPreviousStep()">
         @if (previousStep()) {
-          Zurueck: Schritt {{ previousStep()!.id }}
+          Zurück: Schritt {{ previousStep()!.id }}
         } @else {
-          Zurueck
+          Zurück
         }
       </button>
 

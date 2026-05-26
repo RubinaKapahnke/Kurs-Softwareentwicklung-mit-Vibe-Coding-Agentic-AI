@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+﻿import { CommonModule } from '@angular/common';
 import { Component, inject, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -54,7 +54,7 @@ export class StartseiteComponent {
     },
     {
       id: 'ai-literacy-teams',
-      title: 'AI Literacy fuer Teams',
+      title: 'AI Literacy für Teams',
       shortDescription: 'Ein praxisnaher Einstieg in Modellverstaendnis, Grenzen, Verantwortung und sinnvollen KI-Einsatz.',
       status: 'coming-soon',
       statusLabel: 'Im Aufbau'

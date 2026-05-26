@@ -17,7 +17,7 @@ In dieser Übung arbeitest du:
 - **Auf github.com** - du erstellst dort einen Account und passt dein Profil an
 - **Später:** Du brauchst den GitHub-Username deiner Trainerin/deines Trainers
 
-> **Wichtig - diese Datei nicht bearbeiten:** Diese Uebungsbeschreibung ist nur eine Anleitung. Du arbeitest direkt auf github.com - es gibt hier keine Datei zum Bearbeiten. Deine Aktivitaet (Account-Erstellung, Profil-Aenderungen) wird spaeter durch deinen GitHub-Account sichtbar.
+> **Wichtig - diese Datei nicht bearbeiten:** Diese Übungsbeschreibung ist nur eine Anleitung. Du arbeitest direkt auf github.com - es gibt hier keine Datei zum Bearbeiten. Deine Aktivitaet (Account-Erstellung, Profil-Änderungen) wird später durch deinen GitHub-Account sichtbar.
 
 ---
 
@@ -82,7 +82,7 @@ Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schr
 
 **Wenn dein Übungs-Repo bereit ist:**
 
-1. **Gehe in dein Übungs-Repo** auf GitHub (z.B. `github.com/dein-username/vibe-coding-uebungen`)
+1. **Gehe in dein Übungs-Repo** auf GitHub (z.B. `github.com/dein-username/vibe-coding-Übungen`)
 
 2. **Settings öffnen:**
    - Klicke oben auf **"Settings"** (Zahnrad-Symbol)

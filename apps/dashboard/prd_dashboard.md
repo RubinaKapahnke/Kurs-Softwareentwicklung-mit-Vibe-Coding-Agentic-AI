@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD): Progress-Hub
+﻿# Product Requirements Document (PRD): Progress-Hub
 
 **Projekt:** Gruppenprojekt "Progress-Hub"  
 **Status:** Requirement Baseline v1  
@@ -7,17 +7,17 @@
 ---
 
 ## 1. Vision & Zielsetzung
-Der **Progress-Hub** ist die zentrale Web-App fuer den Kurs, um Lernfortschritt, Aufgabenstatus und Git-Arbeitsweise transparent zu machen. Er unterstuetzt Kursentwicklung, Lernende und KI-Agenten mit einer einheitlichen, nachvollziehbaren Datensicht.
+Der **Progress-Hub** ist die zentrale Web-App für den Kurs, um Lernfortschritt, Aufgabenstatus und Git-Arbeitsweise transparent zu machen. Er unterstützt Kursentwicklung, Lernende und KI-Agenten mit einer einheitlichen, nachvollziehbaren Datensicht.
 
 ---
 
 ## 2. Datenquellen im Repo
 
-- Lernfortschrittsdateien: [course/learners/daria/lernfortschritt_daria.md](../../course/learners/daria/lernfortschritt_daria.md), [course/learners/dom/lernfortschritt_dom.md](../../course/learners/dom/lernfortschritt_dom.md), [course/learners/medine/lernfortschritt_medine.md](../../course/learners/medine/lernfortschritt_medine.md), [course/learners/raphael/lernfortschritt_raphael.md](../../course/learners/raphael/lernfortschritt_raphael.md), [course/learners/sebastian/lernfortschritt_sebastian.md](../../course/learners/sebastian/lernfortschritt_sebastian.md)
+- Lernfortschrittsdateien: aktuell nur Beispielstruktur unter [course/learners/beispiel/lernfortschritt_beispiel.md](../../course/learners/beispiel/lernfortschritt_beispiel.md); produktiv später nach Muster `course/learners/<name>/lernfortschritt_<name>.md`
 - Meilensteine und Lernziele (Must/Should/Nice): [COURSE_MILESTONES.md](../../course/00-course-guides/COURSE_MILESTONES.md)
-- Uebungen pro Meilenstein: [course/02-course-exercises/README_UEBUNGEN.md](../../course/02-course-exercises/README_UEBUNGEN.md) sowie Dateien unter [course/02-course-exercises](../../course/02-course-exercises)
+- Übungen pro Meilenstein: [course/02-course-exercises/README_UEBUNGEN.md](../../course/02-course-exercises/README_UEBUNGEN.md) sowie Dateien unter [course/02-course-exercises](../../course/02-course-exercises)
 - Git-Zusammenarbeit: GitHub-Daten (Commits, Branches, PRs, Reviews, Kommentare)
-- Eigene Felder durch Kursentwickler (z. B. Notizen, ungeklaerte Rueckfragen)
+- Eigene Felder durch Kursentwickler (z. B. Notizen, ungeklärte Rückfragen)
 
 ---
 
@@ -36,20 +36,20 @@ Der **Progress-Hub** ist die zentrale Web-App fuer den Kurs, um Lernfortschritt,
 ## 4. Priorisierung (MoSCoW)
 
 ### Must
-- Option-A-Uebersicht als Hauptansicht: alle Teilnehmenden x Meilensteine x Uebungen
+- Option-A-Übersicht als Hauptansicht: alle Teilnehmenden x Meilensteine x Übungen
 - Delta zum letzten Stand sichtbar (Highlight + Fortschrittsmeter)
 - Snapshot-Erstellung per Knopfdruck mit Historie (vorheriger Stand bleibt erhalten)
 - Statussicht auf Must/Should/Nice je Lernziel pro Person
 
 ### Should
-- Lernpfad-Graph mit Farbcodierung pro Uebung/Meilenstein
+- Lernpfad-Graph mit Farbcodierung pro Übung/Meilenstein
 - Git-Integration: Commits, Branches, PR-Status, Reviews, Review-Kommentare
 - Filter nach Meilenstein, Person, Status
-- Umschalten zwischen Uebersicht (Option A) und Detailansicht (Option B)
+- Umschalten zwischen Übersicht (Option A) und Detailansicht (Option B)
 
 ### Could
-- Cluster-Hinweise fuer Zusammenarbeit (Teilnehmende mit aehnlichem Stand)
-- Aggregation gemeinsamer individueller Lernwuensche (wenn mehrere TN denselben Wunsch haben)
+- Cluster-Hinweise für Zusammenarbeit (Teilnehmende mit aehnlichem Stand)
+- Aggregation gemeinsamer individueller Lernwünsche (wenn mehrere TN denselben Wunsch haben)
 
 ### Won't (vorerst)
 - Wettbewerbsmetriken wie "schneller als Durchschnitt"
@@ -60,16 +60,16 @@ Der **Progress-Hub** ist die zentrale Web-App fuer den Kurs, um Lernfortschritt,
 ## 5. User Stories
 
 ### [Kursentwickler]
-Als Kursentwickler moechte ich eine stundenaktuelle Gesamtuebersicht (per manuellem Snapshot), damit ich sofort sehe, wer wo steht, wo Blockaden sind und wo Unterstuetzung noetig ist.
+Als Kursentwickler möchte ich eine stundenaktuelle Gesamtübersicht (per manuellem Snapshot), damit ich sofort sehe, wer wo steht, wo Blockaden sind und wo Unterstützung nötig ist.
 
 Akzeptanzkriterien:
-- [ ] Es gibt eine Hauptansicht mit allen Lernenden und allen relevanten Meilensteinen/Uebungen (Option A).
+- [ ] Es gibt eine Hauptansicht mit allen Lernenden und allen relevanten Meilensteinen/Übungen (Option A).
 - [ ] Pro Lernendem wird sichtbar: Status in Must/Should/Nice.
 - [ ] Der Unterschied zum letzten Snapshot wird visuell hervorgehoben.
 - [ ] Ein Snapshot kann per Button erstellt werden; vorherige Snapshots bleiben als Historie erhalten.
 
 ### [Kursentwickler]
-Als Kursentwickler moechte ich Git-Zusammenarbeit im Dashboard sehen, damit ich Arbeitsqualitaet und Kollaboration beurteilen kann.
+Als Kursentwickler möchte ich Git-Zusammenarbeit im Dashboard sehen, damit ich Arbeitsqualitaet und Kollaboration beurteilen kann.
 
 Akzeptanzkriterien:
 - [ ] Pro Lernendem sind Commit-Aktivitaet, aktive Branches und PR-Status sichtbar.
@@ -77,26 +77,26 @@ Akzeptanzkriterien:
 - [ ] Review-Kommentare und offene Diskussionen sind einsehbar.
 
 ### [Kursentwickler]
-Als Kursentwickler moechte ich gleiche Lernstaende und gleiche individuelle Lernwuensche erkennen, damit ich gezielte Zusammenarbeit vorschlagen kann.
+Als Kursentwickler möchte ich gleiche Lernstände und gleiche individuelle Lernwünsche erkennen, damit ich gezielte Zusammenarbeit vorschlagen kann.
 
 Akzeptanzkriterien:
 - [ ] Das Dashboard markiert Lernende mit aehnlichem Fortschritt.
-- [ ] Individuelle Lernwuensche werden pro Person aus der Lernfortschrittsdatei angezeigt.
+- [ ] Individuelle Lernwünsche werden pro Person aus der Lernfortschrittsdatei angezeigt.
 - [ ] Es gibt eine aggregierte Sicht, wenn mehrere Teilnehmende denselben Wunsch haben.
 
 ### [Lernende]
-Als Lernende/r moechte ich zwischen Gruppenuebersicht und Detailansicht wechseln, damit ich meinen Stand im Kontext und im Detail verstehe.
+Als Lernende/r möchte ich zwischen Gruppenuebersicht und Detailansicht wechseln, damit ich meinen Stand im Kontext und im Detail verstehe.
 
 Akzeptanzkriterien:
-- [ ] Es gibt einen klaren View-Switch zwischen Option A (Uebersicht) und Option B (Detail).
-- [ ] In der Detailansicht sind naechster Schritt, offene Fragen und aktueller Lernfokus sichtbar.
+- [ ] Es gibt einen klaren View-Switch zwischen Option A (Übersicht) und Option B (Detail).
+- [ ] In der Detailansicht sind nächster Schritt, offene Fragen und aktueller Lernfokus sichtbar.
 - [ ] Das Design vermeidet Wettbewerbsdruck (keine Ranking- oder Speed-Metriken).
 
 ### [KI-Agent]
-Als KI-Agent moechte ich stabile, typisierte JSON-Daten mit eindeutigen IDs lesen, damit ich Fortschritt konsistent auswerten und Features robust implementieren kann.
+Als KI-Agent möchte ich stabile, typisierte JSON-Daten mit eindeutigen IDs lesen, damit ich Fortschritt konsistent auswerten und Features robust implementieren kann.
 
 Akzeptanzkriterien:
-- [ ] Datenobjekte besitzen eindeutige IDs fuer Lernende, Meilensteine und Uebungen.
+- [ ] Datenobjekte besitzen eindeutige IDs für Lernende, Meilensteine und Übungen.
 - [ ] Snapshot und Delta sind als eigene, maschinenlesbare Strukturen verfuegbar.
 - [ ] TypeScript-Interfaces sind strict-mode-kompatibel und dokumentiert.
 
@@ -104,11 +104,11 @@ Akzeptanzkriterien:
 
 ## 6. UX- und Visualisierungsanforderungen
 
-- Farbcodierung pro Uebungsstatus: gruen (abgeschlossen), gelb (in Arbeit), grau (nicht gestartet)
-- Hauptansicht Option A: Matrix mit Lernenden x Meilensteine/Uebungen
-- Detailansicht Option B: persoenlicher Lernpfad mit Git- und Fragen-Kontext
-- Delta-Darstellung: Highlight geaenderter Felder plus Fortschrittsmeter seit letztem Snapshot
-- Individuelle Lernwuensche: eigene Spalte im Meilenstein-Kontext, inkl. Gruppenhaeufigkeit
+- Farbcodierung pro Übungsstatus: grün (abgeschlossen), gelb (in Arbeit), grau (nicht gestartet)
+- Hauptansicht Option A: Matrix mit Lernenden x Meilensteine/Übungen
+- Detailansicht Option B: persönlicher Lernpfad mit Git- und Fragen-Kontext
+- Delta-Darstellung: Highlight geänderter Felder plus Fortschrittsmeter seit letztem Snapshot
+- Individuelle Lernwünsche: eigene Spalte im Meilenstein-Kontext, inkl. Gruppenhaeufigkeit
 
 ---
 
@@ -140,7 +140,7 @@ export interface MilestoneStatus {
 	exerciseStatus: ExerciseStatus[];
 }
 
-// Quelle: course/02-course-exercises/meilenstein-*-uebung-*.md
+// Quelle: course/02-course-exercises/meilenstein-*-Übung-*.md
 export interface ExerciseStatus {
 	exerciseId: string;
 	exerciseTitle: string;
@@ -217,9 +217,9 @@ export interface SnapshotDelta {
 
 - [ ] Alle Must-Anforderungen sind in der UI nutzbar und mit Testdaten verifiziert.
 - [ ] Snapshot per Button erzeugt neuen Datensatz; Historie bleibt erhalten.
-- [ ] Delta zum letzten Snapshot wird fuer jede Person sichtbar angezeigt.
+- [ ] Delta zum letzten Snapshot wird für jede Person sichtbar angezeigt.
 - [ ] Option A als Standardansicht ist umgesetzt; Wechsel auf Option B funktioniert.
-- [ ] Farbstatus pro Uebung ist eindeutig und konsistent.
+- [ ] Farbstatus pro Übung ist eindeutig und konsistent.
 - [ ] Daten aus Lernfortschritt, GitHub und eigenen Feldern sind zusammengefuehrt.
 - [ ] Keine kompetitiven Metriken im UI.
 - [ ] TypeScript-Modelle laufen im Strict Mode ohne `any`.
@@ -230,4 +230,4 @@ export interface SnapshotDelta {
 
 - GitHub-Datenzugriff finalisieren (Token, Rate Limits, Polling-Strategie)
 - Mapping-Regeln: Wie genau aus Markdown nach JSON geparst wird
-- Schwellenwerte fuer "aehnlicher Lernstand" fachlich definieren
+- Schwellenwerte für "aehnlicher Lernstand" fachlich definieren

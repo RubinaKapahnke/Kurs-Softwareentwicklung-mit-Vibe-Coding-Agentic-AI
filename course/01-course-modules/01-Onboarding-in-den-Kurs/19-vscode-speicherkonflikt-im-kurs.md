@@ -1,6 +1,6 @@
-# VS Code Speicherkonflikt im Kurs: COURSE_MILESTONES.md kann nicht gespeichert werden
+﻿# VS Code Speicherkonflikt im Kurs: COURSE_MILESTONES.md kann nicht gespeichert werden
 
-Diese Notiz ist kursspezifisch fuer den typischen Fall, dass `COURSE_MILESTONES.md` waehrend deiner Bearbeitung im Hintergrund geaendert wurde.
+Diese Notiz ist kursspezifisch für den typischen Fall, dass `COURSE_MILESTONES.md` während deiner Bearbeitung im Hintergrund geändert wurde.
 
 ## Typische Fehlermeldung
 
@@ -16,9 +16,9 @@ Hauefige Ursachen im Kurs-Repo:
 ## Konkretes Vorgehen im Kurs
 
 1. In VS Code auf **Compare** klicken (nicht sofort Overwrite).
-2. Unterschiede in Ruhe pruefen und fehlende Inhalte uebernehmen.
+2. Unterschiede in Ruhe prüfen und fehlende Inhalte uebernehmen.
 3. Datei speichern.
-4. Im Terminal pruefen:
+4. Im Terminal prüfen:
 
 ```bash
 git status
@@ -29,8 +29,8 @@ git diff COURSE_MILESTONES.md
 
 ## Wenn in der Diff-Ansicht nur "Revert Block" sichtbar ist
 
-- **Revert Block** loescht den gruenen Aenderungsblock.
-- Wenn du die gruene Seite behalten willst, **nicht** auf Revert Block klicken.
+- **Revert Block** löscht den gruenen Aenderungsblock.
+- Wenn du die grüne Seite behalten willst, **nicht** auf Revert Block klicken.
 
 Stattdessen:
 1. Diff nur lesen/vergleichen.
@@ -53,10 +53,10 @@ So bleibt dein aktueller Bearbeitungsstand erhalten, auch wenn VS Code den alten
 
 ## Wann darf ich Overwrite nutzen?
 
-Nur wenn du sicher weisst, dass die neuere Festplattenversion keine benoetigten Aenderungen enthaelt.
+Nur wenn du sicher weisst, dass die neuere Festplattenversion keine benoetigten Änderungen enthaelt.
 
 Im Zweifel gilt im Kurs: **erst Compare, dann entscheiden**.
 
 ## Weiterfuehrung (allgemein)
 
-- [VS Code: Speicherkonflikt bei geaenderter Datei (Compare/Overwrite)](../../03-course-library/02-vscode/03-vscode-speicherkonflikt-compare-overwrite.md)
+- [VS Code: Speicherkonflikt bei geänderter Datei (Compare/Overwrite)](../../03-course-library/02-vscode/03-vscode-speicherkonflikt-compare-overwrite.md)

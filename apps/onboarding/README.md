@@ -1,6 +1,6 @@
 ﻿# Kurs-Tool: aktueller Schwerpunkt Modul Onboarding
 
-Diese Datei ist die Arbeitsgrundlage fuer Pflege, Erweiterung und Abnahme des Kurs-Tools im aktuellen Schwerpunkt Modul Onboarding.
+Diese Datei ist die Arbeitsgrundlage für Pflege, Erweiterung und Abnahme des Kurs-Tools im aktuellen Schwerpunkt Modul Onboarding.
 
 ## Zielbild
 
@@ -9,7 +9,7 @@ Das Kurs-Tool soll den gesamten Kurs begleiten. Der aktuelle Ausbauschritt ist f
 ## Produkt-Scope (MVP)
 
 - Hoechstens 6 lineare Kernschritte des Moduls Onboarding bis zum lokalen Clone sind als Fuehrungslogik klar erkennbar.
-- Der aktuelle Stand nutzt mehr Detailschritte, muss aber fuer Lernende weiterhin wie ein klarer, sicherer Flow wirken.
+- Der aktuelle Stand nutzt mehr Detailschritte, muss aber für Lernende weiterhin wie ein klarer, sicherer Flow wirken.
 - Pro Lektion ist ein Erfolgskriterium sichtbar.
 - Nach dem Modul Onboarding ist COURSE_MILESTONES.md der fachliche Einstieg in den weiteren Kursfluss.
 
@@ -33,21 +33,21 @@ Im aktuellen Onboarding-MVP bleibt diese Benennung einheitlich: Wir sprechen dur
 ### B. Lektionslogik und Sicherheit
 
 - [ ] Lektion 1 (Voucher) sperrt alle Folgelektionen bis zur Freischaltung.
-- [ ] Lektion 2 fragt Vorerfahrung ab und fuehrt in den passenden Pfad.
+- [ ] Lektion 2 fragt Vorerfahrung ab und führt in den passenden Pfad.
 - [ ] Bei bestehendem Account ist die Sichtbarkeitswarnung inkl. Pflicht-Checkbox aktiv, bevor die Lektion als erledigt markiert werden kann.
 - [ ] Der Fallback zur Standardfuehrung (neuer Account) ist jederzeit erreichbar.
 
 ### C. Rueckkehr und Navigation
 
-- [ ] Rueckkehrende koennen an der letzten offenen Lektion fortsetzen.
+- [ ] Rueckkehrende können an der letzten offenen Lektion fortsetzen.
 - [ ] Freie Lektionauswahl im Shell-Navigator funktioniert.
-- [ ] Die Zusammenfassung ermoeglicht gezieltes Nacharbeiten offener Lektionen.
+- [ ] Die Zusammenfassung ermöglicht gezieltes Nacharbeiten offener Lektionen.
 
 ### D. Bruecke in den Kursfluss
 
-- [ ] Der Abschluss fuehrt klar zu COURSE_MILESTONES.md und README_UEBUNGEN.md.
+- [ ] Der Abschluss führt klar zu COURSE_MILESTONES.md und README_UEBUNGEN.md.
 - [ ] GitHub-Links und VS-Code-Alternative sind als gleichwertige Wege sichtbar.
-- [ ] Lernende koennen nach dem Abschluss den Unterschied erklaeren: Kurs-Repo fuer Orientierung/Fortschritt, eigenes Repo fuer Umsetzung.
+- [ ] Lernende können nach dem Abschluss den Unterschied erklären: Kurs-Repo für Orientierung/Fortschritt, eigenes Repo für Umsetzung.
 
 ### E. Qualitaet
 
@@ -105,7 +105,7 @@ Ergebnis:
 - `public/content/step-manifest.json` wird aktualisiert.
 - Inhalte werden nach `public/content/step-XX/` gespiegelt.
 
-## Markdown-Konvention Fuer Lesson-Flow
+## Markdown-Konvention Für Lesson-Flow
 
 - Jede `##`-Überschrift erzeugt eine neue Lesson-Slide.
 - Ausnahmen ohne eigene Slide: `## Ziel`, `## Aufgaben`, `## Fallback`, `## Erfolgskriterium`, `## Was ist zu tun`, `## Hilfreiche Links`, `## Übungen zur Lektion`.
@@ -126,7 +126,7 @@ Ergebnis:
 
 ### Quiz-Pattern
 
-Quizze dienen hier als Verstaendnis-Checks. Sie sollen Begriffe, Unterschiede oder Entscheidungen pruefen, nicht auflockern oder mit offensichtlichen Dummy-Antworten arbeiten.
+Quizze dienen hier als Verstaendnis-Checks. Sie sollen Begriffe, Unterschiede oder Entscheidungen prüfen, nicht auflockern oder mit offensichtlichen Dummy-Antworten arbeiten.
 
 ```md
 ## Quiz: Kurze Verständnisfrage
@@ -142,17 +142,17 @@ Erfolg: ...
 Fehler: ...
 ```
 
-### Farbfelder Ueber H3-Praefixe
+### Farbfelder Über H3-Praefixe
 
 - `### Wichtig:` / `### Hinweis:` -> gelb
 - `### Achtung:` -> rot
-- `### Erfolg:` / `### OK:` / `### Gruen:` -> grün
+- `### Erfolg:` / `### OK:` / `### Grün:` -> grün
 - `### Blau:` -> blau
 - `### Info:` / `### Tipp:` -> eigener Hinweis-Farbton
 
 Hinweis: Das Präfix wird nicht angezeigt. Sichtbar bleibt nur der Text nach `:`.
 
-## Build und lokale Pruefung
+## Build und lokale Prüfung
 
 Im Ordner apps/onboarding:
 
@@ -162,7 +162,7 @@ npm run build
 npm run test
 ```
 
-Optional fuer lokale UI-Pruefung:
+Optional für lokale UI-Pruefung:
 
 ```bash
 npx ng serve
@@ -171,7 +171,7 @@ npx ng serve
 ## Aktuelles Mindest-Testset
 
 - `src/app/services/onboarding-state.service.spec.ts`
-	- Persistenz fuer Lektion 2
+	- Persistenz für Lektion 2
 	- Reset von Lektion-3-Fortschritt bei Pfadwechsel
 	- Reset der Sichtbarkeitsbestaetigung
 - `src/app/guards/step-access.guard.spec.ts`
@@ -182,26 +182,26 @@ npx ng serve
 	- Sichtbarer Folgeinhalte-Hinweis unterhalb Lesson-Flow
 - `src/app/components/lesson-flow/lesson-flow.component.spec.ts`
 	- Quiz-Zustandslogik (4 Statusfaelle) inkl. Label/Icon-Mapping
-	- Umschalten von "Antworten pruefen" zu "Nochmal versuchen"
-	- Feedbackblock mit Ueberschrift und Begruendungstext
+	- Umschalten von "Antworten prüfen" zu "Nochmal versuchen"
+	- Feedbackblock mit Überschrift und Begruendungstext
 
 ## Typische Fehlerbilder
 
-- `ng serve` kann lokal scheitern, auch wenn `npm run build` erfolgreich ist. Fuer Abnahme immer mindestens den Build pruefen.
-- Das Initial-Bundle liegt aktuell knapp ueber dem Budget. Das ist derzeit eine Warning, kein Build-Blocker.
+- `ng serve` kann lokal scheitern, auch wenn `npm run build` erfolgreich ist. Für Abnahme immer mindestens den Build pruefen.
+- Das Initial-Bundle liegt aktuell knapp über dem Budget. Das ist derzeit eine Warning, kein Build-Blocker.
 - Bei Lektion 2 immer auch Reload testen, damit Persistenz und Pfadwechsel korrekt bleiben.
 
-## Guardrails fuer Aenderungen
+## Guardrails für Änderungen
 
 - Keine monolithischen Seitenkomponenten; wiederkehrende Muster in bestehende Komponenten integrieren.
 - Keine hardcodierten Farben in Komponenten-SCSS; Tokens nutzen.
-- Interaktive Lektionslogik bleibt in Angular; laengere Erklaertexte duerfen in public/content gepflegt werden.
-- Fachbegriffe in Onboarding-Texten nur erklaert oder direkt erklaerbar verwenden.
-- Allgemeine Tipps und wiederverwendbare Hilfen gehoeren langfristig in zentrale FAQ-, Glossar- oder Bedienungshilfen-Dateien statt in jede Pflichtlektion.
-- Aenderungen am Lesson-Flow-Verhalten (Footer, letzter Button, Scroll-Logik) nur mit expliziter Produktentscheidung.
+- Interaktive Lektionslogik bleibt in Angular; laengere Erklaertexte dürfen in public/content gepflegt werden.
+- Fachbegriffe in Onboarding-Texten nur erklärt oder direkt erklaerbar verwenden.
+- Allgemeine Tipps und wiederverwendbare Hilfen gehören langfristig in zentrale FAQ-, Glossar- oder Bedienungshilfen-Dateien statt in jede Pflichtlektion.
+- Änderungen am Lesson-Flow-Verhalten (Footer, letzter Button, Scroll-Logik) nur mit expliziter Produktentscheidung.
 
 ## Betriebsregel nach Abschluss
 
-Wenn das Modul Onboarding oder seine Einbettung in das Kurs-Tool inhaltlich/funktional geaendert wird, diese Datei und die Ticketplanung in apps/notizen_todos_apps.md direkt mitpflegen.
+Wenn das Modul Onboarding oder seine Einbettung in das Kurs-Tool inhaltlich/funktional geändert wird, diese Datei und die Ticketplanung in apps/notizen_todos_apps.md direkt mitpflegen.
 
 

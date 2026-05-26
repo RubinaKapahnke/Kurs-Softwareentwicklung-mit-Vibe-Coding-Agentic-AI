@@ -7,9 +7,9 @@ Du klonst das gemeinsame Kurs-Repository und oeffnest es lokal in VS Code.
 ## Vorbedingung
 
 - Einladung zum Kurs-Repository wurde angenommen.
-- Git ist installiert und im Terminal verfuegbar (`git --version`).
+- Git ist installiert und im Terminal verfügbar (`git --version`).
 
-## Lektion-fuer-Lektion
+## Lektion-für-Lektion
 
 1. Kurs-Repository auf GitHub oeffnen.
 2. Unter **Code** die HTTPS-URL kopieren.
@@ -18,21 +18,21 @@ Du klonst das gemeinsame Kurs-Repository und oeffnest es lokal in VS Code.
 5. `git clone <URL>` ausfuehren.
 6. Den geklonten Ordner in VS Code oeffnen.
 
-## Nach dem Clone pruefen
+## Nach dem Clone prüfen
 
-- Datei `course/00-course-guides/COURSE_MILESTONES.md` ist ueber Strg+P auffindbar.
+- Datei `course/00-course-guides/COURSE_MILESTONES.md` ist über Strg+P auffindbar.
 - Ordner `course/` ist vorhanden.
 - `git status` zeigt ein sauberes Repository.
 
 ## Fallback
 
-- Einladung fehlt: GitHub-Benachrichtigungen pruefen oder Dozent*in kontaktieren.
+- Einladung fehlt: GitHub-Benachrichtigungen prüfen oder Dozent*in kontaktieren.
 - Clone schlaegt fehl: URL und Zugriffsrechte pruefen.
-- VS Code oeffnet falschen Ordner: Ueber **Datei -> Ordner oeffnen** den geklonten Ordner waehlen.
+- VS Code öffnet falschen Ordner: Über **Datei -> Ordner öffnen** den geklonten Ordner waehlen.
 
 ## Erfolgskriterium
 
-Das Kurs-Repository ist lokal geoeffnet und du kannst die zentrale Kursstruktur sehen.
+Das Kurs-Repository ist lokal geöffnet und du kannst die zentrale Kursstruktur sehen.
 
 ## Hilfreiche Links
 

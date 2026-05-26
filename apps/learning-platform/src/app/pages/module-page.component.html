@@ -1,4 +1,4 @@
-<section class="page-shell">
+﻿<section class="page-shell">
   <a class="back-link" routerLink="/">Zur Kursuebersicht</a>
 
   @if (loading()) {
@@ -19,7 +19,7 @@
           @if (resumeStepId()) {
             Weiterlernen ab Schritt {{ resumeStepId() }}
           } @else {
-            Kein gueltiger Schritt verfuegbar
+            Kein gueltiger Schritt verfügbar
           }
         </button>
       </div>
@@ -28,7 +28,7 @@
     <section class="steps-block">
       <h2>Schritte</h2>
       @if (sortedSteps().length === 0) {
-        <p class="state state-error">Dieses Modul enthaelt keine gueltigen Schritte.</p>
+        <p class="state state-error">Dieses Modul enthält keine gueltigen Schritte.</p>
       } @else {
         <ol>
           @for (step of sortedSteps(); track step.id) {
@@ -37,7 +37,7 @@
                 <h3>Schritt {{ step.id }}: {{ step.title }}</h3>
                 <p class="step-meta">Slug: {{ step.slug }} | Pflicht: {{ step.required ? 'ja' : 'nein' }}</p>
                 <p class="step-state">Status: {{ isCompleted(step.id) ? 'erledigt' : 'offen' }}</p>
-                <a class="step-link" [routerLink]="['/kurse', courseId(), 'module', moduleId(), 'step', step.id]">Schritt oeffnen</a>
+                <a class="step-link" [routerLink]="['/kurse', courseId(), 'module', moduleId(), 'step', step.id]">Schritt öffnen</a>
 
                 <p class="section-label">Sektionen</p>
                 <ul>

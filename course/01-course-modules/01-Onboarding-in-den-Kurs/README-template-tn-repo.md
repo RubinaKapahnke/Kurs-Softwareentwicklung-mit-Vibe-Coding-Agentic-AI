@@ -1,20 +1,20 @@
-# README-Vorlage fuer dein Uebungs-Repository
+﻿# README-Vorlage für dein Übungs-Repository
 
 ```markdown
-# Vibe Coding Kurs - Meine Loesungen
+# Vibe Coding Kurs - Meine Lösungen
 
-Dieses Repository enthaelt meine Aufgaben und Loesungen aus dem Kurs.
+Dieses Repository enthält meine Aufgaben und Lösungen aus dem Kurs.
 
-## Ueber mich
+## Über mich
 
 - Name: [Dein Name]
 - GitHub-Profil: [@dein-username](https://github.com/dein-username)
 
 ## Wie ich im Kurs arbeite
 
-1. Uebung im Kurs-Repository lesen
-2. Loesung in diesem Repository erstellen
-3. Aenderungen committen und pushen
+1. Übung im Kurs-Repository lesen
+2. Lösung in diesem Repository erstellen
+3. Änderungen committen und pushen
 4. Lernfortschritt zentral im Kurs-Repository aktualisieren
 
 ## Struktur

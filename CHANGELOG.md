@@ -1,10 +1,15 @@
-# Changelog
+﻿# Changelog
 
 Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 ---
 
 ## Tagesübersicht (grob)
+
+### 27.05.2026
+- Wissensbibliothek-Wording vereinheitlicht: Einstiegsdateien in `course/03-course-library/` von "Modulguide/Selbstcheck" auf "Artikel/Wissensziele" umgestellt und die Begriffe Artikel, Themenbereich und Abschnitt klarer von Kursmodulen getrennt.
+- Git-Einstieg umbenannt: `course/03-course-library/04-git/00-git-versionierung-modulguide.md` durch `course/03-course-library/04-git/00-was-ist-git.md` ersetzt; zentrale Links in README, Meilensteinen, Inhaltsverzeichnis und Übung 02-02 nachgezogen.
+- Lernnavigation sprachlich gestrafft: README und mehrere Einstiegsartikel beschreiben die `course/03-course-library/` jetzt als wikiartige Nachschlage-Sammlung statt als Modul-Ebene.
 
 ### 22.05.2026
 - Onboarding-Konsistenz auf den Zielzustand der Lektionen 01 und 02 ausgerichtet: veraltete Quellenpfade in `table-of-contents.md` und Meilenstein-01-Übungen auf aktuelle flache Moduldateien aktualisiert.
@@ -25,21 +30,21 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### 09.05.2026
 - Onboarding-App zum nutzbaren MVP-Flow ausgebaut: Startseite/Kursstart, Schrittlogik, Lesson Flow, Zusammenfassung, Content-Sync und Markdown-Inhalte erweitert.
 - Designsystem und Styles konsolidiert: Tokens, Typografie, Material-Variablen, Button-/Surface-/State-Utilities und keine hardcodierten Komponentenfarben.
-- StepPage refaktoriert: wiederverwendbare Komponenten fuer Choice Cards, Callouts, Voucher-Gate und Aufgabenlisten eingefuehrt.
-- Kursmaterial zu Code-Monstern und Refactoring ergaenzt, inklusive inertem Beispiel fuer den Unterricht.
-- Kontext-, Agent- und Prompt-Regeln gegen Code-Monster, Style-Wucher und unnoetige Komponenten-Vermehrung geschaerft.
+- StepPage refaktoriert: wiederverwendbare Komponenten für Choice Cards, Callouts, Voucher-Gate und Aufgabenlisten eingefuehrt.
+- Kursmaterial zu Code-Monstern und Refactoring ergänzt, inklusive inertem Beispiel für den Unterricht.
+- Kontext-, Agent- und Prompt-Regeln gegen Code-Monster, Style-Wucher und unnötige Komponenten-Vermehrung geschaerft.
 - Neues Lernmodul `08-programmierlogik` aufgebaut und in Meilenstein 4 verankert.
-- Folgeuebung `meilenstein-04-uebung-02.md` fuer KI-Code-Verstehen + kleine Logikverbesserung erstellt und in Kursnavigation integriert.
+- Folgeuebung `meilenstein-04-uebung-02.md` für KI-Code-Verstehen + kleine Logikverbesserung erstellt und in Kursnavigation integriert.
 
 ### 08.05.2026
 - Kursrahmen auf neue Architektur konsolidiert: `KURSBESCHREIBUNG.md` + neue Ebene `course/01-course-modules/` mit 14 Kursmodulen.
 - Root-Dokumentation synchronisiert (`README.md`, `COURSE_MILESTONES.md`, `course/02-course-exercises/README_UEBUNGEN.md`, `apps/README_APPS.md`).
 - Onboarding-App um Markdown-Content-Workflow erweitert (`public/content`, `markdownSource`, Renderer-Komponente mit Sanitizing).
 - Agent-/Instruction-Set für Konsistenz und Onboarding-Markdown-Flow erweitert (`AGENTS.md`, Onboarding-Instruction, Onboarding-Web-Architect, Repo-Consistency-Checker).
-- Validierung erfolgreich: Onboarding-Build grün, 313 Linkchecks OK, alle 8 Uebungen bestanden.
+- Validierung erfolgreich: Onboarding-Build grün, 313 Linkchecks OK, alle 8 Übungen bestanden.
 
 ### 04.05.2026
-- Repo-Struktur auf `course/` umgestellt (`learners`, `modules`, `uebungen`) und Pfade repo-weit angepasst.
+- Repo-Struktur auf `course/` umgestellt (`learners`, `modules`, `übungen`) und Pfade repo-weit angepasst.
 - Dashboard deutlich ausgebaut (Option A/B, Snapshot-Infos, Blockaden, Git- und Lernstands-Sichten).
 - Lernmaterial konsolidiert (Übungen bereinigt, Lernfortschritt-Dateien vereinheitlicht, neue Prüfregeln im Testskript).
 - KI-Setup erweitert (neuer Readiness-Agent, Consistency-Checks inkl. CHANGELOG/Agents, Konventions-Updates).
@@ -60,13 +65,13 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **Onboarding-App - Markdown-Content-Workflow:**
 - `apps/onboarding/src/app/components/markdown-view/markdown-view.component.ts`: Neue Komponente zum sicheren Rendern von Markdown (DOMPurify + `bypassSecurityTrustHtml`)
-- `apps/onboarding/public/content/github-account.md`: Erste Markdown-Erklaerungsdatei fuer Onboarding-Schritt "GitHub Account"
+- `apps/onboarding/public/content/github-account.md`: Erste Markdown-Erklaerungsdatei für Onboarding-Schritt "GitHub Account"
 - Schrittmodell (`markdownSource`-Feld) auf optionale Markdown-Einbindung erweitert
 
 **Kursmodule-Ebene neu:**
 - `KURSBESCHREIBUNG.md`: Gesamtkursbeschreibung mit Pfaden, Kurslogik und Meilensteinbedeutung konsolidiert
-- `course/01-course-modules/` mit 14 eigenstaendigen Kursmodulen (`00-modulziele.md` je Modul) angelegt
-- `course/01-course-modules/README_KURSMODULE.md`: Uebersicht aller Kursbausteine
+- `course/01-course-modules/` mit 14 eigenständigen Kursmodulen (`00-modulziele.md` je Modul) angelegt
+- `course/01-course-modules/README_KURSMODULE.md`: Übersicht aller Kursbausteine
 
 **Agents/Instructions erweitert:**
 - `AGENTS.md`: Abschnitt Markdown-Content-Konvention und neue Architektur-Ebene `course/01-course-modules/` dokumentiert
@@ -74,14 +79,14 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 - `.github/agents/course-dev-onboarding-web-architect.agent.md`: Neu angelegt
 
 **Konsistenz-Fixes (Paket A+B - Repo-Consistency-Checker Session 8):**
-- Alle `apps/learners/` → `course/learners/` in 9 Uebungsdateien + README_UEBUNGEN korrigiert
-- `docs/uebungen`-Linktexte in Uebungen auf `course/02-course-exercises` aktualisiert
+- Alle `apps/learners/` → `course/learners/` in 9 Übungsdateien + README_UEBUNGEN korrigiert
+- `docs/uebungen`-Linktexte in Übungen auf `course/02-course-exercises` aktualisiert
 - `course/03-course-library/05-terminal/03-terminal-befehlsuebersicht.md`: Beispielpfade korrigiert
 - `course/03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md`: PRD-Pfad korrigiert
 - `apps/dashboard/models/dashboard.models.ts`: Interface-Kommentare auf korrekte Pfade (`course/learners/`, `course/02-course-exercises/`) aktualisiert
-- `README.md`: `course/99-course-development/fremdtexte-kursentwicklung.md` in Projektstruktur ergaenzt
+- `README.md`: `course/99-course-development/fremdtexte-kursentwicklung.md` in Projektstruktur ergänzt
 
-**Ergebnis:** 313 Links OK, 8 Uebungen OK, 5 Lernfortschritt-Dateien OK (unveraendert)
+**Ergebnis:** 313 Links OK, 8 Übungen OK, 5 Lernfortschritt-Dateien OK (unverändert)
 
 ---
 
@@ -90,43 +95,43 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ### Onboarding-MVP, Designsystem und Refactoring-Governance
 
 **Onboarding-App - Flow und Content:**
-- Startseite, Kursstart, Onboarding-Shell, StepPage und Zusammenfassung fuer den Kursstart-Flow erweitert.
+- Startseite, Kursstart, Onboarding-Shell, StepPage und Zusammenfassung für den Kursstart-Flow erweitert.
 - `apps/onboarding/src/app/data/onboarding-steps.data.ts`: Schrittdefinitionen, Lesson-Flow-Inhalte, Aufgaben und Ressourcen deutlich ausgebaut.
-- `apps/onboarding/content-sync.config.mjs` und `apps/onboarding/sync-content.mjs`: Content-Sync fuer ausgewaehlte Kursinhalte in `apps/onboarding/public/content/` ergaenzt.
+- `apps/onboarding/content-sync.config.mjs` und `apps/onboarding/sync-content.mjs`: Content-Sync für ausgewählte Kursinhalte in `apps/onboarding/public/content/` ergaenzt.
 - Neue Onboarding-Markdown-Inhalte: `github-repository-erstellen.md`, `kurs-handhabung.md`, `kurs-ueberblick.md`.
 
 **Designsystem und UI-Refactoring:**
-- Globale Style-Partial-Struktur ergaenzt: `_buttons.scss`, `_states.scss`, `_surfaces.scss`, erweiterte `_tokens.scss`, `_typography.scss` und `_material-theme.scss`.
-- Wiederverwendbare Komponenten eingefuehrt: `callout`, `choice-card`, `lesson-flow`, `step-tasks`, `voucher-gate`.
-- StepPage von wiederholten Auswahl-, Voucher- und Task-Bloecken entlastet; Page-Komponente bleibt staerker Orchestrator.
-- Dynamic CTA: Startseite/Kursstart koennen bei vorhandenem Fortschritt zu `Kurs fortsetzen` und dem ersten offenen Schritt springen.
+- Globale Style-Partial-Struktur ergänzt: `_buttons.scss`, `_states.scss`, `_surfaces.scss`, erweiterte `_tokens.scss`, `_typography.scss` und `_material-theme.scss`.
+- Wiederverwendbare Komponenten eingeführt: `callout`, `choice-card`, `lesson-flow`, `step-tasks`, `voucher-gate`.
+- StepPage von wiederholten Auswahl-, Voucher- und Task-Blöcken entlastet; Page-Komponente bleibt stärker Orchestrator.
+- Dynamic CTA: Startseite/Kursstart können bei vorhandenem Fortschritt zu `Kurs fortsetzen` und dem ersten offenen Schritt springen.
 
 **Kursmaterial und Architektur-Lernen:**
-- `course/01-course-modules/07-architektur-wartbare-produktstruktur/01-code-monster-entstehung-und-refactoring.md`: Erklaertext fuer den Kurs ergaenzt.
-- `course/01-course-modules/07-architektur-wartbare-produktstruktur/beispiel-code-monster-step-page.component.scss.txt`: Inertes Beispiel fuer Code-Monster ohne App-Funktion.
+- `course/01-course-modules/07-architektur-wartbare-produktstruktur/01-code-monster-entstehung-und-refactoring.md`: Erklärtext für den Kurs ergaenzt.
+- `course/01-course-modules/07-architektur-wartbare-produktstruktur/beispiel-code-monster-step-page.component.scss.txt`: Inertes Beispiel für Code-Monster ohne App-Funktion.
 - GitHub-/Git-Grundlagen und Kursnotizen erweitert, inklusive Repository-Erstellen-Anleitung.
 
 **Agenten, Prompts und Kontext-Regeln:**
 - `AGENTS.md`, Onboarding-/Dashboard-Instructions und App-Agents um Guardrails gegen Code-Monster, Style-Wucher und Komponenten-Inflation erweitert.
-- MVP-Scope-Freeze-Prompt um Architektur-Gate ergaenzt: Wiederverwendung vor Neuanlage, Rueckfrage bei unklarem Einmalfall.
+- MVP-Scope-Freeze-Prompt um Architektur-Gate ergänzt: Wiederverwendung vor Neuanlage, Rückfrage bei unklarem Einmalfall.
 
 **Validierung:**
 - Onboarding-Build erfolgreich (`npm run build`).
-- VS-Code-Diagnosen fuer Onboarding nach Refactoring sauber.
+- VS-Code-Diagnosen für Onboarding nach Refactoring sauber.
 - Style-Suchchecks: keine `!important`, keine hardcodierten Hex-/RGBA-Farben in Komponenten-SCSS.
 
 ---
 
 ## 09.05.2026 (Session 9a)
 
-### Kurs-, Modul- und Uebungs-Updates
+### Kurs-, Modul- und Übungs-Updates
 
 - Modul- und Kursstruktur auf `00-modulziele.md` vereinheitlicht (inkl. Umstellung in `course/01-course-modules/` und Folgepfaden).
-- GitHub-Inhalte fuer Kursmodul 01 ausgebaut und sauber zwischen `course/01-course-modules/` (kursbezogen) und `course/03-course-library/` (allgemein) getrennt.
-- Neue Inhalte zu Version Control / GitOps ergaenzt (allgemein + kursspezifische Einordnung).
+- GitHub-Inhalte für Kursmodul 01 ausgebaut und sauber zwischen `course/01-course-modules/` (kursbezogen) und `course/03-course-library/` (allgemein) getrennt.
+- Neue Inhalte zu Version Control / GitOps ergänzt (allgemein + kursspezifische Einordnung).
 - Neue Inhalte zu VS-Code-Speicherkonflikten (`Compare`/`Overwrite`, `Revert Block`, Fallback bei wiederholtem Save-Fehler) in Library und Kursmodul ergaenzt.
 - `COURSE_MILESTONES.md` und zentrale Kursnavigation auf den aktuellen Einstieg und Meilensteinfluss aktualisiert.
-- Uebungsbereich erweitert/angepasst (inkl. Meilenstein-01-Uebungen und Standardkonformitaet ohne vorausabgehakte Checklisten).
+- Übungsbereich erweitert/angepasst (inkl. Meilenstein-01-Übungen und Standardkonformitaet ohne vorausabgehakte Checklisten).
 
 ## 09.05.2026 (Session 9b)
 
@@ -134,28 +139,28 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 - Agent-Dateien in `.github/agents/` inhaltlich auf die aktuelle Kursarchitektur und Benennungsregeln synchronisiert.
 - Prompt-Dateien in `.github/prompts/` auf aktuelle Pfade und Rollenlogik angepasst.
-- Neuer wiederkehrender Prompt fuer Fremdtext-Verarbeitung eingefuehrt: `.github/prompts/course-dev-fremdtexte-verarbeiten.prompt.md`.
+- Neuer wiederkehrender Prompt für Fremdtext-Verarbeitung eingeführt: `.github/prompts/course-dev-fremdtexte-verarbeiten.prompt.md`.
 - Instruction-Dateien in `.github/instructions/` konsolidiert und auf aktuelle Struktur-/Workflow-Regeln gebracht.
 - `AGENTS.md` erweitert um klare Regeln zu Fremdtext-Workflow, Checkbox-Status und Trennung course-library vs kursmodule.
-- `.github/agents/course-dev-onboarding-ux-text.agent.md`: Prueft Texte in `apps/onboarding/` auf Anfaengertauglichkeit nach 6 Kriterien (Satzlaenge, Fachbegriff-Erklaerung, beobachtbares Ergebnis, kein Vorwissen, Fehlerfall, aktive Sprache).
+- `.github/agents/course-dev-onboarding-ux-text.agent.md`: Prüft Texte in `apps/onboarding/` auf Anfaengertauglichkeit nach 6 Kriterien (Satzlaenge, Fachbegriff-Erklärung, beobachtbares Ergebnis, kein Vorwissen, Fehlerfall, aktive Sprache).
 
 **Neuer Prompt:**
 - `.github/prompts/course-dev-onboarding-mvp-scope-freeze.prompt.md`: Scope-Freeze-Tool - verhindert Feature-Drift durch verbindliche In/Out-of-Scope-Definition vor Implementierungsstart.
 
 **Neue Instructions:**
-- `.github/instructions/onboarding.instructions.md` (`applyTo: apps/onboarding/**`): Architekturregeln fuer Copilot bei Arbeit in der Onboarding-App. Enthaelt Stack (Angular Standalone, Material 3, TypeScript Strict), MVP-Scope (max. 6 Schritte), Struktur-Konvention, UX-Regeln und vollstaendiges Brand-Setup.
+- `.github/instructions/onboarding.instructions.md` (`applyTo: apps/onboarding/**`): Architekturregeln für Copilot bei Arbeit in der Onboarding-App. Enthält Stack (Angular Standalone, Material 3, TypeScript Strict), MVP-Scope (max. 6 Schritte), Struktur-Konvention, UX-Regeln und vollständiges Brand-Setup.
 
 **Brand-Setup in `onboarding.instructions.md`:**
 - 9 CSS-Tokens aus KnOot Academy Styleguide (Calypso `#346995`, Amber `#FBBE02`, Mojo `#CA4242` + Neutralfarben)
 - Kontrast-Regeln (Weiss auf Hauptfarben nur bei grosser, halbfetter Schrift)
-- Typografie: Poppins (Standard) + Recoleta (sparsam fuer Untertitel)
+- Typografie: Poppins (Standard) + Recoleta (sparsam für Untertitel)
 - Material Design 3 (M3/MDC-based): `mat.define-theme()`, keine Legacy-APIs, keine `.mdc-*`-Klassen-Overrides
 
-**Agent-Descriptions geschaerft (4 Agents):**
+**Agent-Descriptions geschärft (4 Agents):**
 - `dashboard-po`: Trigger jetzt klar auf Anforderungen/PRD/Stories, kein Konflikt mehr mit `dashboard-developer`
 - `dashboard-developer`: Trigger auf Implementierung/Code fokussiert
 - `repo-consistency-checker`: `"repo audit"` entfernt (Konflikt mit `vibe-coding-readiness`), jetzt spezifisch auf Links/Struktur
-- `exercise-creator`: Von 6 auf 11 Trigger erweitert, deutsche Kontexte ergaenzt
+- `exercise-creator`: Von 6 auf 11 Trigger erweitert, deutsche Kontexte ergänzt
 
 ## 09.05.2026 (Session 10b)
 
@@ -164,21 +169,21 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 **Neues Lernmodul in der Course Library:**
 - `course/03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md`: Modul-Einstieg mit Must/Should/Nice-Selbstcheck.
 - `course/03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md`: Variablen, Funktionen, Bedingungen, Datenfluss und typische Logikfehler in KI-Code.
-- `course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md`: Schrittweise Methode zum Lesen, Rueckfragen und risikoarmen Verbessern von KI-Code.
+- `course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md`: Schrittweise Methode zum Lesen, Rückfragen und risikoarmen Verbessern von KI-Code.
 
 **Meilenstein-4-Integration:**
 - `COURSE_MILESTONES.md`: Modul 08 als Einstieg/Vertiefung in Meilenstein 4 aufgenommen und Umsetzungsblock "Programmierlogik im KI-Code verstehen" ergaenzt.
 - `course/02-course-exercises/meilenstein-04-uebung-02.md`: Neue Folgeuebung "KI-Code lesen und gezielt verbessern" erstellt.
-- `course/02-course-exercises/README_UEBUNGEN.md`: Uebersicht um Meilenstein-04-Uebung-02 erweitert.
+- `course/02-course-exercises/README_UEBUNGEN.md`: Übersicht um Meilenstein-04-Übung-02 erweitert.
 
 **Dokumentation und Agent-Workflow:**
 - `README.md`: Projektstruktur um `course/03-course-library/08-programmierlogik/` und den neuen Prompt-Eintrag in `.github/prompts/` erweitert.
-- `.github/prompts/course-dev-meilenstein-04-folgeuebung.prompt.md`: Prompt-Handoff fuer den Exercise-Creator-Agent angelegt.
+- `.github/prompts/course-dev-meilenstein-04-folgeuebung.prompt.md`: Prompt-Handoff für den Exercise-Creator-Agent angelegt.
 
 **Validierung:**
 - `tools/test-uebung.ps1 -File "course/02-course-exercises/meilenstein-04-uebung-02.md"`: 21 OK, 0 Fehler.
-- `tools/test-alle-uebungen.ps1`: alle 11 Uebungen bestanden, Coverage-Check konsistent.
-- `tools/test-links.ps1`: alle geprueften Links OK.
+- `tools/test-alle-uebungen.ps1`: alle 11 Übungen bestanden, Coverage-Check konsistent.
+- `tools/test-links.ps1`: alle geprüften Links OK.
 
 ## 12.05.2026 (Session 11)
 
@@ -282,7 +287,7 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 
 **`data/mock/github-activity.mock.ts`:** GitHub-Aktivität für Medine, Raphael, Sebastian ergänzt
 
-**Alle 5 `apps/learners/*/lernfortschritt_*.md`:** `## Individuelle Lernwuensche`-Abschnitt ergänzt; Datumsformat auf ISO 8601 korrigiert
+**Alle 5 `apps/learners/*/lernfortschritt_*.md`:** `## Individuelle Lernwünsche`-Abschnitt ergänzt; Datumsformat auf ISO 8601 korrigiert
 
 **`prd_dashboard.md` (v2 → v3):** §10 Implementierungsregeln (UX-, Dateiformat-, Code-Qualitäts-Constraints) und §11 Implementierungsprotokoll neu
 

@@ -151,7 +151,7 @@ export class OnboardingStateService {
     this.persistCompletedSubtasks();
   }
 
-  /** Keine Sperre mehr - behalten fuer moegliche externe Aufrufe, tut nichts */
+  /** Keine Sperre mehr - behalten für mögliche externe Aufrufe, tut nichts */
   unlockStep(_stepId: number): void { /* no-op */ }
 
   setParticipationStatus(status: ParticipationStatus): void {
@@ -166,7 +166,7 @@ export class OnboardingStateService {
   /**
    * Validiert den eingegebenen Voucher-Code.
    * MVP: Einziger gueltiger Code ist '90001'.
-   * @returns true wenn gueltig, false wenn ungueltig
+   * @returns true wenn gültig, false wenn ungueltig
    */
   validateVoucher(code: string): boolean {
     if (code.trim() === VALID_VOUCHER_CODE) {

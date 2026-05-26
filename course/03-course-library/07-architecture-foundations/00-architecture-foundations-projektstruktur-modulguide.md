@@ -1,31 +1,31 @@
-﻿# Modulguide: Architecture Foundations
+﻿# Artikel: Architecture Foundations
 
-Dieses Modul erklaert, wie du ein Softwareprojekt strukturiert aufbaust - damit die KI weiss, was sie bauen soll, und du weisst, was entsteht.
+Dieser Artikel erklärt, wie du ein Softwareprojekt strukturiert aufbaust - damit die KI weiß, was sie bauen soll, und du weißt, was entsteht.
 
-## Inhalt
+## Inhaltsverzeichnis
 
 1. [01-architecture-foundations-grundlagen.md](./01-architecture-foundations-grundlagen.md)
 2. [02-architecture-foundations-praxis.md](./02-architecture-foundations-praxis.md) - Vom PRD zur Projektstruktur (Praxis-Walkthrough) - Projektstruktur, Komponenten-Denken, Datenfluss
 
-## Selbstcheck
+## Wissensziele
 
-Nutze die Checklisten als Selbstcheck fuer das Architecture-Foundations-Modul.
+Nutze die Wissensziele von oben nach unten: erst den Überblick, dann die Grundlagen, dann die Vertiefung.
 
-### Must have
-- [ ] Ich kann erklaeren, warum Projektstruktur fuer Vibe Coding wichtig ist.
-- [ ] Ich kann beschreiben, was eine Komponente ist und wofuer sie verantwortlich ist.
-- [ ] Ich kann die Ordnerstruktur meines Projekts der KI in einem Prompt erklaeren.
+### Überblick
+- [ ] Ich kann erklären, warum Projektstruktur für Vibe Coding wichtig ist.
+- [ ] Ich kann beschreiben, was eine Komponente ist und wofür sie verantwortlich ist.
+- [ ] Ich kann die Ordnerstruktur meines Projekts der KI in einem Prompt erklären.
 
-### Should have
+### Grundlagen
 - [ ] Ich kann den Datenfluss in meiner App in einfachen Worten beschreiben.
 - [ ] Ich erkenne, wann eine Aufgabe ein Strukturthema ist - nicht nur ein Coding-Thema.
-- [ ] Ich kann benennen, welche Teile meines Projekts zusammengehoeren.
+- [ ] Ich kann benennen, welche Teile meines Projekts zusammengehören.
 
-### Nice to have
-- [ ] Ich kann Architekturentscheidungen kurz begruenden (z. B. warum etwas in einen eigenen Ordner kommt).
-- [ ] Ich entwickle ein Vokabular fuer Strukturentscheidungen, das ich im Team und im Prompt nutzen kann.
+### Vertiefung
+- [ ] Ich kann Architekturentscheidungen kurz begründen (z. B. warum etwas in einen eigenen Ordner kommt).
+- [ ] Ich entwickle ein Vokabular für Strukturentscheidungen, das ich im Team und im Prompt nutzen kann.
 
 ## Wenn du etwas nachholen willst
 
-- Kontext fuer KI aufbauen: [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../06-ai-instructions/01-prompting-grundlagen.md)
+- Kontext für KI aufbauen: [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../06-ai-instructions/01-prompting-grundlagen.md)
 - Eigenes PRD verstehen: [course/03-course-library/06-ai-instructions/02-prd-grundlagen.md](../06-ai-instructions/02-prd-grundlagen.md)

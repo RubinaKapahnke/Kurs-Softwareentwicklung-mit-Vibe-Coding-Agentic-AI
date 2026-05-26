@@ -1,56 +1,56 @@
 ﻿# Versionsverwaltung und GitOps: Einordnung
 
-Dieses Dokument erklaert zwei Konzepte, die aufeinander aufbauen:
+Dieses Dokument erklärt zwei Konzepte, die aufeinander aufbauen:
 
 1. **Versionsverwaltung** - wie Softwareteams sicher mit gemeinsamen Codebases arbeiten
 2. **GitOps** - wie dieselbe Git-Logik auf den laufenden Betrieb ausgeweitet wird
 
 ---
 
-## Das Problem, das Versionsverwaltung loest
+## Das Problem, das Versionsverwaltung löst
 
 Stell dir vor, drei Personen arbeiten gleichzeitig an derselben Datei. Eine speichert
 ihre Version lokal, eine zweite schickt eine angepasste Kopie per E-Mail, eine dritte
-macht „schnell noch einen Fix" direkt auf dem Server. Zwei Stunden spaeter gibt es
+macht „schnell noch einen Fix" direkt auf dem Server. Zwei Stunden später gibt es
 vier verschiedene Staende - und niemand weiss, welcher der richtige ist.
 
 Dieses Szenario passiert ueberall dort, wo kein gemeinsames Versionssystem genutzt
 wird. Bei Code ist es besonders kritisch, weil eine einzige fehlerhafte Zeile ganze
 Features kaputtmachen kann.
 
-Versionsverwaltung loest genau dieses Koordinationsproblem: Alle Aenderungen laufen
-ueber eine gemeinsame Zeitlinie. Wer was wann und warum geaendert hat, ist dauerhaft
+Versionsverwaltung löst genau dieses Koordinationsproblem: Alle Änderungen laufen
+über eine gemeinsame Zeitlinie. Wer was wann und warum geändert hat, ist dauerhaft
 nachvollziehbar.
 
 ---
 
-## Wie Git Aenderungen speichert
+## Wie Git Änderungen speichert
 
-Git merkt sich nicht einfach Dateizustaende - es speichert **Aenderungen als
-Schnappschuesse** (Commits). Jeder Commit enthaelt:
+Git merkt sich nicht einfach Dateizustaende - es speichert **Änderungen als
+Schnappschuesse** (Commits). Jeder Commit enthält:
 
-- den Differenztext (was genau hat sich veraendert)
+- den Differenztext (was genau hat sich verändert)
 - den Autor und Zeitstempel
-- eine Nachricht, die erklaert, warum diese Aenderung gemacht wurde
-- eine eindeutige ID (Hash), die spaeter fuer Ruecksprunge genutzt werden kann
+- eine Nachricht, die erklärt, warum diese Änderung gemacht wurde
+- eine eindeutige ID (Hash), die später für Ruecksprunge genutzt werden kann
 
-Das Ergebnis ist eine lueckenlose Entwicklungsgeschichte. Wenn etwas auf einmal nicht
-mehr funktioniert, laesst sich der letzte funktionsfaehige Zustand wiederherstellen -
+Das Ergebnis ist eine lückenlose Entwicklungsgeschichte. Wenn etwas auf einmal nicht
+mehr funktioniert, lässt sich der letzte funktionsfähige Zustand wiederherstellen -
 ohne Datenverlust, ohne Raterei.
 
 ---
 
 ## Paralleles Arbeiten mit Branches
 
-Ein Kernmerkmal von Git ist, dass Aenderungen auf **Branches** (Abzweigungen)
-entwickelt werden koennen, ohne den Hauptzweig zu beeinflussen.
+Ein Kernmerkmal von Git ist, dass Änderungen auf **Branches** (Abzweigungen)
+entwickelt werden können, ohne den Hauptzweig zu beeinflussen.
 
 Typisches Muster:
-- `main` bleibt der stabile Stand, der tatsaechlich in Betrieb ist
+- `main` bleibt der stabile Stand, der tatsächlich in Betrieb ist
 - Neue Funktionen entstehen auf eigenen Feature-Branches
-- Erst nach Pruefung und Freigabe kommt der neue Stand in `main` zurueck
+- Erst nach Prüfung und Freigabe kommt der neue Stand in `main` zurück
 
-Das bedeutet: Experimente koennen gefahrlos ausprobiert werden. Falls etwas
+Das bedeutet: Experimente können gefahrlos ausprobiert werden. Falls etwas
 schiefgeht, wird der Branch einfach verworfen - der Hauptzweig bleibt unberuehrt.
 
 ---
@@ -67,23 +67,23 @@ Der Unterschied in der Praxis:
 
 | Klassisch | GitOps |
 |---|---|
-| Jemand loggt sich auf dem Server ein und macht Aenderungen | Niemand loggt sich manuell ein |
-| Aenderungen sind schwer rueckverfolgbar | Alle Aenderungen laufen als Commits durch Git |
+| Jemand loggt sich auf dem Server ein und macht Änderungen | Niemand loggt sich manuell ein |
+| Änderungen sind schwer rückverfolgbar | Alle Änderungen laufen als Commits durch Git |
 | Verschiedene Umgebungen driften auseinander | Repo-Stand = Live-Stand (automatisch synchronisiert) |
 
 ---
 
 ## Git als Single Source of Truth
 
-Bei GitOps ist das Repository die einzige verbindliche Quelle fuer den
+Bei GitOps ist das Repository die einzige verbindliche Quelle für den
 Systemzustand. Konfiguration, Infrastruktur und Deployment-Einstellungen liegen als
-Dateien im Repo. Wer etwas aendern will, erstellt einen Pull Request - genau so wie
+Dateien im Repo. Wer etwas ändern will, erstellt einen Pull Request - genau so wie
 bei Code.
 
 Das bringt zwei praktische Vorteile:
-- **Rueckverfolgbarkeit**: Jede Infrastruktur-Aenderung hat einen Autor, einen
+- **Rückverfolgbarkeit**: Jede Infrastruktur-Änderung hat einen Autor, einen
   Zeitstempel und eine Begruendung.
-- **Reproduzierbarkeit**: Der Zustand einer Umgebung laesst sich aus dem Repo
+- **Reproduzierbarkeit**: Der Zustand einer Umgebung lässt sich aus dem Repo
   jederzeit neu aufbauen.
 
 ---
@@ -91,7 +91,7 @@ Das bringt zwei praktische Vorteile:
 ## Einordnung im Kurs
 
 In den ersten Meilensteinen arbeiten wir mit klassischem Git - Commits, Branches,
-Pull Requests. GitOps wird spaeter relevant, wenn es um Deployment und
+Pull Requests. GitOps wird später relevant, wenn es um Deployment und
 Infrastruktur geht (Modul 13).
 
 Kursspezifische Einordnung:

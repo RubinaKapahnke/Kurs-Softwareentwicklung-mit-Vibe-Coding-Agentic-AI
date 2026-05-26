@@ -46,7 +46,7 @@ Wichtig: Wir verwenden `Lektion` einheitlich für redaktionelle Quelle und techn
    - Verwende **absolute Pfade** mit `/assets/lessons/`.
    - Bilder liegen zentral unter `apps/onboarding/public/assets/lessons/`.
    - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
-   - Siehe [apps/onboarding/public/assets/lessons/README.md](../../../apps/onboarding/public/assets/lessons/README.md) für Bildmaße und Format-Anforderungen.
+   - Siehe [apps/onboarding/public/assets/lessons/README.md](../../apps/onboarding/public/assets/lessons/README.md) für Bildmaße und Format-Anforderungen.
 
 ## Didaktische Regeln
 
@@ -58,13 +58,13 @@ Wichtig: Wir verwenden `Lektion` einheitlich für redaktionelle Quelle und techn
 - Verwende Fachbegriffe nur dann, wenn sie vorher erklärt wurden oder direkt an der Stelle erklärt werden.
 - Mache früh sichtbar, was die lernende Person jetzt tun oder sehen soll.
 - Lange Einstiege ohne Handlung, Entscheidung oder visuellen Anker sind zu vermeiden.
-- Allgemein gültige Tipps, FAQ-Inhalte und wiederverwendbare Bedienungshilfen gehören nicht in den Pflichtfluss jeder Lektion, sondern in zentrale Dateien unter `course/`.
+- Allgemein gültige Tipps, FAQ-Inhalte und wiederverwendbare Bedienungshilfen gehören nicht in den Pflichtfluss jeder Lektion, sondern in zentrale Artikel unter `course/03-course-library/09-kurshilfe/`.
 
 ## Farb-Praefixe Für `###`
 
 - `### Wichtig:` oder `### Hinweis:` -> gelbes Feld, Überschrift dunkelgelb
 - `### Achtung:` -> rotes Feld, Überschrift dunkelrot
-- `### Erfolg:` / `### OK:` / `### Gruen:` -> grünes Feld, Überschrift dunkelgrün
+- `### Erfolg:` / `### OK:` / `### Grün:` -> grünes Feld, Überschrift dunkelgrün
 - `### Blau:` -> blaues Feld, Überschrift dunkelblau
 - `### Info:` / `### Tipp:` -> Hinweis-Feld mit eigenem blauen Ton
 
@@ -98,6 +98,5 @@ Hinweise:
 ## Stand
 
 Die Lerninhalte liegen direkt im Kursmodul-Ordner und sind die führende redaktionelle Quelle für den Lesson-Flow des Kurs-Tools im Modul Onboarding.
-
 
 

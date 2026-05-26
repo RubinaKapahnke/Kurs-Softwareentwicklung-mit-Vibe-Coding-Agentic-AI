@@ -1,12 +1,12 @@
-# Architekturleitfaden: Generische Kursmodul-App
+﻿# Architekturleitfaden: Generische Kursmodul-App
 
 Dieser Leitfaden definiert, wie wir neue Kurse und Module zukuenftig im selben Repository organisieren.
 
 ## Zielbild
 
-- Eine gemeinsame App-Engine fuer alle Kurse.
+- Eine gemeinsame App-Engine für alle Kurse.
 - Kursinhalte sind datengetrieben und vom App-Code getrennt.
-- Neue Module koennen in der Regel ohne App-Code-Änderung ausgerollt werden.
+- Neue Module können in der Regel ohne App-Code-Änderung ausgerollt werden.
 - Sonderlogik (z. B. Voucher) bleibt als Modul-Erweiterung isoliert.
 
 ## Empfohlene Repo-Struktur
@@ -27,11 +27,11 @@ course/
 
   01-course-modules/
     <course-id>/
-      course.meta.json                # Metadaten fuer den Kurs
+      course.meta.json                # Metadaten für den Kurs
       modules/
         <module-id>/
-          module.meta.json            # Metadaten fuer ein Modul
-          step-manifest.json          # Modul-Manifest fuer Steps
+          module.meta.json            # Metadaten für ein Modul
+          step-manifest.json          # Modul-Manifest für Steps
           step-01/
             lektion-inhalte.md
             aufgaben.md               # optional
@@ -79,7 +79,7 @@ Pflicht:
   "id": "vibe-coding-agentic-ai",
   "shortTitle": "Vibe Coding & Agentic AI",
   "audience": [
-    "Einsteiger in Softwareentwicklung mit KI-Unterstuetzung",
+    "Einsteiger in Softwareentwicklung mit KI-Unterstützung",
     "Fachpersonen mit Produkt- oder Datenfokus"
   ],
   "outcome": "Teilnehmende bauen ein lauffaehiges, wartbares Produktinkrement.",
@@ -161,7 +161,7 @@ Pflicht global:
 - steps
 - version
 
-## Optimierungen fuer Wiederverwendbarkeit
+## Optimierungen für Wiederverwendbarkeit
 
 ### 1) Modul als Produktbaustein statt Kurskopie
 
@@ -169,11 +169,11 @@ Ziel:
 - Ein Modul kann in mehreren Kursen genutzt werden, ohne Dateien zu duplizieren.
 
 Empfehlung:
-- In `module.meta.json` technische Felder fuer Wiederverwendung ergaenzen:
+- In `module.meta.json` technische Felder für Wiederverwendung ergänzen:
   - `templateId` (z. B. onboarding-core-v1)
   - `compatibilityTags` (z. B. beginner, web, data)
   - `estimatedDurationMinutes`
-- Kurs bindet Module ueber Referenzen statt Kopien.
+- Kurs bindet Module über Referenzen statt Kopien.
 
 Beispiel:
 
@@ -192,7 +192,7 @@ Beispiel:
 }
 ```
 
-### 2) Shared-Content-Bibliothek fuer Bausteine
+### 2) Shared-Content-Bibliothek für Bausteine
 
 Ziel:
 - Wiederkehrende Inhalte (z. B. Git-Grundlagen, Repo-Regeln, Lizenz-Hinweise) zentral pflegen.
@@ -250,7 +250,7 @@ Empfehlung:
 ### 6) Varianten statt Forks
 
 Ziel:
-- Ein Modul kann fuer unterschiedliche Zielgruppen variieren, ohne 3 Kopien zu erzeugen.
+- Ein Modul kann für unterschiedliche Zielgruppen variieren, ohne 3 Kopien zu erzeugen.
 
 Empfehlung:
 - In `module.meta.json` optional:
@@ -291,14 +291,14 @@ Empfehlung:
 - Lokalisierung vorbereiten: Inhalte je Sprache unter `de/`, `en/` ablegen, IDs sprachneutral halten.
 - Ressourcenhygiene: externe Links in periodischem Link-Check pruefen.
 - Asset-Disziplin: Bildgroessen und Dateiformate validieren (WebP bevorzugt, konsistente Benennung).
-- Abwaertskompatibilitaet: Legacy-Routen fuer mindestens eine Release-Periode beibehalten.
+- Abwaertskompatibilitaet: Legacy-Routen für mindestens eine Release-Periode beibehalten.
 - Dokumentation: pro Modul eine kurze `README.md` mit Lernziel, Voraussetzung, Abnahme.
 
-## Stabilitaetsregeln fuer IDs
+## Stabilitaetsregeln für IDs
 
 - courseId, moduleId und step.id sind langlebige technische IDs.
 - Keine Wiederverwendung geloeschter IDs.
-- Schritt-Reihenfolge nur ueber order/Array, nicht durch Umnummerierung alter IDs.
+- Schritt-Reihenfolge nur über order/Array, nicht durch Umnummerierung alter IDs.
 - Fortschrittsschluessel baut auf courseId + moduleId + step.id auf.
 
 ## Standardprozess: Neuen Kurs anlegen
@@ -315,12 +315,12 @@ Empfehlung:
 1. module.meta.json und step-manifest.json anlegen.
 2. Modul-ID in moduleIds des Kurses ergaenzen.
 3. Inhalte in step-XX/ inkl. Assets pflegen.
-4. Falls noetig strategy setzen (sonst weglassen).
+4. Falls nötig strategy setzen (sonst weglassen).
 5. Validierung + Build + Smoke-Test.
 
 ## CI-Mindestchecks
 
-- Schema-Validierung fuer courses.catalog.json, course.meta.json, module.meta.json, step-manifest.json.
+- Schema-Validierung für courses.catalog.json, course.meta.json, module.meta.json, step-manifest.json.
 - Referenzpruefung:
   - course.moduleIds zeigt auf existierende Module.
   - module.courseId passt zum Kursordner.
@@ -335,8 +335,8 @@ Empfehlung:
 - Tech-Team: Engine in apps/learning-platform und Validierungspipeline.
 - Gemeinsame Verantwortung: Metadatenqualitaet und Abnahmekriterien.
 
-## Migrationshinweis fuer bestehende Onboarding-App
+## Migrationshinweis für bestehende Onboarding-App
 
 - Bestehendes Onboarding wird als Modul m01-onboarding uebernommen.
-- Legacy-Routen duerfen temporaer auf neue Modulrouten weiterleiten.
+- Legacy-Routen dürfen temporaer auf neue Modulrouten weiterleiten.
 - Sobald die neue App stabil ist, alte Onboarding-App archivieren.

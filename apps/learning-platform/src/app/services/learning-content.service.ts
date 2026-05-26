@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+﻿import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, catchError, combineLatest, map, throwError } from 'rxjs';
 
@@ -90,7 +90,7 @@ export class LearningContentService {
     });
 
     if (catalog.length === 0) {
-      throw new LearningContentError('catalog-invalid', 'Der Kurskatalog enthaelt keine gueltigen Kurseintraege.');
+      throw new LearningContentError('catalog-invalid', 'Der Kurskatalog enthält keine gueltigen Kurseintraege.');
     }
 
     return catalog;
@@ -103,7 +103,7 @@ export class LearningContentService {
 
     const manifest = rawManifest as Partial<StepManifest>;
     if (!Array.isArray(manifest.steps)) {
-      throw new LearningContentError('manifest-invalid', 'Das Schritt-Manifest enthaelt keine gueltige Schrittliste.');
+      throw new LearningContentError('manifest-invalid', 'Das Schritt-Manifest enthält keine gueltige Schrittliste.');
     }
 
     if (manifest.steps.length === 0) {

@@ -1,4 +1,4 @@
-# Learning Platform Go Live (ohne Uebergangsloesung)
+﻿# Learning Platform Go Live (ohne Uebergangsloesung)
 
 Diese Anleitung schaltet die neue Learning-Platform direkt produktiv auf GitHub Pages.
 
@@ -12,7 +12,7 @@ Diese Anleitung schaltet die neue Learning-Platform direkt produktiv auf GitHub 
 
 Es gibt zwei Wege:
 
-1. Push auf `main` mit Aenderungen in:
+1. Push auf `main` mit Änderungen in:
 - `apps/learning-platform/**`
 - `course/catalog/**`
 - `course/01-course-modules/**`
@@ -30,7 +30,7 @@ Typisch:
 
 ## 4) Harte Umstellung ohne Parallelbetrieb
 
-Wenn die URL verfuegbar ist:
+Wenn die URL verfügbar ist:
 
 1. Alte Onboarding-App nicht mehr als produktiven Einstieg verwenden.
 2. Offizielle Kurslinks auf die neue Live-URL umstellen.
@@ -38,28 +38,28 @@ Wenn die URL verfuegbar ist:
 
 ## 5) Schneller Check nach Deploy
 
-1. Startseite laedt Kurskarten.
-2. Modulseite oeffnet unter `/kurse/<courseId>/module/<moduleId>`.
-3. Stepseite oeffnet unter `/kurse/<courseId>/module/<moduleId>/step/<id>`.
+1. Startseite lädt Kurskarten.
+2. Modulseite öffnet unter `/kurse/<courseId>/module/<moduleId>`.
+3. Stepseite öffnet unter `/kurse/<courseId>/module/<moduleId>/step/<id>`.
 4. Schritt als erledigt markieren funktioniert und Fortschritt ist sichtbar.
 
 ## 6) Verify-Checkliste (Release Gate)
 
-Vor jedem produktiven Deploy einmal komplett pruefen:
+Vor jedem produktiven Deploy einmal komplett prüfen:
 
-1. Lokal in `apps/learning-platform` ausfuehren:
+1. Lokal in `apps/learning-platform` ausführen:
 - `npm run build:pages`
 2. Build-Ordner existiert:
 - `dist/learning-platform/browser`
 3. Kurskatalog + Manifest sind synchron:
 - `course/catalog/courses.catalog.json`
 - `course/01-course-modules/vibe-coding-agentic-ai/modules/m01-onboarding/step-manifest.json`
-4. Fehlerseiten pruefen:
+4. Fehlerseiten prüfen:
 - ungueltige URL zeigt `/fehler`
 - fehlender Step zeigt Fehlerseite statt leerer Ansicht
-5. Resume/Navigation pruefen:
+5. Resume/Navigation prüfen:
 - Modulseite startet mit "Weiterlernen" auf den ersten offenen Schritt
-- Stepseite: Zurueck, Weiter und Zum Modul funktionieren stabil
-6. Actions-Lauf pruefen:
-- Workflow `Deploy Learning Platform to GitHub Pages` ist gruen
+- Stepseite: Zurück, Weiter und Zum Modul funktionieren stabil
+6. Actions-Lauf prüfen:
+- Workflow `Deploy Learning Platform to GitHub Pages` ist grün
 - Step `Verify Pages build output` erfolgreich

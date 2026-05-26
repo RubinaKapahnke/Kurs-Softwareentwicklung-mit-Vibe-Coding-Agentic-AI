@@ -8,17 +8,17 @@ Gerade beim Vibe Coding ist das wichtig. Die KI kann schnell Code erzeugen, aber
 
 ## Was ist eine Variable?
 
-Eine Variable ist ein benannter Speicherplatz fuer einen Wert.
+Eine Variable ist ein benannter Speicherplatz für einen Wert.
 
 Beispiel in Worten:
-- `name` enthaelt einen Text
-- `punkte` enthaelt eine Zahl
-- `istAktiv` enthaelt wahr/falsch
+- `name` enthält einen Text
+- `punkte` enthält eine Zahl
+- `istAktiv` enthält wahr/falsch
 
 Wenn du Code liest, frage immer zuerst:
 1. Welche Variablen gibt es?
 2. Welche Werte stehen aktuell drin?
-3. Wo werden die Werte geaendert?
+3. Wo werden die Werte geändert?
 
 ---
 
@@ -40,13 +40,13 @@ Wenn du eine Funktion anschaust, reichen oft drei Fragen:
 
 ## Bedingungen: Was passiert bei `if`?
 
-Eine Bedingung prueft, ob etwas stimmt.
+Eine Bedingung prüft, ob etwas stimmt.
 
 - Wenn die Bedingung wahr ist, wird Block A ausgefuehrt.
 - Wenn sie falsch ist, wird Block B oder nichts ausgefuehrt.
 
 Viele Fehler entstehen hier, weil:
-- die falsche Variable geprueft wird
+- die falsche Variable geprüft wird
 - `null` oder leere Werte nicht beachtet werden
 - die Bedingung logisch vertauscht ist
 
