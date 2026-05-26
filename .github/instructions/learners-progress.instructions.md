@@ -46,7 +46,7 @@ Rueckfragen, freie Notizen, Feedback und Lernwuensche werden in einer separaten 
 |:---|:---|
 | Abgabe- und Lernerfolgs-Kriterien | Stehen **direkt unter den passenden Journaleintrag** (nicht am Dateiende) |
 | Repo-Trennung | Loesungsartefakte duerfen im eigenen Repo liegen; diese Datei bleibt trotzdem zentral unter `course/learners/` |
-| `## Nächster kleiner Schritt` | **Verboten als eigener Abschnitt** – der nächste Schritt steht im letzten Journaleintrag |
+| `## Nächste kleine Lektion` | **Verboten als eigener Abschnitt** – die nächste Lektion steht im letzten Journaleintrag |
 | Journaleinträge | Format `### DD.MM. (Uebung XX – Titel)` |
 | Rueckfragen/Notizen/Feedback/Lernwuensche | Stehen in `lernbegleitnotizen_<name>.md` im gleichen Ordner |
 
@@ -57,3 +57,4 @@ Rueckfragen, freie Notizen, Feedback und Lernwuensche werden in einer separaten 
 ```
 
 Exit-Code 0 = alle Dateien OK, 1 = mindestens eine Datei fehlerhaft.
+

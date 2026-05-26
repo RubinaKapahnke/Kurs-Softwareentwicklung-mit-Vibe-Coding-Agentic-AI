@@ -4,7 +4,7 @@ Diese Datei fuehrt dich durch den praktischen Weg: Du hast ein PRD - jetzt leite
 
 ---
 
-## Schritt 1: PRD lesen und Bausteine identifizieren
+## Lektion 1: PRD lesen und Bausteine identifizieren
 
 Oeffne dein PRD (`course/learners/<dein-name>/prd_<dein-name>.md`) und beantworte diese Fragen:
 
@@ -28,7 +28,7 @@ Oeffne dein PRD (`course/learners/<dein-name>/prd_<dein-name>.md`) und beantwort
 
 ---
 
-## Schritt 2: Ordnerstruktur ableiten
+## Lektion 2: Ordnerstruktur ableiten
 
 Sobald du weisst, welche Bausteine es gibt, ordnest du sie in die Standard-Struktur ein:
 
@@ -54,7 +54,7 @@ src/
 
 ---
 
-## Schritt 3: Strukturkontext-Block formulieren
+## Lektion 3: Strukturkontext-Block formulieren
 
 Dieser Block ist dein Standard-Kontext fuer Prompts. Du schreibst ihn einmal und fuerst ihn bei neuen Aufgaben immer voran.
 
@@ -92,7 +92,7 @@ Diesen Block in deiner PRD-Datei unter einem neuen Abschnitt `## Strukturkontext
 
 ---
 
-## Schritt 4: KI mit Strukturkontext beauftragen
+## Lektion 4: KI mit Strukturkontext beauftragen
 
 Mit dem fertigen Strukturkontext sieht ein Prompt so aus:
 
@@ -115,3 +115,4 @@ Falls etwas nicht stimmt: Nicht neu anfangen - im gleichen Chat nachfragen und k
 - [ ] Ich kann eine Ordnerstruktur fuer mein Projekt skizzieren.
 - [ ] Ich habe einen ausgefuellten Strukturkontext-Block in meiner PRD-Datei.
 - [ ] Ich habe die KI mit Strukturkontext beauftragt und das Ergebnis beurteilt.
+

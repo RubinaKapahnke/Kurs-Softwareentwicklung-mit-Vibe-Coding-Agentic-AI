@@ -1,8 +1,8 @@
-# Lektion 16: Start in den Gesamtkurs
+﻿# Lektion 16: Start in den Gesamtkurs
 
 ## Ziel
 
-Du weisst, wie du nach dem Onboarding konkret in den Gesamtkurs startest und was dein erster sinnvoller naechster Schritt ist.
+Du weisst, wie du nach dem Onboarding konkret in den Gesamtkurs startest und was dein erster sinnvoller naechster Lektion ist.
 
 ## Dein Startpunkt nach dem Onboarding
 

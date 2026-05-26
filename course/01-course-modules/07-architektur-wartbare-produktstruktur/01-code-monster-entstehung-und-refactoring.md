@@ -4,7 +4,7 @@ Diese Notiz erklaert an einem echten Kursbeispiel, wie aus vielen kleinen, sinnv
 
 ## Was passiert ist
 
-In der Onboarding-App gab es eine zentrale Angular-Komponente fuer die einzelnen Onboarding-Schritte: `step-page`.
+In der Onboarding-App gab es eine zentrale Angular-Komponente fuer die einzelnen Onboarding-Lektionen: `step-page`.
 
 Diese Komponente hat nicht nur einen einzigen Screen angezeigt, sondern viele unterschiedliche Situationen:
 
@@ -21,20 +21,20 @@ Diese Komponente hat nicht nur einen einzigen Screen angezeigt, sondern viele un
 
 Am Anfang ist so eine zentrale Komponente praktisch: Man findet alles an einem Ort, kann schnell etwas ergaenzen und sieht sofort ein Ergebnis.
 
-Mit jeder neuen Anforderung kamen aber weitere Sonderfaelle dazu. Ein Design-Fix hier, ein neuer Zustand dort, ein anderer Textblock, ein anderer Button, ein anderer Warnhinweis. Die Datei wurde dadurch nicht auf einmal schlecht. Sie wurde Schritt fuer Schritt zu gross.
+Mit jeder neuen Anforderung kamen aber weitere Sonderfaelle dazu. Ein Design-Fix hier, ein neuer Zustand dort, ein anderer Textblock, ein anderer Button, ein anderer Warnhinweis. Die Datei wurde dadurch nicht auf einmal schlecht. Sie wurde Lektion fuer Lektion zu gross.
 
 ## Warum das beim Vibe Coding besonders leicht passiert
 
 Vibe Coding ist oft sehr inkrementell. Man sagt zum Beispiel:
 
-- "Mach Schritt 3 etwas schoener."
+- "Mach Lektion 3 etwas schoener."
 - "Der Fortschrittsbereich soll weniger Platz brauchen."
 - "Die Ueberschriften sollen kleiner werden."
 - "Optimiere die Typografie."
 
 Jede einzelne Aufgabe ist klein und sinnvoll. Der KI-Assistent sucht dann meist den schnellsten Ort, an dem die sichtbare Aenderung gemacht werden kann. Wenn bereits eine grosse Datei alle Varianten enthaelt, wird genau diese Datei weiter bearbeitet.
 
-Das ist nicht automatisch falsch. Es ist sogar oft der richtige erste Schritt, wenn man schnell Feedback braucht.
+Das ist nicht automatisch falsch. Es ist sogar oft der richtige erste Lektion, wenn man schnell Feedback braucht.
 
 Das Problem entsteht, wenn niemand zwischendurch fragt:
 
@@ -50,8 +50,8 @@ Ohne diesen Zwischenstopp waechst die Datei weiter. Genau so entsteht ein Code-M
 Typische Warnzeichen sind:
 
 - Eine Datei enthaelt viele fachlich verschiedene Bereiche.
-- Klassennamen beziehen sich auf einzelne Schritte oder Sonderfaelle.
-- Es gibt Kommentare wie "Schritt 3", "Schritt 7", "Git-Schritt", "Voucher-Gate" in derselben Datei.
+- Klassennamen beziehen sich auf einzelne Lektionen oder Sonderfaelle.
+- Es gibt Kommentare wie "Lektion 3", "Lektion 7", "Git-Lektion", "Voucher-Gate" in derselben Datei.
 - Neue Aenderungen brauchen immer mehr Suche und Scrollen.
 - Alte Styles bleiben liegen, obwohl das Template sie nicht mehr verwendet.
 - Build-Tools warnen vor Groesse, Budget oder Komplexitaet.
@@ -109,3 +109,4 @@ Nach mehreren kleinen UI-Aenderungen an derselben Datei kurz stoppen und pruefen
 ## Merksatz
 
 Ein Code-Monster entsteht selten durch eine einzige schlechte Entscheidung. Es entsteht, wenn viele kleine richtige Entscheidungen zu lange am selben Ort bleiben.
+

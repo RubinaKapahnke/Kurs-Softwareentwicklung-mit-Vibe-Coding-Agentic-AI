@@ -22,7 +22,7 @@
 - Bisher nichts, bis auf ein paar kleine Fragen zur Aufgabenstellung, die wir schnell geklärt haben
 - Das Verständnis vom Git Prozess wird immer besser 😊
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 - [ ] M2-Ü2 "Im Terminal arbeiten" 
 
 **Abgabe UE-M2-01:**
@@ -48,7 +48,7 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 **Was war schwierig oder unklar?**
 - Das war schon alles ok so
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 - Nächste Übung 3
 
 **Lernerfolgs-Kriterien**
@@ -63,7 +63,7 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 **Was war schwierig oder unklar?**
 - Alles lief flüssig
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 - Nächste Übung 3
 
 **Neue Learnings:**
@@ -98,7 +98,7 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 **Was war schwierig oder unklar?**
 - ddd
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 - ddd
 
 **Lernerfolgs-Kriterien**
@@ -110,3 +110,4 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] 
 ## Fragen an die Gruppe
 -
+

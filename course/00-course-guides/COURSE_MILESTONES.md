@@ -1,4 +1,4 @@
-# 🗺️ Course Milestones: Zentrale Meilensteine
+﻿# 🗺️ Course Milestones: Zentrale Meilensteine
 
 Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**. Es führt dich als roten Faden durch den gesamten Kurs. 
 
@@ -7,13 +7,13 @@ Dieses Dokument definiert die **gemeinsamen Lernziele und Meilensteine**. Es fü
 Herzlich Willkommen im Repository des Kurses.
 In dieser Datei bekommst du einen Überblick über alle Meilensteine die im Kurs erreicht werden können. 
 
-**Meilenstein 1** hast du schon fast abgeschlossen. Es fehlen dir noch wenige Schritte deine Arbeitsumgebung auch hier einzurichten. Wenn du diese absolviert hast, gehts ans Eingemachte 🐧🤖
+**Meilenstein 1** hast du schon fast abgeschlossen. Es fehlen dir noch wenige Lektionen deine Arbeitsumgebung auch hier einzurichten. Wenn du diese absolviert hast, gehts ans Eingemachte 🐧🤖
 
 ## So startest du mit dem Kurs hier im Repository
 
 Dieses Dokument dient als zentrale Übersicht. Zu jedem Meilenstein findest du [Kursmodule](../01-course-modules/) und [Übungen](../02-course-exercises/).  
 Jeder Meilenstein hat seinen eigenen Modul-Ordner. Die Module sind nummeriert.
-Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilensteins. Der nächste Schritt wird sein, dich mit dem Kurs-Repository vertraut zu machen und deinen Lernbereich einzurichten. 
+Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilensteins. Der nächste Lektion wird sein, dich mit dem Kurs-Repository vertraut zu machen und deinen Lernbereich einzurichten. 
 
 ---
 
@@ -23,7 +23,7 @@ Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilen
 ### Module
 
 - [x] 01 [Willkommen im Kurs](../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md)
-- [x] 02 [Github - Erste Schritte](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)
+- [x] 02 [Github - Erste Lektionen](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-Lektionen.md)
 
 **Lernziele:**
 
@@ -59,7 +59,7 @@ Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilen
   - [ ] Verstehen, dass Uebungen im eigenen Repo und nicht direkt im Kurs-Repo bearbeitet werden
   - [ ] Die Trainerin als Collaborator einladen
 
-- [ ] **Erste GitHub-Schritte im Browser durchfuehren**
+- [ ] **Erste GitHub-Lektionen im Browser durchfuehren**
   - [ ] `uebung-01.md` im eigenen Repo anlegen
   - [ ] README im Browser bearbeiten
   - [ ] Pruefen, dass mindestens zwei Commits sichtbar sind
@@ -163,7 +163,7 @@ Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilen
   - [ ] `git pull origin main` ausfuehren
   - [ ] Einen neuen Branch erstellen (`git checkout -b <branch-name>`)
   - [ ] Eigene Lernfortschrittsdatei aktualisieren
-  - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Schritt
+  - [ ] Drei Punkte eintragen: geschafft, blockiert, naechster kleiner Lektion
 
 - [ ] **Sichere Alltagsaktionen im Terminal ausfuehren + Git-Grundbefehle aus dem Gedaechtnis anwenden**
   > **Uebung:** [course/02-course-exercises/meilenstein-02-uebung-02.md](../02-course-exercises/meilenstein-02-uebung-02.md)
@@ -308,3 +308,4 @@ Wenn du dieses Dokument hier ließt, befindest du dich am Ende des ersten Meilen
   - [ ] Variablen, Funktionen und Bedingungen in der ersten eigenen Komponente markieren
   - [ ] Datenfluss in 3-5 Stichpunkten dokumentieren (Input, Verarbeitung, Ausgabe)
   - [ ] Eine kleine Logikverbesserung mit geringem Risiko umsetzen (z. B. Umbenennung oder fruehe Rueckgabe)
+

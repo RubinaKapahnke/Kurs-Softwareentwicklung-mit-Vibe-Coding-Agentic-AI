@@ -1,4 +1,4 @@
-# Bilder für Lesson-Flow Inhalte
+﻿# Bilder für Lesson-Flow Inhalte
 
 Dieser Ordner enthält alle Bilder und Grafiken, die in den Onboarding-Lektionen verwendet werden.
 
@@ -7,7 +7,7 @@ Dieser Ordner enthält alle Bilder und Grafiken, die in den Onboarding-Lektionen
 Verwende folgendes Format:
 
 ```
-<schritt>-<beschreibung>.<ext>
+<Lektion>-<beschreibung>.<ext>
 ```
 
 **Beispiele:**
@@ -16,7 +16,7 @@ Verwende folgendes Format:
 - `step-08-vscode-setup.png`
 
 **Regeln:**
-- Starte mit `step-XX-` (XX = Schritt-Nummer, z.B. 02, 05, 14)
+- Starte mit `step-XX-` (XX = Lektion-Nummer, z.B. 02, 05, 14)
 - Folge mit aussagekräftiger Kurzbezeichnung (Bindestriche statt Unterstriche)
 - Nutze Kleinbuchstaben
 - Keine Umlaute oder Sonderzeichen im Dateinamen
@@ -66,3 +66,4 @@ Oben rechts findest du den "Sign in"-Button.
 ---
 
 **Zuletzt aktualisiert:** 2026-05-12
+

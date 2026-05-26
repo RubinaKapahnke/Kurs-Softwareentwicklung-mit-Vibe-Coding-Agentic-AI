@@ -60,7 +60,7 @@
 
 ### Sicherer Workflow: Branch-Korrektur (nach Push zu GitHub)
 
-| Schritt | Befehl | Wo ausführen? | Wirkung |
+| Lektion | Befehl | Wo ausführen? | Wirkung |
 | :--- | :--- | :--- | :--- |
 | **1. Vorbereiten** | `git switch [AlterName]` | - | Wechsel in den falsch benannten Branch.  |
 | **2. Neu erstellen** | `git switch -c [NeuerName]` | **Im falschen Branch** | Kopiert alle Inhalte lokal in den Branch mit neuen Namen und springt in diesen |
@@ -111,6 +111,7 @@
 | **`git restore [Datei]`** | **Datei zurücksetzen** | **Moderner Standard:** Sicherer Befehl zum Rückgängigmachen von Änderungen. |
 | `git checkout [Hash] -- [Datei]` | Version aus Commit laden | Holt den Stand einer Datei aus einem alten Commit zurück in den Arbeitsordner. |
 | **`git restore -s [Hash] [Datei]`** | **Gezielte Wiederherstellung** | [ -s = source] <br>**Sicherer Weg:** Lädt und überschreibt den Datei-Stand gezielt aus der Quelle (Hash/Branch) direkt in dein aktuelles Arbeitsverzeichnis. |
+
 
 
 

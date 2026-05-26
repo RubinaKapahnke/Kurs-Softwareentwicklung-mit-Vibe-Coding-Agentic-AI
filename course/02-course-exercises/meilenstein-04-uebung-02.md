@@ -1,4 +1,4 @@
-# Uebung Meilenstein 4: KI-Code lesen und gezielt verbessern
+﻿# Uebung Meilenstein 4: KI-Code lesen und gezielt verbessern
 
 ## Ziel
 
@@ -41,7 +41,7 @@ Waehle eine Datei aus deinem eigenen Repo, die in Meilenstein 4 mit KI entstande
 
 Halte darunter fest, warum du genau diese Datei ausgewaehlt hast.
 
-Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Schritt 1)
+Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Lektion 1)
 
 ---
 
@@ -61,7 +61,7 @@ Naechster kleiner Test:
 
 > **Warum diese Notiz?** Du machst deinen Denkweg sichtbar und kannst spaeter gezielt pruefen, ob die Logikverbesserung wirklich geholfen hat.
 
-Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Schritte 2 und 3)
+Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Lektionen 2 und 3)
 
 ---
 
@@ -102,13 +102,13 @@ Nenne danach genau eine kleine Logikverbesserung mit geringem Risiko.
 Notiere in deiner Lernfortschritt-Datei, was an der Antwort hilfreich war und was du ignoriert hast.
 
 Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md)
-Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Schritt 4)
+Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Lektion 4)
 
 ---
 
 ### 5. Genau eine kleine Logikverbesserung umsetzen
 
-Setze in deinem eigenen Repo genau eine kleine Verbesserung um, die du in Schritt 3 markiert hast. Geeignete Beispiele:
+Setze in deinem eigenen Repo genau eine kleine Verbesserung um, die du in Lektion 3 markiert hast. Geeignete Beispiele:
 
 - sprechender Variablenname
 - fruehe Rueckgabe fuer leere Daten
@@ -118,7 +118,7 @@ Setze in deinem eigenen Repo genau eine kleine Verbesserung um, die du in Schrit
 
 Dokumentiere in `lernfortschritt_<dein-name>.md` kurz den Vorher/Nachher-Effekt.
 
-Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Schritt 5)
+Quelle: [course-library/08-programmierlogik/02-programmierlogik-code-lesen.md](../03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md) (Lektion 5)
 Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md)
 
 ---
@@ -155,7 +155,7 @@ Quelle: [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-cour
 
 - [ ] course/03-course-library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md: Einstieg und Selbstcheck fuer Code-Verstehen
 - [ ] course/03-course-library/08-programmierlogik/01-programmierlogik-grundlagen.md: Variablen, Funktionen, Bedingungen, Datenfluss
-- [ ] course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md: Schrittfolge zum Lesen und Verbessern von KI-Code
+- [ ] course/03-course-library/08-programmierlogik/02-programmierlogik-code-lesen.md: Lektionfolge zum Lesen und Verbessern von KI-Code
 - [ ] course/03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md: Kontext aus PRD und strukturierte Weiterarbeit
 - [ ] course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md: gezielte Rueckfragen im Chat
 - [ ] course/03-course-library/04-git/03-git-befehlsuebersicht.md: Branch, Commit, Push, PR
@@ -192,3 +192,5 @@ Diese Uebung setzt voraus, dass du folgendes bereits kannst:
 - [ ] Ich habe eine praezise Rueckfrage an Copilot gestellt und die Antwort kritisch bewertet.
 - [ ] Ich habe genau eine kleine Logikverbesserung mit geringem Risiko umgesetzt.
 - [ ] Ich kann begruenden, warum ich zuerst kleine statt grosse Aenderungen mache.
+
+

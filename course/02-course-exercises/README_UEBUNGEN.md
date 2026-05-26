@@ -1,4 +1,4 @@
-# Uebungen pro Meilenstein
+﻿# Uebungen pro Meilenstein
 
 In diesem Ordner liegen zentral vorgegebene Uebungsaufgaben fuer alle Lernenden.
 
@@ -62,10 +62,11 @@ Jede Uebung muss ohne Vorkenntnisse und ohne externe Hilfe bearbeitbar sein. Daz
 8. **"Vor dem Start"-Checkliste:** Jede Uebung beginnt mit einer Checkliste (max. 3 Punkte) zu Umgebungsvoraussetzungen (z.B. VS Code offen, Copilot aktiv, richtiger Ordner). Ausserdem: Welche Dateien brauche ich in dieser Uebung?
 9. **Hinweise zu versteckten Ordnern:** Wenn eine Aufgabe auf Dateien in versteckten oder unerwarteten Ordnern (z.B. `.github/`) verweist, direkt darunter einen Navigations-Tipp erganzen (`Strg+P` / `Cmd+P` → Dateiname eintippen).
 10. **"Warum?"-Hinweise fuer temporaere Inhalte:** Wenn Lernende Inhalte schreiben, die spaeter ersetzt werden, direkt dort erklaeren warum - nicht erst beim Ersetzen.
-11. **Schrittweise UI-Anleitungen:** Komplexe UI-Interaktionen (z.B. Copilot Chat oeffnen, Slash-Befehle nutzen) als nummerierte Schritte, nicht als einzelnen Satz. Immer einen Fallback-Hinweis erganzen ("Falls X nicht erscheint: ...").
+11. **Lektionweise UI-Anleitungen:** Komplexe UI-Interaktionen (z.B. Copilot Chat oeffnen, Slash-Befehle nutzen) als nummerierte Lektionen, nicht als einzelnen Satz. Immer einen Fallback-Hinweis erganzen ("Falls X nicht erscheint: ...").
 12. **Status-Check vor Git-Befehlen:** Vor jedem `git checkout`/`git add`/`git push`-Block immer zuerst `git status` und `git branch` zeigen.
 13. **Tipp fuer offene PRs:** Direkt vor dem ersten `git checkout -b`-Befehl steht immer ein Blockzitat mit Option A (vom letzten Branch starten) und Option B (von `main` starten, Merge passiert automatisch beim PR-Review).
 
 ### Formatbeispiel
 - Aufgabe: Branch erstellen
 - Quelle: [course/03-course-library/04-git/01-git-grundlagen.md](../03-course-library/04-git/01-git-grundlagen.md)
+

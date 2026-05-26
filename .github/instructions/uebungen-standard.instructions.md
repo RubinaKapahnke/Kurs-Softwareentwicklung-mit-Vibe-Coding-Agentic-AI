@@ -1,4 +1,4 @@
----
+﻿---
 applyTo: "course/02-course-exercises/**"
 ---
 
@@ -101,7 +101,7 @@ course/02-course-exercises/meilenstein-XX-uebung-YY.md
 - [ ] **"Vor dem Start"-Checkliste vorhanden?** (Max. 3 Punkte + Dateiliste)
 - [ ] **Versteckte Ordner erklärt?** (z.B. `.github/` mit Strg+P-Tipp)
 - [ ] **Temporäre Abschnitte mit "Warum?"-Hinweis versehen?**
-- [ ] **UI-Interaktionen als nummerierte Schritte + Fallback?**
+- [ ] **UI-Interaktionen als nummerierte Lektionen + Fallback?**
 - [ ] **Git-Abschnitte mit `git status` + `git branch` vorangestellt?**
 - [ ] **`Wiederholung aus frueheren Meilensteinen`-Abschnitt vorhanden?**
 - [ ] **`Abgabe`-Abschnitt mit Checkboxen vorhanden (kurze Liste der abzugebenden Ergebnisse)?**
@@ -145,3 +145,4 @@ course/02-course-exercises/meilenstein-XX-uebung-YY.md
    - meilenstein-04-uebung-01.md: Erste Übung
    - Alle Links konsistent + Modulabdeckung dokumentiert
    ```
+

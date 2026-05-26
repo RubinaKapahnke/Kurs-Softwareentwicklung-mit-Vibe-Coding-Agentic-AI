@@ -1,4 +1,4 @@
-# Lektion 02: Von AI Agents zu Agentic AI
+﻿# Lektion 02: Von AI Agents zu Agentic AI
 
 ## Ziel
 
@@ -10,7 +10,7 @@ Ca. 15 Minuten.
 
 ## Kapitel 1: Warum dieses Thema jetzt wichtig ist
 
-Mit dem Aufkommen großer Sprachmodelle wurden zunächst vor allem generative Systeme sichtbar: ein Prompt rein, ein Ergebnis raus. In der nächsten Stufe kamen Tool-Nutzung, Funktionsaufrufe und Speicher dazu. Dadurch entstanden Systeme, die nicht nur antworten, sondern über mehrere Schritte handeln können.
+Mit dem Aufkommen großer Sprachmodelle wurden zunächst vor allem generative Systeme sichtbar: ein Prompt rein, ein Ergebnis raus. In der nächsten Stufe kamen Tool-Nutzung, Funktionsaufrufe und Speicher dazu. Dadurch entstanden Systeme, die nicht nur antworten, sondern über mehrere Lektionen handeln können.
 
 So verschiebt sich der Fokus:
 
@@ -46,7 +46,7 @@ Zentrale Merkmale:
 
 Beispielhafte Vorstellung:
 
-Ein Agent kümmert sich um Recherche, ein zweiter bewertet Optionen, ein dritter plant nächste Schritte. Eine koordinierende Instanz sorgt dafür, dass alles zum Gesamtziel passt.
+Ein Agent kümmert sich um Recherche, ein zweiter bewertet Optionen, ein dritter plant die nächsten Schritte. Eine koordinierende Instanz sorgt dafür, dass alles zum Gesamtziel passt.
 
 ## Kapitel 4: Architekturvergleich auf einen Blick
 
@@ -133,7 +133,7 @@ Mehrfachauswahl: nein
 - [ ] Ein einzelner Agent erledigt alle Aufgaben ohne Rollentrennung.
 - [x] Mehrere spezialisierte Agents arbeiten koordiniert über eine Orchestrierungslogik zusammen.
 - [ ] Agentic AI verzichtet vollständig auf externe Tools und APIs.
-- [ ] Agentic AI ist nur dann agentisch, wenn ein Mensch jeden Schritt freigibt.
+- [ ] Agentic AI ist nur dann agentisch, wenn ein Mensch jeden Lektion freigibt.
 
 Erfolg: Richtig. Koordination zwischen spezialisierten Rollen ist ein Kernelement.
 Fehler: Achte auf den Architekturpunkt: Teamstruktur und Orchestrierung sind entscheidend.
@@ -160,7 +160,7 @@ Mehrfachauswahl: nein
 
 - [ ] Sie dient nur dazu, Prompts länger zu machen.
 - [ ] Sie verhindert grundsätzlich alle Halluzinationen.
-- [x] Sie ermöglicht, dass Agents frühere Schritte, Ergebnisse und Feedback über längere Abläufe hinweg berücksichtigen.
+- [x] Sie ermöglicht, dass Agents frühere Lektionen, Ergebnisse und Feedback über längere Abläufe hinweg berücksichtigen.
 - [ ] Sie ersetzt vollständig Monitoring und Governance.
 
 Erfolg: Richtig. Persistenter Speicher stabilisiert mehrstufige Planung und Nachvollziehbarkeit.
@@ -187,3 +187,4 @@ Du kannst für einen realen Anwendungsfall begründet entscheiden, ob ein einzel
 
 - [Lektion 01: Generative KI vs. agentische KI](./01-generative-vs-agentic-ai.md)
 - [Prompt-Dateien Grundlagen](../../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+

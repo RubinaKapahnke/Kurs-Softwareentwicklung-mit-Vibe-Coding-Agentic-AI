@@ -16,7 +16,7 @@ Du nutzt Git/GitHub hier vor allem fuer:
 
 ## Praktische Leitplanken fuer Einsteiger:innen
 
-1. Arbeite in kleinen, klar benannten Schritten.
+1. Arbeite in kleinen, klar benannten Lektionen.
 2. Pruefe vor jedem Push kurz mit `git status`.
 3. Nutze Commit-Nachrichten, die den Zweck beschreiben.
 4. Halte `main` stabil und arbeite fuer Aufgaben in einem Branch.
@@ -36,3 +36,4 @@ Wenn du spaeter Deployment- und Betriebsmodule bearbeitest, wird aus dem heutige
 Merksatz:
 - **Heute:** "Ich versioniere meinen Arbeitsstand sauber."
 - **Spaeter:** "Wir steuern Systemzustaende ueber versionierte Konfiguration."
+

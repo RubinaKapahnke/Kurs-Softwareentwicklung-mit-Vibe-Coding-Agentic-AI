@@ -1,4 +1,4 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
+﻿import { CommonModule, DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild, computed, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -161,7 +161,7 @@ export class StepPageComponent {
 
   readonly githubProfileShareTask = 'Link zum GitHub-Profil an Dozent*in schicken (Teams oder E-Mail).';
 
-  /** Schritt gilt als erledigt wenn er explizit markiert wurde */
+  /** Lektion gilt als erledigt wenn er explizit markiert wurde */
   readonly isCurrentStepDone = computed(
     () => this.state.isStepDone(this.step().id)
   );
@@ -233,7 +233,7 @@ export class StepPageComponent {
     }
 
     if (this.showRepoExperienceQuestion() || (this.isAccountChoiceStep() && (this.state.step2Experience() === 'existing-beginner' || this.state.step2Experience() === 'existing-experienced'))) {
-      return 'Unter der Lektion folgt noch deine Auswahl fuer diesen Schritt.';
+      return 'Unter der Lektion folgt noch deine Auswahl fuer diesen Lektion.';
     }
 
     if (this.isCloneStep()) {
@@ -246,6 +246,10 @@ export class StepPageComponent {
   readonly effectiveTitle = computed(() => this.manifestEntry()?.title ?? this.step().title);
   readonly effectiveGoal = computed(() => this.manifestEntry()?.goal ?? this.step().goal);
   readonly stepHeaderTitle = computed(() => {
+    if (this.step().id === 2) {
+      return this.effectiveTitle();
+    }
+
     const lessonNumber = String(this.step().id).padStart(2, '0');
     return `Lektion ${lessonNumber}: ${this.effectiveTitle()}`;
   });
@@ -369,12 +373,12 @@ export class StepPageComponent {
     }
   }
 
-  /** Weiter: zeige Dialog wenn Schritt 2 nicht erledigt ist */
+  /** Weiter: zeige Dialog wenn Lektion 2 nicht erledigt ist */
   goToNextStep(): void {
     const currentStep = this.step().id;
     if (currentStep >= ONBOARDING_STEP_COUNT) return;
 
-    // Für Schritt 2: Dialog zeigen wenn nicht als erledigt markiert
+    // Für Lektion 2: Dialog zeigen wenn nicht als erledigt markiert
     if (currentStep === 2 && !this.isCurrentStepDone()) {
       this.showStepSkipDialog();
       return;
@@ -432,3 +436,4 @@ export class StepPageComponent {
     this.onLessonFinished();
   }
 }
+

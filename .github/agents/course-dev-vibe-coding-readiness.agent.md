@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: prüfen ob das Repo für Vibe Coding geeignet ist, Context Engineering audit, Prompt Engineering audit, Kontext-Dateien zu lang, schlecht strukturiert, KI-Tauglichkeit prüfen, AI-readiness check, Automatisierung vorschlagen, nächste Ausbaustufe, neue Agenten vorschlagen, QA harness, repo audit for AI workflows"
 name: "Vibe Coding Readiness Checker (course-dev)"
 tools: [read, search, execute, todo]
@@ -34,7 +34,7 @@ Prüfe .github/prompts/*.prompt.md und .github/agents/*.agent.md:
 
 - **description-Feld:** Enthält es konkrete Trigger-Phrasen (Use when: ...)? Zu generisch = KI wählt falschen Agent.
 - **Tool-Restriktionen:** Sind tools minimiert auf das Nötige? Zu viele Tools = höheres Risiko unerwünschter Seiteneffekte.
-- **Anweisungsklarheit:** Hat jeder Agent einen klaren Approach mit nummerierten Schritten?
+- **Anweisungsklarheit:** Hat jeder Agent einen klaren Approach mit nummerierten Lektionen?
 - **Fehlende Agents/Prompts:** Gibt es wiederkehrende Aufgaben im Repo-Workflow, für die kein Agent/Prompt existiert?
 
 ### 3. Harness & QA
@@ -82,5 +82,7 @@ Pruefe in `apps/**`, besonders bei Angular-Komponenten:
 - **AI-Readiness-Score**: Ampel (🟢/🟡/🔴) pro Bereich mit 1-Satz-Begründung.
 - **Findings (kritisch → niedrig)**: Datei | Problem | KI-Auswirkung | Vorschlag.
 - **Automatisierungsideen**: Priorisierte Liste mit Typ (Agent/Prompt/Hook/CI) + Kurzbeschreibung.
-- **Nächste konkrete Schritte**: Max. 3 umsetzbare Aktionen, die den größten AI-Readiness-Gewinn bringen.
+- **Nächste konkrete Lektionen**: Max. 3 umsetzbare Aktionen, die den größten AI-Readiness-Gewinn bringen.
 - **Freigabe-Frage**: Explizite Ja/Nein-Frage vor jeder Änderung.
+
+

@@ -1,4 +1,4 @@
-# Übung Meilenstein 1: Erstes Repository erkunden und erstellen
+﻿# Übung Meilenstein 1: Erstes Repository erkunden und erstellen
 
 ## Ziel
 
@@ -27,12 +27,12 @@ In dieser Übung arbeitest du:
 
 Quelle: [course/03-course-library/03-github/01-github-grundlagen.md](../03-course-library/03-github/01-github-grundlagen.md)
 
-**Schritt 1: Kurs-Repo öffnen**
+**Lektion 1: Kurs-Repo öffnen**
 
 1. Öffne im Browser: [github.com/vibe-coding-0426](https://github.com/vibe-coding-0426)
 2. Du siehst die **Startseite des Kurs-Repos**
 
-**Schritt 2: Struktur erkunden - Klicke auf die Ordner und Dateien:**
+**Lektion 2: Struktur erkunden - Klicke auf die Ordner und Dateien:**
 
 1. **Lies die README.md** (oben auf der Seite sichtbar)
    - Notiz: Wofür ist dieses Repo? (Kurzbeschreibung in 1 Satz)
@@ -55,7 +55,7 @@ Quelle: [course/03-course-library/03-github/01-github-grundlagen.md](../03-cours
    - Screenshot 1: Die Startseite des Kurs-Repos (mit Ordnerstruktur)
    - Screenshot 2: Die Übersicht von `COURSE_MILESTONES.md`
 
-**Schritt 3: Observation - Beantworte folgende Fragen (schreib dir die Antworten auf oder merke sie dir):**
+**Lektion 3: Observation - Beantworte folgende Fragen (schreib dir die Antworten auf oder merke sie dir):**
 
 - Was ist der Unterschied zwischen dem **Kurs-Repo** und deinem **persönlichen Übungs-Repo**, das du gleich erstellst?
 - Wo findest du die Übungsaufgaben? (`course/02-course-exercises/`)
@@ -68,14 +68,14 @@ Quelle: [course/03-course-library/03-github/01-github-grundlagen.md](../03-cours
 
 Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md)
 
-**Schritt 1: Neues Repo anlegen**
+**Lektion 1: Neues Repo anlegen**
 
 1. **Bei GitHub angemeldet?** Oben rechts sollte dein Profilbild sichtbar sein
 2. Klicke oben rechts auf dein **Profilmenü** (Profilbild oder ☰) 
 3. Wähle **"Your repositories"**
 4. Klicke auf den grünen Button **"New"**
 
-**Schritt 2: Repository-Einstellungen ausfüllen**
+**Lektion 2: Repository-Einstellungen ausfüllen**
 
 Fülle das Formular aus mit **DIESEN Einstellungen:**
 
@@ -90,12 +90,12 @@ Fülle das Formular aus mit **DIESEN Einstellungen:**
 
 **Wichtig:** Stelle sicher, dass dein Repo **PRIVATE** ist - das bedeutet, nur du und deine Trainerin können es sehen!
 
-**Schritt 3: Repository erstellen**
+**Lektion 3: Repository erstellen**
 
 - Klicke auf **"Create repository"**
 - GitHub erstellt dein Repo und zeigt die erste Seite
 
-**Schritt 4: Screenshot machen**
+**Lektion 4: Screenshot machen**
 
 - Mache einen Screenshot der neu erstellten Repo-Startseite
 - Dein Repo ist jetzt in deinem GitHub-Account angelegt und bei Einstellung **Private** nur fuer dich und berechtigte Personen sichtbar.
@@ -108,14 +108,14 @@ Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-r
 
 Die automatisch erstellte `README.md` ist sehr kurz. Mach sie aussagekräftiger:
 
-**Schritt 1: README editieren**
+**Lektion 1: README editieren**
 
 1. Öffne dein neu erstelltes Repo
 2. Du siehst eine Standard-README.md
 3. Klicke auf das **Bleistift-Symbol** ("Edit this file") oben rechts
 4. Der Editor öffnet sich
 
-**Schritt 2: Inhalte ergänzen**
+**Lektion 2: Inhalte ergänzen**
 
 Ersetze den Text mit einer aussagekräftigen Beschreibung. **Minimal-Beispiel:**
 
@@ -142,14 +142,14 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 
 **Optional:** Nutze die vollstaendige Vorlage: [course/01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md](../01-course-modules/01-Onboarding-in-den-Kurs/README-template-tn-repo.md)
 
-**Schritt 3: Commit**
+**Lektion 3: Commit**
 
 1. Scrolle nach unten
 2. Schreib eine **Commit-Nachricht** (z.B. "Update README mit persönlichen Infos")
 3. Klicke **"Commit changes"**
 4. Bestätige noch mal mit **"Commit changes"** (im Dialog)
 
-**Schritt 4: Überprüfung**
+**Lektion 4: Überprüfung**
 
 - Deine README ist jetzt aktualisiert
 - Du hast gerade deinen **ersten Commit** gemacht! 🎉
@@ -206,7 +206,9 @@ Dieses Repository enthält meine Aufgaben und Lösungen aus dem **Vibe Coding Ku
 
 **✅ Glückwunsch - du bist jetzt im Kurs registriert!**
 
-Deine nächsten Schritte:
+Deine nächsten Lektionen:
 1. **Trainerin einladen** (falls noch nicht geschehen) → [Meilenstein 1, Übung 1](./meilenstein-01-uebung-01.md)
 2. **Git und Terminal lernen** → [Meilenstein 2](../03-course-library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md)
 3. **Erste echte Aufgabe bearbeiten** → [COURSE_MILESTONES.md → Meilenstein 2](../00-course-guides/COURSE_MILESTONES.md#-meilenstein-2-setup--umgebung)
+
+

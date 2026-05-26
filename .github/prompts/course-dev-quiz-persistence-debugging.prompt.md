@@ -1,7 +1,7 @@
-# Quiz State Persistence Debugging - Debugging Protocol
+﻿# Quiz State Persistence Debugging - Debugging Protocol
 
 ## Problem Statement
-Quiz-Antworten werden nicht persistent gespeichert. Wenn Nutzer zwischen Schritten navigiert, verschwinden ihre Antworten (z.B. angekreuzte Checkboxen, gewählte Radio-Optionen) in Step 1, navigiert zu Step 2 und zurück zu Step 1 → die Antworten sind weg.
+Quiz-Antworten werden nicht persistent gespeichert. Wenn Nutzer zwischen Lektionen navigiert, verschwinden ihre Antworten (z.B. angekreuzte Checkboxen, gewählte Radio-Optionen) in Step 1, navigiert zu Step 2 und zurück zu Step 1 → die Antworten sind weg.
 
 ## Versuche & Erkenntnisse
 
@@ -117,9 +117,9 @@ if (lessonKeyChanged) {
 
 ---
 
-## Nächste Debugging-Schritte
+## Nächste Debugging-Lektionen
 
-### 🔧 **Schritt 1: Browser DevTools Inspection**
+### 🔧 **Lektion 1: Browser DevTools Inspection**
 1. Starte App
 2. Step 1: Kreuze Option A an, Option B an → evaluiere Quiz
 3. Navigiere zu Step 2
@@ -133,7 +133,7 @@ if (lessonKeyChanged) {
    - Sind die korrekten Optionen im Set vorhanden?
    - Zeigt der Signal den korrekten Wert?
 
-### 🔧 **Schritt 2: Template Debug Output**
+### 🔧 **Lektion 2: Template Debug Output**
 In `lesson-flow.component.html` temporär hinzufuegen:
 ```html
 <div style="background: yellow; padding: 10px;">
@@ -145,7 +145,7 @@ In `lesson-flow.component.html` temporär hinzufuegen:
 - Sind die Werte nach Navigation wieder da?
 - Oder sind sie leer?
 
-### 🔧 **Schritt 3: More Console Logging**
+### 🔧 **Lektion 3: More Console Logging**
 In `isOptionSelected()` Methode hinzufuegen:
 ```typescript
 isOptionSelected(optionId: string): boolean {
@@ -155,7 +155,7 @@ isOptionSelected(optionId: string): boolean {
 }
 ```
 
-### 🔧 **Schritt 4: localStorage Direct Inspection**
+### 🔧 **Lektion 4: localStorage Direct Inspection**
 In Browser Console:
 ```javascript
 // Prüfe localStorage
@@ -207,3 +207,5 @@ console.table([...localStorage]) # Alle Keys anschauen
 Falls alles zu komplex wird, diese Commits rückgängig machen:
 - "Quiz persistence system implementation" - Rollback zu vorher
 - Dann neuansatz mit lokalem state nur (keine localStorage)
+
+

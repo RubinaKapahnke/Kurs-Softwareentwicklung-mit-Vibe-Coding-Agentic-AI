@@ -1,4 +1,4 @@
-## Was dich in diesem Kurs erwartet
+﻿## Was dich in diesem Kurs erwartet
 
 **Softwareentwicklung mit Vibe Coding & Agentic AI** vermittelt moderne Softwareentwicklung mit KI-Unterstuetzung: von der Produktidee ueber strukturierte Planung, Prototyping und Implementierung bis zu Deployment, Monitoring und Weiterentwicklung.
 
@@ -12,13 +12,13 @@ Die typische Schleife:
 
 1. Ziel oder Problem beschreiben
 2. Kontext bereitstellen: PRD, vorhandener Code, Fehlermeldungen, Akzeptanzkriterien
-3. KI einen kleinen, pruefbaren Schritt umsetzen oder erklaeren lassen
+3. KI einen kleinen, pruefbaren Lektion umsetzen oder erklaeren lassen
 4. Ergebnis lesen, testen, hinterfragen und verbessern
 5. Naechste Iteration starten oder bewusst abbrechen
 
 ### Dein eigenes Projekt als roter Faden
 
-Im Laufe des Kurses entwickelst du ein eigenes Projekt in einem eigenen Repository. Das Projekt waechst schrittweise - von der ersten Produktidee bis zum auslieferbaren Inkrement.
+Im Laufe des Kurses entwickelst du ein eigenes Projekt in einem eigenen Repository. Das Projekt waechst Lektionweise - von der ersten Produktidee bis zum auslieferbaren Inkrement.
 
 Am Ende hast du etwas entwickelt, das dir gehoert: als Portfolio-Stueck, internes Tool, Prototyp oder Ausgangspunkt fuer eine spaetere Weiterentwicklung.
 
@@ -39,10 +39,11 @@ Damit du sauber im Kursfluss bleibst, gilt immer:
 - **Kurs-Repo:** Meilensteine lesen, Uebungen oeffnen, Lernfortschritt pflegen
 - **Eigenes Repo:** Loesungen bauen, Dateien aendern, Commits und Pull Requests erstellen
 
-### Deine ersten Schritte nach dem Onboarding
+### Deine ersten Lektionen nach dem Onboarding
 
 1. Oeffne im Kurs-Repo die Datei `COURSE_MILESTONES.md`.
 2. Oeffne danach `course/02-course-exercises/README_UEBUNGEN.md`.
 3. Waehle die passende Uebung aus.
 4. Setze die Loesung in deinem eigenen Repo um.
 5. Trage den Stand in `course/learners/<name>/lernfortschritt_<name>.md` ein.
+

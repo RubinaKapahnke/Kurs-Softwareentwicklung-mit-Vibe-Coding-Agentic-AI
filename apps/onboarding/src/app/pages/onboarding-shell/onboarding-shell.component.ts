@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+﻿import { CommonModule } from '@angular/common';
 import { Component, computed, effect, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -38,7 +38,7 @@ export class OnboardingShellComponent {
   readonly progressPercent = computed(() => this.state.getProgressPercent());
   readonly completedCount = computed(() => this.state.getCompletedCount());
 
-  /** Liste aller Schritte fuer die Navigation */
+  /** Liste aller Lektionen fuer die Navigation */
   readonly allSteps = ONBOARDING_STEPS;
   readonly summaryLink = computed(() => ['/kurse', this.currentCourseId(), 'onboarding', 'zusammenfassung']);
 
@@ -63,3 +63,4 @@ export class OnboardingShellComponent {
     return ['/kurse', this.currentCourseId(), 'onboarding', 'step', String(stepId)];
   }
 }
+

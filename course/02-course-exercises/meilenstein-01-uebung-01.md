@@ -1,4 +1,4 @@
-# Übung Meilenstein 1: GitHub-Konto anlegen und Profil vervollständigen
+﻿# Übung Meilenstein 1: GitHub-Konto anlegen und Profil vervollständigen
 
 ## Ziel
 
@@ -145,3 +145,4 @@ Quelle: [course/01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schr
 ---
 
 **⏭️ Nächste Übung:** [Meilenstein 1, Übung 2 - Erstes Repo erkunden und erstellen](./meilenstein-01-uebung-02.md)
+

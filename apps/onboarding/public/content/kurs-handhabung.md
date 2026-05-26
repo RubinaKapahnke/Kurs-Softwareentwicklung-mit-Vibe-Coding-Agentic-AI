@@ -1,4 +1,4 @@
-## So funktioniert der Kurs im Alltag
+﻿## So funktioniert der Kurs im Alltag
 
 Damit du spaeter nicht im falschen Repo arbeitest, ist diese Grundregel wichtig:
 
@@ -49,7 +49,7 @@ Das hat drei Gruende:
 
 - die Dozentin sieht den Stand aller Teilnehmenden an einem Ort
 - das Dashboard kann mit einer stabilen Datenquelle arbeiten
-- Rueckfragen, Blockaden und naechste Schritte bleiben vergleichbar
+- Rueckfragen, Blockaden und naechste Lektionen bleiben vergleichbar
 
 ### 4. Typischer Ablauf bei einer Uebung
 
@@ -71,3 +71,4 @@ Das hat drei Gruende:
 ### Merksatz
 
 **Kurs-Repo = Orientierung und Fortschritt. Eigenes Repo = Umsetzung und Artefakte.**
+

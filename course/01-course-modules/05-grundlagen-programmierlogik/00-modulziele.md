@@ -2,7 +2,7 @@
 
 ## Kurzbeschreibung
 
-Dieses Kursmodul vermittelt Programmierlogik so, dass Teilnehmende KI-generierten Code besser verstehen, beurteilen und in kleinen Schritten anpassen können.
+Dieses Kursmodul vermittelt Programmierlogik so, dass Teilnehmende KI-generierten Code besser verstehen, beurteilen und in kleinen Lektionen anpassen können.
 
 ## Nach diesem Kursmodul können Teilnehmende
 
@@ -32,3 +32,4 @@ Der Baustein gilt als abgeschlossen, wenn Teilnehmende eine einfache Programmstr
 ## Eigenständig nutzbar als
 
 Programmierlogik-Grundlagenkurs für Nicht-Entwickler\*innen, QA-Enablement oder Vorbereitung auf KI-gestützte Entwicklung.
+

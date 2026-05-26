@@ -1,16 +1,16 @@
-<section class="journey-section" id="ablauf">
+﻿<section class="journey-section" id="ablauf">
   <div class="shell">
     <div class="section-head">
-      <p class="eyebrow">Modul 1: Onboarding in {{ stepCount() }} Schritten</p>
+      <p class="eyebrow">Modul 1: Einstieg und Arbeitsumgebung in {{ stepCount() }} Lektionen</p>
       @if (selectedCourseIsLive()) {
         <h2>Inhalte aus Modul 1: So richtest du deine Umgebung ein</h2>
         <p class="section-sub">
-          Dieser Abschnitt gehoert zum Onboarding aus Modul 1.
+          Dieser Abschnitt zeigt das erste Modul im Kurs-Tool.
           Du richtest einmalig deine Arbeitsumgebung ein und startest danach in den regulaeren Kursfluss.
         </p>
       } @else {
-        <h2>Modul 1 (Onboarding) folgt in diesem Kurs</h2>
-        <p class="section-sub">Sobald dieser Kurs freigeschaltet wird, bekommst du hier den passenden Onboarding-Ablauf.</p>
+        <h2>Modul 1 für diesen Kurs folgt</h2>
+        <p class="section-sub">Sobald dieser Kurs freigeschaltet wird, bekommst du hier den passenden Einstieg in Arbeitsumgebung und Kursfluss.</p>
       }
     </div>
 
@@ -29,9 +29,10 @@
     } @else {
     <mat-card class="coming-soon-card" appearance="outlined">
       <mat-card-content>
-        <p>Der konkrete Onboarding-Flow fuer diesen Kurs wird aktuell vorbereitet.</p>
+        <p>Der konkrete Ablauf für das erste Modul dieses Kurses wird aktuell vorbereitet.</p>
       </mat-card-content>
     </mat-card>
     }
   </div>
 </section>
+

@@ -68,3 +68,4 @@ Versuche es direkt unter [github.com/new](https://github.com/new).
 Jetzt hast du dein Repository. Im nächsten Schritt:
 1. Du lädst die Trainerin als Collaborator ein.
 2. Du machst deine ersten zwei Übungen direkt im Browser - ohne noch etwas installieren zu müssen.
+

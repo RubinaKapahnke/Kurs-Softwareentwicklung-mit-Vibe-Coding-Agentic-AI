@@ -1,5 +1,5 @@
----
-description: "PRD-Assistent: Hilft dir Schritt fuer Schritt, dein eigenes PRD mit deinen eigenen Ideen zu fuellen – ohne dass die KI etwas erfindet. Nutze diesen Prompt wenn du dein PRD erstellen oder ergaenzen moechtest."
+﻿---
+description: "PRD-Assistent: Hilft dir Lektion fuer Lektion, dein eigenes PRD mit deinen eigenen Ideen zu fuellen – ohne dass die KI etwas erfindet. Nutze diesen Prompt wenn du dein PRD erstellen oder ergaenzen moechtest."
 name: "PRD Assistent"
 agent: "ask"
 ---
@@ -36,3 +36,4 @@ Nachdem du alle drei Antworten hast, formuliere daraus:
 - **Definition of Done**: Was muss stimmen, damit dieses Feature als fertig gilt?
 
 Frage danach: "Passt das so? Oder moechtest du etwas aendern?"
+

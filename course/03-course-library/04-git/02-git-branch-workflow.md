@@ -21,7 +21,7 @@ main
 
 ---
 
-## Schritt 1: main aktualisieren und Branch erstellen
+## Lektion 1: main aktualisieren und Branch erstellen
 
 Bevor du anfaengst, holst du den neuesten Stand von `main`:
 
@@ -35,7 +35,7 @@ Du arbeitest jetzt auf deinem eigenen Branch und kannst nichts auf `main` kaputt
 
 ---
 
-## Schritt 2: Commiten und pushen
+## Lektion 2: Commiten und pushen
 
 Wenn du fertig bist:
 
@@ -47,7 +47,7 @@ git push origin UE-MX-YY-<vorname>
 
 ---
 
-## Schritt 3: Pull Request auf GitHub erstellen
+## Lektion 3: Pull Request auf GitHub erstellen
 
 Auf GitHub erscheint ein gelber Banner - klicke auf "Compare & pull request". Waehle `main` als Basis-Branch und deinen Branch als Quell-Branch.
 
@@ -55,7 +55,7 @@ Nach dem Review wird dein Branch in `main` gemerged.
 
 ---
 
-## Schritt 4: Branch aufraeumen
+## Lektion 4: Branch aufraeumen
 
 Nach dem Merge ist der Branch nicht mehr noetig. Er kann geloescht werden.
 
@@ -116,3 +116,4 @@ Dieser Befehl aktualisiert deine lokale Uebersicht der Remote-Branches und entfe
 - [ ] `git checkout main` + `git pull origin main`
 - [ ] `git branch -d <branch-name>`
 - [ ] Optional: `git fetch --prune`
+

@@ -1,4 +1,4 @@
-# Lektion 03: LangGraph Kernkomponenten und Workflows
+﻿# Lektion 03: LangGraph Kernkomponenten und Workflows
 
 ## Ziel
 
@@ -54,7 +54,7 @@ Workflows können dynamisch reagieren:
 
 Kontext bleibt über längere Interaktionen erhalten.
 
-Das ist wichtig für Agenten, die über mehrere Schritte oder Gespräche konsistent bleiben müssen.
+Das ist wichtig für Agenten, die über mehrere Lektionen oder Gespräche konsistent bleiben müssen.
 
 ### Human-in-the-loop
 
@@ -187,3 +187,5 @@ Du kannst einen einfachen LangGraph-Workflow mit Nodes, Edges und State skizzier
 - [Lektion 01: Generative KI vs. agentische KI](./01-generative-vs-agentic-ai.md)
 - [Lektion 02: Von AI Agents zu Agentic AI](./02-von-ai-agents-zu-agentic-ai.md)
 - [Prompt-Dateien Grundlagen](../../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+
+

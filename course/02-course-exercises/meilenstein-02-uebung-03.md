@@ -59,7 +59,7 @@ Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code u
 - **Was ich gemacht habe:** Uebung 03 begonnen, Branch erstellt
 - **Was gut lief:**
 - **Wo ich haenge:**
-- **Naechster Schritt:**
+- **Naechster Lektion:**
 ```
 
 > **Warum ins Lernjournal eintragen?** Das Lernjournal in `lernfortschritt_<vorname>.md` ist deine zentrale Anlaufstelle fuer deinen gesamten Lernstand - alles an einem Ort, keine Doppelstruktur.
@@ -130,7 +130,7 @@ Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` in VS Code u
 **Was war schwierig oder unklar?**
 [Eigene Antwort]
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 [Eigene Antwort]
 
 **Meilenstein-Fortschritt:**
@@ -179,7 +179,7 @@ Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` noch einmal 
 - **Was ich gemacht habe:** Vollstaendigen Branch-Commit-PR-Ablauf zweimal durchgefuehrt
 - **Was gut lief:**
 - **Wo ich haenge:**
-- **Naechster Schritt:**
+- **Naechster Lektion:**
 ```
 
 Committe diese letzte Aenderung direkt im laufenden Branch `lernjournal-<vorname>`:
@@ -200,7 +200,7 @@ Quelle: [course/03-course-library/04-git/03-git-befehlsuebersicht.md](../03-cour
 ## Modulabdeckung (Check)
 - ✓ course/03-course-library/04-git/01-git-grundlagen.md: Branches erklaert, Grundablauf (status, add, commit, push, pull)
 - ✓ course/03-course-library/04-git/03-git-befehlsuebersicht.md: `checkout main`, `pull`, `checkout -b`, `stash`, `add`, `commit`, `push`
-- ✓ course/03-course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
+- ✓ course/03-course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Lektionen
 - ✓ course/03-course-library/01-markdown/01-markdown-grundlagen.md: Strukturierter Lernjournal-Eintrag in Markdown
 
 ---
@@ -235,4 +235,6 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe zwischen Branches gewechselt und verstehe, warum man vorher `git status` prueft.
 - [ ] Ich habe ein Lernjournal-Eintrag-Muster angelegt, das ich spaeter einfach wiederholen kann.
 - [ ] Ich kann erklaeren, was "Routine aufbauen" bei Git konkret bedeutet: gleicher Ablauf, mehrmals.
+
+
 

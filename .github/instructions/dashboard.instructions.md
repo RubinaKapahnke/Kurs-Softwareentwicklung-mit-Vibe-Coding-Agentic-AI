@@ -1,4 +1,4 @@
----
+﻿---
 applyTo: "apps/dashboard/**"
 ---
 
@@ -24,7 +24,7 @@ Jede Funktion des Dashboards muss mindestens einer der drei Personas nützen:
 Braucht: Überblick über Meilenstein-Fortschritt aller Teilnehmenden, Hinweise wo Lernende festhängen, schnellen Zugriff auf offene Übungen und Modulabdeckungslücken.
 
 **[Lernende]** – Kursteilnehmende  
-Braucht: Eigenen Lernstand auf einen Blick, klare nächste Schritte, Vergleich mit Gesamtgruppe (ohne Druck), Motivation durch sichtbaren Fortschritt.
+Braucht: Eigenen Lernstand auf einen Blick, klare nächste Lektionen, Vergleich mit Gesamtgruppe (ohne Druck), Motivation durch sichtbaren Fortschritt.
 
 **[KI-Agent]** – Automatisierte Agents, die Daten lesen und schreiben  
 Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form, eindeutige IDs fuer Lernende/Meilensteine/Uebungen, TypeScript-Interfaces im Strict Mode.
@@ -49,3 +49,4 @@ Braucht: Maschinenlesbare, stabile Datenstrukturen in TypeScript/JSON-naher Form
 - Neue Komponenten nur anlegen, wenn sie eine klare Verantwortung haben und absehbar wiederverwendet werden oder wenn sie eine sonst monolithische Datei deutlich entlasten.
 - Keine Komponenten fuer einmalige Kleinst-Markups erzeugen. Wenn Wiederverwendung unklar ist, erst Optionen und Folgen benennen und nach Freigabe fragen.
 - Styles duerfen nicht wuchern: keine hardcodierten Komponentenfarben, kein `!important`, keine Inline-Styles, keine direkten `.mdc-*` Overrides. Gemeinsame Styles ueber Tokens, Material-Variablen oder bestehende Utilities loesen.
+

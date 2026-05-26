@@ -1,4 +1,4 @@
-# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
+﻿# 🚀 Softwareentwicklung mit Vibe Coding & Agentic AI
 
 Willkommen zum Kurs **Softwareentwicklung mit Vibe Coding & Agentic AI**. Dieses Repository ist unser gemeinsamer Workspace, um moderne Softwareentwicklung mit KI-Unterstützung strukturiert zu lernen.
 
@@ -9,7 +9,7 @@ Die zentrale Kursbeschreibung steht in [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md
 ---
 
 ## 🎯 Ziel des Kurses
-Wir durchlaufen den Entwicklungszyklus in einem **engen, praktischen Setup**: zuerst mit den wichtigsten Hebeln für saubere Zusammenarbeit, dann Schritt für Schritt von der Produktidee bis zum betreibbaren AI-gestützten Produkt.
+Wir durchlaufen den Entwicklungszyklus in einem **engen, praktischen Setup**: zuerst mit den wichtigsten Hebeln für saubere Zusammenarbeit, dann Lektion für Lektion von der Produktidee bis zum betreibbaren AI-gestützten Produkt.
 
 Der Fokus liegt auf:
 - Zusammenarbeit im Repository
@@ -80,6 +80,11 @@ course/03-course-library/04-git/
 │   ├── 00-course-guides/
 │   │   ├── COURSE_MILESTONES.md
 │   │   └── table-of-contents.md
+│   ├── AI_SLOP_SURVIVAL_GUIDE.md
+│   ├── HINWEISE_CONTENT_ERSTELLENDE.md
+│   ├── FAQ.md
+│   ├── GLOSSARY.md
+│   ├── BEDIENUNGSHILFEN.md
 │   ├── 01-course-modules/
 │   ├── 02-course-exercises/
 │   ├── 03-course-library/
@@ -143,5 +148,6 @@ Die ersten Lernschritte arbeiten mit einem klaren, einheitlichen Stack:
 - **Datenformat:** JSON
 
 Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten und Deployment-Werkzeuge sind im Kursrahmen in [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md) beschrieben.
+
 
 

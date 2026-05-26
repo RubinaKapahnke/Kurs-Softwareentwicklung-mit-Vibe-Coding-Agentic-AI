@@ -22,9 +22,18 @@ Beispiel:
 └── 02-aufgaben.md                  (optional)
 ```
 
-Wichtig: Eine flache Lektionsdatei wird nur als Onboarding-Step erkannt, wenn die erste Überschrift mit `# Lektion NN:` beginnt. So werden andere Moduldateien nicht versehentlich synchronisiert.
+Wichtig: Eine flache Lektionsdatei wird nur als Onboarding-Lektion erkannt, wenn die erste Überschrift mit `# Lektion NN:` beginnt. So werden andere Moduldateien nicht versehentlich synchronisiert.
 
 Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt.
+
+## Begriffsklärung
+
+- `Modul` = der gesamte Kursbaustein, hier `01-Onboarding-in-den-Kurs`.
+- `Lektion` = eine nummerierte Lerneinheit als Datei, z. B. `01-willkommen-im-kurs.md`.
+- `Lektion` = die zugehörige Lern- und Navigationseinheit im Kurs-Tool.
+- `Slide` oder `Seite` = eine einzelne Ansicht innerhalb des Lesson-Flows.
+
+Wichtig: Wir verwenden `Lektion` einheitlich für redaktionelle Quelle und technische Führungseinheit im Kurs-Tool.
 
 ## Format-Regeln Für Lektionsdateien
 
@@ -38,6 +47,18 @@ Wichtig: Eine flache Lektionsdatei wird nur als Onboarding-Step erkannt, wenn di
    - Bilder liegen zentral unter `apps/onboarding/public/assets/lessons/`.
    - Namensschema: `step-XX-<beschreibung>.<ext>` (z.B. `step-02-github-login.png`).
    - Siehe [apps/onboarding/public/assets/lessons/README.md](../../../apps/onboarding/public/assets/lessons/README.md) für Bildmaße und Format-Anforderungen.
+
+## Didaktische Regeln
+
+- Schreibe voraussetzungsarm, konkret und in erwachsenem Ton.
+- Sprich in Lerninhalten immer die lernende Person direkt an.
+- Schreibe nie aus Sicht der Content-Erstellung oder Redaktion, wenn der Text später für Teilnehmende sichtbar ist.
+- Meta-Sätze wie warum eine Reihenfolge für den Content-Aufbau gut ist, gehören in Arbeitsanleitungen für Autor:innen, nicht in die Lektion selbst.
+- Formuliere `## Ziel` immer mit erkennbarem Outcome und erkennbarem Nutzen für die lernende Person: Was kann sie danach besser, sicherer oder klarer tun?
+- Verwende Fachbegriffe nur dann, wenn sie vorher erklärt wurden oder direkt an der Stelle erklärt werden.
+- Mache früh sichtbar, was die lernende Person jetzt tun oder sehen soll.
+- Lange Einstiege ohne Handlung, Entscheidung oder visuellen Anker sind zu vermeiden.
+- Allgemein gültige Tipps, FAQ-Inhalte und wiederverwendbare Bedienungshilfen gehören nicht in den Pflichtfluss jeder Lektion, sondern in zentrale Dateien unter `course/`.
 
 ## Farb-Praefixe Für `###`
 
@@ -72,9 +93,11 @@ Hinweise:
 - Mindestens 2 Optionen erforderlich.
 - Mindestens eine Option mit `- [x]` erforderlich.
 - `Mehrfachauswahl` ist optional (`ja` oder `nein`).
+- Quiz-Seiten sind Verständnis-Checks. Offensichtlich alberne oder rein kindlich formulierte Falschantworten sind zu vermeiden.
 
 ## Stand
 
-Die Lerninhalte liegen direkt im Kursmodul-Ordner und sind die führende redaktionelle Quelle für den Lesson-Flow der Onboarding-App.
+Die Lerninhalte liegen direkt im Kursmodul-Ordner und sind die führende redaktionelle Quelle für den Lesson-Flow des Kurs-Tools im Modul Onboarding.
+
 
 

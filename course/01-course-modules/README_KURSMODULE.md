@@ -21,6 +21,14 @@ Falls ein Kursmodul später stärker ausgearbeitet wird, kann es zusätzliche Da
 - `03-quellen-und-uebungen.md`
 - `beispiel-*.txt` - reine Anschauungsdateien ohne produktive Funktion
 
+## Begriffsklärung
+
+- `Modul` = der übergeordnete Kursbaustein mit eigenem Schwerpunkt.
+- `Lektion` = eine nummerierte Lerneinheit innerhalb eines Moduls.
+- `Lektion` = die geführte Lern- und Navigationseinheit im Kurs-Tool.
+
+Für Modul 01 verwenden wir die Benennung einheitlich: Die redaktionelle Quelle und die Führung im Kurs-Tool bezeichnen dieselbe Lektion.
+
 ## Übersicht
 
 | Kursmodul | Schwerpunkt |
@@ -50,3 +58,4 @@ Für das Modul [01-Onboarding-in-den-Kurs](./01-Onboarding-in-den-Kurs/00-modulz
 Dort liegen die Lektionen als flache, nummerierte Dateien direkt im Modulordner. Die Inhalte enthalten markerbasierte Abschnitte, damit die spätere Synchronisierung gezielt pro Lektion oder pro Lesson-Flow-Seite erfolgen kann.
 
 Aktueller Stand: Die Onboarding-App nutzt einen manifestbasierten Sync aus diesen Lektionsdateien. Dabei werden insbesondere `XX-thema.md` und optional `XX-aufgaben.md` verarbeitet.
+

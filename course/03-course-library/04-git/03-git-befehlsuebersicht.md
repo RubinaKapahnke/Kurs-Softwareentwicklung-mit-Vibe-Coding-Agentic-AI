@@ -53,4 +53,4 @@ Dieses Dokument ist zum schnellen Nachschlagen gedacht. Wenn du erst verstehen w
 | `git revert <commit>` | Macht einen frueheren Commit mit neuem Commit rueckgaengig. | `git revert a1b2c3d` | Sicherer als Historie zu loeschen. |
 
 > [!TIP]
-> Wenn du unsicher bist, starte mit `git status`, lies die Meldung genau und arbeite dann in kleinen Schritten weiter.
+> Wenn du unsicher bist, starte mit `git status`, lies die Meldung genau und arbeite dann in kleinen Lektionen weiter.

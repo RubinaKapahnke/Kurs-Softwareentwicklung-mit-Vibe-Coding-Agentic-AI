@@ -12,7 +12,7 @@ Du klonst das gemeinsame Kurs-Repository und oeffnest es lokal in VS Code.
 - Einladung zum Kurs-Repository wurde angenommen.
 - Git ist installiert und im Terminal verfuegbar (`git --version`).
 
-## Schritt-fuer-Schritt
+## Lektion-fuer-Lektion
 
 1. Kurs-Repository auf GitHub oeffnen.
 2. Unter **Code** die HTTPS-URL kopieren.

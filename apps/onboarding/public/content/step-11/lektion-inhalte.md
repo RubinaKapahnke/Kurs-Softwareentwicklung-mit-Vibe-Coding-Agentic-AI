@@ -102,7 +102,7 @@ Schreibst du diese Befehle einmal in eine Datei (z. B. `auto-push.sh` auf macOS/
 
 ### Im Kurs relevant?
 
-Für die ersten Schritte brauchst du nicht selbst zu scripten. Aber:
+Für die ersten Lektionen brauchst du nicht selbst zu scripten. Aber:
 - In `package.json` siehst du vordefinierte Scripts (z. B. `"build": "ng build"`)
 - Mit `npm run <script-name>` führst du diese Scripts aus
 - Das ist im Grunde deine erste Script-Erfahrung

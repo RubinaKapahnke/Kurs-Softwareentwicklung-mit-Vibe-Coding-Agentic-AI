@@ -87,7 +87,7 @@ Notiere in deiner Lernfortschrittsdatei unter `## Prompting-Beobachtungen`:
 - Was hat sich veraendert?
 - Welcher Baustein hat den groessten Unterschied gemacht?
 
-> **Warum im gleichen Chat?** Die KI kennt den vorherigen Austausch noch - das ist selbst schon Kontext. Wenn du das bewusst nutzt, hast du den naechsten Schritt des Prompting-Dialogs verstanden.
+> **Warum im gleichen Chat?** Die KI kennt den vorherigen Austausch noch - das ist selbst schon Kontext. Wenn du das bewusst nutzt, hast du den nächsten Schritt des Prompting-Dialogs verstanden.
 
 Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md → Die KI weiss nichts von deinem Projekt](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md)
 
@@ -185,4 +185,6 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe mindestens zwei Mal iterativ nachgefragt und dabei eine Verbesserung beobachtet.
 - [ ] Ich kann erklaeren, warum die KI ohne Kontext Annahmen erfindet.
 - [ ] Ich weiss, dass ich im gleichen Chat weiterarbeiten kann und das selbst schon Kontext ist.
+
+
 

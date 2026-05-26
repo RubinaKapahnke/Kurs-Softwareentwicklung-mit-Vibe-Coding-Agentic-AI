@@ -70,7 +70,7 @@ export class StartseiteComponent {
   readonly isCompleted = computed(() => this.state.getCompletedCount() >= ONBOARDING_STEP_COUNT);
   readonly resumeCourseInfo = computed(() => {
     const course = this.featuredCourse();
-    return `Kurs: ${course.title}, Modul 1: Onboarding`;
+    return `Kurs: ${course.title}, Modul 1: Einstieg und Arbeitsumgebung`;
   });
   readonly featuredCourseLabel = computed(() => this.hasProgress() ? 'Kurs fortsetzen' : 'Kurs starten');
   readonly featuredCourseLink = computed(() => {

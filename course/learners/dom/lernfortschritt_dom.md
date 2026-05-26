@@ -17,7 +17,7 @@
 - **Was gut lief:** basic console commands und branch Verhalten verstanden
 - **Was war schwierig oder unklar?** Preview Ansicht fixieren
 - **Wo ich hänge:** gerade gar nicht
-- **Nächster Schritt:** Die Übung "Meilenstein-02-uebung-01.md" erfolgreich abschließen und mutig zur nächsten Übung voranschreiten!
+- **Nächster Lektion:** Die Übung "Meilenstein-02-uebung-01.md" erfolgreich abschließen und mutig zur nächsten Übung voranschreiten!
 
 **Abgabe UE-M2-01:**
 - [x] Lernjournal-Eintrag in `lernfortschritt_dom.md` ist aktualisiert
@@ -39,13 +39,13 @@
 - **Was gut lief:** eigentlich alles :P
 - **Was war schwierig oder unklar?** Link Struktur verstehen war knackig, aber jetzt kapiert
 - **Wo ich hänge:** !! Lernfortschritt war in neuem Branch "terminal-uebung-dom" und main nicht aktualisiert - warum? PR noch nicht reviewed?
-- **Nächster Schritt:** Die Übung "Meilenstein-02-uebung-02.md" erfolgreich abschließen und mutig zur nächsten Übung voranschreiten!
+- **Nächster Lektion:** Die Übung "Meilenstein-02-uebung-02.md" erfolgreich abschließen und mutig zur nächsten Übung voranschreiten!
 
 ### 02.05. (Uebung 02 - Terminal und Modul-Navigation)
 - **Was ich gemacht habe:** Terminal-Befehle geübt und Modul-Zuordnungen recherchiert
 - **Was gut lief:** Viele neue Befehle gelernt
 - **Was war schwierig oder unklar?** Unterschied zwischen `echo` und `New-Item` noch unklar
-- **Nächster Schritt:** Nächste Übung starten
+- **Nächster Lektion:** Nächste Übung starten
 
 **Neue Terminal-Befehle (neu für mich):**
 - `move` - Dateien umbenennen/verschieben
@@ -78,3 +78,4 @@
 
 ## Fragen an die Gruppe
 - Wie geht's euch?
+

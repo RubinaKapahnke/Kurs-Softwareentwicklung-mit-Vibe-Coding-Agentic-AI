@@ -46,7 +46,7 @@
   einfacher finde ich eine fertiges Dokument in dem ich wie bei einer PDF "lücken" fülle.*
 
 
-- **Nächster Schritt:**  
+- **Nächster Lektion:**  
   - *ich lasse mir den Text vorlesen und gehe Step by Step alles noch mal durch  
   Somit überprüfe ich ob ich alles verstanden habe*
 
@@ -78,7 +78,7 @@
   - Noch zu wenig Übung um alle Befehle aus dem Kopf zu können
   - Git-Befehlsreihenfolge muss ich öfter trainieren
 
-- **Nächster Schritt:**  
+- **Nächster Lektion:**  
   - Meilenstein 3: AI-Instructions erkunden
   - Weiter Terminal- und Git-Befehle trainieren
 
@@ -103,3 +103,4 @@
 
 ## Fragen an die Gruppe
 - 
+

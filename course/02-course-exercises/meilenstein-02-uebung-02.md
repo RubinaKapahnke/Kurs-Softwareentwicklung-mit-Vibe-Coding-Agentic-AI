@@ -1,4 +1,4 @@
-# Uebung Meilenstein 2: Terminal-Alltag und Git-Befehle selbststaendig anwenden
+﻿# Uebung Meilenstein 2: Terminal-Alltag und Git-Befehle selbststaendig anwenden
 
 ## Ziel
 Du fuehrst typische Terminal- und Git-Aktionen in deinem persoenlichen Ordner durch - ohne Befehle zu kopieren. Ausserdem uebst du, fuer eine gegebene Aufgabe das passende Modul eigenstaendig zu finden.
@@ -160,7 +160,7 @@ Oeffne `course/learners/<dein-name>/lernfortschritt_<dein-name>.md` und fuege ei
 **Was war schwierig oder unklar?**
 [Eigene Antwort]
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 [Eigene Antwort]
 ```
 
@@ -209,7 +209,7 @@ Quelle: [course-library/03-github/01-github-grundlagen.md](../03-course-library/
 - ✓ course/03-course-library/05-terminal/03-terminal-befehlsuebersicht.md: `pwd`, `dir`/`ls`, `cd`, `mkdir`, `echo`, `move`, `del`, `rmdir`
 - ✓ course/03-course-library/04-git/01-git-grundlagen.md: Grundablauf erklaert (status, add, commit, push), Branches
 - ✓ course/03-course-library/04-git/03-git-befehlsuebersicht.md: `checkout -b`, `add`, `commit -m`, `push origin`
-- ✓ course/03-course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Schritten
+- ✓ course/03-course-library/03-github/01-github-grundlagen.md: PR erstellen in 5 Lektionen
 - ✓ course/03-course-library/04-git/00-git-versionierung-modulguide.md + course/03-course-library/05-terminal/00-terminal-kommandozeile-modulguide.md + course/03-course-library/03-github/00-github-zusammenarbeit-modulguide.md: Modul-Navigation ueben
 
 ---
@@ -246,4 +246,6 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich kann erklaeren, was `git status` mir zeigt und warum ich es vor jedem Commit nutze.
 - [ ] Ich habe fuer drei typische Situationen das passende Modul gefunden und den Pfad notiert.
 - [ ] Ich habe einen PR auf GitHub erstellt und weiss, was "Basis-Branch" und "Quell-Branch" bedeuten.
+
+
 

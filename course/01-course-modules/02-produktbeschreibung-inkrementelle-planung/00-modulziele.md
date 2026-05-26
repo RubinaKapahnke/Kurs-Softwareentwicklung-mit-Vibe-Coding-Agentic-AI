@@ -2,7 +2,7 @@
 
 ## Kurzbeschreibung
 
-Dieses Kursmodul zeigt, wie aus einer Idee eine strukturierte Produktbeschreibung wird: Problem, Zielgruppe, Nutzen, Anforderungen, Entwicklungsstufe und nächste Schritte.
+Dieses Kursmodul zeigt, wie aus einer Idee eine strukturierte Produktbeschreibung wird: Problem, Zielgruppe, Nutzen, Anforderungen, Entwicklungsstufe und die nächsten Schritte.
 
 ## Nach diesem Kursmodul können Teilnehmende
 
@@ -82,7 +82,7 @@ Kerninhalt:
 ### 06-inkrementplanung-und-priorisierung.md
 
 Lernziel:
-Teilnehmende können den kleinsten sinnvollen nächsten Schritt planen und priorisieren.
+Teilnehmende können die kleinste sinnvolle nächsten Schritte planen und priorisieren.
 
 Kerninhalt:
 - Must, Should, Nice zur Priorisierung
@@ -99,7 +99,7 @@ Kerninhalt:
 - kritische Annahmen markieren
 - offene Fragen für nächste Iteration sammeln
 
-### 08-abschluss-artefakt-und-naechster-schritt.md
+### 08-abschluss-artefakt-und-naechster-Lektion.md
 
 Lernziel:
 Teilnehmende können ein vollständiges Modul-Artefakt abgeben und daraus den nächsten Entwicklungsschritt ableiten.
@@ -123,3 +123,5 @@ Der Baustein gilt als abgeschlossen, wenn eine Produktbeschreibung im Repo liegt
 ## Eigenständig nutzbar als
 
 PRD-Workshop, Produktplanungsmodul, Vorbereitung für Prototyping-Sprints oder Team-Alignment-Format.
+
+

@@ -1,4 +1,4 @@
-# Kursmodul 14: Abschlussprojekt & Portfolio
+﻿# Kursmodul 14: Abschlussprojekt & Portfolio
 
 ## Kurzbeschreibung
 
@@ -9,7 +9,7 @@ Dieses Kursmodul bündelt die Arbeit am eigenen Produkt: Planung, Umsetzung, Pr�
 - ein eigenes Produkt im eigenen Repository strukturiert darstellen
 - Produktidee, Architektur, Daten-/AI-Konzept und Prüfstrategie erklären
 - ein nutzbares Produktinkrement präsentieren
-- Grenzen, Risiken und nächste Schritte reflektieren
+- Grenzen, Risiken und die nächsten Schritte reflektieren
 - das Ergebnis als Portfolio-Stück oder weiterführbares Produkt nutzen
 
 ## Praxisartefakt
@@ -32,3 +32,4 @@ Der Baustein gilt als abgeschlossen, wenn das Projekt als nutzbares, verständli
 ## Eigenständig nutzbar als
 
 Portfolio-Sprint, Abschlussprojekt, internes Innovation-Lab oder Projektcoaching-Modul.
+

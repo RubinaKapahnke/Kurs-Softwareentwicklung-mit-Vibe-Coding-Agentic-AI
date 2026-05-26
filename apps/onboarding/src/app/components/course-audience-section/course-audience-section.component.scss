@@ -40,6 +40,34 @@
   }
 }
 
+.course-difference {
+  margin: 0 0 1.75rem 0;
+  padding: 1.1rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+
+  h3 {
+    margin: 0 0 0.85rem 0;
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  li {
+    color: var(--color-text);
+    line-height: var(--line-height-relaxed);
+  }
+}
+
 .shell {
   width: min(1160px, calc(100% - 2rem));
   margin: 0 auto;

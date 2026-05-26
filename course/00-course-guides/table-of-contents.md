@@ -40,7 +40,7 @@ Hier sind die Module des Kurses enthalten.
 | [01-willkommen-im-kurs.md](../01-course-modules/01-Onboarding-in-den-Kurs/01-willkommen-im-kurs.md) | `in Arbeit` | Einstieg in den Kursablauf und die Arbeitsweise. |
 | [02-github-erste-schritte.md](../01-course-modules/01-Onboarding-in-den-Kurs/02-github-erste-schritte.md) | `in Arbeit` | GitHub-Grundlagen, Account und erstes Übungs-Repository. |
 | [03-markdown-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/03-markdown-grundlagen.md) | `in Arbeit` | Markdown-Grundlagen für den Kurseinstieg. |
-| [04-eigenes-uebungs-repository.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-eigenes-uebungs-repository.md) | `in Arbeit` | Praktischer Schritt zum eigenen Übungs-Repository. |
+| [04-eigenes-uebungs-repository.md](../01-course-modules/01-Onboarding-in-den-Kurs/04-eigenes-uebungs-repository.md) | `in Arbeit` | Praktischer Lektion zum eigenen Übungs-Repository. |
 | [05-git-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/05-git-grundlagen.md) | `in Arbeit` | Git-Grundlagen im Onboarding. |
 | [06-markdown-grundlagen.md](../01-course-modules/01-Onboarding-in-den-Kurs/06-markdown-grundlagen.md) | `in Arbeit` | Vertiefung Markdown im Onboarding. |
 | [07-einstieg-vscode.md](../01-course-modules/01-Onboarding-in-den-Kurs/07-einstieg-vscode.md) | `in Arbeit` | Einstieg in VS Code. |
@@ -206,4 +206,5 @@ Hier sind die Module des Kurses enthalten.
 | sebastian | [git_guide.md](../learners/sebastian/git_guide.md) | `Lernstand` | Persönlicher Guide zu Git. |
 | sebastian | [lernfortschritt_sebastian.md](../learners/sebastian/lernfortschritt_sebastian.md) | `Lernstand` | Persönliche Lernfortschritt-Datei. |
 | sebastian | [prd_sebastian.md](../learners/sebastian/prd_sebastian.md) | `Lernstand` | Persönliches PRD. |
+
 

@@ -1,4 +1,4 @@
-<mat-toolbar class="shell-toolbar">
+﻿<mat-toolbar class="shell-toolbar">
   <span>KnOot Academy Kurs-Tool</span>
   <span class="spacer"></span>
   <a mat-button routerLink="/">Startseite</a>
@@ -9,11 +9,11 @@
   <section class="progress-panel" aria-label="Modul-Fortschritt">
     <div class="progress-meta">
       <strong>Fortschritt</strong>
-      <span>{{ completedCount() }} von {{ stepCount }} Schritten erledigt</span>
+      <span>{{ completedCount() }} von {{ stepCount }} Lektionen erledigt</span>
     </div>
     <mat-progress-bar mode="determinate" [value]="progressPercent()"></mat-progress-bar>
 
-    <nav class="step-nav" aria-label="Schrittnavigation">
+    <nav class="step-nav" aria-label="Lektionnavigation">
       @for (step of allSteps; track step.id) {
         @if (step.moduleTitle) {
           <span class="module-group-label">{{ step.moduleTitle }}</span>
@@ -24,7 +24,7 @@
           routerLinkActive="step-pill--active"
           [class.step-pill--done]="isStepDone(step.id)"
           [routerLink]="getStepLink(step.id)"
-          [attr.aria-label]="(isStepDone(step.id) ? 'Schritt ' + step.id + ' (erledigt)' : 'Zu Schritt ' + step.id)"
+          [attr.aria-label]="(isStepDone(step.id) ? 'Lektion ' + step.id + ' (erledigt)' : 'Zu Lektion ' + step.id)"
           [attr.aria-current]="isCurrentStep(step.id) ? 'step' : null">
           @if (isStepDone(step.id) && !isCurrentStep(step.id)) {
             <mat-icon class="step-check">check</mat-icon>
@@ -48,3 +48,5 @@
 
   <router-outlet></router-outlet>
 </main>
+
+
