@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: Folgeuebung fuer Meilenstein 4 erstellen, meilenstein-04-uebung-02 anlegen, KI-Code lesen und kleine Logikverbesserung als Uebung ausarbeiten"
 name: "Meilenstein 4 Folgeuebung erstellen (course-dev)"
 agent: "Exercise Creator (course-dev)"
@@ -36,7 +36,7 @@ Didaktischer Fokus:
 Pflichtinhalte in den Aufgaben:
 - "Vor dem Start"-Checkliste (max. 3 Punkte) inkl. benoetigter Dateien
 - "Wichtig – diese Datei nicht bearbeiten"-Hinweis
-- UI-Schritte als nummerierte Anleitung mit Fallback
+- UI-Lektionen als nummerierte Anleitung mit Fallback
 - Vor Git-Block: `git status` + `git branch`
 - Vor erstem `git checkout -b`: Tipp-Block mit Option A / Option B (PR schon gemerged oder nicht)
 
@@ -45,3 +45,4 @@ Nach Erstellung:
 2. `course/02-course-exercises/README_UEBUNGEN.md` um den Eintrag ergaenzen.
 3. `./tools/test-uebung.ps1 -File "course/02-course-exercises/meilenstein-04-uebung-02.md"` ausfuehren.
 4. Ergebnis kurz berichten: angelegte Datei, geaenderte Uebersichten, Testergebnis.
+

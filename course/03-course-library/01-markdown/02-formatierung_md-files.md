@@ -56,9 +56,9 @@ Mit Sternchen oder Tilden betonst du Text, ohne HTML zu nutzen.
 * Punkt 2
     * Unterpunkt 2.1
 
-1. Erster Schritt
-2. Zweiter Schritt
-3. Dritter Schritt
+1. Erster Lektion
+2. Zweiter Lektion
+3. Dritter Lektion
 
 - [x] Erledigte Aufgabe
 - [ ] Offene Aufgabe
@@ -69,9 +69,9 @@ Mit Sternchen oder Tilden betonst du Text, ohne HTML zu nutzen.
 * Punkt 2
     * Unterpunkt 2.1
 
-1. Erster Schritt
-2. Zweiter Schritt
-3. Dritter Schritt
+1. Erster Lektion
+2. Zweiter Lektion
+3. Dritter Lektion
 
 - [x] Erledigte Aufgabe
 - [ ] Offene Aufgabe
@@ -224,3 +224,4 @@ Fussnote im Text[^1]
 
 ### Kurz-Erklärung
 Dieser Abschnitt zeigt nuetzliche Erweiterungen fuer den Alltag: kontrollierte Umbrueche, Escaping, automatische Links, Referenz-Links, Anker-Links, einfaches HTML, Fussnoten und HTML-Kommentare in Markdown.
+

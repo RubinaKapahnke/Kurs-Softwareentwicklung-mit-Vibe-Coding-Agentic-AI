@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: Onboarding-MVP-Scope einfrieren, Feature-Drift stoppen, klare Out-of-Scope-Liste erstellen, MVP vor Umsetzung schaerfen, onboarding mvp scope freeze"
 name: "Onboarding MVP Scope Freeze (course-dev)"
 agent: "Onboarding Web Architect (course-dev)"
@@ -39,8 +39,8 @@ Arbeite in genau dieser Reihenfolge:
 6. **Definition of Done (DoD)**
 - 3 bis 5 pruefbare Kriterien.
 - Mindestens enthalten:
-  - Linearer Flow mit hoechstens 6 Schritten
-  - Pro Schritt ein Erfolgskriterium
+  - Linearer Flow mit hoechstens 6 Lektionen
+  - Pro Lektion ein Erfolgskriterium
   - Eine bereits aufgenommene Person erreicht lokalen Clone und den Einstieg in `course/00-course-guides/COURSE_MILESTONES.md` ohne Vorwissen
   - Keine neue monolithische Page/Komponente und keine unnoetige Komponenten-Vermehrung
 
@@ -54,4 +54,6 @@ Antwortformat:
 - Drift-Signale
 - Architektur-Gate
 - DoD
-- Naechster Schritt
+- Naechster Lektion
+
+

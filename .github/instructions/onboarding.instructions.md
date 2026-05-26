@@ -1,4 +1,4 @@
----
+﻿---
 applyTo: "apps/onboarding/**"
 ---
 
@@ -6,7 +6,7 @@ applyTo: "apps/onboarding/**"
 
 ## Ziel des Bereichs
 
-Diese App fuehrt bereits aufgenommene Kursteilnehmende ohne Vorwissen in einem linearen Ablauf vom Einstieg ueber das Onboarding bis zum lokalen Clone des Kurs-Repos und zum Startpunkt in `course/00-course-guides/COURSE_MILESTONES.md`.
+Diese App ist das Kurs-Tool fuer den gesamten Kurs. Im aktuellen Ausbaustand fuehrt sie bereits aufgenommene Kursteilnehmende voraussetzungsarm, aber in erwachsenem Ton, vom Einstieg ueber das Modul Onboarding bis zum lokalen Clone des Kurs-Repos und anschliessend in den weiteren Kursfluss.
 
 ## Stack (verbindlich)
 
@@ -22,26 +22,34 @@ Schlage keine alternativen Frameworks oder UI-Libraries vor.
 
 ## Scope-Regeln
 
-- Plane und implementiere standardmaessig nur den MVP-Flow.
-- MVP bedeutet: hoechstens 6 lineare Schritte bis zum lokalen Clone.
-- Pro Schritt muss ein Erfolgskriterium sichtbar sein.
-- Erweiterungen (Quiz, Videos, Tracking, Login) nur bei expliziter Freigabe.
+- Plane und implementiere standardmaessig nur den aktuellen MVP-Flow.
+- Der aktuelle MVP-Fokus liegt auf dem Modul Onboarding mit hoechstens 6 linearen Lektionen bis zum lokalen Clone.
+- Pro Lektion muss ein Erfolgskriterium sichtbar sein.
+- Quiz nur als echter Verstaendnis-Check und nur wenn didaktisch noetig.
+- Erweiterungen wie Videos, Tracking oder Login nur bei expliziter Freigabe.
 
 ## Struktur-Konvention
 
 Bestehende Struktur unter `apps/onboarding/src/app/` als Standard weiterverwenden:
 
 - `components/markdown-view/` fuer Markdown-Rendering
-- `data/onboarding-steps.data.ts` fuer die Schrittdefinitionen
+- `data/onboarding-steps.data.ts` fuer die Lektionsdefinitionen
 - `models/onboarding.models.ts` fuer Typen
 - `services/onboarding-state.service.ts` fuer lokalen Onboarding-Zustand
 - `pages/startseite/` fuer Landing-Einstieg
 - `pages/kursstart/` fuer Voucher-/Kurszugangslogik
-- `pages/onboarding-shell/` fuer den gerahmten Schrittfluss
-- `pages/step-page/` fuer die eigentlichen Schrittseiten unter `/onboarding/step/:id`
+- `pages/onboarding-shell/` fuer den gerahmten Lektionfluss
+- `pages/step-page/` fuer die eigentlichen Lektionseiten unter `/onboarding/step/:id`
 - `pages/zusammenfassung/` fuer den Abschluss vor dem Kursstart
 
 Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine parallele `features/step-01-*`-Struktur ein, solange dafuer kein expliziter Umbau beschlossen ist.
+
+## Terminologie
+
+- `Modul` = fachlicher Kursbaustein, z. B. Modul Onboarding.
+- `Lektion` = zentrale Lern- und Navigationseinheit im Kurs. Die Markdown-Quelle wie `01-willkommen-im-kurs.md` und der Eintrag im Kurs-Tool bezeichnen dieselbe Einheit.
+- `Slide` oder `Seite` = einzelne Ansicht innerhalb des Lesson-Flows.
+- Im sichtbaren Text konsequent `Lektion` verwenden; vermeide parallele Mischbegriffe fuer dieselbe Einheit.
 
 ## Komponenten-Governance gegen Code-Monster
 
@@ -57,9 +65,14 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 ## UX- und Textregeln
 
-- Schreibe anfaengerfreundlich und konkret.
-- Vermeide vorausgesetztes Fachvokabular ohne kurze Erklaerung.
-- Jeder Schritt enthaelt:
+- Schreibe voraussetzungsarm, konkret und in erwachsenem, professionellem Ton.
+- Vermeide paternalistische oder infantilisierende Sprache.
+- Lernenden-Texte sprechen immer Teilnehmende direkt an, nicht Autor:innen oder Content-Teams.
+- Keine didaktischen Meta-Erklärungen im sichtbaren Lerntext: nicht begründen, was für die Content-Erstellung sinnvoll ist, sondern was für die lernende Person jetzt relevant ist.
+- Fachbegriffe muessen vor der ersten Nutzung erklaert oder direkt am Einsatzpunkt eingefuehrt werden.
+- Jede relevante Einheit soll kurz klaeren: Was ist jetzt zu tun? Warum jetzt? Wofuer spaeter?
+- Spätestens auf der ersten oder zweiten Slide braucht es einen sichtbaren Arbeitsanlass, eine konkrete Aktion, eine Entscheidung oder ein Artefakt.
+- Jeder Lektion enthaelt:
   - Was ist zu tun?
   - Falls es nicht klappt
   - Woran erkenne ich Erfolg?
@@ -75,21 +88,22 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 ## Repo-Integration
 
 - Bei neuen Dateien/Foldern README-Projektstruktur synchron halten.
-- Onboarding-App darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
-- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Onboarding ist `course/00-course-guides/COURSE_MILESTONES.md` der fachliche Startpunkt.
+- Das Kurs-Tool mit aktuellem Schwerpunkt Modul Onboarding darf den bestehenden Dashboard-Bereich nicht indirekt destabilisieren.
+- Uebergabe in den Kursfluss klar dokumentieren: nach erfolgreichem Modul Onboarding fuehrt das Kurs-Tool weiter in `course/00-course-guides/COURSE_MILESTONES.md` und spaeter in weitere Kursmodule.
 
 ## Markdown-Content (Onboarding)
 
-- Erklaertexte fuer Schritte duerfen als Markdown-Dateien unter `apps/onboarding/public/content/` gepflegt werden.
-- Pro Schritt wird ein optionaler Pfad im Datenmodell verwendet (`markdownSource`).
+- Erklaertexte fuer Lektionen duerfen als Markdown-Dateien unter `apps/onboarding/public/content/` gepflegt werden.
+- Pro Lektion wird ein optionaler Pfad im Datenmodell verwendet (`markdownSource`).
 - Rendering erfolgt ueber die bestehende Komponente `apps/onboarding/src/app/components/markdown-view/`.
 - Markdown-HTML muss vor der Anzeige sanitiziert werden (z. B. DOMPurify), keine ungefilterte Ausgabe.
-- Auch bei Markdown-Inhalten bleibt die interaktive Schrittlogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
+- Auch bei Markdown-Inhalten bleibt die interaktive Lektionslogik (Tasks, Erfolgskriterium, CTA, Navigation) in Angular-Komponenten.
 
 ## Manifest-Sync aus Kursmodul-Lektionen
 
 - Lesson-Flow-Inhalte werden aus `course/01-course-modules/01-.../XX-thema.md` synchronisiert.
 - Aufgaben werden optional aus `XX-aufgaben.md` derselben Lektion synchronisiert.
+- Eine Lektionsdatei ist die redaktionelle Quelle; der zugehoerige Lektion im Kurs-Tool ist die technische und UI-seitige Fuehrungseinheit.
 - Ältere Ordner im Schema `XX-.../lektion-inhalte.md` oder `lektion-XX-.../lektion-inhalte.md` werden weiterhin erkannt.
 - `npm run sync-content` in `apps/onboarding` erzeugt/aktualisiert `public/content/step-manifest.json` und die Inhalte unter `public/content/step-XX/`.
 - Bei nicht-Account-Choice-Steps hat manifestbasierter Lesson-Flow Vorrang vor statisch hinterlegtem `lessonFlow` in `onboarding-steps.data.ts`.
@@ -104,16 +118,18 @@ Lege neue Features standardmaessig innerhalb dieser Struktur an. Fuehre keine pa
 
 ### Struktur-Sektionen ohne Slide
 
-- `## Was ist zu tun` wird als Aufgabenliste fuer den Schritt interpretiert (vergleichbar mit Aufgaben aus `XX-aufgaben.md`).
-- `## Hilfreiche Links` wird als Ressourcenliste fuer den Schritt interpretiert.
+- `## Was ist zu tun` wird als Aufgabenliste fuer den Lektion interpretiert (vergleichbar mit Aufgaben aus `XX-aufgaben.md`).
+- `## Hilfreiche Links` wird als Ressourcenliste fuer den Lektion interpretiert.
 - `## Übungen zur Lektion` wird als Übungsbereich unterhalb des Lesson-Flows gerendert. Die enthaltenen Übungsschritte sind interaktiv abhakbar; pro Übung kann der Status `erledigt` oder `nicht geschafft` gesetzt werden.
 - Beide Sektionen sind fuer Autoren gedacht und erscheinen nicht als eigene Lesson-Slides im Lesson-Flow.
 
 ### Quiz-Pattern in Markdown
 
 - Quiz-Slides werden über `## Quiz: ...` definiert.
+- Quiz-Slides sind Verstaendnis-Checks, keine Auflockerungs- oder Dummy-Quizze.
 - Pflichtfelder: `Frage:` sowie mindestens zwei Antwortoptionen als `- [ ]` / `- [x]`.
 - Mindestens eine Option muss korrekt sein (`- [x]`).
+- Offensichtlich alberne oder rein kindlich formulierte Falschantworten sind zu vermeiden.
 - Optional: `Hinweis:`, `Mehrfachauswahl: ja|nein`, `Erfolg:`, `Fehler:`.
 
 ### Farbfelder ueber H3-Praefixe
@@ -128,7 +144,7 @@ Das Präfix wird nicht angezeigt; sichtbar bleibt nur der Text nach dem Doppelpu
 
 ## Verbindlicher Component-Contract: Lesson Flow
 
-Die Komponente `app-lesson-flow` gilt als UI- und Verhaltens-Standard fuer Onboarding-Schritte mit Lektionen.
+Die Komponente `app-lesson-flow` gilt als UI- und Verhaltens-Standard fuer Onboarding-Lektionen mit Lektionen.
 Alle Agents muessen diese Regeln beibehalten, solange keine explizite Produktentscheidung etwas anderes festlegt.
 
 ### Layout und Navigation
@@ -142,14 +158,14 @@ Alle Agents muessen diese Regeln beibehalten, solange keine explizite Produktent
 
 - Lange Inhalte werden nicht in einer einzelnen Folie gequetscht.
 - Wenn eine Folie zu lang wird, ist sie in mehrere Slides aufzuteilen.
-- Ziel: Lesson-Slides bleiben ohne starkes Scrollen erfassbar; die eigentlichen Aufgaben darunter bleiben im Schritt sichtbar.
+- Ziel: Lesson-Slides bleiben ohne starkes Scrollen erfassbar; die eigentlichen Aufgaben darunter bleiben in der Lektion sichtbar.
 
 ### Verhalten beim letzten Lesson-Button
 
-- Das `finished`-Event der Lesson darf nicht automatisch in den naechsten Onboarding-Schritt navigieren.
-- Falls unterhalb der Lesson **keine weiteren Schrittinhalte** folgen, ist der letzte Lesson-Button inaktiv und zeigt `Lektion abgeschlossen`.
-- Falls unterhalb der Lesson **weitere Schrittinhalte** folgen (z. B. Aufgabenblock), fuehrt der letzte Lesson-Button innerhalb desselben Schritts genau dorthin (z. B. Scroll zu `Was ist zu tun?`) und bleibt dafuer aktiv.
-- Labels auf der letzten Folie muessen dieses Verhalten eindeutig widerspiegeln (z. B. `Lektion abgeschlossen` bei inaktivem Ende oder `Zu den Aufgaben` bei Sprung zum Folgeinhalt; niemals `weiter zu Schritt X`).
+- Das `finished`-Event der Lesson darf nicht automatisch in die naechste Onboarding-Lektion navigieren.
+- Falls unterhalb der Lesson **keine weiteren Lektionsinhalte** folgen, ist der letzte Lesson-Button inaktiv und zeigt `Lektion abgeschlossen`.
+- Falls unterhalb der Lesson **weitere Lektionsinhalte** folgen (z. B. Aufgabenblock), fuehrt der letzte Lesson-Button innerhalb derselben Lektion genau dorthin (z. B. Scroll zu `Was ist zu tun?`) und bleibt dafuer aktiv.
+- Labels auf der letzten Folie muessen dieses Verhalten eindeutig widerspiegeln (z. B. `Lektion abgeschlossen` bei inaktivem Ende oder `Zu den Aufgaben` bei Sprung zum Folgeinhalt; niemals `weiter zu Lektion X`).
 
 ### Link-Konvention in Lesson-Texten
 
@@ -216,3 +232,4 @@ Weitere Sekundaerfarben (nur bei Bedarf): Ziggurat `#BED4E3`, Casper `#A7BECE`, 
 - Buttons: `mat-button`, `mat-raised-button`, `mat-flat-button` – kein Custom-Button ohne triftigen Grund.
 - Cards: `mat-card` mit `mat-card-content`, `mat-card-actions` gemaess M3-Struktur.
 - Kein direktes Ueberschreiben von MDC-internen CSS-Klassen (`.mdc-*`); nutze stattdessen M3 Design Tokens (`--mdc-*` oder `--mat-*`).
+

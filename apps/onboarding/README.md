@@ -1,38 +1,47 @@
-# Kurs-Tool: Modul Onboarding
+﻿# Kurs-Tool: aktueller Schwerpunkt Modul Onboarding
 
-Diese Datei ist die Arbeitsgrundlage fuer Pflege, Erweiterung und Abnahme der Onboarding-App.
+Diese Datei ist die Arbeitsgrundlage fuer Pflege, Erweiterung und Abnahme des Kurs-Tools im aktuellen Schwerpunkt Modul Onboarding.
 
 ## Zielbild
 
-Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwissen bis zur aktiven Mitarbeit im Kurs-Repo gefuehrt werden und danach sicher mit COURSE_MILESTONES.md weiterarbeiten koennen.
+Das Kurs-Tool soll den gesamten Kurs begleiten. Der aktuelle Ausbauschritt ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwissen durch das Modul Onboarding bis zur aktiven Mitarbeit im Kurs-Repo gefuehrt werden und danach sicher mit COURSE_MILESTONES.md weiterarbeiten koennen.
 
 ## Produkt-Scope (MVP)
 
-- Hoechstens 6 lineare Kernschritte bis zum lokalen Clone sind als Fuehrungslogik klar erkennbar.
+- Hoechstens 6 lineare Kernschritte des Moduls Onboarding bis zum lokalen Clone sind als Fuehrungslogik klar erkennbar.
 - Der aktuelle Stand nutzt mehr Detailschritte, muss aber fuer Lernende weiterhin wie ein klarer, sicherer Flow wirken.
-- Pro Schritt ist ein Erfolgskriterium sichtbar.
-- Nach dem Onboarding ist COURSE_MILESTONES.md der fachliche Einstieg in den Kursfluss.
+- Pro Lektion ist ein Erfolgskriterium sichtbar.
+- Nach dem Modul Onboarding ist COURSE_MILESTONES.md der fachliche Einstieg in den weiteren Kursfluss.
+
+## Begriffsklaerung
+
+- `Modul` = fachlicher Kursbaustein.
+- `Lektion` = zentrale Lern- und Navigationseinheit im Kurs.
+- Die Markdown-Datei im Kursmodul und der Eintrag im Kurs-Tool bezeichnen dieselbe Lektion.
+- `Slide` = einzelne Ansicht innerhalb des Lesson-Flows einer Lektion.
+
+Im aktuellen Onboarding-MVP bleibt diese Benennung einheitlich: Wir sprechen durchgaengig von Lektionen.
 
 ## ONB-001: Abnahme-Checkliste (PRD zu DoD)
 
 ### A. Einstieg und Orientierung
 
 - [ ] Die Startseite bietet genau 3 primaere Handlungsoptionen (Onboarding starten, Kursueberblick, weitere Kurse im Aufbau).
-- [ ] Die Sprache bleibt einsteigerfreundlich und konkret für Anfänger*innen.
+- [ ] Die Sprache bleibt voraussetzungsarm, konkret und erwachsen.
 - [ ] Der Hinweis "weitere Kurse im Aufbau" ist sichtbar, aber klar sekundaer.
 
-### B. Schrittlogik und Sicherheit
+### B. Lektionslogik und Sicherheit
 
-- [ ] Schritt 1 (Voucher) sperrt alle Folgeschritte bis zur Freischaltung.
-- [ ] Schritt 2 fragt Vorerfahrung ab und fuehrt in den passenden Pfad.
-- [ ] Bei bestehendem Account ist die Sichtbarkeitswarnung inkl. Pflicht-Checkbox aktiv, bevor der Schritt als erledigt markiert werden kann.
+- [ ] Lektion 1 (Voucher) sperrt alle Folgelektionen bis zur Freischaltung.
+- [ ] Lektion 2 fragt Vorerfahrung ab und fuehrt in den passenden Pfad.
+- [ ] Bei bestehendem Account ist die Sichtbarkeitswarnung inkl. Pflicht-Checkbox aktiv, bevor die Lektion als erledigt markiert werden kann.
 - [ ] Der Fallback zur Standardfuehrung (neuer Account) ist jederzeit erreichbar.
 
 ### C. Rueckkehr und Navigation
 
-- [ ] Rueckkehrende koennen am letzten offenen Schritt fortsetzen.
-- [ ] Freie Schrittauswahl im Shell-Navigator funktioniert.
-- [ ] Die Zusammenfassung ermoeglicht gezieltes Nacharbeiten offener Schritte.
+- [ ] Rueckkehrende koennen an der letzten offenen Lektion fortsetzen.
+- [ ] Freie Lektionauswahl im Shell-Navigator funktioniert.
+- [ ] Die Zusammenfassung ermoeglicht gezieltes Nacharbeiten offener Lektionen.
 
 ### D. Bruecke in den Kursfluss
 
@@ -43,13 +52,13 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 ### E. Qualitaet
 
 - [ ] Build laeuft fehlerfrei.
-- [ ] Kritische Pfade (Voucher, Schritt-2-Entscheidung, Rueckkehr, Abschluss) sind manuell getestet.
-- [ ] Mobile ist nutzbar; bei kritischen Schritten ist der Desktop-Hinweis sichtbar.
+- [ ] Kritische Pfade (Voucher, Lektion-2-Entscheidung, Rueckkehr, Abschluss) sind manuell getestet.
+- [ ] Mobile ist nutzbar; bei kritischen Lektionen ist der Desktop-Hinweis sichtbar.
 
 ## Manuelle Testfaelle (Minimum)
 
 1. Neue Person ohne Account
-- [ ] Start bei Schritt 1, Voucher validieren, neuer Account-Pfad, bis Abschluss.
+- [ ] Start bei Lektion 1, Voucher validieren, neuer Account-Pfad, bis Abschluss.
 - [ ] Abschlusslinks in COURSE_MILESTONES.md und README_UEBUNGEN.md geprueft.
 
 2. Person mit bestehendem Account, wenig Repo-Erfahrung
@@ -61,19 +70,19 @@ Das Modul Onboarding ist fertig, wenn neu aufgenommene Teilnehmende ohne Vorwiss
 - [ ] Fallback "neuen Account verwenden" pruefen.
 
 4. Reload- und Rueckkehrtest
-- [ ] Browser-Reload in Schritt 2 behaelt den korrekten Zustand.
+- [ ] Browser-Reload in Lektion 2 behaelt den korrekten Zustand.
 - [ ] Startseite/Kursstart bietet korrektes Fortsetzen.
 
 ## Pflegeorte im Code
 
 - Routen: src/app/app.routes.ts
-- Schrittdefinitionen und Inhalte: src/app/data/onboarding-steps.data.ts
+- Lektionsdefinitionen und Inhalte: src/app/data/onboarding-steps.data.ts
 - Typen: src/app/models/onboarding.models.ts
 - Zustand: src/app/services/onboarding-state.service.ts
 - Einstieg: src/app/pages/startseite/
 - Kursstart: src/app/pages/kursstart/
 - Onboarding-Rahmen: src/app/pages/onboarding-shell/
-- Schrittseite: src/app/pages/step-page/
+- Lektionseite: src/app/pages/step-page/
 - Abschluss: src/app/pages/zusammenfassung/
 - Markdown-Texte: public/content/
 
@@ -110,12 +119,14 @@ Ergebnis:
 
 ### Struktur-Sektionen ohne Slide
 
-- `## Was ist zu tun`: Wird als Aufgabenquelle für den Schritt übernommen (falls vorhanden).
-- `## Hilfreiche Links`: Wird als Ressourcenliste für den Schritt übernommen (falls vorhanden).
+- `## Was ist zu tun`: Wird als Aufgabenquelle für den Lektion übernommen (falls vorhanden).
+- `## Hilfreiche Links`: Wird als Ressourcenliste für den Lektion übernommen (falls vorhanden).
 - `## Übungen zur Lektion`: Wird als eigene Übungs-Komponente unterhalb des Lesson-Flows dargestellt. Übungsschritte sind abhakbar, pro Übung kann `erledigt` oder `nicht geschafft` markiert werden.
 - Diese Sektionen erscheinen nicht als eigene Slides im Lesson-Flow.
 
 ### Quiz-Pattern
+
+Quizze dienen hier als Verstaendnis-Checks. Sie sollen Begriffe, Unterschiede oder Entscheidungen pruefen, nicht auflockern oder mit offensichtlichen Dummy-Antworten arbeiten.
 
 ```md
 ## Quiz: Kurze Verständnisfrage
@@ -160,11 +171,11 @@ npx ng serve
 ## Aktuelles Mindest-Testset
 
 - `src/app/services/onboarding-state.service.spec.ts`
-	- Persistenz fuer Schritt 2
-	- Reset von Schritt-3-Fortschritt bei Pfadwechsel
+	- Persistenz fuer Lektion 2
+	- Reset von Lektion-3-Fortschritt bei Pfadwechsel
 	- Reset der Sichtbarkeitsbestaetigung
 - `src/app/guards/step-access.guard.spec.ts`
-	- Redirect bei ungueltigen Schritten
+	- Redirect bei ungueltigen Lektionen
 	- Schutz aller Folgeschritte ohne Voucher
 	- Freigabe nach Voucher-Validierung
 - `src/app/pages/step-page/step-page.component.spec.ts`
@@ -178,15 +189,19 @@ npx ng serve
 
 - `ng serve` kann lokal scheitern, auch wenn `npm run build` erfolgreich ist. Fuer Abnahme immer mindestens den Build pruefen.
 - Das Initial-Bundle liegt aktuell knapp ueber dem Budget. Das ist derzeit eine Warning, kein Build-Blocker.
-- Bei Schritt 2 immer auch Reload testen, damit Persistenz und Pfadwechsel korrekt bleiben.
+- Bei Lektion 2 immer auch Reload testen, damit Persistenz und Pfadwechsel korrekt bleiben.
 
 ## Guardrails fuer Aenderungen
 
 - Keine monolithischen Seitenkomponenten; wiederkehrende Muster in bestehende Komponenten integrieren.
 - Keine hardcodierten Farben in Komponenten-SCSS; Tokens nutzen.
-- Interaktive Schrittlogik bleibt in Angular; laengere Erklaertexte duerfen in public/content gepflegt werden.
+- Interaktive Lektionslogik bleibt in Angular; laengere Erklaertexte duerfen in public/content gepflegt werden.
+- Fachbegriffe in Onboarding-Texten nur erklaert oder direkt erklaerbar verwenden.
+- Allgemeine Tipps und wiederverwendbare Hilfen gehoeren langfristig in zentrale FAQ-, Glossar- oder Bedienungshilfen-Dateien statt in jede Pflichtlektion.
 - Aenderungen am Lesson-Flow-Verhalten (Footer, letzter Button, Scroll-Logik) nur mit expliziter Produktentscheidung.
 
 ## Betriebsregel nach Abschluss
 
-Wenn das Onboarding-Modul inhaltlich/funktional geaendert wird, diese Datei und die Ticketplanung in apps/notizen_todos_apps.md direkt mitpflegen.
+Wenn das Modul Onboarding oder seine Einbettung in das Kurs-Tool inhaltlich/funktional geaendert wird, diese Datei und die Ticketplanung in apps/notizen_todos_apps.md direkt mitpflegen.
+
+

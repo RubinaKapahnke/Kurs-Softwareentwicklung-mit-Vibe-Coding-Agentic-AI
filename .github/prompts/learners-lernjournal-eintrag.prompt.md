@@ -1,5 +1,5 @@
 ﻿---
-description: "Lernjournal-Eintrag schreiben: Hilft dir Schritt fuer Schritt, einen neuen Journaleintrag in deine lernfortschritt_<name>.md zu schreiben – nach einer Uebung oder Lernsession. Nutze diesen Prompt wenn du deinen Lernstand dokumentieren moechtest."
+description: "Lernjournal-Eintrag schreiben: Hilft dir Lektion fuer Lektion, einen neuen Journaleintrag in deine lernfortschritt_<name>.md zu schreiben – nach einer Uebung oder Lernsession. Nutze diesen Prompt wenn du deinen Lernstand dokumentieren moechtest."
 name: "Lernjournal-Eintrag"
 agent: "ask"
 ---
@@ -50,3 +50,4 @@ Erstelle dann einen Journaleintrag in diesem Format:
 ```
 
 Frage abschliessend: "Passt der Eintrag so? Dann kopiere ihn in deine `lernfortschritt_<dein-name>.md` unter ## Lernjournal, direkt nach der letzten ### Ueberschrift."
+

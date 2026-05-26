@@ -2,7 +2,7 @@
 
 Beim "Vibe Coding" tippst du weniger Code selbst ab, sondern steuerst die KI durch praezise Anweisungen und den richtigen Kontext. Gutes Prompting ist deshalb eine der wichtigsten Faehigkeiten.
 
----
+
 
 ## Die vier Grundbausteine eines Prompts
 
@@ -11,20 +11,13 @@ Jeder gute Prompt hat bis zu vier Teile:
 | Baustein | Was bedeutet das? | Beispiel |
 | :--- | :--- | :--- |
 | **Rolle** | Wer soll die KI sein? | "Du bist ein erfahrener TypeScript-Entwickler." |
-| **Aufgabe** | Was soll sie tun? | "Schreibe eine Funktion, die..." |
-| **Kontext** | Was muss sie wissen? | "Hier ist mein bestehendes Interface: ..." |
-| **Format** | Wie soll die Antwort aussehen? | "Antworte nur mit Code, keine Erklaerung." |
 
 Nicht jeder Prompt braucht alle vier - aber je mehr du angibst, desto gezielter die Antwort.
-
----
-
 ## Zero-Shot vs. Few-Shot Prompting
 
 - **Zero-Shot:** Du erklaerst nur die Aufgabe, ohne Beispiel. Funktioniert bei einfachen Aufgaben gut.
 - **Few-Shot:** Du zeigst der KI ein oder mehrere Beispiele, bevor du die eigentliche Aufgabe stellst. Hilft besonders, wenn du ein bestimmtes Format oder einen bestimmten Stil willst.
 
----
 
 ## Die KI weiss nichts von deinem Projekt
 

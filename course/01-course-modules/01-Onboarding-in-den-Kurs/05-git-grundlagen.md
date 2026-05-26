@@ -187,7 +187,7 @@ Wenn du Git interaktiv üben und besser verstehen willst, nutze Inter-Git:
 
 Warum hilfreich:
 
-1. Die Abläufe werden Schritt für Schritt visuell erklärt.
+1. Die Abläufe werden Lektion für Lektion visuell erklärt.
 2. Du bekommst ein besseres Gefühl für Branches, Commits und Merges.
 3. Es eignet sich gut als Ergänzung zu den Kursübungen.
 
@@ -289,10 +289,11 @@ Du kannst Branch, Commit, Commit History, Pull, Push, Fetch, Clone, Fork, Remote
 
 1. Arbeite die Git-Grundbegriffe und den Grundworkflow (add/commit/push) durch.
 2. Führe die zentralen Befehle mindestens einmal im eigenen Repository aus.
-3. Prüfe nach jedem Schritt den Status mit git status.
+3. Prüfe nach jedem Lektion den Status mit git status.
 
 ## Hilfreiche Links
 
 - [GitHub: Git einrichten](https://docs.github.com/de/get-started/git-basics/set-up-git)
 - [GitHub: Git-Befehle im Überblick](https://docs.github.com/de/get-started/using-git/about-git)
+
 

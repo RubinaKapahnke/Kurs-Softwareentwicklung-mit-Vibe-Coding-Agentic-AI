@@ -20,7 +20,7 @@ Das kann passieren, wenn waehrend deiner Bearbeitung zum Beispiel:
 
 - **Compare**
   - Zeigt den Unterschied zwischen deiner Editor-Version und der neueren Datei auf der Festplatte.
-  - Das ist fast immer der sichere erste Schritt.
+  - Das ist fast immer der sichere erste Lektion.
 
 - **Overwrite**
   - Ueberschreibt die neuere Datei auf der Festplatte mit deiner aktuellen Editor-Version.
@@ -41,7 +41,7 @@ Sicheres Vorgehen:
 Falls Revert Block versehentlich geklickt wurde:
 - Sofort `Strg+Z` (oder `Cmd+Z`) und dann speichern.
 
-## Sicheres Vorgehen in 4 Schritten
+## Sicheres Vorgehen in 4 Lektionen
 
 1. Klicke zuerst auf **Compare**.
 2. Pruefe beide Seiten und entscheide, welche Zeilen behalten werden muessen.
@@ -78,3 +78,5 @@ git diff
 ```
 
 So siehst du sofort, welche Zeilen am Ende wirklich im Repository landen.
+
+

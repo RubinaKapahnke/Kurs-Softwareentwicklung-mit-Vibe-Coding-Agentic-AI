@@ -1,6 +1,6 @@
-<mat-card class="step-card" appearance="outlined">
-  <section class="step-header-banner" aria-label="Schrittüberschrift">
-    <p class="step-header-banner__kicker">Schritt {{ step().id }}</p>
+﻿<mat-card class="step-card" appearance="outlined">
+  <section class="step-header-banner" aria-label="Lektionüberschrift">
+    <p class="step-header-banner__kicker">Lektion {{ step().id }}</p>
     <h1 class="step-header-banner__title">{{ stepHeaderTitle() }}</h1>
     @if (isAccountChoiceStep() ? step3Goal() : effectiveGoal()) {
       <p class="step-header-banner__subtitle">{{ isAccountChoiceStep() ? step3Goal() : effectiveGoal() }}</p>
@@ -41,7 +41,7 @@
 
   <mat-card-content>
 
-    <!-- Lesson Flow (z.B. Schritt 3: GitHub, Schritt 7: Was ist VS Code?, Schritt 9: Was ist Git?) -->
+    <!-- Lesson Flow (z.B. Lektion 3: GitHub, Lektion 7: Was ist VS Code?, Lektion 9: Was ist Git?) -->
     @if (visibleLessonFlow(); as lessonFlow) {
       <div class="lesson-flow-section" #lessonFlowSection>
         <app-lesson-flow
@@ -164,7 +164,7 @@
 
     @if (showAccountStepContent()) {
 
-    <!-- Schritt 3: Trainerin einladen -->
+    <!-- Lektion 3: Trainerin einladen -->
     @if (isInviteStep()) {
       <section class="walkthrough-section">
         <h3 class="walkthrough-title">So lädst du die Trainerin ein</h3>
@@ -187,7 +187,7 @@
       <mat-divider></mat-divider>
     }
 
-    <!-- Schritt 4: Erste Übungen im eigenen Repo -->
+    <!-- Lektion 4: Erste Übungen im eigenen Repo -->
     @if (isExerciseStep()) {
       <section class="exercise-section">
         <div class="exercise-item">
@@ -222,7 +222,7 @@
           <mat-icon aria-hidden="true">how_to_reg</mat-icon>
           <div>
             <strong>Und dann?</strong>
-            <p>Sobald die Trainerin deine Commits gesehen hat und alles passt, bekommst du Zugang zum Kurs-Repository. Dann geht es weiter mit Schritt 5.</p>
+            <p>Sobald die Trainerin deine Commits gesehen hat und alles passt, bekommst du Zugang zum Kurs-Repository. Dann geht es weiter mit Lektion 5.</p>
           </div>
         </div>
       </section>
@@ -231,7 +231,7 @@
 
 
 
-    <!-- Schritt 7: VS Code installieren -->
+    <!-- Lektion 7: VS Code installieren -->
     @if (isVscodeInstallStep()) {
       <section class="vscode-install-section">
         <p>
@@ -309,7 +309,7 @@
       <mat-divider></mat-divider>
     }
 
-    <!-- Schritt 9: Git installieren -->
+    <!-- Lektion 9: Git installieren -->
     @if (isGitInstallStep()) {
       <section class="git-intro-section">
 
@@ -494,7 +494,7 @@
     @if (step().desktopHint?.length) {
       <mat-divider></mat-divider>
       <section class="step-section">
-        <h3>Wichtiger Hinweis fuer diesen Schritt</h3>
+        <h3>Wichtiger Hinweis fuer diesen Lektion</h3>
         <ul class="resource-link-list">
           @for (hint of step().desktopHint; track hint) {
             <li>{{ hint }}</li>
@@ -515,7 +515,7 @@
       </section>
     }
 
-    <!-- Schritt 6: Kurs-Repo klonen -->
+    <!-- Lektion 6: Kurs-Repo klonen -->
     @if (isCloneStep()) {
       <mat-divider></mat-divider>
       <section class="step-section bridge-section">
@@ -544,7 +544,7 @@
         </div>
 
         <h3>So klonst du das Kurs-Repo</h3>
-        <p class="bridge-prereq">Führe diese Schritte erst durch, <strong>nachdem</strong> du die Einladung akzeptiert hast.</p>
+        <p class="bridge-prereq">Führe diese Lektionen erst durch, <strong>nachdem</strong> du die Einladung akzeptiert hast.</p>
         <ol class="walkthrough-steps">
           <li>Öffne den Link unten: <strong>Kurs-Repo auf GitHub</strong>.</li>
           <li>Klick auf den grünen <strong>„Code"</strong>-Button → Tab <strong>HTTPS</strong> → URL kopieren.</li>
@@ -605,8 +605,10 @@
     @if (isFinishStep()) {
       <button mat-raised-button type="button" color="primary" (click)="finishOnboarding()">
         <mat-icon>celebration</mat-icon>
-        Onboarding abgeschlossen!
+        Erstes Modul abgeschlossen!
       </button>
     }
   </mat-card-actions>
 </mat-card>
+
+

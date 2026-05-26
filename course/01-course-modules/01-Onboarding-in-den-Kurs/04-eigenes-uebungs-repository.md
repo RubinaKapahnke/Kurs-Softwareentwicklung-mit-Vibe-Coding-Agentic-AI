@@ -49,13 +49,13 @@ Ein Repository ist ein digitaler Projektordner im Internet. Dort liegen deine Da
 
 ## Kapitel 3: Einloggen und neues Repository öffnen
 
-### Schritt 1: Einloggen
+### Lektion 1: Einloggen
 
 1. github.com öffnen.
 2. Mit Account anmelden.
 3. Falls du schon eingeloggt bist, prüfe oben rechts dein Profil-Icon.
 
-### Schritt 2: Neues Repository
+### Lektion 2: Neues Repository
 
 1. Profil-Icon klicken.
 2. New repository auswählen.
@@ -173,4 +173,6 @@ Dein Repository ist auf github.com angelegt, ist privat und enthält eine README
 
 - [Neues Repository erstellen](https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-new-repository)
 - [README-Dateien zu Repositories hinzufügen](https://docs.github.com/de/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+
+
 

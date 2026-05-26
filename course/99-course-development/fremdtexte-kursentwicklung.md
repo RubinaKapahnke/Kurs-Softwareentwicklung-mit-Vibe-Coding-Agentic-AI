@@ -80,7 +80,7 @@ mit in den Kurs aufnehmen. auch in die kursbeschreibung
 # Fremdtexte zur Verarbeitung in den Kursen (Github)
 
 ##Erstellen eines Kontos auf GitHub
-Erstelle ein persönliches Konto für die ersten Schritte mit GitHub.
+Erstelle ein persönliches Konto für die ersten Lektionen mit GitHub.
 
 Get started
 Artikel 2 von 8
@@ -95,7 +95,7 @@ Jede Person, die GitHub nutzt, meldet sich mit einem Benutzerkonto an. Ihr Benut
 
 Später kannst du die verschiedenen Arten von Konten untersuchen, die GitHub anbietet, und entscheiden, ob du einen Abrechnungsplan benötigst. Weitere Informationen findest du unter Typen von GitHub-Konten und Pläne von GitHub.
 
-Beachte, dass die Schritte in diesem Artikel nicht auf Enterprise Managed Users angewendet werden. Wenn dein GitHub-Konto von deinem Unternehmen für dich erstellt wurde, kannst du diesen Artikel überspringen und mit Hello World fortfahren.
+Beachte, dass die Lektionen in diesem Artikel nicht auf Enterprise Managed Users angewendet werden. Wenn dein GitHub-Konto von deinem Unternehmen für dich erstellt wurde, kannst du diesen Artikel überspringen und mit Hello World fortfahren.
 
 Registrierung für ein neues persönliches Konto
 Navigiere zu https://github.com/.
@@ -106,9 +106,9 @@ Während der Registrierung wirst du aufgefordert, deine E-Mail-Adresse zu verifi
 
 Einige Unternehmen erstellen verwaltete Benutzerkonten für ihre Benutzer. Du kannst dich mit einer E-Mail-Adresse, die bereits für ein verwaltetes Benutzerkonto überprüft wurde, nicht für ein persönliches Konto registrieren.
 
-Wenn du Probleme beim Überprüfen deiner E-Mail-Adresse hast, gibt es einige Schritte zur Problembehandlung, die du ausführen kannst. Weitere Informationen finden Sie unter Deine E-Mail-Adresse verifizieren.
+Wenn du Probleme beim Überprüfen deiner E-Mail-Adresse hast, gibt es einige Lektionen zur Problembehandlung, die du ausführen kannst. Weitere Informationen finden Sie unter Deine E-Mail-Adresse verifizieren.
 
-Nächste Schritte
+Nächste Lektionen
 Nachdem du dein persönliches Konto erstellt hast, beginnen wir mit den Grundlagen von GitHub. Im nächsten Tutorial, Hello World, erfährst du mehr über Repositorys und das Erstellen eines Repositorys und erhältst eine Einführung in Konzepte wie Branches, Commits und Pull Requests.
 Es wird dringend empfohlen, 2FA für dein Konto zu konfigurieren. 2FA ist eine zusätzliche Sicherheitsebene, die dir helfen kann, dein Konto sicher zu halten. Weitere Informationen finden Sie unter Zwei-Faktor-Authentifizierung konfigurieren.
 Weiterführende Lektüre
@@ -128,7 +128,7 @@ Wähle in der rechten oberen Ecke einer beliebigen Seite , und klicke dann auf N
 Screenshot eines GitHub-Dropdownmenüs mit Optionen zum Erstellen neuer Elemente. Das Menüelement „Neues Repository“ ist in dunklem Orange eingerahmt.
 Gib einen kurzen, einprägsamen Namen für das Repository ein. Beispiel: „hello world“.
 
-Screenshot: erster Schritt beim Erstellen eines Repositorys Das Feld „Repositoryname“ enthält den Text „hello-world“ und ist in dunklem Orange eingerahmt.
+Screenshot: erster Lektion beim Erstellen eines Repositorys Das Feld „Repositoryname“ enthält den Text „hello-world“ und ist in dunklem Orange eingerahmt.
 Füge optional eine Beschreibung deines Repositorys hinzu. Beispiel: „Mein erstes Repository auf GitHub“.
 
 Wähle eine Sichtbarkeitsoption für das Repository aus. Weitere Informationen finden Sie unter Informationen zu Repositorys.
@@ -192,7 +192,7 @@ Um dem GitHub-Flow zu folgen, benötigst du ein GitHub-Konto und ein Repository.
 Durchlaufen des GitHub-Flows
 Tipp
 
-Du kannst alle Schritte des GitHub-Flows über die GitHub-Weboberfläche, Befehlszeile und GitHub CLI oder über GitHub Desktop ausführen. Weitere Informationen zu den Tools, die du zum Herstellen einer Verbindung mit GitHub verwenden kannst, findest du unter Herstellen einer Verbindung mit GitHub.
+Du kannst alle Lektionen des GitHub-Flows über die GitHub-Weboberfläche, Befehlszeile und GitHub CLI oder über GitHub Desktop ausführen. Weitere Informationen zu den Tools, die du zum Herstellen einer Verbindung mit GitHub verwenden kannst, findest du unter Herstellen einer Verbindung mit GitHub.
 
 Branch erstellen
 Erstelle einen Branch in deinem Repository. Ein kurzer, beschreibender Branchname ermöglicht es den Projektmitarbeitern, sich auf einen Blick über die laufenden Arbeiten zu informieren. Zum Beispiel: increase-test-timeout oder add-code-of-conduct. Weitere Informationen finden Sie unter Erstellen und Löschen von Branches in deinem Repository.
@@ -407,3 +407,4 @@ Human-in-the-Loop im Code
     - `course/01-course-modules/01-Onboarding-in-den-Kurs/17-version-control-und-gitops-im-kurs.md`
     - `.github/prompts/course-dev-fremdtexte-verarbeiten.prompt.md`
     - `AGENTS.md`
+

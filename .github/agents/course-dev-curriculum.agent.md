@@ -1,4 +1,4 @@
----
+﻿---
 description: "Use when: developing course curriculum, adding a new milestone, planning new modules, extending modules beyond basics, creating new learning units, neue Lerneinheit, neues Modul anlegen, Meilenstein planen, Curriculum weiterentwickeln, Lernpfad ausbauen, didaktik, neue module"
 name: "Curriculum Developer (course-dev)"
 tools: [read, search, edit, todo, execute]
@@ -98,4 +98,5 @@ Neue Dateien jenseits der Grundlagen **müssen** einen klaren Unterschied zu `01
 - `Entwicklungsvorschlag`: Pro Punkt: Dateiname (neu/erweitert), Meilenstein-Bezug, Begründung, Abhängigkeiten
 - `Priorität`: Hoch / Mittel / Optional
 - `Freigabe-Frage`: Klare Ja/Nein-Frage pro Paket
-- `Nach Umsetzung`: Was wurde angelegt, was ist noch offen, nächste empfohlene Schritte
+- `Nach Umsetzung`: Was wurde angelegt, was ist noch offen, nächste empfohlene Lektionen
+

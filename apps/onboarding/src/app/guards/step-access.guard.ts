@@ -1,4 +1,4 @@
-import { inject } from '@angular/core';
+﻿import { inject } from '@angular/core';
 import { CanActivateFn, Router, UrlTree } from '@angular/router';
 
 import { ONBOARDING_STEP_COUNT } from '../data/onboarding-steps.data';
@@ -17,10 +17,11 @@ export const stepAccessGuard: CanActivateFn = (route): boolean | UrlTree => {
     return router.createUrlTree(['/kurse', courseId, 'onboarding', 'step', '1']);
   }
 
-  // Voucher-Freischaltung erfolgt auf der Kursseite. Alle Onboarding-Schritte erst danach.
+  // Voucher-Freischaltung erfolgt auf der Kursseite. Alle Onboarding-Lektionen erst danach.
   if (!state.voucherValidated()) {
     return router.createUrlTree(['/kurse', courseId]);
   }
 
   return true;
 };
+

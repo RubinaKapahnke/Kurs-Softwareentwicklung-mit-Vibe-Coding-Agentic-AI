@@ -51,9 +51,9 @@ Das ist ein neuer Absatz.
 ```
 
 ```markdown
-1. Schritt 1
-2. Schritt 2
-3. Schritt 3
+1. Lektion 1
+2. Lektion 2
+3. Lektion 3
 ```
 
 ### Hervorhebung
@@ -143,7 +143,7 @@ Fehler: Noch nicht ganz. Markdown ist bewusst leichtgewichtig und funktioniert s
 
 - Datei wird nicht angezeigt: im Repository nach README.md suchen.
 - Commit-Button ist inaktiv: zuerst Inhalt ändern oder ergänzen.
-- Unsicher bei der Syntax: ein kleines Beispiel kopieren und schrittweise anpassen.
+- Unsicher bei der Syntax: ein kleines Beispiel kopieren und Lektionweise anpassen.
 
 ## Erfolgskriterium
 
@@ -161,3 +161,5 @@ Du hast eine strukturierte README erstellt oder verbessert und kannst Überschri
 - [Markdown Grundlagen](../../03-course-library/01-markdown/01-markdown-grundlagen.md)
 - [Formatierung von Markdown-Dateien](../../03-course-library/01-markdown/02-formatierung_md-files.md)
 - [GitHub Docs: Schreiben auf GitHub](https://docs.github.com/de/get-started/writing-on-github)
+
+

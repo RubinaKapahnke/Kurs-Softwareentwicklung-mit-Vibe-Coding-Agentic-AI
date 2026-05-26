@@ -602,7 +602,7 @@
   p { margin: 0 0 0.5rem; &:last-child { margin-bottom: 0; } }
 }
 
-/* Walkthrough-Abschnitte (Schritt 2, 3) */
+/* Walkthrough-Abschnitte (Lektion 2, 3) */
 .walkthrough-section {
   padding: 0.25rem 0 0.5rem;
 }
@@ -626,7 +626,7 @@
   code { font-size: 0.85em; }
 }
 
-/* Einladungs-Hinweis (Schritt 3) */
+/* Einladungs-Hinweis (Lektion 3) */
 .invite-hint {
   display: flex;
   gap: 0.75rem;
@@ -649,7 +649,7 @@
   p { margin: 0; }
 }
 
-/* Übungs-Abschnitte (Schritt 4) */
+/* Übungs-Abschnitte (Lektion 4) */
 .exercise-section {
   display: flex;
   flex-direction: column;
@@ -704,7 +704,7 @@
   p { margin: 0; }
 }
 
-/* VS Code & Terminal (Schritt 5) */
+/* VS Code & Terminal (Lektion 5) */
 .vscode-install-section,
 .terminal-check-section {
   padding: 0.5rem 0;
@@ -718,7 +718,7 @@
   margin: 0 0 0.5rem;
 }
 
-/* Brücke (Schritt 6) */
+/* Brücke (Lektion 6) */
 .bridge-section {
   background: var(--surface-muted);
   border-radius: var(--radius-md);

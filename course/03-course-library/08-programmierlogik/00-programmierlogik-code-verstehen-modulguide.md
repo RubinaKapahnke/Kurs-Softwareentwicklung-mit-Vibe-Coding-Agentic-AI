@@ -1,6 +1,6 @@
 ﻿# Modulguide: Programmierlogik
 
-Dieses Modul hilft dir, KI-generierten Code besser zu verstehen und in kleinen Schritten sicher zu verbessern.
+Dieses Modul hilft dir, KI-generierten Code besser zu verstehen und in kleinen Lektionen sicher zu verbessern.
 
 ## Inhalt
 
@@ -22,7 +22,7 @@ Nutze die Checklisten als Selbstcheck fuer das Programmierlogik-Modul.
 
 - [ ] Ich kann einfache Logikfehler benennen (z. B. falsche Bedingung, leerer Wert, falscher Datentyp).
 - [ ] Ich kann einer KI gezielte Rueckfragen zum Code stellen, statt nur "funktioniert nicht" zu schreiben.
-- [ ] Ich kann eine kleine Funktion schrittweise vereinfachen oder umbenennen, ohne das Verhalten zu aendern.
+- [ ] Ich kann eine kleine Funktion Lektionweise vereinfachen oder umbenennen, ohne das Verhalten zu aendern.
 
 ### Nice to have
 
@@ -34,3 +34,4 @@ Nutze die Checklisten als Selbstcheck fuer das Programmierlogik-Modul.
 - Prompting fuer gezielte Rueckfragen: [course/03-course-library/06-ai-instructions/01-prompting-grundlagen.md](../06-ai-instructions/01-prompting-grundlagen.md)
 - Struktur und Komponenten-Denken: [course/03-course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../07-architecture-foundations/01-architecture-foundations-grundlagen.md)
 - PRD als Kontextquelle: [course/03-course-library/06-ai-instructions/02-prd-grundlagen.md](../06-ai-instructions/02-prd-grundlagen.md)
+

@@ -1,4 +1,4 @@
-# Softwareentwicklung mit Vibe Coding & Agentic AI
+﻿# Softwareentwicklung mit Vibe Coding & Agentic AI
 
 Dieser Kurs vermittelt moderne Softwareentwicklung mit KI-Unterstützung: von der Produktidee über strukturierte Planung, Prototyping und Implementierung bis zu Deployment, Monitoring und Weiterentwicklung. Ziel ist ein wartbares, auslieferbares Produkt, dessen Struktur, Logik und Risiken die Teilnehmenden verstehen.
 
@@ -28,7 +28,7 @@ Die typische Schleife ist:
 
 1. Ziel oder Problem beschreiben
 2. Kontext bereitstellen: PRD, vorhandener Code, Daten, Fehlermeldungen, Designwünsche oder Akzeptanzkriterien
-3. KI einen kleinen, prüfbaren Schritt umsetzen oder erklären lassen
+3. KI einen kleinen, prüfbaren Lektion umsetzen oder erklären lassen
 4. Ergebnis lesen, testen, hinterfragen und verbessern
 5. nächste Iteration starten oder bewusst abbrechen
 
@@ -79,7 +79,7 @@ Der Kurs kombiniert angeleitete Gruppenformate, selbstständige Vertiefung und i
 
 Im Laufe des Kurses entwickeln die Teilnehmenden ein eigenes Projekt in einem eigenen Repository. Dieses Projekt ist kein Nebenprodukt, sondern der zentrale Ort, an dem Produktplanung, Programmierlogik, AI Literacy, Agentic Software Engineering, Testing, Datenschutz, Deployment und Teamarbeitsprinzipien praktisch zusammenkommen.
 
-Das Projekt wächst schrittweise:
+Das Projekt wächst Lektionweise:
 
 1. Idee, Zielgruppe und Problem beschreiben
 2. Anforderungen, Datenbedarf und Erfolgskriterien formulieren
@@ -114,7 +114,7 @@ Jedes Modul ist außerdem so gedacht, dass es potentiell als eigener Kursbaustei
 | Modul | Neue nutzbare Fertigkeit nach dem Modul | Anwendung in der Praxis | Besonders relevant für Rollen wie... |
 | :--- | :--- | :--- | :--- |
 | 1. Arbeitsumgebung, Dokumentation & Versionsverwaltung | VS Code, Markdown, GitHub und Git sicher nutzen; Setup einrichten; Änderungen versionieren und nachvollziehbar teilen | Versionierbare Dokumentation, Produktbeschreibung und Projektwissen aufbauen, die Entwickler\*innen und später KI-Systeme direkt als Kontext nutzen können | Einsteiger\*innen, Product Owner, Projektmanager\*innen, Fachbereich, Consultants, Technical Writer, Team Leads, Entwickler\*innen, QA, Operations |
-| 2. Produktbeschreibung & inkrementelle Planung | Ideen in Problem, Zielgruppe, Nutzen, Anforderungen, Entwicklungsstufe und nächste Schritte übersetzen | PRDs, User Stories, Akzeptanzkriterien, PoC-/Prototyp-/MVP-Scope und Roadmaps erstellen | Gründer\*innen, Product Owner, Business Analyst\*innen, Fachbereich, UX, Projektleitung, Innovation Teams, Berater\*innen, Dozent\*innen |
+| 2. Produktbeschreibung & inkrementelle Planung | Ideen in Problem, Zielgruppe, Nutzen, Anforderungen, Entwicklungsstufe und nächste Lektionen übersetzen | PRDs, User Stories, Akzeptanzkriterien, PoC-/Prototyp-/MVP-Scope und Roadmaps erstellen | Gründer\*innen, Product Owner, Business Analyst\*innen, Fachbereich, UX, Projektleitung, Innovation Teams, Berater\*innen, Dozent\*innen |
 | 3. Vibe Coding, Prompting & Context Engineering | KI über natürliche Sprache, klare Ziele und passenden Kontext steuern | Prompts, Kontextdateien und Projektbeschreibungen erstellen, mit denen KI und Menschen effizient am selben Produkt arbeiten | Alle Wissensarbeiter\*innen, Product Owner, Entwickler\*innen, UX, Marketing/Content, Fachbereich, Data Analysts, Support, Enablement |
 | 4. AI Literacy & Modellverständnis | LLMs, RAG, Agenten, Halluzinationen, Kontextfenster, Tokens und typische Fehlerquellen einordnen | KI-Ergebnisse kritisch bewerten, richtige Rückfragen stellen, Modelle passend auswählen und Erwartungen realistisch halten | Führungskräfte, Entscheider\*innen, Compliance, Legal, HR/Learning, Product, Fachbereich, Entwickler\*innen, Data Teams |
 | 5. Grundlagen Programmierlogik | Variablen, Funktionen, Bedingungen, Schleifen, Datenstrukturen, Iteration, Rekursion und Abstraktion verstehen | Von KI erzeugten Code lesen, Logikfehler erkennen und kleine Funktionen oder UI-Logiken nachvollziehbar anpassen | Einsteiger\*innen, Product Owner mit technischem Anspruch, QA, UX, Data Analysts, Support Engineers, Entwickler\*innen |
@@ -137,8 +137,8 @@ Jeder Meilenstein endet mit einem sichtbaren Artefakt: einer Datei, einem Commit
 | Meilenstein | Nachweis im Projekt oder Repository | Woran der Fortschritt erkennbar ist |
 | :--- | :--- | :--- |
 | 1. Arbeitsfähigkeit hergestellt | Lokales Setup, persönlicher Arbeitsbereich, erster Commit oder PR | Teilnehmende können VS Code, Markdown, GitHub und Git nutzen, um dokumentierte Änderungen nachvollziehbar zu teilen. |
-| 2. Produktidee versioniert beschrieben | Erste Produktbeschreibung oder PRD im eigenen Repository | Problem, Zielgruppe, Nutzen, Entwicklungsstufe und nächste Schritte sind so beschrieben, dass Menschen und KI damit arbeiten können. |
-| 3. Vibe-Coding-Schleife angewendet | Dokumentierter Prompt-Kontext plus sichtbares kleines Ergebnis | Ein kleiner, prüfbarer Schritt wurde mit KI-Unterstützung umgesetzt, gelesen, bewertet und verbessert. |
+| 2. Produktidee versioniert beschrieben | Erste Produktbeschreibung oder PRD im eigenen Repository | Problem, Zielgruppe, Nutzen, Entwicklungsstufe und nächste Lektionen sind so beschrieben, dass Menschen und KI damit arbeiten können. |
+| 3. Vibe-Coding-Schleife angewendet | Dokumentierter Prompt-Kontext plus sichtbares kleines Ergebnis | Ein kleiner, prüfbarer Lektion wurde mit KI-Unterstützung umgesetzt, gelesen, bewertet und verbessert. |
 | 4. Projektstruktur und Logik verständlich gemacht | Strukturentscheidung, Komponenten-/Datenfluss-Skizze oder kommentierte Projektübersicht | Teilnehmende können erklären, wo welche Verantwortung liegt und wie Daten oder Zustände durch das Produkt fließen. |
 | 5. Fehleranalyse und Qualitätssicherung nachgewiesen | Debugging-Notiz, Testfall, Prüfprompt oder kleiner Harness | Ein Fehler, Risiko oder erwartetes Verhalten wurde systematisch geprüft statt nur geschätzt. |
 | 6. AI Literacy praktisch angewendet | Modell-/Tool-Entscheidung, Halluzinationscheck oder Quellenprüfung | KI-Ergebnisse wurden kritisch bewertet und nicht ungeprüft übernommen. |
@@ -168,7 +168,7 @@ Jeder Meilenstein endet mit einem sichtbaren Artefakt: einer Datei, einem Commit
 - **MVP (Minimum Viable Product):** enthält den kleinsten sinnvoll nutzbaren Funktionsumfang, mit dem echter Nutzen entsteht und Feedback gesammelt werden kann.
 - **Betaversion:** ist weitgehend nutzbar, wird aber bewusst mit ausgewählten Nutzer\*innen getestet, um Fehler, Verständnisprobleme und fehlende Kanten vor dem breiteren Release zu finden.
 - **Release:** ist eine bewusst veröffentlichte Version mit dokumentiertem Umfang, bekannten Grenzen, Versionsnummer und nachvollziehbarem Änderungsstand.
-- **Weiterentwicklung:** verbessert ein Produkt schrittweise nach Feedback, Messwerten, neuen Anforderungen und technischen Erkenntnissen.
+- **Weiterentwicklung:** verbessert ein Produkt Lektionweise nach Feedback, Messwerten, neuen Anforderungen und technischen Erkenntnissen.
 
 Diese Stufen helfen, KI-Unterstützung sinnvoll zu steuern: Die KI braucht andere Anweisungen, wenn sie einen schnellen PoC, einen klickbaren Prototyp, ein belastbares MVP oder eine releasefähige Funktion bauen soll.
 
@@ -290,7 +290,7 @@ Diese Stufen helfen, KI-Unterstützung sinnvoll zu steuern: Die KI braucht ander
 
 ## Notwendige Skills und Kompetenzfelder
 
-Die folgenden Skills werden im Kurs schrittweise aufgebaut. Nicht alle müssen zu Beginn vorhanden sein. Entscheidend ist, dass Teilnehmende lernen, Aufgaben richtig einzuordnen, mit KI-Unterstützung umzusetzen und Ergebnisse kritisch zu prüfen.
+Die folgenden Skills werden im Kurs Lektionweise aufgebaut. Nicht alle müssen zu Beginn vorhanden sein. Entscheidend ist, dass Teilnehmende lernen, Aufgaben richtig einzuordnen, mit KI-Unterstützung umzusetzen und Ergebnisse kritisch zu prüfen.
 
 | Skill-Feld | Was Teilnehmende lernen | Warum es wichtig ist |
 | :--- | :--- | :--- |
@@ -362,4 +362,5 @@ Die bestehende Repo-Struktur bildet bereits die ersten Grundlagen ab:
 - [course/learners](course/learners) enthält persönliche Lernfortschritte und Projektideen.
 - [apps/onboarding](apps/onboarding) wird später genutzt, um diese Kursbeschreibung als Einstieg und Orientierung in die Onboarding-App zu überführen.
 
-Diese Kursbeschreibung ist der inhaltliche Zielrahmen. Die konkrete Umsetzung in Module, Übungen und Onboarding-App kann daraus schrittweise abgeleitet werden.
+Diese Kursbeschreibung ist der inhaltliche Zielrahmen. Die konkrete Umsetzung in Module, Übungen und Onboarding-App kann daraus Lektionweise abgeleitet werden.
+

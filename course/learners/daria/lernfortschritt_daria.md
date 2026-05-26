@@ -16,7 +16,7 @@
 - **Was ich gemacht habe:**  mit dem Terminal versucht mich zu navigieren. Hat auch git egeklappt :) 
 - **Was gut lief:** die Übung war gut verständlich
 - **Wo ich hänge:** teilweise fehlte mir die Orientierung
-- **Nächster Schritt:** 
+- **Nächster Lektion:** 
 ```markdown
 **Was habe ich heute gemacht?**
 Ornder und Branch anlegen. Wissen vertieft
@@ -24,7 +24,7 @@ Ornder und Branch anlegen. Wissen vertieft
 **Was war schwierig oder unklar?**
 Ich hatte keine Schwierigkeiten, da Raphael super durchgeführt hat
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 Uebung 2 selbstständig lösen
 ```
 
@@ -42,7 +42,7 @@ Uebung 2 selbstständig lösen
 - **Was ich gemacht habe:** Modul-Navigation geübt und für drei Situationen die passenden Quellen gefunden
 - **Was gut lief:** Ich konnte die richtigen Module und Dateien identifizieren
 - **Wo ich hänge:** 
-- **Nächster Schritt:** Uebung 2 selbstständig lösen
+- **Nächster Lektion:** Uebung 2 selbstständig lösen
 
 **Modul-Zuordnungen (aus Uebung 02, Aufgabe 4):**
 | Situation | Modul | Datei konkret |
@@ -68,3 +68,4 @@ Uebung 2 selbstständig lösen
 
 ## Fragen an die Gruppe
 -
+

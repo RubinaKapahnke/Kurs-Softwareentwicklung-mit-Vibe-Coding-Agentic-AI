@@ -28,7 +28,7 @@ Nutze die Checklisten als Selbstcheck fuer das AI-Instructions-Modul.
 - [ ] Ich kann Fehlermeldungen kopieren und der KI zeigen, um Probleme zu debuggen.
 - [ ] Ich nutze den Chat gezielt, um Code erklaeren zu lassen oder Dokumentation zu generieren.
 - [ ] Ich weiss, wann ich der KI ein konkretes Beispiel zeigen sollte, damit sie besser versteht.
-- [ ] Ich kann in mehreren Schritten arbeiten, statt die ganze Aufgabe auf einmal zu prompten.
+- [ ] Ich kann in mehreren Lektionen arbeiten, statt die ganze Aufgabe auf einmal zu prompten.
 
 ### Nice to have
 

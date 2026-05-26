@@ -1,8 +1,8 @@
-<mat-card class="summary-card" appearance="outlined">
+﻿<mat-card class="summary-card" appearance="outlined">
   <mat-card-header>
     <mat-card-title>Modul-Zusammenfassung</mat-card-title>
     <mat-card-subtitle>
-      {{ completedCount() }} von {{ stepCount }} Schritten als erledigt markiert
+      {{ completedCount() }} von {{ stepCount }} Lektionen als erledigt markiert
     </mat-card-subtitle>
   </mat-card-header>
 
@@ -13,7 +13,7 @@
         <mat-icon>celebration</mat-icon>
         <div>
           <strong>Alles erledigt!</strong>
-          <p>Du hast alle Schritte in diesem Modul abgeschlossen. Weiter geht es im Kurs.</p>
+          <p>Du hast alle Lektionen in diesem Modul abgeschlossen. Weiter geht es im Kurs.</p>
         </div>
       </div>
     } @else {
@@ -22,9 +22,9 @@
         <div>
           <strong>Noch nicht ganz fertig</strong>
           <p>
-            {{ stepCount - completedCount() }} Schritt{{ (stepCount - completedCount()) === 1 ? '' : 'e' }}
+            {{ stepCount - completedCount() }} Lektion{{ (stepCount - completedCount()) === 1 ? '' : 'e' }}
             {{ (stepCount - completedCount()) === 1 ? 'ist' : 'sind' }} noch nicht als erledigt markiert.
-            Klicke auf einen Schritt, um ihn abzuschließen.
+            Klicke auf einen Lektion, um ihn abzuschließen.
           </p>
         </div>
       </div>
@@ -32,7 +32,7 @@
       @if (firstIncompleteStepId(); as nextStepId) {
         <div class="summary-resume">
           <a mat-flat-button [routerLink]="getStepLink(nextStepId)">
-            Bei Schritt {{ nextStepId }} weitermachen
+            Bei Lektion {{ nextStepId }} weitermachen
             <mat-icon iconPositionEnd>arrow_forward</mat-icon>
           </a>
         </div>
@@ -50,7 +50,7 @@
             }
           </div>
           <div class="step-item__body">
-            <span class="step-item__num">Schritt {{ step.id }}</span>
+            <span class="step-item__num">Lektion {{ step.id }}</span>
             <span class="step-item__title">{{ step.title }}</span>
           </div>
           @if (!isStepDone(step.id)) {
@@ -112,7 +112,9 @@
       </a>
     }
     <a mat-button [routerLink]="getStepLink(1)">
-      Zurück zu Schritt 1
+      Zurück zu Lektion 1
     </a>
   </mat-card-actions>
 </mat-card>
+
+

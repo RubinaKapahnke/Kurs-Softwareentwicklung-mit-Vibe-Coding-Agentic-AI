@@ -1,4 +1,4 @@
-export interface StepManifestSection {
+﻿export interface StepManifestSection {
   type: 'lesson' | 'tasks' | 'uebung';
   file: string;
 }
@@ -88,7 +88,7 @@ export interface OnboardingLessonFlow {
 export interface OnboardingStep {
   id: number;
   title: string;
-  moduleTitle?: string; // Titel der Kursmodul-Gruppe (nur beim ersten Schritt der Gruppe gesetzt)
+  moduleTitle?: string; // Titel der Kursmodul-Gruppe (nur beim ersten Lektion der Gruppe gesetzt)
   goal: string;
   tasks: string[];
   fallbackHelp: OnboardingHelpItem[];
@@ -99,3 +99,4 @@ export interface OnboardingStep {
   markdownSource?: string;
   lessonFlow?: OnboardingLessonFlow;
 }
+

@@ -1,4 +1,4 @@
-# AGENTS
+﻿# AGENTS
 
 ## README Sync Standard
 
@@ -29,7 +29,26 @@ This repository is a shared learning workspace for a closed group in the course 
 
 ## Language
 - Communicate with the user in German unless the user explicitly asks for another language.
-- Keep wording beginner-friendly and concrete.
+- Keep wording voraussetzungsarm, konkret und erwachsen.
+- Avoid infantilizing, overly protective, or patronizing language.
+
+## Didactic Style
+- Explain technical terms before first use or directly at the point of first use.
+- Make clear for each relevant step what is being done now, why it matters now, and why it matters later.
+- In `## Ziel` sections, state not only the intended outcome but also the learner benefit: why this is a goal and what it enables for the learner next.
+- In lessons, create a visible result, concrete action, or clear working artifact as early as possible.
+- Address learners directly in learner-facing content; write for participants, not for content creators.
+- Do not expose didactic meta-reasoning in learner-facing text (e.g. comments about why the content order helps course design or that something is included for authors/editors).
+- Avoid long introductory text blocks without visual anchor, decision point, or action.
+- Use quizzes only as genuine understanding checks; avoid childish distractors or dummy-answer patterns.
+- Move generally applicable tips, FAQ-style advice, and reusable operating help out of mandatory lesson flow and into central help files when appropriate.
+
+## Terminology Standard
+- `Kurs` = das Gesamtangebot mit Modulen, Meilensteinen, Übungen und Lernfortschritt.
+- `Modul` = ein eigenständiger Kursbaustein, z. B. `01-Onboarding-in-den-Kurs`.
+- `Lektion` = die zentrale Lern- und Navigationseinheit im Kurs. In Modul 01 ist das typischerweise eine Datei wie `01-willkommen-im-kurs.md`, die im Kurs-Tool als Lektion geführt wird.
+- Eine Lektion kann Inhalte, Aufgaben, Entscheidungen und Erfolgskriterien bündeln.
+- `Slide` oder `Seite` = eine einzelne Ansicht innerhalb des Lesson-Flows, meist erzeugt durch eine `##`-Überschrift in der Lektionsdatei.
 
 ## Core Workflow
 
@@ -85,13 +104,13 @@ The learning structure follows this hierarchy:
 - If an exercise step has no matching source explanation, improve coverage in `course/03-course-library/` (allgemein) oder `course/01-course-modules/` (kursspezifisch) before relying on that exercise.
 - **Why this standard?** The module source is not just a reference—it's the primary path to understanding. Learners click the source link to understand *why* the task matters, then complete it.
 
-## Beginner-Friendliness Standard For Exercises
-Every exercise must be usable by inexperienced, low-self-organization learners without outside help. Apply these rules:
+## Accessibility Standard For Exercises
+Every exercise must be usable by inexperienced, low-self-organization learners without outside help, while keeping the tone professional and adult. Apply these rules:
 
 1. **"Vor dem Start"-Checkliste:** Every exercise begins with a checklist (3 items max) covering environment prerequisites (e.g. VS Code open, Copilot active, correct folder). Also list which files the learner will need during the exercise.
 2. **Hinweise zu versteckten oder unerwarteten Orten:** When an exercise references files in hidden folders (e.g. `.github/`) or non-obvious locations, add a navigation tip directly under the link. Example: `Strg+P` (Windows) / `Cmd+P` (Mac) → type filename.
 3. **"Warum?"-Hinweise fuer temporaere Abschnitte:** If learners write content into a file that will later be replaced or overwritten, explain why at the point where they write it—not only at the point where it gets replaced.
-4. **Schrittweise Anleitungen fuer UI-Interaktionen:** For any multi-step UI interaction (e.g. opening Copilot Chat, using slash commands, navigating menus), provide numbered steps instead of a single sentence. Always include a fallback ("Falls X nicht erscheint: ...").
+4. **Lektionweise Anleitungen fuer UI-Interaktionen:** For any multi-step UI interaction (e.g. opening Copilot Chat, using slash commands, navigating menus), provide numbered steps instead of a single sentence. Always include a fallback ("Falls X nicht erscheint: ...").
 5. **Status-Check vor Git-Befehlen:** Before any `git checkout`, `git add`, or `git push` block, include `git status` and `git branch` so learners know their current state before acting.
 
 ## Documentation Rules
@@ -103,7 +122,7 @@ Every exercise must be usable by inexperienced, low-self-organization learners w
   - Zentrale Ablage unter `course/01-course-modules/Assets/`.
   - Dateinamen mit eindeutigem Prefix nach Modul/Lektion, z. B. `m01-l02-...png`.
   - Interne Screenshot-Hinweise in Lektionen als HTML-Kommentare (`<!-- ... -->`) halten, damit Teilnehmende nur den Lerninhalt sehen.
-- Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Schritts dorthin (z. B. zu Aufgaben).
+- Lesson-Flow-Ende im Onboarding: Wenn unter der Lesson kein weiterer Inhalt folgt, bleibt der letzte Button inaktiv mit Label `Lektion abgeschlossen`. Wenn weiterer Inhalt folgt, springt der letzte Button innerhalb desselben Lektions dorthin (z. B. zu Aufgaben).
 - Avoid explaining the same concept in multiple places—link instead.
 - Preserve the existing repo structure and wording style unless the user asks for a broader rewrite.
 - Checkbox-Regel: In `course/02-course-exercises/` und Guide-Dateien (`*guide*.md`, inklusive `00-*-modulguide.md`) bleiben Checklisten standardmaessig offen (`[ ]`). Abgehakt (`[x]`) ist nur in `course/learners/**/lernfortschritt_*.md` erlaubt.
@@ -153,7 +172,7 @@ Each module follows this pattern:
 
 ### ✅ Neues Modul hinzufügen
 
-**Schritt 1: Modul-Ordner erstellen**
+**Lektion 1: Modul-Ordner erstellen**
 ```
 course/03-course-library/XX-<modulname>/
 ├── 00-<modulname>-modulguide.md
@@ -161,7 +180,7 @@ course/03-course-library/XX-<modulname>/
 └── 03-<modulname>-befehlsuebersicht.md  (nur bei Terminal/Git)
 ```
 
-**Schritt 2: Jede Datei nach Template erstellen**
+**Lektion 2: Jede Datei nach Template erstellen**
 
 `00-modulguide.md`:
 ```markdown
@@ -205,37 +224,37 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 | `command` | Beschreibung | `command example` | Hinweis |
 ```
 
-**Schritt 3: Zu course/00-course-guides/COURSE_MILESTONES.md verlinken**
+**Lektion 3: Zu course/00-course-guides/COURSE_MILESTONES.md verlinken**
 - Neuen Meilenstein hinzufügen ODER
 - Existierenden Meilenstein ergänzen
 - Modul-Einstieg: `[course/03-course-library/XX-name/00-modulguide.md](course/03-course-library/XX-name/00-modulguide.md)`
 - Vertiefung: Einzelne Dateien wie `01-grundlagen.md`, `03-befehlsuebersicht.md`
 
-**Schritt 4: README.md aktualisieren**
+**Lektion 4: README.md aktualisieren**
 - Neue Module in Projektstruktur aufnehmen
 - Konsistenz überprüfen
 
-**Schritt 5: AGENTS.md aktualisieren**
+**Lektion 5: AGENTS.md aktualisieren**
 - Falls neue Modul-Struktur-Konvention: hier dokumentieren
 
 ---
 
 ### ✅ Neue Übung erstellen
 
-**Schritt 1: Quellen in Modulen prüfen**
+**Lektion 1: Quellen in Modulen prüfen**
 - **MUSS ERST:** Sicherstellen, dass alle benötigten Konzepte in `01-*-grundlagen.md` erklärt sind
 - Falls nicht: Modul vorher ergänzen!
 
-**Schritt 2-5: Template, Verlinkung und Konsistenz-Check**
+**Lektion 2-5: Template, Verlinkung und Konsistenz-Check**
 
-→ Vollständiges Template und Schritte 2-5: [.github/instructions/uebungen-standard.instructions.md](.github/instructions/uebungen-standard.instructions.md)
+→ Vollständiges Template und Lektionen 2-5: [.github/instructions/uebungen-standard.instructions.md](.github/instructions/uebungen-standard.instructions.md)
 
 
 ---
 
 ### ✅ Neuer Meilenstein hinzufügen
 
-**Schritt 1: In course/00-course-guides/COURSE_MILESTONES.md erstellen**
+**Lektion 1: In course/00-course-guides/COURSE_MILESTONES.md erstellen**
 ```markdown
 ## 🎯 Meilenstein N: [Titel]
 **Ziel:** [Kurzbeschreibung]
@@ -267,10 +286,10 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
   - [ ] [Untertask 2]
 ```
 
-**Schritt 2: Übungen für Meilenstein erstellen**
+**Lektion 2: Übungen für Meilenstein erstellen**
 - Nach der "Neue Übung"-Checkliste oben
 
-**Schritt 3: README.md, course/02-course-exercises/README_UEBUNGEN.md aktualisieren**
+**Lektion 3: README.md, course/02-course-exercises/README_UEBUNGEN.md aktualisieren**
 - Falls nötig Struktur-Erklärungen anpassen
 
 ---
@@ -284,3 +303,4 @@ Nutze die Checklisten als Selbstcheck fuer das [Name]-Modul.
 > .\tools\test-alle-uebungen.ps1
 > .\tools\test-links.ps1
 > ```
+

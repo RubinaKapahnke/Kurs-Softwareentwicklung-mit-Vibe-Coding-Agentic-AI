@@ -85,7 +85,7 @@ Hier eigene Antwort eintippen - was hast du konkret getan?
 **Was war schwierig oder unklar?**
 Hier eigene Antwort eintippen - was hat nicht funktioniert oder verwirrt?
 
-**Was ist mein naechster kleiner Schritt?**
+**Was ist mein naechster kleiner Lektion?**
 Hier eigene Antwort eintippen - was moechtest du als naechstes lernen oder ausprobieren?
 ```
 
@@ -163,4 +163,5 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe einen eigenen Branch erstellt und kann erklaeren, warum man das macht.
 - [ ] Mein Lernjournal enthaelt einen echten Eintrag von mir.
 - [ ] Ich habe einen Pull Request auf GitHub erstellt und weiss, was danach damit passiert.
+
 

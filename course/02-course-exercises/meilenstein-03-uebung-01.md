@@ -1,4 +1,4 @@
-# Uebung Meilenstein 3: Eigenes PRD erstellen
+﻿# Uebung Meilenstein 3: Eigenes PRD erstellen
 
 ## Ziel
 Du lernst, was ein PRD ist und wie du es mit KI-Unterstuetzung erstellst - so, dass die KI deine Ideen strukturiert und nicht eigene erfindet. Du verstehst dabei, wie eine Prompt-Datei das Verhalten der KI steuert, und erlebst den Unterschied zwischen "KI erfindet" und "KI hilft formulieren".
@@ -59,7 +59,7 @@ Beantworte diese drei Fragen schriftlich in deiner PRD-Datei (als neuen Abschnit
 - Wer nutzt sie?
 - Woran merkst du, dass der erste wichtige Teil fertig ist?
 
-Schreibe deine eigenen Antworten - die KI kommt erst im naechsten Schritt.
+Schreibe deine eigenen Antworten - die KI kommt erst in der nächsten Lektion.
 
 > **Warum erst ohne KI?** Wer sofort die KI fragt, bekommt eine Antwort, die gut klingt - aber vielleicht gar nicht das eigene Projekt trifft. Erst wenn du selbst weisst, was du willst, kannst du beurteilen, ob die KI dir wirklich hilft.
 
@@ -207,4 +207,6 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe mindestens eine Rueckmeldung an die KI gegeben und den Output dadurch verbessert.
 - [ ] Mein PRD enthaelt nur Inhalte, die wirklich mein Projekt beschreiben - nichts Erfundenes.
 - [ ] Ich weiss, was eine Prompt-Datei ist und wie ich sie im Chat aufrufe.
+
+
 

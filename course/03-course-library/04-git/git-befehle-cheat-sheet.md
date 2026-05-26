@@ -41,9 +41,9 @@ Dieses Dokument ist dein Spickzettel für die Arbeit mit Git im Terminal. Du mus
 ---
 
 ## 4. 💾 Der tägliche Workflow (Speichern & Hochladen)
-*(Diesen 3-Schritt-Prozess machst du jedes Mal, wenn du mit einer Aufgabe fertig bist.)*
+*(Diesen 3-Lektion-Prozess machst du jedes Mal, wenn du mit einer Aufgabe fertig bist.)*
 
-| Schritt | Befehl | Was passiert? |
+| Lektion | Befehl | Was passiert? |
 | :--- | :--- | :--- |
 | **1. Sammeln** | `git add .` | Packt **alle** geänderten Dateien in ein virtuelles Paket (Staging Area). Der Punkt `.` steht für "alles im aktuellen Ordner". |
 | **2. Beschriften** | `git commit -m "deine nachricht"` | Verschließt das Paket und klebt einen Zettel mit deiner Beschreibung darauf (z.B. `"feat: neue karte erstellt"`). | 
@@ -63,4 +63,4 @@ Dieses Dokument ist dein Spickzettel für die Arbeit mit Git im Terminal. Du mus
 ---
 
 > [!TIP]
-> **Vibe-Check:** Wenn du mal nicht weißt, was gerade los ist oder warum ein Befehl nicht klappt, tippe immer zuerst **`git status`** ein. Das Terminal verrät dir dann oft schon, was der nächste logische Schritt ist!
+> **Vibe-Check:** Wenn du mal nicht weißt, was gerade los ist oder warum ein Befehl nicht klappt, tippe immer zuerst **`git status`** ein. Das Terminal verrät dir dann oft schon, was der nächste logische Lektion ist!

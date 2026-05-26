@@ -1,198 +1,141 @@
 <!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 01-willkommen-im-kurs.md -->
 
-# Lektion 01: Ankommen, Arbeitsumgebung einrichten, loslegen
+# Lektion 01: Ankommen, GitHub-Zugang anlegen, loslegen
 
 ## Ziel
 
-Du verstehst den Ablauf des Kurses und kannst die wichtigsten Werkzeuge für den Kurs bedienen.
+Du verstehst den Arbeitskontext des Kurses, legst deinen GitHub-Account an und weißt, wie du im ersten Modul und danach im Kurs weiterarbeitest.
 
-## Willkommen im Kurs 🎉
+## Willkommen im Kurs
 
+### Worum es hier geht
 
-### Schön, dass du da bist 
+Willkommen im ersten Modul des Kurses Softwareentwicklung mit Vibe Coding & Agentic AI.
 
-Dieser Kurs ist für Menschen gedacht, die praxisnah lernen möchten, wie moderne Softwareentwicklung mit KI-Unterstützung im echten Projektalltag funktioniert. 
+Diese App führt dich nicht nur durch das Onboarding, sondern durch den gesamten Kurs: vom Zugang und Arbeitsbereich über die einzelnen Lernschritte bis zu deinem Fortschritt im weiteren Kursverlauf.
+
+Du musst an dieser Stelle noch nicht alles verstehen. Wichtig ist zuerst, dass du den Zugang anlegst und dich im Ablauf orientieren kannst.
+
+## Direktstart: GitHub-Zugang anlegen
+
+### Warum du damit beginnst
+
+GitHub ist das erste zentrale Werkzeug im Kurs.
+
+Du brauchst den Account jetzt für dieses erste Modul.
+Du brauchst ihn später für deinen eigenen Arbeitsbereich, für das gemeinsame Kurs-Repository, für nachvollziehbare Änderungen und für GitHub Copilot.
+
+Kurz: Wir beginnen mit dem Werkzeug, das du im restlichen Kurs ständig brauchst.
 
 ![Willkommen!](/content/Assets/m01-l01-willkommen2.png)
 
-### Was dieser Kurs anders macht als viele andere
+### GitHub und Repository kurz erklärt
 
-- Du arbeitest von Anfang an an realen Arbeitsabläufen statt nur an isolierten Theorieaufgaben.
-- Du lernst nicht nur Tools kennen, sondern auch, wie man mit klaren Prompts, Feedback und Iterationen zu belastbaren Ergebnissen kommt.
-- Fehler sind hier kein Scheitern, sondern Teil des Lernwegs: Debugging, Nachbessern und sauberes Dokumentieren gehören fest dazu.
+GitHub ist eine Plattform im Web, auf der Softwareprojekte, Dateien und Änderungen nachvollziehbar verwaltet werden.
 
-### Worauf du dich einstellen darfst
+Ein Repository ist auf GitHub ein Projektbereich. Dort liegen Dateien, Änderungsstände und die Historie deiner Arbeit.
 
-- Du wirst Schritt für Schritt geführt und bekommst klare Aufgaben mit konkreten Kriterien zur Überprüfung deines Erfolges.
-- Du musst nicht alles sofort verstehen: Begriffe und Konzepte werden im Verlauf wiederholt und vertieft.
-- Du bist nicht allein: Bei Blockern helfen Dozierende, Q&A-Formate und die anderen Teilnehmenden.
+Die Begriffe kommen im Kurs laufend vor. Deshalb klären wir sie direkt, bevor du damit arbeitest.
 
-### Worauf du dich auch einstellen MUSST
+### Lektion für Lektion: GitHub-Account anlegen
 
-- **Eigenständiges Ausprobieren** gehört dazu, auch wenn sich etwas anfangs ungewohnt anfühlt.
-- Das **Konzept funktioniert** nur, wenn du bei Fragen selbst **recherchierst** und die bereitgestellten **Unterlagen** aktiv zum Nachlesen nutzt.
-- Genau diese **Eigeninitiative ist eine wichtige Grundlage**, um in diesem schnelllebigen Feld **langfristig erfolgreich** zu werden und zu bleiben.
-- Wenn du lernst, **dir selbst zu helfen**, kannst du mit den heutigen Technologien sehr **schnell funktionierende Software umsetzen** und auf den Markt bringen.
-- Das soll dich **nicht hemmen Fragen zu stellen**, aber auf die Zeit nach dem Kurs vorbereiten, wenn du auf dich gestellt bist.
+1. Öffne [github.com](https://github.com).
+2. Klicke oben rechts auf `Sign up`.
+3. Falls `Sign up` nicht sichtbar ist: Öffne direkt [github.com/join](https://github.com/join).
+4. Trage deine E-Mail-Adresse ein oder nutze die Anmeldung über Google, Apple oder einen anderen Anbieter.
+5. Wähle ein sicheres Passwort.
+6. Lege deinen Benutzernamen fest.
+7. Schließe die Bestätigung ab und melde dich an.
 
-### Keine Sorge!
+![GitHub-Startseite mit markiertem Button Sign up](/content/Assets/m01-l02-gh-01-sign-up-startseite.png)
 
-Wir lassen dabei niemanden hilflos zurück. Du bekommst Unterstützung, Orientierung und Feedback, aber der entscheidende Lernfortschritt entsteht durch ***deine eigene aktive Mitarbeit!***
+### Worauf du bei der Registrierung achten solltest
 
+- Dein GitHub-Benutzername ist sichtbar. Wähle einen Namen, den du im Kurskontext vertreten kannst.
+- Wenn du den Account nach dem Kurs weiter nutzen willst, verwende eine E-Mail-Adresse, auf die du dauerhaft Zugriff hast.
+- Wenn du einen Passwortmanager nutzt, speichere die Zugangsdaten direkt sauber ab.
 
-### Hinweis: Drücke auf "Nächstes Kapitel"!
-Drücke auf Nächstes Kapitel um zu erfahren, wie das Kurstool Funktioniert.
+### Mini-Check nach der Registrierung
 
-## Wie der Kurs aufgebaut ist
+- [ ] Ich kann mich mit meinem GitHub-Account einloggen.
+- [ ] Ich sehe mein Profilsymbol oben rechts.
+- [ ] Ich kann mein Profil unter `https://github.com/<mein-benutzername>` öffnen.
 
-### Kursablauf im Überblick
+![Profil URL](/content/Assets/m01-l02-gh-05-profil-url.png)
 
-**Aufbau:**
-Der Kurs ist in Module, Lektionen und Lernbausteine aufteteilt. Jedes Modul verfolgt ein Ziel und schließt mit der erreichung eines Meilensteins ab. 
+## So arbeitest du im Kurs-Tool
 
-**Übungen:** 
-Zu den Lernbausteinen gibt es **Quizzes und Übungen**, die dir helfen, das Gelernte zu festigen und anzuwenden. Zu den Übungen zählen auch größere Aufgaben, die alleine oder in der Gruppe erarbeitet werden können.
+### Was du im Interface siehst
 
-**Projekt:**
-Im Laufe des Kurses entscheidest du dich für dein **Kursprojekt** und wendest die weiteren Lerninhalte in deinem Projekt an.
-
-**Hilfe:**
-Während des Kurses gibt es regelmäßige Termine für **Q&As, Reviews und vertiefende Lerneinheiten**. Genaueres dazu erklären dir die Dozierenden.
-
-### So funktioniert dieses Kurs-Tool
-
-Oben siehst du deinen **Fortschritt** über alle Schritte.
+Oben siehst du deinen Fortschritt über alle Lektionen.
 ![Fortschritt](/content/Assets/m01-l01-fortschritt.png)
 
-Jeder Schritt enthält **Teilaufgaben**, die du einzeln **abhaken** kannst.
+Jeder Lektion enthält Teilaufgaben, die du einzeln abhaken kannst.
 ![Erledigt](/content/Assets/m01-l01-aufgaben.png)
 
-Sind alle Teilaufgaben fertig, markierst du den Schritt als **erledigt**.
+Sind alle Teilaufgaben fertig, markierst du den Lektion als erledigt.
 ![Erledigt](/content/Assets/m01-l01-aufgaben-erledigt.png)
 
-Fertige Lektionen werden im Fortschrittsbalken als abgehakt markiert.
+Fertige Lektionen werden im Fortschrittsbalken als abgeschlossen markiert.
 ![Erledigt](/content/Assets/m01-l01-fortschritt-lektion-erledigt.png)
 
-### App absichtlich schmal gehalten!
+### Warum die App absichtlich schmal ist
 
-Wahrscheinlich ist dir bereits aufgefallen, dass die App nur einen Teil des Browsers füllt. Das ist Absicht und ermöglicht es dir bequem zwei Fenster nebeneinander zu nutzen. Z.B. für Notizen oder dein Repository. 
-
-**So zum Beispiel:**
+Die App nutzt bewusst nicht die gesamte Browserbreite. So kannst du sie parallel zu Notizen, Browser oder Repository-Fenster offen halten.
 
 ![Apps nebeneinander](/content/Assets/m01-l01-apps-nebeneinander.png)
 
+## Wie das erste Modul aufgebaut ist
 
-### Hinweis: Lernbausteine bauen aufeinander auf
+### Was im ersten Modul passiert
 
-Du kannst zwischen den Schritten hin und her springen. Da sie aufeinander aufbauen, ist es meist sinnvoll, sie der **Reihe nach abzuarbeiten**.
+Das erste Modul richtet deinen Zugang, deinen eigenen Arbeitsbereich und deine lokale Entwicklungsumgebung ein.
 
-## Quiz
-Frage: Welche Aussagen treffen zu?
+Du arbeitest dabei in dieser Reihenfolge:
 
-- [x] Ich werde in diesem Kurs besonders erfolgreich sein, wenn ich ein hohes Maß an Eigeninitiative zeige und mir angewöhne bei aufkommenden Problemen erst einmal selbst eine Lösung zu suchen.
-- [x] Wenn ich nicht weiter weiß, kann ich Hilfe bei den Dozierenden und anderen Teilnehmenden erfragen. Auch außerhalb der Q&A-Sessions.
-- [x] Zu den Lektionen gibt es Übungen, die mir helfen mein Wissen zu vertiefen.
-- [x] Wenn ich möchte, kann ich Aufgaben auch gemeinsam mit anderen Teilnehmenden erledigen. 
-- [ ] Es wird von mir erwartet, dass ich möglichst keine Rückfragen stelle.
+1. GitHub-Zugang und eigener Arbeitsbereich.
+2. Grundbegriffe rund um GitHub, Git und Repository.
+3. VS Code, Git und lokale Arbeitsumgebung.
+4. Arbeiten mit dem eigenen Repository und dem Kurs-Repository.
+5. Übergang in den restlichen Kurs.
 
-Erfolg: Richtig. Du hast verstanden, worauf es im Kurs ankommt: Eigeninitiative, aktive Mitarbeit, gegenseitige Unterstützung und praxisnahe Übungen. Rückfragen sind ausdrücklich erlaubt und erwünscht.
+### Warum diese Reihenfolge sinnvoll ist
 
-Fehler: Noch nicht ganz richtig. Achte darauf: Die letzte Aussage ist falsch, denn im Kurs sollst du Fragen stellen. Korrekt sind die Aussagen zu Eigeninitiative, Unterstützung durch Dozierende/Teilnehmende und den Übungen.
+Diese Reihenfolge sorgt dafür, dass du jede nächste Lektion direkt anwenden kannst.
+Wenn Zugang und Arbeitsbereich stehen, lassen sich Git, VS Code und das Arbeiten mit Repositories später konkret und im richtigen Kontext einordnen.
 
+## Slop vermeiden: Einstieg
 
-## Erstes Modul: Onboarding
+Diese Mini-Einheit gehört zur zentralen Sammlung [AI_SLOP_SURVIVAL_GUIDE.md](../../../AI_SLOP_SURVIVAL_GUIDE.md).
 
-### Was dich beim Onboarding erwartet
+### Was AI Slop ist
 
-Im Onboarding lernst du GitHub kennen, erstellst dein erstes **Übungs-Repository** und richtest deine **Arbeitsumgebung** für den Kurs ein. Zur Einrichtung gehören dein **Zugang**, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten. Dafür installierst du Git und VS Code und nutzt dort das gemeinsame Kurs-Repository.
+AI Slop ist Output, der schnell erzeugt wurde, aber fachlich oder handwerklich nicht trägt.
+Das kann zum Beispiel unklarer Text, widersprüchliche Logik, unsaubere Struktur, falsche Annahmen oder nicht geprüfter Code sein.
 
-**Keine Sorge:** Alle Begriffe und Schritte lernst du nacheinander im Modul.
+### Warum das im Kurs wichtig ist
 
-### Schritte des ersten Moduls
+Unser vorrangiges Ziel ist nicht, möglichst schnell viel Output zu erzeugen.
+Unser vorrangiges Ziel ist, Slop zu vermeiden und mit KI belastbare Ergebnisse zu erarbeiten.
 
-1. **GitHub**-Account und Übungs-Repository anlegen.
-2. Erste Übungen im Browser durchführen und Git Grundlagen verstehen.
-3. **VS Code** und **Git** installieren.
-4. VS Code einrichten, **Extensions** installieren.
-5. Dein **Repository lokal** bedienen und Versionierung üben.
-6. Kurs-Repository **klonen** und **Modul 2 starten**.
+Deshalb achten wir im Kurs von Anfang an auf nachvollziehbare Lektionen, klare Begriffe, prüfbare Ergebnisse und saubere Übergaben.
 
+### Was das in dieser Lektion bedeutet
 
-## Quiz
-
-Frage: Was passiert im Onboarding?
-
-- [ ] Ich werde mit Fachbegriffen überhäuft und finde mich ohne Hilfe nicht zurecht.
-- [x] Ich werde Schritt für Schritt geführt, richte meine Arbeitsumgebung ein und lerne die benötigten Tools kennen und benutzen.
-- [ ] Ich bin völlig mir selbst überlassen und wenn ich nicht zurechtkomme, hab ich Pech gehabt.
-- [x] Wenn ich nicht weiterkomme, kann ich bei den Dozierenden und anderen Teilnehmenden um Hilfe bitten.
-
-Erfolg: Richtig! Auch wenn dich die vielen neuen Begriffe zunächst etwas überfordern sollten, mach dir keine Sorgen! Der Kurs ist für Menschen gedacht, die noch keinerlei Vorkenntnisse mitbringen. Und sollten alle Anleitungen und Erklärungen nicht ausreichen, sind wir für dich da. Es gibt tägliche Q&A Sessions und du kannst im Chat um Hilfe bitten. 
-
-Fehler: Nein, das wird nicht passieren! Auch wenn dich die vielen neuen Begriffe zunächst etwas überfordern sollten, mach dir keine Sorgen! Der Kurs ist für Menschen gedacht, die noch keinerlei Vorkenntnisse mitbringen. Und sollten alle Anleitungen und Erklärungen nicht ausreichen, sind wir für dich da. Es gibt tägliche Q&A Sessions und du kannst im Chat um Hilfe bitten. 
-
-## Tipps für deinen Lernerfolg
-
-### Setze dir klare Lernziele
-
-Überlege dir zu Beginn, was du im Kurs erreichen möchtest. Formuliere 2 bis 3 persönliche Lernziele.
-
-Beispiele:
-
-- GitHub, Git und VS Code im Kursalltag sicher nutzen und meine Arbeit sauber versionieren.
-- Mit KI-Unterstützung ein eigenes, nachvollziehbar dokumentiertes Projekt von der Idee bis zum lauffähigen Prototyp umsetzen.
-- Probleme strukturiert debuggen, gezielt recherchieren und meine nächsten Schritte klar begründen können.
-
-### Schließe einen Vertrag mit dir selbst
-
-Notiere dir, wie du im Kurs arbeiten möchtest. Das hilft dir, dranzubleiben, wenn es schwierig wird.
-
-Beispiel:
-
-Ich arbeite aktiv mit, probiere Aufgaben ernsthaft aus und gebe bei Problemen nicht sofort auf. Wenn ich nicht weiterkomme, recherchiere ich zuerst selbst, nutze die Unterlagen und stelle danach gezielte Fragen.
-
-### Recherchiere gezielt
-
-Recherche hilft dir, Probleme besser zu verstehen und selbstständiger zu lösen.
-
-Achte darauf:
-
-- Fehlermeldungen genau lesen
-- wichtige Begriffe kopieren
-- zuerst Kursunterlagen prüfen
-- gezielt online suchen
-- Suchanfragen kurz und konkret formulieren
-- mehrere Quellen vergleichen
-- Lösungen verstehen, nicht blind übernehmen
-- Ergebnisse dokumentieren
-
-
-### Stelle gute Fragen
-
-Fragen sind erwünscht. Besonders hilfreich ist, wenn du kurz beschreibst:
-
-- Was wolltest du erreichen?
-- Was hast du versucht?
-- Wo kommst du nicht weiter?
-- Welche Fehlermeldung bekommst du?
-
-So bekommst du schneller passende Unterstützung und stärkst deine Problemlösekompetenz.
-
-Dokumentiere deine Fragen wärend du lernst so, dass du sie in den Q&A-Sessions auch selbst gut wieder nachvollziehen kannst.
-
+- Du legst nicht einfach irgendeinen Account an, sondern richtest ein Werkzeug ein, das du im weiteren Kurs verlässlich brauchst.
+- Du prüfst direkt, ob Login, Profilbild und Profil-URL funktionieren, statt nur anzunehmen, dass alles passt.
+- Du arbeitest Lektion für Lektion, damit späteres Setup nicht auf unklaren Voraussetzungen aufbaut.
 
 ## Was ist zu tun
 
-1. Lies die Lektion vollständig, um den Ablauf des Kurses zu verstehen.
-2. Formuliere deine Lernziele und deinen Vertrag mir dir selbst.
-2. Halte offene Fragen fest und kläre sie im Q&A oder mit der Gruppe.
-3. Hake alle erledigten Aufgaben ab und markiere die Lektion als erledigt.
-
+1. Lege deinen GitHub-Account an.
+2. Prüfe, ob Login, Profilbild und Profil-URL funktionieren.
+3. Lies die Abschnitte zum Kurs-Tool und zum Aufbau des ersten Moduls.
+4. Hake alle erledigten Aufgaben ab und markiere die Lektion als erledigt.
 
 ## Hilfreiche Links
 
-- [Youtube - Lernen lernen: 13 Tipps aus der Gehirnforschung](https://www.youtube.com/watch?v=_CgmMnBjnz0)
-- [The Learning Scientists: 6 Strategies for Effective Learning](https://www.learningscientists.org/blog/2017/4/20-1)  
- 
-- [OECD: Future of Education and Skills 2030](https://www.oecd.org/en/about/projects/future-of-education-and-skills-2030.html)
+- [GitHub](https://github.com)
+- [GitHub Docs: Account erstellen](https://docs.github.com/de/get-started/start-your-journey/creating-an-account-on-github)
+- [GitHub Docs (Deutsch)](https://docs.github.com/de)

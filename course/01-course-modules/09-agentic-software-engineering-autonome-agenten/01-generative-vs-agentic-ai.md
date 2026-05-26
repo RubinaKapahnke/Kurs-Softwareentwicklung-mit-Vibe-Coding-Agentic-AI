@@ -1,4 +1,4 @@
-# Lektion 01: Generative KI vs. agentische KI
+﻿# Lektion 01: Generative KI vs. agentische KI
 
 ## Ziel
 
@@ -9,7 +9,7 @@ Du kannst generative KI und agentische KI klar unterscheiden und erkennst, wann 
 Im Alltag werden beide Begriffe oft vermischt. Für saubere Entscheidungen im Projekt ist die Trennung aber zentral:
 
 - Generative KI erzeugt Inhalte auf Anfrage.
-- Agentische KI verfolgt ein Ziel über mehrere Schritte.
+- Agentische KI verfolgt ein Ziel über mehrere Lektionen.
 
 Wenn du den Unterschied kennst, planst du Workflows realistischer, sicherer und effizienter.
 
@@ -39,8 +39,8 @@ Agentische KI ist proaktiv.
 Sie startet oft ebenfalls mit einer Eingabe, arbeitet dann aber zielorientiert in mehreren Schleifen:
 
 1. Situation erfassen (Kontext lesen, Status prüfen)
-2. nächsten Schritt planen
-3. Schritt ausführen
+2. nächste Lektion planen
+3. Lektion ausführen
 4. Ergebnis bewerten
 5. Plan anpassen und weitermachen
 
@@ -80,7 +80,7 @@ Der Agent kann:
 - den Kaufprozess vorbereiten
 - bei Unklarheiten gezielt Rückfragen stellen
 
-Die Arbeit besteht aus mehreren verbundenen Schritten statt aus einem einzelnen Generierungsergebnis.
+Die Arbeit besteht aus mehreren verbundenen Lektionen statt aus einem einzelnen Generierungsergebnis.
 
 ## Kapitel 6: Denklogik in agentischen Systemen
 
@@ -94,7 +94,7 @@ Beispiel internes Planen:
 4. beste Option auswählen
 5. nächste Aktion ausführen
 
-Diese schrittweise Denklogik ist ein Kern, warum agentische Systeme komplexere Abläufe stabiler bearbeiten können.
+Diese Lektionweise Denklogik ist ein Kern, warum agentische Systeme komplexere Abläufe stabiler bearbeiten können.
 
 ## Kapitel 7: Wann welcher Ansatz passt
 
@@ -106,7 +106,7 @@ Nutze eher generative KI, wenn:
 
 Nutze eher agentische KI, wenn:
 
-- ein Ziel über mehrere Schritte erreicht werden soll
+- ein Ziel über mehrere Lektionen erreicht werden soll
 - Zustände geprüft und Entscheidungen nachgeführt werden müssen
 - Tools und Prozesse koordiniert werden
 
@@ -123,7 +123,7 @@ Mehrfachauswahl: nein
 - [ ] Agentische KI erzeugt grundsätzlich qualitativ bessere Texte als generative KI.
 - [ ] Agentische KI ist auf die Generierung von Text und Bildern begrenzt.
 
-Erfolg: Richtig. Agentische KI arbeitet zielorientiert über mehrere Schritte hinweg.
+Erfolg: Richtig. Agentische KI arbeitet zielorientiert über mehrere Lektionen hinweg.
 Fehler: Achte darauf: Der Kern ist proaktives, mehrstufiges Handeln in Richtung Ziel.
 
 ### Frage 2
@@ -146,17 +146,17 @@ Frage: Was bedeutet Chain-of-Thought-Reasoning im Kontext von agentischer KI?
 Hinweis: Wähle die treffendste Aussage.
 Mehrfachauswahl: nein
 
-- [x] Ein Vorgehen, bei dem ein Agent komplexe Aufgaben über eine interne Schritt-für-Schritt-Logik in Teilaufgaben zerlegt.
+- [x] Ein Vorgehen, bei dem ein Agent komplexe Aufgaben über eine interne Lektion-für-Lektion-Logik in Teilaufgaben zerlegt.
 - [ ] Eine Methode, um LLMs ausschließlich zu poetischen Antworten zu bewegen.
 - [ ] Eine reine Freigabeschleife zwischen Mensch und KI vor Veröffentlichung.
 - [ ] Eine Debugging-Technik, die ausschließlich logische Fehler in LLMs behebt.
 
 Erfolg: Richtig. Chain-of-Thought unterstützt strukturierte Zwischenlogik für Planung und Entscheidung.
-Fehler: Wichtig ist die schrittweise Denk- und Zerlegungslogik, nicht ein spezielles Textformat.
+Fehler: Wichtig ist die Lektionweise Denk- und Zerlegungslogik, nicht ein spezielles Textformat.
 
 ## Fallback
 
-- Begriffe verschwimmen: Prüfe, ob nur "Inhalt erzeugen" oder "mehrere Schritte bis Ziel" gemeint ist.
+- Begriffe verschwimmen: Prüfe, ob nur "Inhalt erzeugen" oder "mehrere Lektionen bis Ziel" gemeint ist.
 - Use Case unklar: Liste erst Ziel, Zwischenschritte und nötige Entscheidungen.
 - Zu viel Autonomie geplant: Definiere klare Kontrollpunkte und Abbruchregeln.
 
@@ -175,3 +175,5 @@ Du kannst in eigenen Worten erklären, wie sich generative und agentische KI unt
 
 - [Kursmodul 09: Modulziele](./00-modulziele.md)
 - [Prompt-Dateien Grundlagen](../../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
+
+

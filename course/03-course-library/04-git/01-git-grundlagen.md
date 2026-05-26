@@ -1,4 +1,4 @@
-# Git: Grundlagen und Einstieg
+﻿# Git: Grundlagen und Einstieg
 
 Dieses Dokument erklaert die Grundidee von Git und den typischen Arbeitsablauf im Kurs. Fuer einzelne Befehle zum schnellen Nachschlagen ist die [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md) gedacht.
 
@@ -8,7 +8,7 @@ Git ist ein Versionskontrollsystem. Es speichert nicht einfach nur Dateien, sond
 ## Wofuer wird Git im Kurs genutzt?
 - **Aenderungen nachvollziehen:** Du siehst, was sich zwischen zwei Arbeitsstaenden geaendert hat.
 - **Sicher zusammenarbeiten:** Mehrere Personen koennen parallel arbeiten, ohne direkt dieselben Dateien auf `main` zu veraendern.
-- **Kleine Schritte festhalten:** Mit Commits dokumentierst du bewusst, was du gemacht hast und warum.
+- **Kleine Lektionen festhalten:** Mit Commits dokumentierst du bewusst, was du gemacht hast und warum.
 
 ## Das Arbeitsmodell von Git
 Git arbeitet im Alltag mit drei Bereichen:
@@ -17,7 +17,7 @@ Git arbeitet im Alltag mit drei Bereichen:
 2. **Staging Area:** Hier sammelst du die Aenderungen, die in den naechsten Commit sollen.
 3. **Repository:** Hier liegt die gespeicherte Historie deiner Commits.
 
-Ein typischer Denkfehler am Anfang ist: Datei speichern ist noch kein Git-Schritt. Erst `git add` und `git commit` machen aus einer Aenderung einen nachvollziehbaren Projektstand.
+Ein typischer Denkfehler am Anfang ist: Datei speichern ist noch kein Git-Lektion. Erst `git add` und `git commit` machen aus einer Aenderung einen nachvollziehbaren Projektstand.
 
 ## Der Grundablauf im Alltag
 Ein sicherer Standardablauf sieht so aus:
@@ -28,7 +28,7 @@ Ein sicherer Standardablauf sieht so aus:
 4. Mit `git commit -m "..."` den Stand speichern.
 5. Mit `git push` den Stand auf GitHub hochladen.
 
-Wenn du den Ueberblick verlierst, ist `git status` fast immer der beste erste Schritt.
+Wenn du den Ueberblick verlierst, ist `git status` fast immer der beste erste Lektion.
 
 ## Branches: sicher getrennt arbeiten
 Branches sind getrennte Arbeitslinien. Im Kurs arbeitest du nicht direkt auf `main`, sondern in deinem eigenen Branch. Das hat zwei Vorteile:
@@ -62,3 +62,4 @@ Eher vorsichtig solltest du mit Befehlen umgehen, die Historie ueberschreiben. W
 - Nutze danach die [Git-Befehlsuebersicht](./03-git-befehlsuebersicht.md), wenn du einen konkreten Befehl brauchst.
 - Verwende den [Selbstcheck im Git-Modulguide](./00-git-versionierung-modulguide.md), um deinen Stand einzuordnen.
 - Lies [Version Control und GitOps: Grundlagen](./04-version-control-und-gitops-grundlagen.md), wenn du die naechste Ebene zwischen Entwicklungs- und Betriebsworkflow verstehen willst.
+

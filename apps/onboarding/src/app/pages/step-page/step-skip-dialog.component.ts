@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,14 +16,14 @@ export type StepSkipDialogResult = 'mark-done' | 'skip';
           <mat-icon>pending_actions</mat-icon>
         </div>
         <div class="skip-dialog__hero-copy">
-          <p class="skip-dialog__eyebrow">Schrittstatus</p>
-          <h2 id="skip-dialog-title" class="skip-dialog__title">Schritt noch nicht abgehakt</h2>
+          <p class="skip-dialog__eyebrow">Lektionstatus</p>
+          <h2 id="skip-dialog-title" class="skip-dialog__title">Lektion noch nicht abgehakt</h2>
         </div>
       </div>
 
       <mat-dialog-content class="skip-dialog__content">
-        <p class="skip-dialog__question">Hast du diesen Schritt schon erledigt?</p>
-        <p class="skip-dialog__hint">Wenn du mit einem Schritt fertig bist, drücke unten auf "Als erledigt markieren." Wenn du einen Schritt später erledigen möchtest, einfach auf weiter.</p>
+        <p class="skip-dialog__question">Hast du diesen Lektion schon erledigt?</p>
+        <p class="skip-dialog__hint">Wenn du mit einem Lektion fertig bist, drücke unten auf "Als erledigt markieren." Wenn du einen Lektion später erledigen möchtest, einfach auf weiter.</p>
       </mat-dialog-content>
 
       <mat-dialog-actions class="skip-dialog__actions" align="end">
@@ -176,3 +176,5 @@ export class StepSkipDialogComponent {
     this.dialogRef.close(result);
   }
 }
+
+

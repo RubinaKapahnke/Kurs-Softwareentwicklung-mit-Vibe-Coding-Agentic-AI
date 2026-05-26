@@ -1,10 +1,10 @@
-import { OnboardingStep } from '../models/onboarding.models';
+﻿import { OnboardingStep } from '../models/onboarding.models';
 
 export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 1,
     title: 'So laufen Kurs und Module ab',
-    goal: 'Du verstehst den Ablauf und weißt, wie es nach dem Onboarding weitergeht.',
+    goal: 'Du verstehst den Ablauf und weißt, wie es nach dem ersten Modul im Kurs weitergeht.',
     tasks: [],
     fallbackHelp: [],
     successCriterion: '',
@@ -29,10 +29,10 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               heading: 'So funktioniert dieses Kurs-Tool',
               orderedItems: [
-                'Oben siehst du deinen Fortschritt über alle Schritte.',
-                'Jeder Schritt enthält Teilaufgaben, die du einzeln abhaken kannst.',
-                'Sind alle Teilaufgaben fertig, markierst du den Schritt als erledigt.',
-                'Mit "Weiter" und "Zurück" wechselst du zwischen den Schritten.',
+                'Oben siehst du deinen Fortschritt über alle Lektionen.',
+                'Jeder Lektion enthält Teilaufgaben, die du einzeln abhaken kannst.',
+                'Sind alle Teilaufgaben fertig, markierst du den Lektion als erledigt.',
+                'Mit "Weiter" und "Zurück" wechselst du zwischen den Lektionen.',
                 'Offene Punkte kannst du später nachholen.'
               ]
             },
@@ -52,9 +52,9 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
           sections: [
             {
               paragraphs: [
-                'Im Onboarding richtest du deine Arbeitsumgebung ein.',
+                'Im ersten Modul richtest du deine Arbeitsumgebung ein.',
                 'Dazu gehört alles, was du für den Kursstart brauchst: dein Zugang, dein eigener Übungsbereich und die Verbindung zu den gemeinsamen Kursinhalten.',
-                'Alle Begriffe und Schritte lernst du nacheinander im Modul.'
+                'Alle Begriffe und Lektionen lernst du nacheinander im Modul.'
               ]
             },
             {
@@ -69,7 +69,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               tone: 'highlight',
               paragraphs: [
-                'Keine Sorge: Auch wenn du jetzt noch nicht weißt, was sich hinter diesen Begriffen verbirgt, ist nach dem Onboarding vieles klarer. Versprochen!'
+                'Auch wenn dir einzelne Begriffe jetzt noch neu sind, werden sie im Verlauf dieses Moduls konkret und an echten Arbeitsschritten nachvollziehbar.'
               ]
             }
           ]
@@ -118,7 +118,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     lessonFlow: {
       title: 'GitHub-Account anlegen',
       continueLabel: 'Weiter',
-      finishLabel: 'Weiter im Schritt',
+      finishLabel: 'Weiter im Lektion',
       slides: [
         {
           type: 'content',
@@ -147,7 +147,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Account erstellen - Schritt für Schritt',
+          title: 'Account erstellen - Lektion für Lektion',
           sections: [
             {
               orderedItems: [
@@ -236,17 +236,17 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Schritt 1 und 2: Einloggen und Repository erstellen',
+          title: 'Lektion 1 und 2: Einloggen und Repository erstellen',
           sections: [
             {
-              heading: 'Schritt 1: GitHub öffnen und einloggen',
+              heading: 'Lektion 1: GitHub öffnen und einloggen',
               orderedItems: [
                 'Öffne github.com in deinem Browser.',
                 'Melde dich mit deinem Account an (oben rechts: „Sign in").'
               ]
             },
             {
-              heading: 'Schritt 2: Neues Repository erstellen',
+              heading: 'Lektion 2: Neues Repository erstellen',
               orderedItems: [
                 'Klick auf dein Profil-Icon oben rechts.',
                 'Wähle „New repository" aus.',
@@ -257,7 +257,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Schritt 3: Repository ausfüllen',
+          title: 'Lektion 3: Repository ausfüllen',
           sections: [
             {
               paragraphs: [
@@ -291,7 +291,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Schritt 4: Repository erstellen',
+          title: 'Lektion 4: Repository erstellen',
           sections: [
             {
               orderedItems: [
@@ -311,7 +311,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
         },
         {
           type: 'content',
-          title: 'Kurzcheck vor dem nächsten Schritt',
+          title: 'Kurzcheck vor dem nächste Lektion',
           sections: [
             {
               orderedItems: [
@@ -323,7 +323,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
             {
               tone: 'highlight',
               paragraphs: [
-                'Dein Repository ist bereit. Im nächsten Schritt lädst du die Trainerin als Collaborator ein.'
+                'Dein Repository ist bereit. In der nächsten Lektion lädst du die Trainerin als Collaborator ein.'
               ]
             }
           ]
@@ -372,7 +372,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
       }
     ],
     successCriterion:
-      'Dein Repository enthält mindestens 2 Commits. Die Trainerin kann sie sehen und gibt grünes Licht für Schritt 6.'
+      'Dein Repository enthält mindestens 2 Commits. Die Trainerin kann sie sehen und gibt grünes Licht für Lektion 6.'
   },
   {
     id: 6,
@@ -477,7 +477,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     successCriterion: 'VS Code ist installiert und öffnet sich ohne Fehler.',
     desktopHint: [
-      'Führe diesen Schritt nach Möglichkeit an einem Laptop oder Desktop-Rechner aus.',
+      'Führe diesen Lektion nach Möglichkeit an einem Laptop oder Desktop-Rechner aus.',
       'Download, Installation und die ersten Prüfungen sind dort deutlich einfacher als auf dem Smartphone.'
     ],
     resources: [
@@ -544,8 +544,8 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
     ],
     successCriterion: 'git --version zeigt eine gültige Versionsnummer.',
     desktopHint: [
-      'Dieser Schritt braucht einen Rechner mit installierbarem Git und einem VS-Code-Terminal.',
-      'Wenn du gerade mobil liest, nutze diesen Schritt später an deinem Rechner weiter.'
+      'Dieser Lektion braucht einen Rechner mit installierbarem Git und einem VS-Code-Terminal.',
+      'Wenn du gerade mobil liest, nutze diesen Lektion später an deinem Rechner weiter.'
     ],
     resources: [
       {
@@ -617,7 +617,7 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
   {
     id: 16,
     title: 'Start in den Gesamtkurs',
-    goal: 'Du weißt, wie du nach dem Onboarding konkret in den Gesamtkurs startest und was dein erster sinnvoller nächster Schritt ist.',
+    goal: 'Du weißt, wie du nach dem ersten Modul konkret in den Gesamtkurs startest und was dein erster sinnvoller nächster Lektion ist.',
     tasks: [],
     fallbackHelp: [],
     successCriterion: ''
@@ -625,3 +625,5 @@ export const ONBOARDING_STEPS: ReadonlyArray<OnboardingStep> = [
 ] as const;
 
 export const ONBOARDING_STEP_COUNT = ONBOARDING_STEPS.length;
+
+

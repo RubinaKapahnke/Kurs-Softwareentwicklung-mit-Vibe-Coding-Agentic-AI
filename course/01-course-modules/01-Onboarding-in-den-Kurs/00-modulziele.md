@@ -18,7 +18,7 @@ Ein eigenes Übungs-Repository mit versionierter README oder Projektbeschreibung
 
 ## Rollenbezug
 
-Relevant für Einsteiger*innen, Product Owner, Projektmanager*innen, Fachbereich, Consultants, Technical Writer, Team Leads, Entwickler*innen, QA und Operations.
+Relevant für Teilnehmende mit wenig oder viel Vorerfahrung, Product Owner, Projektmanager*innen, Fachbereich, Consultants, Technical Writer, Team Leads, Entwickler*innen, QA und Operations.
 
 ## Quellen aus der Lernmaterial-Sammlung
 
@@ -57,9 +57,12 @@ Die Weiterentwicklung von Modul 01 erfolgt kompetenzorientiert und ohne feste Ze
 
 ### Arbeitsmodus
 
-- Viel Anleitung mit klaren Schrittfolgen und konkreten Befehlen.
+- Viel Anleitung mit klaren Lektionfolgen und konkreten Befehlen.
 - Anleitung ist als Sicherheitsnetz gedacht und kann bei Bedarf übersprungen werden.
-- Lernkontrolle standardmäßig über Mini-Quiz pro Themenblock; bei sehr kurzen Blöcken stattdessen 3 Abschlussfragen.
+- Fachbegriffe werden vor der ersten Nutzung erklärt oder direkt am Einsatzpunkt geklärt.
+- Jede Lektion macht sichtbar, was jetzt getan wird, warum es jetzt dran ist und wofür es später gebraucht wird.
+- Allgemeine Lerntipps und wiederverwendbare Hilfeinhalte werden in zentrale FAQ-, Glossar- und Bedienungshilfen-Dateien ausgelagert.
+- Lernkontrolle erfolgt nur dort, wo sie didaktisch etwas prüft, als Verständnis-Check und ohne Dummy-Quizlogik.
 
 ### Git-Und Repo-Strategie
 
@@ -79,7 +82,8 @@ Die Weiterentwicklung von Modul 01 erfolgt kompetenzorientiert und ohne feste Ze
 
 - Cloud-first bleibt bis zur sicheren Routine verbindlich.
 - Lokales Arbeiten startet erst im letzten Modulteil.
-- Jede Lektion folgt dem festen Format: Ziel, Kontext, Schritte, Übung, Fallback, Quiz.
+- Jede Lektion folgt dem festen Format: Ziel, kurzer Kontext, frühe Aktion oder sichtbares Artefakt, Aufgaben, Fallback und optionaler Verständnis-Check.
+- Lange Einstiegsblöcke ohne Aktion oder visuellen Reiz sind zu vermeiden.
 - Aufgaben werden je Themenblock als Sammelaufgabe gebündelt.
 - Hilfebefehle (Git, Terminal, Markdown) werden in jeder Lektion als eigener Abschnitt geführt.
 - Dateinamen werden nach Lernpfad klar neu benannt: NN-thema-lernziel.md.
@@ -139,7 +143,7 @@ Die folgende Liste definiert die Ziel-Dateinamen entlang des festgelegten Lernpf
 13. 16-modulabschluss-mit-pr-nachweis-und-lernlog.md
 
 Hinweis zur Umsetzung:
-- Die Benennung ist festgelegt, die inhaltliche Feinausarbeitung erfolgt blockweise in den nächsten Schritten.
+- Die Benennung ist festgelegt, die inhaltliche Feinausarbeitung erfolgt blockweise in den nächsten Lektionen.
 
 ### Migrations-Mapping Alt Zu Neu (Plan)
 
@@ -194,3 +198,5 @@ Empfohlene Bearbeitungslogik:
 ## Eigenständig nutzbar als
 
 Setup-Workshop, Dokumentations-Enablement, Git/GitHub-Grundlagentraining oder Einstieg in KI-lesbare Projektdokumentation.
+
+

@@ -39,7 +39,7 @@
         <div class="course-video-section">
           <h2 class="video-title">Relevante Kernkompetenzen</h2>
           <p class="video-intro">
-            Diese Fähigkeiten bauen wir im Kurs Schritt für Schritt auf.
+            Diese Fähigkeiten bauen wir im Kurs Lektion für Lektion auf.
           </p>
           <ul class="competencies-list">
             <li>Mit Hilfe von KI ein Produkt planen, entwickeln und ausliefern</li>
@@ -100,9 +100,9 @@
                     <p class="voucher-success-badge__progress">
                       <mat-icon aria-hidden="true">bookmark</mat-icon>
                       @if (isCompleted()) {
-                        Alle {{ stepCount }} Schritte abgeschlossen.
+                        Alle {{ stepCount }} Lektionen abgeschlossen.
                       } @else {
-                        Zuletzt bei Schritt {{ resumeStep() }} von {{ stepCount }} ({{ completedCount() }} erledigt).
+                        Zuletzt bei Lektion {{ resumeStep() }} von {{ stepCount }} ({{ completedCount() }} erledigt).
                       }
                     </p>
                   }                  }
@@ -156,3 +156,4 @@
   ></app-course-cta-section>
 
 </div>
+

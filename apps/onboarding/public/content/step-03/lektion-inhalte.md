@@ -54,9 +54,9 @@ Das ist ein neuer Absatz.
 ```
 
 ```markdown
-1. Schritt 1
-2. Schritt 2
-3. Schritt 3
+1. Lektion 1
+2. Lektion 2
+3. Lektion 3
 ```
 
 ### Hervorhebung
@@ -146,7 +146,7 @@ Fehler: Noch nicht ganz. Markdown ist bewusst leichtgewichtig und funktioniert s
 
 - Datei wird nicht angezeigt: im Repository nach README.md suchen.
 - Commit-Button ist inaktiv: zuerst Inhalt ändern oder ergänzen.
-- Unsicher bei der Syntax: ein kleines Beispiel kopieren und schrittweise anpassen.
+- Unsicher bei der Syntax: ein kleines Beispiel kopieren und Lektionweise anpassen.
 
 ## Erfolgskriterium
 

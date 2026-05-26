@@ -26,7 +26,7 @@ In dieser Uebung arbeitest du mit diesen Dateien:
 Lies vor dem Start:
 
 - [course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md](../03-course-library/07-architecture-foundations/01-architecture-foundations-grundlagen.md) - Abschnitte „Komponenten-Denken" und „Ordnerstruktur als Kommunikation"
-- [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) - Schritte 1 bis 3
+- [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) - Lektionen 1 bis 3
 
 ---
 
@@ -47,9 +47,9 @@ Erstelle darunter eine kleine Tabelle mit mindestens 2 Zeilen:
 | z. B. „Zeige alle X als Karten an" | Komponente `XCard` |
 | z. B. „Daten kommen aus einer Datei" | Service `XService` + `x.json` |
 
-> **Warum in deiner PRD-Datei?** Dieser Abschnitt bleibt als Referenz erhalten und wird in Schritt 3 direkt weitergenutzt. Ausserdem kann die KI ihn spaeter als Kontext einlesen.
+> **Warum in deiner PRD-Datei?** Dieser Abschnitt bleibt als Referenz erhalten und wird in Lektion 3 direkt weitergenutzt. Ausserdem kann die KI ihn spaeter als Kontext einlesen.
 
-Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 1)
+Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) (Lektion 1)
 
 ---
 
@@ -100,7 +100,7 @@ Mein Projekt:
 
 > **Warum als eigener Abschnitt?** Du kannst ihn spaeter per `#prd_<dein-name>.md` in jeden Copilot-Prompt einbinden - die KI liest dann den gesamten Kontext mit.
 
-Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 3)
+Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) (Lektion 3)
 
 ---
 
@@ -131,7 +131,7 @@ Sie bekommt [Input-Eigenschaft] als Input und zeigt [Beschreibung] an.
 
 Notiere deine Beobachtung (1-2 Saetze): Was hat die KI gut gemacht? Was fehlt oder weicht ab?
 
-Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) (Schritt 4)  
+Quelle: [course-library/07-architecture-foundations/02-architecture-foundations-praxis.md](../03-course-library/07-architecture-foundations/02-architecture-foundations-praxis.md) (Lektion 4)  
 Quelle: [course-library/06-ai-instructions/01-prompting-grundlagen.md](../03-course-library/06-ai-instructions/01-prompting-grundlagen.md) (Abschnitt Kontext + Format)
 
 ---
@@ -215,4 +215,5 @@ Pruefe nach Abschluss der Uebung, ob du diese Punkte mit Ja beantworten kannst:
 - [ ] Ich habe einen Strukturkontext-Block formuliert, der Stack, Ordner, Komponente und Datenquelle beschreibt.
 - [ ] Ich habe die KI mit dem Strukturkontext beauftragt und das Ergebnis auf Korrektheit geprueft.
 - [ ] Ich habe erlebt, wie sich ein Prompt mit Kontext vom Prompt ohne Kontext unterscheidet.
+
 

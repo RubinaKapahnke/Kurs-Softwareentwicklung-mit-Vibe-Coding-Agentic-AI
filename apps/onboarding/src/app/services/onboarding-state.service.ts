@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+﻿import { Injectable, signal } from '@angular/core';
 
 import { OnboardingExerciseStatus } from '../models/onboarding.models';
 
@@ -18,7 +18,7 @@ const ACCOUNT_SETUP_STEP_ID = 2;
 const VALID_VOUCHER_CODE = '90001';
 
 /**
- * Schritt-2-Pfade:
+ * Lektion-2-Pfade:
  * - null: noch keine Auswahl
  * - existing: Account vorhanden, aber Lernpfad noch nicht konkretisiert
  * - existing-beginner: bestehender Account + Lektion bearbeiten
@@ -494,3 +494,4 @@ export class OnboardingStateService {
     localStorage.setItem(this.storageKey(KEY_EXERCISES_SUFFIX), JSON.stringify(this._exercises()));
   }
 }
+
