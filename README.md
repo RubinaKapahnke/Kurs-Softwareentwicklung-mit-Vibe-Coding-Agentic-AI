@@ -77,6 +77,11 @@ course/03-course-library/04-git/
 │   ├── notizen_todos_apps.md
 │   ├── README_APPS.md
 │   ├── onboarding/
+│   ├── learning-platform/
+│   │   ├── public/content/library/
+│   │   ├── src/app/components/        ← MarkdownView, LessonFlow, LessonSlide, TaskPanel
+│   │   ├── src/app/pages/
+│   │   └── tools/
 │   └── dashboard/
 ├── course/
 │   ├── 00-course-guides/
@@ -88,6 +93,10 @@ course/03-course-library/04-git/
 │   ├── 03-course-library/
 │   │   └── 09-kurshilfe/
 │   ├── 99-course-development/
+│   │   ├── Assets/
+│   │   ├── learning-platform-content-konventionen-planung.md
+│   │   ├── level-system-prototyp.md
+│   │   └── rollen_storytelling.md
 │   └── learners/
 ├── .github/
 │   ├── agents/
@@ -147,5 +156,3 @@ Die ersten Lernschritte arbeiten mit einem klaren, einheitlichen Stack:
 - **Datenformat:** JSON
 
 Weitere Technologiepfade wie Python, Streamlit, SQLite, Parquet, RAG-Komponenten und Deployment-Werkzeuge sind im Kursrahmen in [KURSBESCHREIBUNG.md](KURSBESCHREIBUNG.md) beschrieben.
-
-

@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 09-was-ist-git.md -->
 
 # Lektion 09: Was ist Git?

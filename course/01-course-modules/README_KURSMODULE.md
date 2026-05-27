@@ -35,13 +35,12 @@ Für Modul 01 verwenden wir die Benennung einheitlich: Die redaktionelle Quelle 
 | :--- | :--- |
 | [01-Onboarding-in-den-Kurs](./01-Onboarding-in-den-Kurs/00-modulziele.md) | Setup, Dokumentation, VS Code, Markdown, GitHub und Git |
 | [02-produktbeschreibung-inkrementelle-planung](./02-produktbeschreibung-inkrementelle-planung/00-modulziele.md) | Produktbeschreibung, PRD, Entwicklungsstufen, Planung |
-| [03-vibe-coding-prompting-context-engineering](./03-vibe-coding-prompting-context-engineering/00-modulziele.md) | Vibe Coding, Prompting, Context Engineering |
+| [03-vibe-coding-prompting-context-engineering](./03-vibe-coding-prompting-context-engineering/00-modulziele.md) | Vibe Coding, Prompting, Context Engineering, Agentic Workflows |
 | [04-ai-literacy-modellverstaendnis](./04-ai-literacy-modellverstaendnis/00-modulziele.md) | AI Literacy, LLMs, RAG, Agenten, Fehlerquellen |
 | [05-grundlagen-programmierlogik](./05-grundlagen-programmierlogik/00-modulziele.md) | Programmierlogik, Kontrollstrukturen, Datenstrukturen |
 | [06-debugging-testing-harness-engineering](./06-debugging-testing-harness-engineering/00-modulziele.md) | Debugging, Testing, Harness Engineering |
 | [07-architektur-wartbare-produktstruktur](./07-architektur-wartbare-produktstruktur/00-modulziele.md) | Architektur, Komponenten, Datenflüsse, Wartbarkeit, Code-Monster erkennen |
 | [08-ai-system-architecture-modellwahl-token-management](./08-ai-system-architecture-modellwahl-token-management/00-modulziele.md) | Modellwahl, Right Sizing, Token Management, Routing |
-| [09-agentic-software-engineering-autonome-agenten](./09-agentic-software-engineering-autonome-agenten/00-modulziele.md) | Agentic Software Engineering, autonome Agenten |
 | [10-daten-reporting-rag-grundlagen](./10-daten-reporting-rag-grundlagen/00-modulziele.md) | Daten, Reporting, RAG, SQLite, Parquet, Pandas, Streamlit |
 | [11-schwerpunktpfad-web-app-oder-datenprodukt](./11-schwerpunktpfad-web-app-oder-datenprodukt/00-modulziele.md) | Web/App- oder Datenprodukt-Pfad |
 | [12-teamarbeit-datenschutz-urheberrecht-governance](./12-teamarbeit-datenschutz-urheberrecht-governance/00-modulziele.md) | Teamarbeit, Datenschutz, Urheberrecht, Governance |

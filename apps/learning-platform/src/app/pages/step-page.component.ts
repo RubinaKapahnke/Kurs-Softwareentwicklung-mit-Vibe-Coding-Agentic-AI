@@ -4,13 +4,15 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
 
+import { LessonFlowComponent } from '../components/lesson-flow.component';
+import { MarkdownViewComponent } from '../components/markdown-view.component';
 import { ModuleStep } from '../models/learning-content.models';
 import { LearningContentError, LearningContentService } from '../services/learning-content.service';
 import { LearningProgressService } from '../services/learning-progress.service';
 
 @Component({
   selector: 'app-step-page',
-  imports: [CommonModule],
+  imports: [CommonModule, LessonFlowComponent, MarkdownViewComponent],
   templateUrl: './step-page.component.html',
   styleUrl: './step-page.component.scss'
 })
@@ -31,6 +33,7 @@ export class StepPageComponent {
   readonly moduleTitle = signal('');
   readonly steps = signal<ModuleStep[]>([]);
   readonly currentStep = signal<ModuleStep | null>(null);
+  readonly previewSource = signal<string | null>(null);
 
   readonly stepIndex = computed(() => this.steps().findIndex((step) => step.id === this.stepId()));
   readonly previousStep = computed(() => {
@@ -90,6 +93,7 @@ export class StepPageComponent {
         this.moduleTitle.set(module.title);
         this.steps.set(sortedSteps);
         this.currentStep.set(step);
+        this.previewSource.set(null);
         this.loading.set(false);
       },
         error: (err: unknown) => {
@@ -139,6 +143,14 @@ export class StepPageComponent {
 
   goBackToModule(): void {
     void this.router.navigate(['/kurse', this.courseId(), 'module', this.moduleId()]);
+  }
+
+  openLibraryPreview(src: string): void {
+    this.previewSource.set(src);
+  }
+
+  closeLibraryPreview(): void {
+    this.previewSource.set(null);
   }
 
   private navigateToError(code: string): Promise<boolean> {

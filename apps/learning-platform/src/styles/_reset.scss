@@ -1,0 +1,81 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Reset — Modern, minimal, opinioniert
+// ─────────────────────────────────────────────────────────────────────────────
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 2;
+  hanging-punctuation: first last;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+// Medien nie breiter als ihr Container
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+// Bilder behalten ihr Seitenverhältnis
+img {
+  height: auto;
+}
+
+// Wörter brechen am Container-Ende
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// Buttons erben Schrift
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+// Kein auto-Outline (wir setzen unsere eigene Focus-Behandlung)
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// Saubere Focus-Ringe
+:focus-visible {
+  outline: 2px solid var(--line-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+// Listen in Navs haben kein Padding/Bullets
+nav ul,
+nav ol {
+  list-style: none;
+  padding: 0;
+}
+
+// Underline-Offset global
+a {
+  text-underline-offset: 3px;
+}

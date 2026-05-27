@@ -1,0 +1,81 @@
+:host {
+  display: block;
+}
+
+.task-panel {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface-muted);
+  padding: clamp(14px, 2vw, 18px);
+}
+
+.task-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-panel__eyebrow,
+.task-panel__meta {
+  margin: 0;
+  font-weight: 800;
+}
+
+.task-panel__eyebrow {
+  color: var(--accent-amber);
+  font-family: var(--font-body);
+}
+
+.task-panel__meta {
+  color: var(--text-muted);
+}
+
+.task-panel__list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-panel__list li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  color: var(--text-body);
+}
+
+.task-panel__marker {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--bg-surface);
+  color: var(--accent-amber);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.task-panel__marker--done {
+  border-color: var(--ok-green);
+  color: var(--ok-green);
+}
+
+.task-panel code {
+  display: block;
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .task-panel__head {
+    display: grid;
+  }
+}

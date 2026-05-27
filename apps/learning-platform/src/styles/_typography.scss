@@ -1,0 +1,194 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Typography — Poppins (UI/Body) + Recoleta (nur als sparsamer Akzent)
+//
+// Entscheidungen:
+//   Body:     14px / Poppins 400 / leading 1.5 — kompakt, UI-first
+//   Headings: gewichts- UND tracking-gestaffelt nach Größe
+//   Recoleta: NUR .accent-subtitle / .recoleta — nie auf h-Tags
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─── Base ──────────────────────────────────────────────────────────────────
+
+html,
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);        // 14px
+  line-height: var(--leading-normal); // 1.5
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// ─── Headings ─────────────────────────────────────────────────────────────
+// Alle Headings: Poppins, kein margin (Komponenten setzen ihren eigenen Rhythmus)
+// Tracking und Weight variieren mit der Hierarchie
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-body);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+  margin: 0;
+}
+
+// h1 — Seitenüberschriften, Modul- / Kurstitel
+// Größte Geste: Extra Bold + engestes Tracking
+h1 {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); // 28–36px
+  font-weight: 800;
+  letter-spacing: var(--tracking-h1); // -0.03em
+  line-height: var(--leading-tight);  // 1.2 — bei großen Texten angenehmer
+}
+
+// h2 — Abschnitts-Titel, Modul-Gruppen
+h2 {
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl)); // 22–28px
+  font-weight: 700;
+  letter-spacing: var(--tracking-h2); // -0.025em
+}
+
+// h3 — Block-Überschriften, Unter-Abschnitte
+h3 {
+  font-size: var(--text-xl); // 18px
+  font-weight: 700;
+  letter-spacing: var(--tracking-h3); // -0.02em
+}
+
+// h4 — Sekundäre Labels, Card-Titles
+h4 {
+  font-size: var(--text-lg); // 16px
+  font-weight: 600;
+  letter-spacing: var(--tracking-h4); // -0.015em
+}
+
+// h5, h6 — Selten genutzt; wie Body, aber fett
+h5,
+h6 {
+  font-size: var(--text-base); // 14px
+  font-weight: 600;
+  letter-spacing: var(--tracking-h4);
+}
+
+// ─── Recoleta — Nur als sparsamer Akzent ───────────────────────────────────
+// Wird NICHT auf h-Tags gesetzt. Nur per expliziter Klasse.
+// Einsatz: Willkommens-Screens, emotionale Subtitel, Kurs-Abschluss-Geste.
+
+.accent-subtitle,
+.recoleta {
+  font-family: var(--font-display); // Recoleta
+  font-weight: 400;                 // Recoleta Regular — wirkt schon kräftig
+  line-height: var(--leading-snug);
+  letter-spacing: -0.01em;
+  font-style: normal;
+}
+
+// Kombinierbar mit Größen-Utilities
+.accent-subtitle--lg {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+  letter-spacing: -0.01em;
+}
+
+// ─── Fließtext ─────────────────────────────────────────────────────────────
+
+p {
+  line-height: var(--leading-normal);
+}
+
+// Lead-Paragraph — leicht größer, für Einleitungstexte unter h1
+.lead {
+  font-size: var(--text-md);    // 15px
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+  font-weight: 400;
+}
+
+// ─── Links ────────────────────────────────────────────────────────────────
+
+a {
+  color: var(--brand-600);
+  font-weight: 600;
+  text-decoration-color: color-mix(in srgb, var(--brand-600) 35%, transparent);
+  transition:
+    color var(--ease-fast),
+    text-decoration-color var(--ease-fast);
+
+  &:hover {
+    color: var(--brand-700);
+    text-decoration-color: var(--brand-700);
+  }
+}
+
+// ─── Inline ────────────────────────────────────────────────────────────────
+
+strong,
+b {
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+// ─── Listen ───────────────────────────────────────────────────────────────
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  line-height: var(--leading-relaxed); // 1.6
+  margin-bottom: 0.3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.3rem;
+}
+
+// ─── Utilities ────────────────────────────────────────────────────────────
+
+// Kategorie-Label über Headlines — sparsam uppercase
+.eyebrow {
+  display: block;
+  font-size: var(--text-sm);     // 12px
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps); // 0.08em
+  color: var(--brand-600);
+}
+
+// Meta-Infos, Timestamps, IDs
+.text-meta {
+  font-size: var(--text-sm);    // 12px
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+// Farb-Utilities (semantisch)
+.text-muted   { color: var(--text-muted); }
+.text-subtle  { color: var(--text-subtle); }
+.text-strong  { color: var(--text-strong); }
+.text-brand   { color: var(--brand-600); }
+
+// Code-Schrift-Baseline (Blöcke und Inline)
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+}

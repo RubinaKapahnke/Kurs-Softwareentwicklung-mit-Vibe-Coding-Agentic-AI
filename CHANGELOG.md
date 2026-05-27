@@ -7,6 +7,13 @@ Alle nennenswerten Änderungen an diesem Repository werden hier dokumentiert.
 ## Tagesübersicht (grob)
 
 ### 27.05.2026
+- **SlideScrollHint + Weiter-Button am Slide-Ende:** `LessonSlideComponent` erkennt per `IntersectionObserver` auf einem Sentinel-Element, wenn der Nutzer das Slide-Ende erreicht hat. Solange das Slide-Ende noch nicht im Viewport war, zeigt ein sticky Gradient-Hint mit animiertem Pfeil-Icon den Scroll-Aufruf. `LessonFlowComponent` merkt sich gelesene Slides pro Step (`readSlideIndices`-Set) und zeigt den Weiter-Button erst, wenn die aktive Slide vollständig gelesen wurde. Auf der letzten Slide entfällt der Weiter-Button. Die Zurück-Navigation und die Tabs bleiben jederzeit frei klickbar.
+- **Design System Learning Platform:** Token-System, Typografie, Layout und Code-Block-Styles als sauber getrennte SCSS-Partials unter `apps/learning-platform/src/styles/` eingeführt (`_tokens.scss`, `_reset.scss`, `_typography.scss`, `_layout.scss`, `_code.scss`). Alle CSS Custom Properties liegen jetzt an einem einzigen Ort — Single Source of Truth.
+- **Schriften:** Poppins 14 px (UI/Body), Recoleta (Display-Akzent, nur via `.accent-subtitle`), JetBrains Mono (Code). Fonts per `<link>` in `index.html`, kein `@import` in SCSS.
+- **Typografie-Spezifikation:** Heading-Weights h1 800 / h2–h3 700 / h4 600, Letter-Spacing gestaffelt −0.03 em bis −0.015 em, Body 14 px / leading 1.5.
+- **Token-Bereinigung:** Alle hardcodierten Hex- und `rgba()`-Werte in 10 Komponenten-SCSS-Dateien auf Design-Tokens umgestellt (`--brand-*`, `--bg-*`, `--text-*`, `color-mix()`). Kein einziger Farbwert mehr direkt in Komponenten.
+- **`--font-display` Breaking Change behoben:** Alle Komponenten nutzten `--font-display` für Poppins-Eyebrows — jetzt korrekt auf `--font-body` umgestellt. `--font-display` zeigt ausschließlich auf Recoleta.
+- **Technische Referenz:** `apps/learning-platform/DESIGN_SYSTEM.md` angelegt (Entscheidung #20 aus Planungsfile).
 - Wissensbibliothek-Wording vereinheitlicht: Einstiegsdateien in `course/03-course-library/` von "Modulguide/Selbstcheck" auf "Artikel/Wissensziele" umgestellt und die Begriffe Artikel, Themenbereich und Abschnitt klarer von Kursmodulen getrennt.
 - Git-Einstieg umbenannt: `course/03-course-library/04-git/00-git-versionierung-modulguide.md` durch `course/03-course-library/04-git/00-was-ist-git.md` ersetzt; zentrale Links in README, Meilensteinen, Inhaltsverzeichnis und Übung 02-02 nachgezogen.
 - Lernnavigation sprachlich gestrafft: README und mehrere Einstiegsartikel beschreiben die `course/03-course-library/` jetzt als wikiartige Nachschlage-Sammlung statt als Modul-Ebene.

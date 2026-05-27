@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 14-kurs-repository-klonen.md -->
 
 # Lektion 14: Kurs-Repository klonen

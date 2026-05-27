@@ -1,0 +1,132 @@
+:host {
+  display: block;
+}
+
+.lesson-flow {
+  display: grid;
+  gap: 16px;
+}
+
+.lesson-flow__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lesson-flow__eyebrow,
+.lesson-flow__progress {
+  margin: 0;
+  font-weight: 800;
+}
+
+.lesson-flow__eyebrow {
+  color: var(--brand-700);
+  font-family: var(--font-body);
+}
+
+.lesson-flow__progress {
+  color: var(--text-muted);
+}
+
+.lesson-flow__tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.lesson-flow__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  max-width: 240px;
+  min-height: 40px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-muted);
+  color: var(--text-body);
+  padding: 8px 10px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lesson-flow__tab span {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--bg-surface);
+  color: var(--brand-700);
+  font-size: var(--text-sm);
+}
+
+.lesson-flow__tab--active {
+  border-color: var(--brand-600);
+  background: color-mix(in srgb, var(--brand-600) 10%, transparent);
+  color: var(--text-strong);
+}
+
+.lesson-flow__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.lesson-flow__button {
+  border: 1px solid var(--line-strong);
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  min-height: 40px;
+  padding: 10px 14px;
+  color: var(--text-body);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lesson-flow__button--primary {
+  border-color: var(--brand-700);
+  background: var(--brand-700);
+  color: white;
+}
+
+.lesson-flow__button:disabled {
+  cursor: not-allowed;
+  color: var(--text-subtle);
+  border-color: var(--line-soft);
+  background: var(--bg-surface-muted);
+}
+
+// Scroll-Nudge: subtiler Hinweis statt deaktiviertem Weiter-Button.
+.lesson-flow__scroll-nudge {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-subtle);
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .lesson-flow__header,
+  .lesson-flow__actions {
+    align-items: stretch;
+  }
+
+  .lesson-flow__header {
+    display: grid;
+  }
+
+  .lesson-flow__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lesson-flow__scroll-nudge {
+    justify-content: flex-end;
+    text-align: right;
+  }
+}

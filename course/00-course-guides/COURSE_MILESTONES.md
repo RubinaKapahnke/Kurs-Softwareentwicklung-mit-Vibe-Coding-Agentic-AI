@@ -2,6 +2,8 @@
 
 Dieses Dokument beschreibt die fachliche Meilenstein-Roadmap des Kurses. Die Reihenfolge folgt der Kursbeschreibung: erst Arbeitsfaehigkeit, dann Produktidee, dann Vibe-Coding-Schleife, Struktur, Qualitaet, AI Literacy, AI-Systemarchitektur, Schwerpunktpfad, Produktinkrement, Governance, Release-Logik und Abschluss.
 
+Grundsatz fuer diese Roadmap: Keine Zeitangaben in Ueberschriften oder Meilenstein-Titeln.
+
 Die konkreten Übungsdateien liegen in [course/02-course-exercises/](../02-course-exercises/README_UEBUNGEN.md). Einige vorhandene Übungsdateien tragen noch aeltere Nummern aus der bisherigen Ausbaustufe. Fachlich gilt diese Roadmap als führend; Dateinamen werden bei einer spaeteren Übungs-Renummerierung nachgezogen.
 
 ## Aktuelle Übungsdateien
@@ -28,6 +30,37 @@ Diese Liste hält die vorhandenen Übungsdateien technisch auffindbar, bis die D
 4. [course/03-course-library/](../03-course-library/) enthält Artikel, Hilfen und Nachschlagewissen.
 5. [course/02-course-exercises/](../02-course-exercises/README_UEBUNGEN.md) enthält zentrale Übungsaufgaben.
 6. [course/learners/beispiel/](../learners/beispiel/) zeigt die Struktur für Lernfortschritt und PRD.
+
+## Startpfad: Repo für Agentenarbeit vorbereiten
+
+Dieser Startpfad ist ein verbindlicher Pflichtkern im erweiterten Kursmodul 03 und funktioniert in allen Arbeitsmodi: Übungsrepo, eigenes Projekt, Einzelarbeit oder Gruppenarbeit.
+
+**Ziel:** Du richtest ein Repository so ein, dass Agenten sicher, nachvollziehbar und teamfähig damit arbeiten können. Das ist wichtig, weil du dadurch nicht nur schnellere Ergebnisse erzielst, sondern später auch Änderungen, Reviews und Übergaben stabiler durchführen kannst.
+
+**Pflichtkern (Reihenfolge):**
+- [Kursmodul 03: Modulziele](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md)
+- [Lektion 01: Begriffsdefinitionen zu generativer und agentischer KI](../01-course-modules/03-vibe-coding-prompting-context-engineering/01-begriffsdefinitionen-generative-und-agentische-ki.md)
+- [Lektion 02: Von AI Agents zu Agentic AI](../01-course-modules/03-vibe-coding-prompting-context-engineering/02-von-ai-agents-zu-agentic-ai.md)
+- [Lektion 03: Repo-Setup für Agentenarbeit](../01-course-modules/03-vibe-coding-prompting-context-engineering/03-repo-setup-fuer-agentenarbeit.md)
+
+**Konkretes Startartefakt:**
+- Eine initiale Repo-Struktur für Agentenarbeit mit klaren Regeln für Scope, Sicherheitsgrenzen, Dokumentationsstandards und Qualitätsnachweise.
+
+**Abschlussnachweis im Pflichtkern:**
+- [ ] Ein lauffähiger Repo-Startzustand für Agentenarbeit ist dokumentiert.
+- [ ] Mindestens ein realer Agentenlauf wurde durchgeführt und reflektiert.
+- [ ] Entscheidungen zu Struktur, Grenzen und Review-Logik sind nachvollziehbar festgehalten.
+
+## Übungen strukturell überdenken (Arbeitsstand)
+
+Die Übungen werden in diesem Bereich nicht sofort erweitert, sondern zuerst strukturell neu ausgerichtet.
+
+**Beschluss für die nächste Ausarbeitung:**
+- Pflichtkern plus Wahlpfade statt einer einzigen linearen Übungsfolge.
+- Jede Übung muss sowohl im Übungsrepo als auch im eigenen Projekt lösbar sein.
+- Team- und Einzelmodus werden als gleichwertige Varianten im Aufgabenblatt angeboten.
+- Nachweise bleiben schlank: Selbstcheck im Lernfortschritt plus kurze Abschlussdemo.
+- CI bleibt optional (Nice to have) und wird als Zusatzspur für Schnelllernende markiert.
 
 ---
 
@@ -68,10 +101,10 @@ Diese Liste hält die vorhandenen Übungsdateien technisch auffindbar, bis die D
 
 ## Meilenstein 3: Vibe-Coding-Schleife angewendet
 
-**Ziel:** Du setzt einen kleinen, pruefbaren Schritt mit KI-Unterstützung um, liest das Ergebnis, bewertest es und verbesserst es.
+**Ziel:** Du setzt einen kleinen, prüfbaren Schritt mit KI-Unterstützung um und entscheidest begründet, wann Prompting genügt und wann ein agentischer Workflow im Repo sinnvoll ist. Das ist wichtig, weil du dadurch früh robuste Architekturentscheidungen triffst und sauber in den Schwerpunktpfad übergehen kannst.
 
 **Moduleinstieg:**
-- [Kursmodul 03: Vibe Coding, Prompting & Context Engineering](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md)
+- [Kursmodul 03: Vibe Coding, Prompting, Context Engineering & Agentic Workflows](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md)
 
 **Zentrale Artikel:**
 - [AI Instructions, Prompting und Context](../03-course-library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md)
@@ -81,7 +114,7 @@ Diese Liste hält die vorhandenen Übungsdateien technisch auffindbar, bis die D
 **Nachweis:**
 - [ ] Ein Prompt-Kontext ist dokumentiert.
 - [ ] Ein kleines Ergebnis wurde erzeugt oder verbessert.
-- [ ] Bewertung oder Nachbesserung ist nachvollziehbar notiert.
+- [ ] Die Entscheidung zwischen Prompting und agentischem Workflow ist nachvollziehbar begründet.
 
 ## Meilenstein 4: Projektstruktur und Logik verstaendlich gemacht
 
@@ -143,7 +176,7 @@ Diese Liste hält die vorhandenen Übungsdateien technisch auffindbar, bis die D
 **Moduleinstiege:**
 - [Kursmodul 10: Daten, Reporting & RAG-Grundlagen](../01-course-modules/10-daten-reporting-rag-grundlagen/00-modulziele.md)
 - [Kursmodul 11: Schwerpunktpfad Web/App oder Datenprodukt](../01-course-modules/11-schwerpunktpfad-web-app-oder-datenprodukt/00-modulziele.md)
-- [Kursmodul 09: Agentic Software Engineering & autonome Agenten](../01-course-modules/09-agentic-software-engineering-autonome-agenten/00-modulziele.md)
+- [Kursmodul 03: Vibe Coding, Prompting, Context Engineering & Agentic Workflows](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md)
 
 **Nachweis:**
 - [ ] Schwerpunktpfad ist entschieden.

@@ -17,26 +17,42 @@
       </div>
     </header>
 
-    <section class="block">
-      <h2>Inhalt</h2>
-      <p class="step-meta">Slug: {{ currentStep()?.slug }} | Pflicht: {{ currentStep()?.required ? 'ja' : 'nein' }}</p>
+    <div class="step-workspace" [class.step-workspace--with-preview]="previewSource()">
+      <section class="block lesson-content">
+        <h2>Inhalt</h2>
+        <p class="step-meta">Slug: {{ currentStep()?.slug }} | Pflicht: {{ currentStep()?.required ? 'ja' : 'nein' }}</p>
 
-      <p class="section-label">Sektionen</p>
-      <ul>
         @for (section of currentStep()?.sections ?? []; track section.file) {
-          <li>{{ section.type }} -> {{ section.file }}</li>
+          <article class="lesson-section">
+            <p class="section-label">{{ section.type }}</p>
+            @if (section.frontmatter?.renderAs === 'lesson-flow' && (section.slides?.length ?? 0) > 0) {
+              <app-lesson-flow [slides]="section.slides ?? []" (libraryLink)="openLibraryPreview($event)"></app-lesson-flow>
+            } @else {
+              <app-markdown-view [src]="section.contentPath ?? section.file" (libraryLink)="openLibraryPreview($event)"></app-markdown-view>
+            }
+          </article>
         }
-      </ul>
 
-      @if ((currentStep()?.resources ?? []).length > 0) {
-        <p class="section-label">Ressourcen</p>
-        <ul>
-          @for (resource of currentStep()?.resources ?? []; track resource.href) {
-            <li><a [href]="resource.href" target="_blank" rel="noopener">{{ resource.label }}</a></li>
-          }
-        </ul>
+        @if ((currentStep()?.resources ?? []).length > 0) {
+          <p class="section-label">Ressourcen</p>
+          <ul>
+            @for (resource of currentStep()?.resources ?? []; track resource.href) {
+              <li><a [href]="resource.href" target="_blank" rel="noopener">{{ resource.label }}</a></li>
+            }
+          </ul>
+        }
+      </section>
+
+      @if (previewSource()) {
+        <aside class="library-preview" aria-label="Course-Library-Vorschau">
+          <div class="library-preview__head">
+            <p>Course Library</p>
+            <button type="button" (click)="closeLibraryPreview()">Schliessen</button>
+          </div>
+          <app-markdown-view [src]="previewSource()!" (libraryLink)="openLibraryPreview($event)"></app-markdown-view>
+        </aside>
       }
-    </section>
+    </div>
 
     <nav class="step-nav">
       <button type="button" class="nav-btn" [disabled]="!previousStep()" (click)="goToPreviousStep()">

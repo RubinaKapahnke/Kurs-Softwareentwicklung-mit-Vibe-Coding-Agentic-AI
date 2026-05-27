@@ -1,0 +1,60 @@
+:host {
+  display: block;
+}
+
+.lesson-slide {
+  min-height: min(560px, 68vh);
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.lesson-slide--active {
+  border-color: color-mix(in srgb, var(--brand-600) 42%, transparent);
+}
+
+// Sentinel: 0-Hoehe-Platzhalter am Slide-Ende fuer den IntersectionObserver.
+.lesson-slide__sentinel {
+  height: 1px;
+}
+
+// ─── SlideScrollHint ───────────────────────────────────────────────────────────
+// position: sticky + negativer margin-top: Das Element "schwebt" am Viewport-Boden,
+// solange der Nutzer innerhalb des Slides scrollt. Der negative margin-top zieht
+// den Hint visuell nach oben, sodass er den letzten Inhaltsbereich ueberlappt
+// (Gradient-Effekt) ohne zusaetzlichen Whitespace zu erzeugen.
+.slide-scroll-hint {
+  position: sticky;
+  bottom: 0;
+  height: 72px;
+  margin-top: -72px;
+  background: linear-gradient(to bottom, transparent, var(--bg-surface) 70%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12px;
+  // Kein pointer-events: Klicks sollen durch den Hint hindurch auf den Inhalt treffen.
+  pointer-events: none;
+}
+
+.slide-scroll-hint__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1.5px solid var(--line-strong);
+  box-shadow: var(--shadow-soft);
+  color: var(--brand-600);
+  font-size: var(--text-base);
+  animation: scroll-hint-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}

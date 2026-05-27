@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 13-branches-commits-pullrequests.md -->
 
 # Lektion 13: Branches, Commits und Pull Requests

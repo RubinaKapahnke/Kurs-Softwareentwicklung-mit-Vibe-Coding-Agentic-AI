@@ -1,6 +1,6 @@
 ﻿# apps/
 
-Dieser Ordner enthält zwei Bereiche:
+Dieser Ordner enthält drei Bereiche:
 
 Ergänzende Arbeitsnotizen für App-Ideen liegen in `apps/notizen_todos_apps.md`.
 
@@ -19,6 +19,24 @@ Aktuell wichtige Dateien:
 - `apps/onboarding/content-sync.config.mjs` + `apps/onboarding/sync-content.mjs` (Synchronisation ausgewaehlter Kursinhalte in Onboarding-Markdown)
 - `apps/onboarding/src/styles/_tokens.scss` (KnOot Brand-Tokens)
 - `apps/onboarding/src/styles/_material-theme.scss` (Material 3 Rollen: Primary/Secondary/Tertiary/Error)
+
+## `learning-platform/`
+Die generische Kurs-App fuer datengetriebene Kurse, Module, Schritte und die Course Library.
+
+Vor Weiterentwicklung zuerst lesen:
+- `course/99-course-development/learning-platform-content-konventionen-planung.md` (Content-Vertrag, Komponenten-Namen, Frontmatter- und LessonFlow-Konventionen)
+- `apps/learning-platform/README.md` (technische Definition of Done und aktuelle Gates)
+- `course/99-course-development/level-system-prototyp.md` (Grundlage fuer Level, Achievements und Lernpfade)
+- `course/99-course-development/rollen_storytelling.md` (Learner-Persona Mika, Storytelling- und Achievement-Kontext)
+
+Aktuell wichtige Dateien:
+- `apps/learning-platform/tools/sync-learning-content.mjs` (Synchronisation von Kursmodulen und Course-Library-Markdown nach `public/content/`)
+- `apps/learning-platform/public/content/library/` (auslieferbare Kopie von `course/03-course-library/` plus `library-index.json`)
+- `apps/learning-platform/src/app/components/markdown-view.component.ts` (sicheres Rendering von Markdown-Inhalten)
+- `apps/learning-platform/src/app/components/lesson-flow.component.ts`, `lesson-slide.component.ts` und `task-panel.component.ts` (gefuehrter LessonFlow aus `##`-Slides mit slidebezogenen Aufgaben)
+- `apps/learning-platform/src/app/pages/library-page.component.ts` (Artikeluebersicht und Markdown-Ansicht der Course Library)
+- `apps/learning-platform/src/app/pages/step-page.component.ts` (Schrittansicht mit rechter Course-Library-Vorschau)
+- `apps/learning-platform/src/app/app.routes.ts` (Routing fuer Kurse, Module, Schritte und `/bibliothek`)
 
 ## `dashboard/`
 Das gemeinsame App-Projekt des Kurses. Hier entsteht die eigentliche Anwendung.

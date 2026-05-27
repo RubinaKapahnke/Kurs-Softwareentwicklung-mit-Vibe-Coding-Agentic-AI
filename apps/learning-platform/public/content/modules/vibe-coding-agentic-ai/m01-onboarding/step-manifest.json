@@ -9,7 +9,38 @@
       "sections": [
         {
           "type": "lesson",
-          "file": "step-01/lektion-inhalte.md"
+          "file": "step-01/lektion-inhalte.md",
+          "contentPath": "/content/modules/vibe-coding-agentic-ai/m01-onboarding/step-01/lektion-inhalte.md",
+          "contentContract": {
+            "version": 1,
+            "status": "legacy-derived",
+            "warnings": [
+              "missing-frontmatter"
+            ]
+          },
+          "frontmatter": {
+            "title": "Lektion 01: Ankommen und Verstehen",
+            "contentType": "lesson",
+            "renderAs": "lesson-flow",
+            "summary": "Automatisch aus step-01/lektion-inhalte.md abgeleiteter Legacy-Inhalt.",
+            "sourceLayer": "course-module"
+          },
+          "slides": [
+            {
+              "id": 1,
+              "title": "Ziel",
+              "anchor": "ziel",
+              "sourceHeading": "##",
+              "startLine": 5,
+              "markdown": "## Ziel\n\n- Die technische Struktur für die generische Kursmodul-App ist eingerichtet.\n- Der Validator kann mindestens ein Modul pruefen.\n",
+              "libraryLinks": [],
+              "tasks": [],
+              "todos": []
+            }
+          ],
+          "libraryLinks": [],
+          "taskDirectives": [],
+          "todos": []
         }
       ],
       "resources": [
@@ -19,8 +50,42 @@
         }
       ],
       "completionMode": "lesson-only",
-      "featureFlags": ["quiz"]
+      "featureFlags": [
+        "quiz"
+      ]
     }
   ],
-  "version": 1
+  "version": 1,
+  "contentContract": {
+    "version": 1,
+    "requiredFrontmatter": [
+      "title",
+      "contentType",
+      "renderAs",
+      "summary",
+      "sourceLayer"
+    ],
+    "allowedContentTypes": [
+      "lesson",
+      "article",
+      "task",
+      "library"
+    ],
+    "allowedRenderAs": [
+      "lesson-flow",
+      "markdown-article",
+      "task-panel"
+    ],
+    "allowedSourceLayers": [
+      "course-module",
+      "course-library",
+      "course-guide",
+      "course-exercise"
+    ],
+    "slideRule": {
+      "renderAs": "lesson-flow",
+      "heading": "##",
+      "markdownHeadingLevel": 2
+    }
+  }
 }

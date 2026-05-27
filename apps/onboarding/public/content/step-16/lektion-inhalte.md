@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 16-start-in-den-gesamtkurs.md -->
 
 # Lektion 16: Start in den Gesamtkurs
@@ -9,7 +9,7 @@ Du weisst, wie du nach dem Onboarding konkret in den Gesamtkurs startest und was
 
 ## Dein Startpunkt nach dem Onboarding
 
-Nach dem Onboarding startest du nicht â€žirgendwo", sondern immer über die zentrale Kurssteuerung.
+Nach dem Onboarding startest du nicht „irgendwo", sondern immer über die zentrale Kurssteuerung.
 
 Dein Haupt-Einstiegspunkt ist:
 

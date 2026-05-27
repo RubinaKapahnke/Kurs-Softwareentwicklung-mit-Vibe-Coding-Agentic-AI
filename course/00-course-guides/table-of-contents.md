@@ -16,13 +16,12 @@ Diese Datei ist die spaetere Grundlage für ein Menue in der App. Sie listet zen
 | Kursmodule | [README_KURSMODULE.md](../01-course-modules/README_KURSMODULE.md) | `Übersicht` | Eigenstaendige Kursbausteine mit Praxisartefakt und Rollenbezug. |
 | 01 Onboarding | [00-modulziele.md](../01-course-modules/01-Onboarding-in-den-Kurs/00-modulziele.md) | `ausgearbeitet` | Arbeitsumgebung, Dokumentation, VS Code, Markdown, GitHub und Git. |
 | 02 Produktbeschreibung | [00-modulziele.md](../01-course-modules/02-produktbeschreibung-inkrementelle-planung/00-modulziele.md) | `Zielbild` | Produktbeschreibung, PRD, Entwicklungsstufen und Planung. |
-| 03 Vibe Coding | [00-modulziele.md](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md) | `Zielbild` | Prompting, Context Engineering und KI-gestuetzte Umsetzung. |
+| 03 Vibe Coding & Agentic Workflows | [00-modulziele.md](../01-course-modules/03-vibe-coding-prompting-context-engineering/00-modulziele.md) | `teilweise ausgearbeitet` | Prompting, Context Engineering, Agentenlogik und kontrollierte Workflows. |
 | 04 AI Literacy | [00-modulziele.md](../01-course-modules/04-ai-literacy-modellverstaendnis/00-modulziele.md) | `Zielbild` | KI-Begriffe, Modellverstaendnis und Fehlerquellen. |
 | 05 Programmierlogik | [00-modulziele.md](../01-course-modules/05-grundlagen-programmierlogik/00-modulziele.md) | `Zielbild` | Code lesen, Logik verstehen und KI-Code beurteilen. |
 | 06 Debugging & Testing | [00-modulziele.md](../01-course-modules/06-debugging-testing-harness-engineering/00-modulziele.md) | `Zielbild` | Fehleranalyse, Tests und Harness Engineering. |
 | 07 Architektur | [00-modulziele.md](../01-course-modules/07-architektur-wartbare-produktstruktur/00-modulziele.md) | `teilweise ausgearbeitet` | Wartbare Produktstruktur, Komponenten und Code-Monster. |
 | 08 AI System Architecture | [00-modulziele.md](../01-course-modules/08-ai-system-architecture-modellwahl-token-management/00-modulziele.md) | `Zielbild` | Modellwahl, Token Management, Routing und Kontrollpunkte. |
-| 09 Agentic Software Engineering | [00-modulziele.md](../01-course-modules/09-agentic-software-engineering-autonome-agenten/00-modulziele.md) | `teilweise ausgearbeitet` | Agenten, Workflows, Tools und Autonomiegrade. |
 | 10 Daten & RAG | [00-modulziele.md](../01-course-modules/10-daten-reporting-rag-grundlagen/00-modulziele.md) | `Zielbild` | Daten, Reporting, RAG, Pandas und Streamlit. |
 | 11 Schwerpunktpfad | [00-modulziele.md](../01-course-modules/11-schwerpunktpfad-web-app-oder-datenprodukt/00-modulziele.md) | `Zielbild` | Web/App- oder Datenprodukt-Pfad. |
 | 12 Governance | [00-modulziele.md](../01-course-modules/12-teamarbeit-datenschutz-urheberrecht-governance/00-modulziele.md) | `Zielbild` | Teamarbeit, Datenschutz, Urheberrecht und Governance. |

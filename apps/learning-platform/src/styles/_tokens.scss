@@ -1,0 +1,169 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Design Tokens — Learning Platform
+// Single source of truth für alle CSS Custom Properties.
+// Alle semantischen Aliases auf primitive Werte verweisen,
+// damit ein späterer Dark Mode nur hier eingetragen wird.
+// ─────────────────────────────────────────────────────────────────────────────
+
+:root {
+
+  // ─── Primitive color palette ───────────────────────────────────────────────
+  // Brand: Petrol/Teal
+  --_brand-50:  #edf5f9;
+  --_brand-100: #d0e7f0;
+  --_brand-200: #a0cedf;
+  --_brand-300: #6fb5ce;
+  --_brand-400: #429cbd;
+  --_brand-500: #2f7d95;
+  --_brand-600: #26657b;
+  --_brand-700: #1d4f61;
+  --_brand-800: #133a47;
+  --_brand-900: #0a2530;
+
+  // Accent: Amber/Gold
+  --_amber-50:  #fef9ec;
+  --_amber-100: #fdeec9;
+  --_amber-200: #fbda92;
+  --_amber-300: #f0b030;
+  --_amber-400: #d98400;
+  --_amber-500: #b26c00;
+  --_amber-600: #8f5500;
+
+  // Semantic: Status
+  --_red-700: #a2342a;
+  --_green-800: #116149;
+
+  // Neutral grays (warm — leicht brand-getönt)
+  --_neutral-0:   #ffffff;
+  --_neutral-50:  #f4f8fa;
+  --_neutral-100: #eaf2f5;
+  --_neutral-200: #d9e8ed;
+  --_neutral-300: #b8cfd8;
+  --_neutral-900: #0f2330;
+  --_neutral-800: #1c3040;
+  --_neutral-700: #2e4050;
+  --_neutral-600: #4a6070;
+  --_neutral-500: #5a7080;
+  --_neutral-400: #8a9fab;
+
+  // Code: Dark block
+  --_code-dark-bg:    #17242b;
+  --_code-dark-fg:    #e8f0f4;
+  --_code-dark-border: rgba(255, 255, 255, 0.06);
+
+  // ─── Semantic tokens ───────────────────────────────────────────────────────
+  // Fonts
+  --font-body:    'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Recoleta', Georgia, 'Times New Roman', serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+
+  // Brand (öffentliche Aliase — Komponenten referenzieren diese)
+  --brand-50:  var(--_brand-50);
+  --brand-100: var(--_brand-100);
+  --brand-200: var(--_brand-200);
+  --brand-300: var(--_brand-300);
+  --brand-400: var(--_brand-400);
+  --brand-500: var(--_brand-500);
+  --brand-600: var(--_brand-600);
+  --brand-700: var(--_brand-700);
+  --brand-800: var(--_brand-800);
+  --brand-900: var(--_brand-900);
+
+  // Accent & Status (Kompatibilität zu bestehenden Komponenten)
+  --accent-amber: var(--_amber-500);
+  --accent-red:   var(--_red-700);
+  --ok-green:     var(--_green-800);
+
+  // Backgrounds — Layered System
+  // Level 0: Page-BG (leicht brand-getönt → Cards stechen hervor)
+  --bg-base:          var(--_neutral-100);
+  // Level 1: Card / Panel-Oberfläche
+  --bg-surface:       var(--_neutral-0);
+  // Level 2: Subtile Variante (Table-Header, Code-Inline-BG, usw.)
+  --bg-surface-muted: var(--_neutral-50);
+
+  // Lines / Borders
+  --line-soft:   color-mix(in srgb, var(--_brand-600) 14%, transparent);
+  --line-strong: color-mix(in srgb, var(--_brand-600) 30%, transparent);
+  --line-focus:  color-mix(in srgb, var(--_brand-600) 44%, transparent);
+
+  // Text
+  --text-strong: var(--_neutral-900);
+  --text-body:   var(--_neutral-700);
+  --text-muted:  var(--_neutral-500);
+  --text-subtle: var(--_neutral-400);
+
+  // Code
+  --code-bg:           var(--_code-dark-bg);
+  --code-color:        var(--_code-dark-fg);
+  --code-border:       var(--_code-dark-border);
+  --code-inline-bg:    var(--_brand-50);
+  --code-inline-color: var(--_brand-800);
+
+  // Elevation / Shadows — brand-getönt für Kohärenz
+  --shadow-soft:
+    0 1px 3px  color-mix(in srgb, var(--_brand-700) 6%, transparent),
+    0 4px 16px color-mix(in srgb, var(--_brand-700) 5%, transparent);
+  --shadow-card:
+    0 2px 8px  color-mix(in srgb, var(--_brand-700) 9%, transparent),
+    0 8px 28px color-mix(in srgb, var(--_brand-700) 7%, transparent);
+  --shadow-strong:
+    0 4px 12px  color-mix(in srgb, var(--_brand-700) 13%, transparent),
+    0 16px 44px color-mix(in srgb, var(--_brand-700) 10%, transparent);
+  --shadow-focus:
+    0 0 0 3px color-mix(in srgb, var(--_brand-600) 26%, transparent);
+
+  // Border radii
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   22px;
+  --radius-pill: 999px;
+
+  // Spacing
+  --space-1:  0.25rem;  //  4px
+  --space-2:  0.5rem;   //  8px
+  --space-3:  0.75rem;  // 12px
+  --space-4:  1rem;     // 16px
+  --space-5:  1.25rem;  // 20px
+  --space-6:  1.5rem;   // 24px
+  --space-8:  2rem;     // 32px
+  --space-10: 2.5rem;   // 40px
+  --space-12: 3rem;     // 48px
+  --space-16: 4rem;     // 64px
+
+  // Type scale
+  // Base = 14px (UI-first, kompakt). Poppins ist optisch großzügig,
+  // daher ist 14px hier komfortabler als bei schmaleren Schriften.
+  --text-2xs:  0.625rem;   // 10px — Nur für Labels/Badges
+  --text-xs:   0.6875rem;  // 11px
+  --text-sm:   0.75rem;    // 12px
+  --text-base: 0.875rem;   // 14px — Body
+  --text-md:   0.9375rem;  // 15px — Leicht größer (z.B. Lead-Text)
+  --text-lg:   1rem;       // 16px
+  --text-xl:   1.125rem;   // 18px
+  --text-2xl:  1.375rem;   // 22px
+  --text-3xl:  1.75rem;    // 28px
+  --text-4xl:  2.25rem;    // 36px
+  --text-5xl:  3rem;       // 48px
+
+  // Letter-spacing — gestaffelt nach Heading-Größe
+  // Große Headings profitieren von engerem Tracking (optischer Ausgleich)
+  --tracking-h1:   -0.03em;
+  --tracking-h2:   -0.025em;
+  --tracking-h3:   -0.02em;
+  --tracking-h4:   -0.015em;
+  --tracking-body:  0;
+  --tracking-caps:  0.08em;   // Für .eyebrow / uppercase Labels
+
+  // Line heights
+  --leading-tight:    1.2;
+  --leading-snug:     1.3;
+  --leading-normal:   1.5;   // Etwas kompakter als 1.55 bei 14px-Body
+  --leading-relaxed:  1.6;
+
+  // Transitions
+  --ease-fast:   80ms ease;
+  --ease-base:   150ms ease;
+  --ease-slow:   250ms cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: ../../course/03-course-library/03-github/01-github-grundlagen.md -->
 <!-- Section: github-account-lesson -->
 ## Was ist ein GitHub-Account?

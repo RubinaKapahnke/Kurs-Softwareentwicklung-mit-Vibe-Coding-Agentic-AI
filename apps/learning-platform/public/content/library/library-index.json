@@ -1,0 +1,3145 @@
+{
+  "generatedFrom": "course/03-course-library",
+  "contentContract": {
+    "version": 1,
+    "requiredFrontmatter": [
+      "title",
+      "contentType",
+      "renderAs",
+      "summary",
+      "sourceLayer"
+    ],
+    "allowedContentTypes": [
+      "lesson",
+      "article",
+      "task",
+      "library"
+    ],
+    "allowedRenderAs": [
+      "lesson-flow",
+      "markdown-article",
+      "task-panel"
+    ],
+    "allowedSourceLayers": [
+      "course-module",
+      "course-library",
+      "course-guide",
+      "course-exercise"
+    ],
+    "slideRule": {
+      "renderAs": "lesson-flow",
+      "heading": "##",
+      "markdownHeadingLevel": 2
+    }
+  },
+  "entries": [
+    {
+      "moduleId": "01-markdown",
+      "title": "Artikel: Markdown",
+      "filename": "00-markdown-dokumentation-modulguide.md",
+      "summary": "Automatisch aus 00-markdown-dokumentation-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 10
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 38
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-16-ich-weiss-was-markdown-ist-und-wofuer-es-im-projekt-genutzt-wird",
+          "label": "Ich weiß, was Markdown ist und wofür es im Projekt genutzt wird.",
+          "checked": false,
+          "line": 16
+        },
+        {
+          "id": "todo-17-ich-kann-ueberschriften-schreiben",
+          "label": "Ich kann Überschriften (#, ##, ###) schreiben.",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-18-ich-kann-listen-aufzaehlung-nummeriert-erstellen",
+          "label": "Ich kann Listen (Aufzählung, nummeriert) erstellen.",
+          "checked": false,
+          "line": 18
+        },
+        {
+          "id": "todo-19-ich-kann-links-schreiben-text-url",
+          "label": "Ich kann Links schreiben: `[Text](URL)`",
+          "checked": false,
+          "line": 19
+        },
+        {
+          "id": "todo-20-ich-kann-text-hervorhebung-nutzen-fett-kursiv-code",
+          "label": "Ich kann Text-Hervorhebung nutzen: `**fett**`, `*kursiv*`, `` `Code` ``",
+          "checked": false,
+          "line": 20
+        },
+        {
+          "id": "todo-24-ich-kann-bestehende-markdown-dateien-lesen-und-erweitern",
+          "label": "Ich kann bestehende Markdown-Dateien lesen und erweitern.",
+          "checked": false,
+          "line": 24
+        },
+        {
+          "id": "todo-25-ich-strukturiere-inhalte-so-dass-sie-fuer-menschen-und-ki-lesbar-sind",
+          "label": "Ich strukturiere Inhalte so, dass sie für Menschen und KI lesbar sind.",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-26-ich-setze-formatierung-bewusst-ein-statt-text-nur-hintereinanderzureihen",
+          "label": "Ich setze Formatierung bewusst ein, statt Text nur hintereinanderzureihen.",
+          "checked": false,
+          "line": 26
+        },
+        {
+          "id": "todo-27-ich-erkenne-typische-markdown-muster-in-readme-artikel-und-uebungsdateien",
+          "label": "Ich erkenne typische Markdown-Muster in README-, Artikel- und Übungsdateien.",
+          "checked": false,
+          "line": 27
+        },
+        {
+          "id": "todo-28-ich-kann-tabellen-erstellen",
+          "label": "Ich kann Tabellen erstellen.",
+          "checked": false,
+          "line": 28
+        },
+        {
+          "id": "todo-29-ich-kann-code-bloecke-mit-sprach-angabe-formatieren-python-json-etc",
+          "label": "Ich kann Code-Blöcke mit Sprach-Angabe formatieren (```python, ```json etc).",
+          "checked": false,
+          "line": 29
+        },
+        {
+          "id": "todo-33-ich-nutze-markdown-als-arbeitsgrundlage-fuer-anforderungen-und-notizen",
+          "label": "Ich nutze Markdown als Arbeitsgrundlage für Anforderungen und Notizen.",
+          "checked": false,
+          "line": 33
+        },
+        {
+          "id": "todo-34-ich-entwickle-ein-gefuehl-dafuer-wann-eine-datei-erklaerend-und-wann-nachschlagbar-sein-sollte",
+          "label": "Ich entwickle ein Gefühl dafür, wann eine Datei erklärend und wann nachschlagbar sein sollte.",
+          "checked": false,
+          "line": 34
+        },
+        {
+          "id": "todo-35-ich-kann-erweiterte-markdown-features-wie-fussnoten-oder-html-kommentare-nutzen",
+          "label": "Ich kann erweiterte Markdown-Features wie Fußnoten oder HTML-Kommentare nutzen.",
+          "checked": false,
+          "line": 35
+        },
+        {
+          "id": "todo-36-ich-schreibe-markdown-das-sowohl-in-github-als-auch-in-anderen-tools-gut-aussieht",
+          "label": "Ich schreibe Markdown, das sowohl in GitHub als auch in anderen Tools gut aussieht.",
+          "checked": false,
+          "line": 36
+        }
+      ],
+      "contentPath": "/content/library/01-markdown/00-markdown-dokumentation-modulguide.md",
+      "routePath": "/bibliothek/01-markdown/00-markdown-dokumentation-modulguide"
+    },
+    {
+      "moduleId": "01-markdown",
+      "title": "Markdown: Grundlagen und Einsatz",
+      "filename": "01-markdown-grundlagen.md",
+      "summary": "Automatisch aus 01-markdown-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Was ist Markdown?",
+          "anchor": "was-ist-markdown",
+          "sourceHeading": "##",
+          "startLine": 3
+        },
+        {
+          "id": 2,
+          "title": "Wofür wird Markdown genutzt?",
+          "anchor": "wofuer-wird-markdown-genutzt",
+          "sourceHeading": "##",
+          "startLine": 6
+        },
+        {
+          "id": 3,
+          "title": "Vorteile von Markdown",
+          "anchor": "vorteile-von-markdown",
+          "sourceHeading": "##",
+          "startLine": 16
+        },
+        {
+          "id": 4,
+          "title": "Überschrift 2",
+          "anchor": "ueberschrift-2",
+          "sourceHeading": "##",
+          "startLine": 28
+        },
+        {
+          "id": 5,
+          "title": "Warum ist Markdown ideal für Vibe Coding?",
+          "anchor": "warum-ist-markdown-ideal-fuer-vibe-coding",
+          "sourceHeading": "##",
+          "startLine": 37
+        },
+        {
+          "id": 6,
+          "title": "Markdown als Kontext für KI-Agenten",
+          "anchor": "markdown-als-kontext-fuer-ki-agenten",
+          "sourceHeading": "##",
+          "startLine": 50
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/01-markdown/01-markdown-grundlagen.md",
+      "routePath": "/bibliothek/01-markdown/01-markdown-grundlagen"
+    },
+    {
+      "moduleId": "01-markdown",
+      "title": "Markdown Formatierungshilfe",
+      "filename": "02-formatierung_md-files.md",
+      "summary": "Automatisch aus 02-formatierung_md-files.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "1. Überschriften",
+          "anchor": "1-ueberschriften",
+          "sourceHeading": "##",
+          "startLine": 8
+        },
+        {
+          "id": 2,
+          "title": "Überschrift Ebene 2 (h2)",
+          "anchor": "ueberschrift-ebene-2-h2",
+          "sourceHeading": "##",
+          "startLine": 13
+        },
+        {
+          "id": 3,
+          "title": "Überschrift Ebene 2 (h2)",
+          "anchor": "ueberschrift-ebene-2-h2",
+          "sourceHeading": "##",
+          "startLine": 22
+        },
+        {
+          "id": 4,
+          "title": "2. Textformatierung",
+          "anchor": "2-textformatierung",
+          "sourceHeading": "##",
+          "startLine": 33
+        },
+        {
+          "id": 5,
+          "title": "3. Listen",
+          "anchor": "3-listen",
+          "sourceHeading": "##",
+          "startLine": 51
+        },
+        {
+          "id": 6,
+          "title": "4. Links und Bilder",
+          "anchor": "4-links-und-bilder",
+          "sourceHeading": "##",
+          "startLine": 84
+        },
+        {
+          "id": 7,
+          "title": "5. Zitate (Blockquotes)",
+          "anchor": "5-zitate-blockquotes",
+          "sourceHeading": "##",
+          "startLine": 102
+        },
+        {
+          "id": 8,
+          "title": "6. Code",
+          "anchor": "6-code",
+          "sourceHeading": "##",
+          "startLine": 119
+        },
+        {
+          "id": 9,
+          "title": "7. Horizontale Linie",
+          "anchor": "7-horizontale-linie",
+          "sourceHeading": "##",
+          "startLine": 144
+        },
+        {
+          "id": 10,
+          "title": "8. Tabellen",
+          "anchor": "8-tabellen",
+          "sourceHeading": "##",
+          "startLine": 160
+        },
+        {
+          "id": 11,
+          "title": "9. Erweiterte Formatierungen",
+          "anchor": "9-erweiterte-formatierungen",
+          "sourceHeading": "##",
+          "startLine": 181
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-63-erledigte-aufgabe",
+          "label": "Erledigte Aufgabe",
+          "checked": true,
+          "line": 63
+        },
+        {
+          "id": "todo-64-offene-aufgabe",
+          "label": "Offene Aufgabe",
+          "checked": false,
+          "line": 64
+        },
+        {
+          "id": "todo-76-erledigte-aufgabe",
+          "label": "Erledigte Aufgabe",
+          "checked": true,
+          "line": 76
+        },
+        {
+          "id": "todo-77-offene-aufgabe",
+          "label": "Offene Aufgabe",
+          "checked": false,
+          "line": 77
+        }
+      ],
+      "contentPath": "/content/library/01-markdown/02-formatierung_md-files.md",
+      "routePath": "/bibliothek/01-markdown/02-formatierung_md-files"
+    },
+    {
+      "moduleId": "02-vscode",
+      "title": "Artikel: VS Code",
+      "filename": "00-vscode-arbeitsumgebung-modulguide.md",
+      "summary": "Automatisch aus 00-vscode-arbeitsumgebung-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 11
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 40
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-17-ich-weiss-was-vs-code-ist-und-warum-es-als-zentrale-arbeitsumgebung-genutzt-wird",
+          "label": "Ich weiß, was VS Code ist und warum es als zentrale Arbeitsumgebung genutzt wird.",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-18-ich-kann-mich-im-editor-orientieren-explorer-editor-bereich-terminal",
+          "label": "Ich kann mich im Editor orientieren: Explorer, Editor-Bereich, Terminal.",
+          "checked": false,
+          "line": 18
+        },
+        {
+          "id": "todo-19-ich-kann-die-befehlspalette-oeffnen-und-nutzen-ctrl-shift-p-cmd-shift-p",
+          "label": "Ich kann die Befehlspalette öffnen und nutzen (Ctrl+Shift+P / Cmd+Shift+P).",
+          "checked": false,
+          "line": 19
+        },
+        {
+          "id": "todo-20-ich-kann-dateien-oeffnen-bearbeiten-und-speichern",
+          "label": "Ich kann Dateien öffnen, bearbeiten und speichern.",
+          "checked": false,
+          "line": 20
+        },
+        {
+          "id": "todo-24-ich-verstehe-wie-vs-code-git-terminal-und-erweiterungen-verbindet",
+          "label": "Ich verstehe, wie VS Code Git, Terminal und Erweiterungen verbindet.",
+          "checked": false,
+          "line": 24
+        },
+        {
+          "id": "todo-25-ich-kann-wiederkehrende-aktionen-ueber-shortcuts-oder-die-befehlspalette-schneller-ausfuehren",
+          "label": "Ich kann wiederkehrende Aktionen über Shortcuts oder die Befehlspalette schneller ausführen.",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-26-ich-erkenne-wie-vs-code-dokumentation-code-und-ki-assistenz-zusammenbringt",
+          "label": "Ich erkenne, wie VS Code Dokumentation, Code und KI-Assistenz zusammenbringt.",
+          "checked": false,
+          "line": 26
+        },
+        {
+          "id": "todo-27-ich-kann-tabs-und-mehrere-dateien-gleichzeitig-oeffnen",
+          "label": "Ich kann Tabs und mehrere Dateien gleichzeitig öffnen.",
+          "checked": false,
+          "line": 27
+        },
+        {
+          "id": "todo-28-ich-kann-copilot-chat-oeffnen-und-eine-frage-stellen",
+          "label": "Ich kann Copilot Chat öffnen und eine Frage stellen.",
+          "checked": false,
+          "line": 28
+        },
+        {
+          "id": "todo-29-ich-kann-mit-eine-datei-als-kontext-zu-einem-prompt-hinzufuegen",
+          "label": "Ich kann mit `#` eine Datei als Kontext zu einem Prompt hinzufügen.",
+          "checked": false,
+          "line": 29
+        },
+        {
+          "id": "todo-30-ich-kann-mit-prompt-dateien-aufrufen",
+          "label": "Ich kann mit `/` Prompt-Dateien aufrufen.",
+          "checked": false,
+          "line": 30
+        },
+        {
+          "id": "todo-31-ich-weiss-wie-ich-bei-der-meldung-content-of-the-file-is-newer-mit-compare-overwrite-sicher-entscheide",
+          "label": "Ich weiß, wie ich bei der Meldung \"content of the file is newer\" mit Compare/Overwrite sicher entscheide.",
+          "checked": false,
+          "line": 31
+        },
+        {
+          "id": "todo-35-ich-passe-den-editor-so-an-dass-er-besser-zu-meinem-workflow-passt-theme-einstellungen",
+          "label": "Ich passe den Editor so an, dass er besser zu meinem Workflow passt (Theme, Einstellungen).",
+          "checked": false,
+          "line": 35
+        },
+        {
+          "id": "todo-36-ich-kenne-sinnvolle-erweiterungen-oder-ansichten-fuer-die-arbeit-im-repo",
+          "label": "Ich kenne sinnvolle Erweiterungen oder Ansichten für die Arbeit im Repo.",
+          "checked": false,
+          "line": 36
+        },
+        {
+          "id": "todo-37-ich-nutze-vs-code-fuer-verschiedene-aufgaben-neben-code-bearbeitung-markdown-git-terminal",
+          "label": "Ich nutze VS Code für verschiedene Aufgaben neben Code-Bearbeitung (Markdown, Git, Terminal).",
+          "checked": false,
+          "line": 37
+        },
+        {
+          "id": "todo-38-ich-nutze-debugging-oder-preview-features-je-nach-kontext",
+          "label": "Ich nutze Debugging- oder Preview-Features je nach Kontext.",
+          "checked": false,
+          "line": 38
+        }
+      ],
+      "contentPath": "/content/library/02-vscode/00-vscode-arbeitsumgebung-modulguide.md",
+      "routePath": "/bibliothek/02-vscode/00-vscode-arbeitsumgebung-modulguide"
+    },
+    {
+      "moduleId": "02-vscode",
+      "title": "VS Code: Grundlagen und Einstieg",
+      "filename": "01-vscode-grundlagen.md",
+      "summary": "Automatisch aus 01-vscode-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Was ist Visual Studio Code?",
+          "anchor": "was-ist-visual-studio-code",
+          "sourceHeading": "##",
+          "startLine": 3
+        },
+        {
+          "id": 2,
+          "title": "Wofür wird VS Code genutzt?",
+          "anchor": "wofuer-wird-vs-code-genutzt",
+          "sourceHeading": "##",
+          "startLine": 6
+        },
+        {
+          "id": 3,
+          "title": "Die wichtigsten Features im Überblick",
+          "anchor": "die-wichtigsten-features-im-ueberblick",
+          "sourceHeading": "##",
+          "startLine": 9
+        },
+        {
+          "id": 4,
+          "title": "Warum ist VS Code ideal für Vibe Coding?",
+          "anchor": "warum-ist-vs-code-ideal-fuer-vibe-coding",
+          "sourceHeading": "##",
+          "startLine": 17
+        },
+        {
+          "id": 5,
+          "title": "Preview Toggle",
+          "anchor": "preview-toggle",
+          "sourceHeading": "##",
+          "startLine": 24
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/02-vscode/01-vscode-grundlagen.md",
+      "routePath": "/bibliothek/02-vscode/01-vscode-grundlagen"
+    },
+    {
+      "moduleId": "02-vscode",
+      "title": "VS Code: GitHub Copilot Chat",
+      "filename": "02-vscode-copilot.md",
+      "summary": "Automatisch aus 02-vscode-copilot.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Copilot Chat öffnen",
+          "anchor": "copilot-chat-oeffnen",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Chat-Modi: Ask, Edit, Agent",
+          "anchor": "chat-modi-ask-edit-agent",
+          "sourceHeading": "##",
+          "startLine": 19
+        },
+        {
+          "id": 3,
+          "title": "Kontext mit `#` hinzufügen",
+          "anchor": "kontext-mit-hinzufuegen",
+          "sourceHeading": "##",
+          "startLine": 33
+        },
+        {
+          "id": 4,
+          "title": "Slash-Commands mit `/`",
+          "anchor": "slash-commands-mit",
+          "sourceHeading": "##",
+          "startLine": 51
+        },
+        {
+          "id": 5,
+          "title": "Neuen Chat starten",
+          "anchor": "neuen-chat-starten",
+          "sourceHeading": "##",
+          "startLine": 74
+        },
+        {
+          "id": 6,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 86
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-88-ich-kann-copilot-chat-in-vs-code-oeffnen-symbol-oder-befehlspalette",
+          "label": "Ich kann Copilot Chat in VS Code öffnen (Symbol oder Befehlspalette).",
+          "checked": false,
+          "line": 88
+        },
+        {
+          "id": "todo-89-ich-weiss-wozu-die-modi-ask-edit-und-agent-grob-genutzt-werden",
+          "label": "Ich weiss, wozu die Modi Ask, Edit und Agent grob genutzt werden.",
+          "checked": false,
+          "line": 89
+        },
+        {
+          "id": "todo-90-ich-kann-mit-eine-datei-als-kontext-zu-einem-prompt-hinzufuegen",
+          "label": "Ich kann mit `#` eine Datei als Kontext zu einem Prompt hinzufuegen.",
+          "checked": false,
+          "line": 90
+        },
+        {
+          "id": "todo-91-ich-kann-mit-prompt-dateien-und-eingebaute-befehle-aufrufen",
+          "label": "Ich kann mit `/` Prompt-Dateien und eingebaute Befehle aufrufen.",
+          "checked": false,
+          "line": 91
+        },
+        {
+          "id": "todo-92-ich-kann-einen-neuen-chat-starten-und-weiss-wann-das-sinnvoll-ist",
+          "label": "Ich kann einen neuen Chat starten und weiss, wann das sinnvoll ist.",
+          "checked": false,
+          "line": 92
+        }
+      ],
+      "contentPath": "/content/library/02-vscode/02-vscode-copilot.md",
+      "routePath": "/bibliothek/02-vscode/02-vscode-copilot"
+    },
+    {
+      "moduleId": "02-vscode",
+      "title": "VS Code: Speicherkonflikt bei geänderter Datei (Compare/Overwrite)",
+      "filename": "03-vscode-speicherkonflikt-compare-overwrite.md",
+      "summary": "Automatisch aus 03-vscode-speicherkonflikt-compare-overwrite.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Warum passiert das?",
+          "anchor": "warum-passiert-das",
+          "sourceHeading": "##",
+          "startLine": 8
+        },
+        {
+          "id": 2,
+          "title": "Was bedeuten die Buttons?",
+          "anchor": "was-bedeuten-die-buttons",
+          "sourceHeading": "##",
+          "startLine": 19
+        },
+        {
+          "id": 3,
+          "title": "Wichtig in der Compare-Ansicht: Revert Block",
+          "anchor": "wichtig-in-der-compare-ansicht-revert-block",
+          "sourceHeading": "##",
+          "startLine": 29
+        },
+        {
+          "id": 4,
+          "title": "Sicheres Vorgehen in 4 Lektionen",
+          "anchor": "sicheres-vorgehen-in-4-lektionen",
+          "sourceHeading": "##",
+          "startLine": 44
+        },
+        {
+          "id": 5,
+          "title": "Fehlerbehandlung: Wenn Speichern trotzdem weiter fehlschlaegt",
+          "anchor": "fehlerbehandlung-wenn-speichern-trotzdem-weiter-fehlschlaegt",
+          "sourceHeading": "##",
+          "startLine": 53
+        },
+        {
+          "id": 6,
+          "title": "Schnelle Entscheidungsregel",
+          "anchor": "schnelle-entscheidungsregel",
+          "sourceHeading": "##",
+          "startLine": 66
+        },
+        {
+          "id": 7,
+          "title": "Bezug zu Git-Workflow",
+          "anchor": "bezug-zu-git-workflow",
+          "sourceHeading": "##",
+          "startLine": 71
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/02-vscode/03-vscode-speicherkonflikt-compare-overwrite.md",
+      "routePath": "/bibliothek/02-vscode/03-vscode-speicherkonflikt-compare-overwrite"
+    },
+    {
+      "moduleId": "03-github",
+      "title": "Artikel: GitHub",
+      "filename": "00-github-zusammenarbeit-modulguide.md",
+      "summary": "Automatisch aus 00-github-zusammenarbeit-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 9
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 34
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-15-ich-weiss-was-github-ist-und-wie-es-sich-von-git-unterscheidet",
+          "label": "Ich weiß, was GitHub ist und wie es sich von Git unterscheidet.",
+          "checked": false,
+          "line": 15
+        },
+        {
+          "id": "todo-16-ich-verstehe-die-begriffe-repository-branch-pull-request-und-issue",
+          "label": "Ich verstehe die Begriffe Repository, Branch, Pull Request und Issue.",
+          "checked": false,
+          "line": 16
+        },
+        {
+          "id": "todo-17-ich-kann-ein-repository-auf-github-erkunden-und-den-code-durchstoebern",
+          "label": "Ich kann ein Repository auf GitHub erkunden und den Code durchstöbern.",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-18-ich-kann-den-typischen-lebenszyklus-einer-aenderung-auf-github-erklaeren",
+          "label": "Ich kann den typischen Lebenszyklus einer Änderung auf GitHub erklären.",
+          "checked": false,
+          "line": 18
+        },
+        {
+          "id": "todo-22-ich-kann-einen-pull-request-sinnvoll-vorbereiten-und-mit-einer-guten-beschreibung-eroeffnen",
+          "label": "Ich kann einen Pull Request sinnvoll vorbereiten und mit einer guten Beschreibung eröffnen.",
+          "checked": false,
+          "line": 22
+        },
+        {
+          "id": "todo-23-ich-verstehe-wie-github-die-zusammenarbeit-zwischen-mehreren-personen-unterstuetzt",
+          "label": "Ich verstehe, wie GitHub die Zusammenarbeit zwischen mehreren Personen unterstützt.",
+          "checked": false,
+          "line": 23
+        },
+        {
+          "id": "todo-24-ich-kann-code-kommentare-und-feedback-auf-andere-pull-requests-verstehen",
+          "label": "Ich kann Code-Kommentare und Feedback auf andere Pull Requests verstehen.",
+          "checked": false,
+          "line": 24
+        },
+        {
+          "id": "todo-25-ich-weiss-wofuer-issues-und-diskussionen-auf-github-gut-sind",
+          "label": "Ich weiß, wofür Issues und Diskussionen auf GitHub gut sind.",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-29-ich-kann-pull-requests-nicht-nur-oeffnen-sondern-auch-reviews-durchfuehren",
+          "label": "Ich kann Pull Requests nicht nur öffnen, sondern auch Reviews durchführen.",
+          "checked": false,
+          "line": 29
+        },
+        {
+          "id": "todo-30-ich-erkenne-wie-dokumentation-aufgaben-und-code-in-github-zusammenlaufen",
+          "label": "Ich erkenne, wie Dokumentation, Aufgaben und Code in GitHub zusammenlaufen.",
+          "checked": false,
+          "line": 30
+        },
+        {
+          "id": "todo-31-ich-nutze-github-auch-fuer-planung-und-diskussion-nicht-nur-fuer-code",
+          "label": "Ich nutze GitHub auch für Planung und Diskussion, nicht nur für Code.",
+          "checked": false,
+          "line": 31
+        },
+        {
+          "id": "todo-32-ich-kann-github-actions-oder-andere-erweiterte-features-explorieren",
+          "label": "Ich kann GitHub Actions oder andere erweiterte Features explorieren.",
+          "checked": false,
+          "line": 32
+        }
+      ],
+      "contentPath": "/content/library/03-github/00-github-zusammenarbeit-modulguide.md",
+      "routePath": "/bibliothek/03-github/00-github-zusammenarbeit-modulguide"
+    },
+    {
+      "moduleId": "03-github",
+      "title": "GitHub: Grundlagen und Einstieg",
+      "filename": "01-github-grundlagen.md",
+      "summary": "Automatisch aus 01-github-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Was ist ein GitHub-Account?",
+          "anchor": "was-ist-ein-github-account",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Was ist GitHub?",
+          "anchor": "was-ist-github",
+          "sourceHeading": "##",
+          "startLine": 21
+        },
+        {
+          "id": 3,
+          "title": "Git und GitHub: der Unterschied",
+          "anchor": "git-und-github-der-unterschied",
+          "sourceHeading": "##",
+          "startLine": 25
+        },
+        {
+          "id": 4,
+          "title": "Zentrale Begriffe",
+          "anchor": "zentrale-begriffe",
+          "sourceHeading": "##",
+          "startLine": 33
+        },
+        {
+          "id": 5,
+          "title": "Typischer Workflow",
+          "anchor": "typischer-workflow",
+          "sourceHeading": "##",
+          "startLine": 55
+        },
+        {
+          "id": 6,
+          "title": "Sichtbarkeit von Repositories",
+          "anchor": "sichtbarkeit-von-repositories",
+          "sourceHeading": "##",
+          "startLine": 63
+        },
+        {
+          "id": 7,
+          "title": "README als Einstiegspunkt",
+          "anchor": "readme-als-einstiegspunkt",
+          "sourceHeading": "##",
+          "startLine": 70
+        },
+        {
+          "id": 8,
+          "title": "Weiterfuehrung",
+          "anchor": "weiterfuehrung",
+          "sourceHeading": "##",
+          "startLine": 74
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/03-github/01-github-grundlagen.md",
+      "routePath": "/bibliothek/03-github/01-github-grundlagen"
+    },
+    {
+      "moduleId": "04-git",
+      "title": "Artikel: Git",
+      "filename": "00-was-ist-git.md",
+      "summary": "Automatisch aus 00-was-ist-git.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Zwei Wege zum Nachschlagen",
+          "anchor": "zwei-wege-zum-nachschlagen",
+          "sourceHeading": "##",
+          "startLine": 13
+        },
+        {
+          "id": 3,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 18
+        },
+        {
+          "id": 4,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 49
+        },
+        {
+          "id": 5,
+          "title": "Weiterlernen",
+          "anchor": "weiterlernen",
+          "sourceHeading": "##",
+          "startLine": 57
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-24-ich-kann-erklaeren-was-git-von-github-unterscheidet",
+          "label": "Ich kann erklären, was Git von GitHub unterscheidet.",
+          "checked": false,
+          "line": 24
+        },
+        {
+          "id": "todo-25-ich-verstehe-arbeitsordner-staging-area-und-repository",
+          "label": "Ich verstehe Arbeitsordner, Staging Area und Repository.",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-26-ich-kann-mit-git-status-meinen-aktuellen-stand-lesen",
+          "label": "Ich kann mit `git status` meinen aktuellen Stand lesen.",
+          "checked": false,
+          "line": 26
+        },
+        {
+          "id": "todo-30-ich-kann-aenderungen-mit-git-add-und-git-commit-m-sauber-speichern",
+          "label": "Ich kann Änderungen mit `git add` und `git commit -m \"...\"` sauber speichern.",
+          "checked": false,
+          "line": 30
+        },
+        {
+          "id": "todo-31-ich-kann-ein-bestehendes-repository-mit-git-clone-herunterladen",
+          "label": "Ich kann ein bestehendes Repository mit `git clone` herunterladen.",
+          "checked": false,
+          "line": 31
+        },
+        {
+          "id": "todo-32-ich-kann-einen-eigenen-branch-erstellen-und-darin-arbeiten",
+          "label": "Ich kann einen eigenen Branch erstellen und darin arbeiten.",
+          "checked": false,
+          "line": 32
+        },
+        {
+          "id": "todo-33-ich-kann-meine-aenderungen-mit-git-push-auf-github-hochladen",
+          "label": "Ich kann meine Änderungen mit `git push` auf GitHub hochladen.",
+          "checked": false,
+          "line": 33
+        },
+        {
+          "id": "todo-34-ich-kann-mit-git-pull-origin-main-vor-einer-aufgabe-meinen-stand-aktualisieren",
+          "label": "Ich kann mit `git pull origin main` vor einer Aufgabe meinen Stand aktualisieren.",
+          "checked": false,
+          "line": 34
+        },
+        {
+          "id": "todo-35-ich-kann-branches-wechseln-ohne-meinen-arbeitsstand-zu-verlieren",
+          "label": "Ich kann Branches wechseln, ohne meinen Arbeitsstand zu verlieren.",
+          "checked": false,
+          "line": 35
+        },
+        {
+          "id": "todo-36-ich-kann-git-log-oneline-nutzen-um-die-letzten-commits-schneller-zu-verstehen",
+          "label": "Ich kann `git log --oneline` nutzen, um die letzten Commits schneller zu verstehen.",
+          "checked": false,
+          "line": 36
+        },
+        {
+          "id": "todo-37-ich-weiss-wofuer-eine-gitignore-da-ist",
+          "label": "Ich weiß, wofür eine `.gitignore` da ist.",
+          "checked": false,
+          "line": 37
+        },
+        {
+          "id": "todo-38-ich-kann-nach-getaner-arbeit-einen-lokalen-branch-wieder-loeschen",
+          "label": "Ich kann nach getaner Arbeit einen lokalen Branch wieder löschen.",
+          "checked": false,
+          "line": 38
+        },
+        {
+          "id": "todo-39-ich-weiss-wie-ich-einen-abgeschlossenen-branch-vollstaendig-aufraeume-lokal-remote-main-sync",
+          "label": "Ich weiß, wie ich einen abgeschlossenen Branch vollständig aufräume (lokal + remote + main sync).",
+          "checked": false,
+          "line": 39
+        },
+        {
+          "id": "todo-40-ich-verstehe-was-bei-einem-merge-konflikt-grundsaetzlich-passiert",
+          "label": "Ich verstehe, was bei einem Merge-Konflikt grundsätzlich passiert.",
+          "checked": false,
+          "line": 40
+        },
+        {
+          "id": "todo-44-ich-kenne-den-unterschied-zwischen-git-revert-und-riskanteren-eingriffen-in-die-historie",
+          "label": "Ich kenne den Unterschied zwischen `git revert` und riskanteren Eingriffen in die Historie.",
+          "checked": false,
+          "line": 44
+        },
+        {
+          "id": "todo-45-ich-kann-unfertige-aenderungen-kurz-mit-git-stash-parken",
+          "label": "Ich kann unfertige Änderungen kurz mit `git stash` parken.",
+          "checked": false,
+          "line": 45
+        },
+        {
+          "id": "todo-46-ich-kann-git-befehle-nicht-nur-ausfuehren-sondern-passend-zur-situation-auswaehlen",
+          "label": "Ich kann Git-Befehle nicht nur ausführen, sondern passend zur Situation auswaehlen.",
+          "checked": false,
+          "line": 46
+        },
+        {
+          "id": "todo-47-ich-kann-typische-fehlersituationen-erst-mit-git-status-analysieren-und-dann-ruhig-loesen",
+          "label": "Ich kann typische Fehlersituationen erst mit `git status` analysieren und dann ruhig loesen.",
+          "checked": false,
+          "line": 47
+        }
+      ],
+      "contentPath": "/content/library/04-git/00-was-ist-git.md",
+      "routePath": "/bibliothek/04-git/00-was-ist-git"
+    },
+    {
+      "moduleId": "04-git",
+      "title": "Git: Grundlagen und Einstieg",
+      "filename": "01-git-grundlagen.md",
+      "summary": "Automatisch aus 01-git-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Was ist Git?",
+          "anchor": "was-ist-git",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wofür wird Git im Kurs genutzt?",
+          "anchor": "wofuer-wird-git-im-kurs-genutzt",
+          "sourceHeading": "##",
+          "startLine": 8
+        },
+        {
+          "id": 3,
+          "title": "Das Arbeitsmodell von Git",
+          "anchor": "das-arbeitsmodell-von-git",
+          "sourceHeading": "##",
+          "startLine": 13
+        },
+        {
+          "id": 4,
+          "title": "Der Grundablauf im Alltag",
+          "anchor": "der-grundablauf-im-alltag",
+          "sourceHeading": "##",
+          "startLine": 22
+        },
+        {
+          "id": 5,
+          "title": "Branches: sicher getrennt arbeiten",
+          "anchor": "branches-sicher-getrennt-arbeiten",
+          "sourceHeading": "##",
+          "startLine": 33
+        },
+        {
+          "id": 6,
+          "title": "Remotes und GitHub",
+          "anchor": "remotes-und-github",
+          "sourceHeading": "##",
+          "startLine": 41
+        },
+        {
+          "id": 7,
+          "title": "Sichere Rückwege bei Fehlern",
+          "anchor": "sichere-rueckwege-bei-fehlern",
+          "sourceHeading": "##",
+          "startLine": 50
+        },
+        {
+          "id": 8,
+          "title": "Wie du diesen Artikel nutzen solltest",
+          "anchor": "wie-du-diesen-artikel-nutzen-solltest",
+          "sourceHeading": "##",
+          "startLine": 60
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/04-git/01-git-grundlagen.md",
+      "routePath": "/bibliothek/04-git/01-git-grundlagen"
+    },
+    {
+      "moduleId": "04-git",
+      "title": "Git Branch-Workflow: Von der Idee bis zum Aufraeumen",
+      "filename": "02-git-branch-workflow.md",
+      "summary": "Automatisch aus 02-git-branch-workflow.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Warum hat jede Übung einen eigenen Branch?",
+          "anchor": "warum-hat-jede-uebung-einen-eigenen-branch",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Lektion 1: main aktualisieren und Branch erstellen",
+          "anchor": "lektion-1-main-aktualisieren-und-branch-erstellen",
+          "sourceHeading": "##",
+          "startLine": 24
+        },
+        {
+          "id": 3,
+          "title": "Lektion 2: Commiten und pushen",
+          "anchor": "lektion-2-commiten-und-pushen",
+          "sourceHeading": "##",
+          "startLine": 38
+        },
+        {
+          "id": 4,
+          "title": "Lektion 3: Pull Request auf GitHub erstellen",
+          "anchor": "lektion-3-pull-request-auf-github-erstellen",
+          "sourceHeading": "##",
+          "startLine": 50
+        },
+        {
+          "id": 5,
+          "title": "Lektion 4: Branch aufräumen",
+          "anchor": "lektion-4-branch-aufraeumen",
+          "sourceHeading": "##",
+          "startLine": 58
+        },
+        {
+          "id": 6,
+          "title": "Überblick: Was passiert wo?",
+          "anchor": "ueberblick-was-passiert-wo",
+          "sourceHeading": "##",
+          "startLine": 92
+        },
+        {
+          "id": 7,
+          "title": "Haeufige Frage: Warum sehe ich den Branch noch lokal, obwohl er auf GitHub gelöscht ist?",
+          "anchor": "haeufige-frage-warum-sehe-ich-den-branch-noch-lokal-obwohl-er-auf-github-geloescht-ist",
+          "sourceHeading": "##",
+          "startLine": 101
+        },
+        {
+          "id": 8,
+          "title": "Kurz-Checkliste nach einem Merge",
+          "anchor": "kurz-checkliste-nach-einem-merge",
+          "sourceHeading": "##",
+          "startLine": 113
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-115-remote-branch-auf-github-geloescht-checkbox-oder-git-push-origin-delete",
+          "label": "Remote-Branch auf GitHub gelöscht (Checkbox oder `git push origin --delete`)",
+          "checked": false,
+          "line": 115
+        },
+        {
+          "id": "todo-116-git-checkout-main-git-pull-origin-main",
+          "label": "`git checkout main` + `git pull origin main`",
+          "checked": false,
+          "line": 116
+        },
+        {
+          "id": "todo-117-git-branch-d-branch-name",
+          "label": "`git branch -d <branch-name>`",
+          "checked": false,
+          "line": 117
+        },
+        {
+          "id": "todo-118-optional-git-fetch-prune",
+          "label": "Optional: `git fetch --prune`",
+          "checked": false,
+          "line": 118
+        }
+      ],
+      "contentPath": "/content/library/04-git/02-git-branch-workflow.md",
+      "routePath": "/bibliothek/04-git/02-git-branch-workflow"
+    },
+    {
+      "moduleId": "04-git",
+      "title": "Git-Befehlsuebersicht",
+      "filename": "03-git-befehlsuebersicht.md",
+      "summary": "Automatisch aus 03-git-befehlsuebersicht.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Orientierung",
+          "anchor": "orientierung",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Setup und Start",
+          "anchor": "setup-und-start",
+          "sourceHeading": "##",
+          "startLine": 15
+        },
+        {
+          "id": 3,
+          "title": "Änderungen speichern",
+          "anchor": "aenderungen-speichern",
+          "sourceHeading": "##",
+          "startLine": 24
+        },
+        {
+          "id": 4,
+          "title": "Branches und Zusammenarbeit",
+          "anchor": "branches-und-zusammenarbeit",
+          "sourceHeading": "##",
+          "startLine": 32
+        },
+        {
+          "id": 5,
+          "title": "Synchronisieren",
+          "anchor": "synchronisieren",
+          "sourceHeading": "##",
+          "startLine": 41
+        },
+        {
+          "id": 6,
+          "title": "Fehler sicher abfangen",
+          "anchor": "fehler-sicher-abfangen",
+          "sourceHeading": "##",
+          "startLine": 48
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/04-git/03-git-befehlsuebersicht.md",
+      "routePath": "/bibliothek/04-git/03-git-befehlsuebersicht"
+    },
+    {
+      "moduleId": "04-git",
+      "title": "Versionsverwaltung und GitOps: Einordnung",
+      "filename": "04-version-control-und-gitops-grundlagen.md",
+      "summary": "Automatisch aus 04-version-control-und-gitops-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Das Problem, das Versionsverwaltung löst",
+          "anchor": "das-problem-das-versionsverwaltung-loest",
+          "sourceHeading": "##",
+          "startLine": 10
+        },
+        {
+          "id": 2,
+          "title": "Wie Git Änderungen speichert",
+          "anchor": "wie-git-aenderungen-speichert",
+          "sourceHeading": "##",
+          "startLine": 27
+        },
+        {
+          "id": 3,
+          "title": "Paralleles Arbeiten mit Branches",
+          "anchor": "paralleles-arbeiten-mit-branches",
+          "sourceHeading": "##",
+          "startLine": 43
+        },
+        {
+          "id": 4,
+          "title": "Von Git zu GitOps",
+          "anchor": "von-git-zu-gitops",
+          "sourceHeading": "##",
+          "startLine": 58
+        },
+        {
+          "id": 5,
+          "title": "Git als Single Source of Truth",
+          "anchor": "git-als-single-source-of-truth",
+          "sourceHeading": "##",
+          "startLine": 76
+        },
+        {
+          "id": 6,
+          "title": "Einordnung im Kurs",
+          "anchor": "einordnung-im-kurs",
+          "sourceHeading": "##",
+          "startLine": 91
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/04-git/04-version-control-und-gitops-grundlagen.md",
+      "routePath": "/bibliothek/04-git/04-version-control-und-gitops-grundlagen"
+    },
+    {
+      "moduleId": "04-git",
+      "title": "Git-Befehlsuebersicht",
+      "filename": "git-befehle-cheat-sheet.md",
+      "summary": "Automatisch aus git-befehle-cheat-sheet.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "1. 🔧 Setup & Überprüfung",
+          "anchor": "1-setup-ueberpruefung",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "2. 🚀 Ein Projekt starten",
+          "anchor": "2-ein-projekt-starten",
+          "sourceHeading": "##",
+          "startLine": 19
+        },
+        {
+          "id": 3,
+          "title": "3. 🌿 Sicher arbeiten (Branches)",
+          "anchor": "3-sicher-arbeiten-branches",
+          "sourceHeading": "##",
+          "startLine": 32
+        },
+        {
+          "id": 4,
+          "title": "4. 💾 Der tägliche Workflow (Speichern & Hochladen)",
+          "anchor": "4-der-taegliche-workflow-speichern-hochladen",
+          "sourceHeading": "##",
+          "startLine": 43
+        },
+        {
+          "id": 5,
+          "title": "5. 🔄 Updates holen (Synchronisieren)",
+          "anchor": "5-updates-holen-synchronisieren",
+          "sourceHeading": "##",
+          "startLine": 56
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/04-git/git-befehle-cheat-sheet.md",
+      "routePath": "/bibliothek/04-git/git-befehle-cheat-sheet"
+    },
+    {
+      "moduleId": "05-terminal",
+      "title": "Artikel: Terminal",
+      "filename": "00-terminal-kommandozeile-modulguide.md",
+      "summary": "Automatisch aus 00-terminal-kommandozeile-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 11
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 48
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-17-ich-kann-das-terminal-in-vs-code-oeffnen-und-nutzen",
+          "label": "Ich kann das Terminal in VS Code öffnen und nutzen.",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-18-ich-weiss-was-eine-shell-ist-und-kenne-den-unterschied-zu-einem-terminal-fenster",
+          "label": "Ich weiß, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.",
+          "checked": false,
+          "line": 18
+        },
+        {
+          "id": "todo-19-ich-weiss-welche-shell-auf-meinem-system-standard-ist-powershell-auf-windows-zsh-auf-macos",
+          "label": "Ich weiß, welche Shell auf meinem System Standard ist (PowerShell auf Windows, zsh auf macOS).",
+          "checked": false,
+          "line": 19
+        },
+        {
+          "id": "todo-20-ich-kann-mit-pwd-oder-cd-auf-windows-meinen-aktuellen-standort-pruefen",
+          "label": "Ich kann mit `pwd` (oder `cd` auf Windows) meinen aktuellen Standort prüfen.",
+          "checked": false,
+          "line": 20
+        },
+        {
+          "id": "todo-21-ich-kann-mit-ls-oder-dir-den-ordnerinhalt-anzeigen",
+          "label": "Ich kann mit `ls` oder `dir` den Ordnerinhalt anzeigen.",
+          "checked": false,
+          "line": 21
+        },
+        {
+          "id": "todo-22-ich-kann-mit-cd-ordnername-in-einen-ordner-navigieren",
+          "label": "Ich kann mit `cd <ordnername>` in einen Ordner navigieren.",
+          "checked": false,
+          "line": 22
+        },
+        {
+          "id": "todo-23-ich-kann-mit-cd-eine-ebene-nach-oben-gehen",
+          "label": "Ich kann mit `cd ..` eine Ebene nach oben gehen.",
+          "checked": false,
+          "line": 23
+        },
+        {
+          "id": "todo-24-ich-kann-neue-ordner-mit-mkdir-ordnername-erstellen",
+          "label": "Ich kann neue Ordner mit `mkdir <ordnername>` erstellen.",
+          "checked": false,
+          "line": 24
+        },
+        {
+          "id": "todo-25-ich-kann-neue-dateien-mit-new-item-datei-md-windows-oder-touch-datei-md-macos-linux-anlegen",
+          "label": "Ich kann neue Dateien mit `New-Item datei.md` (Windows) oder `touch datei.md` (macOS/Linux) anlegen.",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-26-ich-kann-dateien-mit-rm-macos-linux-oder-del-windows-loeschen",
+          "label": "Ich kann Dateien mit `rm` (macOS/Linux) oder `del` (Windows) löschen.",
+          "checked": false,
+          "line": 26
+        },
+        {
+          "id": "todo-31-ich-verstehe-relative-vs-absolute-pfade-im-dateisystem",
+          "label": "Ich verstehe relative vs. absolute Pfade im Dateisystem.",
+          "checked": false,
+          "line": 31
+        },
+        {
+          "id": "todo-32-ich-kann-dateien-mit-mv-verschieben-und-umbenennen",
+          "label": "Ich kann Dateien mit `mv` verschieben und umbenennen.",
+          "checked": false,
+          "line": 32
+        },
+        {
+          "id": "todo-33-ich-kann-dateien-mit-cp-kopieren",
+          "label": "Ich kann Dateien mit `cp` kopieren.",
+          "checked": false,
+          "line": 33
+        },
+        {
+          "id": "todo-34-ich-nutze-die-tab-taste-zur-auto-vervollstaendigung",
+          "label": "Ich nutze die Tab-Taste zur Auto-Vervollständigung.",
+          "checked": false,
+          "line": 34
+        },
+        {
+          "id": "todo-35-ich-nutze-die-pfeiltasten-um-fruehere-befehle-schnell-zu-wiederholen",
+          "label": "Ich nutze die Pfeiltasten, um frühere Befehle schnell zu wiederholen.",
+          "checked": false,
+          "line": 35
+        },
+        {
+          "id": "todo-36-ich-kann-mit-strg-c-einen-laufenden-prozess-abbrechen",
+          "label": "Ich kann mit `Strg + C` einen laufenden Prozess abbrechen.",
+          "checked": false,
+          "line": 36
+        },
+        {
+          "id": "todo-37-ich-kann-mit-clear-oder-cls-das-terminal-aufraeumen",
+          "label": "Ich kann mit `clear` oder `cls` das Terminal aufräumen.",
+          "checked": false,
+          "line": 37
+        },
+        {
+          "id": "todo-38-ich-weiss-was-eine-shell-ist-und-kenne-den-unterschied-zu-einem-terminal-fenster",
+          "label": "Ich weiß, was eine Shell ist und kenne den Unterschied zu einem Terminal-Fenster.",
+          "checked": false,
+          "line": 38
+        },
+        {
+          "id": "todo-39-ich-weiss-warum-sich-terminal-befehle-zwischen-windows-und-macos-unterscheiden-git-befehle-aber-nicht",
+          "label": "Ich weiß, warum sich Terminal-Befehle zwischen Windows und macOS unterscheiden, Git-Befehle aber nicht.",
+          "checked": false,
+          "line": 39
+        },
+        {
+          "id": "todo-43-ich-kombiniere-mehrere-befehle-fluessig-hintereinander",
+          "label": "Ich kombiniere mehrere Befehle flüssig hintereinander.",
+          "checked": false,
+          "line": 43
+        },
+        {
+          "id": "todo-44-ich-nutze-terminal-shortcuts-routiniert-und-spare-mir-damit-zeit",
+          "label": "Ich nutze Terminal-Shortcuts routiniert und spare mir damit Zeit.",
+          "checked": false,
+          "line": 44
+        },
+        {
+          "id": "todo-45-ich-kann-fehlermeldungen-im-terminal-lesen-und-verstehen-was-schiefgelaufen-ist",
+          "label": "Ich kann Fehlermeldungen im Terminal lesen und verstehen, was schiefgelaufen ist.",
+          "checked": false,
+          "line": 45
+        },
+        {
+          "id": "todo-46-ich-arbeite-ueberwiegend-im-terminal-statt-mit-der-graphischen-oberflaeche",
+          "label": "Ich arbeite überwiegend im Terminal statt mit der graphischen Oberfläche.",
+          "checked": false,
+          "line": 46
+        }
+      ],
+      "contentPath": "/content/library/05-terminal/00-terminal-kommandozeile-modulguide.md",
+      "routePath": "/bibliothek/05-terminal/00-terminal-kommandozeile-modulguide"
+    },
+    {
+      "moduleId": "05-terminal",
+      "title": "Terminal: Grundlagen und Einstieg",
+      "filename": "01-terminal-grundlagen.md",
+      "summary": "Automatisch aus 01-terminal-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Was ist ein Terminal?",
+          "anchor": "was-ist-ein-terminal",
+          "sourceHeading": "##",
+          "startLine": 3
+        },
+        {
+          "id": 2,
+          "title": "Wofür wird das Terminal genutzt?",
+          "anchor": "wofuer-wird-das-terminal-genutzt",
+          "sourceHeading": "##",
+          "startLine": 6
+        },
+        {
+          "id": 3,
+          "title": "Die wichtigsten Terminal-Befehle (Beispiele)",
+          "anchor": "die-wichtigsten-terminal-befehle-beispiele",
+          "sourceHeading": "##",
+          "startLine": 12
+        },
+        {
+          "id": 4,
+          "title": "Warum ist das Terminal ideal für Vibe Coding?",
+          "anchor": "warum-ist-das-terminal-ideal-fuer-vibe-coding",
+          "sourceHeading": "##",
+          "startLine": 27
+        },
+        {
+          "id": 5,
+          "title": "Terminal-Befehle vs. Git-Befehle - was ist der Unterschied?",
+          "anchor": "terminal-befehle-vs-git-befehle-was-ist-der-unterschied",
+          "sourceHeading": "##",
+          "startLine": 40
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/05-terminal/01-terminal-grundlagen.md",
+      "routePath": "/bibliothek/05-terminal/01-terminal-grundlagen"
+    },
+    {
+      "moduleId": "05-terminal",
+      "title": "Terminal-Typen: Welches Terminal nutze ich wann?",
+      "filename": "02-terminal-typen.md",
+      "summary": "Automatisch aus 02-terminal-typen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Das Prinzip: Shell vs. Terminal",
+          "anchor": "das-prinzip-shell-vs-terminal",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Gaengige Shells nach Betriebssystem",
+          "anchor": "gaengige-shells-nach-betriebssystem",
+          "sourceHeading": "##",
+          "startLine": 24
+        },
+        {
+          "id": 3,
+          "title": "Unterschiede Windows vs. macOS im Alltag",
+          "anchor": "unterschiede-windows-vs-macos-im-alltag",
+          "sourceHeading": "##",
+          "startLine": 48
+        },
+        {
+          "id": 4,
+          "title": "Terminal in VS Code vs. System-Terminal",
+          "anchor": "terminal-in-vs-code-vs-system-terminal",
+          "sourceHeading": "##",
+          "startLine": 64
+        },
+        {
+          "id": 5,
+          "title": "VS Code Terminal: mehrere Shells gleichzeitig",
+          "anchor": "vs-code-terminal-mehrere-shells-gleichzeitig",
+          "sourceHeading": "##",
+          "startLine": 96
+        },
+        {
+          "id": 6,
+          "title": "Beliebte Terminal-Apps (optional, für Fortgeschrittene)",
+          "anchor": "beliebte-terminal-apps-optional-fuer-fortgeschrittene",
+          "sourceHeading": "##",
+          "startLine": 104
+        },
+        {
+          "id": 7,
+          "title": "Kurz zusammengefasst",
+          "anchor": "kurz-zusammengefasst",
+          "sourceHeading": "##",
+          "startLine": 118
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/05-terminal/02-terminal-typen.md",
+      "routePath": "/bibliothek/05-terminal/02-terminal-typen"
+    },
+    {
+      "moduleId": "05-terminal",
+      "title": "Terminal-Befehlsuebersicht",
+      "filename": "03-terminal-befehlsuebersicht.md",
+      "summary": "Automatisch aus 03-terminal-befehlsuebersicht.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Navigation und Orientierung",
+          "anchor": "navigation-und-orientierung",
+          "sourceHeading": "##",
+          "startLine": 9
+        },
+        {
+          "id": 2,
+          "title": "Dateien und Ordner verwalten",
+          "anchor": "dateien-und-ordner-verwalten",
+          "sourceHeading": "##",
+          "startLine": 18
+        },
+        {
+          "id": 3,
+          "title": "Mit VS Code arbeiten",
+          "anchor": "mit-vs-code-arbeiten",
+          "sourceHeading": "##",
+          "startLine": 29
+        },
+        {
+          "id": 4,
+          "title": "Praktische Tipps",
+          "anchor": "praktische-tipps",
+          "sourceHeading": "##",
+          "startLine": 36
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/05-terminal/03-terminal-befehlsuebersicht.md",
+      "routePath": "/bibliothek/05-terminal/03-terminal-befehlsuebersicht"
+    },
+    {
+      "moduleId": "06-ai-instructions",
+      "title": "Artikel: AI Instructions",
+      "filename": "00-ai-instructions-prompting-context-modulguide.md",
+      "summary": "Automatisch aus 00-ai-instructions-prompting-context-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 11
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 41
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-17-ich-verstehe-dass-ki-assistenten-nur-das-verarbeiten-koennen-was-ich-ihnen-gebe-kein-magischer-zugriff",
+          "label": "Ich verstehe, dass KI-Assistenten nur das verarbeiten können, was ich ihnen gebe (kein magischer Zugriff).",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-18-ich-kenne-die-grundbausteine-eines-guten-prompts-rolle-aufgabe-kontext-format",
+          "label": "Ich kenne die Grundbausteine eines guten Prompts: Rolle, Aufgabe, Kontext, Format.",
+          "checked": false,
+          "line": 18
+        },
+        {
+          "id": "todo-19-ich-kann-zwischen-zero-shot-prompting-ohne-beispiele-und-few-shot-prompting-mit-beispielen-unterscheiden",
+          "label": "Ich kann zwischen Zero-Shot Prompting (ohne Beispiele) und Few-Shot Prompting (mit Beispielen) unterscheiden.",
+          "checked": false,
+          "line": 19
+        },
+        {
+          "id": "todo-20-ich-kann-in-github-copilot-chat-gezielt-dateien-und-code-als-kontext-referenzieren",
+          "label": "Ich kann in GitHub Copilot Chat gezielt Dateien und Code als Kontext referenzieren.",
+          "checked": false,
+          "line": 20
+        },
+        {
+          "id": "todo-21-ich-verstehe-dass-der-erste-output-der-ki-selten-perfekt-ist-und-nutze-iteratives-prompting-im-dialog",
+          "label": "Ich verstehe, dass der erste Output der KI selten perfekt ist und nutze iteratives Prompting im Dialog.",
+          "checked": false,
+          "line": 21
+        },
+        {
+          "id": "todo-22-ich-kann-einfache-klare-aufforderungen-formulieren-statt-zu-hoffen-dass-die-ki-mein-problem-loest",
+          "label": "Ich kann einfache, klare Aufforderungen formulieren, statt zu hoffen, dass die KI mein Problem löst.",
+          "checked": false,
+          "line": 22
+        },
+        {
+          "id": "todo-26-ich-kann-ein-einfaches-prd-product-requirements-document-schreiben-das-die-ki-verstehen-kann",
+          "label": "Ich kann ein einfaches PRD (Product Requirements Document) schreiben, das die KI verstehen kann.",
+          "checked": false,
+          "line": 26
+        },
+        {
+          "id": "todo-27-ich-verstehe-warum-strukturierte-daten-z-b-json-einer-ki-helfen-besser-zu-antworten",
+          "label": "Ich verstehe, warum strukturierte Daten (z. B. JSON) einer KI helfen, besser zu antworten.",
+          "checked": false,
+          "line": 27
+        },
+        {
+          "id": "todo-28-ich-kann-fehlermeldungen-kopieren-und-der-ki-zeigen-um-probleme-zu-debuggen",
+          "label": "Ich kann Fehlermeldungen kopieren und der KI zeigen, um Probleme zu debuggen.",
+          "checked": false,
+          "line": 28
+        },
+        {
+          "id": "todo-29-ich-nutze-den-chat-gezielt-um-code-erklaeren-zu-lassen-oder-dokumentation-zu-generieren",
+          "label": "Ich nutze den Chat gezielt, um Code erklären zu lassen oder Dokumentation zu generieren.",
+          "checked": false,
+          "line": 29
+        },
+        {
+          "id": "todo-30-ich-weiss-wann-ich-der-ki-ein-konkretes-beispiel-zeigen-sollte-damit-sie-besser-versteht",
+          "label": "Ich weiß, wann ich der KI ein konkretes Beispiel zeigen sollte, damit sie besser versteht.",
+          "checked": false,
+          "line": 30
+        },
+        {
+          "id": "todo-31-ich-kann-in-mehreren-lektionen-arbeiten-statt-die-ganze-aufgabe-auf-einmal-zu-prompten",
+          "label": "Ich kann in mehreren Lektionen arbeiten, statt die ganze Aufgabe auf einmal zu prompten.",
+          "checked": false,
+          "line": 31
+        },
+        {
+          "id": "todo-35-ich-kann-komplexe-anforderungen-aus-einem-prd-in-mehreren-gezielten-prompts-umsetzen",
+          "label": "Ich kann komplexe Anforderungen aus einem PRD in mehreren gezielten Prompts umsetzen.",
+          "checked": false,
+          "line": 35
+        },
+        {
+          "id": "todo-36-ich-erkenne-wenn-die-ki-halluziniert-also-dinge-erfindet-und-gebe-ihr-bessere-kontext-grenzen",
+          "label": "Ich erkenne, wenn die KI halluziniert (also Dinge erfindet) und gebe ihr bessere Kontext-Grenzen.",
+          "checked": false,
+          "line": 36
+        },
+        {
+          "id": "todo-37-ich-nutze-die-ki-um-meine-eigenen-code-entscheidungen-zu-hinterfragen-und-zu-verbessern",
+          "label": "Ich nutze die KI, um meine eigenen Code-Entscheidungen zu hinterfragen und zu verbessern.",
+          "checked": false,
+          "line": 37
+        },
+        {
+          "id": "todo-38-ich-kann-komplette-komponenten-und-workflows-durch-kluges-prompting-und-iteration-bauen",
+          "label": "Ich kann komplette Komponenten und Workflows durch kluges Prompting und Iteration bauen.",
+          "checked": false,
+          "line": 38
+        },
+        {
+          "id": "todo-39-ich-verstehe-die-grenzen-der-ki-und-weiss-welche-aufgaben-besser-manuell-geloest-werden",
+          "label": "Ich verstehe die Grenzen der KI und weiß, welche Aufgaben besser manuell gelöst werden.",
+          "checked": false,
+          "line": 39
+        }
+      ],
+      "contentPath": "/content/library/06-ai-instructions/00-ai-instructions-prompting-context-modulguide.md",
+      "routePath": "/bibliothek/06-ai-instructions/00-ai-instructions-prompting-context-modulguide"
+    },
+    {
+      "moduleId": "06-ai-instructions",
+      "title": "Prompting: Grundlagen",
+      "filename": "01-prompting-grundlagen.md",
+      "summary": "Automatisch aus 01-prompting-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Die vier Grundbausteine eines Prompts",
+          "anchor": "die-vier-grundbausteine-eines-prompts",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Zero-Shot vs. Few-Shot Prompting",
+          "anchor": "zero-shot-vs-few-shot-prompting",
+          "sourceHeading": "##",
+          "startLine": 17
+        },
+        {
+          "id": 3,
+          "title": "Die KI weiß nichts von deinem Projekt",
+          "anchor": "die-ki-weiss-nichts-von-deinem-projekt",
+          "sourceHeading": "##",
+          "startLine": 23
+        },
+        {
+          "id": 4,
+          "title": "Beispiel: Umlaute im Inhalt, aber nicht im Dateinamen",
+          "anchor": "beispiel-umlaute-im-inhalt-aber-nicht-im-dateinamen",
+          "sourceHeading": "##",
+          "startLine": 31
+        },
+        {
+          "id": 5,
+          "title": "Iteratives Prompting",
+          "anchor": "iteratives-prompting",
+          "sourceHeading": "##",
+          "startLine": 51
+        },
+        {
+          "id": 6,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 62
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-64-ich-kenne-die-vier-grundbausteine-eines-prompts-rolle-aufgabe-kontext-format",
+          "label": "Ich kenne die vier Grundbausteine eines Prompts: Rolle, Aufgabe, Kontext, Format.",
+          "checked": false,
+          "line": 64
+        },
+        {
+          "id": "todo-65-ich-kann-zwischen-zero-shot-und-few-shot-prompting-unterscheiden",
+          "label": "Ich kann zwischen Zero-Shot und Few-Shot Prompting unterscheiden.",
+          "checked": false,
+          "line": 65
+        },
+        {
+          "id": "todo-66-ich-verstehe-dass-die-ki-nur-verarbeiten-kann-was-ich-ihr-gebe",
+          "label": "Ich verstehe, dass die KI nur verarbeiten kann, was ich ihr gebe.",
+          "checked": false,
+          "line": 66
+        },
+        {
+          "id": "todo-67-ich-weiss-dass-der-erste-output-selten-perfekt-ist-und-nutze-iteratives-prompting",
+          "label": "Ich weiß, dass der erste Output selten perfekt ist, und nutze iteratives Prompting.",
+          "checked": false,
+          "line": 67
+        },
+        {
+          "id": "todo-68-ich-kann-gezielt-dateien-im-copilot-chat-als-kontext-referenzieren",
+          "label": "Ich kann gezielt Dateien im Copilot Chat als Kontext referenzieren.",
+          "checked": false,
+          "line": 68
+        }
+      ],
+      "contentPath": "/content/library/06-ai-instructions/01-prompting-grundlagen.md",
+      "routePath": "/bibliothek/06-ai-instructions/01-prompting-grundlagen"
+    },
+    {
+      "moduleId": "06-ai-instructions",
+      "title": "PRD: Grundlagen",
+      "filename": "02-prd-grundlagen.md",
+      "summary": "Automatisch aus 02-prd-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Wofuer brauche ich ein PRD?",
+          "anchor": "wofuer-brauche-ich-ein-prd",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "PRD als KI-Kontext",
+          "anchor": "prd-als-ki-kontext",
+          "sourceHeading": "##",
+          "startLine": 18
+        },
+        {
+          "id": 3,
+          "title": "Aufbau eines PRD",
+          "anchor": "aufbau-eines-prd",
+          "sourceHeading": "##",
+          "startLine": 32
+        },
+        {
+          "id": 4,
+          "title": "1. Vision & Zielsetzung",
+          "anchor": "1-vision-zielsetzung",
+          "sourceHeading": "##",
+          "startLine": 37
+        },
+        {
+          "id": 5,
+          "title": "2. Kernfunktionen (Features)",
+          "anchor": "2-kernfunktionen-features",
+          "sourceHeading": "##",
+          "startLine": 40
+        },
+        {
+          "id": 6,
+          "title": "3. Technische Leitplanken",
+          "anchor": "3-technische-leitplanken",
+          "sourceHeading": "##",
+          "startLine": 43
+        },
+        {
+          "id": 7,
+          "title": "4. User Stories",
+          "anchor": "4-user-stories",
+          "sourceHeading": "##",
+          "startLine": 46
+        },
+        {
+          "id": 8,
+          "title": "5. Definition of Done",
+          "anchor": "5-definition-of-done",
+          "sourceHeading": "##",
+          "startLine": 49
+        },
+        {
+          "id": 9,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 57
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-59-ich-weiss-was-ein-prd-ist-und-wofuer-es-genutzt-wird",
+          "label": "Ich weiss, was ein PRD ist und wofuer es genutzt wird.",
+          "checked": false,
+          "line": 59
+        },
+        {
+          "id": "todo-60-ich-verstehe-warum-ein-prd-als-ki-kontext-wichtig-ist",
+          "label": "Ich verstehe, warum ein PRD als KI-Kontext wichtig ist.",
+          "checked": false,
+          "line": 60
+        },
+        {
+          "id": "todo-61-ich-kenne-die-fuenf-standard-abschnitte-eines-prd",
+          "label": "Ich kenne die fünf Standard-Abschnitte eines PRD.",
+          "checked": false,
+          "line": 61
+        },
+        {
+          "id": "todo-62-ich-kann-ein-einfaches-prd-fuer-mein-eigenes-projekt-schreiben",
+          "label": "Ich kann ein einfaches PRD für mein eigenes Projekt schreiben.",
+          "checked": false,
+          "line": 62
+        }
+      ],
+      "contentPath": "/content/library/06-ai-instructions/02-prd-grundlagen.md",
+      "routePath": "/bibliothek/06-ai-instructions/02-prd-grundlagen"
+    },
+    {
+      "moduleId": "06-ai-instructions",
+      "title": "Prompt-Dateien: Grundlagen",
+      "filename": "03-prompt-dateien-grundlagen.md",
+      "summary": "Automatisch aus 03-prompt-dateien-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Warum ist das Context-Engineering?",
+          "anchor": "warum-ist-das-context-engineering",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Wo liegen Prompt-Dateien?",
+          "anchor": "wo-liegen-prompt-dateien",
+          "sourceHeading": "##",
+          "startLine": 19
+        },
+        {
+          "id": 3,
+          "title": "Aufbau einer Prompt-Datei",
+          "anchor": "aufbau-einer-prompt-datei",
+          "sourceHeading": "##",
+          "startLine": 27
+        },
+        {
+          "id": 4,
+          "title": "HTML-Kommentare für Lernende",
+          "anchor": "html-kommentare-fuer-lernende",
+          "sourceHeading": "##",
+          "startLine": 46
+        },
+        {
+          "id": 5,
+          "title": "Aufruf im Chat",
+          "anchor": "aufruf-im-chat",
+          "sourceHeading": "##",
+          "startLine": 59
+        },
+        {
+          "id": 6,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 68
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-70-ich-verstehe-was-eine-prompt-datei-ist-und-welchen-zweck-sie-hat",
+          "label": "Ich verstehe, was eine Prompt-Datei ist und welchen Zweck sie hat.",
+          "checked": false,
+          "line": 70
+        },
+        {
+          "id": "todo-71-ich-weiss-dass-prompt-dateien-in-github-prompts-liegen-muessen",
+          "label": "Ich weiss, dass Prompt-Dateien in `.github/prompts/` liegen muessen.",
+          "checked": false,
+          "line": 71
+        },
+        {
+          "id": "todo-72-ich-verstehe-dass-das-frontmatter-immer-ganz-oben-stehen-muss",
+          "label": "Ich verstehe, dass das Frontmatter immer ganz oben stehen muss.",
+          "checked": false,
+          "line": 72
+        },
+        {
+          "id": "todo-73-ich-kann-eine-prompt-datei-ueber-im-copilot-chat-aufrufen",
+          "label": "Ich kann eine Prompt-Datei über `/` im Copilot Chat aufrufen.",
+          "checked": false,
+          "line": 73
+        }
+      ],
+      "contentPath": "/content/library/06-ai-instructions/03-prompt-dateien-grundlagen.md",
+      "routePath": "/bibliothek/06-ai-instructions/03-prompt-dateien-grundlagen"
+    },
+    {
+      "moduleId": "07-architecture-foundations",
+      "title": "Artikel: Architecture Foundations",
+      "filename": "00-architecture-foundations-projektstruktur-modulguide.md",
+      "summary": "Automatisch aus 00-architecture-foundations-projektstruktur-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 10
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 28
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-15-ich-kann-erklaeren-warum-projektstruktur-fuer-vibe-coding-wichtig-ist",
+          "label": "Ich kann erklären, warum Projektstruktur für Vibe Coding wichtig ist.",
+          "checked": false,
+          "line": 15
+        },
+        {
+          "id": "todo-16-ich-kann-beschreiben-was-eine-komponente-ist-und-wofuer-sie-verantwortlich-ist",
+          "label": "Ich kann beschreiben, was eine Komponente ist und wofür sie verantwortlich ist.",
+          "checked": false,
+          "line": 16
+        },
+        {
+          "id": "todo-17-ich-kann-die-ordnerstruktur-meines-projekts-der-ki-in-einem-prompt-erklaeren",
+          "label": "Ich kann die Ordnerstruktur meines Projekts der KI in einem Prompt erklären.",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-20-ich-kann-den-datenfluss-in-meiner-app-in-einfachen-worten-beschreiben",
+          "label": "Ich kann den Datenfluss in meiner App in einfachen Worten beschreiben.",
+          "checked": false,
+          "line": 20
+        },
+        {
+          "id": "todo-21-ich-erkenne-wann-eine-aufgabe-ein-strukturthema-ist-nicht-nur-ein-coding-thema",
+          "label": "Ich erkenne, wann eine Aufgabe ein Strukturthema ist - nicht nur ein Coding-Thema.",
+          "checked": false,
+          "line": 21
+        },
+        {
+          "id": "todo-22-ich-kann-benennen-welche-teile-meines-projekts-zusammengehoeren",
+          "label": "Ich kann benennen, welche Teile meines Projekts zusammengehören.",
+          "checked": false,
+          "line": 22
+        },
+        {
+          "id": "todo-25-ich-kann-architekturentscheidungen-kurz-begruenden-z-b-warum-etwas-in-einen-eigenen-ordner-kommt",
+          "label": "Ich kann Architekturentscheidungen kurz begründen (z. B. warum etwas in einen eigenen Ordner kommt).",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-26-ich-entwickle-ein-vokabular-fuer-strukturentscheidungen-das-ich-im-team-und-im-prompt-nutzen-kann",
+          "label": "Ich entwickle ein Vokabular für Strukturentscheidungen, das ich im Team und im Prompt nutzen kann.",
+          "checked": false,
+          "line": 26
+        }
+      ],
+      "contentPath": "/content/library/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide.md",
+      "routePath": "/bibliothek/07-architecture-foundations/00-architecture-foundations-projektstruktur-modulguide"
+    },
+    {
+      "moduleId": "07-architecture-foundations",
+      "title": "Architecture Foundations: Grundlagen",
+      "filename": "01-architecture-foundations-grundlagen.md",
+      "summary": "Automatisch aus 01-architecture-foundations-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Warum braucht ein Projekt Struktur?",
+          "anchor": "warum-braucht-ein-projekt-struktur",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Komponenten-Denken: Was gehört zusammen?",
+          "anchor": "komponenten-denken-was-gehoert-zusammen",
+          "sourceHeading": "##",
+          "startLine": 25
+        },
+        {
+          "id": 3,
+          "title": "Ordnerstruktur als Kommunikation",
+          "anchor": "ordnerstruktur-als-kommunikation",
+          "sourceHeading": "##",
+          "startLine": 45
+        },
+        {
+          "id": 4,
+          "title": "Datenfluss in einfachen Worten",
+          "anchor": "datenfluss-in-einfachen-worten",
+          "sourceHeading": "##",
+          "startLine": 73
+        },
+        {
+          "id": 5,
+          "title": "Struktur der KI erklären",
+          "anchor": "struktur-der-ki-erklaeren",
+          "sourceHeading": "##",
+          "startLine": 97
+        },
+        {
+          "id": 6,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 118
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-120-ich-kann-in-einem-satz-erklaeren-warum-struktur-beim-prompting-hilft",
+          "label": "Ich kann in einem Satz erklären, warum Struktur beim Prompting hilft.",
+          "checked": false,
+          "line": 120
+        },
+        {
+          "id": "todo-121-ich-kann-benennen-wofuer-eine-komponente-in-meinem-projekt-verantwortlich-ist",
+          "label": "Ich kann benennen, wofuer eine Komponente in meinem Projekt verantwortlich ist.",
+          "checked": false,
+          "line": 121
+        },
+        {
+          "id": "todo-122-ich-kann-die-ordnerstruktur-meines-projekts-in-3-5-zeilen-beschreiben",
+          "label": "Ich kann die Ordnerstruktur meines Projekts in 3-5 Zeilen beschreiben.",
+          "checked": false,
+          "line": 122
+        },
+        {
+          "id": "todo-123-ich-kann-den-datenfluss-fuer-eine-funktion-meiner-app-kurz-erklaeren",
+          "label": "Ich kann den Datenfluss für eine Funktion meiner App kurz erklaeren.",
+          "checked": false,
+          "line": 123
+        },
+        {
+          "id": "todo-124-ich-kann-einen-strukturkontext-block-formulieren-den-ich-vor-einem-prompt-einfuegen-kann",
+          "label": "Ich kann einen Strukturkontext-Block formulieren, den ich vor einem Prompt einfuegen kann.",
+          "checked": false,
+          "line": 124
+        }
+      ],
+      "contentPath": "/content/library/07-architecture-foundations/01-architecture-foundations-grundlagen.md",
+      "routePath": "/bibliothek/07-architecture-foundations/01-architecture-foundations-grundlagen"
+    },
+    {
+      "moduleId": "07-architecture-foundations",
+      "title": "Architecture Foundations: Vom PRD zur Projektstruktur",
+      "filename": "02-architecture-foundations-praxis.md",
+      "summary": "Automatisch aus 02-architecture-foundations-praxis.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Lektion 1: PRD lesen und Bausteine identifizieren",
+          "anchor": "lektion-1-prd-lesen-und-bausteine-identifizieren",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Lektion 2: Ordnerstruktur ableiten",
+          "anchor": "lektion-2-ordnerstruktur-ableiten",
+          "sourceHeading": "##",
+          "startLine": 31
+        },
+        {
+          "id": 3,
+          "title": "Lektion 3: Strukturkontext-Block formulieren",
+          "anchor": "lektion-3-strukturkontext-block-formulieren",
+          "sourceHeading": "##",
+          "startLine": 57
+        },
+        {
+          "id": 4,
+          "title": "Lektion 4: KI mit Strukturkontext beauftragen",
+          "anchor": "lektion-4-ki-mit-strukturkontext-beauftragen",
+          "sourceHeading": "##",
+          "startLine": 95
+        },
+        {
+          "id": 5,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 112
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-114-ich-kann-aus-meinem-prd-benennen-welche-teile-komponenten-welche-seiten-und-welche-services-werden",
+          "label": "Ich kann aus meinem PRD benennen, welche Teile Komponenten, welche Seiten und welche Services werden.",
+          "checked": false,
+          "line": 114
+        },
+        {
+          "id": "todo-115-ich-kann-eine-ordnerstruktur-fuer-mein-projekt-skizzieren",
+          "label": "Ich kann eine Ordnerstruktur für mein Projekt skizzieren.",
+          "checked": false,
+          "line": 115
+        },
+        {
+          "id": "todo-116-ich-habe-einen-ausgefuellten-strukturkontext-block-in-meiner-prd-datei",
+          "label": "Ich habe einen ausgefuellten Strukturkontext-Block in meiner PRD-Datei.",
+          "checked": false,
+          "line": 116
+        },
+        {
+          "id": "todo-117-ich-habe-die-ki-mit-strukturkontext-beauftragt-und-das-ergebnis-beurteilt",
+          "label": "Ich habe die KI mit Strukturkontext beauftragt und das Ergebnis beurteilt.",
+          "checked": false,
+          "line": 117
+        }
+      ],
+      "contentPath": "/content/library/07-architecture-foundations/02-architecture-foundations-praxis.md",
+      "routePath": "/bibliothek/07-architecture-foundations/02-architecture-foundations-praxis"
+    },
+    {
+      "moduleId": "08-programmierlogik",
+      "title": "Artikel: Programmierlogik",
+      "filename": "00-programmierlogik-code-verstehen-modulguide.md",
+      "summary": "Automatisch aus 00-programmierlogik-code-verstehen-modulguide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Inhaltsverzeichnis",
+          "anchor": "inhaltsverzeichnis",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Wissensziele",
+          "anchor": "wissensziele",
+          "sourceHeading": "##",
+          "startLine": 10
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 32
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-16-ich-kann-variablen-funktionen-und-rueckgabewerte-in-einfachem-code-erkennen",
+          "label": "Ich kann Variablen, Funktionen und Rückgabewerte in einfachem Code erkennen.",
+          "checked": false,
+          "line": 16
+        },
+        {
+          "id": "todo-17-ich-kann-erklaeren-was-bei-einer-bedingung-if-passiert",
+          "label": "Ich kann erklären, was bei einer Bedingung (`if`) passiert.",
+          "checked": false,
+          "line": 17
+        },
+        {
+          "id": "todo-18-ich-kann-in-eigenen-worten-beschreiben-wie-daten-von-a-nach-b-fliessen",
+          "label": "Ich kann in eigenen Worten beschreiben, wie Daten von A nach B fließen.",
+          "checked": false,
+          "line": 18
+        },
+        {
+          "id": "todo-19-ich-kann-ki-generierten-code-in-kleinen-abschnitten-lesen-statt-alles-auf-einmal-zu-bewerten",
+          "label": "Ich kann KI-generierten Code in kleinen Abschnitten lesen, statt alles auf einmal zu bewerten.",
+          "checked": false,
+          "line": 19
+        },
+        {
+          "id": "todo-23-ich-kann-einfache-logikfehler-benennen-z-b-falsche-bedingung-leerer-wert-falscher-datentyp",
+          "label": "Ich kann einfache Logikfehler benennen (z. B. falsche Bedingung, leerer Wert, falscher Datentyp).",
+          "checked": false,
+          "line": 23
+        },
+        {
+          "id": "todo-24-ich-kann-einer-ki-gezielte-rueckfragen-zum-code-stellen-statt-nur-funktioniert-nicht-zu-schreiben",
+          "label": "Ich kann einer KI gezielte Rückfragen zum Code stellen, statt nur \"funktioniert nicht\" zu schreiben.",
+          "checked": false,
+          "line": 24
+        },
+        {
+          "id": "todo-25-ich-kann-eine-kleine-funktion-lektionweise-vereinfachen-oder-umbenennen-ohne-das-verhalten-zu-aendern",
+          "label": "Ich kann eine kleine Funktion Lektionweise vereinfachen oder umbenennen, ohne das Verhalten zu ändern.",
+          "checked": false,
+          "line": 25
+        },
+        {
+          "id": "todo-29-ich-kann-begruenden-warum-eine-kleine-strukturverbesserung-die-wartbarkeit-erhoeht",
+          "label": "Ich kann begründen, warum eine kleine Strukturverbesserung die Wartbarkeit erhöht.",
+          "checked": false,
+          "line": 29
+        },
+        {
+          "id": "todo-30-ich-kann-einen-kurzen-code-versteh-prompt-fuer-wiederkehrende-aufgaben-wiederverwenden",
+          "label": "Ich kann einen kurzen \"Code-Versteh-Prompt\" für wiederkehrende Aufgaben wiederverwenden.",
+          "checked": false,
+          "line": 30
+        }
+      ],
+      "contentPath": "/content/library/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide.md",
+      "routePath": "/bibliothek/08-programmierlogik/00-programmierlogik-code-verstehen-modulguide"
+    },
+    {
+      "moduleId": "08-programmierlogik",
+      "title": "Programmierlogik: Grundlagen",
+      "filename": "01-programmierlogik-grundlagen.md",
+      "summary": "Automatisch aus 01-programmierlogik-grundlagen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Was ist eine Variable?",
+          "anchor": "was-ist-eine-variable",
+          "sourceHeading": "##",
+          "startLine": 9
+        },
+        {
+          "id": 2,
+          "title": "Was ist eine Funktion?",
+          "anchor": "was-ist-eine-funktion",
+          "sourceHeading": "##",
+          "startLine": 25
+        },
+        {
+          "id": 3,
+          "title": "Bedingungen: Was passiert bei `if`?",
+          "anchor": "bedingungen-was-passiert-bei-if",
+          "sourceHeading": "##",
+          "startLine": 41
+        },
+        {
+          "id": 4,
+          "title": "Datenfluss statt Zeilenzaehlerei",
+          "anchor": "datenfluss-statt-zeilenzaehlerei",
+          "sourceHeading": "##",
+          "startLine": 55
+        },
+        {
+          "id": 5,
+          "title": "Typische Logikfehler bei KI-Code",
+          "anchor": "typische-logikfehler-bei-ki-code",
+          "sourceHeading": "##",
+          "startLine": 67
+        },
+        {
+          "id": 6,
+          "title": "Mini-Check beim Lesen",
+          "anchor": "mini-check-beim-lesen",
+          "sourceHeading": "##",
+          "startLine": 78
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-80-ich-kenne-eingabe-und-ausgabe-der-funktion",
+          "label": "Ich kenne Eingabe und Ausgabe der Funktion.",
+          "checked": false,
+          "line": 80
+        },
+        {
+          "id": "todo-81-ich-sehe-mindestens-eine-bedingung-und-kann-sie-erklaeren",
+          "label": "Ich sehe mindestens eine Bedingung und kann sie erklaeren.",
+          "checked": false,
+          "line": 81
+        },
+        {
+          "id": "todo-82-ich-weiss-woher-die-wichtigsten-werte-kommen",
+          "label": "Ich weiss, woher die wichtigsten Werte kommen.",
+          "checked": false,
+          "line": 82
+        },
+        {
+          "id": "todo-83-ich-kann-eine-stelle-markieren-die-ich-als-erstes-testen-wuerde",
+          "label": "Ich kann eine Stelle markieren, die ich als erstes testen wuerde.",
+          "checked": false,
+          "line": 83
+        }
+      ],
+      "contentPath": "/content/library/08-programmierlogik/01-programmierlogik-grundlagen.md",
+      "routePath": "/bibliothek/08-programmierlogik/01-programmierlogik-grundlagen"
+    },
+    {
+      "moduleId": "08-programmierlogik",
+      "title": "Programmierlogik: KI-Code lesen und verbessern",
+      "filename": "02-programmierlogik-code-lesen.md",
+      "summary": "Automatisch aus 02-programmierlogik-code-lesen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Lektion 1: Aufgabe in einem Satz festhalten",
+          "anchor": "lektion-1-aufgabe-in-einem-satz-festhalten",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Lektion 2: Code in kleine Blöcke teilen",
+          "anchor": "lektion-2-code-in-kleine-bloecke-teilen",
+          "sourceHeading": "##",
+          "startLine": 17
+        },
+        {
+          "id": 3,
+          "title": "Lektion 3: Frage-Muster für jeden Block",
+          "anchor": "lektion-3-frage-muster-fuer-jeden-block",
+          "sourceHeading": "##",
+          "startLine": 29
+        },
+        {
+          "id": 4,
+          "title": "Lektion 4: Gezielte KI-Rückfragen stellen",
+          "anchor": "lektion-4-gezielte-ki-rueckfragen-stellen",
+          "sourceHeading": "##",
+          "startLine": 42
+        },
+        {
+          "id": 5,
+          "title": "Lektion 5: Kleine Verbesserungen priorisieren",
+          "anchor": "lektion-5-kleine-verbesserungen-priorisieren",
+          "sourceHeading": "##",
+          "startLine": 55
+        },
+        {
+          "id": 6,
+          "title": "Arbeitsvorlage: Code-Versteh-Notiz",
+          "anchor": "arbeitsvorlage-code-versteh-notiz",
+          "sourceHeading": "##",
+          "startLine": 68
+        },
+        {
+          "id": 7,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 84
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-86-ich-kann-einen-ki-codeabschnitt-in-eingabe-verarbeitung-und-ausgabe-aufteilen",
+          "label": "Ich kann einen KI-Codeabschnitt in Eingabe, Verarbeitung und Ausgabe aufteilen.",
+          "checked": false,
+          "line": 86
+        },
+        {
+          "id": "todo-87-ich-kann-mindestens-eine-praezise-rueckfrage-an-die-ki-formulieren",
+          "label": "Ich kann mindestens eine präzise Rückfrage an die KI formulieren.",
+          "checked": false,
+          "line": 87
+        },
+        {
+          "id": "todo-88-ich-kann-eine-kleine-verbesserung-mit-geringem-risiko-benennen",
+          "label": "Ich kann eine kleine Verbesserung mit geringem Risiko benennen.",
+          "checked": false,
+          "line": 88
+        },
+        {
+          "id": "todo-89-ich-kann-erklaeren-warum-ich-zuerst-kleine-statt-grosse-aenderungen-mache",
+          "label": "Ich kann erklären, warum ich zuerst kleine statt grosse Änderungen mache.",
+          "checked": false,
+          "line": 89
+        }
+      ],
+      "contentPath": "/content/library/08-programmierlogik/02-programmierlogik-code-lesen.md",
+      "routePath": "/bibliothek/08-programmierlogik/02-programmierlogik-code-lesen"
+    },
+    {
+      "moduleId": "09-kurshilfe",
+      "title": "Kurshilfe: Artikeluebersicht",
+      "filename": "00-kurshilfe-artikeluebersicht.md",
+      "summary": "Automatisch aus 00-kurshilfe-artikeluebersicht.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Artikel",
+          "anchor": "artikel",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Selbstcheck",
+          "anchor": "selbstcheck",
+          "sourceHeading": "##",
+          "startLine": 12
+        },
+        {
+          "id": 3,
+          "title": "Wenn du etwas nachholen willst",
+          "anchor": "wenn-du-etwas-nachholen-willst",
+          "sourceHeading": "##",
+          "startLine": 24
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [
+        {
+          "id": "todo-15-ich-weiss-wo-ich-kursweite-hilfe-finde",
+          "label": "Ich weiss, wo ich kursweite Hilfe finde.",
+          "checked": false,
+          "line": 15
+        },
+        {
+          "id": "todo-16-ich-kann-das-glossar-nutzen-wenn-mir-ein-begriff-unklar-ist",
+          "label": "Ich kann das Glossar nutzen, wenn mir ein Begriff unklar ist.",
+          "checked": false,
+          "line": 16
+        },
+        {
+          "id": "todo-19-ich-kann-eine-gute-rueckfrage-mit-ziel-vorgehen-beobachtung-und-fehlermeldung-formulieren",
+          "label": "Ich kann eine gute Rückfrage mit Ziel, Vorgehen, Beobachtung und Fehlermeldung formulieren.",
+          "checked": false,
+          "line": 19
+        },
+        {
+          "id": "todo-22-ich-erkenne-erste-warnzeichen-fuer-ai-slop-und-pruefe-ergebnisse-bewusster",
+          "label": "Ich erkenne erste Warnzeichen für AI Slop und prüfe Ergebnisse bewusster.",
+          "checked": false,
+          "line": 22
+        }
+      ],
+      "contentPath": "/content/library/09-kurshilfe/00-kurshilfe-artikeluebersicht.md",
+      "routePath": "/bibliothek/09-kurshilfe/00-kurshilfe-artikeluebersicht"
+    },
+    {
+      "moduleId": "09-kurshilfe",
+      "title": "Bedienungshilfen",
+      "filename": "01-bedienungshilfen.md",
+      "summary": "Automatisch aus 01-bedienungshilfen.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Kurs-Tool lesen und bedienen",
+          "anchor": "kurs-tool-lesen-und-bedienen",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "In VS Code schnell zu Dateien springen",
+          "anchor": "in-vs-code-schnell-zu-dateien-springen",
+          "sourceHeading": "##",
+          "startLine": 12
+        },
+        {
+          "id": 3,
+          "title": "Wann nutze ich welches Repository?",
+          "anchor": "wann-nutze-ich-welches-repository",
+          "sourceHeading": "##",
+          "startLine": 22
+        },
+        {
+          "id": 4,
+          "title": "Bilder, Links und Materialien im Onboarding",
+          "anchor": "bilder-links-und-materialien-im-onboarding",
+          "sourceHeading": "##",
+          "startLine": 27
+        },
+        {
+          "id": 5,
+          "title": "Wenn du zwischen mehreren Fenstern arbeitest",
+          "anchor": "wenn-du-zwischen-mehreren-fenstern-arbeitest",
+          "sourceHeading": "##",
+          "startLine": 33
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/09-kurshilfe/01-bedienungshilfen.md",
+      "routePath": "/bibliothek/09-kurshilfe/01-bedienungshilfen"
+    },
+    {
+      "moduleId": "09-kurshilfe",
+      "title": "FAQ",
+      "filename": "02-faq.md",
+      "summary": "Automatisch aus 02-faq.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Wie setze ich mir sinnvolle Lernziele?",
+          "anchor": "wie-setze-ich-mir-sinnvolle-lernziele",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "Was mache ich, wenn ich nicht weiterkomme?",
+          "anchor": "was-mache-ich-wenn-ich-nicht-weiterkomme",
+          "sourceHeading": "##",
+          "startLine": 15
+        },
+        {
+          "id": 3,
+          "title": "Woran erkenne ich eine gute Rückfrage?",
+          "anchor": "woran-erkenne-ich-eine-gute-rueckfrage",
+          "sourceHeading": "##",
+          "startLine": 26
+        },
+        {
+          "id": 4,
+          "title": "Wie dokumentiere ich offene Punkte sinnvoll?",
+          "anchor": "wie-dokumentiere-ich-offene-punkte-sinnvoll",
+          "sourceHeading": "##",
+          "startLine": 35
+        },
+        {
+          "id": 5,
+          "title": "Wann lohnt sich eigene Recherche?",
+          "anchor": "wann-lohnt-sich-eigene-recherche",
+          "sourceHeading": "##",
+          "startLine": 45
+        },
+        {
+          "id": 6,
+          "title": "Warum wird im Kurs so viel Wert auf Dokumentation gelegt?",
+          "anchor": "warum-wird-im-kurs-so-viel-wert-auf-dokumentation-gelegt",
+          "sourceHeading": "##",
+          "startLine": 51
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/09-kurshilfe/02-faq.md",
+      "routePath": "/bibliothek/09-kurshilfe/02-faq"
+    },
+    {
+      "moduleId": "09-kurshilfe",
+      "title": "Glossar",
+      "filename": "03-glossar.md",
+      "summary": "Automatisch aus 03-glossar.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Git",
+          "anchor": "git",
+          "sourceHeading": "##",
+          "startLine": 5
+        },
+        {
+          "id": 2,
+          "title": "GitHub",
+          "anchor": "github",
+          "sourceHeading": "##",
+          "startLine": 9
+        },
+        {
+          "id": 3,
+          "title": "Repository",
+          "anchor": "repository",
+          "sourceHeading": "##",
+          "startLine": 13
+        },
+        {
+          "id": 4,
+          "title": "Commit",
+          "anchor": "commit",
+          "sourceHeading": "##",
+          "startLine": 17
+        },
+        {
+          "id": 5,
+          "title": "README",
+          "anchor": "readme",
+          "sourceHeading": "##",
+          "startLine": 21
+        },
+        {
+          "id": 6,
+          "title": "Branch",
+          "anchor": "branch",
+          "sourceHeading": "##",
+          "startLine": 25
+        },
+        {
+          "id": 7,
+          "title": "Pull Request",
+          "anchor": "pull-request",
+          "sourceHeading": "##",
+          "startLine": 29
+        },
+        {
+          "id": 8,
+          "title": "VS Code",
+          "anchor": "vs-code",
+          "sourceHeading": "##",
+          "startLine": 33
+        },
+        {
+          "id": 9,
+          "title": "GitHub Copilot",
+          "anchor": "github-copilot",
+          "sourceHeading": "##",
+          "startLine": 37
+        },
+        {
+          "id": 10,
+          "title": "Prompt",
+          "anchor": "prompt",
+          "sourceHeading": "##",
+          "startLine": 41
+        },
+        {
+          "id": 11,
+          "title": "Kontext",
+          "anchor": "kontext",
+          "sourceHeading": "##",
+          "startLine": 45
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/09-kurshilfe/03-glossar.md",
+      "routePath": "/bibliothek/09-kurshilfe/03-glossar"
+    },
+    {
+      "moduleId": "09-kurshilfe",
+      "title": "AI Slop Survival Guide",
+      "filename": "04-ai-slop-survival-guide.md",
+      "summary": "Automatisch aus 04-ai-slop-survival-guide.md abgeleiteter Legacy-Inhalt.",
+      "contentType": "article",
+      "renderAs": "markdown-article",
+      "sourceLayer": "course-library",
+      "contentContract": {
+        "version": 1,
+        "status": "legacy-derived",
+        "warnings": [
+          "missing-frontmatter"
+        ]
+      },
+      "headings": [
+        {
+          "id": 1,
+          "title": "Worum es in dieser Sammlung geht",
+          "anchor": "worum-es-in-dieser-sammlung-geht",
+          "sourceHeading": "##",
+          "startLine": 7
+        },
+        {
+          "id": 2,
+          "title": "Unser Maßstab im Kurs",
+          "anchor": "unser-massstab-im-kurs",
+          "sourceHeading": "##",
+          "startLine": 18
+        },
+        {
+          "id": 3,
+          "title": "Eintrag 01: Lektion 01 - Zugang vor Tempo",
+          "anchor": "eintrag-01-lektion-01-zugang-vor-tempo",
+          "sourceHeading": "##",
+          "startLine": 30
+        },
+        {
+          "id": 4,
+          "title": "Wie weitere Einträge aussehen sollen",
+          "anchor": "wie-weitere-eintraege-aussehen-sollen",
+          "sourceHeading": "##",
+          "startLine": 47
+        },
+        {
+          "id": 5,
+          "title": "Ideen für später (Kursentwicklung)",
+          "anchor": "ideen-fuer-spaeter-kursentwicklung",
+          "sourceHeading": "##",
+          "startLine": 58
+        }
+      ],
+      "libraryLinks": [],
+      "todos": [],
+      "contentPath": "/content/library/09-kurshilfe/04-ai-slop-survival-guide.md",
+      "routePath": "/bibliothek/09-kurshilfe/04-ai-slop-survival-guide"
+    }
+  ]
+}

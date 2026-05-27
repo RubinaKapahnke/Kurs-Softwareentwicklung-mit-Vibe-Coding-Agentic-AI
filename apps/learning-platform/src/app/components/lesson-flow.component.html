@@ -1,0 +1,59 @@
+@if (slides.length > 0 && activeSlide()) {
+  <section class="lesson-flow" aria-label="Lektionsflow">
+    <div class="lesson-flow__header">
+      <p class="lesson-flow__eyebrow">Lektion</p>
+      <p class="lesson-flow__progress">{{ progressLabel() }}</p>
+    </div>
+
+    <nav class="lesson-flow__tabs" aria-label="Slides">
+      @for (slide of slides; track slide.id; let index = $index) {
+        <button
+          type="button"
+          class="lesson-flow__tab"
+          [class.lesson-flow__tab--active]="index === activeSlideIndex()"
+          (click)="selectSlide(index)"
+        >
+          <span>{{ slide.id }}</span>
+          {{ slide.title }}
+        </button>
+      }
+    </nav>
+
+    <app-lesson-slide
+      [slide]="activeSlide()!"
+      [active]="true"
+      (libraryLink)="libraryLink.emit($event)"
+      (scrolledToEnd)="onSlideScrolledToEnd()"
+    ></app-lesson-slide>
+
+    <app-task-panel
+      [tasks]="activeSlide()!.tasks"
+      [todos]="activeSlide()!.todos"
+    ></app-task-panel>
+
+    <nav class="lesson-flow__actions" aria-label="Slide-Navigation">
+      <button
+        type="button"
+        class="lesson-flow__button"
+        [disabled]="activeSlideIndex() === 0"
+        (click)="goToPreviousSlide()"
+      >
+        Zurück
+      </button>
+
+      @if (!isLastSlide()) {
+        @if (currentSlideRead()) {
+          <button
+            type="button"
+            class="lesson-flow__button lesson-flow__button--primary"
+            (click)="goToNextSlide()"
+          >
+            Weiter
+          </button>
+        } @else {
+          <p class="lesson-flow__scroll-nudge">Bis zum Ende scrollen ↓</p>
+        }
+      }
+    </nav>
+  </section>
+}

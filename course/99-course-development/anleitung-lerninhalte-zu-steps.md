@@ -119,3 +119,32 @@ Innerhalb der Abschnitte werden unterstützt:
 3. Erwartung, dass `## Ziel` eine Lesson-Seite erzeugt (tut es nicht).
 4. Alte markerbasierte Logik erwartet, obwohl aktuell die manifestbasierte Lektionen-Synchronisierung führend ist.
 
+## 8. KI-Kommentare in Markdown nutzen (KI-TODO)
+
+Wenn du eine Aufgabe für KI hinterlegen willst, reicht ein einfacher HTML-Kommentar mit freiem Text.
+
+Beispiel:
+
+```markdown
+<!-- KI-TODO: Diesen Abschnitt in Du-Ansprache umschreiben und am Ende 3 Lernerfolg-Checkboxen ergänzen. -->
+```
+
+Optional kannst du mehrere Kommentare setzen, wenn du mehrere Aufgaben hast.
+
+```markdown
+<!-- KI-TODO: Ziel klarer formulieren. -->
+<!-- KI-TODO: Praxisbeispiel ergänzen. -->
+<!-- KI-TODO: Quiz mit 2 Fragen einfügen. -->
+```
+
+Für längere Aufgaben kannst du Start- und Endmarker nutzen:
+
+```markdown
+<!-- KI-TODO-START -->
+...hier steht der zu bearbeitende Inhalt...
+<!-- KI-TODO: Abschnitt vereinfachen und in 4 Schritte gliedern. -->
+<!-- KI-TODO-END -->
+```
+
+Kurzregel: Schreib einfach in den Kommentar, was gemacht werden soll.
+

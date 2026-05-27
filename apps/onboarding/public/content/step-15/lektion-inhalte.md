@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 15-uebungen-im-gesamt-setting.md -->
 
 # Lektion 15: Ãœbungen im Gesamt-Setting

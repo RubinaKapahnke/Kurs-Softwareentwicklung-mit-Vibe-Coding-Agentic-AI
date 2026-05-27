@@ -12,8 +12,16 @@
   border-radius: var(--radius-xl);
   border: 1px solid var(--line-soft);
   background:
-    linear-gradient(120deg, rgba(255, 253, 250, 1) 0%, rgba(247, 244, 235, 0.92) 100%),
-    radial-gradient(circle at top right, rgba(38, 101, 123, 0.14) 0%, rgba(38, 101, 123, 0) 56%);
+    linear-gradient(
+      120deg,
+      var(--bg-surface) 0%,
+      color-mix(in srgb, var(--bg-surface-muted) 92%, transparent) 100%
+    ),
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--brand-600) 14%, transparent) 0%,
+      transparent 56%
+    );
   box-shadow: var(--shadow-soft);
 }
 
@@ -23,7 +31,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
 }
 
 h1 {
@@ -43,7 +51,7 @@ h1 {
   border: 1px solid var(--line-soft);
   border-radius: 999px;
   padding: 6px 11px;
-  background: rgba(255, 255, 255, 0.66);
+  background: color-mix(in srgb, white 66%, transparent);
   color: var(--text-muted);
   font-weight: 600;
 }
@@ -66,7 +74,7 @@ h1 {
   border: 1px solid var(--brand-700);
   border-radius: 999px;
   background: var(--brand-700);
-  color: #ffffff;
+  color: white;
   font-weight: 700;
   padding: 10px 16px;
   cursor: pointer;
@@ -98,7 +106,7 @@ h1 {
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-lg);
   padding: 15px;
-  background: linear-gradient(152deg, #fffdfa 0%, #f6f2e8 100%);
+  background: linear-gradient(152deg, var(--bg-surface) 0%, var(--bg-surface-muted) 100%);
 }
 
 .step-card h3 {
@@ -127,7 +135,7 @@ h1 {
   color: var(--brand-700);
   font-weight: 700;
   text-decoration: none;
-  background: rgba(47, 125, 149, 0.06);
+  background: color-mix(in srgb, var(--brand-500) 6%, transparent);
 }
 
 .section-label {

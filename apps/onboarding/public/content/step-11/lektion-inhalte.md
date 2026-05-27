@@ -1,4 +1,4 @@
-﻿<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
+<!-- AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY. -->
 <!-- Source: 11-terminal-und-shell-grundlagen.md -->
 
 # Lektion 11: Terminal- und Shell-Grundlagen

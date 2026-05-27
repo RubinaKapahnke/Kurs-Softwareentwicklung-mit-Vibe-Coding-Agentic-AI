@@ -1,12 +1,8 @@
-﻿# Lektion 02: Von AI Agents zu Agentic AI
+# Lektion 02: Von AI Agents zu Agentic AI
 
 ## Ziel
 
 Du verstehst den Entwicklungspfad von einzelnen AI Agents zu agentischen Mehragenten-Systemen. Du kannst Architektur, typische Einsatzfelder, Grenzen und aktuelle Lösungsansätze verständlich erklären.
-
-## Geschätzte Lesezeit
-
-Ca. 15 Minuten.
 
 ## Kapitel 1: Warum dieses Thema jetzt wichtig ist
 
@@ -16,6 +12,30 @@ So verschiebt sich der Fokus:
 
 - von reiner Inhaltserzeugung
 - hin zu zielorientierter, mehrstufiger Aufgabenbearbeitung
+
+## Kapitel 1.1: Dein erster Anwendungsfall - Repo initial für Agentenarbeit einrichten
+
+Bevor du komplexe Multi-Agent-Architekturen planst, brauchst du einen stabilen Arbeitskontext im Repository.
+
+**Ziel:** Du setzt ein minimales, aber belastbares Repo-Setup auf, das Agentenarbeit ermöglicht. Das ist wichtig, weil du dadurch weniger Leerlauf, weniger Missverständnisse und weniger riskante Änderungen in späteren Lektionen hast.
+
+**Vor dem Start (Checkliste):**
+- [ ] VS Code ist geöffnet und du arbeitest im richtigen Repository.
+- [ ] Git-Status ist sauber geprüft (`git status` und `git branch`).
+- [ ] Du hast entschieden, ob du im Übungsrepo oder im eigenen Projekt arbeitest.
+
+**Was du konkret aufsetzt:**
+1. Eine klare Einstiegsdokumentation im Repository (Navigation, Ziel, aktueller Stand).
+2. Ein definiertes Regelwerk für Agentenarbeit (Scope, Freigaben, Grenzen).
+3. Eine kleine Qualitätsroutine (Plan -> Change -> Verify mit Diff- und Testprüfung).
+
+**Warnung mit Folgen (Sicherheitsniveau):**
+- Unklare Grenzen führen zu unkontrollierten Änderungen und Review-Aufwand.
+- Fehlende Dokumentation macht Agentenläufe für andere nicht nachvollziehbar.
+- Übersprungene Prüfungsschritte erhöhen das Risiko, dass Fehler unbemerkt in den Hauptbranch gelangen.
+
+**Ergebnis dieser Einstiegsaufgabe:**
+Du hast einen startfähigen Rahmen, auf dem alle weiteren agentischen Workflows aufbauen können.
 
 ## Kapitel 2: Was ein AI Agent ist
 
@@ -112,9 +132,9 @@ Die Entwicklung zeigt in Richtung hybrider Systeme:
 - Für komplexe Prozesse gewinnen koordinierte Agent-Teams an Bedeutung.
 - Gute Systeme kombinieren Generierung, Planung, Ausführung und Kontrolle.
 
-## Kapitel 9: Praxisbezug für den Kurs
+## Kapitel 9: Praxisbezug für dein Projekt
 
-Im Kurs nutzt du dieses Wissen, um Workflows bewusst zu entwerfen:
+Du nutzt dieses Wissen, um Workflows in deinem Projekt bewusst zu entwerfen:
 
 1. Was kann ein einzelner Agent zuverlässig erledigen?
 2. Wann braucht es mehrere Rollen?
@@ -185,6 +205,5 @@ Du kannst für einen realen Anwendungsfall begründet entscheiden, ob ein einzel
 
 ## Hilfreiche Links
 
-- [Lektion 01: Generative KI vs. agentische KI](./01-generative-vs-agentic-ai.md)
+- [Lektion 01: Begriffsdefinitionen zu generativer und agentischer KI](./01-begriffsdefinitionen-generative-und-agentische-ki.md)
 - [Prompt-Dateien Grundlagen](../../03-course-library/06-ai-instructions/03-prompt-dateien-grundlagen.md)
-

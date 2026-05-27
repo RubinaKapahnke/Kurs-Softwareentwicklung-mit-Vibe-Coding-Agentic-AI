@@ -1,0 +1,13 @@
+<article class="lesson-slide" [class.lesson-slide--active]="active" [attr.id]="slide.anchor">
+  <app-markdown-view [markdown]="slide.markdown" (libraryLink)="libraryLink.emit($event)"></app-markdown-view>
+
+  <!-- Sentinel: IntersectionObserver erkennt, wenn dieses Element im Viewport sichtbar wird. -->
+  <div #sentinel class="lesson-slide__sentinel" aria-hidden="true"></div>
+
+  <!-- Scroll-Hint: sticky am Viewport-Boden, solange das Slide-Ende noch nicht sichtbar war. -->
+  @if (!hasReachedEnd()) {
+    <div class="slide-scroll-hint" aria-hidden="true">
+      <span class="slide-scroll-hint__icon">↓</span>
+    </div>
+  }
+</article>

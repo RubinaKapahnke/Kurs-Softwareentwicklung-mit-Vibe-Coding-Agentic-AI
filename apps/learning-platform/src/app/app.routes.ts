@@ -15,6 +15,14 @@ export const routes: Routes = [
 		loadComponent: () => import('./pages/step-page.component').then((m) => m.StepPageComponent)
 	},
 	{
+		path: 'bibliothek',
+		loadComponent: () => import('./pages/library-page.component').then((m) => m.LibraryPageComponent)
+	},
+	{
+		path: 'bibliothek/**',
+		loadComponent: () => import('./pages/library-page.component').then((m) => m.LibraryPageComponent)
+	},
+	{
 		path: 'fehler',
 		loadComponent: () => import('./pages/error-page.component').then((m) => m.ErrorPageComponent)
 	},

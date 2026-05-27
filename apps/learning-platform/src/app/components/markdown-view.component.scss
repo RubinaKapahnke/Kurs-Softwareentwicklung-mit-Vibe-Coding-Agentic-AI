@@ -1,0 +1,154 @@
+.markdown-state {
+  margin: 0;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.markdown-state--error {
+  color: var(--accent-red);
+}
+
+// ─── Rendered Markdown ───────────────────────────────────────────────────────
+// ng-deep nötig, da Markdown-Content von außen gerendert wird
+// und kein Angular-Scoping hat.
+
+:host ::ng-deep .markdown-view {
+  color: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+:host ::ng-deep .markdown-view :is(p, ul, ol, blockquote) {
+  margin: 0 0 0.9rem;
+}
+
+:host ::ng-deep .markdown-view :is(ul, ol) {
+  padding-left: 1.35rem;
+}
+
+:host ::ng-deep .markdown-view li {
+  margin-bottom: 0.35rem;
+  line-height: var(--leading-relaxed);
+}
+
+:host ::ng-deep .markdown-view h1,
+:host ::ng-deep .markdown-view h2,
+:host ::ng-deep .markdown-view h3,
+:host ::ng-deep .markdown-view h4 {
+  margin: 1.2rem 0 0.55rem;
+  color: var(--text-strong);
+  letter-spacing: -0.015em;
+}
+
+:host ::ng-deep .markdown-view :first-child {
+  margin-top: 0;
+}
+
+:host ::ng-deep .markdown-view :last-child {
+  margin-bottom: 0;
+}
+
+// ─── Blockquote ─────────────────────────────────────────────────────────────
+
+:host ::ng-deep .markdown-view blockquote {
+  border-left: 3px solid var(--brand-400);
+  margin-left: 0;
+  padding: 0.6rem 0 0.6rem 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+// ─── Tables ─────────────────────────────────────────────────────────────────
+
+:host ::ng-deep .markdown-view table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.1rem 0;
+  font-size: var(--text-sm);
+}
+
+:host ::ng-deep .markdown-view th,
+:host ::ng-deep .markdown-view td {
+  border: 1px solid var(--line-soft);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+:host ::ng-deep .markdown-view th {
+  background: var(--bg-surface-muted);
+  color: var(--text-strong);
+  font-weight: 700;
+  border-bottom: 2px solid var(--line-strong);
+}
+
+:host ::ng-deep .markdown-view tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--brand-50) 60%, transparent);
+}
+
+// ─── Inline Code ─────────────────────────────────────────────────────────────
+// Überschreibt den globalen :not(pre) > code für den Markdown-Kontext,
+// da ng-deep und Spezifität hier eigene Regeln brauchen.
+
+:host ::ng-deep .markdown-view code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--code-inline-bg);
+  color: var(--code-inline-color);
+  border: 1px solid color-mix(in srgb, var(--brand-600) 15%, transparent);
+  border-radius: 4px;
+  padding: 0.1em 0.32em;
+}
+
+// ─── Code Block ─────────────────────────────────────────────────────────────
+
+:host ::ng-deep .markdown-view pre {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  overflow-x: auto;
+  background: var(--code-bg);
+  color: var(--code-color);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin: var(--space-5) 0;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, white 18%, transparent) transparent;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, white 18%, transparent);
+    border-radius: 3px;
+  }
+}
+
+:host ::ng-deep .markdown-view pre code {
+  background: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+// ─── Images ─────────────────────────────────────────────────────────────────
+
+:host ::ng-deep .markdown-view img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.1rem 0;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+}
+
+// ─── Horizontal Rule ─────────────────────────────────────────────────────────
+
+:host ::ng-deep .markdown-view hr {
+  border: none;
+  border-top: 1px solid var(--line-soft);
+  margin: 1.5rem 0;
+}

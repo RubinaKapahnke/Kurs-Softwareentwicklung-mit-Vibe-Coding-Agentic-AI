@@ -18,7 +18,7 @@ Du kannst dir GitHub wie einen zentralen Ort vorstellen, an dem Projekte nicht n
 ### Was ist Git?
 
 GitHub basiert auf Git. Git ist das technische Werkzeug für Versionskontrolle, GitHub ist die Plattform darum herum: mit Weboberfläche, Kollaboration und Überblick über Änderungen.
-# Lektion 02: GitHub-Arbeitsbereich einrichten
+## GitHub-Arbeitsbereich einrichten
 
 ## Ziel
 

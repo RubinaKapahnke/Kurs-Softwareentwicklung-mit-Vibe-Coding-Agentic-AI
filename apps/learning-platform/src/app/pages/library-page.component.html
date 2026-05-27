@@ -1,0 +1,46 @@
+<section class="page-shell library-shell">
+  <header class="library-header">
+    <p class="eyebrow">Course Library</p>
+    <h1>Kursbibliothek</h1>
+    <p>Allgemeine Erklärungen, Grundlagen und Befehlsübersichten aus der Course Library.</p>
+  </header>
+
+  @if (loading()) {
+    <p class="state">Lade Kursbibliothek...</p>
+  } @else if (error()) {
+    <p class="state state-error">{{ error() }}</p>
+  } @else {
+    <div class="library-layout">
+      <aside class="library-nav" aria-label="Bibliotheksartikel">
+        @for (group of groupedEntries(); track group.moduleId) {
+          <section class="library-nav__group">
+            <h2>{{ group.moduleId }}</h2>
+            <ul>
+              @for (entry of group.items; track entry.contentPath) {
+                <li>
+                  <a
+                    [routerLink]="entry.routePath"
+                    [class.active]="selectedEntry()?.contentPath === entry.contentPath"
+                  >
+                    {{ entry.title }}
+                  </a>
+                </li>
+              }
+            </ul>
+          </section>
+        }
+      </aside>
+
+      <article class="library-article">
+        @if (selectedEntry()) {
+          <app-markdown-view
+            [src]="selectedEntry()!.contentPath"
+            (libraryLink)="openLibrarySource($event)"
+          ></app-markdown-view>
+        } @else {
+          <p class="state">Dieser Bibliotheksartikel wurde nicht gefunden.</p>
+        }
+      </article>
+    </div>
+  }
+</section>

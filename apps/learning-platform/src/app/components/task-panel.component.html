@@ -1,0 +1,35 @@
+@if (hasContent) {
+  <section class="task-panel" aria-label="Aufgaben zur aktuellen Slide">
+    <div class="task-panel__head">
+      <p class="task-panel__eyebrow">Aufgaben</p>
+      <p class="task-panel__meta">{{ tasks.length + todos.length }} erkannt</p>
+    </div>
+
+    @if (tasks.length > 0) {
+      <ul class="task-panel__list task-panel__list--links">
+        @for (task of tasks; track task.id) {
+          <li>
+            <span class="task-panel__marker">A</span>
+            <span>
+              <strong>Aufgabendatei</strong>
+              <code>{{ task.href }}</code>
+            </span>
+          </li>
+        }
+      </ul>
+    }
+
+    @if (todos.length > 0) {
+      <ul class="task-panel__list">
+        @for (todo of todos; track todo.id) {
+          <li>
+            <span class="task-panel__marker" [class.task-panel__marker--done]="todo.checked">
+              {{ todo.checked ? 'OK' : '' }}
+            </span>
+            <span>{{ todo.label }}</span>
+          </li>
+        }
+      </ul>
+    }
+  </section>
+}

@@ -38,7 +38,7 @@ Ein Repository ist auf GitHub ein Projektbereich. Dort liegen Dateien, Änderung
 
 Die Begriffe kommen im Kurs laufend vor. Deshalb klären wir sie direkt, bevor du damit arbeitest.
 
-### Lektion für Lektion: GitHub-Account anlegen
+### Schritt für Schritt: GitHub-Account anlegen
 
 1. Öffne [github.com](https://github.com).
 2. Klicke oben rechts auf `Sign up`.
@@ -71,10 +71,10 @@ Die Begriffe kommen im Kurs laufend vor. Deshalb klären wir sie direkt, bevor d
 Oben siehst du deinen Fortschritt über alle Lektionen.
 ![Fortschritt](/content/Assets/m01-l01-fortschritt.png)
 
-Jeder Lektion enthält Teilaufgaben, die du einzeln abhaken kannst.
+Jede Lektion enthält Teilaufgaben, die du einzeln abhaken kannst.
 ![Erledigt](/content/Assets/m01-l01-aufgaben.png)
 
-Sind alle Teilaufgaben fertig, markierst du den Lektion als erledigt.
+Sind alle Teilaufgaben fertig, markierst du die Lektion als erledigt.
 ![Erledigt](/content/Assets/m01-l01-aufgaben-erledigt.png)
 
 Fertige Lektionen werden im Fortschrittsbalken als abgeschlossen markiert.
@@ -119,13 +119,13 @@ Das kann zum Beispiel unklarer Text, widersprüchliche Logik, unsaubere Struktur
 Unser vorrangiges Ziel ist nicht, möglichst schnell viel Output zu erzeugen.
 Unser vorrangiges Ziel ist, Slop zu vermeiden und mit KI belastbare Ergebnisse zu erarbeiten.
 
-Deshalb achten wir im Kurs von Anfang an auf nachvollziehbare Lektionen, klare Begriffe, prüfbare Ergebnisse und saubere Übergaben.
+Deshalb achten wir im Kurs von Anfang an auf nachvollziehbare Schritte, klare Begriffe, prüfbare Ergebnisse und saubere Übergaben.
 
 ### Was das in dieser Lektion bedeutet
 
 - Du legst nicht einfach irgendeinen Account an, sondern richtest ein Werkzeug ein, das du im weiteren Kurs verlässlich brauchst.
 - Du prüfst direkt, ob Login, Profilbild und Profil-URL funktionieren, statt nur anzunehmen, dass alles passt.
-- Du arbeitest Lektion für Lektion, damit späteres Setup nicht auf unklaren Voraussetzungen aufbaut.
+- Du arbeitest Schritt für Schritt, damit späteres Setup nicht auf unklaren Voraussetzungen aufbaut.
 
 ## Was ist zu tun
 

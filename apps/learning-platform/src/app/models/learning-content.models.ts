@@ -39,6 +39,59 @@ export interface ModuleMeta {
 export interface StepManifestSection {
   type: 'lesson' | 'tasks' | 'übung';
   file: string;
+  contentPath?: string;
+  contentContract?: {
+    version: number;
+    status: 'valid' | 'legacy-derived';
+    warnings: string[];
+  };
+  frontmatter?: {
+    title: string;
+    contentType: 'lesson' | 'article' | 'task' | 'library';
+    renderAs: 'lesson-flow' | 'markdown-article' | 'task-panel';
+    summary: string;
+    sourceLayer: 'course-module' | 'course-library' | 'course-guide' | 'course-exercise';
+    estimatedMinutes?: number;
+    tags?: string[];
+    libraryPreview?: boolean;
+    knowledgeCheck?: 'required' | 'optional' | 'off';
+  };
+  slides?: StepManifestSlide[];
+  libraryLinks?: StepManifestContentLink[];
+  taskDirectives?: StepManifestTaskDirective[];
+  todos?: StepManifestTodo[];
+}
+
+export interface StepManifestContentLink {
+  label: string;
+  href: string;
+  contentPath: string;
+}
+
+export interface StepManifestTaskDirective {
+  id: string;
+  directive: 'Aufgabe';
+  href: string;
+  line: number;
+}
+
+export interface StepManifestTodo {
+  id: string;
+  label: string;
+  checked: boolean;
+  line: number;
+}
+
+export interface StepManifestSlide {
+  id: number;
+  title: string;
+  anchor: string;
+  sourceHeading: '##';
+  startLine: number;
+  markdown: string;
+  libraryLinks: StepManifestContentLink[];
+  tasks: StepManifestTaskDirective[];
+  todos: StepManifestTodo[];
 }
 
 export interface StepManifestResource {
